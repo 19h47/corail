@@ -24,10 +24,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/icons/bag-shopping.svg":
-/*!************************************!*\
-  !*** ./src/icons/bag-shopping.svg ***!
-  \************************************/
+/***/ "./src/icons/icon-bag-shopping.svg":
+/*!*****************************************!*\
+  !*** ./src/icons/icon-bag-shopping.svg ***!
+  \*****************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -36,9 +36,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-      id: "bag-shopping-usage",
+      id: "icon-bag-shopping-usage",
       viewBox: "0 0 17 18",
-      url: __webpack_require__.p + "icons.svg#bag-shopping",
+      url: __webpack_require__.p + "icons.svg#icon-bag-shopping",
       toString: function () {
         return this.url;
       }
@@ -46,10 +46,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/icons/logo.svg":
-/*!****************************!*\
-  !*** ./src/icons/logo.svg ***!
-  \****************************/
+/***/ "./src/icons/icon-logo.svg":
+/*!*********************************!*\
+  !*** ./src/icons/icon-logo.svg ***!
+  \*********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -58,9 +58,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-      id: "logo-usage",
+      id: "icon-logo-usage",
       viewBox: "0 0 110 20",
-      url: __webpack_require__.p + "icons.svg#logo",
+      url: __webpack_require__.p + "icons.svg#icon-logo",
       toString: function () {
         return this.url;
       }
@@ -68,10 +68,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/icons/magnifying-glass.svg":
-/*!****************************************!*\
-  !*** ./src/icons/magnifying-glass.svg ***!
-  \****************************************/
+/***/ "./src/icons/icon-magnifying-glass.svg":
+/*!*********************************************!*\
+  !*** ./src/icons/icon-magnifying-glass.svg ***!
+  \*********************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -80,9 +80,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-      id: "magnifying-glass-usage",
-      viewBox: "0 0 18.5 18",
-      url: __webpack_require__.p + "icons.svg#magnifying-glass",
+      id: "icon-magnifying-glass-usage",
+      viewBox: "0 0 18 18",
+      url: __webpack_require__.p + "icons.svg#icon-magnifying-glass",
       toString: function () {
         return this.url;
       }
@@ -97,9 +97,9 @@ __webpack_require__.r(__webpack_exports__);
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 var map = {
-	"./bag-shopping.svg": "./src/icons/bag-shopping.svg",
-	"./logo.svg": "./src/icons/logo.svg",
-	"./magnifying-glass.svg": "./src/icons/magnifying-glass.svg"
+	"./icon-bag-shopping.svg": "./src/icons/icon-bag-shopping.svg",
+	"./icon-logo.svg": "./src/icons/icon-logo.svg",
+	"./icon-magnifying-glass.svg": "./src/icons/icon-magnifying-glass.svg"
 };
 
 

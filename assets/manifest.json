@@ -1,7 +1,7 @@
 {
-  "main.css": "dist/css/main.css",
-  "main.js": "dist/main.js",
-  "icons.svg": "dist/icons.svg",
-  "main.css.map": "dist/css/main.css.map",
-  "main.js.map": "dist/main.js.map"
+  "main.css": "assets/main.css",
+  "main.js": "assets/main.js",
+  "icons.svg": "assets/icons.svg",
+  "main.css.map": "assets/main.css.map",
+  "main.js.map": "assets/main.js.map"
 }

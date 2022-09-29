@@ -36,7 +36,7 @@
   }
 {%- endstyle -%}
 
-<footer class="footer color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding">
+<footer class="footer color-{{ section.settings.color_scheme }} section-{{ section.id }}-padding">
   {%- if section.blocks.size > 0 or section.settings.newsletter_enable or section.settings.show_social -%}
     <div class="footer__content-top page-width">
       {%- if section.blocks.size > 0 -%}
@@ -67,7 +67,7 @@
                     <ul class="footer-block__details-content list-unstyled">
                       {%- for link in block.settings.menu.links -%}
                         <li>
-                          <a href="{{ link.url }}" class="link link--text list-menu__item list-menu__item--link{% if link.active %} list-menu__item--active{% endif %}">
+                          <a href="{{ link.url }}" class="link link--text list-menu__item--link{% if link.active %} list-menu__item--active{% endif %}">
                             {{ link.title }}
                           </a>
                         </li>
@@ -264,7 +264,7 @@
                     <ul id="FooterCountryList" role="list" class="disclosure__list list-unstyled">
                       {%- for country in localization.available_countries -%}
                         <li class="disclosure__item" tabindex="-1">
-                          <a class="link link--text disclosure__link caption-large{% if country.iso_code == localization.country.iso_code %} disclosure__link--active{% endif %} focus-inset" href="#" {% if country.iso_code == localization.country.iso_code %} aria-current="true"{% endif %} data-value="{{ country.iso_code }}">
+                          <a class="link link--text disclosure__link caption-large{% if country.iso_code == localization.country.iso_code %} disclosure__link--active{% endif %}" href="#" {% if country.iso_code == localization.country.iso_code %} aria-current="true"{% endif %} data-value="{{ country.iso_code }}">
                             {{ country.name }}
                             <span class="localization-form__currency">({{ country.currency.iso_code }}
                               {{ country.currency.symbol }}
@@ -315,7 +315,7 @@
                     <ul id="FooterLanguageList" role="list" class="disclosure__list list-unstyled">
                       {%- for language in localization.available_languages -%}
                         <li class="disclosure__item" tabindex="-1">
-                          <a class="link link--text disclosure__link caption-large{% if language.iso_code == localization.language.iso_code %} disclosure__link--active{% endif %} focus-inset" href="#" hreflang="{{ language.iso_code }}" lang="{{ language.iso_code }}" {% if language.iso_code == localization.language.iso_code %} aria-current="true"{% endif %} data-value="{{ language.iso_code }}">
+                          <a class="link link--text disclosure__link caption-large{% if language.iso_code == localization.language.iso_code %} disclosure__link--active{% endif %}" href="#" hreflang="{{ language.iso_code }}" lang="{{ language.iso_code }}" {% if language.iso_code == localization.language.iso_code %} aria-current="true"{% endif %} data-value="{{ language.iso_code }}">
                             {{ language.endonym_name | capitalize }}
                           </a>
                         </li>
@@ -356,6 +356,8 @@
     </div>
   </div>
 </footer>
+
+{% render 'icons' %%}
 
 {% javascript %}
   class LocalizationForm extends HTMLElement {

@@ -109,7 +109,7 @@
                       <legend class="visually-hidden">{{ filter.label | escape }}</legend>
                       <ul class="{% if filter_type != 'vertical' %} facets__list{% endif %} list-unstyled no-js-hidden" role="list">
                         {%- for value in filter.values -%}
-                          <li class="list-menu__item facets__item{% if forloop.index > 10 and filter_type == 'vertical' %} show-more-item hidden{% endif %}">
+                          <li class="facets__item{% if forloop.index > 10 and filter_type == 'vertical' %} show-more-item hidden{% endif %}">
                             <label for="Filter-{{ filter.param_name | escape }}-{{ forloop.index }}" class="facet-checkbox{% if value.count == 0 and value.active == false %} facet-checkbox--disabled{% endif %}">
                               <input type="checkbox"
                                 name="{{ value.param_name }}"
@@ -413,7 +413,7 @@
       </summary>
       <facet-filters-form>
         <form id="FacetFiltersFormMobile" class="mobile-facets">
-          <div class="mobile-facets__inner gradient">
+          <div class="mobile-facets__inner">
             <div class="mobile-facets__header">
               <div class="mobile-facets__header-inner">
                 <h2 class="mobile-facets__heading medium-hide large-up-hide">
@@ -441,21 +441,21 @@
                 </p>
               </div>
             </div>
-            <div class="mobile-facets__main has-submenu gradient">
+            <div class="mobile-facets__main has-submenu">
               {%- if enable_filtering -%}
                 {%- for filter in results.filters -%}
                   {% case filter.type %}
                   {% when 'boolean' or 'list' %}
                     <details id="Details-Mobile-{{ forloop.index }}-{{ section.id }}" class="mobile-facets__details js-filter" data-index="mobile-{{ forloop.index }}">
-                      <summary class="mobile-facets__summary focus-inset">
+                      <summary class="mobile-facets__summary">
                         <div>
                           <span>{{ filter.label | escape }}</span>
                           <span class="mobile-facets__arrow no-js-hidden">{% render 'icon-arrow' %}</span>
                           <noscript>{% render 'icon-caret' %}</noscript>
                         </div>
                       </summary>
-                      <div id="FacetMobile-{{ forloop.index }}-{{ section.id }}" class="mobile-facets__submenu gradient">
-                        <button class="mobile-facets__close-button link link--text focus-inset" aria-expanded="true" type="button">
+                      <div id="FacetMobile-{{ forloop.index }}-{{ section.id }}" class="mobile-facets__submenu">
+                        <button class="mobile-facets__close-button link link--text" aria-expanded="true" type="button">
                           {% render 'icon-arrow' %}
                           {{ filter.label | escape }}
                         </button>
@@ -485,7 +485,7 @@
                           {%- endfor -%}
                         </ul>
 
-                        <div class="no-js-hidden mobile-facets__footer gradient">
+                        <div class="no-js-hidden mobile-facets__footer">
                           <facet-remove class="mobile-facets__clear-wrapper">
                             <a href="{{ results_url }}" class="mobile-facets__clear underlined-link">{{ 'products.facets.clear' | t }}</a>
                           </facet-remove>
@@ -496,15 +496,15 @@
                     </details>
                   {% when 'price_range' %}
                     <details id="Details-Mobile-{{ forloop.index }}-{{ section.id }}" class="mobile-facets__details js-filter" data-index="mobile-{{ forloop.index }}">
-                      <summary class="mobile-facets__summary focus-inset">
+                      <summary class="mobile-facets__summary">
                         <div>
                           <span>{{ filter.label | escape }}</span>
                           <span class="mobile-facets__arrow no-js-hidden">{% render 'icon-arrow' %}</span>
                           <noscript>{% render 'icon-caret' %}</noscript>
                         </div>
                       </summary>
-                      <div id="FacetMobile-{{ forloop.index }}-{{ section.id }}" class="mobile-facets__submenu gradient">
-                        <button class="mobile-facets__close-button link link--text focus-inset" aria-expanded="true" type="button">
+                      <div id="FacetMobile-{{ forloop.index }}-{{ section.id }}" class="mobile-facets__submenu">
+                        <button class="mobile-facets__close-button link link--text" aria-expanded="true" type="button">
                           {% render 'icon-arrow' %}
                           {{ filter.label | escape }}
                         </button>
