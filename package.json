@@ -1,0 +1,16 @@
+{
+	"name": "@19h47/corail",
+	"version": "0.0.0",
+	"description": "Corail Shopify theme",
+	"repository": "https://github.com/19h47/corail",
+	"license": "MIT",
+	"author": "Jérémy Levron <jeremylevron@19h47.fr> (https://19h47.fr)",
+	"main": "src/index.js",
+	"scripts": {
+		"dev": "19h47-scripts dev",
+		"prod": "19h47-scripts prod"
+	},
+	"dependencies": {
+		"@19h47/scripts": "19h47/19h47-scripts"
+	}
+}

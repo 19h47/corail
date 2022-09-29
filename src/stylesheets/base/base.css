@@ -1,0 +1,46 @@
+/**
+ * Base
+ *
+ * @package Corail
+ * @author Jérémy Levron <jeremylevron@19h47.fr> (https://19h47.fr)
+ */
+
+@tailwind base;
+
+@layer base {
+	*,
+	::after,
+	::before {
+		--base-font-size-unitless: 16;
+		--prototype-width-unitless: 1440;
+	}
+
+	html {
+		font-size: var(--base-font-size-unitless);
+	}
+
+	@screen lg {
+		html {
+			font-size: calc(var(--base-font-size-unitless) * 100vw / var(--prototype-width-unitless));
+		}
+	}
+
+	body {
+	}
+
+	h1,
+	.h1 {
+	}
+
+	h2,
+	.h2 {
+	}
+
+	h3,
+	.h2 {
+	}
+
+	hr {
+		@apply border-none w-full h-px;
+	}
+}

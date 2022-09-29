@@ -1,0 +1,97 @@
+/**
+ * Grid
+ *
+ * @package WordPress
+ * @subpackage MatthieuTeyssandier
+ * @author Jérémy Levron <jeremylevron@19h47.fr> (https://19h47.fr)
+ */
+
+@layer utilities {
+	.container {
+		@apply max-w-344 mx-auto px-4;
+	}
+
+	.row {
+		@apply flex -mx-1 lg:-mx-3 flex-wrap;
+	}
+
+	.row > * {
+		@apply col w-full max-w-full flex-shrink-0;
+	}
+
+	.col {
+		@apply px-1 lg:px-3;
+	}
+
+	.col-full {
+		@apply col w-full;
+	}
+
+	.col-1\/12 {
+		@apply col w-1/12;
+	}
+
+	.col-2\/10 {
+		@apply col w-2/10;
+	}
+
+	.col-2\/12 {
+		@apply col w-2/12;
+	}
+
+	.col-3\/10 {
+		@apply col w-3/10;
+	}
+
+	.col-3\/12 {
+		@apply col w-3/12;
+	}
+
+	.col-4\/5 {
+		@apply col w-4/5;
+	}
+
+	.col-4\/12 {
+		@apply col w-4/12;
+	}
+
+	.col-5\/10 {
+		@apply col w-5/10;
+	}
+
+	.col-5\/6 {
+		@apply col w-5/6;
+	}
+
+	.col-5\/12 {
+		@apply col w-5/12;
+	}
+
+	.col-6\/10 {
+		@apply col w-6/10;
+	}
+
+	.col-6\/12 {
+		@apply col w-6/12;
+	}
+
+	.col-7\/12 {
+		@apply col w-7/12;
+	}
+
+	.col-8\/12 {
+		@apply col w-8/12;
+	}
+
+	.col-9\/12 {
+		@apply col w-9/12;
+	}
+
+	.col-10\/12 {
+		@apply col w-10/12;
+	}
+
+	.col-11\/12 {
+		@apply col w-11/12;
+	}
+}
