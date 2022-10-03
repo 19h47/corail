@@ -1,6 +1,3 @@
-/*!************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./src/stylesheets/styles.css ***!
-  \************************************************************************************************************************************************************************************************/
 /**
  * Base
  *
@@ -591,11 +588,12 @@ hr{
   position: absolute;
 }
 
-.inset-0{
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
+.relative{
+  position: relative;
+}
+
+.sticky{
+  position: sticky;
 }
 
 .inset-x-0{
@@ -617,6 +615,10 @@ hr{
 
 .z-10{
   z-index: 10;
+}
+
+.z-20{
+  z-index: 20;
 }
 
 .ml-auto{
@@ -663,6 +665,10 @@ hr{
   height: 1.125rem;
 }
 
+.h-\[52\.625rem\]{
+  height: 52.625rem;
+}
+
 .w-28{
   width: 7rem;
 }
@@ -675,6 +681,10 @@ hr{
   width: 1.125rem;
 }
 
+.w-full{
+  width: 100%;
+}
+
 .items-center{
   align-items: center;
 }
@@ -683,6 +693,14 @@ hr{
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+.border-b{
+  border-bottom-width: 1px;
+}
+
+.border-current{
+  border-color: currentColor;
 }
 
 .bg-current{
@@ -696,6 +714,11 @@ hr{
 
 .fill-current{
   fill: currentColor;
+}
+
+.object-cover{
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .p-\[1\.6875rem\]{
@@ -720,6 +743,10 @@ hr{
 .py-7{
   padding-top: 1.75rem;
   padding-bottom: 1.75rem;
+}
+
+.text-center{
+  text-align: center;
 }
 
 .text-sm{
@@ -834,5 +861,7 @@ hr{
 
 /* Safari and Chrome */
 
+.hover\:underline:hover{
+  text-decoration-line: underline;
+}
 
-/*# sourceMappingURL=main.css.map*/

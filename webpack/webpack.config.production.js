@@ -22,8 +22,8 @@ const plugins = [
 		cleanOnceBeforeBuildPatterns: [resolve('dist')],
 	}),
 	new MiniCssExtractPlugin({
-		filename: 'css/main.[chunkhash:8].css',
-		chunkFilename: "css/[id].[chunkhash:8].css",
+		filename: 'main.css',
+		chunkFilename: "[id].css",
 	}),
 	new CompressionPlugin(),
 ];
@@ -46,7 +46,7 @@ if (!useTailwind) {
 module.exports = {
 	mode: 'production',
 	output: {
-		filename: 'js/[name].[chunkhash:8].js',
+		filename: '[name].js',
 	},
 	module: {
 		rules: [getStyleLoader(false)],

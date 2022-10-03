@@ -238,47 +238,6 @@ html.no-js .no-js-hidden {
 	display: none !important;
 }
 
-.page-width {
-	max-width: var(--page-width);
-	margin: 0 auto;
-	padding: 0 1.5rem;
-}
-
-.page-width-desktop {
-	padding: 0;
-	margin: 0 auto;
-}
-
-@media screen and (min-width: 750px) {
-	.page-width {
-		padding: 0 5rem;
-	}
-
-	.page-width--narrow {
-		padding: 0 9rem;
-	}
-
-	.page-width-desktop {
-		padding: 0;
-	}
-
-	.page-width-tablet {
-		padding: 0 5rem;
-	}
-}
-
-@media screen and (min-width: 990px) {
-	.page-width--narrow {
-		max-width: 72.6rem;
-		padding: 0;
-	}
-
-	.page-width-desktop {
-		max-width: var(--page-width);
-		padding: 0 5rem;
-	}
-}
-
 .isolate {
 	position: relative;
 	z-index: 0;
@@ -820,10 +779,6 @@ summary::-webkit-details-marker {
 */
 
 /* Dangerous for a11y - Use with care */
-.focus-none {
-	box-shadow: none !important;
-	outline: 0 !important;
-}
 
 .focus-offset:focus-visible {
 	outline: 0.2rem solid rgba(var(--color-foreground), 0.5);
@@ -2094,45 +2049,7 @@ input[type="checkbox"] {
 	z-index: 4;
 }
 
-.announcement-bar {
-	border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.08);
-	color: rgb(var(--color-foreground));
-}
-
-.announcement-bar__link {
-	display: block;
-	width: 100%;
-	padding: 1rem 0;
-	text-decoration: none;
-}
-
-.announcement-bar__link:hover {
-	color: rgb(var(--color-foreground));
-	background-color: rgba(var(--color-card-hover), 0.06);
-}
-
-.announcement-bar__link .icon-arrow {
-	display: inline-block;
-	pointer-events: none;
-	margin-left: 0.8rem;
-	vertical-align: middle;
-	margin-bottom: 0.2rem;
-}
-
-.announcement-bar__link .announcement-bar__message {
-	padding: 0;
-}
-
-.announcement-bar__message {
-	padding: 1rem 0;
-	margin: 0;
-	letter-spacing: 0.1rem;
-}
-
 /* section-header */
-#shopify-section-header {
-	z-index: 3;
-}
 
 .shopify-section-header-sticky {
 	position: sticky;

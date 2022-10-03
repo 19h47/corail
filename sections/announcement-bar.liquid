@@ -1,25 +1,28 @@
 {%- for block in section.blocks -%}
-  {%- case block.type -%}
-    {%- when 'announcement' -%}
-      <div class="announcement-bar" role="region" aria-label="{{ 'sections.header.announcement' | t }}" {{ block.shopify_attributes }}>
-        {%- if block.settings.text != blank -%}
-          {%- if block.settings.link != blank -%}
-            <a href="{{ block.settings.link }}" class="announcement-bar__link link link--text animate-arrow">
-          {%- endif -%}
-              <div class="page-width">
-                <p class="announcement-bar__message {{ block.settings.text_alignment }} h5">
-                  {{ block.settings.text | escape }}
-                  {%- if block.settings.link != blank -%}
-                    {% render 'icon-arrow' %}
-                  {%- endif -%}
-                </p>
-              </div>
-          {%- if block.settings.link != blank -%}
-            </a>
-          {%- endif -%}
-        {%- endif -%}
-      </div>
-  {%- endcase -%}
+	{%- case block.type -%}
+		{%- when 'announcement' -%}
+			<div
+				class="border-b border-current sticky top-0 inset-x-0 {{ block.settings.text_alignment }}"
+				role="region" aria-label="{{ 'sections.header.announcement' | t }}"
+				{{ block.shopify_attributes }}
+			>
+				<div class="container">
+					<div class="row">
+						<div>
+							{%- if block.settings.text != blank -%}
+								{%- if block.settings.link != blank -%}<a class="hover:underline" href="{{ block.settings.link }}" class="">{%- endif -%}
+
+								<p class="h5">
+									{{ block.settings.text | escape }}
+								</p>
+
+								{%- if block.settings.link != blank -%}</a>{%- endif -%}
+							{%- endif -%}
+						</div>
+					</div>
+				</div>
+			</div>
+	{%- endcase -%}
 {%- endfor -%}
 
 {% schema %}

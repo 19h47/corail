@@ -1,27 +1,34 @@
 {{ 'section-image-banner.css' | asset_url | stylesheet_tag }}
 
+<div class="text-white relative">
+	<video class="h-[52.625rem] w-full object-cover relative z-10" loop muted autoplay src="{{ section.settings.video }}"></video>
 
-{{ section.settings | json }}
-
-<div class="text-white">
-	<video src="{{ section.settings.video }}"></video>
-
-	{%- for block in section.blocks -%}
-        {%- case block.type -%}
-          	{%- when 'heading' -%}
-            	<h2 class="font-semibold text-6xl" {{ block.shopify_attributes }}>
-              		{{ block.settings.heading | escape }}
-            	</h2>
-          	{%- when 'button' -%}
-            	<div class="" {{ block.shopify_attributes }}>
-              		{%- if block.settings.button_label != blank -%}
-                		<a{% if block.settings.button_link == blank %} role="link" aria-disabled="true"{% else %} href="{{ block.settings.button_link }}"{% endif %} class="button">
-							{{ block.settings.button_label | escape }}
-						</a>
-              		{%- endif -%}
-            	</div>
-		{%- endcase -%}
-	{%- endfor -%}
+	{%- if section.blocks -%}
+		<div class="absolute text-center bottom-0 inset-x-0 z-20">
+			<div class="container">
+				<div class="row">
+					<div>
+						{%- for block in section.blocks -%}
+							{%- case block.type -%}
+									{%- when 'heading' -%}
+									<h2 class="font-semibold text-6xl uppercase" {{ block.shopify_attributes }}>
+										{{ block.settings.heading | escape }}
+									</h2>
+									{%- when 'button' -%}
+									<div class="" {{ block.shopify_attributes }}>
+											{%- if block.settings.button_label != blank -%}
+											<a{% if block.settings.button_link == blank %} role="link" aria-disabled="true"{% else %} href="{{ block.settings.button_link }}"{% endif %} class="button">
+												{{ block.settings.button_label | escape }}
+											</a>
+											{%- endif -%}
+									</div>
+							{%- endcase -%}
+						{%- endfor -%}
+						</div>
+				</div>
+			</div>
+		</div>
+	{%- endif -%%}
 </div>
 
 <div id="Banner-{{ section.id }}" class="banner banner--content-align-{{ section.settings.desktop_content_alignment }} banner--content-align-mobile-{{ section.settings.mobile_content_alignment }} banner--{{ section.settings.image_height }}{% if section.settings.stack_images_on_mobile and section.settings.image != blank and section.settings.image_2 != blank %} banner--stacked{% endif %}{% if section.settings.adapt_height_first_image and section.settings.image != blank %} banner--adapt{% endif %}{% if section.settings.show_text_below %} banner--mobile-bottom{%- endif -%}{% if section.settings.show_text_box == false %} banner--desktop-transparent{% endif %}">
