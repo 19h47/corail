@@ -587,16 +587,8 @@ hr{
 .button {
 	}
 
-.fixed{
-  position: fixed;
-}
-
 .absolute{
   position: absolute;
-}
-
-.relative{
-  position: relative;
 }
 
 .inset-0{
@@ -611,12 +603,12 @@ hr{
   right: 0px;
 }
 
-.bottom-0{
-  bottom: 0px;
-}
-
 .top-0{
   top: 0px;
+}
+
+.bottom-0{
+  bottom: 0px;
 }
 
 .isolate{
@@ -655,16 +647,16 @@ hr{
   display: none;
 }
 
-.h-5{
-  height: 1.25rem;
+.h-\[4\.5rem\]{
+  height: 4.5rem;
 }
 
 .h-full{
   height: 100%;
 }
 
-.h-\[4\.5rem\]{
-  height: 4.5rem;
+.h-5{
+  height: 1.25rem;
 }
 
 .h-\[1\.125rem\]{
@@ -675,20 +667,12 @@ hr{
   width: 7rem;
 }
 
-.w-full{
-  width: 100%;
-}
-
 .w-px{
   width: 1px;
 }
 
 .w-\[1\.125rem\]{
   width: 1.125rem;
-}
-
-.flex-wrap{
-  flex-wrap: wrap;
 }
 
 .items-center{
@@ -701,21 +685,17 @@ hr{
   white-space: nowrap;
 }
 
+.bg-current{
+  background-color: currentColor;
+}
+
 .bg-black{
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
-.bg-current{
-  background-color: currentColor;
-}
-
 .fill-current{
   fill: currentColor;
-}
-
-.p-6{
-  padding: 1.5rem;
 }
 
 .p-\[1\.6875rem\]{
@@ -745,6 +725,11 @@ hr{
 .text-sm{
   font-size: 0.875rem;
   line-height: 1.25rem;
+}
+
+.text-6xl{
+  font-size: 3.75rem;
+  line-height: 1;
 }
 
 .font-medium{

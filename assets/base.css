@@ -406,12 +406,6 @@ h5,
 .h3,
 .h4,
 .h5 {
-	font-family: var(--font-heading-family);
-	font-style: var(--font-heading-style);
-	font-weight: var(--font-heading-weight);
-	letter-spacing: calc(var(--font-heading-scale) * 0.06rem);
-	color: rgb(var(--color-foreground));
-	line-height: calc(1 + 0.3 / max(1, var(--font-heading-scale)));
 	word-break: break-word;
 }
 
@@ -444,18 +438,6 @@ h1,
 	h1,
 	.h1 {
 		font-size: calc(var(--font-heading-scale) * 4rem);
-	}
-}
-
-h2,
-.h2 {
-	font-size: calc(var(--font-heading-scale) * 2rem);
-}
-
-@media only screen and (min-width: 750px) {
-	h2,
-	.h2 {
-		font-size: calc(var(--font-heading-scale) * 2.4rem);
 	}
 }
 
