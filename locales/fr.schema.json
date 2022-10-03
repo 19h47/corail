@@ -870,92 +870,13 @@
 			}
 		},
 		"image-banner": {
-			"name": "Bannière avec image",
+			"name": "Bannière avec image ou vidéo",
 			"settings": {
 				"image": {
 					"label": "Image"
 				},
 				"video": {
 					"label": "Vidéo"
-				},
-				"show_text_box": {
-					"label": "Afficher le conteneur sur le bureau"
-				},
-				"image_overlay_opacity": {
-					"label": "Opacité de la superposition d'images"
-				},
-				"header": {
-					"content": "Mise en page mobile"
-				},
-				"show_text_below": {
-					"label": "Afficher le conteneur sur le mobile"
-				},
-				"image_height": {
-					"label": "Hauteur de la bannière",
-					"options__1": {
-						"label": "Petit"
-					},
-					"options__2": {
-						"label": "Moyen"
-					},
-					"options__3": {
-						"label": "Grand"
-					},
-					"info": "Pour optimiser vos résultats, utilisez une image ayant un rapport d'aspect de 3:2. [En savoir plus](https://help.shopify.com/manual/shopify-admin/productivity-tools/image-editor#understanding-image-aspect-ratio)"
-				},
-				"desktop_content_position": {
-					"options__1": {
-						"label": "En haut à gauche"
-					},
-					"options__2": {
-						"label": "En haut au centre"
-					},
-					"options__3": {
-						"label": "En haut à droite"
-					},
-					"options__4": {
-						"label": "Au milieu à gauche"
-					},
-					"options__5": {
-						"label": "Centré au milieu"
-					},
-					"options__6": {
-						"label": "Au milieu à droite"
-					},
-					"options__7": {
-						"label": "En bas à gauche"
-					},
-					"options__8": {
-						"label": "En bas au centre"
-					},
-					"options__9": {
-						"label": "En bas à droite"
-					},
-					"label": "Position du contenu sur le bureau"
-				},
-				"desktop_content_alignment": {
-					"options__1": {
-						"label": "Gauche"
-					},
-					"options__2": {
-						"label": "Centre"
-					},
-					"options__3": {
-						"label": "Droite"
-					},
-					"label": "Alignement du contenu du bureau"
-				},
-				"mobile_content_alignment": {
-					"options__1": {
-						"label": "Gauche"
-					},
-					"options__2": {
-						"label": "Centre"
-					},
-					"options__3": {
-						"label": "Droite"
-					},
-					"label": "Alignement du contenu sur mobile"
 				}
 			},
 			"blocks": {
@@ -967,28 +888,8 @@
 						}
 					}
 				},
-				"text": {
-					"name": "Texte",
-					"settings": {
-						"text": {
-							"label": "Description"
-						},
-						"text_style": {
-							"options__1": {
-								"label": "Corps"
-							},
-							"options__2": {
-								"label": "Sous-titre"
-							},
-							"options__3": {
-								"label": "Majuscule"
-							},
-							"label": "Style de texte"
-						}
-					}
-				},
-				"buttons": {
-					"name": "Boutons",
+				"button": {
+					"name": "Bouton",
 					"settings": {
 						"button_label": {
 							"label": "Texte du bouton",
@@ -1001,7 +902,7 @@
 				}
 			},
 			"presets": {
-				"name": "Bannière avec image"
+				"name": "Bannière avec image ou vidéo"
 			}
 		},
 		"image-with-text": {
