@@ -24,12 +24,9 @@
 				},
 				"content": {
 					"type": "content"
-				},
-				"featured_articles": {
-					"type": "featured_articles"
 				}
 			},
-			"block_order": ["featured_image", "title", "share", "content", "featured_articles"]
+			"block_order": ["featured_image", "title", "share", "content"]
 		}
 	},
 	"order": ["main"]
