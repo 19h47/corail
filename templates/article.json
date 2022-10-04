@@ -26,10 +26,10 @@
 					"type": "content"
 				},
 				"slider": {
-					"type": "slider"
+					"type": "featured_articles"
 				}
 			},
-			"block_order": ["featured_image", "title", "share", "content", "slider"]
+			"block_order": ["featured_image", "title", "share", "content", "featured_articles"]
 		}
 	},
 	"order": ["main"]

@@ -1215,10 +1215,10 @@
 						}
 					}
 				},
-				"slider": {
-					"name": "Slider",
+				"featured_articles": {
+					"name": "Articles à la une",
 					"settings": {
-						"label": "Slider"
+						"label": "Choisissez les articles à mettre en avant"
 					}
 				}
 			}
