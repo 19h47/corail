@@ -1214,6 +1214,12 @@
 							"label": "Texte"
 						}
 					}
+				},
+				"featured_articles": {
+					"name": "Articles à la une",
+					"settings": {
+						"label": "Choisissez les articles à mettre en avant"
+					}
 				}
 			}
 		},

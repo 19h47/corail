@@ -23,10 +23,16 @@
 					}
 				},
 				"content": {
-					"type": "content"
+					"type": "content",
+					"settings": {}
+				},
+				"featured_articles": {
+					"type": "featured_articles",
+					"settings": {}
 				}
 			},
-			"block_order": ["featured_image", "title", "share", "content"]
+			"block_order": ["featured_image", "title", "share", "content", "featured_articles"],
+			"settings": {}
 		}
 	},
 	"order": ["main"]
