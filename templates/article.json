@@ -26,14 +26,7 @@
 					"type": "content"
 				},
 				"slider": {
-					"type": "slider",
-					"settings": [
-						{
-							"type": "image_picker",
-							"id": "image",
-							"label": "Image"
-						}
-					]
+					"type": "slider"
 				}
 			},
 			"block_order": ["featured_image", "title", "share", "content", "slider"]

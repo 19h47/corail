@@ -1216,7 +1216,10 @@
 					}
 				},
 				"slider": {
-					"name": "Slider"
+					"name": "Slider",
+					"settings": {
+						"label": "Slider"
+					}
 				}
 			}
 		},
