@@ -10,23 +10,55 @@
 <noscript>{{ 'component-list-social.css' | asset_url | stylesheet_tag }}</noscript>
 <noscript>{{ 'component-rte.css' | asset_url | stylesheet_tag }}</noscript>
 
-<footer class="relative">
-	<hr class="bg-orange-grayish absolute top-0 inset-x-0 w-full h-px">
-	<div class="py-7 px-4" {{ block.shopify_attributes }}>
-		{%- for block in section.blocks -%}
-			{%- if block.type == 'link_list' and block.settings.menu != blank -%}
-				<ul class="text-orange-dark-grayish inline-flex gap-x-8">
-					{%- for link in block.settings.menu.links -%}
-						<li>
-							<a class="hover:underline flex items-center flex-shrink-0 font-medium {% if link.active %} is-active {% endif %}" href="{{ link.url }}">
-								{{- link.title -}}
-								{%- render 'svg', icon: 'arrow-up-right', classes: 'ml-1.5 h-1.5 w-1.5 fill-current', description: link.title -%}
-							</a>
-						</li>
-					{%- endfor -%}
-				</ul>
-			{%- endif -%}
-		{%- endfor -%}
+<footer>
+	<div class="relative h-[22.75rem]">
+
+		<div class="flex h-full">
+			<a href="{{ routes.root_url }}" class="after:pb-[100%] w-[22.75rem] after:block relative block">
+				{% render 'svg', icon: 'c-logo', classes: 'absolute inset-0 m-auto h-10 w-10 fill-current', description: shop.name %}
+			</a>
+
+			<span class="h-full block w-px bg-orange-grayish"></span>
+
+			<div class="flex flex-1 justify-center items-center font-semibold text-xl leading-5 text-center">
+				<p>
+					FROM THE SEA<br>
+					TO SAVE THE EARTH
+				</p>
+			</div>
+
+			<span class="h-full block w-px bg-orange-grayish"></span>
+
+			<div class="text-orange-grayish px-14 pt-8 pb-12">
+				<p class="font-bold leading-5 text-right">
+					43°17′42,00″ NORD<br>
+					5°22′19,20″ EST
+				</p>
+			</div>
+
+		</div>
+
+		<hr class="bg-orange-grayish absolute top-0 inset-x-0 w-full h-px">
+	</div>
+
+	<div class="relative">
+		<hr class="bg-orange-grayish absolute top-0 inset-x-0 w-full h-px">
+		<div class="py-7 px-4" {{ block.shopify_attributes }}>
+			{%- for block in section.blocks -%}
+				{%- if block.type == 'link_list' and block.settings.menu != blank -%}
+					<ul class="text-orange-dark-grayish inline-flex gap-x-8">
+						{%- for link in block.settings.menu.links -%}
+							<li>
+								<a class="hover:underline flex items-center flex-shrink-0 font-medium {% if link.active %} is-active {% endif %}" href="{{ link.url }}">
+									{{- link.title -}}
+									{%- render 'svg', icon: 'arrow-up-right', classes: 'ml-1.5 h-1.5 w-1.5 fill-current', description: link.title -%}
+								</a>
+							</li>
+						{%- endfor -%}
+					</ul>
+				{%- endif -%}
+			{%- endfor -%}
+		</div>
 	</div>
 </footer>
 
