@@ -25,7 +25,7 @@
 				"content": {
 					"type": "content"
 				},
-				"slider": {
+				"featured_articles": {
 					"type": "featured_articles"
 				}
 			},
