@@ -202,7 +202,7 @@
 		</script>
   	</head>
 
-  	<body class="{% if request.page_type == 'index' %}bg-black{% endif %%}">
+  	<body>
 		{% comment %} <a class="skip-to-content-link button visually-hidden" href="#MainContent">
 			{{ "accessibility.skip_to_text" | t }}
 		</a> {% endcomment %}
@@ -215,7 +215,7 @@
 
 		{% section 'header' %}
 
-    	<main id="MainContent" class="content-for-layout" role="main" tabindex="-1">
+    	<main id="MainContent" class="content-for-layout {% if request.page_type == 'index' %}-mt-[4.5rem] relative z-10 {% endif %}" role="main" tabindex="-1">
       		{{ content_for_layout }}
     	</main>
 

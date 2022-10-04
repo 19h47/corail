@@ -42,7 +42,7 @@
   	</symbol>
 </svg>
 
-<header class="text-black z-10 h-[4.5rem] relative {% if request.page_type == 'index' %}text-white{% endif %}">
+<header class="z-10 h-[4.5rem] relative {% if request.page_type == 'index' %}relative z-20 text-white{% endif %}">
 	<div class="flex h-full">
 		<a href="{{ routes.root_url }}" class="px-10 py-[1.625rem] block">
 			{% render 'svg', icon: 'logo', classes: 'h-5 w-28 fill-current', description: shop.name %}
@@ -70,7 +70,7 @@
 															{{ childlink.title | escape }}
 														</a>
 														{%- if childlink.links != blank -%}
-															<ul class="list-unstyled" role="list">
+															<ul role="list">
 																{%- for grandchildlink in childlink.links -%}
 																	<li>
 																		<a href="{{ grandchildlink.url }}" class="mega-menu__link {% if grandchildlink.current %} mega-menu__link--active{% endif %}"{% if grandchildlink.current %} aria-current="page"{% endif %}>
@@ -275,7 +275,7 @@
                       -%}
                     </a>
                   {%- endif -%}
-                  <ul class="list list-social list-unstyled" role="list">
+                  <ul class="list list-social" role="list">
                     {%- if settings.social_twitter_link != blank -%}
                       <li class="list-social__item">
                         <a href="{{ settings.social_twitter_link }}" class="list-social__link">
@@ -516,6 +516,13 @@
 {
   "name": "t:sections.header.name",
   "class": "section-header",
-  "settings": []
+  "settings": [
+	{
+		"type": "link_list",
+		"id": "menu",
+		"default": "main-menu",
+		"label": "t:sections.header.settings.menu.label"
+	}
+  ]
 }
 {% endschema %}

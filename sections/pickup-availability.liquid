@@ -51,7 +51,7 @@
       </p>
     {%- endunless -%}
 
-    <ul class="pickup-availability-list list-unstyled" role="list" data-store-availability-drawer-content>
+    <ul class="pickup-availability-list" role="list" data-store-availability-drawer-content>
       {%- for availability in pick_up_availabilities -%}
         <li class="pickup-availability-list__item">
           <h3 class="h4">{{ availability.location.name | escape }}</h3>

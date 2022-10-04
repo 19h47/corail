@@ -1,6 +1,8 @@
 const plugin = require('tailwindcss/plugin');
 
 const colors = {
+	'gray': { 'very-dark': '#333333' },
+	'orange': { 'dark-grayish': '#97938F', 'grayish': '#CFCDC9' }
 };
 
 const fontSize = {
@@ -24,7 +26,7 @@ module.exports = {
 		},
 	},
 	plugins: [
-		plugin(({ addVariant }) => addVariant('is-inview', '.is-inview &')),
-		plugin(({ addVariant }) => addVariant('is-active', '.is-active &')),
+		plugin(({ addVariant }) => addVariant('is-inview', '.is-inview&')),
+		plugin(({ addVariant }) => addVariant('is-active', '.is-active&')),
 	],
 };

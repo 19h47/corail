@@ -882,10 +882,6 @@ input.mobile-facets__checkbox {
 	width: 50%;
 }
 
-.mobile-facets__footer noscript .button {
-	width: 100%;
-}
-
 .mobile-facets__sort {
 	display: flex;
 	justify-content: space-between;

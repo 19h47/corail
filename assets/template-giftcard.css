@@ -98,47 +98,6 @@ h2,
 	clip: auto;
 }
 
-.button {
-	font-family: inherit;
-	cursor: pointer;
-	display: inline-flex;
-	justify-content: center;
-	align-items: center;
-	border: none;
-	padding: 1.5rem 3rem;
-	text-decoration: none;
-	background-color: rgb(var(--color-base-accent-1));
-	box-shadow: 0 0 0 0.1rem rgb(var(--color-base-accent-1));
-	color: rgb(var(--color-base-solid-button-labels));
-	min-width: 12rem;
-	height: auto;
-	font-size: 1.5rem;
-	letter-spacing: 0.1rem;
-	line-height: calc(1 + 0.2 / var(--font-body-scale));
-}
-
-.button::selection {
-	background-color: rgba(var(--color-base-solid-button-labels), 0.3);
-}
-
-.button:hover {
-	box-shadow: 0 0 0 0.2rem rgb(var(--color-base-accent-1));
-}
-
-.button--secondary {
-	color: rgb(var(--color-base-outline-button-labels));
-	box-shadow: 0 0 0 0.1rem rgb(var(--color-base-outline-button-labels));
-	background-color: transparent;
-}
-
-.button--secondary::selection {
-	background-color: rgba(var(--color-base-outline-button-labels), 0.3);
-}
-
-.button--secondary:hover {
-	box-shadow: 0 0 0 0.2rem rgb(var(--color-base-outline-button-labels));
-}
-
 .gift-card {
 	padding-bottom: 3.4rem;
 }
@@ -310,11 +269,6 @@ h2,
 	margin: 0 auto;
 }
 
-.gift-card__buttons > .button:first-child {
-	display: block;
-	margin-bottom: 2rem;
-}
-
 /*
   Focus ring - default (with offset)
 */
@@ -341,34 +295,10 @@ h2,
 		0 0 0.5rem 0.4rem rgba(var(--color-foreground), 0.3);
 }
 
-.button:focus-visible {
-	box-shadow: 0 0 0 0.1rem rgb(var(--color-base-accent-1)),
-		0 0 0 0.3rem rgb(var(--color-base-background-1)),
-		0 0 0.5rem 0.4rem rgba(var(--color-base-text), 0.3);
-}
-
 /* Negate the fallback side-effect for browsers that support :focus-visible */
 .no-js *:focus:not(:focus-visible) {
 	outline: 0;
 	box-shadow: none;
-}
-
-.button:focus {
-	box-shadow: 0 0 0 0.1rem rgb(var(--color-base-accent-1)),
-		0 0 0 0.3rem rgb(var(--color-base-background-1)),
-		0 0 0.5rem 0.4rem rgba(var(--color-base-text), 0.3);
-}
-
-.button--secondary:focus-visible {
-	box-shadow: 0 0 0 0.1rem rgb(var(--color-base-outline-button-labels)),
-		0 0 0 0.3rem rgb(var(--color-base-background-1)),
-		0 0 0.5rem 0.4rem rgba(var(--color-base-text), 0.3);
-}
-
-.button--secondary:focus {
-	box-shadow: 0 0 0 0.1rem rgb(var(--color-base-outline-button-labels)),
-		0 0 0 0.3rem rgb(var(--color-base-background-1)),
-		0 0 0.5rem 0.4rem rgba(var(--color-base-text), 0.3);
 }
 
 .form__message {

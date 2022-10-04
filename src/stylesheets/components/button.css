@@ -8,5 +8,13 @@
 
 @layer components {
 	.button {
+		@apply text-xs uppercase rounded-full bg-white text-gray-very-dark py-4 px-8 transition-colors duration-1000 ease-in-out;
+	}
+
+	.button:hover {
+		@apply bg-gray-very-dark text-white;
+	}
+
+	.button[aria-disabled="true"] {
 	}
 }

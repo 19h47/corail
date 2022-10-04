@@ -9,14 +9,6 @@
 	align-items: center;
 }
 
-.article.grid__item {
-	padding: 0;
-}
-
-.grid--peek .article-card {
-	box-sizing: border-box;
-}
-
 .article-card__image-wrapper > a {
 	display: block;
 }
