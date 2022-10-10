@@ -17,14 +17,14 @@
 
 <div class="featured-blog my-16 space-y-8">
 	<div class="container">
-		<div class="row">
+		<div class="row items-center">
 			{%- unless section.settings.heading == blank -%}
 				<div class="col-6/12">
 					<h2 class="font-semibold text-5xl uppercase">{{ section.settings.heading | escape }}</h2>
 				</div>
 			{%- endunless -%}
 
-			<div class="col-6/12">
+			<div class="col-6/12 flex justify-end">
 				<a href="{{ section.settings.blog.url }}" class="button button-red">
 				&rightarrow;&nbsp;{{ 'sections.featured_blog.view_all' | t }}
 				</a>

@@ -8,11 +8,11 @@
 
 @layer utilities {
 	.container {
-		@apply max-w-[87.5rem] mx-auto px-4;
+		@apply max-w-[90rem] mx-auto px-5;
 	}
 
 	.row {
-		@apply flex -mx-1 lg:-mx-3 flex-wrap;
+		@apply flex -mx-1 lg:-mx-2 flex-wrap;
 	}
 
 	.row > * {
@@ -20,7 +20,7 @@
 	}
 
 	.col {
-		@apply px-1 lg:px-3;
+		@apply px-1 lg:px-2;
 	}
 
 	.col-full {
