@@ -28,89 +28,89 @@
 
 			<span class="h-full block w-px bg-orange-grayish"></span>
 
-			<div class="text-orange-grayish px-14 pt-8 pb-12">
+			<div class="text-orange-grayish px-14 pt-8 pb-12 flex flex-col items-end">
 				<p class="font-bold leading-5 text-right">
 					43°17′42,00″ NORD<br>
 					5°22′19,20″ EST
 				</p>
 
-				<ul role="list">
+				<ul role="list" class="text-orange-dark-grayish inline-flex gap-8 mt-auto">
 					{%- if settings.social_twitter_link != blank -%}
 						<li>
-							<a href="{{ settings.social_twitter_link }}" class="link list-social__link">
-								{%- render 'svg', icon: 'twitter', classes: '', description: 't:general.social.links.twitter' -%}
+							<a href="{{ settings.social_twitter_link }}" class="w-4 h-4 block">
+								{%- render 'svg', icon: 'twitter', classes: 'fill-current w-full h-full', description: 't:general.social.links.twitter' -%}
 							</a>
 						</li>
 					{%- endif -%}
 
 					{%- if settings.social_facebook_link != blank -%}
 						<li>
-							<a href="{{ settings.social_facebook_link }}" class="link list-social__link">
-								{%- render 'svg', icon: 'facebook', classes: '', description: 't:general.social.links.facebook' -%}
+							<a href="{{ settings.social_facebook_link }}" class="w-4 h-4 block">
+								{%- render 'svg', icon: 'facebook', classes: 'fill-current w-full h-full', description: 't:general.social.links.facebook' -%}
 							</a>
 						</li>
 					{%- endif -%}
 
 					{%- if settings.social_pinterest_link != blank -%}
 						<li>
-							<a href="{{ settings.social_pinterest_link }}" class="link list-social__link">
-								{%- render 'svg', icon: 'pinterest', classes: '', description: 't:general.social.links.pinterest' -%}
+							<a href="{{ settings.social_pinterest_link }}" class="w-4 h-4 block">
+								{%- render 'svg', icon: 'pinterest', classes: 'fill-current w-full h-full', description: 't:general.social.links.pinterest' -%}
 							</a>
 						</li>
 					{%- endif -%}
 
 					{%- if settings.social_instagram_link != blank -%}
 						<li>
-							<a href="{{ settings.social_instagram_link }}" class="link list-social__link">
-								{%- render 'svg', icon: 'instagram', classes: '', description: 't:general.social.links.instagram' -%}
+							<a href="{{ settings.social_instagram_link }}" class="w-4 h-4 block">
+								{%- render 'svg', icon: 'instagram', classes: 'fill-current w-full h-full', description: 't:general.social.links.instagram' -%}
 							</a>
 						</li>
 					{%- endif -%}
 
 					{%- if settings.social_twitch_link != blank -%}
 						<li>
-							<a href="{{ settings.social_twitch_link }}" class="link list-social__link">
-								{%- render 'svg', icon: 'vimeo', classes: '', description: 't:general.socal.links.twitch' -%}
+							<a href="{{ settings.social_twitch_link }}" class="w-4 h-4 block">
+								{%- render 'svg', icon: 'vimeo', classes: 'fill-current w-full h-full', description: 't:general.socal.links.twitch' -%}
 							</a>
 						</li>
 					{%- endif -%}
 
 					{%- if settings.social_tiktok_link != blank -%}
 						<li>
-							<a href="{{ settings.social_tiktok_link }}" class="link list-social__link">
-								{%- render 'svg', icon: 'tiktok', classes: '', description: 't:general.social.links.tiktok' -%}
+							<a href="{{ settings.social_tiktok_link }}" class="w-4 h-4 block">
+								{%- render 'svg', icon: 'tiktok', classes: 'fill-current w-full h-full', description: 't:general.social.links.tiktok' -%}
 							</a>
 						</li>
 					{%- endif -%}
 
 					{%- if settings.social_tumblr_link != blank -%}
 						<li>
-							<a href="{{ settings.social_tumblr_link }}" class="link list-social__link">
-								{%- render 'svg', icon: 'tumblr', classes: '', description: 't:general.social.links.tumblr' -%}
+							<a href="{{ settings.social_tumblr_link }}" class="w-4 h-4 block">
+								{%- render 'svg', icon: 'tumblr', classes: 'fill-current w-full h-full', description: 't:general.social.links.tumblr' -%}
 							</a>
 						</li>
 					{%- endif -%}
 
 					{%- if settings.social_snapchat_link != blank -%}
 						<li>
-							<a href="{{ settings.social_snapchat_link }}" class="link list-social__link">
-								{%- render 'svg', icon: 'snapchat', classes: '', description: 't:general.social.links.snapchat' -%}
+							<a href="{{ settings.social_snapchat_link }}" class="w-4 h-4 block">
+								{%- render 'svg', icon: 'snapchat', classes: 'fill-current w-full h-full', description: 't:general.social.links.snapchat' -%}
 							</a>
 						</li>
 					{%- endif -%}
 
 					{%- if settings.social_youtube_link != blank -%}
 						<li>
-							<a href="{{ settings.social_youtube_link }}" class="link list-social__link">
-								{%- render 'svg', icon: 'youtube', classes: '', description: 't:general.social.links.youtube' -%}
+							<a href="{{ settings.social_youtube_link }}" class="w-4 h-4 block">
+								{%- render 'svg', icon: 'youtube', classes: 'fill-current w-full h-full', description: 't:general.social.links.youtube' -%}
 							</a>
 						</li>
 					{%- endif -%}
 
 					{%- if settings.social_vimeo_link != blank -%}
 						<li>
-							<a href="{{ settings.social_vimeo_link }}" class="link list-social__link">
-								{%- render 'svg', icon: 'vimeo', classes: '', description: 't:general.socal.links.vimeo' -%}
+							<a href="{{ settings.social_vimeo_link }}" class="w-4 h-4 block">
+								{%- render 'svg', icon: 'vimeo', classes: 'fill-current w-full h-full', description: 't:general.socal.links.vimeo' -%}
 							</a>
 						</li>
 					{%- endif -%}
@@ -126,6 +126,7 @@
 		<hr class="bg-orange-grayish absolute top-0 inset-x-0 w-full h-px">
 		<div class="py-7 px-4" {{ block.shopify_attributes }}>
 			{%- for block in section.blocks -%}
+
 				{%- if block.type == 'link_list' and block.settings.menu != blank -%}
 					<ul class="text-orange-dark-grayish inline-flex gap-x-8">
 						{%- for link in block.settings.menu.links -%}
@@ -138,6 +139,7 @@
 						{%- endfor -%}
 					</ul>
 				{%- endif -%}
+
 			{%- endfor -%}
 		</div>
 	</div>
@@ -559,34 +561,6 @@
     }
   ],
   "settings": [
-    {
-      "type": "select",
-      "id": "color_scheme",
-      "options": [
-        {
-          "value": "accent-1",
-          "label": "t:sections.all.colors.accent_1.label"
-        },
-        {
-          "value": "accent-2",
-          "label": "t:sections.all.colors.accent_2.label"
-        },
-        {
-          "value": "background-1",
-          "label": "t:sections.all.colors.background_1.label"
-        },
-        {
-          "value": "background-2",
-          "label": "t:sections.all.colors.background_2.label"
-        },
-        {
-          "value": "inverse",
-          "label": "t:sections.all.colors.inverse.label"
-        }
-      ],
-      "default": "background-1",
-      "label": "t:sections.all.colors.label"
-    },
     {
       "type": "header",
       "content": "t:sections.footer.settings.header__1.content",
