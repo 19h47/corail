@@ -1,7 +1,14 @@
 {
+<<<<<<< HEAD
   "main.css": "assets/main.css",
   "main.js": "assets/main.js",
   "icons.svg": "assets/icons.svg",
   "main.css.map": "assets/main.css.map",
   "main.js.map": "assets/main.js.map"
 }
+=======
+  "main.css": "assets\/main.css",
+  "main.js": "assets\/main.js",
+  "icons.svg": "assets\/icons.svg"
+}
+>>>>>>> f767ce7656dc1fe9b6f108f310d38a55fb3efb98
