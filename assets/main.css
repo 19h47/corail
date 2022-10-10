@@ -604,6 +604,13 @@ hr{
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.button.button-red{
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 125 108 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
 .button:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(51 51 51 / var(--tw-bg-opacity));
@@ -646,12 +653,16 @@ hr{
   isolation: isolate;
 }
 
-.z-10{
-  z-index: 10;
+.z-0{
+  z-index: 0;
 }
 
 .z-20{
   z-index: 20;
+}
+
+.z-10{
+  z-index: 10;
 }
 
 .m-auto{
@@ -666,6 +677,18 @@ hr{
 .my-auto{
   margin-top: auto;
   margin-bottom: auto;
+}
+
+.mt-auto{
+  margin-top: auto;
+}
+
+.mt-1{
+  margin-top: 0.25rem;
+}
+
+.mt-4{
+  margin-top: 1rem;
 }
 
 .ml-1\.5{
@@ -696,10 +719,6 @@ hr{
   margin-top: -4.5rem;
 }
 
-.mt-auto{
-  margin-top: auto;
-}
-
 .block{
   display: block;
 }
@@ -724,16 +743,24 @@ hr{
   display: none;
 }
 
-.h-\[22\.75rem\]{
-  height: 22.75rem;
+.h-\[30\.5rem\]{
+  height: 30.5rem;
 }
 
 .h-full{
   height: 100%;
 }
 
+.h-\[22\.75rem\]{
+  height: 22.75rem;
+}
+
 .h-10{
   height: 2.5rem;
+}
+
+.h-4{
+  height: 1rem;
 }
 
 .h-px{
@@ -764,8 +791,8 @@ hr{
   height: 52.625rem;
 }
 
-.h-4{
-  height: 1rem;
+.w-full{
+  width: 100%;
 }
 
 .w-\[22\.75rem\]{
@@ -780,8 +807,8 @@ hr{
   width: 1px;
 }
 
-.w-full{
-  width: 100%;
+.w-4{
+  width: 1rem;
 }
 
 .w-1\.5{
@@ -798,10 +825,6 @@ hr{
 
 .w-\[1\.125rem\]{
   width: 1.125rem;
-}
-
-.w-4{
-  width: 1rem;
 }
 
 .flex-1{
@@ -824,10 +847,6 @@ hr{
   align-items: center;
 }
 
-.justify-end{
-  justify-content: flex-end;
-}
-
 .justify-center{
   justify-content: center;
 }
@@ -841,10 +860,25 @@ hr{
        column-gap: 2rem;
 }
 
+.space-y-8 > :not([hidden]) ~ :not([hidden]){
+  --tw-space-y-reverse: 0;
+  margin-top: calc(2rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(2rem * var(--tw-space-y-reverse));
+}
+
 .truncate{
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+.border-t{
+  border-top-width: 1px;
+}
+
+.border-orange-grayish{
+  --tw-border-opacity: 1;
+  border-color: rgb(207 205 201 / var(--tw-border-opacity));
 }
 
 .bg-gray-very-dark{
@@ -868,6 +902,15 @@ hr{
 .object-cover{
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.object-center{
+  -o-object-position: center;
+     object-position: center;
+}
+
+.p-8{
+  padding: 2rem;
 }
 
 .p-\[1\.6875rem\]{
@@ -909,6 +952,10 @@ hr{
   padding-right: 2rem;
 }
 
+.pt-3{
+  padding-top: 0.75rem;
+}
+
 .pt-8{
   padding-top: 2rem;
 }
@@ -923,6 +970,11 @@ hr{
 
 .text-right{
   text-align: right;
+}
+
+.text-3xl{
+  font-size: 1.875rem;
+  line-height: 2.25rem;
 }
 
 .text-xs{
@@ -950,16 +1002,16 @@ hr{
   line-height: 1;
 }
 
+.font-medium{
+  font-weight: 500;
+}
+
 .font-semibold{
   font-weight: 600;
 }
 
 .font-bold{
   font-weight: 700;
-}
-
-.font-medium{
-  font-weight: 500;
 }
 
 .uppercase{
@@ -974,12 +1026,16 @@ hr{
   font-style: italic;
 }
 
-.leading-5{
-  line-height: 1.25rem;
+.leading-8{
+  line-height: 2rem;
 }
 
 .leading-4{
   line-height: 1rem;
+}
+
+.leading-5{
+  line-height: 1.25rem;
 }
 
 .leading-\[1\.125rem\]{
@@ -1079,9 +1135,52 @@ hr{
 
 /* Safari and Chrome */
 
+.after\:absolute::after{
+  content: var(--tw-content);
+  position: absolute;
+}
+
+.after\:inset-x-0::after{
+  content: var(--tw-content);
+  left: 0px;
+  right: 0px;
+}
+
+.after\:bottom-0::after{
+  content: var(--tw-content);
+  bottom: 0px;
+}
+
+.after\:z-10::after{
+  content: var(--tw-content);
+  z-index: 10;
+}
+
 .after\:block::after{
   content: var(--tw-content);
   display: block;
+}
+
+.after\:h-\[18\.375rem\]::after{
+  content: var(--tw-content);
+  height: 18.375rem;
+}
+
+.after\:w-full::after{
+  content: var(--tw-content);
+  width: 100%;
+}
+
+.after\:bg-gradient-to-t::after{
+  content: var(--tw-content);
+  background-image: linear-gradient(to top, var(--tw-gradient-stops));
+}
+
+.after\:from-black::after{
+  content: var(--tw-content);
+  --tw-gradient-from: #000;
+  --tw-gradient-to: rgb(0 0 0 / 0);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
 .after\:pb-\[100\%\]::after{
@@ -1091,6 +1190,13 @@ hr{
 
 .hover\:underline:hover{
   text-decoration-line: underline;
+}
+
+@media (min-width: 1024px){
+
+  .lg\:w-3\/12{
+    width: 25%;
+  }
 }
 
 

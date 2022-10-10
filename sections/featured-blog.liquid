@@ -15,32 +15,31 @@
   	endif
 -%}
 
-<div class="featured-blog my-16">
+<div class="featured-blog my-16 space-y-8">
 	<div class="container">
 		<div class="row">
 			{%- unless section.settings.heading == blank -%}
 				<div class="col-6/12">
-					<h2 class="font-semibold text-5xl">{{ section.settings.heading | escape }}</h2>
+					<h2 class="font-semibold text-5xl uppercase">{{ section.settings.heading | escape }}</h2>
 				</div>
 			{%- endunless -%}
 
-			{%- if section.settings.blog != blank and section.settings.show_view_all and section.settings.post_limit < section.settings.blog.articles_count -%}
-				  <a href="{{ section.settings.blog.url }}" class="button">
-					{{ 'sections.featured_blog.view_all' | t }}
-				  </a>
-			{%- endif -%}
+			<div class="col-6/12">
+				<a href="{{ section.settings.blog.url }}" class="button button-red">
+				&rightarrow;&nbsp;{{ 'sections.featured_blog.view_all' | t }}
+				</a>
+			</div>
+
 		</div>
 	</div>
 	<div class="container">
-		<div class="row">
-			<ul>
-				{%- for article in section.settings.blog.articles limit: section.settings.post_limit -%}
-					<li>
-						{% render 'article-card', blog: section.settings.blog, article: article, media_aspect_ratio: 1.66, show_image: section.settings.show_image, show_date: section.settings.show_date, show_author: section.settings.show_author, show_excerpt: true %}
-					</li>
-				{%- endfor -%}
-			</ul>
-		</div>
+		<ul class="row">
+			{%- for article in section.settings.blog.articles limit: section.settings.post_limit -%}
+				<li class="lg:w-3/12">
+					{% render 'article-card', blog: section.settings.blog, article: article, media_aspect_ratio: 1.66, show_image: section.settings.show_image, show_date: section.settings.show_date, show_author: section.settings.show_author, show_excerpt: true %}
+				</li>
+			{%- endfor -%}
+		</ul>
 	</div>
 </div>
 

@@ -2,6 +2,6 @@
   "main.css": "assets/main.css",
   "main.js": "assets/main.js",
   "icons.svg": "assets/icons.svg",
-  "main.css.map": "assets/main.css.map",
-  "main.js.map": "assets/main.js.map"
+  "main.js.map": "assets/main.js.map",
+  "main.css.map": "assets/main.css.map"
 }
