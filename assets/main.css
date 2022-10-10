@@ -1,3 +1,6 @@
+/*!********************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[8].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[8].use[2]!./src/stylesheets/styles.css ***!
+  \********************************************************************************************************************************************************************************/
 /**
  * Base
  *
@@ -655,6 +658,11 @@ hr{
   margin: auto;
 }
 
+.my-16{
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
 .my-auto{
   margin-top: auto;
   margin-bottom: auto;
@@ -894,6 +902,11 @@ hr{
   line-height: 1rem;
 }
 
+.text-5xl{
+  font-size: 3rem;
+  line-height: 1;
+}
+
 .text-xl{
   font-size: 1.25rem;
   line-height: 1.75rem;
@@ -971,7 +984,7 @@ hr{
 .container{
   margin-left: auto;
   margin-right: auto;
-  max-width: 86rem;
+  max-width: 87.5rem;
   padding-left: 1rem;
   padding-right: 1rem;
 }
@@ -1020,6 +1033,20 @@ hr{
   }
 }
 
+.col-6\/12{
+  width: 50%;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+
+@media (min-width: 1024px){
+
+  .col-6\/12{
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+}
+
 /* Safari and Chrome */
 
 /* Safari and Chrome */
@@ -1038,3 +1065,5 @@ hr{
   text-decoration-line: underline;
 }
 
+
+/*# sourceMappingURL=main.css.map*/

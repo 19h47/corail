@@ -1,13 +1,12 @@
 {% comment %}theme-check-disable UndefinedObject{% endcomment %}
 {{ 'section-footer.css' | asset_url | stylesheet_tag }}
+
 <link rel="stylesheet" href="{{ 'component-newsletter.css' | asset_url }}" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="{{ 'component-list-payment.css' | asset_url }}" media="print" onload="this.media='all'">
-<link rel="stylesheet" href="{{ 'component-list-social.css' | asset_url }}" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="{{ 'component-rte.css' | asset_url }}" media="print" onload="this.media='all'">
 
 <noscript>{{ 'component-newsletter.css' | asset_url | stylesheet_tag }}</noscript>
 <noscript>{{ 'component-list-payment.css' | asset_url | stylesheet_tag }}</noscript>
-<noscript>{{ 'component-list-social.css' | asset_url | stylesheet_tag }}</noscript>
 <noscript>{{ 'component-rte.css' | asset_url | stylesheet_tag }}</noscript>
 
 <footer>
@@ -34,6 +33,88 @@
 					43°17′42,00″ NORD<br>
 					5°22′19,20″ EST
 				</p>
+
+				<ul role="list">
+					{%- if settings.social_twitter_link != blank -%}
+						<li>
+							<a href="{{ settings.social_twitter_link }}" class="link list-social__link">
+								{%- render 'svg', icon: 'twitter', classes: '', description: 't:general.social.links.twitter' -%}
+							</a>
+						</li>
+					{%- endif -%}
+
+					{%- if settings.social_facebook_link != blank -%}
+						<li>
+							<a href="{{ settings.social_facebook_link }}" class="link list-social__link">
+								{%- render 'svg', icon: 'facebook', classes: '', description: 't:general.social.links.facebook' -%}
+							</a>
+						</li>
+					{%- endif -%}
+
+					{%- if settings.social_pinterest_link != blank -%}
+						<li>
+							<a href="{{ settings.social_pinterest_link }}" class="link list-social__link">
+								{%- render 'svg', icon: 'pinterest', classes: '', description: 't:general.social.links.pinterest' -%}
+							</a>
+						</li>
+					{%- endif -%}
+
+					{%- if settings.social_instagram_link != blank -%}
+						<li>
+							<a href="{{ settings.social_instagram_link }}" class="link list-social__link">
+								{%- render 'svg', icon: 'instagram', classes: '', description: 't:general.social.links.instagram' -%}
+							</a>
+						</li>
+					{%- endif -%}
+
+					{%- if settings.social_twitch_link != blank -%}
+						<li>
+							<a href="{{ settings.social_twitch_link }}" class="link list-social__link">
+								{%- render 'svg', icon: 'vimeo', classes: '', description: 't:general.socal.links.twitch' -%}
+							</a>
+						</li>
+					{%- endif -%}
+
+					{%- if settings.social_tiktok_link != blank -%}
+						<li>
+							<a href="{{ settings.social_tiktok_link }}" class="link list-social__link">
+								{%- render 'svg', icon: 'tiktok', classes: '', description: 't:general.social.links.tiktok' -%}
+							</a>
+						</li>
+					{%- endif -%}
+
+					{%- if settings.social_tumblr_link != blank -%}
+						<li>
+							<a href="{{ settings.social_tumblr_link }}" class="link list-social__link">
+								{%- render 'svg', icon: 'tumblr', classes: '', description: 't:general.social.links.tumblr' -%}
+							</a>
+						</li>
+					{%- endif -%}
+
+					{%- if settings.social_snapchat_link != blank -%}
+						<li>
+							<a href="{{ settings.social_snapchat_link }}" class="link list-social__link">
+								{%- render 'svg', icon: 'snapchat', classes: '', description: 't:general.social.links.snapchat' -%}
+							</a>
+						</li>
+					{%- endif -%}
+
+					{%- if settings.social_youtube_link != blank -%}
+						<li>
+							<a href="{{ settings.social_youtube_link }}" class="link list-social__link">
+								{%- render 'svg', icon: 'youtube', classes: '', description: 't:general.social.links.youtube' -%}
+							</a>
+						</li>
+					{%- endif -%}
+
+					{%- if settings.social_vimeo_link != blank -%}
+						<li>
+							<a href="{{ settings.social_vimeo_link }}" class="link list-social__link">
+								{%- render 'svg', icon: 'vimeo', classes: '', description: 't:general.socal.links.vimeo' -%}
+							</a>
+						</li>
+					{%- endif -%}
+				</ul>
 			</div>
 
 		</div>
