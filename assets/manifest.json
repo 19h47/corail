@@ -1,5 +1,5 @@
 {
-  "main.css": "assets/main.css",
-  "main.js": "assets/main.js",
-  "icons.svg": "assets/icons.svg"
+  "main.css": "assets\/main.css",
+  "main.js": "assets\/main.js",
+  "icons.svg": "assets\/icons.svg"
 }

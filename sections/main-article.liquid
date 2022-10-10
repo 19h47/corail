@@ -1,13 +1,14 @@
 {{ 'section-blog-post.css' | asset_url | stylesheet_tag }}
 
 <article class="article-template" itemscope itemtype="http://schema.org/BlogPosting">
-  {%- for block in section.blocks -%}
-    {%- case block.type -%}
-      {%- when '@app' -%}
-        <div class="page-width page-width--narrow">
-          {% render block %}
-        </div>
-      {%- when 'featured_image'-%}
+  	{%- for block in section.blocks -%}
+    	{%- case block.type -%}
+      		{%- when '@app' -%}
+        		<div class="page-width page-width--narrow">
+          			{% render block %}
+        		</div>
+
+			{%- when 'featured_image'-%}
         {%- if article.image -%}
           <div class="article-template__hero-container" {{ block.shopify_attributes }}>
             <div class="article-template__hero-{{ block.settings.image_height }} media"

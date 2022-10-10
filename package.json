@@ -9,7 +9,8 @@
 	"scripts": {
 		"dev": "webpack --mode=development --config webpack/webpack.config.js",
 		"prod": "webpack --mode=production --config webpack/webpack.config.js",
-		"serve": "shopify theme serve"
+		"serve": "shopify theme serve",
+		"pull": "shopify theme pull"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.19.1",
