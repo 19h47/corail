@@ -4,6 +4,8 @@
 	# @author Jérémy Levron <jeremylevron@19h47.fr> (https://19h47.fr/)
 %}
 
+<script src="{{ 'coordinates.js' | asset_url }}" defer></script>
+
 <div class="text-white relative image-banner">
 	<video class="h-[52.625rem] w-full object-cover relative z-10" loop muted autoplay src="{{ section.settings.video }}"></video>
 
@@ -38,10 +40,10 @@
 		<div class="container">
 			<div class="row">
 				<div>
-					<p>
-						43°17′42,00″ N<br>
-						5°22′19,20″ E
-					</p>
+					<coordinates-dms>
+						<span class="block" style="font-variant-numeric: tabular-nums;">43°17′42,00″ N</span>
+						<span class="block" style="font-variant-numeric: tabular-nums;">5°22′19,20″ E</span>
+					</coordinates-dms>
 				</div>
 			</div>
 		</div>
