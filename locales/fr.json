@@ -232,6 +232,7 @@
 		"header": {
 			"announcement": "Annonce",
 			"menu": "Menu",
+			"secondary_menu": "Menu secondaire",
 			"cart_count": {
 				"one": "{{ count }} article",
 				"other": "{{ count }} articles",
