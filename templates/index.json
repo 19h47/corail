@@ -58,9 +58,9 @@
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
-        "title": "Featured products",
+        "title": "WE MAKE SNEAKERS WITH MARINE WASTE COLLECTED ANDTRANSFORMED BY US.",
         "heading_size": "h2",
-        "description": "",
+        "description": "<p>FROM THE SEA <br\/>TO SAVE THE EARTH<\/p>",
         "show_description": false,
         "description_style": "body",
         "collection": "all",
