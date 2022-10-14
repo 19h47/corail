@@ -10,7 +10,7 @@
 	}
 
 	.row {
-		@apply flex -mx-1 lg:-mx-2 flex-wrap;
+		@apply flex -mx-1 lg:-mx-5 flex-wrap;
 	}
 
 	.row > * {

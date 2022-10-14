@@ -15,4 +15,8 @@
 	.wysiwyg > *:last-child {
 		@apply mb-0;
 	}
+
+	.wysiwyg > p {
+		@apply mb-8;
+	}
 }

@@ -3,38 +3,41 @@
 
 <link rel="stylesheet" href="{{ 'component-newsletter.css' | asset_url }}" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="{{ 'component-list-payment.css' | asset_url }}" media="print" onload="this.media='all'">
-<link rel="stylesheet" href="{{ 'component-rte.css' | asset_url }}" media="print" onload="this.media='all'">
 
 <noscript>{{ 'component-newsletter.css' | asset_url | stylesheet_tag }}</noscript>
 <noscript>{{ 'component-list-payment.css' | asset_url | stylesheet_tag }}</noscript>
-<noscript>{{ 'component-rte.css' | asset_url | stylesheet_tag }}</noscript>
 
 <footer>
-	<div class="relative h-[22.75rem]">
+	<div class="relative lg:h-[22.75rem]">
 
-		<div class="flex h-full">
-			<a href="{{ routes.root_url }}" class="after:pb-[100%] w-[22.75rem] after:block relative block">
+		<div class="flex flex-col lg:flex-row lg:h-full">
+
+			<a href="{{ routes.root_url }}" class="after:pb-[100%] w-[22.75rem] after:block relative hidden lg:block">
 				{% render 'svg', icon: 'c-logo', classes: 'absolute inset-0 m-auto h-10 w-10 fill-current', description: shop.name %}
 			</a>
 
-			<span class="h-full block w-px bg-orange-grayish"></span>
+			<a href="{{ routes.root_url }}" class="px-5 py-6 lg:hidden">
+				{% render 'svg', icon: 'corail-logo', classes: 'w-full h-auto fill-current', description: shop.name %}
+			</a>
 
-			<div class="flex flex-1 justify-center items-center font-semibold text-xl leading-5 text-center">
+			<hr class="w-full h-px lg:h-full block lg:w-px bg-orange-grayish"></hr>
+
+			<div class="flex flex-1 py-24 lg:py-0 justify-center items-center font-semibold font-display text-xl leading-5 text-center">
 				<p>
 					FROM THE SEA<br>
 					TO SAVE THE EARTH
 				</p>
 			</div>
 
-			<span class="h-full block w-px bg-orange-grayish"></span>
+			<span class="h-px lg:h-full block w-full lg:w-px bg-orange-grayish"></span>
 
-			<div class="text-orange-grayish px-14 pt-8 pb-12 flex flex-col items-end">
-				<p class="font-bold leading-5 text-right">
-					43°17′42,00″ NORD<br>
-					5°22′19,20″ EST
+			<div class="text-orange-grayish px-5 lg:px-14 py-8 lg:pb-12 flex flex-col lg:items-end">
+				<p class="font-bold leading-5 text-sm lg:text-right font-display">
+					43°17′42,00″ N<br>
+					5°22′19,20″ E
 				</p>
 
-				<ul role="list" class="text-orange-dark-grayish inline-flex gap-8 mt-auto">
+				<ul role="list" class="text-orange-dark-grayish inline-flex gap-8 mt-14 lg:mt-auto">
 					{%- if settings.social_twitter_link != blank -%}
 						<li>
 							<a href="{{ settings.social_twitter_link }}" class="w-4 h-4 block">
@@ -124,11 +127,11 @@
 
 	<div class="relative">
 		<hr class="bg-orange-grayish absolute top-0 inset-x-0 w-full h-px">
-		<div class="py-7 px-4" {{ block.shopify_attributes }}>
+		<div class="py-11 lg:py-7 px-5 lg:px-4 text-display" {{ block.shopify_attributes }}>
 			{%- for block in section.blocks -%}
 
 				{%- if block.type == 'link_list' and block.settings.menu != blank -%}
-					<ul class="text-orange-dark-grayish inline-flex gap-x-8">
+					<ul class="text-orange-dark-grayish inline-flex flex-col lg:flex-row gap-y-4 lg:gap-y-0 lg:gap-x-8">
 						{%- for link in block.settings.menu.links -%}
 							<li>
 								<a class="hover:underline flex items-center flex-shrink-0 font-medium {% if link.active %} is-active {% endif %}" href="{{ link.url }}">

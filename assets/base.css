@@ -253,10 +253,6 @@ body,
 	margin: 0 auto 2rem;
 }
 
-.hidden {
-	display: none !important;
-}
-
 .visually-hidden {
 	position: absolute !important;
 	overflow: hidden;
@@ -309,50 +305,15 @@ body,
 	font-weight: var(--font-body-weight);
 }
 
-h1,
 h2,
 h3,
 h4,
 h5,
-.h0,
-.h1,
 .h2,
 .h3,
 .h4,
 .h5 {
 	word-break: break-word;
-}
-
-.hxl {
-	font-size: calc(var(--font-heading-scale) * 5rem);
-}
-
-@media only screen and (min-width: 750px) {
-	.hxl {
-		font-size: calc(var(--font-heading-scale) * 6.2rem);
-	}
-}
-
-.h0 {
-	font-size: calc(var(--font-heading-scale) * 4rem);
-}
-
-@media only screen and (min-width: 750px) {
-	.h0 {
-		font-size: calc(var(--font-heading-scale) * 5.2rem);
-	}
-}
-
-h1,
-.h1 {
-	font-size: calc(var(--font-heading-scale) * 3rem);
-}
-
-@media only screen and (min-width: 750px) {
-	h1,
-	.h1 {
-		font-size: calc(var(--font-heading-scale) * 4rem);
-	}
 }
 
 h3,
@@ -508,7 +469,6 @@ dl:empty,
 section:empty,
 article:empty,
 p:empty,
-h1:empty,
 h2:empty,
 h3:empty,
 h4:empty,
@@ -1087,10 +1047,6 @@ button.shopify-payment-button__button--unbranded {
 	margin: var(--inputs-border-width);
 }
 
-.share-button__message:not(:empty):not(.hidden) ~ * {
-	display: none;
-}
-
 /* component-form */
 .field__input,
 .select__select,
@@ -1580,11 +1536,6 @@ menu-drawer + .header__search {
 
 .header:not(.header--has-menu) * > .header__search {
 	display: none;
-}
-
-.header__search {
-	display: inline-flex;
-	line-height: 0;
 }
 
 .header--top-center > .header__search {

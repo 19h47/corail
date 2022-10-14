@@ -1,0 +1,11 @@
+/*
+ * Section header
+ *
+ * @author Jérémy Levron <jeremylevron@19h47.fr> (https://19h47.fr)
+ */
+
+@layer components {
+	.section-header {
+		@apply sticky z-50 top-0 inset-x-0;
+	}
+}

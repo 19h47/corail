@@ -2,7 +2,6 @@
  * Guid
  *
  * @author Jérémy Levron <jeremylevron@19h47.fr> (https://19h47.fr)
- * @package CreatorFund
  */
 
 @layer components {
@@ -12,17 +11,17 @@
 		z-index: 10000;
 	}
 
-	.Guid [class^='col'] .Guid__column {
+	.Guid [class^="col"] .Guid__column {
 		@apply bg-theme-blue/20;
 	}
 
-	.Guid [class^='col']:nth-child(odd) .Guid__column {
+	.Guid [class^="col"]:nth-child(odd) .Guid__column {
 		@apply bg-theme-red/20;
 	}
 
 	.Guid__column {
 		@apply w-full h-full bg-black;
 
-		color: theme('colors.theme.black');
+		color: theme("colors.theme.black");
 	}
 }

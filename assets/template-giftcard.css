@@ -10,7 +10,6 @@ dl:empty,
 section:empty,
 article:empty,
 p:empty,
-h1:empty,
 h2:empty,
 h3:empty,
 h4:empty,
@@ -52,8 +51,6 @@ body {
 	background-color: rgba(var(--color-base-text), 0.2);
 }
 
-h1,
-.h1,
 h2,
 .h2 {
 	font-family: var(--font-heading-family);
@@ -61,18 +58,6 @@ h2,
 	font-weight: var(--font-heading-weight);
 	letter-spacing: calc(var(--font-heading-scale) * 0.06rem);
 	line-height: calc(1 + 0.3 / max(1, var(--font-heading-scale)));
-}
-
-h1,
-.h1 {
-	font-size: calc(var(--font-heading-scale) * 3rem);
-}
-
-@media only screen and (min-width: 750px) {
-	h1,
-	.h1 {
-		font-size: calc(var(--font-heading-scale) * 4rem);
-	}
 }
 
 h2,

@@ -181,10 +181,6 @@ quick-add-modal .page-width {
 	padding: 0;
 }
 
-quick-add-modal .product__title > h1 {
-	display: none;
-}
-
 quick-add-modal .product__title > a {
 	display: block;
 	text-decoration: none;

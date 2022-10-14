@@ -1,3 +1,6 @@
+/*!********************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[8].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[8].use[2]!./src/stylesheets/styles.css ***!
+  \********************************************************************************************************************************************************************************/
 /**
  * Base
  *
@@ -16,6 +19,12 @@
  */
 
 /* @import "./components/guid"; */
+
+/*
+ * Section header
+ *
+ * @author Jérémy Levron <jeremylevron@19h47.fr> (https://19h47.fr)
+ */
 
 /**
  * Grid
@@ -602,6 +611,14 @@ hr{
 .button[aria-disabled="true"] {
 	}
 
+.section-header{
+  position: sticky;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  z-index: 50;
+}
+
 .absolute{
   position: absolute;
 }
@@ -708,8 +725,8 @@ hr{
   margin-bottom: 4rem;
 }
 
-.-mt-\[4\.5rem\]{
-  margin-top: -4.5rem;
+.-mt-\[4rem\]{
+  margin-top: -4rem;
 }
 
 .block{
@@ -756,20 +773,20 @@ hr{
   height: 1.75rem;
 }
 
-.h-\[22\.75rem\]{
-  height: 22.75rem;
-}
-
 .h-10{
   height: 2.5rem;
 }
 
-.h-4{
-  height: 1rem;
+.h-auto{
+  height: auto;
 }
 
 .h-px{
   height: 1px;
+}
+
+.h-4{
+  height: 1rem;
 }
 
 .h-1\.5{
@@ -780,8 +797,8 @@ hr{
   height: 0.25rem;
 }
 
-.h-\[4\.5rem\]{
-  height: 4.5rem;
+.h-16{
+  height: 4rem;
 }
 
 .h-5{
@@ -812,10 +829,6 @@ hr{
   width: 2.5rem;
 }
 
-.w-px{
-  width: 1px;
-}
-
 .w-4{
   width: 1rem;
 }
@@ -826,6 +839,10 @@ hr{
 
 .w-1{
   width: 0.25rem;
+}
+
+.w-px{
+  width: 1px;
 }
 
 .w-28{
@@ -850,10 +867,6 @@ hr{
 
 .flex-wrap{
   flex-wrap: wrap;
-}
-
-.items-end{
-  align-items: flex-end;
 }
 
 .items-center{
@@ -883,6 +896,10 @@ hr{
 .gap-x-2{
   -moz-column-gap: 0.5rem;
        column-gap: 0.5rem;
+}
+
+.gap-y-4{
+  row-gap: 1rem;
 }
 
 .gap-x-8{
@@ -960,34 +977,48 @@ hr{
   padding: 1.6875rem;
 }
 
+.p-\[1\.4375rem\]{
+  padding: 1.4375rem;
+}
+
 .py-3{
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
 }
 
-.px-14{
-  padding-left: 3.5rem;
-  padding-right: 3.5rem;
+.px-5{
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
 }
 
-.py-7{
-  padding-top: 1.75rem;
-  padding-bottom: 1.75rem;
+.py-6{
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 
-.px-4{
-  padding-left: 1rem;
-  padding-right: 1rem;
+.py-24{
+  padding-top: 6rem;
+  padding-bottom: 6rem;
 }
 
-.px-10{
-  padding-left: 2.5rem;
-  padding-right: 2.5rem;
+.py-8{
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
-.py-\[1\.625rem\]{
-  padding-top: 1.625rem;
-  padding-bottom: 1.625rem;
+.py-11{
+  padding-top: 2.75rem;
+  padding-bottom: 2.75rem;
+}
+
+.py-\[1\.375rem\]{
+  padding-top: 1.375rem;
+  padding-bottom: 1.375rem;
+}
+
+.px-6{
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 
 .px-8{
@@ -995,24 +1026,17 @@ hr{
   padding-right: 2rem;
 }
 
+.py-7{
+  padding-top: 1.75rem;
+  padding-bottom: 1.75rem;
+}
+
 .pt-3{
   padding-top: 0.75rem;
 }
 
-.pt-8{
-  padding-top: 2rem;
-}
-
-.pb-12{
-  padding-bottom: 3rem;
-}
-
 .text-center{
   text-align: center;
-}
-
-.text-right{
-  text-align: right;
 }
 
 .align-middle{
@@ -1166,8 +1190,8 @@ hr{
 @media (min-width: 1024px){
 
   .row{
-    margin-left: -0.5rem;
-    margin-right: -0.5rem;
+    margin-left: -1.25rem;
+    margin-right: -1.25rem;
   }
 }
 
@@ -1276,6 +1300,21 @@ hr{
 
 /* Safari and Chrome */
 
+.wysiwyg {
+	}
+
+.wysiwyg > *:first-child{
+  margin-top: 0px;
+}
+
+.wysiwyg > *:last-child{
+  margin-bottom: 0px;
+}
+
+.wysiwyg > p{
+  margin-bottom: 2rem;
+}
+
 .after\:absolute::after{
   content: var(--tw-content);
   position: absolute;
@@ -1343,8 +1382,127 @@ hr{
 
 @media (min-width: 1024px){
 
+  .lg\:mt-auto{
+    margin-top: auto;
+  }
+
+  .lg\:ml-1\/12{
+    margin-left: 8.333333333333334%;
+  }
+
+  .lg\:-mt-\[4\.5rem\]{
+    margin-top: -4.5rem;
+  }
+
+  .lg\:block{
+    display: block;
+  }
+
+  .lg\:flex{
+    display: flex;
+  }
+
+  .lg\:hidden{
+    display: none;
+  }
+
+  .lg\:h-\[22\.75rem\]{
+    height: 22.75rem;
+  }
+
+  .lg\:h-full{
+    height: 100%;
+  }
+
+  .lg\:h-\[4\.5rem\]{
+    height: 4.5rem;
+  }
+
   .lg\:w-3\/12{
     width: 25%;
   }
+
+  .lg\:w-px{
+    width: 1px;
+  }
+
+  .lg\:w-auto{
+    width: auto;
+  }
+
+  .lg\:flex-row{
+    flex-direction: row;
+  }
+
+  .lg\:items-end{
+    align-items: flex-end;
+  }
+
+  .lg\:gap-y-0{
+    row-gap: 0px;
+  }
+
+  .lg\:gap-x-8{
+    -moz-column-gap: 2rem;
+         column-gap: 2rem;
+  }
+
+  .lg\:p-\[1\.6875rem\]{
+    padding: 1.6875rem;
+  }
+
+  .lg\:py-0{
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+
+  .lg\:px-14{
+    padding-left: 3.5rem;
+    padding-right: 3.5rem;
+  }
+
+  .lg\:py-7{
+    padding-top: 1.75rem;
+    padding-bottom: 1.75rem;
+  }
+
+  .lg\:px-4{
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .lg\:px-10{
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+
+  .lg\:py-\[1\.625rem\]{
+    padding-top: 1.625rem;
+    padding-bottom: 1.625rem;
+  }
+
+  .lg\:pb-12{
+    padding-bottom: 3rem;
+  }
+
+  .lg\:text-right{
+    text-align: right;
+  }
+
+	.lg\:col-6\/12{
+    width: 50%;
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+  }
+
+	@media (min-width: 1024px){
+
+    .lg\:col-6\/12{
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+    }
+  }
 }
 
+
+/*# sourceMappingURL=main.css.map*/

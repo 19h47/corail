@@ -66,7 +66,7 @@
         {{ money_price }}
       </span>
     </div>
-    <small class="unit-price caption{% if product.selected_or_first_available_variant.unit_price_measurement == nil %} hidden{% endif %}">
+    <small class="unit-price caption {% if product.selected_or_first_available_variant.unit_price_measurement == nil %} hidden {% endif %}">
       <span class="visually-hidden">{{ 'products.product.price.unit_price' | t }}</span>
       <span class="price-item price-item--last">
         <span>{{- product.selected_or_first_available_variant.unit_price | money -}}</span>

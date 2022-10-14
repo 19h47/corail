@@ -36,22 +36,25 @@
   <script src="{{ 'cart-drawer.js' | asset_url }}" defer="defer"></script>
 {%- endif -%}
 
-<svg xmlns="http://www.w3.org/2000/svg" class="hidden">
-  	<symbol id="icon-close" class="icon icon-close" fill="none" viewBox="0 0 18 17">
-    	<path d="M.865 15.978a.5.5 0 00.707.707l7.433-7.431 7.579 7.282a.501.501 0 00.846-.37.5.5 0 00-.153-.351L9.712 8.546l7.417-7.416a.5.5 0 10-.707-.708L8.991 7.853 1.413.573a.5.5 0 10-.693.72l7.563 7.268-7.418 7.417z" fill="currentColor">
-  	</symbol>
-</svg>
-
-<header class="h-[4.5rem] relative {% if request.page_type == 'index' %}relative z-20 text-white {% else %} z-10 {% endif %}">
+<header class="h-16 lg:h-[4.5rem] relative z-20 {% if request.page_type == 'index' %} text-white {% else %} bg-white {% endif %}">
+	{% if request.page_type != 'index' %}
+		<hr class="w-full h-px absolute top-0 inset-x-0 block bg-orange-grayish"></hr>
+	{% endif %}
 	<div class="flex h-full">
-		<a href="{{ routes.root_url }}" class="px-10 py-[1.625rem] block">
+		<button type="button" class="py-[1.375rem] px-6 lg:hidden">
+			{% render 'svg', icon: 'bars', classes: 'h-5 w-4 fill-current', description: shop.name %}
+		</button>
+
+		<span class="w-px h-full block lg:hidden {% if request.page_type == 'index' %} bg-current {% else %} bg-orange-grayish {% endif %}"></span>
+
+		<a href="{{ routes.root_url }}" class="lg:px-10 py-[1.375rem] lg:py-[1.625rem] w-full lg:w-auto flex justify-center">
 			{% render 'svg', icon: 'corail-logo', classes: 'h-5 w-28 fill-current', description: shop.name %}
 		</a>
 
-		<span class="w-px h-full block bg-current"></span>
+		<span class="w-px h-full hidden lg:block {% if request.page_type == 'index' %} bg-current {% else %} bg-orange-grayish {% endif %}"></span>
 
 		{%- if section.settings.menu != blank -%}
-			<nav class="flex items-center">
+			<nav class="hidden lg:flex items-center">
 			  	<ul class="flex" role="list">
 					{%- for link in section.settings.menu.links -%}
 						<li>
@@ -100,10 +103,10 @@
 
 		<div class="ml-auto flex">
 
-			{%- if section.settings.menu != blank -%}
-				<nav class="flex items-center">
+			{%- if section.settings.secondary-menu != blank -%}
+				<nav class="hidden lg:flex items-center">
 					<ul class="flex" role="list">
-						{%- for link in section.settings.secondary_menu.links -%}
+						{%- for link in section.settings.secondary-menu.links -%}
 							<a class="px-8 py-7 block text-sm uppercase font-medium leading-4" href="{{ link.url }}" {% if link.current %} aria-current="page"{% endif %}>
 								{{ link.title | escape }}
 							</a>
@@ -112,7 +115,7 @@
 				</nav>
 			{% endif %}
 
-			<details-modal class="header__search">
+			<details-modal class="header__search hidden lg:block">
 				<details>
 					<summary class="block p-[1.6875rem]" aria-haspopup="dialog" aria-label="{{ 'general.search.search' | t }}">
 						{% render 'svg', icon: 'magnifying-glass', classes: 'w-[1.125rem] h-[1.125rem] fill-current' %}
@@ -186,16 +189,16 @@
 				</details>
 			</details-modal>
 
-			<span class="w-px h-full block bg-current"></span>
+			<span class="w-px h-full block {% if request.page_type == 'index' %} bg-current {% else %} bg-orange-grayish {% endif %}"></span>
 
-			<a href="{{ routes.cart_url }}" class="font-semibold text-sm leading-[1.125rem] flex p-[1.6875rem]">
+			<a href="{{ routes.cart_url }}" class="font-semibold text-sm leading-[1.125rem] flex p-[1.4375rem] lg:p-[1.6875rem]">
 				{%- render 'svg', icon: 'bag-shopping', classes: 'mr-2 w-[1.125rem] h-[1.125rem] fill-current' -%}
 				({% if cart.item_count < 10 %}0{{ cart.item_count }}{% else %}{{ cart.item_count }}{% endif %})
 			</a>
 		</div>
 	</div>
 
-	<hr class="absolute bottom-0 inset-x-0 bg-current">
+	<hr class="absolute bottom-0 inset-x-0 block {% if request.page_type == 'index' %} bg-current {% else %} bg-orange-grayish {% endif %}">
 </header>
 
 {% comment %} <div class="header-wrapper color-{{ section.settings.color_scheme }} {% if section.settings.show_line_separator %} header-wrapper--border-bottom{% endif %}">

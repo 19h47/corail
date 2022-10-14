@@ -2,6 +2,7 @@
 
 @import "./components/button";
 /* @import "./components/guid"; */
+@import "./components/section-header";
 
 @import "./utilities/grid";
 @import "./utilities/marquee";
