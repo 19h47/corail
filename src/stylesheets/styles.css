@@ -1,9 +1,10 @@
 @import "./base/base";
 
 @import "./components/button";
-@import "./components/guid";
+/* @import "./components/guid"; */
 
 @import "./utilities/grid";
+@import "./utilities/marquee";
 @import "./utilities/scrollbar";
 @import "./utilities/wysiwyg";
 

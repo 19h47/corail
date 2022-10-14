@@ -18,26 +18,23 @@
  * @subpackage Corail
  */
 
-/*
- * Guid
- *
- * @author Jérémy Levron <jeremylevron@19h47.fr> (https://19h47.fr)
- * @package CreatorFund
- */
+/* @import "./components/guid"; */
 
 /**
  * Grid
  *
- * @package WordPress
- * @subpackage MatthieuTeyssandier
+ * @author Jérémy Levron <jeremylevron@19h47.fr> (https://19h47.fr)
+ */
+
+/**
+ * Marquee
+ *
  * @author Jérémy Levron <jeremylevron@19h47.fr> (https://19h47.fr)
  */
 
 /**
  * Wysiwyg
  *
- * @package WordPress
- * @subpackage Corail
  * @author Jérémy Levron <jeremylevron@19h47.fr> (https://19h47.fr)
  */
 
@@ -547,45 +544,6 @@ hr{
   --tw-backdrop-sepia:  ;
 }
 
-.container{
-  width: 100%;
-}
-
-@media (min-width: 640px){
-
-  .container{
-    max-width: 640px;
-  }
-}
-
-@media (min-width: 768px){
-
-  .container{
-    max-width: 768px;
-  }
-}
-
-@media (min-width: 1024px){
-
-  .container{
-    max-width: 1024px;
-  }
-}
-
-@media (min-width: 1280px){
-
-  .container{
-    max-width: 1280px;
-  }
-}
-
-@media (min-width: 1536px){
-
-  .container{
-    max-width: 1536px;
-  }
-}
-
 .button{
   border-radius: 9999px;
   --tw-bg-opacity: 1;
@@ -839,6 +797,10 @@ hr{
   flex-direction: column;
 }
 
+.flex-wrap{
+  flex-wrap: wrap;
+}
+
 .items-end{
   align-items: flex-end;
 }
@@ -859,6 +821,11 @@ hr{
   gap: 2rem;
 }
 
+.gap-x-2{
+  -moz-column-gap: 0.5rem;
+       column-gap: 0.5rem;
+}
+
 .gap-x-8{
   -moz-column-gap: 2rem;
        column-gap: 2rem;
@@ -870,9 +837,17 @@ hr{
   margin-bottom: calc(2rem * var(--tw-space-y-reverse));
 }
 
+.overflow-hidden{
+  overflow: hidden;
+}
+
 .truncate{
   overflow: hidden;
   text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.whitespace-nowrap{
   white-space: nowrap;
 }
 
@@ -885,9 +860,9 @@ hr{
   border-color: rgb(207 205 201 / var(--tw-border-opacity));
 }
 
-.bg-gray-very-dark{
+.bg-white{
   --tw-bg-opacity: 1;
-  background-color: rgb(51 51 51 / var(--tw-bg-opacity));
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
 .bg-orange-grayish{
@@ -921,9 +896,9 @@ hr{
   padding: 1.6875rem;
 }
 
-.py-4{
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+.py-3{
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
 }
 
 .px-14{
@@ -1056,6 +1031,11 @@ hr{
   color: rgb(207 205 201 / var(--tw-text-opacity));
 }
 
+.text-gray-very-dark{
+  --tw-text-opacity: 1;
+  color: rgb(51 51 51 / var(--tw-text-opacity));
+}
+
 .text-orange-dark-grayish{
   --tw-text-opacity: 1;
   color: rgb(151 147 143 / var(--tw-text-opacity));
@@ -1134,6 +1114,22 @@ hr{
     padding-right: 0.5rem;
   }
 }
+
+.marquee {
+		animation-name: marquee-text-animation;
+		animation-timing-function: linear;
+		animation-iteration-count: infinite;
+		/* float: left; */
+	}
+
+@keyframes marquee-text-animation {
+		0% {
+			transform: translateX(0);
+		}
+		to {
+			transform: translateX(-100%);
+		}
+	}
 
 /* Safari and Chrome */
 

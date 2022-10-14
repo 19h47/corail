@@ -1,0 +1,23 @@
+/**
+ * Marquee
+ *
+ * @author Jérémy Levron <jeremylevron@19h47.fr> (https://19h47.fr)
+ */
+
+@layer utilities {
+	.marquee {
+		animation-name: marquee-text-animation;
+		animation-timing-function: linear;
+		animation-iteration-count: infinite;
+		/* float: left; */
+	}
+
+	@keyframes marquee-text-animation {
+		0% {
+			transform: translateX(0);
+		}
+		to {
+			transform: translateX(-100%);
+		}
+	}
+}

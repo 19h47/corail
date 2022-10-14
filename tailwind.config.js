@@ -19,8 +19,11 @@ module.exports = {
 		"./snippets/**/*.liquid",
 		"./sections/**/*.liquid",
 		"./layout/**/*.liquid",
-		"./src/**/*.{html,js}",
+		"./src/**/*.{html,js}"
 	],
+	corePlugins: {
+		container: false,
+	},
 	theme: {
 		extend: {
 			colors,
