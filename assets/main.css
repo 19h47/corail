@@ -703,6 +703,14 @@ hr{
   margin-top: -4.5rem;
 }
 
+.mt-7{
+  margin-top: 1.75rem;
+}
+
+.mt-14{
+  margin-top: 3.5rem;
+}
+
 .block{
   display: block;
 }
@@ -775,6 +783,10 @@ hr{
   height: 52.625rem;
 }
 
+.h-7{
+  height: 1.75rem;
+}
+
 .w-full{
   width: 100%;
 }
@@ -811,6 +823,10 @@ hr{
   width: 1.125rem;
 }
 
+.w-7{
+  width: 1.75rem;
+}
+
 .flex-1{
   flex: 1 1 0%;
 }
@@ -845,6 +861,10 @@ hr{
 
 .gap-8{
   gap: 2rem;
+}
+
+.gap-2{
+  gap: 0.5rem;
 }
 
 .gap-x-2{
@@ -1054,6 +1074,10 @@ hr{
 
 .leading-\[1\.125rem\]{
   line-height: 1.125rem;
+}
+
+.leading-6{
+  line-height: 1.5rem;
 }
 
 .text-white{

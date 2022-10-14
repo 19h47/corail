@@ -610,7 +610,6 @@ details > * {
 	--duration-long: 500ms;
 }
 
-.underlined-link,
 .customer a {
 	color: rgba(var(--color-link), var(--alpha-link));
 	text-underline-offset: 0.3rem;
@@ -618,7 +617,6 @@ details > * {
 	transition: text-decoration-thickness ease 100ms;
 }
 
-.underlined-link:hover,
 .customer a:hover {
 	color: rgb(var(--color-link));
 	text-decoration-thickness: 0.2rem;
@@ -762,10 +760,6 @@ summary::-webkit-details-marker {
 
 .title-wrapper-with-link .title {
 	margin: 0;
-}
-
-.title-wrapper {
-	margin-bottom: 3rem;
 }
 
 .title-wrapper-with-link {
