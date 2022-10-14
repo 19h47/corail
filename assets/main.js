@@ -426,9 +426,7 @@ var __webpack_exports__ = {};
   !*** ./src/index.js ***!
   \**********************/
 __webpack_require__(/*! scripts/app */ "./src/scripts/app.js");
-
 __webpack_require__(/*! stylesheets/styles.css */ "./src/stylesheets/styles.css");
-
 __webpack_require__("./src/icons sync recursive ^\\.\\/.*$");
 })();
 

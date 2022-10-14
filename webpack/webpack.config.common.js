@@ -8,7 +8,6 @@
 
 // Webpack plugins
 const ESLintPlugin = require('eslint-webpack-plugin');
-const { WebpackManifestPlugin } = require('webpack-manifest-plugin');
 const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
 const WebpackNotifierPlugin = require('webpack-notifier');
 
@@ -43,9 +42,6 @@ module.exports = {
 		$: 'jQuery',
 	},
 	plugins: [
-		new WebpackManifestPlugin({
-			publicPath: 'assets/',
-		}),
 		new ESLintPlugin({
 			baseConfig: eslintOptions,
 		}),
