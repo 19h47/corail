@@ -28,7 +28,7 @@ module.exports = [
 		exclude: [/img/, /icons/],
 		type: 'asset/resource',
 		generator: {
-			filename: 'fonts/[hash][ext][query]',
+			filename: '[name][ext]',
 		},
 	},
 	{

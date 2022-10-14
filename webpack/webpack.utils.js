@@ -25,9 +25,6 @@ const getStyleLoader = (sourceMap = true) => {
 		use: [
 			{
 				loader: MiniCssExtractPlugin.loader,
-				options: {
-					publicPath: '../',
-				},
 			},
 			{
 				loader: require.resolve('css-loader'),

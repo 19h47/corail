@@ -1,6 +1,9 @@
 {
   "main.css": "assets/main.css",
   "main.js": "assets/main.js",
+  "roobert-bold.woff2": "assets/roobert-bold.woff2",
+  "roobert-semibold.woff2": "assets/roobert-semibold.woff2",
+  "roobert-medium.woff2": "assets/roobert-medium.woff2",
   "icons.svg": "assets/icons.svg",
   "main.css.map": "assets/main.css.map",
   "main.js.map": "assets/main.js.map"

@@ -1,4 +1,5 @@
 const plugin = require("tailwindcss/plugin");
+const defaultTheme = require('tailwindcss/defaultTheme');
 
 const colors = {
 	gray: { "very-dark": "#333333" },
@@ -30,6 +31,10 @@ module.exports = {
 			fontSize,
 			maxWidth,
 			spacing,
+		},
+		fontFamily: {
+			display: ['"Roobert"', ...defaultTheme.fontFamily.serif],
+			body: ['"Roboto Mono"', ...defaultTheme.fontFamily.sans],
 		},
 	},
 	plugins: [

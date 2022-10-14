@@ -68,6 +68,28 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/icons/icon-bottle.svg":
+/*!***********************************!*\
+  !*** ./src/icons/icon-bottle.svg ***!
+  \***********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+      id: "icon-bottle-usage",
+      viewBox: "0 0 13.9 23.9",
+      url: __webpack_require__.p + "icons.svg#icon-bottle",
+      toString: function () {
+        return this.url;
+      }
+    });
+
+/***/ }),
+
 /***/ "./src/icons/icon-c-logo.svg":
 /*!***********************************!*\
   !*** ./src/icons/icon-c-logo.svg ***!
@@ -81,7 +103,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
       id: "icon-c-logo-usage",
-      viewBox: "0 0 62 57",
+      viewBox: "0 0 61 56.9",
       url: __webpack_require__.p + "icons.svg#icon-c-logo",
       toString: function () {
         return this.url;
@@ -178,6 +200,50 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/icons/icon-sea.svg":
+/*!********************************!*\
+  !*** ./src/icons/icon-sea.svg ***!
+  \********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+      id: "icon-sea-usage",
+      viewBox: "0 0 24.9 20.1",
+      url: __webpack_require__.p + "icons.svg#icon-sea",
+      toString: function () {
+        return this.url;
+      }
+    });
+
+/***/ }),
+
+/***/ "./src/icons/icon-shirt.svg":
+/*!**********************************!*\
+  !*** ./src/icons/icon-shirt.svg ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+      id: "icon-shirt-usage",
+      viewBox: "0 0 28.5 21.6",
+      url: __webpack_require__.p + "icons.svg#icon-shirt",
+      toString: function () {
+        return this.url;
+      }
+    });
+
+/***/ }),
+
 /***/ "./src/icons/icon-twitch.svg":
 /*!***********************************!*\
   !*** ./src/icons/icon-twitch.svg ***!
@@ -231,11 +297,14 @@ __webpack_require__.r(__webpack_exports__);
 var map = {
 	"./icon-arrow-up-right.svg": "./src/icons/icon-arrow-up-right.svg",
 	"./icon-bag-shopping.svg": "./src/icons/icon-bag-shopping.svg",
+	"./icon-bottle.svg": "./src/icons/icon-bottle.svg",
 	"./icon-c-logo.svg": "./src/icons/icon-c-logo.svg",
 	"./icon-corail-logo.svg": "./src/icons/icon-corail-logo.svg",
 	"./icon-facebook.svg": "./src/icons/icon-facebook.svg",
 	"./icon-instagram.svg": "./src/icons/icon-instagram.svg",
 	"./icon-magnifying-glass.svg": "./src/icons/icon-magnifying-glass.svg",
+	"./icon-sea.svg": "./src/icons/icon-sea.svg",
+	"./icon-shirt.svg": "./src/icons/icon-shirt.svg",
 	"./icon-twitch.svg": "./src/icons/icon-twitch.svg",
 	"./icon-youtube.svg": "./src/icons/icon-youtube.svg"
 };

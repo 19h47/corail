@@ -450,6 +450,32 @@ hr{
   border-style: none;
 }
 
+/* Roobert */
+
+@font-face {
+		font-family: "Roobert";
+		src: url(roobert-bold.woff2) format("woff2");
+		font-weight: 700;
+		font-style: normal;
+		font-display: swap;
+	}
+
+@font-face {
+		font-family: "Roobert";
+		src: url(roobert-medium.woff2) format("woff2");
+		font-weight: 500;
+		font-style: normal;
+		font-display: swap;
+	}
+
+@font-face {
+		font-family: "Roobert";
+		src: url(roobert-semibold.woff2) format("woff2");
+		font-weight: 600;
+		font-style: normal;
+		font-display: swap;
+	}
+
 *, ::before, ::after{
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -951,6 +977,10 @@ hr{
   text-align: right;
 }
 
+.font-display{
+  font-family: "Roobert", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+}
+
 .text-3xl{
   font-size: 1.875rem;
   line-height: 2.25rem;
@@ -964,6 +994,11 @@ hr{
 .text-5xl{
   font-size: 3rem;
   line-height: 1;
+}
+
+.text-4xl{
+  font-size: 2.25rem;
+  line-height: 2.5rem;
 }
 
 .text-xl{
@@ -1096,6 +1131,20 @@ hr{
 @media (min-width: 1024px){
 
   .col{
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}
+
+.col-3\/12{
+  width: 25%;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+
+@media (min-width: 1024px){
+
+  .col-3\/12{
     padding-left: 0.5rem;
     padding-right: 0.5rem;
   }
