@@ -54,7 +54,7 @@
 			<nav class="flex items-center">
 			  	<ul class="flex" role="list">
 					{%- for link in section.settings.menu.links -%}
-						<li class="">
+						<li>
 							{%- if link.links != blank -%}
 								<header-menu>
 									<details id="Details-HeaderMenu-{{ forloop.index }}" class="mega-menu">
@@ -100,7 +100,17 @@
 
 		<div class="ml-auto flex">
 
-			menu-secondaire
+			{%- if section.settings.menu != blank -%}
+				<nav class="flex items-center">
+					<ul class="flex" role="list">
+						{%- for link in section.settings.secondary_menu.links -%}
+							<a class="px-8 py-7 block text-sm uppercase font-medium leading-4" href="{{ link.url }}" {% if link.current %} aria-current="page"{% endif %}>
+								{{ link.title | escape }}
+							</a>
+						{% endfor %}
+					</ul>
+				</nav>
+			{% endif %}
 
 			<details-modal class="header__search">
 				<details>
