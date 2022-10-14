@@ -835,6 +835,7 @@
 				"menu": {
 					"label": "Menu"
 				},
+				"secondary_menu": { "label": "Menu secondaire" },
 				"show_line_separator": {
 					"label": "Afficher la ligne de séparation"
 				},
