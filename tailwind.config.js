@@ -1,8 +1,8 @@
 const plugin = require("tailwindcss/plugin");
-const defaultTheme = require('tailwindcss/defaultTheme');
+const defaultTheme = require("tailwindcss/defaultTheme");
 
 const colors = {
-	gray: { "very-dark": "#333333" },
+	gray: { "very-dark": "#333333", "very-light": "#F3F3F3" },
 	orange: { "dark-grayish": "#97938F", grayish: "#CFCDC9" },
 	red: { "very-light": "#FF7D6C" },
 };
@@ -13,14 +13,16 @@ const maxWidth = {
 	344: `${1376 / 16}rem`,
 };
 
-const spacing = {};
+const spacing = {
+	"3/9": `${(3 * 100) / 9}%`,
+};
 
 module.exports = {
 	content: [
 		"./snippets/**/*.liquid",
 		"./sections/**/*.liquid",
 		"./layout/**/*.liquid",
-		"./src/**/*.{html,js}"
+		"./src/**/*.{html,js}",
 	],
 	corePlugins: {
 		container: false,

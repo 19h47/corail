@@ -102,10 +102,6 @@ product-recommendations.is-accordion + .accordion {
 	margin-top: 0;
 }
 
-.complementary-products__container .card--card .card__inner .card__media {
-	border-radius: calc(var(--corner-radius) - var(--border-width) - var(--image-padding));
-}
-
 .complementary-products__container .card--horizontal .quick-add {
 	margin: 1rem 0 0;
 	max-width: 20rem;

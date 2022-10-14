@@ -1,6 +1,3 @@
-/*!********************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[8].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[8].use[2]!./src/stylesheets/styles.css ***!
-  \********************************************************************************************************************************************************************************/
 /**
  * Base
  *
@@ -675,6 +672,18 @@ hr{
   margin-top: 1rem;
 }
 
+.mb-12{
+  margin-bottom: 3rem;
+}
+
+.mt-14{
+  margin-top: 3.5rem;
+}
+
+.mt-7{
+  margin-top: 1.75rem;
+}
+
 .ml-1\.5{
   margin-left: 0.375rem;
 }
@@ -703,16 +712,12 @@ hr{
   margin-top: -4.5rem;
 }
 
-.mt-7{
-  margin-top: 1.75rem;
-}
-
-.mt-14{
-  margin-top: 3.5rem;
-}
-
 .block{
   display: block;
+}
+
+.inline-block{
+  display: inline-block;
 }
 
 .flex{
@@ -741,6 +746,14 @@ hr{
 
 .h-full{
   height: 100%;
+}
+
+.h-\[28rem\]{
+  height: 28rem;
+}
+
+.h-7{
+  height: 1.75rem;
 }
 
 .h-\[22\.75rem\]{
@@ -783,12 +796,12 @@ hr{
   height: 52.625rem;
 }
 
-.h-7{
-  height: 1.75rem;
-}
-
 .w-full{
   width: 100%;
+}
+
+.w-7{
+  width: 1.75rem;
 }
 
 .w-\[22\.75rem\]{
@@ -823,10 +836,6 @@ hr{
   width: 1.125rem;
 }
 
-.w-7{
-  width: 1.75rem;
-}
-
 .flex-1{
   flex: 1 1 0%;
 }
@@ -859,12 +868,16 @@ hr{
   justify-content: center;
 }
 
-.gap-8{
-  gap: 2rem;
+.justify-between{
+  justify-content: space-between;
 }
 
 .gap-2{
   gap: 0.5rem;
+}
+
+.gap-8{
+  gap: 2rem;
 }
 
 .gap-x-2{
@@ -904,6 +917,11 @@ hr{
 .border-orange-grayish{
   --tw-border-opacity: 1;
   border-color: rgb(207 205 201 / var(--tw-border-opacity));
+}
+
+.bg-gray-very-light{
+  --tw-bg-opacity: 1;
+  background-color: rgb(243 243 243 / var(--tw-bg-opacity));
 }
 
 .bg-white{
@@ -997,6 +1015,10 @@ hr{
   text-align: right;
 }
 
+.align-middle{
+  vertical-align: middle;
+}
+
 .font-display{
   font-family: "Roobert", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
 }
@@ -1009,6 +1031,11 @@ hr{
 .text-xs{
   font-size: 0.75rem;
   line-height: 1rem;
+}
+
+.text-sm{
+  font-size: 0.875rem;
+  line-height: 1.25rem;
 }
 
 .text-5xl{
@@ -1024,11 +1051,6 @@ hr{
 .text-xl{
   font-size: 1.25rem;
   line-height: 1.75rem;
-}
-
-.text-sm{
-  font-size: 0.875rem;
-  line-height: 1.25rem;
 }
 
 .text-6xl{
@@ -1068,16 +1090,16 @@ hr{
   line-height: 1rem;
 }
 
+.leading-6{
+  line-height: 1.5rem;
+}
+
 .leading-5{
   line-height: 1.25rem;
 }
 
 .leading-\[1\.125rem\]{
   line-height: 1.125rem;
-}
-
-.leading-6{
-  line-height: 1.5rem;
 }
 
 .text-white{
@@ -1100,12 +1122,30 @@ hr{
   color: rgb(151 147 143 / var(--tw-text-opacity));
 }
 
-.outline{
-  outline-style: solid;
+.opacity-100{
+  opacity: 1;
+}
+
+.opacity-0{
+  opacity: 0;
 }
 
 .filter{
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.transition-opacity{
+  transition-property: opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.duration-1000{
+  transition-duration: 1000ms;
+}
+
+.ease-in-out{
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .container{
@@ -1160,6 +1200,20 @@ hr{
   }
 }
 
+.col-3\/9{
+  width: 33.333333333333336%;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+
+@media (min-width: 1024px){
+
+  .col-3\/9{
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}
+
 .col-3\/12{
   width: 25%;
   padding-left: 0.25rem;
@@ -1183,6 +1237,20 @@ hr{
 @media (min-width: 1024px){
 
   .col-6\/12{
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}
+
+.col-9\/12{
+  width: 75%;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+
+@media (min-width: 1024px){
+
+  .col-9\/12{
     padding-left: 0.5rem;
     padding-right: 0.5rem;
   }
@@ -1265,6 +1333,14 @@ hr{
   text-decoration-line: underline;
 }
 
+.group:hover .group-hover\:opacity-0{
+  opacity: 0;
+}
+
+.group:hover .group-hover\:opacity-100{
+  opacity: 1;
+}
+
 @media (min-width: 1024px){
 
   .lg\:w-3\/12{
@@ -1272,5 +1348,3 @@ hr{
   }
 }
 
-
-/*# sourceMappingURL=main.css.map*/

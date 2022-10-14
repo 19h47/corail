@@ -20,18 +20,89 @@
 {{ 'component-rating.css' | asset_url | stylesheet_tag }}
 
 {%- if card_product and card_product != empty -%}
-  {%- liquid
-    assign ratio = 1
-    if card_product.featured_media and media_aspect_ratio == 'portrait'
-      assign ratio = 0.8
-    elsif card_product.featured_media and media_aspect_ratio == 'adapt'
-      assign ratio = card_product.featured_media.aspect_ratio
-    endif
-    if ratio == 0 or ratio == nil
-      assign ratio = 1
-    endif
-  -%}
-  <div class="card-wrapper product-card-wrapper underline-links-hover">
+  	{%- liquid
+    	assign ratio = 1
+
+    	if card_product.featured_media and media_aspect_ratio == 'portrait'
+      		assign ratio = 0.8
+    	elsif card_product.featured_media and media_aspect_ratio == 'adapt'
+      		assign ratio = card_product.featured_media.aspect_ratio
+    	endif
+
+		if ratio == 0 or ratio == nil
+      		assign ratio = 1
+    	endif
+	-%}
+
+	<article class="relative group">
+
+		<div class="relative h-[28rem] bg-gray-very-light">
+			{%- if card_product.featured_media -%}
+
+				{% comment %}theme-check-disable ImgLazyLoading{% endcomment %}
+				<img
+					srcset="
+						{%- if card_product.featured_media.width >= 165 -%}{{ card_product.featured_media | image_url: width: 165 }} 165w,{%- endif -%}
+						{%- if card_product.featured_media.width >= 360 -%}{{ card_product.featured_media | image_url: width: 360 }} 360w,{%- endif -%}
+						{%- if card_product.featured_media.width >= 533 -%}{{ card_product.featured_media | image_url: width: 533 }} 533w,{%- endif -%}
+						{%- if card_product.featured_media.width >= 720 -%}{{ card_product.featured_media | image_url: width: 720 }} 720w,{%- endif -%}
+						{%- if card_product.featured_media.width >= 940 -%}{{ card_product.featured_media | image_url: width: 940 }} 940w,{%- endif -%}
+						{%- if card_product.featured_media.width >= 1066 -%}{{ card_product.featured_media | image_url: width: 1066 }} 1066w,{%- endif -%}
+						{{ card_product.featured_media | image_url }} {{ card_product.featured_media.width }}w
+					"
+					src="{{ card_product.featured_media | image_url: width: 533 }}"
+					sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
+					alt="{{ card_product.featured_media.alt | escape }}"
+					class="w-full h-full object-cover object-center opacity-100 duration-1000 ease-in-out transition-opacity group-hover:opacity-0"
+					{% unless lazy_load == false %}loading="lazy"{% endunless %}
+					width="{{ card_product.featured_media.width }}"
+					height="{{ card_product.featured_media.height }}"
+				>
+				{% comment %}theme-check-enable ImgLazyLoading{% endcomment %}
+
+				{%- if card_product.media[1] != nil and show_secondary_image -%}
+					<img
+						srcset="
+							{%- if card_product.media[1].width >= 165 -%}{{ card_product.media[1] | image_url: width: 165 }} 165w,{%- endif -%}
+							{%- if card_product.media[1].width >= 360 -%}{{ card_product.media[1] | image_url: width: 360 }} 360w,{%- endif -%}
+							{%- if card_product.media[1].width >= 533 -%}{{ card_product.media[1] | image_url: width: 533 }} 533w,{%- endif -%}
+							{%- if card_product.media[1].width >= 720 -%}{{ card_product.media[1] | image_url: width: 720 }} 720w,{%- endif -%}
+							{%- if card_product.media[1].width >= 940 -%}{{ card_product.media[1] | image_url: width: 940 }} 940w,{%- endif -%}
+							{%- if card_product.media[1].width >= 1066 -%}{{ card_product.media[1] | image_url: width: 1066 }} 1066w,{%- endif -%}
+							{{ card_product.media[1] | image_url }} {{ card_product.media[1].width }}w
+						"
+						src="{{ card_product.media[1] | image_url: width: 533 }}"
+						sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
+						alt=""
+						class="absolute inset-0 w-full h-full object-cover object-center opacity-0 duration-1000 ease-in-out transition-opacity group-hover:opacity-100"
+						loading="lazy"
+						width="{{ card_product.media[1].width }}"
+						height="{{ card_product.media[1].height }}"
+					>
+				{%- endif -%}
+
+			{%- endif -%}
+		</div>
+
+		<footer class="border-t mt-4 border-orange-grayish pt-3 text-sm leading-4 uppercase">
+			<div class="flex justify-between">
+				<h3{% if card_product.featured_media == nil and settings.card_style == 'standard' %} id="title-{{ section_id }}-{{ card_product.id }}"{% endif %}>
+					{{- card_product.title | escape -}}
+				</h3>
+				{%- render 'price', product: card_product, price_class: '' -%}
+			</div>
+		</footer>
+
+		<a
+			class="absolute inset-0 w-full h-full z-1 block"
+			href="{{ card_product.url }}"
+			id="StandardCardNoMediaLink-{{ section_id }}-{{ card_product.id }}"
+			aria-labelledby="StandardCardNoMediaLink-{{ section_id }}-{{ card_product.id }} NoMediaStandardBadge-{{ section_id }}-{{ card_product.id }}"
+		></a>
+	</article>
+
+
+  {% comment %} <div class="card-wrapper product-card-wrapper">
     <div
       class="
         card
@@ -108,7 +179,7 @@
               <a
                 href="{{ card_product.url }}"
                 id="StandardCardNoMediaLink-{{ section_id }}-{{ card_product.id }}"
-                class="full-unstyled-link"
+                class=""
                 aria-labelledby="StandardCardNoMediaLink-{{ section_id }}-{{ card_product.id }} NoMediaStandardBadge-{{ section_id }}-{{ card_product.id }}"
               >
                 {{ card_product.title | escape }}
@@ -145,7 +216,7 @@
             <a
               href="{{ card_product.url }}"
               id="CardLink-{{ section_id }}-{{ card_product.id }}"
-              class="full-unstyled-link"
+              class=""
               aria-labelledby="CardLink-{{ section_id }}-{{ card_product.id }} Badge-{{ section_id }}-{{ card_product.id }}"
             >
               {{ card_product.title | escape }}
@@ -315,7 +386,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> {% endcomment %}
 {%- else -%}
   <div class="product-card-wrapper card-wrapper underline-links-hover">
     <div
@@ -337,7 +408,7 @@
         <div class="card__content">
           <div class="card__information">
             <h3 class="card__heading">
-              <a role="link" aria-disabled="true" class="full-unstyled-link">
+              <a role="link" aria-disabled="true" class="">
                 {{ 'onboarding.product_title' | t }}
               </a>
             </h3>
@@ -347,7 +418,7 @@
       <div class="card__content">
         <div class="card__information">
           <h3 class="card__heading{% if settings.card_style == 'standard' %} h5{% endif %}">
-            <a role="link" aria-disabled="true" class="full-unstyled-link">
+            <a role="link" aria-disabled="true" class="">
               {{ 'onboarding.product_title' | t }}
             </a>
           </h3>

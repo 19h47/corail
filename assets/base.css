@@ -505,7 +505,6 @@ table:not([class]) th {
 
 ul:empty,
 dl:empty,
-div:empty,
 section:empty,
 article:empty,
 p:empty,
@@ -573,12 +572,6 @@ hr {
 	}
 }
 
-.full-unstyled-link {
-	text-decoration: none;
-	color: currentColor;
-	display: block;
-}
-
 .placeholder {
 	background-color: rgba(var(--color-foreground), 0.04);
 	color: rgba(var(--color-foreground), 0.55);
@@ -595,13 +588,6 @@ details > * {
 
 .visibility-hidden {
 	visibility: hidden;
-}
-
-@media (prefers-reduced-motion) {
-	.motion-reduce {
-		transition: none !important;
-		animation: none !important;
-	}
 }
 
 :root {
