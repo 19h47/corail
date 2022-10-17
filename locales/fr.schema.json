@@ -632,7 +632,7 @@
 		},
 		"featured-links": {
 			"name": "Liens",
-			"blobks": {
+			"blocks": {
 				"column": {
 					"name": "Colonne",
 					"settings": {
