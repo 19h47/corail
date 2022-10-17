@@ -643,7 +643,8 @@
 							"label": "URL du lien"
 						},
 						"link_title": {
-							"label": "Titre du lien"
+							"label": "Titre du lien",
+							"placeholder": "Titre"
 						}
 					}
 				}
