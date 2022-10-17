@@ -1164,7 +1164,7 @@
 				"name": "Image avec texte"
 			}
 		},
-		"logo": { "name": "Logo" },
+		"logo": { "name": "Logo", "presets": { "name": "Logo" } },
 		"main-article": {
 			"name": "Article de blog",
 			"blocks": {
