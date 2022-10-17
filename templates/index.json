@@ -180,6 +180,11 @@
         "padding_bottom": 36
       }
     },
+    "9a562e76-1cbf-464f-8250-9df50fef249b": {
+      "type": "featured-links",
+      "settings": {
+      }
+    },
     "1664891410510688cf": {
       "type": "featured-blog",
       "settings": {
@@ -201,6 +206,7 @@
     "collage",
     "video",
     "multicolumn",
+    "9a562e76-1cbf-464f-8250-9df50fef249b",
     "1664891410510688cf",
     "22f962ae-c478-4570-9791-ac91a766b93c"
   ]
