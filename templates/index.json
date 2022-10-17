@@ -186,12 +186,21 @@
         "fee4603b-41ce-4d85-bc48-880934cef334": {
           "type": "column",
           "settings": {
-            "link": ""
+            "image": "shopify:\/\/shop_images\/putting-on-your-shoes.jpg",
+            "link": "shopify:\/\/collections"
+          }
+        },
+        "0f7fd138-12f8-4290-aaca-f5510c15b121": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/modern-blue-handbag.jpg",
+            "link": "shopify:\/\/pages\/contact"
           }
         }
       },
       "block_order": [
-        "fee4603b-41ce-4d85-bc48-880934cef334"
+        "fee4603b-41ce-4d85-bc48-880934cef334",
+        "0f7fd138-12f8-4290-aaca-f5510c15b121"
       ],
       "settings": {
       }
