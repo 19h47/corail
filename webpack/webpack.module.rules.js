@@ -51,7 +51,7 @@ module.exports = [
 		exclude: [/fonts/, /icons/],
 		type: 'asset/resource',
 		generator: {
-			filename: 'img/svg/[name][ext]',
+			filename: '[name][ext]',
 		},
 		use: 'svgo-loader',
 	},

@@ -677,6 +677,11 @@ hr{
   margin-bottom: auto;
 }
 
+.my-20{
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
 .-mt-\[4rem\]{
   margin-top: -4rem;
 }
@@ -1029,6 +1034,11 @@ hr{
 .py-7{
   padding-top: 1.75rem;
   padding-bottom: 1.75rem;
+}
+
+.px-20{
+  padding-left: 5rem;
+  padding-right: 5rem;
 }
 
 .pt-3{
@@ -1423,6 +1433,11 @@ hr{
   .lg\:py-\[1\.625rem\]{
     padding-top: 1.625rem;
     padding-bottom: 1.625rem;
+  }
+
+  .lg\:px-20{
+    padding-left: 5rem;
+    padding-right: 5rem;
   }
 
   .lg\:pb-12{

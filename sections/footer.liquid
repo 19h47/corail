@@ -16,9 +16,9 @@
 				{% render 'svg', icon: 'c-logo', classes: 'absolute inset-0 m-auto h-10 w-10 fill-current', description: shop.name %}
 			</a>
 
-			<a href="{{ routes.root_url }}" class="px-5 py-6 lg:hidden">
+			{% comment %} <a href="{{ routes.root_url }}" class="px-5 py-6 lg:hidden">
 				{% render 'svg', icon: 'corail-logo', classes: 'w-full h-auto fill-current', description: shop.name %}
-			</a>
+			</a> {% endcomment %}
 
 			<hr class="w-full h-px lg:h-full block lg:w-px bg-orange-grayish"></hr>
 

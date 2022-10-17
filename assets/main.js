@@ -352,6 +352,49 @@ webpackContext.resolve = webpackContextResolve;
 module.exports = webpackContext;
 webpackContext.id = "./src/icons sync recursive ^\\.\\/.*$";
 
+/***/ }),
+
+/***/ "./src/img/svg sync recursive ^\\.\\/.*$":
+/*!************************************!*\
+  !*** ./src/img/svg/ sync ^\.\/.*$ ***!
+  \************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+var map = {
+	"./corail-logo.svg": "./src/img/svg/corail-logo.svg"
+};
+
+
+function webpackContext(req) {
+	var id = webpackContextResolve(req);
+	return __webpack_require__(id);
+}
+function webpackContextResolve(req) {
+	if(!__webpack_require__.o(map, req)) {
+		var e = new Error("Cannot find module '" + req + "'");
+		e.code = 'MODULE_NOT_FOUND';
+		throw e;
+	}
+	return map[req];
+}
+webpackContext.keys = function webpackContextKeys() {
+	return Object.keys(map);
+};
+webpackContext.resolve = webpackContextResolve;
+module.exports = webpackContext;
+webpackContext.id = "./src/img/svg sync recursive ^\\.\\/.*$";
+
+/***/ }),
+
+/***/ "./src/img/svg/corail-logo.svg":
+/*!*************************************!*\
+  !*** ./src/img/svg/corail-logo.svg ***!
+  \*************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "corail-logo.svg";
+
 /***/ })
 
 /******/ 	});
@@ -451,6 +494,7 @@ var __webpack_exports__ = {};
 __webpack_require__(/*! scripts/app */ "./src/scripts/app.js");
 __webpack_require__(/*! stylesheets/styles.css */ "./src/stylesheets/styles.css");
 __webpack_require__("./src/icons sync recursive ^\\.\\/.*$");
+__webpack_require__("./src/img/svg sync recursive ^\\.\\/.*$");
 })();
 
 /******/ })()
