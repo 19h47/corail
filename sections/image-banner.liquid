@@ -17,7 +17,7 @@
 						{%- for block in section.blocks -%}
 							{%- case block.type -%}
 								{%- when 'heading' -%}
-									<h2 class="font-semibold text-6xl uppercase" {{ block.shopify_attributes }}>
+									<h2 class="font-semibold text-6xl uppercase font-display" {{ block.shopify_attributes }}>
 										{{ block.settings.heading | newline_to_br }}
 									</h2>
 								{%- when 'button' -%}
@@ -40,7 +40,7 @@
 		<div class="container">
 			<div class="row">
 				<div>
-					<coordinates-dms>
+					<coordinates-dms class="font-bold">
 						<span class="block" style="font-variant-numeric: tabular-nums;">43°17′42,00″ N</span>
 						<span class="block" style="font-variant-numeric: tabular-nums;">5°22′19,20″ E</span>
 					</coordinates-dms>

@@ -26,7 +26,7 @@
 	}
 
 	body {
-		@apply text-gray-very-dark;
+		@apply text-gray-very-dark font-body;
 	}
 
 	h1,
@@ -42,7 +42,7 @@
 	}
 
 	hr {
-		@apply border-none w-full h-px;
+		@apply border-none w-full h-[0.0625rem];
 	}
 
 	/* Roobert */
@@ -66,6 +66,23 @@
 		font-family: "Roobert";
 		src: url("../fonts/roobert-semibold.woff2") format("woff2");
 		font-weight: 600;
+		font-style: normal;
+		font-display: swap;
+	}
+
+	/* Roboto Mono */
+	@font-face {
+		font-family: "Roboto Mono";
+		src: url("../fonts/roboto-mono.woff2") format("woff2");
+		font-weight: 400;
+		font-style: normal;
+		font-display: swap;
+	}
+
+	@font-face {
+		font-family: "Roboto Mono";
+		src: url("../fonts/roboto-mono.woff2") format("woff2");
+		font-weight: 700;
 		font-style: normal;
 		font-display: swap;
 	}

@@ -37,7 +37,7 @@ module.exports = {
 		},
 		fontFamily: {
 			display: ['"Roobert"', ...defaultTheme.fontFamily.serif],
-			body: ['"Roboto Mono"', ...defaultTheme.fontFamily.sans],
+			body: ['"Roboto Mono"', ...defaultTheme.fontFamily.mono],
 		},
 	},
 	plugins: [

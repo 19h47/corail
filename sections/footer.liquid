@@ -20,7 +20,7 @@
 				{% render 'svg', icon: 'corail-logo', classes: 'w-full h-auto fill-current', description: shop.name %}
 			</a> {% endcomment %}
 
-			<hr class="w-full h-px lg:h-full block lg:w-px bg-orange-grayish"></hr>
+			<hr class="w-full h-[0.0625rem] lg:h-full block lg:w-[0.0625rem] bg-orange-grayish"></hr>
 
 			<div class="flex flex-1 py-24 lg:py-0 justify-center items-center font-semibold font-display text-xl leading-5 text-center">
 				<p>
@@ -29,118 +29,123 @@
 				</p>
 			</div>
 
-			<span class="h-px lg:h-full block w-full lg:w-px bg-orange-grayish"></span>
+			<span class="h-[0.0625rem] lg:h-full block w-full lg:w-[0.0625rem] bg-orange-grayish"></span>
 
 			<div class="text-orange-grayish px-5 lg:px-14 py-8 lg:pb-12 flex flex-col lg:items-end">
-				<p class="font-bold leading-5 text-sm lg:text-right font-display">
-					43°17′42,00″ N<br>
-					5°22′19,20″ E
-				</p>
 
-				<ul role="list" class="text-orange-dark-grayish inline-flex gap-8 mt-14 lg:mt-auto">
-					{%- if settings.social_twitter_link != blank -%}
-						<li>
-							<a href="{{ settings.social_twitter_link }}" class="w-4 h-4 block">
-								{%- render 'svg', icon: 'twitter', classes: 'fill-current w-full h-full', description: 't:general.social.links.twitter' -%}
-							</a>
-						</li>
-					{%- endif -%}
+				<coordinates-dms class="font-bold lg:text-right leading-5 text-sm">
+					<span class="block" style="font-variant-numeric: tabular-nums;">43°17′42,00″ N</span>
+					<span class="block" style="font-variant-numeric: tabular-nums;">5°22′19,20″ E</span>
+				</coordinates-dms>
 
-					{%- if settings.social_facebook_link != blank -%}
-						<li>
-							<a href="{{ settings.social_facebook_link }}" class="w-4 h-4 block">
-								{%- render 'svg', icon: 'facebook', classes: 'fill-current w-full h-full', description: 't:general.social.links.facebook' -%}
-							</a>
-						</li>
-					{%- endif -%}
+				<nav class="text-orange-dark-grayish mt-14 lg:mt-auto">
+					<ul role="list" class="inline-flex gap-8">
+						{%- if settings.social_twitter_link != blank -%}
+							<li>
+								<a href="{{ settings.social_twitter_link }}" class="w-4 h-4 block">
+									{%- render 'svg', icon: 'twitter', classes: 'fill-current w-full h-full', description: 't:general.social.links.twitter' -%}
+								</a>
+							</li>
+						{%- endif -%}
 
-					{%- if settings.social_pinterest_link != blank -%}
-						<li>
-							<a href="{{ settings.social_pinterest_link }}" class="w-4 h-4 block">
-								{%- render 'svg', icon: 'pinterest', classes: 'fill-current w-full h-full', description: 't:general.social.links.pinterest' -%}
-							</a>
-						</li>
-					{%- endif -%}
+						{%- if settings.social_facebook_link != blank -%}
+							<li>
+								<a href="{{ settings.social_facebook_link }}" class="w-4 h-4 block">
+									{%- render 'svg', icon: 'facebook', classes: 'fill-current w-full h-full', description: 't:general.social.links.facebook' -%}
+								</a>
+							</li>
+						{%- endif -%}
 
-					{%- if settings.social_instagram_link != blank -%}
-						<li>
-							<a href="{{ settings.social_instagram_link }}" class="w-4 h-4 block">
-								{%- render 'svg', icon: 'instagram', classes: 'fill-current w-full h-full', description: 't:general.social.links.instagram' -%}
-							</a>
-						</li>
-					{%- endif -%}
+						{%- if settings.social_pinterest_link != blank -%}
+							<li>
+								<a href="{{ settings.social_pinterest_link }}" class="w-4 h-4 block">
+									{%- render 'svg', icon: 'pinterest', classes: 'fill-current w-full h-full', description: 't:general.social.links.pinterest' -%}
+								</a>
+							</li>
+						{%- endif -%}
 
-					{%- if settings.social_twitch_link != blank -%}
-						<li>
-							<a href="{{ settings.social_twitch_link }}" class="w-4 h-4 block">
-								{%- render 'svg', icon: 'vimeo', classes: 'fill-current w-full h-full', description: 't:general.socal.links.twitch' -%}
-							</a>
-						</li>
-					{%- endif -%}
+						{%- if settings.social_instagram_link != blank -%}
+							<li>
+								<a href="{{ settings.social_instagram_link }}" class="w-4 h-4 block">
+									{%- render 'svg', icon: 'instagram', classes: 'fill-current w-full h-full', description: 't:general.social.links.instagram' -%}
+								</a>
+							</li>
+						{%- endif -%}
 
-					{%- if settings.social_tiktok_link != blank -%}
-						<li>
-							<a href="{{ settings.social_tiktok_link }}" class="w-4 h-4 block">
-								{%- render 'svg', icon: 'tiktok', classes: 'fill-current w-full h-full', description: 't:general.social.links.tiktok' -%}
-							</a>
-						</li>
-					{%- endif -%}
+						{%- if settings.social_twitch_link != blank -%}
+							<li>
+								<a href="{{ settings.social_twitch_link }}" class="w-4 h-4 block">
+									{%- render 'svg', icon: 'vimeo', classes: 'fill-current w-full h-full', description: 't:general.socal.links.twitch' -%}
+								</a>
+							</li>
+						{%- endif -%}
 
-					{%- if settings.social_tumblr_link != blank -%}
-						<li>
-							<a href="{{ settings.social_tumblr_link }}" class="w-4 h-4 block">
-								{%- render 'svg', icon: 'tumblr', classes: 'fill-current w-full h-full', description: 't:general.social.links.tumblr' -%}
-							</a>
-						</li>
-					{%- endif -%}
+						{%- if settings.social_tiktok_link != blank -%}
+							<li>
+								<a href="{{ settings.social_tiktok_link }}" class="w-4 h-4 block">
+									{%- render 'svg', icon: 'tiktok', classes: 'fill-current w-full h-full', description: 't:general.social.links.tiktok' -%}
+								</a>
+							</li>
+						{%- endif -%}
 
-					{%- if settings.social_snapchat_link != blank -%}
-						<li>
-							<a href="{{ settings.social_snapchat_link }}" class="w-4 h-4 block">
-								{%- render 'svg', icon: 'snapchat', classes: 'fill-current w-full h-full', description: 't:general.social.links.snapchat' -%}
-							</a>
-						</li>
-					{%- endif -%}
+						{%- if settings.social_tumblr_link != blank -%}
+							<li>
+								<a href="{{ settings.social_tumblr_link }}" class="w-4 h-4 block">
+									{%- render 'svg', icon: 'tumblr', classes: 'fill-current w-full h-full', description: 't:general.social.links.tumblr' -%}
+								</a>
+							</li>
+						{%- endif -%}
 
-					{%- if settings.social_youtube_link != blank -%}
-						<li>
-							<a href="{{ settings.social_youtube_link }}" class="w-4 h-4 block">
-								{%- render 'svg', icon: 'youtube', classes: 'fill-current w-full h-full', description: 't:general.social.links.youtube' -%}
-							</a>
-						</li>
-					{%- endif -%}
+						{%- if settings.social_snapchat_link != blank -%}
+							<li>
+								<a href="{{ settings.social_snapchat_link }}" class="w-4 h-4 block">
+									{%- render 'svg', icon: 'snapchat', classes: 'fill-current w-full h-full', description: 't:general.social.links.snapchat' -%}
+								</a>
+							</li>
+						{%- endif -%}
 
-					{%- if settings.social_vimeo_link != blank -%}
-						<li>
-							<a href="{{ settings.social_vimeo_link }}" class="w-4 h-4 block">
-								{%- render 'svg', icon: 'vimeo', classes: 'fill-current w-full h-full', description: 't:general.socal.links.vimeo' -%}
-							</a>
-						</li>
-					{%- endif -%}
-				</ul>
+						{%- if settings.social_youtube_link != blank -%}
+							<li>
+								<a href="{{ settings.social_youtube_link }}" class="w-4 h-4 block">
+									{%- render 'svg', icon: 'youtube', classes: 'fill-current w-full h-full', description: 't:general.social.links.youtube' -%}
+								</a>
+							</li>
+						{%- endif -%}
+
+						{%- if settings.social_vimeo_link != blank -%}
+							<li>
+								<a href="{{ settings.social_vimeo_link }}" class="w-4 h-4 block">
+									{%- render 'svg', icon: 'vimeo', classes: 'fill-current w-full h-full', description: 't:general.socal.links.vimeo' -%}
+								</a>
+							</li>
+						{%- endif -%}
+					</ul>
+				</nav>
 			</div>
 
 		</div>
 
-		<hr class="bg-orange-grayish absolute top-0 inset-x-0 w-full h-px">
+		<hr class="bg-orange-grayish absolute top-0 inset-x-0 w-full h-[0.0625rem]">
 	</div>
 
 	<div class="relative">
-		<hr class="bg-orange-grayish absolute top-0 inset-x-0 w-full h-px">
+		<hr class="bg-orange-grayish absolute top-0 inset-x-0 w-full h-[0.0625rem]">
 		<div class="py-11 lg:py-7 px-5 lg:px-4 text-display" {{ block.shopify_attributes }}>
 			{%- for block in section.blocks -%}
 
 				{%- if block.type == 'link_list' and block.settings.menu != blank -%}
-					<ul class="text-orange-dark-grayish inline-flex flex-col lg:flex-row gap-y-4 lg:gap-y-0 lg:gap-x-8">
-						{%- for link in block.settings.menu.links -%}
-							<li>
-								<a class="hover:underline flex items-center flex-shrink-0 font-medium {% if link.active %} is-active {% endif %}" href="{{ link.url }}">
-									{{- link.title -}}
-									{%- render 'svg', icon: 'arrow-up-right', classes: 'ml-1.5 h-1.5 w-1.5 fill-current', description: link.title -%}
-								</a>
-							</li>
-						{%- endfor -%}
-					</ul>
+					<nav class="text-orange-dark-grayish font-display">
+						<ul class="inline-flex flex-col lg:flex-row gap-y-4 lg:gap-y-0 lg:gap-x-8">
+							{%- for link in block.settings.menu.links -%}
+								<li>
+									<a class="hover:underline flex items-center flex-shrink-0 font-medium {% if link.active %} is-active {% endif %}" href="{{ link.url }}">
+										{{- link.title -}}
+										{%- render 'svg', icon: 'arrow-up-right', classes: 'ml-1.5 h-1.5 w-1.5 fill-current', description: link.title -%}
+									</a>
+								</li>
+							{%- endfor -%}
+						</ul>
+					</nav>
 				{%- endif -%}
 
 			{%- endfor -%}

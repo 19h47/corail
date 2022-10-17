@@ -36,23 +36,23 @@
 
 <header class="h-16 lg:h-[4.5rem] relative z-20 {% if request.page_type == 'index' %} text-white {% else %} bg-white {% endif %}">
 	{% if request.page_type != 'index' %}
-		<hr class="w-full h-px absolute top-0 inset-x-0 block bg-orange-grayish"></hr>
+		<hr class="w-full h-[0.0625rem] absolute top-0 inset-x-0 block bg-orange-grayish"></hr>
 	{% endif %}
 	<div class="flex h-full">
 		<button type="button" class="py-[1.375rem] px-6 lg:hidden">
 			{% render 'svg', icon: 'bars', classes: 'h-5 w-4 fill-current', description: shop.name %}
 		</button>
 
-		<span class="w-px h-full block lg:hidden {% if request.page_type == 'index' %} bg-current {% else %} bg-orange-grayish {% endif %}"></span>
+		<span class="w-[0.0625rem] h-full block lg:hidden {% if request.page_type == 'index' %} bg-current {% else %} bg-orange-grayish {% endif %}"></span>
 
 		<a href="{{ routes.root_url }}" class="lg:px-10 py-[1.375rem] lg:py-[1.625rem] w-full lg:w-auto flex justify-center">
 			{% render 'svg', icon: 'corail-logo', classes: 'h-5 w-28 fill-current', description: shop.name %}
 		</a>
 
-		<span class="w-px h-full hidden lg:block {% if request.page_type == 'index' %} bg-current {% else %} bg-orange-grayish {% endif %}"></span>
+		<span class="w-[0.0625rem] relative -right-[0.03125rem] h-full hidden lg:block {% if request.page_type == 'index' %} bg-current {% else %} bg-orange-grayish {% endif %}"></span>
 
 		{%- if section.settings.menu != blank -%}
-			<nav class="hidden lg:flex items-center">
+			<nav class="hidden lg:flex items-center font-display">
 			  	<ul class="flex" role="list">
 					{%- for link in section.settings.menu.links -%}
 						<li>
@@ -88,9 +88,18 @@
 									</details>
 								</header-menu>
 							{%- else -%}
-								<a class="px-8 py-7 block text-sm uppercase font-medium leading-4" href="{{ link.url }}" {% if link.current %} aria-current="page"{% endif %}>
-									{{ link.title | escape }}
+								<a
+									class="group relative px-8 py-7 block text-sm uppercase font-medium leading-4 hover:after:scale-y-100 after:absolute after:top-0 after:h-[0.1875rem] after:bg-red-very-light after:w-full after:inset-x-0 after:transition-transform after:duration-1000 after:ease-in-out after:origin-top {% if link.current %} after:scale-y-100 {% else %} after:scale-y-0 {% endif %}"
+									href="{{ link.url }}"
+									{% if link.current %} aria-current="page"{% endif %}
+								>
+									<span class="group-hover:opacity-100 group-focus:opacity-100 duration-1000 ease-in-out transition-opacity {% if link.current %} opacity-100 {% else %} opacity-0 {% endif %} h-full w-[0.0625rem] {% if request.page_type == 'index' %} bg-current {% else %} bg-orange-grayish {% endif %} block absolute right-[calc(100%_-_0.03125rem)] inset-y-0"></span>
+
+									{{- link.title | escape -}}
+
+									<span class="group-hover:opacity-100 group-focus:opacity-100 duration-1000 ease-in-out transition-opacity {% if link.current %} opacity-100 {% else %} opacity-0 {% endif %} h-full w-[0.0625rem] {% if request.page_type == 'index' %} bg-current {% else %} bg-orange-grayish {% endif %} block absolute left-[calc(100%_-_0.03125rem)] inset-y-0"></span>
 								</a>
+
 							{%- endif -%}
 						</li>
 					{%- endfor -%}
@@ -102,7 +111,7 @@
 		<div class="ml-auto flex">
 
 			{%- if section.settings.secondary-menu != blank -%}
-				<nav class="hidden lg:flex items-center">
+				<nav class="hidden lg:flex items-center font-display">
 					<ul class="flex" role="list">
 						{%- for link in section.settings.secondary-menu.links -%}
 							<a class="px-8 py-7 block text-sm uppercase font-medium leading-4" href="{{ link.url }}" {% if link.current %} aria-current="page"{% endif %}>
@@ -187,7 +196,7 @@
 				</details>
 			</details-modal>
 
-			<span class="w-px h-full block {% if request.page_type == 'index' %} bg-current {% else %} bg-orange-grayish {% endif %}"></span>
+			<span class="w-[0.0625rem] h-full block {% if request.page_type == 'index' %} bg-current {% else %} bg-orange-grayish {% endif %}"></span>
 
 			<a href="{{ routes.cart_url }}" class="font-semibold text-sm leading-[1.125rem] flex p-[1.4375rem] lg:p-[1.6875rem]">
 				{%- render 'svg', icon: 'bag-shopping', classes: 'mr-2 w-[1.125rem] h-[1.125rem] fill-current' -%}
