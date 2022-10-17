@@ -640,10 +640,10 @@
 							"label": "Image"
 						},
 						"link_url": {
-							"label": "URL du Lien"
+							"label": "URL du lien"
 						},
 						"link_title": {
-							"label": "Titre"
+							"label": "Titre du lien"
 						}
 					}
 				}
