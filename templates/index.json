@@ -62,21 +62,16 @@
         "title": "WE MAKE SNEAKERS WITH MARINE WASTE COLLECTED AND TRANSFORMED BY US.",
         "description": "<p>FROM THE SEA <br\/>TO SAVE THE EARTH<\/p>",
         "show_description": false,
-        "description_style": "body",
         "collection": "all",
         "products_to_show": 2,
         "columns_desktop": 5,
         "full_width": false,
-        "show_view_all": false,
-        "view_all_style": "solid",
-        "enable_desktop_slider": false,
         "image_ratio": "adapt",
         "show_secondary_image": true,
         "show_vendor": false,
         "show_rating": false,
         "enable_quick_add": true,
         "columns_mobile": "2",
-        "swipe_on_mobile": false,
         "padding_bottom": 36
       }
     },
@@ -192,6 +187,11 @@
         "blog": "infos",
         "post_limit": 3
       }
+    },
+    "22f962ae-c478-4570-9791-ac91a766b93c": {
+      "type": "logo",
+      "settings": {
+      }
     }
   },
   "order": [
@@ -201,6 +201,7 @@
     "collage",
     "video",
     "multicolumn",
-    "1664891410510688cf"
+    "1664891410510688cf",
+    "22f962ae-c478-4570-9791-ac91a766b93c"
   ]
 }
