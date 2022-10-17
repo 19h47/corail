@@ -7,9 +7,35 @@
   "settings": [
 
   ],
+  "blocks": [
+    {
+      "type": "column",
+      "name": "t:sections.featured-links.blocks.column.name",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "t:sections.featured-links.blocks.column.settings.image.label"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "t:sections.featured-links.blocks.column.settings.link.label"
+        }
+      ]
+    }
+  ],
   "presets": [
     {
-      "name": "t:sections.featured-links.presets.name"
+      "name": "t:sections.featured-links.presets.name",
+      "blocks": [
+        {
+          "type": "column"
+        },
+        {
+          "type": "column"
+        }
+      ]
     }
   ]
 }
