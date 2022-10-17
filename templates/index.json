@@ -182,6 +182,17 @@
     },
     "9a562e76-1cbf-464f-8250-9df50fef249b": {
       "type": "featured-links",
+      "blocks": {
+        "fee4603b-41ce-4d85-bc48-880934cef334": {
+          "type": "column",
+          "settings": {
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "fee4603b-41ce-4d85-bc48-880934cef334"
+      ],
       "settings": {
       }
     },
