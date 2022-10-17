@@ -71,7 +71,9 @@
 
     {%- if section.settings.show_view_all and section.blocks.size < collections.size -%}
       <div class="center collection-list-view-all{% if show_mobile_slider %} small-hide medium-hide{% endif %}">
-        <a href="{{ routes.collections_url }}" class="button" id="ViewAllButton-{{ section.id }}" aria-labelledby="ViewAllButton-{{ section.id }} SectionHeading-{{ section.id }}">{{ 'sections.collection_list.view_all' | t }}</a>
+        <a href="{{ routes.collections_url }}" class="button" id="ViewAllButton-{{ section.id }}" aria-labelledby="ViewAllButton-{{ section.id }} SectionHeading-{{ section.id }}">
+			{{ 'sections.collection_list.view_all' | t }}
+		</a>
       </div>
     {%- endif -%}
   </div>
