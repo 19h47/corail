@@ -632,6 +632,19 @@
 		},
 		"featured-links": {
 			"name": "Liens",
+			"blobks": {
+				"column": {
+					"name": "Colonne",
+					"settings": {
+						"image": {
+							"label": "Image"
+						},
+						"link": {
+							"label": "Lien"
+						}
+					}
+				}
+			},
 			"presets": {
 				"name": "Liens"
 			}
