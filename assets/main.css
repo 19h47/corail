@@ -766,6 +766,14 @@ hr{
   height: 1.75rem;
 }
 
+.h-\[57\.75rem\]{
+  height: 57.75rem;
+}
+
+.h-full{
+  height: 100%;
+}
+
 .h-10{
   height: 2.5rem;
 }
@@ -780,10 +788,6 @@ hr{
 
 .h-4{
   height: 1rem;
-}
-
-.h-full{
-  height: 100%;
 }
 
 .h-1\.5{
@@ -864,6 +868,10 @@ hr{
 
 .flex-shrink-0{
   flex-shrink: 0;
+}
+
+.flex-grow{
+  flex-grow: 1;
 }
 
 .flex-col{
