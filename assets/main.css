@@ -822,6 +822,10 @@ hr{
   height: 28rem;
 }
 
+.h-\[25rem\]{
+  height: 25rem;
+}
+
 .w-7{
   width: 1.75rem;
 }
@@ -1375,6 +1379,10 @@ hr{
     height: 4.5rem;
   }
 
+  .lg\:h-\[57\.75rem\]{
+    height: 57.75rem;
+  }
+
   .lg\:w-3\/12{
     width: 25%;
   }
@@ -1385,6 +1393,10 @@ hr{
 
   .lg\:w-auto{
     width: auto;
+  }
+
+  .lg\:flex-grow{
+    flex-grow: 1;
   }
 
   .lg\:flex-row{

@@ -1,8 +1,8 @@
-<div class="flex h-[57.75rem]">
+<div class="lg:flex h-[25rem] lg:h-[57.75rem]">
 	{%- for block in section.blocks -%}
 		{% case block.type %}
 			{% when 'column' %}
-				<div class="flex-grow h-full">
+				<div class="lg:flex-grow h-full">
 					<img
 						srcset="{%- if block.settings.image.src.width >= 165 -%}{{ block.settings.image.src | image_url: width: 165 }} 165w,{%- endif -%}
 						{%- if block.settings.image.src.width >= 360 -%}{{ block.settings.image.src | image_url: width: 360 }} 360w,{%- endif -%}
@@ -52,12 +52,12 @@
         {
           "type": "url",
           "id": "link_title",
-          "label": "t:sections.featured-links.blocks.column.settings.link.title"
+          "label": "t:sections.featured-links.blocks.column.settings.link_title.label"
         },
         {
           "type": "text",
           "id": "link_url",
-          "label": "t:sections.featured-links.blocks.column.settings.link.label"
+          "label": "t:sections.featured-links.blocks.column.settings.link_url.label"
         }
       ]
     }
