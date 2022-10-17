@@ -10,7 +10,7 @@
 	}
 
 	.row {
-		@apply flex -mx-1 lg:-mx-5 flex-wrap;
+		@apply flex -mx-2.5 flex-wrap;
 	}
 
 	.row > * {
@@ -18,7 +18,7 @@
 	}
 
 	.col {
-		@apply px-1 lg:px-2;
+		@apply px-2.5;
 	}
 
 	.col-full {

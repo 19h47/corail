@@ -20,9 +20,9 @@ const spacing = {
 
 module.exports = {
 	content: [
-		"./snippets/**/*.liquid",
-		"./sections/**/*.liquid",
-		"./layout/**/*.liquid",
+		"./layout/*.liquid",
+		"./sections/*.liquid",
+		"./snippets/*.liquid",
 		"./src/**/*.{html,js}",
 	],
 	corePlugins: {
