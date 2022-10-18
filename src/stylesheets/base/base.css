@@ -45,6 +45,10 @@
 		@apply border-none w-full h-[0.0625rem];
 	}
 
+	a:not([href]) {
+		@apply cursor-not-allowed;
+	}
+
 	/* Roobert */
 	@font-face {
 		font-family: "Roobert";

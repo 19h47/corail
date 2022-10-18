@@ -1,4 +1,22 @@
-<section class="bg-cyan-very-dark-grayish py-14" style="background-size: 4.5rem 4.5rem; background-image: linear-gradient(to right, grey 0.0625rem, transparent 0.0625rem), linear-gradient(to bottom, grey 0.0625rem, transparent 0.0625rem);">
+<section class="bg-cyan-very-dark-grayish text-white py-14" style="background-size: 4.5rem 4.5rem; background-image: linear-gradient(to right, rgba(255,255,255, 0.06) 0.0625rem, transparent 0.0625rem), linear-gradient(to bottom, rgba(255,255,255, 0.06) 0.0625rem, transparent 0.0625rem);">
+	<div class="container">
+		<div class="row">
+			<div>
+				<h2 class="font-display font-semibold text-3xl leading-none">Corail° Lab</h2>
+				<p>The CORAIL° Lab is an innovative space at the heart of our harbor, in Marseille, France, in which we think and design solutions to collect, transform and upcycle marine waste and transform it into high-performance raw materials.</p>
+				<a class="button inline-block align-middle mt-5">&rightarrow;&nbsp;Découvrir le Lab</a>
+			</div>
+
+			<div>
+				<div class="font-bold text-[7.5rem] leading-[8rem] uppercase text-center font-display">
+					less<br>
+					<span class="after:bg-red-very-light after:h-4 relative after:inset-0 after:my-auto after:-mx-8 after:absolute">plastic,</span><br>
+					more<br>
+					corail°<br>
+				</div>
+			</div>
+		</div>
+	</div>
 </section>
 
 {% schema %}
@@ -7,7 +25,17 @@
   "tag": "section",
   "class": "section section-tech",
   "settings": [
-
+    {
+      "type": "text",
+      "id": "title",
+      "default": "CORAIL° Lab",
+      "label": "t:sections.tech.settings.title.label"
+    },
+    {
+      "type": "textarea",
+      "id": "content",
+      "label": "t:sections.tech.settings.content.label"
+    }
   ],
   "blocks": [
 

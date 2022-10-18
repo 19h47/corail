@@ -457,6 +457,10 @@ hr{
   border-style: none;
 }
 
+a:not([href]){
+  cursor: not-allowed;
+}
+
 /* Roobert */
 
 @font-face {
@@ -758,6 +762,10 @@ hr{
   margin-bottom: 4rem;
 }
 
+.mt-5{
+  margin-top: 1.25rem;
+}
+
 .mt-auto{
   margin-top: auto;
 }
@@ -906,6 +914,10 @@ hr{
   flex-shrink: 0;
 }
 
+.transform{
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .flex-col{
   flex-direction: column;
 }
@@ -995,14 +1007,14 @@ hr{
   background-color: currentColor;
 }
 
-.bg-gray-very-light{
-  --tw-bg-opacity: 1;
-  background-color: rgb(243 243 243 / var(--tw-bg-opacity));
-}
-
 .bg-cyan-very-dark-grayish{
   --tw-bg-opacity: 1;
   background-color: rgb(55 64 58 / var(--tw-bg-opacity));
+}
+
+.bg-gray-very-light{
+  --tw-bg-opacity: 1;
+  background-color: rgb(243 243 243 / var(--tw-bg-opacity));
 }
 
 .fill-current{
@@ -1137,6 +1149,10 @@ hr{
   line-height: 2.25rem;
 }
 
+.text-\[7\.5rem\]{
+  font-size: 7.5rem;
+}
+
 .font-semibold{
   font-weight: 600;
 }
@@ -1177,8 +1193,16 @@ hr{
   line-height: 1.125rem;
 }
 
+.leading-none{
+  line-height: 1;
+}
+
 .leading-8{
   line-height: 2rem;
+}
+
+.leading-\[8rem\]{
+  line-height: 8rem;
 }
 
 .text-gray-very-dark{
@@ -1319,6 +1343,14 @@ hr{
   position: absolute;
 }
 
+.after\:inset-0::after{
+  content: var(--tw-content);
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+}
+
 .after\:inset-x-0::after{
   content: var(--tw-content);
   left: 0px;
@@ -1340,6 +1372,18 @@ hr{
   z-index: 10;
 }
 
+.after\:my-auto::after{
+  content: var(--tw-content);
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.after\:-mx-8::after{
+  content: var(--tw-content);
+  margin-left: -2rem;
+  margin-right: -2rem;
+}
+
 .after\:block::after{
   content: var(--tw-content);
   display: block;
@@ -1353,6 +1397,11 @@ hr{
 .after\:h-\[18\.375rem\]::after{
   content: var(--tw-content);
   height: 18.375rem;
+}
+
+.after\:h-4::after{
+  content: var(--tw-content);
+  height: 1rem;
 }
 
 .after\:w-full::after{
