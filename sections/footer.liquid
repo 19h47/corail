@@ -16,10 +16,6 @@
 				{% render 'svg', icon: 'c-logo', classes: 'absolute inset-0 m-auto h-10 w-10 fill-current', description: shop.name %}
 			</a>
 
-			{% comment %} <a href="{{ routes.root_url }}" class="px-5 py-6 lg:hidden">
-				{% render 'svg', icon: 'corail-logo', classes: 'w-full h-auto fill-current', description: shop.name %}
-			</a> {% endcomment %}
-
 			<hr class="w-full h-[0.0625rem] lg:h-full block lg:w-[0.0625rem] bg-orange-grayish"></hr>
 
 			<div class="flex flex-1 py-24 lg:py-0 justify-center items-center font-semibold font-display text-xl leading-5 text-center">
@@ -75,7 +71,7 @@
 						{%- if settings.social_twitch_link != blank -%}
 							<li>
 								<a href="{{ settings.social_twitch_link }}" class="w-4 h-4 block">
-									{%- render 'svg', icon: 'vimeo', classes: 'fill-current w-full h-full', description: 't:general.socal.links.twitch' -%}
+									{%- render 'svg', icon: 'twitch', classes: 'fill-current w-full h-full', description: 't:general.socal.links.twitch' -%}
 								</a>
 							</li>
 						{%- endif -%}
