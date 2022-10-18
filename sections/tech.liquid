@@ -23,3 +23,46 @@
 		</div>
 	</div>
 </section>
+
+{% schema %}
+{
+  "name": "t:sections.tech.name",
+  "tag": "section",
+  "class": "section section-tech",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "default": "CORAIL° Lab",
+      "label": "t:sections.tech.settings.title.label"
+    },
+    {
+      "type": "textarea",
+      "id": "content",
+      "label": "t:sections.tech.settings.content.label"
+    },
+    {
+      "type": "text",
+      "id": "link_title",
+      "label": "t:sections.tech.settings.link_title.label",
+      "placeholder": "t:sections.tech.settings.link_title.placeholder"
+    },
+    {
+      "type": "url",
+      "id": "link_url",
+      "label": "t:sections.tech.settings.link_url.label"
+    }
+  ],
+  "blocks": [
+
+  ],
+  "presets": [
+    {
+      "name": "t:sections.tech.presets.name",
+      "blocks": [
+
+      ]
+    }
+  ]
+}
+{% endschema %}
