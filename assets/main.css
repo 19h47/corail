@@ -642,6 +642,18 @@ a:not([href]){
   z-index: 50;
 }
 
+.sr-only{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
 .absolute{
   position: absolute;
 }
@@ -762,6 +774,14 @@ a:not([href]){
   margin-bottom: 4rem;
 }
 
+.mt-16{
+  margin-top: 4rem;
+}
+
+.mb-24{
+  margin-bottom: 6rem;
+}
+
 .mt-5{
   margin-top: 1.25rem;
 }
@@ -822,10 +842,6 @@ a:not([href]){
   height: 2.5rem;
 }
 
-.h-auto{
-  height: auto;
-}
-
 .h-\[0\.0625rem\]{
   height: 0.0625rem;
 }
@@ -856,6 +872,10 @@ a:not([href]){
 
 .h-\[52\.625rem\]{
   height: 52.625rem;
+}
+
+.h-auto{
+  height: auto;
 }
 
 .h-\[30\.5rem\]{
@@ -912,10 +932,6 @@ a:not([href]){
 
 .flex-shrink-0{
   flex-shrink: 0;
-}
-
-.transform{
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .flex-col{
@@ -1048,19 +1064,14 @@ a:not([href]){
   padding-bottom: 0.75rem;
 }
 
-.px-5{
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
-}
-
-.py-6{
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
-}
-
 .py-24{
   padding-top: 6rem;
   padding-bottom: 6rem;
+}
+
+.px-5{
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
 }
 
 .py-8{
@@ -1106,6 +1117,10 @@ a:not([href]){
   text-align: center;
 }
 
+.text-right{
+  text-align: right;
+}
+
 .align-middle{
   vertical-align: middle;
 }
@@ -1144,6 +1159,10 @@ a:not([href]){
   line-height: 1;
 }
 
+.text-\[5\.625rem\]{
+  font-size: 5.625rem;
+}
+
 .text-3xl{
   font-size: 1.875rem;
   line-height: 2.25rem;
@@ -1173,10 +1192,6 @@ a:not([href]){
   text-transform: capitalize;
 }
 
-.italic{
-  font-style: italic;
-}
-
 .leading-6{
   line-height: 1.5rem;
 }
@@ -1193,16 +1208,20 @@ a:not([href]){
   line-height: 1.125rem;
 }
 
+.leading-\[5\.125rem\]{
+  line-height: 5.125rem;
+}
+
 .leading-none{
   line-height: 1;
 }
 
-.leading-8{
-  line-height: 2rem;
-}
-
 .leading-\[8rem\]{
   line-height: 8rem;
+}
+
+.leading-8{
+  line-height: 2rem;
 }
 
 .text-gray-very-dark{
@@ -1394,14 +1413,14 @@ a:not([href]){
   height: 0.1875rem;
 }
 
-.after\:h-\[18\.375rem\]::after{
-  content: var(--tw-content);
-  height: 18.375rem;
-}
-
 .after\:h-4::after{
   content: var(--tw-content);
   height: 1rem;
+}
+
+.after\:h-\[18\.375rem\]::after{
+  content: var(--tw-content);
+  height: 18.375rem;
 }
 
 .after\:w-full::after{
@@ -1518,6 +1537,10 @@ a:not([href]){
     margin-top: auto;
   }
 
+  .lg\:ml-3\/12{
+    margin-left: 25%;
+  }
+
   .lg\:ml-1\/12{
     margin-left: 8.333333333333334%;
   }
@@ -1628,6 +1651,12 @@ a:not([href]){
 
   .lg\:text-right{
     text-align: right;
+  }
+
+	.lg\:col-3\/12{
+    width: 25%;
+    padding-left: 0.625rem;
+    padding-right: 0.625rem;
   }
 
 	.lg\:col-6\/12{
