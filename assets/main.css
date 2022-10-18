@@ -1,3 +1,6 @@
+/*!********************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[8].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[8].use[2]!./src/stylesheets/styles.css ***!
+  \********************************************************************************************************************************************************************************/
 /**
  * Base
  *
@@ -997,6 +1000,11 @@ hr{
   background-color: rgb(243 243 243 / var(--tw-bg-opacity));
 }
 
+.bg-cyan-very-dark-grayish{
+  --tw-bg-opacity: 1;
+  background-color: rgb(55 64 58 / var(--tw-bg-opacity));
+}
+
 .fill-current{
   fill: currentColor;
 }
@@ -1071,6 +1079,11 @@ hr{
 .py-7{
   padding-top: 1.75rem;
   padding-bottom: 1.75rem;
+}
+
+.py-14{
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
 }
 
 .pt-3{
@@ -1575,3 +1588,5 @@ hr{
   }
 }
 
+
+/*# sourceMappingURL=main.css.map*/
