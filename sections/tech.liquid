@@ -4,9 +4,12 @@
 			<div>
 				<h2 class="font-display font-semibold text-3xl leading-none">{{- section.settings.title | escape -}}</h2>
 				<p>{{- section.settings.content | newline_to_br -}}</p>
-				<a class="button inline-block align-middle mt-5" href="{{ section.settings.link_url }}">
-					&rightarrow;&nbsp;{{- section.settings.link_title -}}
-				</a>
+
+				{% if section.settings.link_url %}
+					<a class="button inline-block align-middle mt-5" href="{{ section.settings.link_url }}">
+						&rightarrow;&nbsp;{{- section.settings.link_title -}}
+					</a>
+				{% endif %}
 			</div>
 
 			<div>
