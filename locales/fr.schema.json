@@ -660,7 +660,8 @@
 				"content": { "label": "Contenu" },
 				"link_title": {
 					"label": "Titre du lien",
-					"placeholder": "Titre"
+					"placeholder": "Titre",
+					"default": "Découvrir le Lab"
 				},
 				"link_url": { "label": "URL du lien" },
 				"video_cover_image": { "label": "Image de couverture" },
