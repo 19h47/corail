@@ -149,6 +149,15 @@
         "padding_bottom": 36
       }
     },
+    "89e98e22-4773-418d-9dba-1ac026db6b99": {
+      "type": "tech",
+      "settings": {
+        "title": "CORAIL° Lab",
+        "content": "CORAIL°Lab est un espace permettant de réfléchir à des solutions innovantes pour retirer puis transformer les déchets marins en matière première. Grâce à celle-ci, nous créons des produits lifestyle accessibles par une grande majorité de la population.",
+        "link_title": "Découvrir le Lab",
+        "link_url": "shopify:\/\/pages\/lab"
+      }
+    },
     "9a562e76-1cbf-464f-8250-9df50fef249b": {
       "type": "featured-links",
       "blocks": {
@@ -188,15 +197,6 @@
       "type": "logo",
       "settings": {
       }
-    },
-    "89e98e22-4773-418d-9dba-1ac026db6b99": {
-      "type": "tech",
-      "settings": {
-        "title": "CORAIL° Lab",
-        "content": "CORAIL°Lab est un espace permettant de réfléchir à des solutions innovantes pour retirer puis transformer les déchets marins en matière première. Grâce à celle-ci, nous créons des produits lifestyle accessibles par une grande majorité de la population.",
-        "link_title": "Découvrir le Lab",
-        "link_url": "shopify:\/\/pages\/lab"
-      }
     }
   },
   "order": [
@@ -205,9 +205,9 @@
     "collage",
     "video",
     "multicolumn",
+    "89e98e22-4773-418d-9dba-1ac026db6b99",
     "9a562e76-1cbf-464f-8250-9df50fef249b",
     "1664891410510688cf",
-    "22f962ae-c478-4570-9791-ac91a766b93c",
-    "89e98e22-4773-418d-9dba-1ac026db6b99"
+    "22f962ae-c478-4570-9791-ac91a766b93c"
   ]
 }
