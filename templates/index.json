@@ -6,14 +6,14 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "COLLECTION \/0.1\nOUT NOW"
+            "heading": "COLLECTION /0.1\nOUT NOW"
           }
         },
         "77e1adaf-ffa1-4d4c-a3af-c222a74cbaa2": {
           "type": "button",
           "settings": {
             "button_label": "Button label",
-            "button_link": "https:\/\/19h47.fr"
+            "button_link": "https://19h47.fr"
           }
         }
       },
@@ -22,14 +22,14 @@
         "77e1adaf-ffa1-4d4c-a3af-c222a74cbaa2"
       ],
       "settings": {
-        "video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/06bb104e8fef44b19702b90ef4aa0524.mp4"
+        "video": "https://cdn.shopify.com/videos/c/o/v/06bb104e8fef44b19702b90ef4aa0524.mp4"
       }
     },
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
         "title": "WE MAKE SNEAKERS WITH MARINE WASTE COLLECTED AND TRANSFORMED BY US.",
-        "description": "<p>FROM THE SEA <br\/>TO SAVE THE EARTH<\/p>",
+        "description": "<p>FROM THE SEA <br/>TO SAVE THE EARTH</p>",
         "show_description": false,
         "collection": "all",
         "products_to_show": 2,
@@ -88,7 +88,7 @@
       "settings": {
         "heading": "",
         "heading_size": "h1",
-        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
         "description": "",
         "full_width": false,
         "color_scheme": "background-1",
@@ -103,7 +103,7 @@
           "type": "column",
           "settings": {
             "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
             "link_label": "",
             "link": ""
           }
@@ -112,7 +112,7 @@
           "type": "column",
           "settings": {
             "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
             "link_label": "",
             "link": ""
           }
@@ -121,7 +121,7 @@
           "type": "column",
           "settings": {
             "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
             "link_label": "",
             "link": ""
           }
@@ -155,8 +155,8 @@
         "title": "CORAIL° Lab",
         "content": "The CORAIL° Lab is an innovative space at the heart of our harbor, in Marseille, France, in which we think and design solutions to collect, transform and upcycle marine waste and transform it into high-performance raw materials.",
         "link_title": "Découvrir le lab",
-        "link_url": "https:\/\/example.com",
-        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+        "link_url": "https://example.com",
+        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
         "video_description": ""
       }
     },
@@ -166,17 +166,17 @@
         "fee4603b-41ce-4d85-bc48-880934cef334": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/putting-on-your-shoes.jpg",
+            "image": "shopify://shop_images/putting-on-your-shoes.jpg",
             "link_title": "Women shoes",
-            "link_url": "shopify:\/\/collections\/frontpage"
+            "link_url": "shopify://collections/frontpage"
           }
         },
         "0f7fd138-12f8-4290-aaca-f5510c15b121": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/modern-blue-handbag.jpg",
+            "image": "shopify://shop_images/modern-blue-handbag.jpg",
             "link_title": "Men shoes",
-            "link_url": "shopify:\/\/collections"
+            "link_url": "shopify://collections"
           }
         }
       },
