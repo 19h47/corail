@@ -79,7 +79,9 @@
       "type": "tech",
       "settings": {
         "title": "CORAIL° Lab",
-        "content": "The CORAIL° Lab is an innovative space at the heart of our harbor, in Marseille, France, in which we think and design solutions to collect, transform and upcycle marine waste and transform it into high-performance raw materials."
+        "content": "The CORAIL° Lab is an innovative space at the heart of our harbor, in Marseille, France, in which we think and design solutions to collect, transform and upcycle marine waste and transform it into high-performance raw materials.",
+        "link_title": "Découvrir le lab",
+        "link_url": "https:\/\/example.com"
       }
     },
     "collage": {
