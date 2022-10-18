@@ -51,20 +51,13 @@
 		"typography": {
 			"name": "Typographie",
 			"settings": {
-				"type_header_font": {
-					"label": "Police",
-					"info": "La sélection d'une police différente peut influencer la vitesse de votre boutique. [En savoir plus sur les polices système.](https://help.shopify.com/manual/online-store/os/store-speed/improving-speed#fonts)"
-				},
 				"header__1": {
 					"content": "Titres"
 				},
 				"header__2": {
 					"content": "Corps"
 				},
-				"type_body_font": {
-					"label": "Police",
-					"info": "La sélection d'une police différente peut influencer la vitesse de votre boutique. [En savoir plus sur les polices système.](https://help.shopify.com/manual/online-store/os/store-speed/improving-speed#fonts)"
-				},
+
 				"heading_scale": {
 					"label": "Échelle de taille de police"
 				},

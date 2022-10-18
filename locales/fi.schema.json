@@ -51,20 +51,14 @@
     "typography": {
       "name": "Typografia",
       "settings": {
-        "type_header_font": {
-          "label": "Fontti",
-          "info": "Muun fontin valitseminen voi vaikuttaa kauppasi nopeuteen. [Lue lisää järjestelmäfonteista.](https://help.shopify.com/manual/online-store/os/store-speed/improving-speed#fonts)"
-        },
+
         "header__1": {
           "content": "Otsikot"
         },
         "header__2": {
           "content": "Leipäteksti"
         },
-        "type_body_font": {
-          "label": "Fontti",
-          "info": "Muun fontin valitseminen voi vaikuttaa kauppasi nopeuteen. [Lue lisää järjestelmäfonteista.](https://help.shopify.com/manual/online-store/os/store-speed/improving-speed#fonts)"
-        },
+
         "heading_scale": {
           "label": "Fonttikoon skaala"
         },

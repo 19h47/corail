@@ -51,20 +51,14 @@
     "typography": {
       "name": "Typografi",
       "settings": {
-        "type_header_font": {
-          "label": "Skrifttype",
-          "info": "Valget af en anden skrifttype kan påvirke hastigheden i din butik. [Få mere at vide om systemskrifttyper.](https://help.shopify.com/manual/online-store/os/store-speed/improving-speed#fonts)"
-        },
+
         "header__1": {
           "content": "Overskrifter"
         },
         "header__2": {
           "content": "Brødtekst"
         },
-        "type_body_font": {
-          "label": "Skrifttype",
-          "info": "Valget af en anden skrifttype kan påvirke hastigheden i din butik. [Få mere at vide om systemskrifttyper.](https://help.shopify.com/manual/online-store/os/store-speed/improving-speed#fonts)"
-        },
+
         "heading_scale": {
           "label": "Størrelsesskala for skrifttype"
         },

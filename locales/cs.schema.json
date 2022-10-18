@@ -51,19 +51,12 @@
     "typography": {
       "name": "Typografie",
       "settings": {
-        "type_header_font": {
-          "label": "Písmo",
-          "info": "Výběr jiného písma může ovlivnit rychlost obchodu. [Zjistěte více o systémových písmech.](https://help.shopify.com/manual/online-store/os/store-speed/improving-speed#fonts)"
-        },
+
         "header__1": {
           "content": "Nadpisy"
         },
         "header__2": {
           "content": "Hlavní část"
-        },
-        "type_body_font": {
-          "label": "Písmo",
-          "info": "Výběr jiného písma může ovlivnit rychlost obchodu. [Zjistěte více o systémových písmech.](https://help.shopify.com/manual/online-store/os/store-speed/improving-speed#fonts)"
         },
         "heading_scale": {
           "label": "Škála velikostí písem"

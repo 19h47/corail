@@ -15,9 +15,7 @@
       <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
     {%- endif -%}
 
-    {%- unless settings.type_header_font.system? -%}
-      <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
-    {%- endunless -%}
+
 
     {%- assign formatted_initial_value = gift_card.initial_value | money_without_trailing_zeros | strip_html -%}
 
@@ -27,27 +25,13 @@
 
     {{ content_for_header }}
 
-    {%- liquid
-      assign body_font_bold = settings.type_body_font | font_modify: 'weight', 'bold'
-      assign body_font_italic = settings.type_body_font | font_modify: 'style', 'italic'
-      assign body_font_bold_italic = body_font_bold | font_modify: 'style', 'italic'
-    %}
+
 
     {% style %}
-      {{ settings.type_body_font | font_face: font_display: 'swap' }}
-      {{ body_font_bold | font_face: font_display: 'swap' }}
-      {{ body_font_italic | font_face: font_display: 'swap' }}
-      {{ body_font_bold_italic | font_face: font_display: 'swap' }}
-      {{ settings.type_header_font | font_face: font_display: 'swap' }}
+
 
       :root {
-        --font-body-family: {{ settings.type_body_font.family }}, {{ settings.type_body_font.fallback_families }};
-        --font-body-style: {{ settings.type_body_font.style }};
-        --font-body-weight: {{ settings.type_body_font.weight }};
 
-        --font-heading-family: {{ settings.type_header_font.family }}, {{ settings.type_header_font.fallback_families }};
-        --font-heading-style: {{ settings.type_header_font.style }};
-        --font-heading-weight: {{ settings.type_header_font.weight }};
 
         --font-body-scale: {{ settings.body_scale | divided_by: 100.0 }};
         --font-heading-scale: {{ settings.heading_scale | times: 1.0 | divided_by: settings.body_scale }};
@@ -82,14 +66,6 @@
         --inputs-shadow-blur-radius: {{ settings.inputs_shadow_blur }}px;
       }
     {% endstyle %}
-
-	{%- unless settings.type_body_font.system? -%}
-		{{ settings.type_body_font | font_url | preload_tag: as: 'font/woff2' }}
-	{%- endunless -%}
-
-	{%- unless settings.type_header_font.system? -%}
-		{{ settings.type_header_font | font_url | preload_tag: as: 'font/woff2' }}
-	{%- endunless -%}
 
     {{ 'template-giftcard.css' | asset_url | stylesheet_tag }}
   </head>

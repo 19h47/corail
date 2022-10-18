@@ -51,20 +51,14 @@
     "typography": {
       "name": "タイポグラフィー",
       "settings": {
-        "type_header_font": {
-          "label": "フォント",
-          "info": "異なるフォントを選択すると、ストアの速度に影響を与える可能性があります。[システムフォントについて詳しく知る。](https://help.shopify.com/manual/online-store/os/store-speed/improving-speed#fonts)"
-        },
+
         "header__1": {
           "content": "見出し"
         },
         "header__2": {
           "content": "本文"
         },
-        "type_body_font": {
-          "label": "フォント",
-          "info": "異なるフォントを選択すると、ストアの速度に影響を与える可能性があります。[システムフォントについて詳しく知る。](https://help.shopify.com/manual/online-store/os/store-speed/improving-speed#fonts)"
-        },
+
         "heading_scale": {
           "label": "フォント・サイズ・スケール"
         },

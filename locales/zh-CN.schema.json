@@ -51,20 +51,14 @@
     "typography": {
       "name": "版式",
       "settings": {
-        "type_header_font": {
-          "label": "字体",
-          "info": "选择其他字体可能会影响您商店的速度。[详细了解系统字体。](https://help.shopify.com/manual/online-store/os/store-speed/improving-speed#fonts)"
-        },
+
         "header__1": {
           "content": "标题"
         },
         "header__2": {
           "content": "正文"
         },
-        "type_body_font": {
-          "label": "字体",
-          "info": "选择其他字体可能会影响您商店的速度。[详细了解系统字体。](https://help.shopify.com/manual/online-store/os/store-speed/improving-speed#fonts)"
-        },
+
         "heading_scale": {
           "label": "字号比例"
         },

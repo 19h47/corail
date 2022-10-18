@@ -51,20 +51,14 @@
     "typography": {
       "name": "Tipografia",
       "settings": {
-        "type_header_font": {
-          "label": "Tipo de letra",
-          "info": "Selecionar um tipo de letra diferente pode afetar a velocidade da sua loja. [Saiba mais sobre tipos de letra do sistema.](https://help.shopify.com/manual/online-store/os/store-speed/improving-speed#fonts)"
-        },
+
         "header__1": {
           "content": "Títulos"
         },
         "header__2": {
           "content": "Corpo"
         },
-        "type_body_font": {
-          "label": "Tipo de letra",
-          "info": "Selecionar um tipo de letra diferente pode afetar a velocidade da sua loja. [Saiba mais sobre tipos de letra do sistema.](https://help.shopify.com/manual/online-store/os/store-speed/improving-speed#fonts)"
-        },
+
         "heading_scale": {
           "label": "Escala de tamanho do tipo de letra"
         },
