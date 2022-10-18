@@ -657,7 +657,12 @@
 			"name": "CORAIL° Lab",
 			"settings": {
 				"title": { "label": "Titre" },
-				"content": { "label": "Contenu" }
+				"content": { "label": "Contenu" },
+				"link_title": {
+					"label": "Titre du lien",
+					"placeholder": "Titre"
+				},
+				"link_url": { "label": "URL du lien" }
 			},
 			"presets": { "name": "CORAIL° Lab " }
 		},
