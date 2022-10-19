@@ -21,4 +21,8 @@
 
 	.button[aria-disabled="true"] {
 	}
+
+	.button-secondary {
+		@apply text-xs uppercase text-white border-white border rounded-full py-[0.875rem] px-6 lg:px-8 transition-colors duration-1000 ease-in-out;
+	}
 }
