@@ -648,6 +648,7 @@
 				"name": "Liens"
 			}
 		},
+
 		"tech": {
 			"name": "CORAIL° Lab",
 			"settings": {
@@ -669,10 +670,9 @@
 					"label": "Image de couverture"
 				},
 				"video_url": {
-					"label": {
-						"placeholder": "URL",
-						"info": "La vidéo est lue sur la page."
-					}
+					"label": "URL",
+					"placeholder": "https://youtube.com/",
+					"info": "La vidéo est lue sur la page."
 				},
 				"video_description": {
 					"label": "Texte alternatif de la vidéo",
