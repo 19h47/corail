@@ -155,7 +155,11 @@
         "title": "CORAIL° Lab",
         "content": "CORAIL°Lab est un espace permettant de réfléchir à des solutions innovantes pour retirer puis transformer les déchets marins en matière première. Grâce à celle-ci, nous créons des produits lifestyle accessibles par une grande majorité de la population.",
         "link_title": "Découvrir le Lab",
-        "link_url": "shopify:\/\/pages\/lab"
+        "link_url": "shopify:\/\/pages\/lab",
+        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+        "video_description": "",
+        "image_1": "shopify:\/\/shop_images\/trying-on-shoes.jpg",
+        "image_2": "shopify:\/\/shop_images\/insulation-between-studs.jpg"
       }
     },
     "9a562e76-1cbf-464f-8250-9df50fef249b": {
