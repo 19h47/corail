@@ -837,6 +837,10 @@ a:not([href]){
   margin-top: 1rem;
 }
 
+.mt-2{
+  margin-top: 0.5rem;
+}
+
 .block{
   display: block;
 }
@@ -1254,6 +1258,10 @@ a:not([href]){
   line-height: 1.25rem;
 }
 
+.leading-none{
+  line-height: 1;
+}
+
 .leading-4{
   line-height: 1rem;
 }
@@ -1264,10 +1272,6 @@ a:not([href]){
 
 .leading-\[5\.125rem\]{
   line-height: 5.125rem;
-}
-
-.leading-none{
-  line-height: 1;
 }
 
 .leading-\[8rem\]{
@@ -1698,9 +1702,9 @@ a:not([href]){
     padding-right: 3.5rem;
   }
 
-  .lg\:py-7{
-    padding-top: 1.75rem;
-    padding-bottom: 1.75rem;
+  .lg\:py-6{
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
   }
 
   .lg\:px-4{
@@ -1728,11 +1732,6 @@ a:not([href]){
     padding-right: 5rem;
   }
 
-  .lg\:py-6{
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
-  }
-
   .lg\:pb-12{
     padding-bottom: 3rem;
   }
@@ -1756,6 +1755,12 @@ a:not([href]){
 
 	.lg\:col-3\/12{
     width: 25%;
+    padding-left: 0.625rem;
+    padding-right: 0.625rem;
+  }
+
+	.lg\:col-4\/12{
+    width: 33.333333%;
     padding-left: 0.625rem;
     padding-right: 0.625rem;
   }
