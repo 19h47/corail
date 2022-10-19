@@ -156,6 +156,50 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/icons/icon-decor-01.svg":
+/*!*************************************!*\
+  !*** ./src/icons/icon-decor-01.svg ***!
+  \*************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+      id: "icon-decor-01-usage",
+      viewBox: "0 0 101.9 101.9",
+      url: __webpack_require__.p + "icons.svg#icon-decor-01",
+      toString: function () {
+        return this.url;
+      }
+    });
+
+/***/ }),
+
+/***/ "./src/icons/icon-decor-02.svg":
+/*!*************************************!*\
+  !*** ./src/icons/icon-decor-02.svg ***!
+  \*************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+      id: "icon-decor-02-usage",
+      viewBox: "0 0 112 112",
+      url: __webpack_require__.p + "icons.svg#icon-decor-02",
+      toString: function () {
+        return this.url;
+      }
+    });
+
+/***/ }),
+
 /***/ "./src/icons/icon-facebook.svg":
 /*!*************************************!*\
   !*** ./src/icons/icon-facebook.svg ***!
@@ -323,6 +367,8 @@ var map = {
 	"./icon-bottle.svg": "./src/icons/icon-bottle.svg",
 	"./icon-c-logo.svg": "./src/icons/icon-c-logo.svg",
 	"./icon-corail-logo.svg": "./src/icons/icon-corail-logo.svg",
+	"./icon-decor-01.svg": "./src/icons/icon-decor-01.svg",
+	"./icon-decor-02.svg": "./src/icons/icon-decor-02.svg",
 	"./icon-facebook.svg": "./src/icons/icon-facebook.svg",
 	"./icon-instagram.svg": "./src/icons/icon-instagram.svg",
 	"./icon-magnifying-glass.svg": "./src/icons/icon-magnifying-glass.svg",

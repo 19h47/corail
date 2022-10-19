@@ -1,7 +1,7 @@
 <section class="bg-cyan-very-dark-grayish text-white py-14" style="background-size: 4.5rem 4.5rem; background-image: linear-gradient(to right, rgba(255,255,255, 0.06) 0.0625rem, transparent 0.0625rem), linear-gradient(to bottom, rgba(255,255,255, 0.06) 0.0625rem, transparent 0.0625rem);">
 	<div class="container">
 		<div class="row">
-			<div>
+			<div class="">
 				<h2 class="font-display font-semibold text-3xl leading-none">{{- section.settings.title | escape -}}</h2>
 				<p>{{- section.settings.content | newline_to_br -}}</p>
 
@@ -74,6 +74,16 @@
       "id": "video_description",
       "label": "t:sections.tech.settings.video_description.label",
       "info": "t:sections.tech.settings.video_description.info"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_1",
+      "label": "t:sections.tech.settings.image.label"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_2",
+      "label": "t:sections.tech.settings.image.label"
     }
   ],
   "blocks": [

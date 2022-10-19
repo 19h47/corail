@@ -677,6 +677,9 @@
 				"video_description": {
 					"label": "Texte alternatif de la vidéo",
 					"info": "Décrivez la vidéo pour les clients utilisant des lecteurs d'écran. [En savoir plus](https://help.shopify.com/manual/online-store/themes/theme-structure/theme-features#video)"
+				},
+				"image": {
+					"label": "Image"
 				}
 			},
 			"presets": {
