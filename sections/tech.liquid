@@ -2,21 +2,6 @@
 	<div class="container">
 		<div class="row">
 
-			{% if section.settings.content != blank  or section.settings.link_url != blank %}
-				<div class="lg:col-4/12">
-					<h2 class="font-display font-semibold text-3xl leading-none uppercase">{{- section.settings.title | escape -}}</h2>
-
-					{% if section.settings.content != blank %}
-						<p class="mt-2">{{- section.settings.content | newline_to_br -}}</p>
-					{% endif %}
-
-					{% if section.settings.link_url != blank %}
-						<a class="button inline-block align-middle mt-5" href="{{ section.settings.link_url }}">
-							&rightarrow;&nbsp;{{- section.settings.link_title -}}
-						</a>
-					{% endif %}
-				</div>
-			{% endif %}
 
 			<div>
 				<div class="font-bold text-[7.5rem] leading-[8rem] uppercase text-center font-display">
