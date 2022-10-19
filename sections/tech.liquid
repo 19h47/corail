@@ -2,6 +2,20 @@
 	<div class="container">
 		<div class="row">
 
+			{%- if section.settings.image_1 != blank -%}
+				<div class="lg:col-3/12">
+
+				  {{ section.settings.image_1 | image_url | image_tag:
+					loading: 'lazy',
+					width: section.settings.image_1.width,
+					height: section.settings.image_1.height,
+					class: '',
+					widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840',
+					alt: section.settings.image_1.alt | escape
+				  }}
+				</div>
+			{%- endif -%}
+
 			{% if section.settings.content != blank  or section.settings.link_url != blank %}
 				<div class="lg:col-4/12">
 					<h2 class="font-display font-semibold text-3xl leading-none uppercase">{{- section.settings.title | escape -}}</h2>
@@ -17,6 +31,8 @@
 					{% endif %}
 				</div>
 			{% endif %}
+
+
 
 			<div>
 				<div class="font-bold text-[7.5rem] leading-[8rem] uppercase text-center font-display">
