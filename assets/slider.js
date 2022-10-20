@@ -109,16 +109,35 @@ if (!customElements.get("slider-component")) {
 
 			const parameters = JSON.parse(this.getAttribute('data-parameters')) || {};
 
+			const $next = this.querySelector('.js-next');
+			const $previous = this.querySelector('.js-previous');
+
 			// if (parameters.pagination) {
 			// 	[parameters.pagination.el] = this.$('pagination')
 			// }
 
 			console.log(this);
 
-			this.swiper = new Swiper(this, {
+			this.swiper = new Swiper(this.querySelector('.swiper'), {
 				...{ slidesPerView: 'auto' },
 				...parameters,
 			});
+
+			if ($next) {
+				$next.addEventListener('click', () => this.next())
+			}
+
+			if ($previous) {
+				$previous.addEventListener('click', () => this.previous())
+			}
+		}
+
+		next() {
+			this.swiper.slideNext();
+		}
+
+		previous() {
+			this.swiper.slidePrev();
 		}
 	}
 

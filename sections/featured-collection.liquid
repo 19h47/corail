@@ -13,12 +13,12 @@
 <script src="{{ 'swiper.js' | asset_url }}" defer="defer"></script>
 <script src="{{ 'slider.js' | asset_url }}" defer="defer"></script>
 
-<div class="py-12 lg:py-16">
+<slider-component class="py-12 lg:py-16" data-parameters='{"spaceBetween":20,"slidesPerView":1.5,"breakpoints":{"1024":{"slidesPerView":3}}}'>
 
-	{%- if more_in_collection -%}
-		<div class="container mb-12 hidden lg:block">
-			<div class="row">
-				<div class="flex justify-end">
+	<div class="container mb-12 hidden lg:block">
+		<div class="row">
+			<div class="flex justify-end gap-x-5">
+				{%- if more_in_collection -%}
 					<a
 						href="{{ section.settings.collection.url }}"
 						class="button button-red inline-block align-middle"
@@ -26,15 +26,20 @@
 					>
 						&rightarrow;&nbsp;{{- 'sections.featured_collection.view_all' | t -}}
 					</a>
+				{%- endif -%}
+
+				<div class="gap-x-1.5 flex">
+					<button class="button-secondary text-gray-very-dark border-orange-grayish inline-block align-middle js-previous" type="button">&leftarrow;</button>
+					<button class="button-secondary text-gray-very-dark border-orange-grayish inline-block align-middle js-next" type="button">&rightarrow;</button>
 				</div>
 			</div>
 		</div>
-	{%- endif -%}
+	</div>
 
-	<div class="container">
-		<div class="row">
+	<div class="lg:container">
+		<div class="lg:row">
 			<div class="lg:col-3/12">
-				<div class="">
+				<div class="mx-5 lg:mx-0">
 					{%- if section.settings.title != blank -%}
 						<h2 class="font-display font-semibold text-4xl uppercase">{{ section.settings.title | escape }}</h2>
 					{%- endif -%}
@@ -60,12 +65,12 @@
 				</div>
 			</div>
 
-			<slider-component class="col-9/12" data-parameters='{"test":"test"}'>
-				<div class="row swiper-wrapper">
+			<div class="lg:col-9/12 swiper mt-12 lg:mt-0 px-5">
+				<div class="swiper-wrapper">
 					{%- for product in section.settings.collection.products limit: section.settings.products_to_show -%}
 						<div
 							id="Slide-{{ section.id }}-{{ forloop.index }}"
-							class="col-3/9 swiper-slide"
+							class="swiper-slide"
 						>
 						  	{% render 'card-product',
 								card_product: product,
@@ -85,10 +90,10 @@
 						{%- endfor -%}
 					{%- endfor -%}
 				</div>
-			</slider-component>
+			</div>
 		</div>
 	</div>
-</div>
+</slider-component>
 
 {% schema %}
 {
@@ -128,43 +133,8 @@
       "label": "t:sections.featured-collection.settings.products_to_show.label"
     },
     {
-      "type": "range",
-      "id": "columns_desktop",
-      "min": 1,
-      "max": 5,
-      "step": 1,
-      "default": 4,
-      "label": "t:sections.featured-collection.settings.columns_desktop.label"
-    },
-    {
-      "type": "checkbox",
-      "id": "full_width",
-      "label": "t:sections.featured-collection.settings.full_width.label",
-      "default": false
-    },
-    {
       "type": "header",
       "content": "t:sections.featured-collection.settings.header.content"
-    },
-    {
-      "type": "select",
-      "id": "image_ratio",
-      "options": [
-        {
-          "value": "adapt",
-          "label": "t:sections.featured-collection.settings.image_ratio.options__1.label"
-        },
-        {
-          "value": "portrait",
-          "label": "t:sections.featured-collection.settings.image_ratio.options__2.label"
-        },
-        {
-          "value": "square",
-          "label": "t:sections.featured-collection.settings.image_ratio.options__3.label"
-        }
-      ],
-      "default": "adapt",
-      "label": "t:sections.featured-collection.settings.image_ratio.label"
     },
     {
       "type": "checkbox",
