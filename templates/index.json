@@ -32,7 +32,7 @@
         "description": "<p>FROM THE SEA <br\/>TO SAVE THE EARTH<\/p>",
         "show_description": false,
         "collection": "all",
-        "products_to_show": 2,
+        "products_to_show": 12,
         "columns_desktop": 5,
         "full_width": false,
         "image_ratio": "adapt",
