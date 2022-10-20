@@ -33,9 +33,6 @@
         "show_description": false,
         "collection": "all",
         "products_to_show": 4,
-        "columns_desktop": 5,
-        "full_width": false,
-        "image_ratio": "adapt",
         "show_secondary_image": true,
         "show_vendor": false,
         "show_rating": false,
@@ -93,6 +90,7 @@
     },
     "multicolumn": {
       "type": "multicolumn",
+      "disabled": true,
       "blocks": {
         "column1": {
           "type": "column",
