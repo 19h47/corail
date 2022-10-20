@@ -43,14 +43,15 @@
   {%- endif -%}
 
     <button id="Deferred-Poster-Modal-{{ media.id }}" class="deferred-media__poster" type="button">
-      <span class="deferred-media__poster-button motion-reduce">
-        {%- if media.media_type == 'model' -%}
-          {%- render 'icon-3d-model' -%}
-        {%- else -%}
-          {%- render 'icon-play' -%}
-        {%- endif -%}
-      </span>
-      <img
+	  	<span class="absolute text-white z-1 inset-0 lg:w-[3.625rem] lg:h-[4.75rem] m-auto w-8 h-9">
+			{%- if media.media_type == 'model' -%}
+		  		{%- render 'icon-3d-model' -%}
+			{%- else -%}
+		  		{% render 'svg', icon: 'play', classes: 'w-full h-full fill-current', description: shop.name %}
+			{%- endif -%}
+		</span>
+
+		<img
         srcset="{% if media.preview_image.width >= 288 %}{{ media.preview_image | image_url: width: 288 }} 288w,{% endif %}
                 {% if media.preview_image.width >= 576 %}{{ media.preview_image | image_url: width: 576 }} 576w,{% endif %}
                 {% if media.preview_image.width >= 550 %}{{ media.preview_image | image_url: width: 550 }} 550w,{% endif %}

@@ -55,7 +55,7 @@
       }}
     </div>
     <a href="{% if media.media_type == 'video' %}{{ media.sources[1].url }}{% else %}{{ media | external_video_url }}{% endif %}" class="product__media-toggle">
-      <span class="visually-hidden">{{ 'products.product.video_exit_message' | t: title: product.title | escape }}</span>
+      <span class="sr-only">{{ 'products.product.video_exit_message' | t: title: product.title | escape }}</span>
     </a>
   {%- else -%}
     <div class="product__media media global-media-settings" style="padding-top: {{ 1 | divided_by: media.preview_image.aspect_ratio | times: 100 }}%;">
@@ -92,7 +92,7 @@
     }}
   </div>
   <button class="product__media-toggle quick-add-hidden" type="button" aria-haspopup="dialog" data-media-id="{{ media.id }}">
-    <span class="visually-hidden">
+    <span class="sr-only">
       {{ 'products.product.media.open_media' | t: index: position }}
     </span>
   </button>
@@ -105,15 +105,17 @@
     <deferred-media class="deferred-media global-media-settings media no-js-hidden" style="padding-top: {{ 1 | divided_by: media.aspect_ratio | times: 100 }}%" data-media-id="{{ media.id }}">
   {%- endif -%}
   <button id="Deferred-Poster-Modal-{{ media.id }}" class="deferred-media__poster" type="button">
-    <span class="deferred-media__poster-button motion-reduce">
-      {%- if media.media_type == 'model' -%}
-        <span class="visually-hidden">{{ 'products.product.media.play_model' | t }}</span>
-        {%- render 'icon-3d-model' -%}
-      {%- else -%}
-        <span class="visually-hidden">{{ 'products.product.media.play_video' | t }}</span>
-        {%- render 'icon-play' -%}
-      {%- endif -%}
-    </span>
+
+	<span class="absolute text-white z-1 inset-0 lg:w-[3.625rem] lg:h-[4.75rem] m-auto w-8 h-9">
+		{%- if media.media_type == 'model' -%}
+		  	<span class="sr-only">{{ 'products.product.media.play_model' | t }}</span>
+		  	{%- render 'icon-3d-model' -%}
+		{%- else -%}
+		  	<span class="sr-only">{{ 'products.product.media.play_video' | t }}</span>
+		  	{% render 'svg', icon: 'play', classes: 'w-full h-full fill-current', description: shop.name %}
+		{%- endif -%}
+	</span>
+
     {{ media.preview_image | image_url: width: 1946 | image_tag:
       loading: lazy,
       sizes: sizes,

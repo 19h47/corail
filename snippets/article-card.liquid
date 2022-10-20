@@ -14,7 +14,9 @@
 {%- if article and article != empty -%}
 	<article class="article-card relative">
 
-		<a href="{{ article.url }}" class="relative h-[30.5rem] text-white flex after:h-[18.375rem] after:w-full after:absolute after:z-10 after:inset-x-0 after:bottom-0 after:from-black after:bg-gradient-to-t">
+		<a
+			href="{{ article.url }}"
+			class="relative h-[25.5rem] lg:h-[30.5rem] text-white flex after:h-[10.625rem] lg:after:h-[18.375rem] after:w-full after:absolute after:z-10 after:inset-x-0 after:bottom-0 after:from-black after:bg-gradient-to-t">
 			{%- if article.image -%}
 				<img
 					srcset="{%- if article.image.src.width >= 165 -%}{{ article.image.src | image_url: width: 165 }} 165w,{%- endif -%}
@@ -34,15 +36,15 @@
 				>
 			{% endif %}
 
-			<div class="relative z-20 p-8 mt-auto">
-				<h2 class="font-medium text-3xl leading-8 font-display">{{- article.title | escape -}}</h2>
-				<div class="uppercase text-orange-grayish text-xs mt-1">{{- article.published_at | time_tag: format: 'date' -}}</div>
+			<div class="relative z-20 p-5 lg:p-8 mt-auto mr-16 lg:mr-0">
+				<h2 class="font-medium text-xl leading-6 lg:text-3xl lg:leading-8 font-display">{{- article.title | escape -}}</h2>
+				<div class="uppercase text-orange-grayish text-sm lg:text-xs mt-2.5 lg:mt-1">{{- article.published_at | time_tag: format: 'date' -}}</div>
 			</div>
 
 		</a>
 
 		{% if article.tags %}
-			<footer class="border-t mt-4 border-orange-grayish pt-3 text-sm leading-4 uppercase">
+			<footer class="border-t mt-5 lg:mt-4 border-orange-grayish pt-3 text-sm leading-4 uppercase">
 				{{ article.tags | join: ' / ' }}
 			</footer>
 		{% endif %}

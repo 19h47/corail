@@ -1,8 +1,8 @@
-<div class="lg:flex h-[25rem] lg:h-[57.75rem]">
+<div class="lg:flex">
 	{%- for block in section.blocks -%}
 		{% case block.type %}
 			{% when 'column' %}
-				<div class="lg:flex-grow relative h-full">
+				<div class="lg:flex-grow relative h-[25rem] lg:h-[57.75rem]">
 					<img
 						srcset="{%- if block.settings.image.src.width >= 165 -%}{{ block.settings.image.src | image_url: width: 165 }} 165w,{%- endif -%}
 						{%- if block.settings.image.src.width >= 360 -%}{{ block.settings.image.src | image_url: width: 360 }} 360w,{%- endif -%}

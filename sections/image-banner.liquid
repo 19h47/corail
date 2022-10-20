@@ -6,8 +6,8 @@
 
 <script src="{{ 'coordinates.js' | asset_url }}" defer></script>
 
-<div class="text-white relative image-banner">
-	<video class="h-[52.625rem] w-full object-cover relative z-10" loop muted autoplay src="{{ section.settings.video }}"></video>
+<div class="text-white relative image-banner h-[36.625rem] lg:h-[52.625rem]">
+	<video class="h-full w-full object-cover relative z-10" loop muted autoplay src="{{ section.settings.video }}"></video>
 
 	{%- if section.blocks -%}
 		<div class="absolute text-center my-auto inset-0 z-20 flex items-center">
@@ -36,7 +36,7 @@
 		</div>
 	{%- endif -%%}
 
-	<footer class="absolute z-20 bottom-0 inset-x-0 text-center mb-16">
+	<footer class="absolute z-20 bottom-0 inset-x-0 text-center mb-5 lg:mb-11 text-sm">
 		<div class="container">
 			<div class="row">
 				<div>

@@ -16,10 +16,10 @@
   endif
 -%}
 
-<div class="my-16">
+<div class="py-12 lg:py-16">
 
 	{%- if more_in_collection -%}
-		<div class="container mb-12">
+		<div class="container mb-12 hidden lg:block">
 			<div class="row">
 				<div class="flex justify-end">
 					<a
@@ -36,7 +36,7 @@
 
 	<div class="container">
 		<div class="row">
-			<div class="col-3/12">
+			<div class="lg:col-3/12">
 				<div class="">
 					{%- if section.settings.title != blank -%}
 						<h2 class="font-display font-semibold text-4xl uppercase">{{ section.settings.title | escape }}</h2>
@@ -51,6 +51,14 @@
 						{%- if section.settings.description != blank -%}
 							<div class="text-xl leading-6 font-display font-semibold mt-7">{{- section.settings.description -}}</div>
 						{%- endif -%}
+
+						<a
+							href="{{ section.settings.collection.url }}"
+							class="button mt-14 button-red lg:hidden inline-block align-middle w-full"
+							aria-label="{{ 'sections.featured_collection.view_all_label' | t: collection_name: section.settings.collection.title }}"
+						>
+							&rightarrow;&nbsp;{{- 'sections.featured_collection.view_all' | t -}}
+						</a>
 					</footer>
 				</div>
 			</div>

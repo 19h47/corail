@@ -266,6 +266,28 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/icons/icon-play.svg":
+/*!*********************************!*\
+  !*** ./src/icons/icon-play.svg ***!
+  \*********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+      id: "icon-play-usage",
+      viewBox: "0 0 58.9 75.1",
+      url: __webpack_require__.p + "icons.svg#icon-play",
+      toString: function () {
+        return this.url;
+      }
+    });
+
+/***/ }),
+
 /***/ "./src/icons/icon-sea.svg":
 /*!********************************!*\
   !*** ./src/icons/icon-sea.svg ***!
@@ -372,6 +394,7 @@ var map = {
 	"./icon-facebook.svg": "./src/icons/icon-facebook.svg",
 	"./icon-instagram.svg": "./src/icons/icon-instagram.svg",
 	"./icon-magnifying-glass.svg": "./src/icons/icon-magnifying-glass.svg",
+	"./icon-play.svg": "./src/icons/icon-play.svg",
 	"./icon-sea.svg": "./src/icons/icon-sea.svg",
 	"./icon-shirt.svg": "./src/icons/icon-shirt.svg",
 	"./icon-twitch.svg": "./src/icons/icon-twitch.svg",
