@@ -1,9 +1,16 @@
 <script src="{{ 'scrolling-area.js' | asset_url }}" defer="defer"></script>
 <script src="{{ 'marquee.js' | asset_url }}" defer="defer"></script>
 
-<marquee-component class="block w-full">
-	<div class="text-[18.75rem] leading-[20.625rem] uppercase font-bold font-display">{{ section.settings.title }}</div>
-</marquee-component>
+<div class="my-16 lg:my-20 relative overflow-hidden">
+	<span class="absolute z-2 top-0 right-0 mr-6 lg:mr-28 rounded-full w-[4.25rem] h-[4.25rem] lg:w-[6.875rem] lg:h-[6.875rem] bg-red-very-light">
+		{% render 'svg', icon: 'c-logo', classes: 'mt-[1.125rem] lg:mt-7 mr-4 lg:mr-6 ml-auto w-7 lg:w-[3.125rem] h-7 lg:h-[2.9375rem] fill-current', description: shop.name %}
+	</span>
+	<marquee-component class="block w-full z-1 relative">
+		<div class="text-[9.375rem] leading-[10.3125rem] lg:text-[18.75rem] lg:leading-[20.625rem] uppercase font-bold font-display">
+			{{- section.settings.title -}}
+		</div>
+	</marquee-component>
+</div>
 
 
 {% schema %}

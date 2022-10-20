@@ -1,6 +1,3 @@
-/*!********************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[8].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[8].use[2]!./src/stylesheets/styles.css ***!
-  \********************************************************************************************************************************************************************************/
 /**
  * Base
  *
@@ -1514,24 +1511,24 @@ a:not([href]){
 	margin-bottom: 4rem;
 }
 
-.my-auto{
-	margin-top: auto;
-	margin-bottom: auto;
-}
-
-.my-20{
-	margin-top: 5rem;
-	margin-bottom: 5rem;
-}
-
-.-mx-5{
-	margin-left: -1.25rem;
-	margin-right: -1.25rem;
+.my-12{
+	margin-top: 3rem;
+	margin-bottom: 3rem;
 }
 
 .mx-5{
 	margin-left: 1.25rem;
 	margin-right: 1.25rem;
+}
+
+.my-auto{
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+.my-6{
+	margin-top: 1.5rem;
+	margin-bottom: 1.5rem;
 }
 
 .-mt-\[4rem\]{
@@ -1548,6 +1545,10 @@ a:not([href]){
 
 .mt-7{
 	margin-top: 1.75rem;
+}
+
+.mt-12{
+	margin-top: 3rem;
 }
 
 .mb-11{
@@ -1584,6 +1585,18 @@ a:not([href]){
 
 .mb-24{
 	margin-bottom: 6rem;
+}
+
+.mr-6{
+	margin-right: 1.5rem;
+}
+
+.mt-\[1\.125rem\]{
+	margin-top: 1.125rem;
+}
+
+.mr-4{
+	margin-right: 1rem;
 }
 
 .ml-8{
@@ -1624,14 +1637,6 @@ a:not([href]){
 
 .mt-4{
 	margin-top: 1rem;
-}
-
-.mt-12{
-	margin-top: 3rem;
-}
-
-.ml-5{
-	margin-left: 1.25rem;
 }
 
 .block{
@@ -1718,16 +1723,16 @@ a:not([href]){
 	height: auto;
 }
 
+.h-\[4\.25rem\]{
+	height: 4.25rem;
+}
+
 .h-28{
 	height: 7rem;
 }
 
 .h-\[25\.5rem\]{
 	height: 25.5rem;
-}
-
-.h-\[28rem\]{
-	height: 28rem;
 }
 
 .h-\[16\.875rem\]{
@@ -1776,6 +1781,10 @@ a:not([href]){
 
 .w-\[1\.125rem\]{
 	width: 1.125rem;
+}
+
+.w-\[4\.25rem\]{
+	width: 4.25rem;
 }
 
 .flex-1{
@@ -1861,10 +1870,6 @@ a:not([href]){
 	overflow: hidden;
 }
 
-.overflow-visible{
-	overflow: visible;
-}
-
 .truncate{
 	overflow: hidden;
 	text-overflow: ellipsis;
@@ -1873,6 +1878,10 @@ a:not([href]){
 
 .whitespace-nowrap{
 	white-space: nowrap;
+}
+
+.rounded-full{
+	border-radius: 9999px;
 }
 
 .border-b{
@@ -1948,19 +1957,14 @@ a:not([href]){
 	padding-bottom: 0.75rem;
 }
 
-.py-12{
-	padding-top: 3rem;
-	padding-bottom: 3rem;
+.px-5{
+	padding-left: 1.25rem;
+	padding-right: 1.25rem;
 }
 
 .py-24{
 	padding-top: 6rem;
 	padding-bottom: 6rem;
-}
-
-.px-5{
-	padding-left: 1.25rem;
-	padding-right: 1.25rem;
 }
 
 .py-8{
@@ -2001,6 +2005,11 @@ a:not([href]){
 .py-7{
 	padding-top: 1.75rem;
 	padding-bottom: 1.75rem;
+}
+
+.py-12{
+	padding-top: 3rem;
+	padding-bottom: 3rem;
 }
 
 .pt-3{
@@ -2057,8 +2066,8 @@ a:not([href]){
 	font-size: 5.625rem;
 }
 
-.text-\[18\.75rem\]{
-	font-size: 18.75rem;
+.text-\[9\.375rem\]{
+	font-size: 9.375rem;
 }
 
 .font-semibold{
@@ -2105,12 +2114,12 @@ a:not([href]){
 	line-height: 5.125rem;
 }
 
-.leading-\[3\.125rem\]{
-	line-height: 3.125rem;
+.leading-\[10\.3125rem\]{
+	line-height: 10.3125rem;
 }
 
-.leading-\[20\.625rem\]{
-	line-height: 20.625rem;
+.leading-\[3\.125rem\]{
+	line-height: 3.125rem;
 }
 
 .text-gray-very-dark{
@@ -2189,12 +2198,6 @@ a:not([href]){
 
 .col-3\/12{
 	width: 25%;
-	padding-left: 0.625rem;
-	padding-right: 0.625rem;
-}
-
-.col-9\/12{
-	width: 75%;
 	padding-left: 0.625rem;
 	padding-right: 0.625rem;
 }
@@ -2466,13 +2469,27 @@ a:not([href]){
 		order: 1;
 	}
 
+	.lg\:my-16{
+		margin-top: 4rem;
+		margin-bottom: 4rem;
+	}
+
 	.lg\:mx-0{
 		margin-left: 0px;
 		margin-right: 0px;
 	}
 
+	.lg\:my-20{
+		margin-top: 5rem;
+		margin-bottom: 5rem;
+	}
+
 	.lg\:-mt-\[4\.5rem\]{
 		margin-top: -4.5rem;
+	}
+
+	.lg\:mt-0{
+		margin-top: 0px;
 	}
 
 	.lg\:mb-0{
@@ -2495,6 +2512,18 @@ a:not([href]){
 		margin-left: 8.333333333333334%;
 	}
 
+	.lg\:mr-28{
+		margin-right: 7rem;
+	}
+
+	.lg\:mt-7{
+		margin-top: 1.75rem;
+	}
+
+	.lg\:mr-6{
+		margin-right: 1.5rem;
+	}
+
 	.lg\:-mt-\[21\.75rem\]{
 		margin-top: -21.75rem;
 	}
@@ -2513,10 +2542,6 @@ a:not([href]){
 
 	.lg\:mr-3{
 		margin-right: 0.75rem;
-	}
-
-	.lg\:mt-0{
-		margin-top: 0px;
 	}
 
 	.lg\:-mb-14{
@@ -2587,6 +2612,14 @@ a:not([href]){
 		height: 52.625rem;
 	}
 
+	.lg\:h-\[6\.875rem\]{
+		height: 6.875rem;
+	}
+
+	.lg\:h-\[2\.9375rem\]{
+		height: 2.9375rem;
+	}
+
 	.lg\:h-\[30\.5rem\]{
 		height: 30.5rem;
 	}
@@ -2609,6 +2642,14 @@ a:not([href]){
 
 	.lg\:w-auto{
 		width: auto;
+	}
+
+	.lg\:w-\[6\.875rem\]{
+		width: 6.875rem;
+	}
+
+	.lg\:w-\[3\.125rem\]{
+		width: 3.125rem;
 	}
 
 	.lg\:flex-grow{
@@ -2643,10 +2684,6 @@ a:not([href]){
 		margin-bottom: calc(2rem * var(--tw-space-y-reverse));
 	}
 
-	.lg\:overflow-visible{
-		overflow: visible;
-	}
-
 	.lg\:border-none{
 		border-style: none;
 	}
@@ -2657,11 +2694,6 @@ a:not([href]){
 
 	.lg\:p-8{
 		padding: 2rem;
-	}
-
-	.lg\:py-16{
-		padding-top: 4rem;
-		padding-bottom: 4rem;
 	}
 
 	.lg\:py-0{
@@ -2731,6 +2763,10 @@ a:not([href]){
 		line-height: 1.75rem;
 	}
 
+	.lg\:text-\[18\.75rem\]{
+		font-size: 18.75rem;
+	}
+
 	.lg\:text-\[7\.5rem\]{
 		font-size: 7.5rem;
 	}
@@ -2747,6 +2783,10 @@ a:not([href]){
 
 	.lg\:leading-6{
 		line-height: 1.5rem;
+	}
+
+	.lg\:leading-\[20\.625rem\]{
+		line-height: 20.625rem;
 	}
 
 	.lg\:leading-\[8rem\]{
@@ -2820,5 +2860,3 @@ a:not([href]){
 	}
 }
 
-
-/*# sourceMappingURL=main.css.map*/
