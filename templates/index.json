@@ -195,6 +195,12 @@
       "type": "logo",
       "settings": {
       }
+    },
+    "73cfb848-0cf0-4279-878d-1aaed515e933": {
+      "type": "marquee",
+      "settings": {
+        "title": "Made from"
+      }
     }
   },
   "order": [
@@ -206,6 +212,7 @@
     "89e98e22-4773-418d-9dba-1ac026db6b99",
     "9a562e76-1cbf-464f-8250-9df50fef249b",
     "1664891410510688cf",
-    "22f962ae-c478-4570-9791-ac91a766b93c"
+    "22f962ae-c478-4570-9791-ac91a766b93c",
+    "73cfb848-0cf0-4279-878d-1aaed515e933"
   ]
 }
