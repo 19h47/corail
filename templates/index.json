@@ -89,7 +89,6 @@
       "disabled": true,
       "settings": {
         "heading": "",
-        "heading_size": "h1",
         "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
         "description": "",
         "full_width": false,
@@ -159,6 +158,7 @@
         "content": "CORAIL°Lab est un espace permettant de réfléchir à des solutions innovantes pour retirer puis transformer les déchets marins en matière première. Grâce à celle-ci, nous créons des produits lifestyle accessibles par une grande majorité de la population.",
         "link_title": "Découvrir le Lab",
         "link_url": "shopify:\/\/pages\/lab",
+        "video_cover_image": "shopify:\/\/shop_images\/japanese-garden-rock-texture.jpg",
         "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
         "video_description": "",
         "image_1": "shopify:\/\/shop_images\/trying-on-shoes.jpg",
