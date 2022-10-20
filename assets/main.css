@@ -2057,6 +2057,10 @@ a:not([href]){
 	font-size: 5.625rem;
 }
 
+.text-\[18\.75rem\]{
+	font-size: 18.75rem;
+}
+
 .font-semibold{
 	font-weight: 600;
 }
@@ -2103,6 +2107,10 @@ a:not([href]){
 
 .leading-\[3\.125rem\]{
 	line-height: 3.125rem;
+}
+
+.leading-\[20\.625rem\]{
+	line-height: 20.625rem;
 }
 
 .text-gray-very-dark{

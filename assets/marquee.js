@@ -5,8 +5,9 @@ if (!customElements.get('marquee-component')) {
 		constructor() {
 			super();
 
-			const scrollingArea = new ScrollingArea(this, {});
-			scrollingArea.init();
+			// eslint-disable-next-line new-cap
+			const scrollingArea = new ScrollingArea.default(this, {});
+			document.addEventListener('DOMContentLoaded', () => scrollingArea.init());
 		}
 	}
 

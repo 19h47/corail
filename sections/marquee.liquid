@@ -1,7 +1,9 @@
 <script src="{{ 'scrolling-area.js' | asset_url }}" defer="defer"></script>
 <script src="{{ 'marquee.js' | asset_url }}" defer="defer"></script>
 
-<marquee-component>{{ section.settings.title }}</marquee-component>
+<marquee-component class="block w-full">
+	<div class="text-[18.75rem] leading-[20.625rem] uppercase font-bold font-display">{{ section.settings.title }}</div>
+</marquee-component>
 
 
 {% schema %}
