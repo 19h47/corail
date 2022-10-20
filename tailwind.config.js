@@ -18,7 +18,18 @@ const spacing = {
 	"1/12": `${(1 * 100) / 12}%`,
 	"2/12": `${(2 * 100) / 12}%`,
 	"3/12": `${(3 * 100) / 12}%`,
+	"3.5/12": `${(3.5 * 100) / 12}%`,
+	"4/12": `${(4 * 100) / 12}%`,
+	"5/12": `${(5 * 100) / 12}%`,
 	"3/9": `${(3 * 100) / 9}%`,
+};
+
+const zIndex = {
+	1: '1',
+	2: '2',
+	3: '3',
+	4: '4',
+	5: '5'
 };
 
 module.exports = {
@@ -37,6 +48,7 @@ module.exports = {
 			fontSize,
 			maxWidth,
 			spacing,
+			zIndex
 		},
 		fontFamily: {
 			display: ['"Roobert"', ...defaultTheme.fontFamily.serif],

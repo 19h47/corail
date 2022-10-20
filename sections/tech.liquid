@@ -3,21 +3,23 @@
 		<div class="row">
 
 			{%- if section.settings.image_1 != blank -%}
-				<div class="lg:col-3/12">
-
-				  {{ section.settings.image_1 | image_url | image_tag:
-					loading: 'lazy',
-					width: section.settings.image_1.width,
-					height: section.settings.image_1.height,
-					class: '',
-					widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840',
-					alt: section.settings.image_1.alt | escape
-				  }}
+				<div class="lg:col-3/12 lg:ml-1/12">
+					<div class="relative">
+						{{ section.settings.image_1 | image_url: width: 338, height: 416 | image_tag:
+							loading: 'lazy',
+							width: section.settings.image_1.width,
+							height: section.settings.image_1.height,
+							class: 'relative z-1',
+							widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840',
+							alt: section.settings.image_1.alt | escape
+						}}
+						{% render 'svg', icon: 'decor-01', classes: 'mr-3 absolute z-2 bottom-0 left-0 -mb-14 -ml-16 h-28 w-28 fill-current', description: shop.name %}
+					</div>
 				</div>
 			{%- endif -%}
 
 			{% if section.settings.content != blank  or section.settings.link_url != blank %}
-				<div class="lg:col-4/12">
+				<div class="lg:col-3.5/12 {% if section.settings.image_1 != blank %} lg:ml-1/12 {% else %} lg:ml-5/12 {% endif %}">
 					<h2 class="font-display font-semibold text-3xl leading-none uppercase">{{- section.settings.title | escape -}}</h2>
 
 					{% if section.settings.content != blank %}
@@ -32,8 +34,23 @@
 				</div>
 			{% endif %}
 
-
-
+			{%- if section.settings.image_2 != blank -%}
+				<div class="lg:col-3/12 mt-64">
+					<div class="relative">
+						{{ section.settings.image_2 | image_url: width: 338, height: 416 | image_tag:
+							loading: 'lazy',
+							width: section.settings.image_2.width,
+							height: section.settings.image_2.height,
+							class: 'relative z-1',
+							widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840',
+							alt: section.settings.image_2.alt | escape
+						}}
+						{% render 'svg', icon: 'decor-02', classes: 'mr-3 absolute z-2 bottom-0 right-0 -mb-14 h-28 w-28 fill-current', description: shop.name %}
+					</div>
+				</div>
+			{%- endif -%}
+		</div>
+		<div class="row -mt-[21.75rem] relative z-3">
 			<div>
 				<div class="font-bold text-[7.5rem] leading-[8rem] uppercase text-center font-display">
 					less<br>
@@ -41,6 +58,64 @@
 					more<br>
 					corail°<br>
 				</div>
+			</div>
+		</div>
+
+		<div class="row -mt-10 relative z-1">
+			<div class="lg:col-8/12 lg:ml-2/12">
+				<noscript>
+					<div class="video-section__media"
+					  {% if section.settings.cover_image != blank %} style="padding-bottom: {{ 1 | divided_by: section.settings.cover_image.aspect_ratio | times: 100 }}%;"{% endif %}
+					>
+					  <a href="{{ section.settings.video_url }}" class="video-section__poster media media--transparent media--landscape{% if section.settings.cover_image == blank %} video-section__placeholder{% endif %}">
+						{%- if section.settings.cover_image != blank -%}
+						  {%- capture sizes -%}(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 }}px, (min-width: 750px) calc(100vw - 10rem), 100vw{%- endcapture -%}
+						  {%- assign alt = 'sections.video.load_video' | t: description: section.settings.description | escape -%}
+						  {{ section.settings.cover_image | image_url: width: 3840 | image_tag:
+							loading: 'lazy',
+							sizes: sizes,
+							widths: '375, 750, 1100, 1500, 1780, 2000, 3000, 3840',
+							alt: alt
+						  }}
+						{%- else -%}
+						  {{ 'collection-2' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
+						{%- endif -%}
+					  </a>
+					</div>
+				  </noscript>
+				  <deferred-media class="video-section__media deferred-media no-js-hidden global-media-settings" data-media-id="{{ section.settings.video_url.id }}"
+					{% if section.settings.cover_image != blank %} style="padding-bottom: {{ 1 | divided_by: section.settings.cover_image.aspect_ratio | times: 100 }}%;"{% endif %}
+				  >
+					<button
+					  id="Deferred-Poster-Modal-{{ section.settings.video_url.id }}"
+					  class="video-section__poster media deferred-media__poster media--landscape"
+					  type="button"
+					  aria-label="{{ 'sections.video.load_video' | t: description: section.settings.description | escape }}"
+					>
+					  {%- if section.settings.cover_image != blank -%}
+						{%- capture sizes -%}(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 }}px, (min-width: 750px) calc(100vw - 10rem), 100vw{%- endcapture -%}
+						{%- assign alt = 'sections.video.load_video' | t: description: section.settings.description | escape -%}
+						{{ section.settings.cover_image | image_url: width: 3840 | image_tag:
+						  loading: 'lazy',
+						  sizes: sizes,
+						  widths: '375, 750, 1100, 1500, 1780, 2000, 3000, 3840',
+						  alt: alt
+						}}
+					  {%- else -%}
+						{{ 'collection-2' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
+					  {%- endif -%}
+					  <span class="deferred-media__poster-button motion-reduce">
+						{%- render 'icon-play' -%}
+					  </span>
+					</button>
+					<template>
+					  {%- if section.settings.video_url.type == 'youtube' -%}
+						<iframe src="https://www.youtube.com/embed/{{ section.settings.video_url.id }}?enablejsapi=1" class="js-youtube" allow="autoplay; encrypted-media" allowfullscreen title="{{ section.settings.description | escape }}"></iframe>
+					  {%- else -%}
+						<iframe src="https://player.vimeo.com/video/{{ section.settings.video_url.id }}" class="js-vimeo" allow="autoplay; encrypted-media" allowfullscreen title="{{ section.settings.description | escape }}"></iframe>
+					  {%- endif -%}
+					</template>
+				  </deferred-media>
 			</div>
 		</div>
 	</div>
