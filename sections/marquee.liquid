@@ -1,0 +1,26 @@
+<script src="{{ 'scrolling-area.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'marquee.js' | asset_url }}" defer="defer"></script>
+
+<marquee-component>{{ section.settings.title }}</marquee-component>
+
+
+{% schema %}
+{
+  "name": "t:sections.marquee.name",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "default": "Made from",
+      "label": "t:sections.marquee.settings.title.label"
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.marquee.presets.name"
+    }
+  ]
+}
+{% endschema %}
