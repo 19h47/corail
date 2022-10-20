@@ -4,6 +4,8 @@
 <link rel="stylesheet" href="{{ 'component-slider.css' | asset_url }}" media="print" onload="this.media='all'">
 <noscript>{{ 'component-slider.css' | asset_url | stylesheet_tag }}</noscript>
 
+<script src="{{ 'slider.js' | asset_url }}" defer="defer"></script>
+
 {%- style -%}
   .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
@@ -59,10 +61,10 @@
         <div class="slider-buttons no-js-hidden">
           <button type="button" class="slider-button slider-button--prev" name="previous" aria-label="{{ 'general.slider.previous_slide' | t }}">{% render 'icon-caret' %}</button>
           <div class="slider-counter caption">
-            <span class="slider-counter--current">1</span>
+            <span class="slider-counter--current js-current">1</span>
               <span aria-hidden="true"> / </span>
               <span class="visually-hidden">{{ 'general.slider.of' | t }}</span>
-            <span class="slider-counter--total">{{ section.blocks.size }}</span>
+            <span class="slider-counter--total js-total">{{ section.blocks.size }}</span>
           </div>
           <button type="button" class="slider-button slider-button--next" name="next" aria-label="{{ 'general.slider.next_slide' | t }}">{% render 'icon-caret' %}</button>
         </div>

@@ -2,6 +2,9 @@
 {{ 'component-slideshow.css' | asset_url | stylesheet_tag }}
 
 
+<script src="{{ 'slider.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'slideshow.js' | asset_url }}" defer="defer"></script>
+
 {%- if section.settings.slide_height == 'adapt_image' and section.blocks.first.settings.image != blank -%}
   {%- style -%}
   @media screen and (max-width: 749px) {
@@ -31,10 +34,10 @@
       <button type="button" class="slider-button slider-button--prev" name="previous" aria-label="{{ 'sections.slideshow.previous_slideshow' | t }}" aria-controls="Slider-{{ section.id }}">{% render 'icon-caret' %}</button>
       <div class="slider-counter slider-counter--{{ section.settings.slider_visual }}{% if section.settings.slider_visual == 'counter' or section.settings.slider_visual == 'numbers' %} caption{% endif %}">
         {%- if section.settings.slider_visual == 'counter' -%}
-          <span class="slider-counter--current">1</span>
+          <span class="slider-counter--current js-current">1</span>
           <span aria-hidden="true"> / </span>
           <span class="visually-hidden">{{ 'general.slider.of' | t }}</span>
-          <span class="slider-counter--total">{{ section.blocks.size }}</span>
+          <span class="slider-counter--total js-total">{{ section.blocks.size }}</span>
         {%- else-%}
           <div class="slideshow__control-wrapper">
             {%- for block in section.blocks -%}
@@ -127,10 +130,10 @@
       <button type="button" class="slider-button slider-button--prev" name="previous" aria-label="{{ 'sections.slideshow.previous_slideshow' | t }}" aria-controls="Slider-{{ section.id }}">{% render 'icon-caret' %}</button>
       <div class="slider-counter slider-counter--{{ section.settings.slider_visual }}{% if section.settings.slider_visual == 'counter' or section.settings.slider_visual == 'numbers' %} caption{% endif %}">
         {%- if section.settings.slider_visual == 'counter' -%}
-          <span class="slider-counter--current">1</span>
+          <span class="slider-counter--current js-current">1</span>
           <span aria-hidden="true"> / </span>
           <span class="visually-hidden">{{ 'general.slider.of' | t }}</span>
-          <span class="slider-counter--total">{{ section.blocks.size }}</span>
+          <span class="slider-counter--total js-total">{{ section.blocks.size }}</span>
         {%- else-%}
           <div class="slideshow__control-wrapper">
             {%- for block in section.blocks -%}

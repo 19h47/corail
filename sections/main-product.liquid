@@ -1,3 +1,6 @@
+<script src="{{ 'slider.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'slideshow.js' | asset_url }}" defer="defer"></script>
+
 <section
   id="MainProduct-{{ section.id }}"
   class="page-width section-{{ section.id }}-padding"
@@ -133,10 +136,10 @@
               {% render 'icon-caret' %}
             </button>
             <div class="slider-counter caption">
-              <span class="slider-counter--current">1</span>
+              <span class="slider-counter--current js-current">1</span>
               <span aria-hidden="true"> / </span>
               <span class="visually-hidden">{{ 'general.slider.of' | t }}</span>
-              <span class="slider-counter--total">{{ media_count }}</span>
+              <span class="slider-counter--total js-total">{{ media_count }}</span>
             </div>
             <button
               type="button"
@@ -753,10 +756,10 @@
                               <button type="button" class="slider-button slider-button--prev" name="previous" aria-label="{{ 'general.slider.previous_slide' | t }}">{% render 'icon-caret' %}</button>
                               <div class="slider-counter slider-counter--{{ block.settings.pagination_style }}{% if block.settings.pagination_style == 'counter' or block.settings.pagination_style == 'numbers' %} caption{% endif %}">
                                 {%- if block.settings.pagination_style == 'counter' -%}
-                                  <span class="slider-counter--current">1</span>
+                                  <span class="slider-counter--current js-current">1</span>
                                   <span aria-hidden="true"> / </span>
                                   <span class="visually-hidden">{{ 'general.slider.of' | t }}</span>
-                                  <span class="slider-counter--total">{{ number_of_slides }}</span>
+                                  <span class="slider-counter--total js-total">{{ number_of_slides }}</span>
                                 {%- else -%}
                                   <div class="slideshow__control-wrapper">
                                     {%- for i in (1..number_of_slides) -%}
