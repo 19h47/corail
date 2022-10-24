@@ -4,7 +4,7 @@ const defaultTheme = require("tailwindcss/defaultTheme");
 const colors = {
 	gray: { "very-dark": "#333333", "very-light": "#F3F3F3" },
 	orange: { "dark-grayish": "#97938F", grayish: "#CFCDC9" },
-	red: { "very-light": "#FF7D6C" },
+	red: { "very-light": "#FF7D6C", light: "#FF7F63" },
 	cyan: { "very-dark-grayish": "#37403A" },
 };
 
@@ -25,11 +25,11 @@ const spacing = {
 };
 
 const zIndex = {
-	1: '1',
-	2: '2',
-	3: '3',
-	4: '4',
-	5: '5'
+	1: "1",
+	2: "2",
+	3: "3",
+	4: "4",
+	5: "5",
 };
 
 module.exports = {
@@ -48,7 +48,7 @@ module.exports = {
 			fontSize,
 			maxWidth,
 			spacing,
-			zIndex
+			zIndex,
 		},
 		fontFamily: {
 			display: ['"Roobert"', ...defaultTheme.fontFamily.serif],

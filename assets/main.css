@@ -1,3 +1,6 @@
+/*!********************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[8].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[8].use[2]!./src/stylesheets/styles.css ***!
+  \********************************************************************************************************************************************************************************/
 /**
  * Base
  *
@@ -1965,6 +1968,10 @@ a:not([href]){
 	border-radius: 9999px;
 }
 
+.rounded-lg{
+	border-radius: 0.5rem;
+}
+
 .border{
 	border-width: 1px;
 }
@@ -2016,6 +2023,11 @@ a:not([href]){
 	background-color: rgb(243 243 243 / var(--tw-bg-opacity));
 }
 
+.bg-red-light{
+	--tw-bg-opacity: 1;
+	background-color: rgb(255 127 99 / var(--tw-bg-opacity));
+}
+
 .fill-current{
 	fill: currentColor;
 }
@@ -2045,6 +2057,10 @@ a:not([href]){
 
 .p-5{
 	padding: 1.25rem;
+}
+
+.p-6{
+	padding: 1.5rem;
 }
 
 .py-3{
@@ -2979,3 +2995,5 @@ a:not([href]){
 	}
 }
 
+
+/*# sourceMappingURL=main.css.map*/
