@@ -3,12 +3,6 @@
     "main": {
       "type": "main-product",
       "blocks": {
-        "vendor": {
-          "type": "text",
-          "settings": {
-            "text": "{{ product.vendor }}"
-          }
-        },
         "title": {
           "type": "title",
           "settings": {
@@ -22,6 +16,13 @@
         "description": {
           "type": "description",
           "settings": {
+          }
+        },
+        "vendor": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "{{ product.vendor }}"
           }
         },
         "a13c66e5-b37d-433e-80c5-d3dc4ce746b8": {
@@ -96,10 +97,10 @@
         }
       },
       "block_order": [
-        "vendor",
         "title",
         "price",
         "description",
+        "vendor",
         "a13c66e5-b37d-433e-80c5-d3dc4ce746b8",
         "caption",
         "variant_picker",
