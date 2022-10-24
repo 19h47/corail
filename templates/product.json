@@ -14,6 +14,11 @@
           "settings": {
           }
         },
+        "price": {
+          "type": "price",
+          "settings": {
+          }
+        },
         "description": {
           "type": "description",
           "settings": {
@@ -28,11 +33,6 @@
           "type": "text",
           "settings": {
             "text": "{{ product.metafields.descriptors.subtitle.value }}"
-          }
-        },
-        "price": {
-          "type": "price",
-          "settings": {
           }
         },
         "variant_picker": {
@@ -98,10 +98,10 @@
       "block_order": [
         "vendor",
         "title",
+        "price",
         "description",
         "a13c66e5-b37d-433e-80c5-d3dc4ce746b8",
         "caption",
-        "price",
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
