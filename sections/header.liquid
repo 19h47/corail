@@ -198,10 +198,22 @@
 
 			<span class="w-[0.0625rem] h-full block {% if request.page_type == 'index' %} bg-current {% else %} bg-orange-grayish {% endif %}"></span>
 
-			<a href="{{ routes.cart_url }}" class="font-semibold text-sm leading-[1.125rem] flex p-[1.4375rem] lg:p-[1.6875rem]">
-				{%- render 'svg', icon: 'bag-shopping', classes: 'mr-2 w-[1.125rem] h-[1.125rem] fill-current' -%}
-				({% if cart.item_count < 10 %}0{{ cart.item_count }}{% else %}{{ cart.item_count }}{% endif %})
+			<a href="{{ routes.cart_url }}" id="cart-icon-bubble" class="font-semibold text-sm leading-[1.125rem] flex p-[1.4375rem] lg:p-[1.6875rem]">
+				{%- render 'svg', icon: 'bag-shopping', classes: 'mr-2 w-[1.125rem] h-[1.125rem] fill-current flex-shrink-0' -%}
+				<span class="sr-only">{{ 'sections.header.cart_count' | t: count: cart.item_count }}</span>
+				{%- if cart != empty -%}
+					<span class="cart-count-bubble">
+						{%- if cart.item_count < 100 -%}
+							<span>({% if cart.item_count < 10 %}0{{ cart.item_count }}{% else %}{{ cart.item_count }}{% endif %})</span>
+						{%- endif -%}
+						<span class="sr-only">{{ 'sections.header.cart_count' | t: count: cart.item_count }}</span>
+
+					</span>
+				{% else %}
+					<span class="cart-count-bubble">(00)</span>
+				{% endif%}
 			</a>
+
 		</div>
 	</div>
 
@@ -396,30 +408,12 @@
         </a>
       {%- endif -%}
 
-      <a href="{{ routes.cart_url }}" class="header__icon" id="cart-icon-bubble">
-        {%- liquid
-          if cart == empty
-            render 'icon-cart-empty'
-          else
-            render 'icon-cart'
-          endif
-        -%}
-        <span class="visually-hidden">{{ 'templates.cart.cart' | t }}</span>
-        {%- if cart != empty -%}
-          <div class="cart-count-bubble">
-            {%- if cart.item_count < 100 -%}
-              <span aria-hidden="true">{{ cart.item_count }}</span>
-            {%- endif -%}
-            <span class="visually-hidden">{{ 'sections.header.cart_count' | t: count: cart.item_count }}</span>
-          </div>
-        {%- endif -%}
-      </a>
     </div>
   </header>
-</div> {% endcomment %}
+</div>  {% endcomment %}
 
 {%- if settings.cart_type == "notification" -%}
-  {%- render 'cart-notification', color_scheme: section.settings.color_scheme -%}
+	{%- render 'cart-notification', color_scheme: section.settings.color_scheme -%}
 {%- endif -%}
 
 <script type="application/ld+json">

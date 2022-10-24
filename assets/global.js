@@ -150,28 +150,6 @@ function onKeyUpEscape(event) {
 	summaryElement.focus();
 }
 
-class QuantityInput extends HTMLElement {
-	constructor() {
-		super();
-		this.input = this.querySelector("input");
-		this.changeEvent = new Event("change", { bubbles: true });
-
-		this.querySelectorAll("button").forEach((button) =>
-			button.addEventListener("click", this.onButtonClick.bind(this))
-		);
-	}
-
-	onButtonClick(event) {
-		event.preventDefault();
-		const previousValue = this.input.value;
-
-		event.target.name === "plus" ? this.input.stepUp() : this.input.stepDown();
-		if (previousValue !== this.input.value) this.input.dispatchEvent(this.changeEvent);
-	}
-}
-
-customElements.define("quantity-input", QuantityInput);
-
 function debounce(fn, wait) {
 	let t;
 	return (...args) => {
@@ -448,7 +426,7 @@ class HeaderDrawer extends MenuDrawer {
 		this.header = this.header || document.getElementById("shopify-section-header");
 		this.borderOffset =
 			this.borderOffset ||
-				this.closest(".header-wrapper").classList.contains("header-wrapper--border-bottom")
+			this.closest(".header-wrapper").classList.contains("header-wrapper--border-bottom")
 				? 1
 				: 0;
 		document.documentElement.style.setProperty(
@@ -669,7 +647,8 @@ class VariantSelects extends HTMLElement {
 
 	renderProductInfo() {
 		fetch(
-			`${this.dataset.url}?variant=${this.currentVariant.id}&section_id=${this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section
+			`${this.dataset.url}?variant=${this.currentVariant.id}&section_id=${
+				this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section
 			}`
 		)
 			.then((response) => response.text())
@@ -677,7 +656,8 @@ class VariantSelects extends HTMLElement {
 				const html = new DOMParser().parseFromString(responseText, "text/html");
 				const destination = document.getElementById(`price-${this.dataset.section}`);
 				const source = html.getElementById(
-					`price-${this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section
+					`price-${
+						this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section
 					}`
 				);
 				if (source && destination) destination.innerHTML = source.innerHTML;
@@ -723,23 +703,6 @@ class VariantSelects extends HTMLElement {
 		return this.variantData;
 	}
 }
-
-customElements.define("variant-selects", VariantSelects);
-
-class VariantRadios extends VariantSelects {
-	constructor() {
-		super();
-	}
-
-	updateOptions() {
-		const fieldsets = Array.from(this.querySelectorAll("fieldset"));
-		this.options = fieldsets.map((fieldset) => {
-			return Array.from(fieldset.querySelectorAll("input")).find((radio) => radio.checked).value;
-		});
-	}
-}
-
-customElements.define("variant-radios", VariantRadios);
 
 class ProductRecommendations extends HTMLElement {
 	constructor() {

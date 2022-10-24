@@ -15,6 +15,10 @@
 		@apply bg-red-very-light text-white;
 	}
 
+	.button.button-gray {
+		@apply bg-gray-very-dark text-white;
+	}
+
 	.button:hover {
 		@apply bg-gray-very-dark text-white;
 	}

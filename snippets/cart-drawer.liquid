@@ -18,11 +18,11 @@
     <div id="CartDrawer-Overlay"class="cart-drawer__overlay"></div>
     <div class="drawer__inner" role="dialog" aria-modal="true" aria-label="{{ 'sections.cart.title' | t }}" tabindex="-1">
        {%- if cart == empty -%}
-        <div class="drawer__inner-empty">
+        <div class="drawer__inner-empty js-drawer-inner-empty">
           <div class="cart-drawer__warnings center{% if settings.cart_drawer_collection != blank %} cart-drawer__warnings--has-collection{% endif %}">
             <div class="cart-drawer__empty-content">
               <h2 class="cart__empty-text">{{ 'sections.cart.empty' | t }}</h2>
-              <button class="drawer__close" type="button" onclick="this.closest('cart-drawer').close()" aria-label="{{ 'accessibility.close' | t }}">{% render 'icon-close' %}</button>
+              <button class="drawer__close js-drawer-close" type="button" onclick="this.closest('cart-drawer').close()" aria-label="{{ 'accessibility.close' | t }}">{% render 'icon-close' %}</button>
               <a href="{{ routes.all_products_collection_url }}" class="button">
                 {{ 'general.continue_shopping' | t }}
               </a>
@@ -47,7 +47,7 @@
       {%- endif -%}
       <div class="drawer__header">
         <h2 class="drawer__heading">{{ 'sections.cart.title' | t }}</h2>
-        <button class="drawer__close" type="button" onclick="this.closest('cart-drawer').close()" aria-label="{{ 'accessibility.close' | t }}">{% render 'icon-close' %}</button>
+        <button class="drawer__close js-drawer-close" type="button" onclick="this.closest('cart-drawer').close()" aria-label="{{ 'accessibility.close' | t }}">{% render 'icon-close' %}</button>
       </div>
       <cart-drawer-items {% if cart == empty %}class=" is-empty"{% endif %}>
         <form action="{{ routes.cart_url }}" id="CartDrawer-Form" class="cart__contents cart-drawer__form" method="post">
@@ -154,7 +154,7 @@
 
                         <td class="cart-item__totals right" role="cell" headers="CartDrawer-ColumnTotal">
                           <div class="loading-overlay hidden">
-                            <div class="loading-overlay__spinner">
+                            <div class="loading-overlay__spinner js-loading-overlay-spinner">
                               <svg aria-hidden="true" focusable="false" role="presentation" class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
                                 <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
                               </svg>

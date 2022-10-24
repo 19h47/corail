@@ -6,14 +6,9 @@
 	display: none;
 }
 
-.multicolumn .title-wrapper-with-link {
-	margin-top: 0;
-}
 
 @media screen and (max-width: 749px) {
-	.multicolumn .title-wrapper-with-link {
-		margin-bottom: 3rem;
-	}
+
 
 	.multicolumn .page-width {
 		padding-left: 0;

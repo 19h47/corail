@@ -3,6 +3,7 @@
 @import "./components/button";
 /* @import "./components/guid"; */
 @import "./components/section-header";
+@import "./components/spinner";
 @import "./components/swiper";
 
 @import "./utilities/grid";

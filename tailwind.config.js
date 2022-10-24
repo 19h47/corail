@@ -58,5 +58,6 @@ module.exports = {
 	plugins: [
 		plugin(({ addVariant }) => addVariant("is-inview", ".is-inview&")),
 		plugin(({ addVariant }) => addVariant("is-active", ".is-active&")),
+		plugin(({ addVariant }) => addVariant("is-disabled", "[aria-disabled='true']&")),
 	],
 };

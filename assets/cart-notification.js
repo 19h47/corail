@@ -31,7 +31,9 @@ class CartNotification extends HTMLElement {
 
 	renderContents(parsedState) {
 		this.cartItemKey = parsedState.key;
+
 		this.getSectionsToRender().forEach((section => {
+			console.log(section, section.selector)
 			document.getElementById(section.id).innerHTML =
 				this.getSectionInnerHTML(parsedState.sections[section.id], section.selector);
 		}));
@@ -61,8 +63,7 @@ class CartNotification extends HTMLElement {
 			.querySelector(selector).innerHTML;
 	}
 
-	handleBodyClick(evt) {
-		const target = evt.target;
+	handleBodyClick({target}) {
 		if (target !== this.notification && !target.closest('cart-notification')) {
 			const disclosure = target.closest('details-disclosure, header-menu');
 			this.activeElement = disclosure ? disclosure.querySelector('summary') : null;

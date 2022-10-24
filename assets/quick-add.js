@@ -17,7 +17,7 @@ if (!customElements.get('quick-add-modal')) {
     show(opener) {
       opener.setAttribute('aria-disabled', true);
       opener.classList.add('loading');
-      opener.querySelector('.loading-overlay__spinner').classList.remove('hidden');
+      opener.querySelector('js-loading-overlay-spinner').classList.remove('hidden');
 
       fetch(opener.getAttribute('data-product-url'))
         .then((response) => response.text())
@@ -42,7 +42,7 @@ if (!customElements.get('quick-add-modal')) {
         .finally(() => {
           opener.removeAttribute('aria-disabled');
           opener.classList.remove('loading');
-          opener.querySelector('.loading-overlay__spinner').classList.add('hidden');
+          opener.querySelector('js-loading-overlay-spinner').classList.add('hidden');
         });
     }
 
@@ -97,7 +97,7 @@ if (!customElements.get('quick-add-modal')) {
       if (!mediaImages.length) return;
 
       let mediaImageSizes = '(min-width: 1000px) 715px, (min-width: 750px) calc((100vw - 11.5rem) / 2), calc(100vw - 4rem)';
-      
+
       if (product.classList.contains('product--medium')) {
         mediaImageSizes = mediaImageSizes.replace('715px', '605px');
       } else if (product.classList.contains('product--small')) {

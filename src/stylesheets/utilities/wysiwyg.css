@@ -19,4 +19,8 @@
 	.wysiwyg > p {
 		@apply mb-8;
 	}
+
+	.wysiwyg > p > a {
+		@apply underline;
+	}
 }
