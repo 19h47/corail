@@ -1555,6 +1555,9 @@
         "price": {
           "name": "Prix"
         },
+        "taxes": {
+          "name": "Taxes"
+        },
         "quantity_selector": {
           "name": "Sélecteur de quantité"
         },
