@@ -18,6 +18,13 @@
           "settings": {
           }
         },
+        "3881603f-1c4f-469c-a6c4-c79d1ba8d940": {
+          "type": "notice",
+          "settings": {
+            "notice_title": "Seadust inside",
+            "notice_content": "These sneakers are made with SEADUST, an innovative material grinded in our CORAIL° Lab with discarded fishing nets and PET bottles collected in Marseille, France."
+          }
+        },
         "vendor": {
           "type": "text",
           "disabled": true,
@@ -100,6 +107,7 @@
         "title",
         "price",
         "description",
+        "3881603f-1c4f-469c-a6c4-c79d1ba8d940",
         "vendor",
         "a13c66e5-b37d-433e-80c5-d3dc4ce746b8",
         "caption",
