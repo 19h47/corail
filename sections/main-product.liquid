@@ -305,7 +305,7 @@
 						{% render block %}
 
 					{%- when 'text' -%}
-						{% comment %} <p {{ block.shopify_attributes }}>{{- block.settings.text -}}</p> {% endcomment %}
+						<p {{ block.shopify_attributes }}>{{- block.settings.text -}}</p>
 
 					{%- when 'title' -%}
 						<h1 class="text-6xl font-semibold font-display uppercase">
@@ -1259,6 +1259,25 @@
       "name": "t:sections.main-product.blocks.description.name",
       "limit": 1
     },
+	{
+		"type": "notice",
+		"name": "t:sections.main-product.blocks.notice.name",
+		"limit": 1,
+		"settings": [
+		  {
+			"type": "text",
+			"id": "notice_title",
+			"label": "t:sections.main-product.blocks.notice.settings.title",
+			"default": "Seadust inside"
+		  },
+		  {
+			"type": "textarea",
+			"id": "notice_content",
+			"label": "t:sections.main-product.blocks.notice.settings.content",
+			"default": "These sneakers are made with SEADUST, an innovative material grinded in our CORAIL° Lab with discarded fishing nets and PET bottles collected in Marseille, France."
+		  }
+		]
+	},
     {
       "type": "share",
       "name": "t:sections.main-product.blocks.share.name",
