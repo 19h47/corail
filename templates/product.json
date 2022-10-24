@@ -19,6 +19,11 @@
           "settings": {
           }
         },
+        "a13c66e5-b37d-433e-80c5-d3dc4ce746b8": {
+          "type": "taxes",
+          "settings": {
+          }
+        },
         "caption": {
           "type": "text",
           "settings": {
@@ -94,6 +99,7 @@
         "vendor",
         "title",
         "description",
+        "a13c66e5-b37d-433e-80c5-d3dc4ce746b8",
         "caption",
         "price",
         "variant_picker",
