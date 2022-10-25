@@ -121,6 +121,7 @@
         "blocks": {
           "announcement-bar-0": {
             "type": "announcement",
+            "disabled": true,
             "settings": {
               "text": "Livraison offerte - Retours offerts - Paiement en 3x sans frais",
               "link": "https:\/\/19h47.fr"
