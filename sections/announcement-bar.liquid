@@ -2,19 +2,7 @@
 	{%- if block.settings.text != blank -%}
 		{%- case block.type -%}
 			{%- when 'announcement' -%}
-				<div
-					class="bg-white text-gray-very-dark py-3 overflow-hidden text-xs text-center uppercase  whitespace-nowrap"
-					role="region" aria-label="{{ 'sections.header.announcement' | t }}"
-					{{ block.shopify_attributes }}
-				>
-					{%- if block.settings.link != blank -%}<a class="hover:underline" href="{{ block.settings.link }}" class="">{%- endif -%}
-						<ul class="marquee flex gap-x-2 items-center" style="animation-duration: 120s;">
-							{% for i in (1..10) %}
-								<li class="flex items-center flex-wrap"><p>{{- block.settings.text | escape -}}</p></li>
-							{% endfor %}
-						</ul>
-					{%- if block.settings.link != blank -%}</a>{%- endif -%}
-				</div>
+				{% render 'annoucement', text: block.settings.text, link: block.settings.link, attributes: block.shopify_attributes %}
 		{%- endcase -%}
 	{%- endif -%}
 {%- endfor -%}

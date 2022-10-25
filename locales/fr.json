@@ -234,12 +234,12 @@
 	},
 	"sections": {
 		"annoucement": {
-			"name": "Bar d'annonce",
+			"name": "Annonce",
 			"settings": {
 				"text": { "label": "Text" },
 				"link": { "label": "Lien" }
 			},
-			"preset": { "name": "Bar d'annonce" }
+			"preset": { "name": "Annonce" }
 		},
 		"header": {
 			"announcement": "Annonce",

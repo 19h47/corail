@@ -1,0 +1,15 @@
+{%- if text != blank -%}
+	<div
+		class="bg-white text-gray-very-dark py-3 overflow-hidden text-xs text-center uppercase  whitespace-nowrap"
+		role="region" aria-label="{{ 'sections.header.announcement' | t }}"
+		{{ attributes }}
+	>
+		{%- if link != blank -%}<a class="hover:underline" href="{{ link }}" class="">{%- endif -%}
+			<ul class="marquee flex gap-x-2 items-center" style="animation-duration: 120s;">
+				{% for i in (1..10) %}
+					<li class="flex items-center flex-wrap"><p>{{- text | escape -}}</p></li>
+				{% endfor %}
+			</ul>
+		{%- if link != blank -%}</a>{%- endif -%}
+	</div>
+{%- endif -%}
