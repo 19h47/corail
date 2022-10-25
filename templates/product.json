@@ -64,36 +64,28 @@
           "type": "collapsible_tab",
           "settings": {
             "heading": "Materials",
-            "icon": "leather",
-            "content": "",
-            "page": ""
+            "content": ""
           }
         },
         "collapsible-row-1": {
           "type": "collapsible_tab",
           "settings": {
             "heading": "Shipping & Returns",
-            "icon": "truck",
-            "content": "",
-            "page": ""
+            "content": ""
           }
         },
         "collapsible-row-2": {
           "type": "collapsible_tab",
           "settings": {
             "heading": "Dimensions",
-            "icon": "ruler",
-            "content": "",
-            "page": ""
+            "content": ""
           }
         },
         "collapsible-row-3": {
           "type": "collapsible_tab",
           "settings": {
             "heading": "Care Instructions",
-            "icon": "heart",
-            "content": "",
-            "page": ""
+            "content": ""
           }
         },
         "share": {
@@ -238,6 +230,39 @@
       "settings": {
         "title": "NEW IN NEW IN"
       }
+    },
+    "1475eed0-13f1-49b9-a8c0-da81952d5ca3": {
+      "type": "image-with-collapsible-tab",
+      "blocks": {
+        "template--15990350479528__1475eed0-13f1-49b9-a8c0-da81952d5ca3-1666691143646f9ca4-0": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "COMPOSITION",
+            "content": "<p>\/\/90% recycled upper, made with recycled plastic waste and corn-based induction<br\/>\/\/signature recycled outsole, made of 80% recycled rubber and 20% SEADUST<br\/>\/\/100% recycled laces made with PET bottles<br\/>\/\/handmade in our workshop in Portugal<br\/>\/\/abrasion-tested, friction-tested, bend-tested<br\/>\/\/water-repellent treatment<\/p>"
+          }
+        },
+        "f6d46e7e-89a2-4968-a149-9656ad93ee66": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Livraison",
+            "content": "<p>Lorem<\/p>"
+          }
+        },
+        "0e24af65-fe63-4d84-ae63-cd038861b7c5": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Echanges et retours",
+            "content": "<p>Lorem ipsum<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--15990350479528__1475eed0-13f1-49b9-a8c0-da81952d5ca3-1666691143646f9ca4-0",
+        "f6d46e7e-89a2-4968-a149-9656ad93ee66",
+        "0e24af65-fe63-4d84-ae63-cd038861b7c5"
+      ],
+      "settings": {
+      }
     }
   },
   "order": [
@@ -246,6 +271,7 @@
     "image-with-text",
     "multicolumn",
     "product-recommendations",
-    "43dfab5f-1246-4a2e-a403-00608e142f00"
+    "43dfab5f-1246-4a2e-a403-00608e142f00",
+    "1475eed0-13f1-49b9-a8c0-da81952d5ca3"
   ]
 }
