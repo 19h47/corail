@@ -34,6 +34,7 @@
         },
         "a13c66e5-b37d-433e-80c5-d3dc4ce746b8": {
           "type": "taxes",
+          "disabled": true,
           "settings": {
           }
         },
@@ -279,15 +280,12 @@
       "type": "product-recommendations",
       "settings": {
         "heading": "",
-        "heading_size": "h2",
         "products_to_show": 4,
-        "columns_desktop": 4,
         "color_scheme": "background-1",
         "image_ratio": "square",
         "show_secondary_image": true,
         "show_vendor": false,
         "show_rating": false,
-        "columns_mobile": "2",
         "padding_top": 36,
         "padding_bottom": 28
       }
