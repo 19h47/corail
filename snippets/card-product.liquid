@@ -82,6 +82,58 @@
 				{%- endif -%}
 
 			{%- endif -%}
+
+			<div class="absolute top-0 right-0 m-5 z-1">
+				{% unless card_product.available %}
+					<div class="py-2 px-5 rounded-full text-sm uppercase text-white bg-red-very-light">
+						{{ 'products.product.sold_out' | t }}
+					</div>
+				{% else %}
+					{% if card_product.compare_at_price > card_product.price %}
+						<div class="py-2 px-5 rounded-full text-sm uppercase text-white bg-red-very-light">
+							{{ 'products.product.on_sale' | t }}
+						</div>
+					{% elsif card_product.tags contains 'preorder' %}
+						<div class="py-2 px-5 rounded-full text-sm uppercase text-white bg-red-very-light">
+							'products.product.preorder' | t
+						</div>
+					{% elsif card_product.tags contains 'new' %}
+						<div class="py-2 px-5 rounded-full text-sm uppercase text-white bg-red-very-light">
+							{{ 'products.product.new' | t }}
+						</div>
+					{% endif %}
+				{% endunless %}
+			</div>
+
+			{%- unless card_product.has_only_default_variant -%}
+				<div class="space-y-2 absolute bottom-0 inset-x-0 m-5 z-1 max-w-9/12">
+					{%- for option in card_product.options_with_values -%}
+						<div class="flex flex-wrap gap-2">
+							{%- for value in option.values -%}
+
+								{% liquid
+									assign variant_needed = null
+
+									for variant in card_product.variants
+										if variant.options contains value
+											assign variant_needed = variant
+										endif
+									endfor
+								%}
+
+								{% if variant_needed.metafields.corail.color and option.name == 'Couleur' %}
+									{% comment %} <div
+										class="block w-[1.875rem] h-[1.875rem] flex-shrink-0"
+										style="background-color: {{ variant_needed.metafields.corail.color }}"
+									></div> {% endcomment %}
+								{% else %}
+									<div class="py-[0.3125rem] text-sm px-2.5 bg-gray-very-light">{{- value -}}</div>
+								{% endif %}
+							{%- endfor -%}
+						</div>
+					{%- endfor -%}
+				</div>
+			{%- endunless -%}
 		</div>
 
 		<footer class="border-t mt-4 border-orange-grayish pt-3 text-sm leading-4 uppercase">

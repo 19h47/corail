@@ -352,11 +352,21 @@
 								</div>
 
 							{%- when 'title' -%}
-								<h1 class="text-6xl font-semibold font-display uppercase">
-									<a href="{{ product.url }}" {{ block.shopify_attributes }}>
-										{{ product.title | escape }}
-									</a>
-								</h1>
+								<div class="flex items-start">
+									<h1 class="text-6xl font-semibold font-display uppercase">
+										<a href="{{ product.url }}" {{ block.shopify_attributes }}>
+											{{ product.title | escape }}
+										</a>
+									</h1>
+
+									{% if product.tags %}
+										<div class="flex flex-wrap ml-4">
+											{% for tag in product.tags %}
+												<div class="text-sm font-display border border-gray-very-dark px-3 py-[0.0625rem] font-medium rounded-full">{{- tag -}}</div>
+											{% endfor %}
+										</div>
+									{% endif %}
+								</div>
 
 							{%- when 'price' -%}
 								<div class="text-4xl font-medium font-display" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
@@ -508,15 +518,15 @@
 																	class="peer"
 																>
 
-																	{% liquid
-																		assign variant_needed = null
+																{% liquid
+																	assign variant_needed = null
 
-																		for variant in product.variants
-																			if variant.options contains value
-																				assign variant_needed = variant
-																			endif
-																		endfor
-																	%}
+																	for variant in product.variants
+																		if variant.options contains value
+																			assign variant_needed = variant
+																		endif
+																	endfor
+																%}
 
 
 																{% if variant_needed.metafields.corail.color and option.name == 'Couleur' %}

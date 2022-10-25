@@ -998,10 +998,6 @@ input.mobile-facets__checkbox {
 		display: block;
 	}
 
-	.facets-vertical .product-grid-container {
-		width: 100%;
-	}
-
 	.facets-vertical-form {
 		display: flex;
 		justify-content: flex-end;
