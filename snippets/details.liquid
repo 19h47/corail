@@ -1,0 +1,15 @@
+<details class="p-5" id="Details-{{ block_id }}-{{ section_id }}">
+	<summary class="flex items-center">
+		<div class="summary__title">
+			<h2 class="uppercase text-xl font-display font-bold">
+				{{ title }}
+			</h2>
+		</div>
+		{% render 'svg', icon: 'minus', classes: 'parent-expanded:block hidden ml-auto w-2 h-2 fill-current flex-shrink-0' %}
+		{% render 'svg', icon: 'plus', classes: 'parent-expanded:hidden block ml-auto w-2 h-2 fill-current flex-shrink-0' %}
+	</summary>
+
+	<div class="wysiwyg mt-5 text-sm leading-6" id="ProductAccordion-{{ block_id }}-{{ section_id }}">
+		{{ content | newline_to_br }}
+	</div>
+</details>

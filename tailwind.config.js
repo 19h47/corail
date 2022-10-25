@@ -22,6 +22,8 @@ const spacing = {
 	"4/12": `${(4 * 100) / 12}%`,
 	"5/12": `${(5 * 100) / 12}%`,
 	"6/12": `${(6 * 100) / 12}%`,
+	"1/6": `${(1 * 100) / 6}%`,
+	"4/6": `${(4 * 100) / 6}%`,
 	"3/9": `${(3 * 100) / 9}%`,
 };
 
@@ -60,5 +62,6 @@ module.exports = {
 		plugin(({ addVariant }) => addVariant("is-inview", ".is-inview&")),
 		plugin(({ addVariant }) => addVariant("is-active", ".is-active&")),
 		plugin(({ addVariant }) => addVariant("is-disabled", "[aria-disabled='true']&")),
+		plugin(({ addVariant }) => addVariant("parent-expanded", "[aria-expanded='true'] > &")),
 	],
 };

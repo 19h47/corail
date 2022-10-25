@@ -57,6 +57,10 @@
 		@apply col w-4/5;
 	}
 
+	.col-4\/6 {
+		@apply col w-4/6;
+	}
+
 	.col-4\/12 {
 		@apply col w-4/12;
 	}

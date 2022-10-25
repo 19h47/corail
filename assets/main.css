@@ -1,6 +1,3 @@
-/*!********************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[8].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[8].use[2]!./src/stylesheets/styles.css ***!
-  \********************************************************************************************************************************************************************************/
 /**
  * Base
  *
@@ -1507,6 +1504,10 @@ a:not([href]){
 	left: calc(100% - 0.03125rem);
 }
 
+.left-0{
+	left: 0px;
+}
+
 .isolate{
 	isolation: isolate;
 }
@@ -1529,6 +1530,10 @@ a:not([href]){
 
 .z-2{
 	z-index: 2;
+}
+
+.z-3{
+	z-index: 3;
 }
 
 .z-0{
@@ -1612,6 +1617,14 @@ a:not([href]){
 	margin-bottom: 1.25rem;
 }
 
+.mt-\[9\.75rem\]{
+	margin-top: 9.75rem;
+}
+
+.ml-1\/6{
+	margin-left: 16.666666666666668%;
+}
+
 .mt-8{
 	margin-top: 2rem;
 }
@@ -1624,12 +1637,28 @@ a:not([href]){
 	margin-bottom: 6rem;
 }
 
-.ml-6\/12{
-	margin-left: 50%;
+.mt-10{
+	margin-top: 2.5rem;
+}
+
+.mt-4{
+	margin-top: 1rem;
+}
+
+.mb-6{
+	margin-bottom: 1.5rem;
 }
 
 .mb-3{
 	margin-bottom: 0.75rem;
+}
+
+.mt-6{
+	margin-top: 1.5rem;
+}
+
+.mb-4{
+	margin-bottom: 1rem;
 }
 
 .mr-6{
@@ -1678,30 +1707,6 @@ a:not([href]){
 
 .mt-2\.5{
 	margin-top: 0.625rem;
-}
-
-.mt-4{
-	margin-top: 1rem;
-}
-
-.mt-10{
-	margin-top: 2.5rem;
-}
-
-.mt-3{
-	margin-top: 0.75rem;
-}
-
-.mb-6{
-	margin-bottom: 1.5rem;
-}
-
-.mt-6{
-	margin-top: 1.5rem;
-}
-
-.mb-4{
-	margin-bottom: 1rem;
 }
 
 .block{
@@ -1784,6 +1789,10 @@ a:not([href]){
 	height: 36.625rem;
 }
 
+.h-\[47\.5rem\]{
+	height: 47.5rem;
+}
+
 .h-auto{
 	height: auto;
 }
@@ -1860,6 +1869,10 @@ a:not([href]){
 	width: 7rem;
 }
 
+.w-\[calc\(50vw_\+_2\.5rem\)\]{
+	width: calc(50vw + 2.5rem);
+}
+
 .w-32{
 	width: 8rem;
 }
@@ -1933,16 +1946,6 @@ a:not([href]){
 	     column-gap: 1.25rem;
 }
 
-.gap-x-1\.5{
-	-moz-column-gap: 0.375rem;
-	     column-gap: 0.375rem;
-}
-
-.gap-x-1{
-	-moz-column-gap: 0.25rem;
-	     column-gap: 0.25rem;
-}
-
 .gap-y-4{
 	row-gap: 1rem;
 }
@@ -1966,6 +1969,16 @@ a:not([href]){
 	     column-gap: 0.5rem;
 }
 
+.gap-x-1\.5{
+	-moz-column-gap: 0.375rem;
+	     column-gap: 0.375rem;
+}
+
+.gap-x-1{
+	-moz-column-gap: 0.25rem;
+	     column-gap: 0.25rem;
+}
+
 .space-y-11 > :not([hidden]) ~ :not([hidden]){
 	--tw-space-y-reverse: 0;
 	margin-top: calc(2.75rem * calc(1 - var(--tw-space-y-reverse)));
@@ -1978,8 +1991,23 @@ a:not([href]){
 	margin-bottom: calc(2rem * var(--tw-space-y-reverse));
 }
 
+.divide-y-\[0\.0625rem\] > :not([hidden]) ~ :not([hidden]){
+	--tw-divide-y-reverse: 0;
+	border-top-width: calc(0.0625rem * calc(1 - var(--tw-divide-y-reverse)));
+	border-bottom-width: calc(0.0625rem * var(--tw-divide-y-reverse));
+}
+
+.divide-orange-grayish > :not([hidden]) ~ :not([hidden]){
+	--tw-divide-opacity: 1;
+	border-color: rgb(207 205 201 / var(--tw-divide-opacity));
+}
+
 .overflow-hidden{
 	overflow: hidden;
+}
+
+.overflow-visible{
+	overflow: visible;
 }
 
 .truncate{
@@ -1992,12 +2020,12 @@ a:not([href]){
 	white-space: nowrap;
 }
 
-.rounded-full{
-	border-radius: 9999px;
-}
-
 .rounded-lg{
 	border-radius: 0.5rem;
+}
+
+.rounded-full{
+	border-radius: 9999px;
 }
 
 .border{
@@ -2141,11 +2169,6 @@ a:not([href]){
 	padding-bottom: 1.75rem;
 }
 
-.py-2\.5{
-	padding-top: 0.625rem;
-	padding-bottom: 0.625rem;
-}
-
 .py-2{
 	padding-top: 0.5rem;
 	padding-bottom: 0.5rem;
@@ -2169,6 +2192,11 @@ a:not([href]){
 .py-3{
 	padding-top: 0.75rem;
 	padding-bottom: 0.75rem;
+}
+
+.py-2\.5{
+	padding-top: 0.625rem;
+	padding-bottom: 0.625rem;
 }
 
 .pb-2{
@@ -2290,11 +2318,6 @@ a:not([href]){
 	color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.text-gray-very-dark{
-	--tw-text-opacity: 1;
-	color: rgb(51 51 51 / var(--tw-text-opacity));
-}
-
 .text-orange-grayish{
 	--tw-text-opacity: 1;
 	color: rgb(207 205 201 / var(--tw-text-opacity));
@@ -2303,6 +2326,11 @@ a:not([href]){
 .text-orange-dark-grayish{
 	--tw-text-opacity: 1;
 	color: rgb(151 147 143 / var(--tw-text-opacity));
+}
+
+.text-gray-very-dark{
+	--tw-text-opacity: 1;
+	color: rgb(51 51 51 / var(--tw-text-opacity));
 }
 
 .opacity-100{
@@ -2361,6 +2389,12 @@ a:not([href]){
 
 .col-3\/12{
 	width: 25%;
+	padding-left: 0.625rem;
+	padding-right: 0.625rem;
+}
+
+.col-4\/6{
+	width: 66.666667%;
 	padding-left: 0.625rem;
 	padding-right: 0.625rem;
 }
@@ -2456,6 +2490,11 @@ a:not([href]){
 	z-index: 10;
 }
 
+.after\:-m-1::after{
+	content: var(--tw-content);
+	margin: -0.25rem;
+}
+
 .after\:my-auto::after{
 	content: var(--tw-content);
 	margin-top: auto;
@@ -2515,6 +2554,11 @@ a:not([href]){
 	transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.after\:rounded-full::after{
+	content: var(--tw-content);
+	border-radius: 9999px;
+}
+
 .after\:bg-red-very-light::after{
 	content: var(--tw-content);
 	--tw-bg-opacity: 1;
@@ -2561,6 +2605,21 @@ a:not([href]){
 
 .last\:mb-0:last-child{
 	margin-bottom: 0px;
+}
+
+.hover\:border-red-very-light:hover{
+	--tw-border-opacity: 1;
+	border-color: rgb(255 125 108 / var(--tw-border-opacity));
+}
+
+.hover\:bg-red-very-light:hover{
+	--tw-bg-opacity: 1;
+	background-color: rgb(255 125 108 / var(--tw-bg-opacity));
+}
+
+.hover\:text-white:hover{
+	--tw-text-opacity: 1;
+	color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .hover\:underline:hover{
@@ -2618,6 +2677,35 @@ a:not([href]){
 
 .group:focus .group-focus\:opacity-100{
 	opacity: 1;
+}
+
+.peer:checked ~ .peer-checked\:bg-gray-very-dark{
+	--tw-bg-opacity: 1;
+	background-color: rgb(51 51 51 / var(--tw-bg-opacity));
+}
+
+.peer:checked ~ .peer-checked\:text-gray-very-light{
+	--tw-text-opacity: 1;
+	color: rgb(243 243 243 / var(--tw-text-opacity));
+}
+
+.peer:checked ~ .peer-checked\:after\:border::after{
+	content: var(--tw-content);
+	border-width: 1px;
+}
+
+.peer:checked ~ .peer-checked\:after\:border-orange-grayish::after{
+	content: var(--tw-content);
+	--tw-border-opacity: 1;
+	border-color: rgb(207 205 201 / var(--tw-border-opacity));
+}
+
+[aria-expanded='true'] > .parent-expanded\:block{
+	display: block;
+}
+
+[aria-expanded='true'] > .parent-expanded\:hidden{
+	display: none;
 }
 
 @media (min-width: 1024px){
@@ -3059,5 +3147,3 @@ a:not([href]){
 	}
 }
 
-
-/*# sourceMappingURL=main.css.map*/

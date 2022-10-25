@@ -6,7 +6,7 @@ function getFocusableElements(container) {
 	);
 }
 
-document.querySelectorAll('[id^="Details-"] summary').forEach((summary) => {
+document.querySelectorAll('[id^="Details-"] summary').forEach(summary => {
 	summary.setAttribute("role", "button");
 	summary.setAttribute("aria-expanded", summary.parentNode.hasAttribute("open"));
 
@@ -14,27 +14,30 @@ document.querySelectorAll('[id^="Details-"] summary').forEach((summary) => {
 		summary.setAttribute("aria-controls", summary.nextElementSibling.id);
 	}
 
-	summary.addEventListener("click", (event) => {
+	summary.addEventListener("click", event => {
 		event.currentTarget.setAttribute(
 			"aria-expanded",
 			!event.currentTarget.closest("details").hasAttribute("open")
 		);
 	});
 
-	if (summary.closest("header-drawer")) return;
+	if (summary.closest("header-drawer")) {
+		return;
+	}
+
 	summary.parentElement.addEventListener("keyup", onKeyUpEscape);
 });
 
 const trapFocusHandlers = {};
 
 function trapFocus(container, elementToFocus = container) {
-	var elements = getFocusableElements(container);
-	var first = elements[0];
-	var last = elements[elements.length - 1];
+	const elements = getFocusableElements(container);
+	const first = elements[0];
+	const last = elements[elements.length - 1];
 
 	removeTrapFocus();
 
-	trapFocusHandlers.focusin = (event) => {
+	trapFocusHandlers.focusin = event => {
 		if (event.target !== container && event.target !== last && event.target !== first) return;
 
 		document.addEventListener("keydown", trapFocusHandlers.keydown);
@@ -45,7 +48,7 @@ function trapFocus(container, elementToFocus = container) {
 	};
 
 	trapFocusHandlers.keydown = function (event) {
-		if (event.code.toUpperCase() !== "TAB") return; // If not TAB key
+		if ("TAB" !== event.code.toUpperCase()) return; // If not TAB key
 		// On the last focusable element and tab forward, focus the first element.
 		if (event.target === last && !event.shiftKey) {
 			event.preventDefault();
@@ -90,13 +93,13 @@ function focusVisiblePolyfill() {
 	let currentFocusedElement = null;
 	let mouseClick = null;
 
-	window.addEventListener("keydown", (event) => {
+	window.addEventListener("keydown", event => {
 		if (navKeys.includes(event.code.toUpperCase())) {
 			mouseClick = false;
 		}
 	});
 
-	window.addEventListener("mousedown", (event) => {
+	window.addEventListener("mousedown", event => {
 		mouseClick = true;
 	});
 
@@ -115,17 +118,17 @@ function focusVisiblePolyfill() {
 }
 
 function pauseAllMedia() {
-	document.querySelectorAll(".js-youtube").forEach((video) => {
+	document.querySelectorAll(".js-youtube").forEach(video => {
 		video.contentWindow.postMessage(
 			'{"event":"command","func":"' + "pauseVideo" + '","args":""}',
 			"*"
 		);
 	});
-	document.querySelectorAll(".js-vimeo").forEach((video) => {
+	document.querySelectorAll(".js-vimeo").forEach(video => {
 		video.contentWindow.postMessage('{"method":"pause"}', "*");
 	});
-	document.querySelectorAll("video").forEach((video) => video.pause());
-	document.querySelectorAll("product-model").forEach((model) => {
+	document.querySelectorAll("video").forEach(video => video.pause());
+	document.querySelectorAll("product-model").forEach(model => {
 		if (model.modelViewerUI) model.modelViewerUI.pause();
 	});
 }
@@ -139,7 +142,7 @@ function removeTrapFocus(elementToFocus = null) {
 }
 
 function onKeyUpEscape(event) {
-	if (event.code.toUpperCase() !== "ESCAPE") return;
+	if ("ESCAPE" !== event.code.toUpperCase()) return;
 
 	const openDetailsElement = event.target.closest("details[open]");
 	if (!openDetailsElement) return;
@@ -169,7 +172,7 @@ function fetchConfig(type = "json") {
  * Shopify Common JS
  *
  */
-if (typeof window.Shopify == "undefined") {
+if ("undefined" === typeof window.Shopify) {
 	window.Shopify = {};
 }
 
@@ -180,8 +183,8 @@ Shopify.bind = function (fn, scope) {
 };
 
 Shopify.setSelectorByValue = function (selector, value) {
-	for (var i = 0, count = selector.options.length; i < count; i++) {
-		var option = selector.options[i];
+	for (let i = 0, count = selector.options.length; i < count; i++) {
+		const option = selector.options[i];
 		if (value == option.value || value == option.innerHTML) {
 			selector.selectedIndex = i;
 			return i;
@@ -192,20 +195,20 @@ Shopify.setSelectorByValue = function (selector, value) {
 Shopify.addListener = function (target, eventName, callback) {
 	target.addEventListener
 		? target.addEventListener(eventName, callback, false)
-		: target.attachEvent("on" + eventName, callback);
+		: target.attachEvent(`on${  eventName}`, callback);
 };
 
 Shopify.postLink = function (path, options) {
 	options = options || {};
-	var method = options["method"] || "post";
-	var params = options["parameters"] || {};
+	const method = options.method || "post";
+	const params = options.parameters || {};
 
-	var form = document.createElement("form");
+	const form = document.createElement("form");
 	form.setAttribute("method", method);
 	form.setAttribute("action", path);
 
-	for (var key in params) {
-		var hiddenField = document.createElement("input");
+	for (const key in params) {
+		const hiddenField = document.createElement("input");
 		hiddenField.setAttribute("type", "hidden");
 		hiddenField.setAttribute("name", key);
 		hiddenField.setAttribute("value", params[key]);
@@ -219,7 +222,7 @@ Shopify.postLink = function (path, options) {
 Shopify.CountryProvinceSelector = function (country_domid, province_domid, options) {
 	this.countryEl = document.getElementById(country_domid);
 	this.provinceEl = document.getElementById(province_domid);
-	this.provinceContainer = document.getElementById(options["hideElement"] || province_domid);
+	this.provinceContainer = document.getElementById(options.hideElement || province_domid);
 
 	Shopify.addListener(this.countryEl, "change", Shopify.bind(this.countryHandler, this));
 
@@ -228,29 +231,29 @@ Shopify.CountryProvinceSelector = function (country_domid, province_domid, optio
 };
 
 Shopify.CountryProvinceSelector.prototype = {
-	initCountry: function () {
-		var value = this.countryEl.getAttribute("data-default");
+	initCountry () {
+		const value = this.countryEl.getAttribute("data-default");
 		Shopify.setSelectorByValue(this.countryEl, value);
 		this.countryHandler();
 	},
 
-	initProvince: function () {
-		var value = this.provinceEl.getAttribute("data-default");
-		if (value && this.provinceEl.options.length > 0) {
+	initProvince () {
+		const value = this.provinceEl.getAttribute("data-default");
+		if (value && 0 < this.provinceEl.options.length) {
 			Shopify.setSelectorByValue(this.provinceEl, value);
 		}
 	},
 
-	countryHandler: function (e) {
+	countryHandler (e) {
 		var opt = this.countryEl.options[this.countryEl.selectedIndex];
-		var raw = opt.getAttribute("data-provinces");
-		var provinces = JSON.parse(raw);
+		const raw = opt.getAttribute("data-provinces");
+		const provinces = JSON.parse(raw);
 
 		this.clearOptions(this.provinceEl);
-		if (provinces && provinces.length == 0) {
+		if (provinces && 0 == provinces.length) {
 			this.provinceContainer.style.display = "none";
 		} else {
-			for (var i = 0; i < provinces.length; i++) {
+			for (let i = 0; i < provinces.length; i++) {
 				var opt = document.createElement("option");
 				opt.value = provinces[i][0];
 				opt.innerHTML = provinces[i][1];
@@ -261,15 +264,15 @@ Shopify.CountryProvinceSelector.prototype = {
 		}
 	},
 
-	clearOptions: function (selector) {
+	clearOptions (selector) {
 		while (selector.firstChild) {
 			selector.removeChild(selector.firstChild);
 		}
 	},
 
-	setOptions: function (selector, values) {
-		for (var i = 0, count = values.length; i < values.length; i++) {
-			var opt = document.createElement("option");
+	setOptions (selector, values) {
+		for (let i = 0, count = values.length; i < values.length; i++) {
+			const opt = document.createElement("option");
 			opt.value = values[i];
 			opt.innerHTML = values[i];
 			selector.appendChild(opt);
@@ -289,16 +292,16 @@ class MenuDrawer extends HTMLElement {
 	}
 
 	bindEvents() {
-		this.querySelectorAll("summary").forEach((summary) =>
+		this.querySelectorAll("summary").forEach(summary =>
 			summary.addEventListener("click", this.onSummaryClick.bind(this))
 		);
-		this.querySelectorAll("button").forEach((button) =>
+		this.querySelectorAll("button").forEach(button =>
 			button.addEventListener("click", this.onCloseButtonClick.bind(this))
 		);
 	}
 
 	onKeyUp(event) {
-		if (event.code.toUpperCase() !== "ESCAPE") return;
+		if ("ESCAPE" !== event.code.toUpperCase()) return;
 
 		const openDetailsElement = event.target.closest("details[open]");
 		if (!openDetailsElement) return;
@@ -352,11 +355,11 @@ class MenuDrawer extends HTMLElement {
 		if (event === undefined) return;
 
 		this.mainDetailsToggle.classList.remove("menu-opening");
-		this.mainDetailsToggle.querySelectorAll("details").forEach((details) => {
+		this.mainDetailsToggle.querySelectorAll("details").forEach(details => {
 			details.removeAttribute("open");
 			details.classList.remove("menu-opening");
 		});
-		this.mainDetailsToggle.querySelectorAll(".submenu-open").forEach((submenu) => {
+		this.mainDetailsToggle.querySelectorAll(".submenu-open").forEach(submenu => {
 			submenu.classList.remove("submenu-open");
 		});
 		document.body.classList.remove(`overflow-hidden-${this.dataset.breakpoint}`);
@@ -391,14 +394,14 @@ class MenuDrawer extends HTMLElement {
 	closeAnimation(detailsElement) {
 		let animationStart;
 
-		const handleAnimation = (time) => {
+		const handleAnimation = time => {
 			if (animationStart === undefined) {
 				animationStart = time;
 			}
 
 			const elapsedTime = time - animationStart;
 
-			if (elapsedTime < 400) {
+			if (400 > elapsedTime) {
 				window.requestAnimationFrame(handleAnimation);
 			} else {
 				detailsElement.removeAttribute("open");
@@ -459,16 +462,16 @@ class ModalDialog extends HTMLElement {
 			"click",
 			this.hide.bind(this, false)
 		);
-		this.addEventListener("keyup", (event) => {
-			if (event.code.toUpperCase() === "ESCAPE") this.hide();
+		this.addEventListener("keyup", event => {
+			if ("ESCAPE" === event.code.toUpperCase()) this.hide();
 		});
 		if (this.classList.contains("media-modal")) {
-			this.addEventListener("pointerup", (event) => {
-				if (event.pointerType === "mouse" && !event.target.closest("deferred-media, product-model"))
+			this.addEventListener("pointerup", event => {
+				if ("mouse" === event.pointerType && !event.target.closest("deferred-media, product-model"))
 					this.hide();
 			});
 		} else {
-			this.addEventListener("click", (event) => {
+			this.addEventListener("click", event => {
 				if (event.target === this) this.hide();
 			});
 		}
@@ -566,17 +569,13 @@ class VariantSelects extends HTMLElement {
 	}
 
 	updateOptions() {
-		this.options = Array.from(this.querySelectorAll("select"), (select) => select.value);
+		this.options = Array.from(this.querySelectorAll("select"), select => select.value);
 	}
 
 	updateMasterId() {
-		this.currentVariant = this.getVariantData().find((variant) => {
-			return !variant.options
-				.map((option, index) => {
-					return this.options[index] === option;
-				})
-				.includes(false);
-		});
+		this.currentVariant = this.getVariantData().find(variant => !variant.options
+			.map((option, index) => this.options[index] === option)
+			.includes(false));
 	}
 
 	updateMedia() {
@@ -586,7 +585,7 @@ class VariantSelects extends HTMLElement {
 		const mediaGalleries = document.querySelectorAll(
 			`[id^="MediaGallery-${this.dataset.section}"]`
 		);
-		mediaGalleries.forEach((mediaGallery) =>
+		mediaGalleries.forEach(mediaGallery =>
 			mediaGallery.setActiveMedia(
 				`${this.dataset.section}-${this.currentVariant.featured_media.id}`,
 				true
@@ -604,7 +603,7 @@ class VariantSelects extends HTMLElement {
 	}
 
 	updateURL() {
-		if (!this.currentVariant || this.dataset.updateUrl === "false") return;
+		if (!this.currentVariant || "false" === this.dataset.updateUrl) return;
 		window.history.replaceState({}, "", `${this.dataset.url}?variant=${this.currentVariant.id}`);
 	}
 
@@ -618,7 +617,7 @@ class VariantSelects extends HTMLElement {
 		const productForms = document.querySelectorAll(
 			`#product-form-${this.dataset.section}, #product-form-installment-${this.dataset.section}`
 		);
-		productForms.forEach((productForm) => {
+		productForms.forEach(productForm => {
 			const input = productForm.querySelector('input[name="id"]');
 			input.value = this.currentVariant.id;
 			input.dispatchEvent(new Event("change", { bubbles: true }));
@@ -651,8 +650,8 @@ class VariantSelects extends HTMLElement {
 				this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section
 			}`
 		)
-			.then((response) => response.text())
-			.then((responseText) => {
+			.then(response => response.text())
+			.then(responseText => {
 				const html = new DOMParser().parseFromString(responseText, "text/html");
 				const destination = document.getElementById(`price-${this.dataset.section}`);
 				const source = html.getElementById(
@@ -715,8 +714,8 @@ class ProductRecommendations extends HTMLElement {
 			observer.unobserve(this);
 
 			fetch(this.dataset.url)
-				.then((response) => response.text())
-				.then((text) => {
+				.then(response => response.text())
+				.then(text => {
 					const html = document.createElement("div");
 					html.innerHTML = text;
 					const recommendations = html.querySelector("product-recommendations");
@@ -736,7 +735,7 @@ class ProductRecommendations extends HTMLElement {
 						this.classList.add("product-recommendations--loaded");
 					}
 				})
-				.catch((e) => {
+				.catch(e => {
 					console.error(e);
 				});
 		};

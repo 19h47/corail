@@ -5,9 +5,9 @@
 {%- endif -%}
 
 {%- liquid
-  if section.settings.collection.all_products_count > section.settings.products_to_show
-    assign more_in_collection = true
-  endif
+  	if section.settings.collection.all_products_count > section.settings.products_to_show
+    	assign more_in_collection = true
+  	endif
 -%}
 
 <script src="{{ 'swiper.js' | asset_url }}" defer="defer"></script>
@@ -28,10 +28,7 @@
 					</a>
 				{%- endif -%}
 
-				<div class="gap-x-1.5 flex">
-					<button class="button-secondary text-gray-very-dark border-orange-grayish inline-block align-middle js-previous" type="button">&leftarrow;</button>
-					<button class="button-secondary text-gray-very-dark border-orange-grayish inline-block align-middle js-next" type="button">&rightarrow;</button>
-				</div>
+				{% render 'slider-navigation' %}
 			</div>
 		</div>
 	</div>
