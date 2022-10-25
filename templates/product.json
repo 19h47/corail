@@ -62,6 +62,7 @@
         },
         "collapsible-row-0": {
           "type": "collapsible_tab",
+          "disabled": true,
           "settings": {
             "heading": "Materials",
             "content": ""
@@ -69,6 +70,7 @@
         },
         "collapsible-row-1": {
           "type": "collapsible_tab",
+          "disabled": true,
           "settings": {
             "heading": "Shipping & Returns",
             "content": ""
@@ -76,6 +78,7 @@
         },
         "collapsible-row-2": {
           "type": "collapsible_tab",
+          "disabled": true,
           "settings": {
             "heading": "Dimensions",
             "content": ""
@@ -83,6 +86,7 @@
         },
         "collapsible-row-3": {
           "type": "collapsible_tab",
+          "disabled": true,
           "settings": {
             "heading": "Care Instructions",
             "content": ""
@@ -90,6 +94,7 @@
         },
         "share": {
           "type": "share",
+          "disabled": true,
           "settings": {
             "share_label": "Share"
           }
