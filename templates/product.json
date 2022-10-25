@@ -131,6 +131,13 @@
         "padding_bottom": 12
       }
     },
+    "7d00fc27-c309-4d0a-9c10-bc7f88577e55": {
+      "type": "announcement",
+      "settings": {
+        "text": "LIVRAISON OFFERTE  RETOURS OFFERTS - PAIEMENT EN 3X SANS FRAIS",
+        "link": ""
+      }
+    },
     "image-with-text": {
       "type": "image-with-text",
       "blocks": {
@@ -231,21 +238,14 @@
       "settings": {
         "title": "NEW IN NEW IN"
       }
-    },
-    "7d00fc27-c309-4d0a-9c10-bc7f88577e55": {
-      "type": "announcement",
-      "settings": {
-        "text": "LIVRAISON OFFERTE  RETOURS OFFERTS - PAIEMENT EN 3X SANS FRAIS",
-        "link": ""
-      }
     }
   },
   "order": [
     "main",
+    "7d00fc27-c309-4d0a-9c10-bc7f88577e55",
     "image-with-text",
     "multicolumn",
     "product-recommendations",
-    "43dfab5f-1246-4a2e-a403-00608e142f00",
-    "7d00fc27-c309-4d0a-9c10-bc7f88577e55"
+    "43dfab5f-1246-4a2e-a403-00608e142f00"
   ]
 }
