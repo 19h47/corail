@@ -231,35 +231,40 @@
         "title": "NEW IN NEW IN"
       }
     },
-    "1475eed0-13f1-49b9-a8c0-da81952d5ca3": {
-      "type": "image-with-collapsible-tab",
+    "5352a5eb-3296-4b9c-9021-e759c6c0ea6b": {
+      "type": "images-with-collapsible-tab",
       "blocks": {
-        "template--15990350479528__1475eed0-13f1-49b9-a8c0-da81952d5ca3-1666691143646f9ca4-0": {
+        "template--15990350479528__5352a5eb-3296-4b9c-9021-e759c6c0ea6b-166669405224db7574-0": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "COMPOSITION",
-            "content": "<p>\/\/90% recycled upper, made with recycled plastic waste and corn-based induction<br\/>\/\/signature recycled outsole, made of 80% recycled rubber and 20% SEADUST<br\/>\/\/100% recycled laces made with PET bottles<br\/>\/\/handmade in our workshop in Portugal<br\/>\/\/abrasion-tested, friction-tested, bend-tested<br\/>\/\/water-repellent treatment<\/p>"
+            "title": "Composition",
+            "content": "<p>\/\/90% recycled upper, made with recycled plastic waste and corn-based induction\/\/signature recycled outsole, made of 80% recycled rubber and 20% SEADUST\/\/100% recycled laces made with PET bottles\/\/handmade in our workshop in Portugal\/\/abrasion-tested, friction-tested, bend-tested\/\/water-repellent treatment<\/p>"
           }
         },
-        "f6d46e7e-89a2-4968-a149-9656ad93ee66": {
-          "type": "collapsible_tab",
+        "template--15990350479528__5352a5eb-3296-4b9c-9021-e759c6c0ea6b-166669405224db7574-1": {
+          "type": "image",
           "settings": {
-            "heading": "Livraison",
-            "content": "<p>Lorem<\/p>"
+            "image": "shopify:\/\/shop_images\/person-stands-on-rocks-poking-out-of-the-ocean-shoreline.jpg"
           }
         },
-        "0e24af65-fe63-4d84-ae63-cd038861b7c5": {
-          "type": "collapsible_tab",
+        "d6ea013c-9ab6-46e8-86de-20702f42ff31": {
+          "type": "image",
           "settings": {
-            "heading": "Echanges et retours",
-            "content": "<p>Lorem ipsum<\/p>"
+            "image": "shopify:\/\/shop_images\/person-fishing-on-the-beach-is-silhouetted-at-sunset.jpg"
+          }
+        },
+        "324a9f25-d1c3-420a-8866-ba0bac024883": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/green-and-white-marbled-coloring.jpg"
           }
         }
       },
       "block_order": [
-        "template--15990350479528__1475eed0-13f1-49b9-a8c0-da81952d5ca3-1666691143646f9ca4-0",
-        "f6d46e7e-89a2-4968-a149-9656ad93ee66",
-        "0e24af65-fe63-4d84-ae63-cd038861b7c5"
+        "template--15990350479528__5352a5eb-3296-4b9c-9021-e759c6c0ea6b-166669405224db7574-0",
+        "template--15990350479528__5352a5eb-3296-4b9c-9021-e759c6c0ea6b-166669405224db7574-1",
+        "d6ea013c-9ab6-46e8-86de-20702f42ff31",
+        "324a9f25-d1c3-420a-8866-ba0bac024883"
       ],
       "settings": {
       }
@@ -272,6 +277,6 @@
     "multicolumn",
     "product-recommendations",
     "43dfab5f-1246-4a2e-a403-00608e142f00",
-    "1475eed0-13f1-49b9-a8c0-da81952d5ca3"
+    "5352a5eb-3296-4b9c-9021-e759c6c0ea6b"
   ]
 }
