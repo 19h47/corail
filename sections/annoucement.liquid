@@ -1,0 +1,43 @@
+
+{%- if block.settings.text != blank -%}
+	<div
+		class="bg-white text-gray-very-dark py-3 overflow-hidden text-xs text-center uppercase  whitespace-nowrap"
+		role="region" aria-label="{{ 'sections.header.announcement' | t }}"
+		{{ block.shopify_attributes }}
+	>
+		{%- if block.settings.link != blank -%}<a class="hover:underline" href="{{ block.settings.link }}" class="">{%- endif -%}
+			<ul class="marquee flex gap-x-2 items-center" style="animation-duration: 120s;">
+				{% for i in (1..10) %}
+					<li class="flex items-center flex-wrap"><p>{{- block.settings.text | escape -}}</p></li>
+				{% endfor %}
+			</ul>
+		{%- if block.settings.link != blank -%}</a>{%- endif -%}
+	</div>
+{%- endif -%}
+
+
+{% schema %}
+{
+  "name": "t:sections.announcement-bar.name",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "text",
+      "default": "Welcome to our store",
+      "label": "t:sections.announcement-bar.blocks.announcement.settings.text.label"
+    },
+    {
+      "type": "url",
+      "id": "link",
+      "label": "t:sections.announcement-bar.blocks.announcement.settings.link.label"
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.annoucement.presets.name"
+    }
+  ]
+}
+{% endschema %}
