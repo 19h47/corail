@@ -395,6 +395,51 @@
         }
       }
     },
+	"announcement": {
+		"name": "Annonce",
+		"settings": {
+			"text": {
+				"label": "Text"
+			},
+			"link": {
+				"label": "Lien"
+			}
+		},
+		"presets": {
+			"name": "Annonce"
+		}
+	},
+	"images-with-collapsible-tab": {
+		"name": "Image avec rangée réductible",
+		"presets": { "name": "Image avec rangée réductible" },
+		"blocks": {
+			"image": {
+				"name": "Images",
+				"settings": {
+					"image": {
+						"label": "Image"
+					}
+				}
+			},
+			"collapsible_tab": {
+				"name": "Rangée réductible",
+				"settings": {
+					"content": {
+						"label": "Contenu"
+					},
+					"title": {
+						"label": "Titre",
+						"info": "Titre de la rangée"
+					}
+				}
+			}
+		},
+		"settings": {
+			"image": {
+				"label": "Image"
+			}
+		}
+	},
     "announcement-bar": {
       "name": "Barre d'annonces",
       "blocks": {

@@ -1,5 +1,10 @@
 <div class="images-with-collapsible-tab">
-	TEST
+	{%- for block in section.blocks -%}
+		{% case block.type %}
+		  	{%- when 'image' -%}
+				IMAGE
+		{%- endcase -%}
+	{%- endfor -%}
 </div>
 
 {% schema %}
