@@ -1,13 +1,13 @@
 {
 	"general": {
 		"password_page": {
-			"login_form_heading": "Accéder à la boutique à l'aide d'un mot de passe :",
+			"login_form_heading": "Accéder à la boutique à l'aide d'un mot de passe :",
 			"login_password_button": "Saisir avec un mot de passe",
 			"login_form_password_label": "Mot de passe",
 			"login_form_password_placeholder": "Votre mot de passe",
-			"login_form_error": "Mot de passe incorrect !",
+			"login_form_error": "Mot de passe incorrect !",
 			"login_form_submit": "Saisir",
-			"admin_link_html": "La boutique vous appartient-elle ? <a href=\"/admin\" class=\"link underlined-link\">Se connecter ici</a>",
+			"admin_link_html": "La boutique vous appartient-elle ? <a href=\"/admin\" class=\"link underlined-link\">Se connecter ici</a>",
 			"powered_by_shopify_html": "Cette boutique sera propulsée par {{ shopify }}"
 		},
 		"newsletter": {
@@ -68,7 +68,7 @@
 		"skip_to_text": "Ignorer et passer au contenu",
 		"close": "Fermer",
 		"unit_price_separator": "par",
-		"vendor": "Distributeur :",
+		"vendor": "Distributeur :",
 		"error": "Erreur",
 		"refresh_page": "Le choix d'une sélection entraîne l'actualisation de la page entière.",
 		"link_messages": {
@@ -85,11 +85,11 @@
 	"blogs": {
 		"article": {
 			"blog": "Blog",
-			"read_more_title": "Lire la suite : {{ title }}",
+			"read_more_title": "Lire la suite : {{ title }}",
 			"comments": {
-				"one": "{{ count }} commentaire",
-				"other": "{{ count }} commentaires",
-				"many": "{{ count }} commentaires"
+				"one": "{{ count }} commentaire",
+				"other": "{{ count }} commentaires",
+				"many": "{{ count }} commentaires"
 			},
 			"moderated": "Veuillez noter que les commentaires doivent être approuvés avant d'être publiés.",
 			"comment_form_title": "Laisser un commentaire",
@@ -99,7 +99,7 @@
 			"post": "Publier le commentaire",
 			"back_to_blog": "Retour au blog",
 			"share": "Partager cet article",
-			"success": "Votre commentaire a bien été publié ! Merci !",
+			"success": "Votre commentaire a bien été publié ! Merci !",
 			"success_moderated": "Votre commentaire a bien été publié. Nous le publierons sous peu, conformément au processus de modération de notre blog."
 		}
 	},
@@ -166,50 +166,50 @@
 			"clear_all": "Tout supprimer",
 			"from": "De",
 			"filter_and_sort": "Filtrer et trier",
-			"filter_by_label": "Filtre :",
+			"filter_by_label": "Filtre :",
 			"filter_button": "Filtrer",
 			"filters_selected": {
-				"one": "{{ count }} sélectionné",
-				"other": "{{ count }} sélectionnés",
-				"many": "{{ count }} sélectionnés"
+				"one": "{{ count }} sélectionné",
+				"other": "{{ count }} sélectionnés",
+				"many": "{{ count }} sélectionnés"
 			},
 			"max_price": "Le prix le plus élevé est de {{ price }}",
 			"product_count": {
-				"one": "{{ product_count }} produit sur {{ count }}",
-				"other": "{{ product_count }} produits sur {{ count }}",
-				"many": "{{ product_count }} produits sur {{ count }}"
+				"one": "{{ product_count }} produit sur {{ count }}",
+				"other": "{{ product_count }} produits sur {{ count }}",
+				"many": "{{ product_count }} produits sur {{ count }}"
 			},
 			"product_count_simple": {
-				"one": "{{ count }} produit",
-				"other": "{{ count }} produits",
-				"many": "{{ count }} produits"
+				"one": "{{ count }} produit",
+				"other": "{{ count }} produits",
+				"many": "{{ count }} produits"
 			},
 			"reset": "Réinitialiser",
 			"sort_button": "Trier",
-			"sort_by_label": "Trier par :",
+			"sort_by_label": "Trier par :",
 			"to": "À",
 			"clear_filter": "Supprimer le filtre",
-			"filter_selected_accessibility": "{{ type }} ({{ count }} filtres sélectionnés)",
+			"filter_selected_accessibility": "{{ type }} ({{ count }} filtres sélectionnés)",
 			"show_more": "Afficher plus",
 			"show_less": "Afficher moins"
 		}
 	},
 	"templates": {
 		"search": {
-			"no_results": "Aucun résultat trouvé pour « {{ terms }} ». Vérifiez l'orthographe ou utilisez un autre mot ou une autre expression.",
+			"no_results": "Aucun résultat trouvé pour « {{ terms }} ». Vérifiez l'orthographe ou utilisez un autre mot ou une autre expression.",
 			"results_with_count": {
-				"one": "{{ count }} résultat",
-				"other": "{{ count }} résultats",
-				"many": "{{ count }} résultats"
+				"one": "{{ count }} résultat",
+				"other": "{{ count }} résultats",
+				"many": "{{ count }} résultats"
 			},
 			"title": "Résultats de la recherche",
 			"page": "Page",
 			"products": "Produits",
-			"search_for": "Rechercher « {{ terms }} »",
+			"search_for": "Rechercher « {{ terms }} »",
 			"results_with_count_and_term": {
-				"one": "{{ count }} résultat trouvé pour « {{ terms }} »",
-				"other": "{{ count }} résultats trouvés pour « {{ terms }} »",
-				"many": "{{ count }} résultats trouvés pour « {{ terms }} »"
+				"one": "{{ count }} résultat trouvé pour « {{ terms }} »",
+				"other": "{{ count }} résultats trouvés pour « {{ terms }} »",
+				"many": "{{ count }} résultats trouvés pour « {{ terms }} »"
 			}
 		},
 		"cart": {
@@ -223,7 +223,7 @@
 				"comment": "Commentaire",
 				"send": "Envoyer",
 				"post_success": "Merci de nous avoir contactés. Nous vous répondrons dès que possible.",
-				"error_heading": "Veuillez ajuster les éléments suivants :",
+				"error_heading": "Veuillez ajuster les éléments suivants :",
 				"title": "Formulaire de contact"
 			}
 		},
@@ -248,9 +248,9 @@
 				"label": "Menu secondaire"
 			},
 			"cart_count": {
-				"one": "{{ count }} article",
-				"other": "{{ count }} articles",
-				"many": "{{ count }} articles"
+				"one": "{{ count }} article",
+				"other": "{{ count }} articles",
+				"many": "{{ count }} articles"
 			}
 		},
 		"cart": {
@@ -277,7 +277,7 @@
 			},
 			"update": "Mettre à jour",
 			"login": {
-				"title": "Vous possédez un compte ?",
+				"title": "Vous possédez un compte ?",
 				"paragraph_html": "<a href=\"{{ link }}\" class=\"link underlined-link\">Connectez-vous</a> pour payer plus vite."
 			}
 		},
@@ -302,7 +302,7 @@
 			"use_fewer_filters_html": "Utiliser moins de filtres ou <a class=\"{{ class }}\" href=\"{{ link }}\">tout supprimer</a>"
 		},
 		"video": {
-			"load_video": "Charger la vidéo : {{ description }}"
+			"load_video": "Charger la vidéo : {{ description }}"
 		},
 		"slideshow": {
 			"load_slide": "Charger la diapositive",
@@ -360,7 +360,7 @@
 			"cancel": "Annuler",
 			"edit": "Modifier",
 			"delete": "Supprimer",
-			"delete_confirm": "Êtes-vous certain(e) de vouloir supprimer cette adresse ?"
+			"delete_confirm": "Êtes-vous certain(e) de vouloir supprimer cette adresse ?"
 		},
 		"log_in": "Connexion",
 		"log_out": "Déconnexion",
@@ -368,7 +368,7 @@
 			"cancel": "Annuler",
 			"create_account": "Créer un compte",
 			"email": "E-mail",
-			"forgot_password": "Mot de passe oublié ?",
+			"forgot_password": "Mot de passe oublié ?",
 			"guest_continue": "Continuer",
 			"guest_title": "Continuer en tant qu'invité(e)",
 			"password": "Mot de passe",
@@ -410,7 +410,7 @@
 			"title": "Commande {{ name }}",
 			"date_html": "Passée le {{ date }}",
 			"cancelled_html": "Commande annulée le {{ date }}",
-			"cancelled_reason": "Motif : {{ reason }}",
+			"cancelled_reason": "Motif : {{ reason }}",
 			"billing_address": "Adresse de facturation",
 			"payment_status": "Statut de paiement",
 			"shipping_address": "Adresse d'expédition",
@@ -434,13 +434,13 @@
 	},
 	"gift_cards": {
 		"issued": {
-			"title": "Voici votre carte-cadeau {{ shop }} d'une valeur de {{ value }} !",
+			"title": "Voici votre carte-cadeau {{ shop }} d'une valeur de {{ value }} !",
 			"subtext": "Votre carte-cadeau",
 			"gift_card_code": "Code de la carte-cadeau",
 			"shop_link": "Continuer les achats",
 			"remaining_html": "Reste {{ balance }}",
 			"add_to_apple_wallet": "Ajouter à Apple Wallet",
-			"qr_image_alt": "Code QR : scannez-le pour utiliser votre carte-cadeau",
+			"qr_image_alt": "Code QR : scannez-le pour utiliser votre carte-cadeau",
 			"copy_code": "Copier le code",
 			"expired": "Expiré",
 			"copy_code_success": "Le code a bien été copié",

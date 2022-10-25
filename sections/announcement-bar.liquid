@@ -2,7 +2,7 @@
 	{%- if block.settings.text != blank -%}
 		{%- case block.type -%}
 			{%- when 'announcement' -%}
-				{% render 'annoucement', text: block.settings.text, link: block.settings.link, attributes: block.shopify_attributes %}
+				{% render 'announcement', text: block.settings.text, link: block.settings.link, attributes: block.shopify_attributes %}
 		{%- endcase -%}
 	{%- endif -%}
 {%- endfor -%}
