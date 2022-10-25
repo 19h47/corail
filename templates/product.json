@@ -38,6 +38,12 @@
           "settings": {
           }
         },
+        "ecddec68-4937-46a0-ad05-4a502005e951": {
+          "type": "announcement",
+          "settings": {
+            "text": "\/\/FREE 72H WORLDWIDE DELIVERY\/\/FREE RETURNS\/\/PAY IN 3 TIMES FOR FREE"
+          }
+        },
         "caption": {
           "type": "text",
           "settings": {
@@ -108,6 +114,7 @@
         "3881603f-1c4f-469c-a6c4-c79d1ba8d940",
         "vendor",
         "a13c66e5-b37d-433e-80c5-d3dc4ce746b8",
+        "ecddec68-4937-46a0-ad05-4a502005e951",
         "caption",
         "variant_picker",
         "quantity_selector",
