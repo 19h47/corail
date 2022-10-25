@@ -233,7 +233,7 @@
 		}
 	},
 	"sections": {
-		"annoucement": {
+		"announcement": {
 			"name": "Annonce",
 			"settings": {
 				"text": { "label": "Text" },
