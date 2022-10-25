@@ -1,0 +1,23 @@
+<quantity-input class="flex border border-orange-grayish rounded-full px-6 py-2.5 items-center">
+	<button class="w-4 h-4 flex items-center justify-center" name="minus" type="button">
+		<span class="sr-only">{{- 'products.product.quantity.decrease' | t: product: title | escape -}}</span>
+		{% render 'svg', icon: 'minus', classes: 'pointer-events-none w-full h-full fill-current', description: description %}
+	</button>
+	<input
+		class="text-center w-full"
+		type="number"
+		name="{% if name %}{{- name -}}{% else %}quantity{% endif %}"
+		id="{{ id }}"
+		min="{% if min %}{{- min -}}{% else %}1{% endif %}"
+		value="1"
+		{% if form %} form="{{ form }}" {% endif %}
+		{% if index %} data-index="{{ index }}" {% endif %}
+		{% if label %} aria-label="{{ label }}" {% endif %}
+	>
+	<button class="w-4 h-4 flex items-center justify-center" name="plus" type="button">
+		<span class="sr-only">{{- 'products.product.quantity.increase' | t: product: title | escape -}}</span>
+		{% render 'svg', icon: 'plus', classes: 'pointer-events-none w-full h-full fill-current', description: description %}
+	</button>
+</quantity-input>
+
+<script src="{{ 'quantity-input.js' | asset_url }}" defer="defer"></script>

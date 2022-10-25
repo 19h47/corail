@@ -62,13 +62,6 @@ product-recommendations.is-accordion + .accordion {
 	border-top: none;
 }
 
-.complementary-products > .summary__title .icon-accordion {
-	fill: rgb(var(--color-foreground));
-	height: calc(var(--font-heading-scale) * 2rem);
-	margin-right: calc(var(--font-heading-scale) * 1rem);
-	width: calc(var(--font-heading-scale) * 2rem);
-}
-
 .complementary-products__container .card--card .card__content,
 .complementary-products__container .card--horizontal .card__information {
 	padding: 0;

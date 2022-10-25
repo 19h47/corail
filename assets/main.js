@@ -279,7 +279,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
       id: "icon-minus-usage",
-      viewBox: "0 0 18 1.5",
+      viewBox: "0 0 8 2.4",
       url: __webpack_require__.p + "icons.svg#icon-minus",
       toString: function () {
         return this.url;
@@ -345,7 +345,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
       id: "icon-plus-usage",
-      viewBox: "0 0 17.5 17.5",
+      viewBox: "0 0 8 8",
       url: __webpack_require__.p + "icons.svg#icon-plus",
       toString: function () {
         return this.url;
