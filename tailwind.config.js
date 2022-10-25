@@ -3,7 +3,7 @@ const defaultTheme = require("tailwindcss/defaultTheme");
 
 const colors = {
 	gray: { "very-dark": "#333333", "very-light": "#F3F3F3" },
-	orange: { "dark-grayish": "#97938F", grayish: "#CFCDC9" },
+	orange: { "dark-grayish": "#97938F", grayish: "#CFCDC9", light: '#FF7F50' },
 	red: { "very-light": "#FF7D6C", light: "#FF7F63" },
 	cyan: { "very-dark-grayish": "#37403A" },
 };

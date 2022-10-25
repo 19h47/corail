@@ -103,10 +103,10 @@
 	{%- if media.media_type == 'model' -%}
 		<product-model class="deferred-media media media--transparent global-media-settings no-js-hidden" style="padding-top: 100%" data-media-id="{{ media.id }}">
 	{%- else -%}
-		<deferred-media class="deferred-media global-media-settings media no-js-hidden" style="padding-top: {{ 1 | divided_by: media.aspect_ratio | times: 100 }}%" data-media-id="{{ media.id }}">
+		<deferred-media class="deferred-media global-media-settings media no-js-hidden relative" style="padding-top: {{ 1 | divided_by: media.aspect_ratio | times: 100 }}%" data-media-id="{{ media.id }}">
 	{%- endif -%}
 
-	<button id="Deferred-Poster-Modal-{{ media.id }}" class="deferred-media__poster" type="button">
+	<button id="Deferred-Poster-Modal-{{ media.id }}" class="absolute inset-0 w-full h-full deferred-media__poster" type="button">
 
 		<span class="absolute text-white z-1 inset-0 lg:w-[3.625rem] lg:h-[4.75rem] m-auto w-8 h-9">
 			{%- if media.media_type == 'model' -%}
@@ -122,6 +122,7 @@
 			loading: lazy,
 			sizes: sizes,
 			widths: '246, 493, 600, 713, 823, 990, 1100, 1206, 1346, 1426, 1646, 1946',
+			class: 'h-full w-full object-cover object-center',
 			alt: media.preview_image.alt | escape
 		}}
   	</button>
@@ -132,12 +133,12 @@
 				when 'external_video'
 					assign video_class = 'js-' | append: media.host
 					if media.host == 'youtube'
-					echo media | external_video_url: autoplay: true, loop: loop, playlist: media.external_id | external_video_tag: class: video_class, loading: "lazy"
+						echo media | external_video_url: autoplay: true, loop: loop, playlist: media.external_id | external_video_tag: class: video_class, loading: "lazy"
 					else
-					echo media | external_video_url: autoplay: true, loop: loop | external_video_tag: class: video_class, loading: "lazy"
+						echo media | external_video_url: autoplay: true, loop: loop | external_video_tag: class: video_class, loading: "lazy", class: 'absolute inset-0 w-full h-full object-cover object-center'
 					endif
 				when 'video'
-					echo media | media_tag: image_size: "2048x", autoplay: true, loop: loop, controls: true, preload: "none"
+					echo media | media_tag: image_size: "2048x", autoplay: true, loop: loop, controls: true, preload: "none", class: 'absolute inset-0 w-full h-full object-cover object-center'
 				when 'model'
 					echo media | media_tag: image_size: "2048x", toggleable: true
 			endcase

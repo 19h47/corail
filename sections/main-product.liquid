@@ -42,7 +42,8 @@
 
 {%- assign product_form_id = 'product-form-' | append: section.id -%}
 
-<div class="fixed bottom-0 inset-x z-[100] py-7 bg-white w-full border-t border-orange-grayish">
+<div class="fixed bottom-0 inset-x z-[100] py-7 bg-white w-full">
+	<hr class="absolute bottom-full bg-orange-grayish w-full h-[0.0625rem]">
 	<div class="container">
 		<div class="row">
 			<div class="flex">
@@ -336,7 +337,7 @@
 							{%- when 'text' -%}
 								<p {{ block.shopify_attributes }}>{{- block.settings.text -}}</p>
 							{%- when 'announcement' -%}
-								{% render 'announcement', text: block.settings.text %}
+								{% render 'announcement', classes: 'my-6 text-orange-light', text: block.settings.text %}
 
 							{%- when 'notice' -%}
 								<div class="bg-red-light text-white rounded-lg font-display p-6 mt-4 mb-6">
@@ -1222,7 +1223,6 @@
         {
           "type": "text",
           "id": "text",
-          "default": "Text block",
           "label": "t:sections.main-product.blocks.announcement.settings.text.label"
         }
       ]
