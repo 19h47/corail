@@ -1576,6 +1576,14 @@
     },
     "main-product": {
       "blocks": {
+		"announcement": {
+			"name": "Texte défilant",
+			"settings": {
+			  "text": {
+				"label": "Texte"
+			  }
+			}
+		  },
         "text": {
           "name": "Texte",
           "settings": {

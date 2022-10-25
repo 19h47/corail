@@ -220,13 +220,14 @@
 												assign label = 'products.product.quantity.input_label' | t: product: item.product.title | escape
 											%}
 
-											{% render 'quantity-input' with
+											{% render 'quantity-input',
 												name: 'updates[]',
 												title: item.product.title,
 												description: item.product.title,
 												label: label,
 												index: index, min: '0',
-												id: quantity_input_id
+												id: quantity_input_id,
+												value: item.quantity
 											%}
 
 											<cart-remove-button id="Remove-{{ item.index | plus: 1 }}" data-index="{{ item.index | plus: 1 }}">

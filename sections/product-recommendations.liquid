@@ -4,39 +4,40 @@
 <noscript>{{ 'component-card.css' | asset_url | stylesheet_tag }}</noscript>
 <noscript>{{ 'section-product-recommendations.css' | asset_url | stylesheet_tag }}</noscript>
 
-{%- style -%}
-  .section-{{ section.id }}-padding {
-    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
-    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
-  }
+<div class="no-js-hidden">
+	<product-recommendations class="product-recommendations page-width section-{{ section.id }}-padding isolate" data-url="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&product_id={{ product.id }}&limit={{ section.settings.products_to_show }}">
+		{% if recommendations.performed and recommendations.products_count > 0 %}
 
-  @media screen and (min-width: 750px) {
-    .section-{{ section.id }}-padding {
-      padding-top: {{ section.settings.padding_top }}px;
-      padding-bottom: {{ section.settings.padding_bottom }}px;
-    }
-  }
-{%- endstyle -%}
+			<div class="container">
 
-<div class="color-{{ section.settings.color_scheme }} no-js-hidden">
-  <product-recommendations class="product-recommendations page-width section-{{ section.id }}-padding isolate" data-url="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&product_id={{ product.id }}&limit={{ section.settings.products_to_show }}">
-    {% if recommendations.performed and recommendations.products_count > 0 %}
-      <h2 class="product-recommendations__heading {{ section.settings.heading_size }}">{{ section.settings.heading | escape }}</h2>
-      <ul class="grid product-grid grid--{{ section.settings.columns_desktop }}-col-desktop grid--{{ section.settings.columns_mobile }}-col-tablet-down" role="list">
-        {% for recommendation in recommendations.products %}
-          <li class="grid__item">
-            {% render 'card-product',
-              card_product: recommendation,
-              media_aspect_ratio: section.settings.image_ratio,
-              show_secondary_image: section.settings.show_secondary_image,
-              show_vendor: section.settings.show_vendor,
-              show_rating: section.settings.show_rating
-            %}
-          </li>
-        {% endfor %}
-      </ul>
-    {% endif %}
-  </product-recommendations>
+				{% if section.settings.heading != blank %}
+					<div class="row">
+						<div>
+							<h2 class="font-display font-semibold text-4xl uppercase">
+								{{ section.settings.heading | escape }}
+							</h2>
+						</div>
+					</div>
+				{% endif %}
+
+				<ul class="row {% if section.settings.heading != blank %} mt-14 {% endif %}" role="list">
+					{% for recommendation in recommendations.products %}
+						<li class="col-4/12">
+							{% render 'card-product',
+								card_product: recommendation,
+								media_aspect_ratio: section.settings.image_ratio,
+								show_secondary_image: section.settings.show_secondary_image,
+								show_vendor: section.settings.show_vendor,
+								show_rating: section.settings.show_rating,
+								size: 'large'
+							%}
+						</li>
+					{% endfor %}
+				</ul>
+			</div>
+
+		{% endif %}
+	</product-recommendations>
 </div>
 
 {% schema %}
@@ -52,28 +53,7 @@
     {
       "type": "text",
       "id": "heading",
-      "default": "You may also like",
       "label": "t:sections.product-recommendations.settings.heading.label"
-    },
-    {
-      "type": "select",
-      "id": "heading_size",
-      "options": [
-        {
-          "value": "h2",
-          "label": "t:sections.all.heading_size.options__1.label"
-        },
-        {
-          "value": "h1",
-          "label": "t:sections.all.heading_size.options__2.label"
-        },
-        {
-          "value": "h0",
-          "label": "t:sections.all.heading_size.options__3.label"
-        }
-      ],
-      "default": "h1",
-      "label": "t:sections.all.heading_size.label"
     },
     {
       "type": "range",
@@ -83,15 +63,6 @@
       "step": 1,
       "default": 4,
       "label": "t:sections.product-recommendations.settings.products_to_show.label"
-    },
-    {
-      "type": "range",
-      "id": "columns_desktop",
-      "min": 1,
-      "max": 5,
-      "step": 1,
-      "default": 4,
-      "label": "t:sections.product-recommendations.settings.columns_desktop.label"
     },
     {
       "type": "select",
@@ -168,22 +139,6 @@
     {
       "type": "header",
       "content": "t:sections.product-recommendations.settings.header_mobile.content"
-    },
-    {
-      "type": "select",
-      "id": "columns_mobile",
-      "default": "2",
-      "label": "t:sections.product-recommendations.settings.columns_mobile.label",
-      "options": [
-        {
-          "value": "1",
-          "label": "t:sections.product-recommendations.settings.columns_mobile.options__1.label"
-        },
-        {
-          "value": "2",
-          "label": "t:sections.product-recommendations.settings.columns_mobile.options__2.label"
-        }
-      ]
     },
     {
       "type": "header",

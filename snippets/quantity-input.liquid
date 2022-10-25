@@ -9,7 +9,7 @@
 		name="{% if name %}{{- name -}}{% else %}quantity{% endif %}"
 		id="{{ id }}"
 		min="{% if min %}{{- min -}}{% else %}1{% endif %}"
-		value="1"
+		value="{% if value %}{{ value }}{% else %}1{% endif %}"
 		{% if form %} form="{{ form }}" {% endif %}
 		{% if index %} data-index="{{ index }}" {% endif %}
 		{% if label %} aria-label="{{ label }}" {% endif %}

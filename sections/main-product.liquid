@@ -40,9 +40,33 @@
 	>
 {%- endif -%}
 
+{%- assign product_form_id = 'product-form-' | append: section.id -%}
+
+<div class="fixed bottom-0 inset-x z-[100] py-7 bg-white w-full border-t border-orange-grayish">
+	<div class="container">
+		<div class="row">
+			<div class="flex">
+				<div class="flex items-center gap-x-7">
+					<p class="text-[2.5rem] font-semibold font-display uppercase leading-10">
+						{{ product.title | escape }}
+					</p>
+
+					<div class="text-[2.5rem] leading-10 font-medium font-display" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
+						{%- render 'price', product: product, use_variant: true, show_badges: false, price_class: '' -%}
+					</div>
+				</div>
+
+				{% comment %} {%- unless product.has_only_default_variant -%}
+					{%- if block.settings.picker_type == 'button' -%}
+					{% endif%}
+				{%- endunless -%} {% endcomment %}
+			</div>
+		</div>
+	</div>
+</div>
+
 <div class="product product--{{ section.settings.media_size }} product--{{ section.settings.media_position }} product--{{ section.settings.gallery_layout }} product--mobile-{{ section.settings.mobile_thumbnails }}">
 	<div class="container">
-		{%- assign product_form_id = 'product-form-' | append: section.id -%}
 
 		<div class="row">
 			<div class="col-7/12">
@@ -91,50 +115,52 @@
 							endif
 						-%}
 						{%- if product.selected_or_first_available_variant.featured_media != null -%}
-						{%- assign featured_media = product.selected_or_first_available_variant.featured_media -%}
-						<li
-							id="Slide-{{ section.id }}-{{ featured_media.id }}"
-							class="product__media-item grid__item slider__slide is-active{% if single_media_visible %} product__media-item--single{% endif %}{% if featured_media.media_type != 'image' %} product__media-item--full{% endif %}{% if section.settings.hide_variants and variant_images contains featured_media.src %} product__media-item--variant{% endif %}"
-							data-media-id="{{ section.id }}-{{ featured_media.id }}"
-						>
-							{%- assign media_position = 1 -%}
-							{% render 'product-thumbnail', media: featured_media, media_count: media_count, position: media_position, desktop_layout: section.settings.gallery_layout, mobile_layout: section.settings.mobile_thumbnails, loop: section.settings.enable_video_looping, modal_id: section.id, xr_button: true, media_width: media_width, lazy_load: false %}
-						</li>
-						{%- endif -%}
-						{%- for media in product.media -%}
-						{%- unless media.id == product.selected_or_first_available_variant.featured_media.id -%}
+							{%- assign featured_media = product.selected_or_first_available_variant.featured_media -%}
+
 							<li
-							id="Slide-{{ section.id }}-{{ media.id }}"
-							class="product__media-item grid__item slider__slide{% if single_media_visible %} product__media-item--single{% endif %}{% if product.selected_or_first_available_variant.featured_media == null and forloop.index == 1 %} is-active{% endif %}{% if media.media_type != 'image' %} product__media-item--full{% endif %}{% if section.settings.hide_variants and variant_images contains media.src %} product__media-item--variant{% endif %}"
-							data-media-id="{{ section.id }}-{{ media.id }}"
+								id="Slide-{{ section.id }}-{{ featured_media.id }}"
+								class="product__media-item grid__item slider__slide is-active {% if single_media_visible %} product__media-item--single {% endif %}{% if featured_media.media_type != 'image' %} product__media-item--full {% endif %}{% if section.settings.hide_variants and variant_images contains featured_media.src %} product__media-item--variant {% endif %}"
+								data-media-id="{{ section.id }}-{{ featured_media.id }}"
 							>
-							{%- liquid
-								assign media_position = media_position | default: 0 | plus: 1
-								assign lazy_load = false
-								if media_position > 1
-								assign lazy_load = true
-								endif
-								render 'product-thumbnail', media: media, media_count: media_count, position: media_position, desktop_layout: section.settings.gallery_layout, mobile_layout: section.settings.mobile_thumbnails, loop: section.settings.enable_video_looping, modal_id: section.id, xr_button: true, media_width: media_width, lazy_load: lazy_load
-							-%}
+								{%- assign media_position = 1 -%}
+								{% render 'product-thumbnail', media: featured_media, media_count: media_count, position: media_position, desktop_layout: section.settings.gallery_layout, mobile_layout: section.settings.mobile_thumbnails, loop: section.settings.enable_video_looping, modal_id: section.id, xr_button: true, media_width: media_width, lazy_load: false %}
 							</li>
-						{%- endunless -%}
+						{%- endif -%}
+
+						{%- for media in product.media -%}
+							{%- unless media.id == product.selected_or_first_available_variant.featured_media.id -%}
+								<li
+									id="Slide-{{ section.id }}-{{ media.id }}"
+									class="product__media-item grid__item slider__slide{% if single_media_visible %} product__media-item--single{% endif %}{% if product.selected_or_first_available_variant.featured_media == null and forloop.index == 1 %} is-active{% endif %}{% if media.media_type != 'image' %} product__media-item--full{% endif %}{% if section.settings.hide_variants and variant_images contains media.src %} product__media-item--variant{% endif %}"
+									data-media-id="{{ section.id }}-{{ media.id }}"
+								>
+									{%- liquid
+										assign media_position = media_position | default: 0 | plus: 1
+										assign lazy_load = false
+										if media_position > 1
+											assign lazy_load = true
+										endif
+										render 'product-thumbnail', media: media, media_count: media_count, position: media_position, desktop_layout: section.settings.gallery_layout, mobile_layout: section.settings.mobile_thumbnails, loop: section.settings.enable_video_looping, modal_id: section.id, xr_button: true, media_width: media_width, lazy_load: lazy_load
+									-%}
+								</li>
+							{%- endunless -%}
 						{%- endfor -%}
 					</ul>
 					<div class="slider-buttons no-js-hidden quick-add-hidden{% if hide_mobile_slider %} small-hide{% endif %}">
 						<button
-						type="button"
-						class="slider-button slider-button--prev"
-						name="previous"
-						aria-label="{{ 'general.slider.previous_slide' | t }}"
+							type="button"
+							class="slider-button slider-button--prev"
+							name="previous"
+							aria-label="{{ 'general.slider.previous_slide' | t }}"
 						>
-						{% render 'icon-caret' %}
+							{% render 'icon-caret' %}
 						</button>
-						<div class="slider-counter caption">
-						<span class="slider-counter--current js-current">1</span>
-						<span aria-hidden="true"> / </span>
-						<span class="sr-only">{{ 'general.slider.of' | t }}</span>
-						<span class="slider-counter--total js-total">{{ media_count }}</span>
-						</div>
+					<div class="slider-counter caption">
+					<span class="slider-counter--current js-current">1</span>
+					<span aria-hidden="true"> / </span>
+					<span class="sr-only">{{ 'general.slider.of' | t }}</span>
+					<span class="slider-counter--total js-total">{{ media_count }}</span>
+				</div>
 						<button
 						type="button"
 						class="slider-button slider-button--next"
@@ -309,6 +335,8 @@
 
 							{%- when 'text' -%}
 								<p {{ block.shopify_attributes }}>{{- block.settings.text -}}</p>
+							{%- when 'announcement' -%}
+								{% render 'announcement', text: block.settings.text %}
 
 							{%- when 'notice' -%}
 								<div class="bg-red-light text-white rounded-lg font-display p-6 mt-4 mb-6">
@@ -514,7 +542,6 @@
 											</script>
 										</variant-radios>
 									{%- else -%}
-
 										<variant-selects
 											class="no-js-hidden"
 											data-section="{{ section.id }}"
@@ -619,10 +646,8 @@
 												<button
 													type="submit"
 													name="add"
-													class="product-form__submit button button-gray {% if block.settings.show_dynamic_checkout %} button--secondary {% else %} button--primary {% endif %}"
-													{% if product.selected_or_first_available_variant.available == false %}
-													disabled
-													{% endif %}
+													class="product-form__submit button button-gray"
+													{% if product.selected_or_first_available_variant.available == false %} disabled {% endif %}
 												>
 													<span>
 														{%- if product.selected_or_first_available_variant.available -%}
@@ -635,9 +660,11 @@
 														{%- render 'svg', icon: 'spinner', classes: 'w-2 h-2 fill-current' -%}
 													</div>
 												</button>
+
 												{%- if block.settings.show_dynamic_checkout -%}
 													{{ form | payment_button }}
 												{%- endif -%}
+
 											</div>
 										{%- endform -%}
 									</product-form>
@@ -1185,6 +1212,18 @@
           "id": "text",
           "default": "Text block",
           "label": "t:sections.main-product.blocks.text.settings.text.label"
+        }
+      ]
+    },
+    {
+      "type": "announcement",
+      "name": "t:sections.main-product.blocks.announcement.name",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "default": "Text block",
+          "label": "t:sections.main-product.blocks.announcement.settings.text.label"
         }
       ]
     },
