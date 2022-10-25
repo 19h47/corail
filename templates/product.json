@@ -130,6 +130,44 @@
         "link": ""
       }
     },
+    "5352a5eb-3296-4b9c-9021-e759c6c0ea6b": {
+      "type": "images-with-collapsible-tab",
+      "blocks": {
+        "template--15990350479528__5352a5eb-3296-4b9c-9021-e759c6c0ea6b-166669405224db7574-0": {
+          "type": "collapsible_tab",
+          "settings": {
+            "title": "Composition",
+            "content": "<p>\/\/90% recycled upper, made with recycled plastic waste and corn-based induction\/\/signature recycled outsole, made of 80% recycled rubber and 20% SEADUST\/\/100% recycled laces made with PET bottles\/\/handmade in our workshop in Portugal\/\/abrasion-tested, friction-tested, bend-tested\/\/water-repellent treatment<\/p>"
+          }
+        },
+        "template--15990350479528__5352a5eb-3296-4b9c-9021-e759c6c0ea6b-166669405224db7574-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/person-stands-on-rocks-poking-out-of-the-ocean-shoreline.jpg"
+          }
+        },
+        "d6ea013c-9ab6-46e8-86de-20702f42ff31": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/person-fishing-on-the-beach-is-silhouetted-at-sunset.jpg"
+          }
+        },
+        "324a9f25-d1c3-420a-8866-ba0bac024883": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/green-and-white-marbled-coloring.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "template--15990350479528__5352a5eb-3296-4b9c-9021-e759c6c0ea6b-166669405224db7574-0",
+        "template--15990350479528__5352a5eb-3296-4b9c-9021-e759c6c0ea6b-166669405224db7574-1",
+        "d6ea013c-9ab6-46e8-86de-20702f42ff31",
+        "324a9f25-d1c3-420a-8866-ba0bac024883"
+      ],
+      "settings": {
+      }
+    },
     "image-with-text": {
       "type": "image-with-text",
       "blocks": {
@@ -230,53 +268,15 @@
       "settings": {
         "title": "NEW IN NEW IN"
       }
-    },
-    "5352a5eb-3296-4b9c-9021-e759c6c0ea6b": {
-      "type": "images-with-collapsible-tab",
-      "blocks": {
-        "template--15990350479528__5352a5eb-3296-4b9c-9021-e759c6c0ea6b-166669405224db7574-0": {
-          "type": "collapsible_tab",
-          "settings": {
-            "title": "Composition",
-            "content": "<p>\/\/90% recycled upper, made with recycled plastic waste and corn-based induction\/\/signature recycled outsole, made of 80% recycled rubber and 20% SEADUST\/\/100% recycled laces made with PET bottles\/\/handmade in our workshop in Portugal\/\/abrasion-tested, friction-tested, bend-tested\/\/water-repellent treatment<\/p>"
-          }
-        },
-        "template--15990350479528__5352a5eb-3296-4b9c-9021-e759c6c0ea6b-166669405224db7574-1": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/person-stands-on-rocks-poking-out-of-the-ocean-shoreline.jpg"
-          }
-        },
-        "d6ea013c-9ab6-46e8-86de-20702f42ff31": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/person-fishing-on-the-beach-is-silhouetted-at-sunset.jpg"
-          }
-        },
-        "324a9f25-d1c3-420a-8866-ba0bac024883": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/green-and-white-marbled-coloring.jpg"
-          }
-        }
-      },
-      "block_order": [
-        "template--15990350479528__5352a5eb-3296-4b9c-9021-e759c6c0ea6b-166669405224db7574-0",
-        "template--15990350479528__5352a5eb-3296-4b9c-9021-e759c6c0ea6b-166669405224db7574-1",
-        "d6ea013c-9ab6-46e8-86de-20702f42ff31",
-        "324a9f25-d1c3-420a-8866-ba0bac024883"
-      ],
-      "settings": {
-      }
     }
   },
   "order": [
     "main",
     "7d00fc27-c309-4d0a-9c10-bc7f88577e55",
+    "5352a5eb-3296-4b9c-9021-e759c6c0ea6b",
     "image-with-text",
     "multicolumn",
     "product-recommendations",
-    "43dfab5f-1246-4a2e-a403-00608e142f00",
-    "5352a5eb-3296-4b9c-9021-e759c6c0ea6b"
+    "43dfab5f-1246-4a2e-a403-00608e142f00"
   ]
 }
