@@ -145,7 +145,7 @@
                       <span class="visually-hidden">
                         {{- 'products.product.quantity.decrease' | t: product: product.title | escape -}}
                       </span>
-                      {% render 'icon-minus' %}
+					  {% render 'svg', icon: 'minus' %}
                     </button>
                     <input
                       class="quantity__input"
@@ -160,7 +160,7 @@
                       <span class="visually-hidden">
                         {{- 'products.product.quantity.increase' | t: product: product.title | escape -}}
                       </span>
-                      {% render 'icon-plus' %}
+                      {% render 'svg', icon: 'plus' %}
                     </button>
                   </quantity-input>
                 </div>

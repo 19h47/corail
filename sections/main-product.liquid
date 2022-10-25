@@ -413,7 +413,7 @@
 									</label>
 
 									{% assign quantity_input_id = 'Quantity-' | append: section.id %}
-									{% render 'quantity-input' with name: 'quantiy', form: product_form_id, id: quantity_input_id, description: product.title, title: product.title %}
+									{% render 'quantity-input', name: 'quantiy', form: product_form_id, id: quantity_input_id, description: product.title, title: product.title %}
 								</div>
 
 							{%- when 'popup' -%}
