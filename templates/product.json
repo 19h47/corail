@@ -140,6 +140,20 @@
             "content": "<p>\/\/90% recycled upper, made with recycled plastic waste and corn-based induction<br\/>\/\/signature recycled outsole, made of 80% recycled rubber and 20% SEADUST<br\/>\/\/100% recycled laces made with PET bottles<br\/>\/\/handmade in our workshop in Portugal<br\/>\/\/abrasion-tested, friction-tested, bend-tested<br\/>\/\/water-repellent treatment<\/p>"
           }
         },
+        "a3d26fe5-8b20-421d-a36d-7371219c9f0d": {
+          "type": "collapsible_tab",
+          "settings": {
+            "title": "Livraison",
+            "content": "<p>\/\/Lorem ipsum dolor sit amet, consectetur adipiscing elit<br\/>\/\/Fusce eu purus et ante vehicula laoreet<br\/>\/\/Nulla facilisi<br\/>\/\/Aliquam pellentesque ut tortor aliquet hendrerit<\/p>"
+          }
+        },
+        "ef963a79-a748-461c-85e0-0b3b2b4a321c": {
+          "type": "collapsible_tab",
+          "settings": {
+            "title": "Echanges et retours",
+            "content": "<p>\/\/Aliquam cursus purus id leo varius, eu condimentum ex facilisis<br\/>\/\/Ut mollis consectetur imperdiet<br\/>\/\/Cras viverra mi at felis laoreet, sed condimentum erat pharetra<\/p>"
+          }
+        },
         "template--15990350479528__5352a5eb-3296-4b9c-9021-e759c6c0ea6b-166669405224db7574-1": {
           "type": "image",
           "settings": {
@@ -161,6 +175,8 @@
       },
       "block_order": [
         "template--15990350479528__5352a5eb-3296-4b9c-9021-e759c6c0ea6b-166669405224db7574-0",
+        "a3d26fe5-8b20-421d-a36d-7371219c9f0d",
+        "ef963a79-a748-461c-85e0-0b3b2b4a321c",
         "template--15990350479528__5352a5eb-3296-4b9c-9021-e759c6c0ea6b-166669405224db7574-1",
         "d6ea013c-9ab6-46e8-86de-20702f42ff31",
         "324a9f25-d1c3-420a-8866-ba0bac024883"
