@@ -257,7 +257,7 @@
 						"content": {
 							"label": "Contenu"
 						},
-						"heading": {
+						"title": {
 							"label": "Titre",
 							"info": "Titre de la rangée"
 						}
