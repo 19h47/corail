@@ -21,8 +21,8 @@
         "3881603f-1c4f-469c-a6c4-c79d1ba8d940": {
           "type": "notice",
           "settings": {
-            "notice_title": "Seadust inside",
-            "notice_content": "These sneakers are made with SEADUST, an innovative material grinded in our CORAIL° Lab with discarded fishing nets and PET bottles collected in Marseille, France."
+            "title": "Seadust inside",
+            "content": "These sneakers are made with SEADUST, an innovative material grinded in our CORAIL° Lab with discarded fishing nets and PET bottles collected in Marseille, France."
           }
         },
         "vendor": {
@@ -231,6 +231,13 @@
       "settings": {
         "title": "NEW IN NEW IN"
       }
+    },
+    "ceb712da-b0ad-4f2d-b88d-2c03baffb8fc": {
+      "type": "annoucement",
+      "settings": {
+        "text": "Livraison offerte retours offerts - paiement en 3x sans frais",
+        "link": ""
+      }
     }
   },
   "order": [
@@ -238,6 +245,7 @@
     "image-with-text",
     "multicolumn",
     "product-recommendations",
-    "43dfab5f-1246-4a2e-a403-00608e142f00"
+    "43dfab5f-1246-4a2e-a403-00608e142f00",
+    "ceb712da-b0ad-4f2d-b88d-2c03baffb8fc"
   ]
 }
