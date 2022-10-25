@@ -247,10 +247,18 @@
 				"name": "Annonce"
 			}
 		},
-		"image-with-collapsible-tab": {
+		"images-with-collapsible-tab": {
 			"name": "Image avec rangée réductible",
 			"presets": { "name": "Image avec rangée réductible" },
 			"blocks": {
+				"image": {
+					"name": "Images",
+					"settings": {
+						"image": {
+							"label": "Image"
+						}
+					}
+				},
 				"collapsible_tab": {
 					"name": "Rangée réductible",
 					"settings": {

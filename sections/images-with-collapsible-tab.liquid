@@ -1,0 +1,56 @@
+<div class="images-with-collapsible-tab">
+	TEST
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.images-with-collapsible-tab.name",
+  "class": "section",
+  "settings": [
+
+  ],
+  "blocks": [
+    {
+      "type": "collapsible_tab",
+      "name": "t:sections.images-with-collapsible-tab.blocks.collapsible_tab.name",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "info": "t:sections.images-with-collapsible-tab.blocks.collapsible_tab.settings.title.info",
+          "label": "t:sections.images-with-collapsible-tab.blocks.collapsible_tab.settings.title.label"
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "t:sections.images-with-collapsible-tab.blocks.collapsible_tab.settings.content.label"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "name": "t:sections.images-with-collapsible-tab.blocks.image.name",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "t:sections.images-with-collapsible-tab.blocks.image.settings.image.label"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.images-with-collapsible-tab.presets.name",
+      "blocks": [
+        {
+          "type": "collapsible_tab"
+        },
+        {
+          "type": "image"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
