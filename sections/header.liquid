@@ -89,7 +89,7 @@
 								</header-menu>
 							{%- else -%}
 								<a
-									class="group relative px-8 py-7 block text-sm uppercase font-medium leading-4 hover:after:scale-y-100 after:absolute after:top-0 after:h-[0.1875rem] after:bg-red-very-light after:w-full after:inset-x-0 after:transition-transform after:duration-1000 after:ease-in-out after:origin-top {% if link.current %} after:scale-y-100 {% else %} after:scale-y-0 {% endif %}"
+									class="group relative px-8 py-7 block text-sm uppercase font-medium leading-4 hover:after:scale-y-100 after:absolute after:top-0 after:h-[0.1875rem] after:bg-current after:w-full after:inset-x-0 after:transition-transform after:duration-1000 after:ease-in-out after:origin-top {% if link.current %} after:scale-y-100 {% else %} after:scale-y-0 {% endif %}"
 									href="{{ link.url }}"
 									{% if link.current %} aria-current="page"{% endif %}
 								>
@@ -196,9 +196,11 @@
 				</details>
 			</details-modal>
 
-			<span class="w-[0.0625rem] h-full block {% if request.page_type == 'index' %} bg-current {% else %} bg-orange-grayish {% endif %}"></span>
+			{% if cart == empty or request.page_type == 'index' %}
+				<span class="w-[0.0625rem] h-full block {% if request.page_type == 'index' %} bg-current {% else %} bg-orange-grayish {% endif %}"></span>
+			{% endif %}
 
-			<a href="{{ routes.cart_url }}" id="cart-icon-bubble" class="font-semibold text-sm leading-[1.125rem] flex p-[1.4375rem] lg:p-[1.6875rem]">
+			<a href="{{ routes.cart_url }}" id="cart-icon-bubble" class="font-semibold text-sm leading-[1.125rem] flex p-[1.4375rem] lg:p-[1.6875rem] {% if cart != empty and request.page_type != 'index' %} bg-gray-very-dark text-white relative z-1 {% endif %}">
 				{%- render 'svg', icon: 'bag-shopping', classes: 'mr-2 w-[1.125rem] h-[1.125rem] fill-current flex-shrink-0' -%}
 				<span class="sr-only">{{ 'sections.header.cart_count' | t: count: cart.item_count }}</span>
 				{%- if cart != empty -%}

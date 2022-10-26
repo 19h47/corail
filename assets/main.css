@@ -1,3 +1,6 @@
+/*!********************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[8].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[8].use[2]!./src/stylesheets/styles.css ***!
+  \********************************************************************************************************************************************************************************/
 /**
  * Base
  *
@@ -1376,6 +1379,12 @@ a:not([href]){
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.button[disabled], 
+	.button[aria-disabled="true"]{
+	cursor: not-allowed;
+	opacity: 0.5;
+}
+
 .button.button-red{
 	--tw-bg-opacity: 1;
 	background-color: rgb(255 125 108 / var(--tw-bg-opacity));
@@ -2154,6 +2163,11 @@ a:not([href]){
 	border-right-color: rgb(207 205 201 / var(--tw-border-opacity));
 }
 
+.border-b-orange-grayish{
+	--tw-border-opacity: 1;
+	border-bottom-color: rgb(207 205 201 / var(--tw-border-opacity));
+}
+
 .bg-white{
 	--tw-bg-opacity: 1;
 	background-color: rgb(255 255 255 / var(--tw-bg-opacity));
@@ -2171,6 +2185,11 @@ a:not([href]){
 
 .bg-current{
 	background-color: currentColor;
+}
+
+.bg-gray-very-dark{
+	--tw-bg-opacity: 1;
+	background-color: rgb(51 51 51 / var(--tw-bg-opacity));
 }
 
 .bg-gray-very-light{
@@ -2324,6 +2343,14 @@ a:not([href]){
 
 .pt-3{
 	padding-top: 0.75rem;
+}
+
+.pb-4{
+	padding-bottom: 1rem;
+}
+
+.text-left{
+	text-align: left;
 }
 
 .text-center{
@@ -2705,6 +2732,11 @@ a:not([href]){
 	border-radius: 9999px;
 }
 
+.after\:bg-current::after{
+	content: var(--tw-content);
+	background-color: currentColor;
+}
+
 .after\:bg-red-very-light::after{
 	content: var(--tw-content);
 	--tw-bg-opacity: 1;
@@ -2999,6 +3031,10 @@ a:not([href]){
 		margin-top: 1rem;
 	}
 
+	.lg\:ml-8\/12{
+		margin-left: 66.66666666666667%;
+	}
+
 	.lg\:block{
 		display: block;
 	}
@@ -3009,6 +3045,10 @@ a:not([href]){
 
 	.lg\:flex{
 		display: flex;
+	}
+
+	.lg\:table-cell{
+		display: table-cell;
 	}
 
 	.lg\:hidden{
@@ -3297,3 +3337,5 @@ a:not([href]){
 	}
 }
 
+
+/*# sourceMappingURL=main.css.map*/

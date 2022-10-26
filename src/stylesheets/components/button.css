@@ -11,6 +11,11 @@
 		@apply text-center text-xs uppercase rounded-full bg-white text-gray-very-dark py-4 px-8 transition-colors duration-1000 ease-in-out;
 	}
 
+	.button[disabled],
+	.button[aria-disabled="true"] {
+		@apply cursor-not-allowed opacity-50;
+	}
+
 	.button.button-red {
 		@apply bg-red-very-light text-white;
 	}

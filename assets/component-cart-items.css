@@ -1,16 +1,3 @@
-.cart-items td,
-.cart-items th {
-	padding: 0;
-	border: none;
-}
-
-.cart-items th {
-	text-align: left;
-	padding-bottom: 1.8rem;
-	opacity: 0.85;
-	font-weight: normal;
-}
-
 .cart-item__totals {
 	position: relative;
 }
@@ -171,11 +158,6 @@
 		padding-left: 4rem;
 	}
 
-	.cart-items td {
-		vertical-align: top;
-		padding-top: 4rem;
-	}
-
 	.cart-item {
 		display: table-row;
 	}
@@ -190,9 +172,7 @@
 }
 
 @media screen and (min-width: 990px) {
-	.cart-items .cart-items__heading--wide {
-		padding-left: 6rem;
-	}
+
 
 	.cart-items thead th:first-child {
 		width: 60%;

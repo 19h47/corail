@@ -1,3 +1,5 @@
+/* global routes */
+
 if (!customElements.get('product-form')) {
 	customElements.define('product-form', class ProductForm extends HTMLElement {
 		constructor() {
@@ -7,18 +9,36 @@ if (!customElements.get('product-form')) {
 			this.form.querySelector('[name=id]').disabled = false;
 			this.form.addEventListener('submit', this.onSubmitHandler.bind(this));
 			this.cart = document.querySelector('cart-notification') || document.querySelector('cart-drawer');
+
 			this.submitButton = this.querySelector('[type="submit"]');
-			if (document.querySelector('cart-drawer')) this.submitButton.setAttribute('aria-haspopup', 'dialog');
+			this.submitQuick = document.querySelector('[name="add-quick"]');
+
+			if (document.querySelector('cart-drawer')) {
+				this.submitButton.setAttribute('aria-haspopup', 'dialog');
+
+				if (this.submitQuick) {
+					this.submitQuick.setAttribute('aria-haspopup', 'dialog');
+				}
+			}
 		}
 
 		onSubmitHandler(evt) {
 			evt.preventDefault();
-			if ('true' === this.submitButton.getAttribute('aria-disabled')) return;
+
+			if ('true' === this.submitButton.getAttribute('aria-disabled')) {
+				return;
+			}
 
 			this.handleErrorMessage();
 
 			this.submitButton.setAttribute('aria-disabled', true);
 			this.submitButton.classList.add('loading');
+
+			if (this.submitQuick) {
+				this.submitQuick.setAttribute('aria-disabled', true);
+				this.submitQuick.classList.add('loading');
+			}
+
 			this.querySelector('.js-loading-overlay-spinner').classList.remove('hidden');
 
 			// eslint-disable-next-line no-undef
@@ -27,11 +47,13 @@ if (!customElements.get('product-form')) {
 			delete config.headers['Content-Type'];
 
 			const formData = new FormData(this.form);
+
 			if (this.cart) {
 				formData.append('sections', this.cart.getSectionsToRender().map(section => section.id));
 				formData.append('sections_url', window.location.pathname);
 				this.cart.setActiveElement(document.activeElement);
 			}
+
 			config.body = formData;
 
 			fetch(`${routes.cart_add_url}`, config)
@@ -48,6 +70,12 @@ if (!customElements.get('product-form')) {
 
 						this.submitButton.setAttribute('aria-disabled', true);
 						this.submitButton.querySelector('span').classList.add('hidden');
+
+						if (this.submitQuick) {
+							this.submitQuick.setAttribute('aria-disabled', true);
+							this.submitQuick.querySelector('span').classList.add('hidden');
+						}
+
 						soldOutMessage.classList.remove('hidden');
 						this.error = true;
 						return;
@@ -73,8 +101,23 @@ if (!customElements.get('product-form')) {
 				})
 				.finally(() => {
 					this.submitButton.classList.remove('loading');
-					if (this.cart && this.cart.classList.contains('is-empty')) this.cart.classList.remove('is-empty');
-					if (!this.error) this.submitButton.removeAttribute('aria-disabled');
+
+					if (this.submitQuick) {
+						this.submitQuick.classList.remove('loading');
+					}
+
+					if (this.cart && this.cart.classList.contains('is-empty')) {
+						this.cart.classList.remove('is-empty');
+					}
+
+					if (!this.error) {
+						this.submitButton.removeAttribute('aria-disabled');
+
+						if (this.submitQuick) {
+							this.submitQuick.removeAttribute('aria-disabled');
+						}
+					}
+
 					this.querySelector('.js-loading-overlay-spinner').classList.add('hidden');
 				});
 		}

@@ -230,10 +230,6 @@ cart-drawer-items {
   padding-top: 2.5rem;
 }
 
-.cart-drawer .cart-items td {
-  padding-top: 2rem;
-}
-
 .cart-drawer .cart-item > td + td {
   padding-left: 1rem;
 }
@@ -292,10 +288,6 @@ cart-drawer-items {
 
 .cart-drawer details[open]>summary .icon-caret {
   transform: rotate(180deg);
-}
-
-.cart-drawer .cart__checkout-button {
-  max-width: none;
 }
 
 .drawer__footer .cart__dynamic-checkout-buttons {
