@@ -1,10 +1,9 @@
-<svg
-									aria-hidden="true"
-									focusable="false"
-									role="presentation"
-									class="spinner"
-									viewBox="0 0 66 66"
-									xmlns="http://www.w3.org/2000/svg"
-								>
-									<circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
-								</svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.4.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Calque_1" focusable="false" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+	 x="0px" y="0px" viewBox="0 0 66 66" style="enable-background:new 0 0 66 66;" xml:space="preserve">
+<g>
+	<path d="M33,66C14.8,66,0,51.2,0,33h6c0,14.9,12.1,27,27,27s27-12.1,27-27C60,18.1,47.9,6,33,6V0c18.2,0,33,14.8,33,33
+		C66,51.2,51.2,66,33,66z"/>
+</g>
+</svg>

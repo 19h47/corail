@@ -19,6 +19,7 @@
 
 <script src="{{ 'variant-selects.js' | asset_url }}" defer="defer"></script>
 <script src="{{ 'variant-radios.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'variant-buttons.js' | asset_url }}" defer="defer"></script>
 
 {%- assign first_3d_model = product.media | where: "media_type", "model" | first -%}
 
@@ -46,7 +47,7 @@
 	<hr class="absolute bottom-full bg-orange-grayish w-full h-[0.0625rem]">
 	<div class="container">
 		<div class="row">
-			<div class="flex">
+			<div class="flex justify-between gap-x-7">
 				<div class="flex items-center gap-x-7">
 					<p class="text-[2.5rem] font-semibold font-display uppercase leading-10">
 						{{ product.title | escape }}
@@ -57,10 +58,121 @@
 					</div>
 				</div>
 
-				{% comment %} {%- unless product.has_only_default_variant -%}
-					{%- if block.settings.picker_type == 'button' -%}
-					{% endif%}
-				{%- endunless -%} {% endcomment %}
+				{%- for block in section.blocks -%}
+					{%- case block.type -%}
+						{%- when 'variant_picker' -%}
+							<variant-buttons
+								class="no-js-hidden flex items-center gap-x-7"
+								data-section="{{ section.id }}"
+								data-url="{{ product.url }}"
+							>
+
+								{%- for option in product.options_with_values -%}
+									<fieldset class="js product-form__input">
+
+										<div class="flex flex-wrap gap-2">
+											{%- for value in option.values -%}
+												<div>
+													<input
+														type="radio"
+														id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}-button"
+														name="{{ option.name }}-button"
+														value="{{ value | escape }}"
+														{% if option.selected_value == value %} checked {% endif %}
+														class="peer"
+													>
+
+													{% liquid
+														assign variant_needed = null
+
+														for variant in product.variants
+															if variant.options contains value
+																assign variant_needed = variant
+															endif
+														endfor
+													%}
+
+
+													{% if variant_needed.metafields.corail.color and option.name == 'Couleur' %}
+														<label
+															class="peer-checked:after:border-orange-grayish peer-checked:after-border-[0.0625rem] relative after:-m-1 after:inset-0 peer-checked:after:border after:rounded-full after:absolute cursor-pointer block border-gray-very-light border w-5 h-5 rounded-full {% if '#FFFFFF' == variant_needed.metafields.corail.color %} border-gray-very-light {% endif %}"
+															data-option-id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
+															data-option="{{ value }}"
+															style="background-color: {{ variant_needed.metafields.corail.color }}"
+															for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}-button"
+														></label>
+													{% else %}
+														<label
+															class="py-2 block cursor-pointer text-sm px-2.5 bg-gray-very-light {% if option.selected_value == value %} is-active {% endif %} peer-checked:bg-gray-very-dark peer-checked:text-gray-very-light"
+															data-option-id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
+															for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}-button"
+														>
+															{{ value }}
+														</label>
+													{% endif %}
+												</div>
+
+											{%- endfor -%}
+										</div>
+
+									</fieldset>
+								{%- endfor -%}
+
+								<script type="application/json">
+									{{ product.variants | json }}
+								</script>
+							</variant-buttons>
+
+						{%- when 'buy_buttons' -%}
+
+							<product-form class="product-form">
+								<div class="product-form__error-message-wrapper" role="alert" hidden>
+									<svg
+										aria-hidden="true"
+										focusable="false"
+										role="presentation"
+										class="icon icon-error"
+										viewBox="0 0 13 13"
+									>
+										<circle cx="6.5" cy="6.50049" r="5.5" stroke="white" stroke-width="2"/>
+										<circle cx="6.5" cy="6.5" r="5.5" fill="#EB001B" stroke="#EB001B" stroke-width="0.7"/>
+										<path d="M5.87413 3.52832L5.97439 7.57216H7.02713L7.12739 3.52832H5.87413ZM6.50076 9.66091C6.88091 9.66091 7.18169 9.37267 7.18169 9.00504C7.18169 8.63742 6.88091 8.34917 6.50076 8.34917C6.12061 8.34917 5.81982 8.63742 5.81982 9.00504C5.81982 9.37267 6.12061 9.66091 6.50076 9.66091Z" fill="white"/>
+										<path d="M5.87413 3.17832H5.51535L5.52424 3.537L5.6245 7.58083L5.63296 7.92216H5.97439H7.02713H7.36856L7.37702 7.58083L7.47728 3.537L7.48617 3.17832H7.12739H5.87413ZM6.50076 10.0109C7.06121 10.0109 7.5317 9.57872 7.5317 9.00504C7.5317 8.43137 7.06121 7.99918 6.50076 7.99918C5.94031 7.99918 5.46982 8.43137 5.46982 9.00504C5.46982 9.57872 5.94031 10.0109 6.50076 10.0109Z" fill="white" stroke="#EB001B" stroke-width="0.7">
+									</svg>
+									<span class="product-form__error-message"></span>
+								</div>
+
+								{%- form 'product', product, id: product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
+									<input
+										type="hidden"
+										name="id"
+										value="{{ product.selected_or_first_available_variant.id }}"
+										disabled
+									>
+									<div class="product-form__buttons">
+										<button
+											type="submit"
+											name="add"
+											class="product-form__submit button button-gray flex items-center"
+											{% if product.selected_or_first_available_variant.available == false %} disabled {% endif %}
+										>
+											<span>
+												{%- if product.selected_or_first_available_variant.available -%}
+													{{ 'products.product.add_to_cart' | t }}
+												{%- else -%}
+													{{ 'products.product.sold_out' | t }}
+												{%- endif -%}
+											</span>
+											<div class="loading-overlay__spinner js-loading-overlay-spinner hidden">
+												{%- render 'svg', icon: 'spinner', classes: 'w-4 h-4 ml-2 fill-current' -%}
+											</div>
+										</button>
+
+									</div>
+								{%- endform -%}
+							</product-form>
+					{%- endcase -%}
+				{%- endfor -%}
 			</div>
 		</div>
 	</div>
@@ -490,111 +602,75 @@
 
 						{%- when 'variant_picker' -%}
 							{%- unless product.has_only_default_variant -%}
-								{%- if block.settings.picker_type == 'button' -%}
-									<variant-radios
-										class="no-js-hidden space-y-8 mt-6 mb-4"
-										data-section="{{ section.id }}"
-										data-url="{{ product.url }}"
-										{{ block.shopify_attributes }}
-									>
 
-										{%- for option in product.options_with_values -%}
-											<fieldset class="js product-form__input">
-												<legend class="border-b border-orange-grayish mb-3 w-full text-sm pb-2 flex">
-													{{ option.name }}&nbsp;<span class="js-legend">{% if option.selected_value %}({{ option.selected_value }}){% endif %}</span>
+								<variant-radios
+									class="no-js-hidden space-y-8 mt-6 mb-4"
+									data-section="{{ section.id }}"
+									data-url="{{ product.url }}"
+									{{ block.shopify_attributes }}
+								>
 
-													{% if 'Taille' == option.name %}
-														<div class="ml-auto flex items-center"><a class="text-xs text-gray-dark underline" href="">Guide des tailles</a>&nbsp;&UpperRightArrow;</div>
-													{% endif %}
-												</legend>
+									{%- for option in product.options_with_values -%}
+										<fieldset class="js product-form__input">
+											<legend class="border-b border-orange-grayish mb-3 w-full text-sm pb-2 flex">
+												{{ option.name }}&nbsp;<span class="js-legend">{% if option.selected_value %}({{ option.selected_value }}){% endif %}</span>
 
-												<div class="flex flex-wrap gap-2">
-													{%- for value in option.values -%}
-														<div>
-															<input
-																type="radio"
-																id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
-																name="{{ option.name }}"
-																value="{{ value | escape }}"
-																form="{{ product_form_id }}"
-																{% if option.selected_value == value %} checked {% endif %}
-																class="peer"
-															>
+												{% if 'Taille' == option.name %}
+													<div class="ml-auto flex items-center"><a class="text-xs text-gray-dark underline" href="">Guide des tailles</a>&nbsp;&UpperRightArrow;</div>
+												{% endif %}
+											</legend>
 
-															{% liquid
-																assign variant_needed = null
-
-																for variant in product.variants
-																	if variant.options contains value
-																		assign variant_needed = variant
-																	endif
-																endfor
-															%}
-
-
-															{% if variant_needed.metafields.corail.color and option.name == 'Couleur' %}
-																<label
-																	class="peer-checked:after:border-orange-grayish peer-checked:after-border-[0.0625rem] relative after:-m-1 after:inset-0 peer-checked:after:border after:rounded-full after:absolute cursor-pointer block border-gray-very-light border w-5 h-5 rounded-full {% if '#FFFFFF' == variant_needed.metafields.corail.color %} border-gray-very-light {% endif %}"
-																	for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
-																	data-option="{{ value }}"
-																	style="background-color: {{ variant_needed.metafields.corail.color }}"
-																></label>
-															{% else %}
-																<label class="py-2 block cursor-pointer text-sm px-2.5 bg-gray-very-light peer-checked:bg-gray-very-dark peer-checked:text-gray-very-light" for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">
-																	{{ value }}
-																</label>
-															{% endif %}
-														</div>
-													{%- endfor -%}
-												</div>
-
-											</fieldset>
-										{%- endfor -%}
-
-										<script type="application/json">
-											{{ product.variants | json }}
-										</script>
-									</variant-radios>
-								{%- else -%}
-									<variant-selects
-										class="no-js-hidden"
-										data-section="{{ section.id }}"
-										data-url="{{ product.url }}"
-										{{ block.shopify_attributes }}
-									>
-										{%- for option in product.options_with_values -%}
-										<div class="product-form__input product-form__input--dropdown">
-											<label class="form__label" for="Option-{{ section.id }}-{{ forloop.index0 }}">
-											{{ option.name }}
-											</label>
-											<div class="select">
-											<select
-												id="Option-{{ section.id }}-{{ forloop.index0 }}"
-												class="select__select"
-												name="options[{{ option.name | escape }}]"
-												form="{{ product_form_id }}"
-											>
+											<div class="flex flex-wrap gap-2">
 												{%- for value in option.values -%}
-												<option
-													value="{{ value | escape }}"
-													{% if option.selected_value == value %}
-													selected="selected"
-													{% endif %}
-												>
-													{{ value }}
-												</option>
-												{%- endfor -%}
-											</select>
-											{% render 'icon-caret' %}
-											</div>
-										</div>
-										{%- endfor -%}
+													<div>
+														<input
+															type="radio"
+															id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
+															name="{{ option.name }}"
+															value="{{ value | escape }}"
+															form="{{ product_form_id }}"
+															{% if option.selected_value == value %} checked {% endif %}
+															class="peer"
+														>
 
-										<script type="application/json">
+														{% liquid
+															assign variant_needed = null
+
+															for variant in product.variants
+																if variant.options contains value
+																	assign variant_needed = variant
+																endif
+															endfor
+														%}
+
+
+														{% if variant_needed.metafields.corail.color and option.name == 'Couleur' %}
+															<label
+																class="peer-checked:after:border-orange-grayish peer-checked:after-border-[0.0625rem] relative after:-m-1 after:inset-0 peer-checked:after:border after:rounded-full after:absolute cursor-pointer block border-gray-very-light border w-5 h-5 rounded-full {% if '#FFFFFF' == variant_needed.metafields.corail.color %} border-gray-very-light {% endif %}"
+																for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
+																data-option="{{ value }}"
+																style="background-color: {{ variant_needed.metafields.corail.color }}"
+															></label>
+														{% else %}
+															<label
+																class="py-2 block cursor-pointer text-sm px-2.5 bg-gray-very-light peer-checked:bg-gray-very-dark peer-checked:text-gray-very-light"
+																for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
+															>
+																{{ value }}
+															</label>
+														{% endif %}
+													</div>
+												{%- endfor -%}
+											</div>
+
+										</fieldset>
+									{%- endfor -%}
+
+									<script type="application/json">
 										{{ product.variants | json }}
-										</script>
-									</variant-selects>
-								{%- endif -%}
+									</script>
+								</variant-radios>
+
 							{%- endunless -%}
 
 							<noscript class="product-form__noscript-wrapper-{{ section.id }}">
@@ -724,15 +800,15 @@
 								endif
 								%}
 								<div
-								class="rating"
-								role="img"
-								aria-label="{{ 'accessibility.star_reviews_info' | t: rating_value: product.metafields.reviews.rating.value, rating_max: product.metafields.reviews.rating.value.scale_max }}"
+									class="rating"
+									role="img"
+									aria-label="{{ 'accessibility.star_reviews_info' | t: rating_value: product.metafields.reviews.rating.value, rating_max: product.metafields.reviews.rating.value.scale_max }}"
 								>
-								<span
-									aria-hidden="true"
-									class="rating-star color-icon-{{ settings.accent_icons }}"
-									style="--rating: {{ product.metafields.reviews.rating.value.rating | floor }}; --rating-max: {{ product.metafields.reviews.rating.value.scale_max }}; --rating-decimal: {{ rating_decimal }};"
-								></span>
+									<span
+										aria-hidden="true"
+										class="rating-star color-icon-{{ settings.accent_icons }}"
+										style="--rating: {{ product.metafields.reviews.rating.value.rating | floor }}; --rating-max: {{ product.metafields.reviews.rating.value.scale_max }}; --rating-decimal: {{ rating_decimal }};"
+									></span>
 								</div>
 								<p class="rating-text caption">
 								<span aria-hidden="true">
@@ -1265,22 +1341,7 @@
       "name": "t:sections.main-product.blocks.variant_picker.name",
       "limit": 1,
       "settings": [
-        {
-          "type": "select",
-          "id": "picker_type",
-          "options": [
-            {
-              "value": "dropdown",
-              "label": "t:sections.main-product.blocks.variant_picker.settings.picker_type.options__1.label"
-            },
-            {
-              "value": "button",
-              "label": "t:sections.main-product.blocks.variant_picker.settings.picker_type.options__2.label"
-            }
-          ],
-          "default": "button",
-          "label": "t:sections.main-product.blocks.variant_picker.settings.picker_type.label"
-        }
+
       ]
     },
     {
