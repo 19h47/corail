@@ -1581,6 +1581,11 @@ a:not([href]){
 	margin-bottom: 1.5rem;
 }
 
+.mx-14{
+	margin-left: 3.5rem;
+	margin-right: 3.5rem;
+}
+
 .mb-24{
 	margin-bottom: 6rem;
 }
@@ -1723,6 +1728,14 @@ a:not([href]){
 
 .mt-2\.5{
 	margin-top: 0.625rem;
+}
+
+.ml-8\/12{
+	margin-left: 66.66666666666667%;
+}
+
+.mr-5{
+	margin-right: 1.25rem;
 }
 
 .block{
@@ -1901,6 +1914,14 @@ a:not([href]){
 	width: 1.5rem;
 }
 
+.w-7\/12{
+	width: 58.333333%;
+}
+
+.w-5\/12{
+	width: 41.666667%;
+}
+
 .w-5{
 	width: 1.25rem;
 }
@@ -2038,6 +2059,18 @@ a:not([href]){
 	margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
 }
 
+.space-y-3\.5 > :not([hidden]) ~ :not([hidden]){
+	--tw-space-y-reverse: 0;
+	margin-top: calc(0.875rem * calc(1 - var(--tw-space-y-reverse)));
+	margin-bottom: calc(0.875rem * var(--tw-space-y-reverse));
+}
+
+.space-y-3 > :not([hidden]) ~ :not([hidden]){
+	--tw-space-y-reverse: 0;
+	margin-top: calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));
+	margin-bottom: calc(0.75rem * var(--tw-space-y-reverse));
+}
+
 .divide-y-\[0\.0625rem\] > :not([hidden]) ~ :not([hidden]){
 	--tw-divide-y-reverse: 0;
 	border-top-width: calc(0.0625rem * calc(1 - var(--tw-divide-y-reverse)));
@@ -2079,12 +2112,21 @@ a:not([href]){
 	border-width: 1px;
 }
 
+.border-x-\[0\.0625rem\]{
+	border-left-width: 0.0625rem;
+	border-right-width: 0.0625rem;
+}
+
 .border-b{
 	border-bottom-width: 1px;
 }
 
 .border-t{
 	border-top-width: 1px;
+}
+
+.border-b-\[0\.0625rem\]{
+	border-bottom-width: 0.0625rem;
 }
 
 .border-orange-grayish{
@@ -2100,6 +2142,12 @@ a:not([href]){
 .border-gray-very-light{
 	--tw-border-opacity: 1;
 	border-color: rgb(243 243 243 / var(--tw-border-opacity));
+}
+
+.border-x-orange-grayish{
+	--tw-border-opacity: 1;
+	border-left-color: rgb(207 205 201 / var(--tw-border-opacity));
+	border-right-color: rgb(207 205 201 / var(--tw-border-opacity));
 }
 
 .bg-white{
@@ -2332,6 +2380,11 @@ a:not([href]){
 	font-size: 9.375rem;
 }
 
+.text-lg{
+	font-size: 1.125rem;
+	line-height: 1.75rem;
+}
+
 .font-semibold{
 	font-weight: 600;
 }
@@ -2411,6 +2464,15 @@ a:not([href]){
 .text-orange-light{
 	--tw-text-opacity: 1;
 	color: rgb(255 127 80 / var(--tw-text-opacity));
+}
+
+.text-gray-dark{
+	--tw-text-opacity: 1;
+	color: rgb(118 118 118 / var(--tw-text-opacity));
+}
+
+.underline{
+	text-decoration-line: underline;
 }
 
 .opacity-100{
@@ -2493,12 +2555,6 @@ a:not([href]){
 
 .col-6\/12{
 	width: 50%;
-	padding-left: 0.625rem;
-	padding-right: 0.625rem;
-}
-
-.col-7\/12{
-	width: 58.333333%;
 	padding-left: 0.625rem;
 	padding-right: 0.625rem;
 }

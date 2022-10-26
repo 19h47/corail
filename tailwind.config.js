@@ -2,7 +2,7 @@ const plugin = require("tailwindcss/plugin");
 const defaultTheme = require("tailwindcss/defaultTheme");
 
 const colors = {
-	gray: { "very-dark": "#333333", "very-light": "#F3F3F3" },
+	gray: { "very-dark": "#333333", "very-light": "#F3F3F3", dark: '#767676' },
 	orange: { "dark-grayish": "#97938F", grayish: "#CFCDC9", light: '#FF7F50' },
 	red: { "very-light": "#FF7D6C", light: "#FF7F63" },
 	cyan: { "very-dark-grayish": "#37403A" },
@@ -23,6 +23,7 @@ const spacing = {
 	"4/12": `${(4 * 100) / 12}%`,
 	"5/12": `${(5 * 100) / 12}%`,
 	"6/12": `${(6 * 100) / 12}%`,
+	"8/12": `${(8 * 100) / 12}%`,
 	"9/12": `${(9 * 100) / 12}%`,
 	"1/6": `${(1 * 100) / 6}%`,
 	"4/6": `${(4 * 100) / 6}%`,

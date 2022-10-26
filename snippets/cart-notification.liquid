@@ -1,35 +1,54 @@
 {% comment %}
     Renders cart notification
 
-    Accepts:
-    - color_scheme: {String} sets the color scheme of the notification (optional)
-
     Usage:
     {% render 'cart-notification' %}
 {% endcomment %}
 
 <cart-notification>
-  <div class="cart-notification-wrapper page-width">
-    <div id="cart-notification" class="cart-notification{% if color_scheme %} color-{{ color_scheme }}{% endif %}" aria-modal="true" aria-label="{{ 'general.cart.item_added' | t }}" role="dialog" tabindex="-1">
-      <div class="cart-notification__header">
-        <h2 class="cart-notification__heading caption-large text-body">{%- render 'icon-checkmark' -%} {{ 'general.cart.item_added' | t }}</h2>
-        <button type="button" class="cart-notification__close modal__close-button link link--text" aria-label="{{ 'accessibility.close' | t }}">
-          <svg class="icon icon-close" aria-hidden="true" focusable="false"><use href="#icon-close"></svg>
-        </button>
-      </div>
-      <div id="cart-notification-product" class="cart-notification-product"></div>
-      <div class="cart-notification__links">
-        <a href="{{ routes.cart_url }}" id="cart-notification-button" class="button button--secondary button--full-width"></a>
-        <form action="{{ routes.cart_url }}" method="post" id="cart-notification-form">
-          <button class="button button--primary button--full-width" name="checkout">{{ 'sections.cart.checkout' | t }}</button>
-        </form>
-        <button type="button" class="link button-label">{{ 'general.continue_shopping' | t }}</button>
-      </div>
-    </div>
-  </div>
+	<div class="cart-notification-wrapper relative container">
+		<div class="row">
+			<div class="col-4/12 ml-8/12 relative">
+				<div
+					id="cart-notification"
+					class="cart-notification absolute right-0 p-5 bg-white border-x-[0.0625rem] border-b-[0.0625rem] border-x-orange-grayish"
+					aria-modal="true"
+					aria-label="{{ 'general.cart.item_added' | t }}"
+					role="dialog"
+					tabindex="-1"
+				>
+					<button type="button" class="absolute top-0 right-0 w-5 h-5 m-5" aria-label="{{ 'accessibility.close' | t }}">
+						{% render 'svg', icon: 'close', classes: 'fill-current w-full h-full' %}
+					</button>
+
+					<h2 class="flex items-center text-lg font-display font-bold uppercase">
+						{%- render 'svg', icon: 'check', classes: 'fill-current w-5 h-5 mr-5' -%}&nbsp;{{ 'general.cart.item_added' | t }}
+					</h2>
+
+					<div id="cart-notification-product" class="cart-notification-product"></div>
+
+					<div class="text-center space-y-3.5">
+
+						<a href="{{ routes.cart_url }}" id="cart-notification-button" class="button button-gray inline-block align-middle w-full"></a>
+
+						<form action="{{ routes.cart_url }}" method="post" id="cart-notification-form">
+							<button class="button button-red w-full" name="checkout">{{ 'sections.cart.checkout' | t }}</button>
+						</form>
+
+
+						<button type="button" class="underline text-gray-dark text-xs font-medium">
+							{{ 'general.continue_shopping' | t }}
+						</button>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
 </cart-notification>
+
 {% style %}
-  .cart-notification {
-     display: none;
-  }
+  	.cart-notification {
+		display: none;
+  	}
 {% endstyle %}

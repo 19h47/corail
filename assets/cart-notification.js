@@ -5,10 +5,9 @@ class CartNotification extends HTMLElement {
 		this.notification = document.getElementById('cart-notification');
 		this.onBodyClick = this.handleBodyClick.bind(this);
 
-		this.notification.addEventListener('keyup', (evt) => evt.code === 'Escape' && this.close());
-		this.querySelectorAll('button[type="button"]').forEach((closeButton) =>
-			closeButton.addEventListener('click', this.close.bind(this))
-		);
+		this.notification.addEventListener('keyup', evt => 'Escape' === evt.code && this.close());
+
+		this.querySelectorAll('button[type="button"]').forEach($button => $button.addEventListener('click', this.close.bind(this)));
 	}
 
 	open() {
@@ -34,8 +33,7 @@ class CartNotification extends HTMLElement {
 
 		this.getSectionsToRender().forEach((section => {
 			console.log(section, section.selector)
-			document.getElementById(section.id).innerHTML =
-				this.getSectionInnerHTML(parsedState.sections[section.id], section.selector);
+			document.getElementById(section.id).innerHTML = this.getSectionInnerHTML(parsedState.sections[section.id], section.selector);
 		}));
 
 
