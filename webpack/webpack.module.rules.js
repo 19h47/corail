@@ -92,7 +92,7 @@ module.exports = [
 		exclude: [/animations/],
 		type: 'asset/resource',
 		generator: {
-			filename: 'img/png/[name][ext]',
+			filename: '[name][ext]',
 		},
 		use: [
 			{

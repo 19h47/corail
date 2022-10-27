@@ -66,5 +66,6 @@ module.exports = {
 		plugin(({ addVariant }) => addVariant("is-active", ".is-active&")),
 		plugin(({ addVariant }) => addVariant("is-disabled", "[aria-disabled='true']&")),
 		plugin(({ addVariant }) => addVariant("parent-expanded", "[aria-expanded='true'] > &")),
+		plugin(({ addVariant }) => addVariant("grandparent-expanded", "[aria-expanded='true'] > * > &")),
 	],
 };

@@ -38,6 +38,7 @@
 	{% if request.page_type != 'index' %}
 		<hr class="w-full h-[0.0625rem] absolute top-0 inset-x-0 block bg-orange-grayish"></hr>
 	{% endif %}
+
 	<div class="flex h-full">
 		<button type="button" class="py-[1.375rem] px-6 lg:hidden">
 			{% render 'svg', icon: 'bars', classes: 'h-5 w-4 fill-current', description: shop.name %}
@@ -60,27 +61,48 @@
 								<header-menu>
 									<details id="Details-HeaderMenu-{{ forloop.index }}" class="mega-menu">
 										<summary>
-											<span {%- if link.child_active %} class="header__active-menu-item"{% endif %}>{{ link.title | escape }}</span>
-											{% render 'icon-caret' %}
+											<span class="group relative px-8 py-7 block text-sm uppercase font-medium leading-4 hover:after:scale-y-100 parent-expanded:after:scale-y-100 after:absolute after:top-0 after:h-[0.1875rem] after:bg-current after:w-full after:inset-x-0 after:transition-transform after:duration-1000 after:ease-in-out after:origin-top {% if link.current %} after:scale-y-100 {% else %} after:scale-y-0 {% endif %}">
+												<span class="group-hover:opacity-100 group-focus:opacity-100 duration-1000 ease-in-out transition-opacity grandparent-expanded:opacity-100 {% if link.current %} opacity-100 {% else %} opacity-0 {% endif %} h-full w-[0.0625rem] {% if request.page_type == 'index' %} bg-current {% else %} bg-orange-grayish {% endif %} block absolute right-[calc(100%_-_0.03125rem)] inset-y-0"></span>
+													{{- link.title | escape -}}
+												<span class="group-hover:opacity-100 group-focus:opacity-100 duration-1000 ease-in-out transition-opacity grandparent-expanded:opacity-100 {% if link.current %} opacity-100 {% else %} opacity-0 {% endif %} h-full w-[0.0625rem] {% if request.page_type == 'index' %} bg-current {% else %} bg-orange-grayish {% endif %} block absolute left-[calc(100%_-_0.03125rem)] inset-y-0"></span>
+											</span>
 										</summary>
-										<div id="MegaMenu-Content-{{ forloop.index }}" class="mega-menu__content motion-reduce global-settings-popup" tabindex="-1">
-											<ul class="mega-menu__list page-width{% if link.levels == 1 %} mega-menu__list--condensed{% endif %}" role="list">
+
+										<div id="MegaMenu-Content-{{ forloop.index }}" class="mega-menu__content bg-white text-gray-very-dark" tabindex="-1">
+											<ul class="mega-menu__list grid text-sm font-medium page-width {% if link.levels == 1 %} mega-menu__list--condensed {% endif %}" role="list">
 												{%- for childlink in link.links -%}
-													<li>
-														<a href="{{ childlink.url }}" class="mega-menu__link mega-menu__link--level-2 {% if childlink.current %} mega-menu__link--active{% endif %}"{% if childlink.current %} aria-current="page"{% endif %}>
-															{{ childlink.title | escape }}
-														</a>
+													<li class="relative py-8 px-16">
+														{% if '#' == childlink.url and '#' == childlink.title %}
+														{% elsif '#' == childlink.url %}
+															<p class="font-bold text-sm leading-7 uppercase mb-3">
+																{{ childlink.title | escape }}
+															</p>
+														{% else %}
+															<a href="{{ childlink.url }}" class="hover:underline py-2 is-active:underline mega-menu__link--level-2 {% if childlink.current %} is-active {% endif %}"{% if childlink.current %} aria-current="page"{% endif %}>
+																{{ childlink.title | escape }}
+															</a>
+														{% endif %}
+
 														{%- if childlink.links != blank -%}
 															<ul role="list">
 																{%- for grandchildlink in childlink.links -%}
-																	<li>
-																		<a href="{{ grandchildlink.url }}" class="mega-menu__link {% if grandchildlink.current %} mega-menu__link--active{% endif %}"{% if grandchildlink.current %} aria-current="page"{% endif %}>
-																			{{ grandchildlink.title | escape }}
+																	<li class="{% if grandchildlink.title contains '[all]' %} font-semibold mt-6 {% endif %}">
+																		<a href="{{ grandchildlink.url }}" class="py-1 inline-block align-middle hover:underline is-active:underline {% if grandchildlink.title contains '[all]' %} underline {% endif %} {% if grandchildlink.current %} is-active {% endif %}"{% if grandchildlink.current %} aria-current="page"{% endif %}>
+																			{{ grandchildlink.title | replace: ' [all]', '' | replace: ' [new]', '' | strip | escape }}
 																		</a>
+																		{% if grandchildlink.title contains '[new]' %}
+																			<sup class="text-xs text-red-very-light">{{ 'products.product.new' | t }}</sup>
+																		{% endif %}
 																	</li>
 																{%- endfor -%}
 															</ul>
 														{%- endif -%}
+
+														<span class="absolute block left-[100%] inset-y-0 bg-orange-grayish w-[0.0625rem] h-full"></span>
+
+														{% if '#' == childlink.url and '#' == childlink.title and forloop.first %}
+															<img class="mt-8 w-full h-auto block" src="{{ 'menu.png' | asset_img_url: '178x267', crop: 'center' }}" width="178" height="267" loading="lazy" />
+														{% endif %}
 													</li>
 												{%- endfor -%}
 											</ul>
