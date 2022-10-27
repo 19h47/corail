@@ -1952,6 +1952,10 @@ a:not([href]){
 	width: 0.5rem;
 }
 
+.max-w-\[16rem\]{
+	max-width: 16rem;
+}
+
 .max-w-9\/12{
 	max-width: 75%;
 }
