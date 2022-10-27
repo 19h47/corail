@@ -21,6 +21,7 @@
   	{{ 'component-loading-overlay.css' | asset_url | stylesheet_tag }}
 {%- endif -%}
 
+
 <noscript>{{ 'component-search.css' | asset_url | stylesheet_tag }}</noscript>
 <noscript>{{ 'component-menu-drawer.css' | asset_url | stylesheet_tag }}</noscript>
 <noscript>{{ 'component-cart-notification.css' | asset_url | stylesheet_tag }}</noscript>
@@ -144,26 +145,30 @@
 				</nav>
 			{% endif %}
 
-			<details-modal class="header__search hidden lg:block">
+			<details-modal class="hidden lg:block">
 				<details>
-					<summary class="block p-[1.6875rem]" aria-haspopup="dialog" aria-label="{{ 'general.search.search' | t }}">
-						{% render 'svg', icon: 'magnifying-glass', classes: 'w-[1.125rem] h-[1.125rem] fill-current' %}
-						{% comment %} <svg class="modal__toggle-close icon icon-close" aria-hidden="true" focusable="false" role="presentation">
-							<use href="#icon-close">
-						</svg> {% endcomment %}
+					<summary class="block w-[4.5rem] h-[4.5rem] relative" aria-haspopup="dialog" aria-label="{{ 'general.search.search' | t }}">
+						{% render 'svg', icon: 'magnifying-glass', classes: 'm-auto absolute inset-0 w-[1.125rem] h-[1.125rem] fill-current block parent-open:hidden' %}
+						{% render 'svg', icon: 'close', classes: 'm-auto absolute inset-0 w-[1.125rem] h-[1.125rem] fill-current hidden parent-open:block' %}
 					</summary>
 
-					<div class="search-modal modal__content" role="dialog" aria-modal="true" aria-label="{{ 'general.search.search' | t }}">
-						<div class="modal-overlay"></div>
-						<div class="search-modal__content{% if settings.inputs_shadow_vertical_offset != 0 and settings.inputs_shadow_vertical_offset < 0 %} search-modal__content-top{% else %} search-modal__content-bottom{% endif %}" tabindex="-1">
+					<div class="font-display search-modal bg-white absolute inset-0 z-4" role="dialog" aria-modal="true" aria-label="{{ 'general.search.search' | t }}">
+
+						<div class="modal-overlay js-modal-overlay"></div>
+
+						<span class="absolute top-[100%] bg-orange-grayish w-full h-[0.0625rem]"></span>
+						<span class="absolute bottom-[100%] bg-orange-grayish w-full h-[0.0625rem]"></span>
+
+						<div class="flex items-center" tabindex="-1">
+
 							{%- if settings.predictive_search_enabled -%}
-								<predictive-search class="search-modal__form" data-loading-text="{{ 'accessibility.loading' | t }}">
+								<predictive-search class="w-full" data-loading-text="{{ 'accessibility.loading' | t }}">
 							{%- endif -%}
 
-							<form action="{{ routes.search_url }}" method="get" role="search" class="search search-modal__form">
-								<div class="field">
+							<form action="{{ routes.search_url }}" method="get" role="search" class="search w-full">
+								<div class="relative">
 									<input
-										class="search__input field__input"
+										class="pr-[4.5rem] w-full h-[4.5rem] pl-2.5"
 										id="Search-In-Modal-1"
 										type="search"
 										name="q"
@@ -182,22 +187,21 @@
 											spellcheck="false"
 										{%- endif -%}
 									>
-									<label class="field__label" for="Search-In-Modal-1">{{ 'general.search.search' | t }}</label>
+
 									<input type="hidden" name="options[prefix]" value="last">
-									<button class="search__button field__button" aria-label="{{ 'general.search.search' | t }}">
-										<svg class="icon icon-magnifying-glass" aria-hidden="true" focusable="false" role="presentation">
-											<use href="#icon-magnifying-glass">
-										</svg>
+
+									<button class="absolute right-0 inset-y-0 flex items-center justify-center w-[4.5rem] h-[4.5rem]" aria-label="{{ 'general.search.search' | t }}">
+										{% render 'svg', icon: 'magnifying-glass', classes: 'w-[1.125rem] h-[1.125rem] fill-current block' %}
 									</button>
 								</div>
 
 								{%- if settings.predictive_search_enabled -%}
 									<div class="predictive-search predictive-search--header" tabindex="-1" data-predictive-search>
-									<div class="predictive-search__loading-state">
-										<svg aria-hidden="true" focusable="false" role="presentation" class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
-											<circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
-										</svg>
-									</div>
+										<div class="predictive-search__loading-state">
+											<svg aria-hidden="true" focusable="false" role="presentation" class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+												<circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
+											</svg>
+										</div>
 									</div>
 
 									<span class="predictive-search-status visually-hidden" role="status" aria-hidden="true"></span>
@@ -208,11 +212,18 @@
 								</predictive-search>
 							{%- endif -%}
 
-							<button type="button" class="modal__close-button" aria-label="{{ 'accessibility.close' | t }}">
-								<svg class="icon icon-close" aria-hidden="true" focusable="false" role="presentation">
-									<use href="#icon-close">
-								</svg>
+
+							<button type="button" class="relative w-[4.5rem] h-[4.5rem] flex items-center justify-center" aria-label="{{ 'accessibility.close' | t }}">
+								<span class="absolute right-[100%] bg-orange-grayish w-[0.0625rem] h-full block"></span>
+								{% render 'svg',
+									classes: 'w-[1.125rem] h-[1.125rem] fill-current',
+									icon: 'close',
+									focusable: 'false',
+									role: 'presentation',
+									aria-hidden: 'true'
+								%}
 							</button>
+
 						</div>
 					</div>
 				</details>
@@ -344,7 +355,7 @@
     {%- endif -%}
 
     <div class="header__icons">
-      <details-modal class="header__search">
+      <details-modal>
         <details>
           <summary class="header__icon header__icon--search header__icon--summary modal__toggle" aria-haspopup="dialog" aria-label="{{ 'general.search.search' | t }}">
             <span>
@@ -357,7 +368,7 @@
             </span>
           </summary>
           <div class="search-modal modal__content" role="dialog" aria-modal="true" aria-label="{{ 'general.search.search' | t }}">
-            <div class="modal-overlay"></div>
+            <div class="modal-overlay js-modal-overlay"></div>
             <div class="search-modal__content{% if settings.inputs_shadow_vertical_offset != 0 and settings.inputs_shadow_vertical_offset < 0 %} search-modal__content-top{% else %} search-modal__content-bottom{% endif %}" tabindex="-1">
               {%- if settings.predictive_search_enabled -%}
                 <predictive-search class="search-modal__form" data-loading-text="{{ 'accessibility.loading' | t }}">

@@ -1514,6 +1514,18 @@ a:not([href]){
 	left: 100%;
 }
 
+.top-\[100\%\]{
+	top: 100%;
+}
+
+.bottom-\[100\%\]{
+	bottom: 100%;
+}
+
+.right-\[100\%\]{
+	right: 100%;
+}
+
 .left-0{
 	left: 0px;
 }
@@ -1540,6 +1552,10 @@ a:not([href]){
 
 .z-50{
 	z-index: 50;
+}
+
+.z-4{
+	z-index: 4;
 }
 
 .z-2{
@@ -1832,6 +1848,10 @@ a:not([href]){
 	height: auto;
 }
 
+.h-\[4\.5rem\]{
+	height: 4.5rem;
+}
+
 .h-\[36\.625rem\]{
 	height: 36.625rem;
 }
@@ -1914,6 +1934,10 @@ a:not([href]){
 
 .w-28{
 	width: 7rem;
+}
+
+.w-\[4\.5rem\]{
+	width: 4.5rem;
 }
 
 .w-\[calc\(50vw_\+_2\.5rem\)\]{
@@ -2231,10 +2255,6 @@ a:not([href]){
 	   object-position: center;
 }
 
-.p-\[1\.6875rem\]{
-	padding: 1.6875rem;
-}
-
 .p-\[1\.4375rem\]{
 	padding: 1.4375rem;
 }
@@ -2345,6 +2365,18 @@ a:not([href]){
 .py-2\.5{
 	padding-top: 0.625rem;
 	padding-bottom: 0.625rem;
+}
+
+.pr-\[4\.5rem\]{
+	padding-right: 4.5rem;
+}
+
+.pl-2\.5{
+	padding-left: 0.625rem;
+}
+
+.pl-2{
+	padding-left: 0.5rem;
 }
 
 .pb-4{
@@ -2917,6 +2949,14 @@ a:not([href]){
 
 [aria-expanded='true'] > * > .grandparent-expanded\:opacity-100{
 	opacity: 1;
+}
+
+[open='true'] > .parent-open\:block{
+	display: block;
+}
+
+[open='true'] > .parent-open\:hidden{
+	display: none;
 }
 
 @media (min-width: 1024px){

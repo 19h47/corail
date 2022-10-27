@@ -1,6 +1,9 @@
 <svg
 	class="{{ icon }} fill-current {% if classes %}{{ classes }}{% endif %}"
 	aria-label="{{ description }}"
+	{% if focusable %} focusable="{{ false }}" {% endif %}
+	{% if role %} role="{{ role }}" {% endif %}
+	{% if aria-hidden %} aria-hidden="{{ aria-hidden }}" {% endif %}
 >
 	<use xlink:href="#icon-{{ icon }}" href="#icon-{{ icon }}"></use>
 </svg>
