@@ -368,7 +368,8 @@
 			"title": "Compte",
 			"details": "Détails du compte",
 			"view_addresses": "Voir les adresses",
-			"return": "Retour aux détails du compte"
+			"return": "Retour aux détails du compte",
+			"contact": "Nous contacter"
 		},
 		"account_fallback": "Compte",
 		"activate_account": {

@@ -55,7 +55,7 @@
 
 		{%- if section.settings.menu != blank -%}
 			<nav class="hidden lg:flex items-center font-display">
-			  	<ul class="flex" role="list">
+			  	<ul class="flex list-none" role="list">
 					{%- for link in section.settings.menu.links -%}
 						<li>
 							{%- if link.links != blank -%}
@@ -69,8 +69,8 @@
 											</span>
 										</summary>
 
-										<div id="MegaMenu-Content-{{ forloop.index }}" class="mega-menu__content bg-white text-gray-very-dark" tabindex="-1">
-											<ul class="mega-menu__list grid text-sm font-medium page-width {% if link.levels == 1 %} mega-menu__list--condensed {% endif %}" role="list">
+										<div id="MegaMenu-Content-{{ forloop.index }}" class="mega-menu__content bg-white text-gray-very-dark " tabindex="-1">
+											<ul class="mega-menu__list grid text-sm font-medium list-none {% if link.levels == 1 %} mega-menu__list--condensed {% endif %}" role="list">
 												{%- for childlink in link.links -%}
 													<li class="relative py-8 px-16">
 														{% if '#' == childlink.url and '#' == childlink.title %}
@@ -85,7 +85,7 @@
 														{% endif %}
 
 														{%- if childlink.links != blank -%}
-															<ul role="list">
+															<ul class="list-none" role="list">
 																{%- for grandchildlink in childlink.links -%}
 																	<li class="{% if grandchildlink.title contains '[all]' %} font-semibold mt-6 {% endif %}">
 																		<a href="{{ grandchildlink.url }}" class="py-1 inline-block align-middle hover:underline is-active:underline {% if grandchildlink.title contains '[all]' %} underline {% endif %} {% if grandchildlink.current %} is-active {% endif %}"{% if grandchildlink.current %} aria-current="page"{% endif %}>
@@ -107,6 +107,8 @@
 													</li>
 												{%- endfor -%}
 											</ul>
+
+											<span class="absolute block bottom-0 inset-x-0 bg-orange-grayish h-[0.0625rem] w-full"></span>
 										</div>
 									</details>
 								</header-menu>
@@ -135,11 +137,85 @@
 
 			{%- if section.settings.secondary-menu != blank -%}
 				<nav class="hidden lg:flex items-center font-display">
-					<ul class="flex" role="list">
+					<ul class="flex list-none" role="list">
 						{%- for link in section.settings.secondary-menu.links -%}
-							<a class="px-8 py-7 block text-sm uppercase font-medium leading-4" href="{{ link.url }}" {% if link.current %} aria-current="page"{% endif %}>
-								{{ link.title | escape }}
-							</a>
+							{% if link.links != blank %}
+								<header-menu>
+									<details id="Details-HeaderMenu-{{ forloop.index }}" class="static">
+										<summary>
+											<span class="group relative px-8 py-7 block text-sm uppercase font-medium leading-4 hover:after:scale-y-100 parent-expanded:after:scale-y-100 after:absolute after:top-0 after:h-[0.1875rem] after:bg-current after:w-full after:inset-x-0 after:transition-transform after:duration-1000 after:ease-in-out after:origin-top {% if link.current %} after:scale-y-100 {% else %} after:scale-y-0 {% endif %}">
+												<span class="group-hover:opacity-100 group-focus:opacity-100 duration-1000 ease-in-out transition-opacity grandparent-expanded:opacity-100 {% if link.current %} opacity-100 {% else %} opacity-0 {% endif %} h-full w-[0.0625rem] {% if request.page_type == 'index' %} bg-current {% else %} bg-orange-grayish {% endif %} block absolute right-[calc(100%_-_0.03125rem)] inset-y-0"></span>
+													{{- link.title | escape -}}
+												<span class="group-hover:opacity-100 group-focus:opacity-100 duration-1000 ease-in-out transition-opacity grandparent-expanded:opacity-100 {% if link.current %} opacity-100 {% else %} opacity-0 {% endif %} h-full w-[0.0625rem] {% if request.page_type == 'index' %} bg-current {% else %} bg-orange-grayish {% endif %} block absolute left-[calc(100%_-_0.03125rem)] inset-y-0"></span>
+											</span>
+										</summary>
+
+										<div id="MegaMenu-Content-{{ forloop.index }}" class="py-8 px-16 absolute top-[100%] border-x border-b border-x-orange-grayish border-b-orange-grayish right-0 overflow-y-auto -z-1 bg-white text-gray-very-dark" tabindex="-1">
+
+											{% comment %}
+
+											<p class="font-bold text-sm leading-7 uppercase">{{- 'customer.account.title' | t -}}</p>
+											<p class="font-bold text-sm leading-7 uppercase">{{- 'customer.account.contact' | t -}}</p>
+
+											<ul class="list-none">
+												<li>
+													<a href="mailto:hello@corail.co" class="py-1 flex items-center hover:underline">
+														{% render 'svg', icon: 'mail', classes: 'w-5 h-5 mr-2' %}
+														hello@corail.co
+													</a>
+												</li>
+											</ul>
+
+											{% endcomment %}
+
+											{% comment %} <p class="font-bold text-sm leading-7 uppercase">{{- link.title | escape -}}</p> {% endcomment %}
+
+											<ul class="text-sm font-medium list-none space-y-3 " role="list">
+												{%- for childlink in link.links -%}
+													<li>
+														{% if childlink.links != blank %}
+															<p class="font-bold text-sm leading-7 uppercase">
+																{{ childlink.title | escape }}
+															</p>
+														{% else %}
+															<a href="{{ childlink.url }}" class="py-1 inline-block align-middle hover:underline is-active:underline  {% if childlink.current %} is-active {% endif %}"{% if childlink.current %} aria-current="page"{% endif %}>
+																{{ childlink.title | escape }}
+															</a>
+														{% endif %}
+														{% if childlink.links != blank %}
+															<ul>
+																{% for grandchildlink in childlink.links %}
+																	<li>
+																		{% if grandchildlink.title contains '[icon-mail] ' %}
+																			<a href="{{ grandchildlink.url }}" class="py-1 flex items-center hover:underline">
+																				{% render 'svg', icon: 'mail', classes: 'w-5 h-5 mr-2' %}
+																				{{ grandchildlink.title | replace: '[icon-mail] ', '' | escape }}
+																			</a>
+																		{% elsif grandchildlink.title contains '[icon-at] ' %}
+																			<a href="{{ grandchildlink.url }}" class="py-1 flex items-center hover:underline">
+																				{% render 'svg', icon: 'at', classes: 'w-5 h-5 mr-2' %}
+																				{{ grandchildlink.title | replace: '[icon-at] ', '' | escape }}
+																			</a>
+																		{% else %}
+																			<a href="{{ grandchildlink.url }}" class="py-1 inline-block align-middle hover:underline is-active:underline  {% if grandchildlink.current %} is-active {% endif %}"{% if grandchildlink.current %} aria-current="page"{% endif %}>
+																				{{ grandchildlink.title | escape }}
+																			</a>
+																		{% endif %}
+																	</li>
+																{% endfor%}
+															</ul>
+														{% endif %}
+													</li>
+												{%- endfor -%}
+											</ul>
+										</div>
+									</details>
+								</header-menu>
+							{% else %}
+								<a class="px-8 py-7 block text-sm uppercase font-medium leading-4" href="{{ link.url }}" {% if link.current %} aria-current="page"{% endif %}>
+									{{ link.title | escape }}
+								</a>
+							{% endif %}
 						{% endfor %}
 					</ul>
 				</nav>
@@ -270,7 +346,7 @@
             <div class="menu-drawer__inner-container">
               <div class="menu-drawer__navigation-container">
                 <nav class="menu-drawer__navigation">
-                  <ul class="menu-drawer__menu has-submenu" role="list">
+                  <ul class="menu-drawer__menu has-submenu list-none" role="list">
                     {%- for link in section.settings.menu.links -%}
                       <li>
                         {%- if link.links != blank -%}
@@ -286,7 +362,7 @@
                                   {% render 'icon-arrow' %}
                                   {{ link.title | escape }}
                                 </button>
-                                <ul class="menu-drawer__menu" role="list" tabindex="-1">
+                                <ul class="menu-drawer__menu list-none" role="list" tabindex="-1">
                                   {%- for childlink in link.links -%}
                                     <li>
                                       {%- if childlink.links == blank -%}
@@ -305,7 +381,7 @@
                                               {% render 'icon-arrow' %}
                                               {{ childlink.title | escape }}
                                             </button>
-                                            <ul class="menu-drawer__menu" role="list" tabindex="-1">
+                                            <ul class="menu-drawer__menu list-none" role="list" tabindex="-1">
                                               {%- for grandchildlink in childlink.links -%}
                                                 <li>
                                                   <a href="{{ grandchildlink.url }}" class="menu-drawer__menu-item {% if grandchildlink.current %} menu-drawer__menu-item--active{% endif %}"{% if grandchildlink.current %} aria-current="page"{% endif %}>

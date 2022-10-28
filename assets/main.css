@@ -1457,6 +1457,10 @@ a:not([href]){
 	pointer-events: none;
 }
 
+.static{
+	position: static;
+}
+
 .fixed{
 	position: fixed;
 }
@@ -1552,6 +1556,10 @@ a:not([href]){
 
 .z-50{
 	z-index: 50;
+}
+
+.-z-1{
+	z-index: -1;
 }
 
 .z-4{
@@ -1936,6 +1944,10 @@ a:not([href]){
 	width: 7rem;
 }
 
+.w-5{
+	width: 1.25rem;
+}
+
 .w-\[4\.5rem\]{
 	width: 4.5rem;
 }
@@ -1950,10 +1962,6 @@ a:not([href]){
 
 .w-6{
 	width: 1.5rem;
-}
-
-.w-5{
-	width: 1.25rem;
 }
 
 .w-7\/12{
@@ -1994,6 +2002,10 @@ a:not([href]){
 
 .cursor-pointer{
 	cursor: pointer;
+}
+
+.list-none{
+	list-style-type: none;
 }
 
 .flex-col{
@@ -2089,6 +2101,12 @@ a:not([href]){
 	margin-bottom: calc(2.75rem * var(--tw-space-y-reverse));
 }
 
+.space-y-3 > :not([hidden]) ~ :not([hidden]){
+	--tw-space-y-reverse: 0;
+	margin-top: calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));
+	margin-bottom: calc(0.75rem * var(--tw-space-y-reverse));
+}
+
 .space-y-8 > :not([hidden]) ~ :not([hidden]){
 	--tw-space-y-reverse: 0;
 	margin-top: calc(2rem * calc(1 - var(--tw-space-y-reverse)));
@@ -2105,12 +2123,6 @@ a:not([href]){
 	--tw-space-y-reverse: 0;
 	margin-top: calc(0.875rem * calc(1 - var(--tw-space-y-reverse)));
 	margin-bottom: calc(0.875rem * var(--tw-space-y-reverse));
-}
-
-.space-y-3 > :not([hidden]) ~ :not([hidden]){
-	--tw-space-y-reverse: 0;
-	margin-top: calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));
-	margin-bottom: calc(0.75rem * var(--tw-space-y-reverse));
 }
 
 .divide-y-\[0\.0625rem\] > :not([hidden]) ~ :not([hidden]){
@@ -2130,6 +2142,10 @@ a:not([href]){
 
 .overflow-visible{
 	overflow: visible;
+}
+
+.overflow-y-auto{
+	overflow-y: auto;
 }
 
 .truncate{
@@ -2152,6 +2168,11 @@ a:not([href]){
 
 .border{
 	border-width: 1px;
+}
+
+.border-x{
+	border-left-width: 1px;
+	border-right-width: 1px;
 }
 
 .border-x-\[0\.0625rem\]{
