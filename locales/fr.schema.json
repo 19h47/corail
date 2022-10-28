@@ -404,14 +404,23 @@
 				"column_left_image": {
 					"label": "Image de la colonne de gauche"
 				},
+				"column_left_title_research": {
+					"label": "Titre Research"
+				},
 				"column_left_icon_research": {
-					"label": "Research"
+					"label": "Icône Research"
+				},
+				"column_left_title_technical": {
+					"label": "Titre Semelle technique"
 				},
 				"column_left_icon_technical": {
-					"label": "Semelle technique"
+					"label": "Icône Semelle technique"
+				},
+				"column_left_title_recycled": {
+					"label": "Titre Matières recyclés"
 				},
 				"column_left_icon_recycled": {
-					"label": "Matières recyclés"
+					"label": "Icône Matières recyclés"
 				},
 				"column_right_title": {
 					"label": "Titre de la colonne de droite"
@@ -427,6 +436,9 @@
 				},
 				"column_right_image": {
 					"label": "Image de la colonne de droite"
+				},
+				"icons": {
+					"content": "Icônes"
 				}
 			},
 			"presets": {
