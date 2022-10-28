@@ -408,19 +408,19 @@
           "label": "Titre Research"
         },
         "column_left_icon_research": {
-          "label": "Icône Research"
+          "label": "Afficher l'icône Research"
         },
         "column_left_title_technical": {
           "label": "Titre Semelle technique"
         },
         "column_left_icon_technical": {
-          "label": "Icône Semelle technique"
+          "label": "Afficher l'icône Semelle technique"
         },
         "column_left_title_recycled": {
           "label": "Titre Matières recyclés"
         },
         "column_left_icon_recycled": {
-          "label": "Icône Matières recyclés"
+          "label": "Afficher l'icône Matières recyclés"
         },
         "column_right_title": {
           "label": "Titre de la colonne de droite"
