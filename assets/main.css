@@ -1,3 +1,6 @@
+/*!********************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[8].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[8].use[2]!./src/stylesheets/styles.css ***!
+  \********************************************************************************************************************************************************************************/
 /**
  * Base
  *
@@ -1620,6 +1623,16 @@ a:not([href]){
 	margin-right: 3.5rem;
 }
 
+.mx-auto{
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.my-32{
+	margin-top: 8rem;
+	margin-bottom: 8rem;
+}
+
 .mb-24{
 	margin-bottom: 6rem;
 }
@@ -1756,6 +1769,10 @@ a:not([href]){
 	margin-right: 1.75rem;
 }
 
+.ml-2\/12{
+	margin-left: 16.666666666666668%;
+}
+
 .mt-auto{
 	margin-top: auto;
 }
@@ -1774,6 +1791,10 @@ a:not([href]){
 
 .mr-5{
 	margin-right: 1.25rem;
+}
+
+.mt-24{
+	margin-top: 6rem;
 }
 
 .block{
@@ -1882,6 +1903,10 @@ a:not([href]){
 
 .h-28{
 	height: 7rem;
+}
+
+.h-\[55\.5rem\]{
+	height: 55.5rem;
 }
 
 .h-\[25\.5rem\]{
@@ -2034,6 +2059,10 @@ a:not([href]){
 
 .justify-between{
 	justify-content: space-between;
+}
+
+.justify-around{
+	justify-content: space-around;
 }
 
 .gap-2{
@@ -2474,6 +2503,10 @@ a:not([href]){
 	font-size: 9.375rem;
 }
 
+.text-\[7\.5rem\]{
+	font-size: 7.5rem;
+}
+
 .text-lg{
 	font-size: 1.125rem;
 	line-height: 1.75rem;
@@ -2537,6 +2570,14 @@ a:not([href]){
 
 .leading-\[3\.125rem\]{
 	line-height: 3.125rem;
+}
+
+.leading-\[6\.5625rem\]{
+	line-height: 6.5625rem;
+}
+
+.leading-\[2\.75rem\]{
+	line-height: 2.75rem;
 }
 
 .text-gray-very-dark{
@@ -2658,6 +2699,12 @@ a:not([href]){
 
 .col-6\/12{
 	width: 50%;
+	padding-left: 0.625rem;
+	padding-right: 0.625rem;
+}
+
+.col-8\/12{
+	width: 66.666667%;
 	padding-left: 0.625rem;
 	padding-right: 0.625rem;
 }
@@ -3431,3 +3478,5 @@ a:not([href]){
 	}
 }
 
+
+/*# sourceMappingURL=main.css.map*/
