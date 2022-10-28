@@ -233,50 +233,6 @@
         "padding_bottom": 36
       }
     },
-    "multicolumn": {
-      "type": "multicolumn",
-      "disabled": true,
-      "blocks": {
-        "column-0": {
-          "type": "column",
-          "settings": {
-            "title": "Free Shipping",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column-1": {
-          "type": "column",
-          "settings": {
-            "title": "Hassle-Free Exchanges",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "column-0",
-        "column-1"
-      ],
-      "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "columns_desktop": 2,
-        "column_alignment": "left",
-        "background_style": "none",
-        "button_label": "",
-        "button_link": "",
-        "color_scheme": "background-1",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "43dfab5f-1246-4a2e-a403-00608e142f00": {
       "type": "marquee",
       "settings": {
@@ -315,6 +271,24 @@
         "column_right_image": "shopify:\/\/shop_images\/green-and-white-marbled-coloring.jpg"
       }
     },
+    "6a936414-7d9e-4e58-8e5a-38c840ae7acb": {
+      "type": "twocolumn",
+      "settings": {
+        "title": "HANDMADE TO LAST",
+        "column_left_image": "shopify:\/\/shop_images\/legs-dangling-over-ledge-showing-off-fashion-sneakers.jpg",
+        "column_left_title_research": "RESISTANCE TESTED INEXTREME CONDITIONS",
+        "column_left_icon_research": false,
+        "column_left_title_technical": "",
+        "column_left_icon_technical": false,
+        "column_left_title_recycled": "",
+        "column_left_icon_recycled": false,
+        "column_right_title": "RESISTANCE TESTED IN EXTREME CONDITIONS",
+        "column_right_content": "Our products are handmade in our workshop in Portugal and submitted to extreme durability tests to insure their quality and long-lastingness. The real sustainable product is the one you keep.",
+        "column_right_button_label": "OUR WORKSHOP",
+        "column_right_button_link": "#",
+        "column_right_image": "shopify:\/\/shop_images\/white-speckled-sneakers-and-dark-denim-beside-brick-wall.jpg"
+      }
+    },
     "634fcd5e-4684-44fe-b78a-33275a9b184c": {
       "type": "logo",
       "settings": {
@@ -326,10 +300,10 @@
     "7d00fc27-c309-4d0a-9c10-bc7f88577e55",
     "5352a5eb-3296-4b9c-9021-e759c6c0ea6b",
     "image-with-text",
-    "multicolumn",
     "43dfab5f-1246-4a2e-a403-00608e142f00",
     "product-recommendations",
     "206fe739-7a26-40e7-85fd-b60e38b52282",
+    "6a936414-7d9e-4e58-8e5a-38c840ae7acb",
     "634fcd5e-4684-44fe-b78a-33275a9b184c"
   ]
 }
