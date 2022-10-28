@@ -235,55 +235,55 @@
   },
   "sections": {
     "twocolumn": {
-		"name": "Deux colonnes",
-		"settings": {
-			"title": {
-				"label": "Titre"
-			},
-			"column_left_image": {
-				"label": "Image de la colonne de gauche"
-			},
-			"column_left_title_research": {
-				"label": "Titre Research"
-			},
-			"column_left_icon_research": {
-				"label": "Icône Research"
-			},
-			"column_left_title_technical": {
-				"label": "Titre Semelle technique"
-			},
-			"column_left_icon_technical": {
-				"label": "Icône Semelle technique"
-			},
-			"column_left_title_recycled": {
-				"label": "Titre Matières recyclés"
-			},
-			"column_left_icon_recycled": {
-				"label": "Icône Matières recyclés"
-			},
-			"column_right_title": {
-				"label": "Titre de la colonne de droite"
-			},
-			"column_right_content": {
-				"label": "Contenu de la colonne de droite"
-			},
-			"column_right_button_label": {
-				"label": "Titre du bouton de la colonne de droite"
-			},
-			"column_right_button_link": {
-				"label": "Lien du bouton de la colonne de droite"
-			},
-			"column_right_image": {
-				"label": "Image de la colonne de droite"
-			},
-			"icons": {
-				"content": "Icônes"
-			}
-		},
-		"presets": {
-			"name": "Deux colonnes"
-		}
-	},
+      "name": "Deux colonnes",
+      "settings": {
+        "title": {
+          "label": "Titre"
+        },
+        "column_left_image": {
+          "label": "Image de la colonne de gauche"
+        },
+        "column_left_title_research": {
+          "label": "Titre Research"
+        },
+        "column_left_icon_research": {
+          "label": "Icône Research"
+        },
+        "column_left_title_technical": {
+          "label": "Titre Semelle technique"
+        },
+        "column_left_icon_technical": {
+          "label": "Icône Semelle technique"
+        },
+        "column_left_title_recycled": {
+          "label": "Titre Matières recyclés"
+        },
+        "column_left_icon_recycled": {
+          "label": "Icône Matières recyclés"
+        },
+        "column_right_title": {
+          "label": "Titre de la colonne de droite"
+        },
+        "column_right_content": {
+          "label": "Contenu de la colonne de droite"
+        },
+        "column_right_button_label": {
+          "label": "Titre du bouton de la colonne de droite"
+        },
+        "column_right_button_link": {
+          "label": "Lien du bouton de la colonne de droite"
+        },
+        "column_right_image": {
+          "label": "Image de la colonne de droite"
+        },
+        "icons": {
+          "content": "Icônes"
+        }
+      },
+      "presets": {
+        "name": "Deux colonnes"
+      }
+    },
     "announcement": {
       "name": "Annonce",
       "settings": {
