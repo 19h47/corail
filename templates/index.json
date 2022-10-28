@@ -201,24 +201,6 @@
       "type": "logo",
       "settings": {
       }
-    },
-    "1a7bb568-7eac-4fbd-952a-c015b5f1cf17": {
-      "type": "twocolumn",
-      "settings": {
-        "title": "Started from the bottle",
-        "column_left_image": "shopify:\/\/shop_images\/aged-tree-bark-texture.jpg",
-        "column_left_title_research": "Research",
-        "column_left_icon_research": true,
-        "column_left_title_technical": "Semelle technique",
-        "column_left_icon_technical": true,
-        "column_left_title_recycled": "Matières recyclés",
-        "column_left_icon_recycled": true,
-        "column_right_title": "matériaux et  procédés INNOVANT",
-        "column_right_content": "CORAIL°Lab est un espace permettant de réfléchir à des solutions innovantes pour retirer puis transformer les déchets marins en matière première.",
-        "column_right_button_label": "Découvrir le Lab",
-        "column_right_button_link": "shopify:\/\/pages\/lab",
-        "column_right_image": "shopify:\/\/shop_images\/green-and-white-marbled-coloring.jpg"
-      }
     }
   },
   "order": [
@@ -231,7 +213,6 @@
     "89e98e22-4773-418d-9dba-1ac026db6b99",
     "9a562e76-1cbf-464f-8250-9df50fef249b",
     "1664891410510688cf",
-    "22f962ae-c478-4570-9791-ac91a766b93c",
-    "1a7bb568-7eac-4fbd-952a-c015b5f1cf17"
+    "22f962ae-c478-4570-9791-ac91a766b93c"
   ]
 }

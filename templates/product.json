@@ -53,7 +53,6 @@
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
-            "picker_type": "button"
           }
         },
         "quantity_selector": {
@@ -298,6 +297,22 @@
         "padding_bottom": 28
       }
     },
+    "206fe739-7a26-40e7-85fd-b60e38b52282": {
+      "type": "twocolumn",
+      "settings": {
+        "title": "Twocolumn",
+        "column_left_title_research": "",
+        "column_left_icon_research": false,
+        "column_left_title_technical": "",
+        "column_left_icon_technical": false,
+        "column_left_title_recycled": "",
+        "column_left_icon_recycled": false,
+        "column_right_title": "Column right title",
+        "column_right_content": "Column right content",
+        "column_right_button_label": "Button label",
+        "column_right_button_link": ""
+      }
+    },
     "634fcd5e-4684-44fe-b78a-33275a9b184c": {
       "type": "logo",
       "settings": {
@@ -312,6 +327,7 @@
     "multicolumn",
     "43dfab5f-1246-4a2e-a403-00608e142f00",
     "product-recommendations",
+    "206fe739-7a26-40e7-85fd-b60e38b52282",
     "634fcd5e-4684-44fe-b78a-33275a9b184c"
   ]
 }
