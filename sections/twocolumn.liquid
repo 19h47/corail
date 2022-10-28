@@ -1,0 +1,75 @@
+<div class="twocolumn">
+	<div class="container">
+		<div class="row"><div>TwoColumn</div></div>
+	</div>
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.twocolumn.name",
+  "class": "section",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "column_left_image",
+      "label": "t:sections.twocolumn.settings.column_left_image.label"
+    },
+    {
+      "type": "select",
+      "id": "column_left_icons",
+      "label": "t:sections.twocolumn.settings.column_left_icons.label",
+      "options": [
+        {
+          "value": "research",
+          "label": "t:sections.twocolumn.settings.column_left_icons.options__research"
+        },
+        {
+          "value": "technical",
+          "label": "t:sections.twocolumn.settings.column_left_icons.options__technical"
+        },
+        {
+          "value": "recycled",
+          "label": "t:sections.twocolumn.settings.column_left_icons.options__recycled"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "id": "column_right_title",
+      "default": "Twocolumn",
+      "label": "t:sections.twocolumn.settings.column_right_title.label"
+    },
+    {
+      "type": "textarea",
+      "id": "column_right_content",
+      "default": "Content",
+      "label": "t:sections.twocolumn.settings.column_right_content.label"
+    },
+    {
+      "type": "text",
+      "id": "column_right_button_label",
+      "default": "Button label",
+      "label": "t:sections.twocolumn.settings.column_right_button_label.label"
+    },
+    {
+      "type": "url",
+      "id": "column_right_button_link",
+      "label": "t:sections.twocolumn.settings.column_right_button_link.label"
+    },
+    {
+      "type": "image_picker",
+      "id": "column_right_image",
+      "label": "t:sections.twocolumn.settings.column_right_image.label"
+    }
+  ],
+  "blocks": [
+
+  ],
+  "presets": [
+    {
+      "name": "t:sections.multicolumn.presets.name"
+    }
+  ]
+}
+{% endschema %}
