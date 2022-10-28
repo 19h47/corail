@@ -776,8 +776,11 @@
         "video_cover_image": {
           "label": "Image de couverture"
         },
+		"video": {
+			"label": "Vidéo"
+		},
         "video_url": {
-          "label": "URL",
+          "label": "Vidéo (Vimeo ou YouTube)",
           "placeholder": "https:\/\/youtube.com\/",
           "info": "La vidéo est lue sur la page."
         },
