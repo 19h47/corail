@@ -205,7 +205,8 @@
     "1a7bb568-7eac-4fbd-952a-c015b5f1cf17": {
       "type": "twocolumn",
       "settings": {
-        "column_left_icons": "research",
+        "title": "Started from the bottle",
+        "column_left_image": "shopify:\/\/shop_images\/aged-tree-bark-texture.jpg",
         "column_right_title": "Twocolumn",
         "column_right_content": "Content",
         "column_right_button_label": "Button label",
