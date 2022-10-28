@@ -201,6 +201,16 @@
       "type": "logo",
       "settings": {
       }
+    },
+    "1a7bb568-7eac-4fbd-952a-c015b5f1cf17": {
+      "type": "twocolumn",
+      "settings": {
+        "column_left_icons": "research",
+        "column_right_title": "Twocolumn",
+        "column_right_content": "Content",
+        "column_right_button_label": "Button label",
+        "column_right_button_link": ""
+      }
     }
   },
   "order": [
@@ -213,6 +223,7 @@
     "89e98e22-4773-418d-9dba-1ac026db6b99",
     "9a562e76-1cbf-464f-8250-9df50fef249b",
     "1664891410510688cf",
-    "22f962ae-c478-4570-9791-ac91a766b93c"
+    "22f962ae-c478-4570-9791-ac91a766b93c",
+    "1a7bb568-7eac-4fbd-952a-c015b5f1cf17"
   ]
 }
