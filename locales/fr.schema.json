@@ -395,6 +395,29 @@
         }
       }
     },
+	"twocolumn": {
+		"name": "Deux colonnes",
+		"settings": {
+			"title": {
+				"label": "Titre"
+			},
+			"column_left_image": {
+				"label": "Image de la colonne de gauche"
+			},
+			"column_left_icons": {
+				"label": "Icons de la colonne de gauche",
+				"options__research": "Research",
+				"options__technical": "Semelle technique",
+				"options__recycled": "Matières recyclés"
+			},
+			"column_right_title": { "label": "Titre de la colonne de droite" },
+			"column_right_content": { "label": "Contenu de la colonne de droite" },
+			"column_right_button_label": { "label": "Titre du bouton de la colonne de droite" },
+			"column_right_button_link": { "label": "Lien du bouton de la colonne de droite" },
+			"column_right_image": { "label": "Image de la colonne de droite" }
+		},
+		"presets": { "name": "Deux colonnes" }
+	},
     "announcement": {
       "name": "Annonce",
       "settings": {
