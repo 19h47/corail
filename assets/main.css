@@ -1502,6 +1502,10 @@ a:not([href]){
 	right: 0px;
 }
 
+.bottom-\[100\%\]{
+	bottom: 100%;
+}
+
 .-right-\[0\.03125rem\]{
 	right: -0.03125rem;
 }
@@ -1520,10 +1524,6 @@ a:not([href]){
 
 .top-\[100\%\]{
 	top: 100%;
-}
-
-.bottom-\[100\%\]{
-	bottom: 100%;
 }
 
 .right-\[100\%\]{

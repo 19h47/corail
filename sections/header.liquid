@@ -35,9 +35,9 @@
   <script src="{{ 'cart-drawer.js' | asset_url }}" defer="defer"></script>
 {%- endif -%}
 
-<sticky-header class="header-wrapper h-16 lg:h-[4.5rem] relative z-20 {% if request.page_type == 'index' %} text-white {% else %} bg-white {% endif %}">
+<sticky-header class="header-wrapper block h-16 lg:h-[4.5rem] relative z-20 {% if request.page_type == 'index' %} text-white {% else %} bg-white {% endif %}">
 	{% if request.page_type != 'index' %}
-		<hr class="w-full h-[0.0625rem] absolute top-0 inset-x-0 block bg-orange-grayish"></hr>
+		<hr class="w-full h-[0.0625rem] absolute bottom-[100%] inset-x-0 block bg-orange-grayish"></hr>
 	{% endif %}
 
 	<div class="flex h-full">
