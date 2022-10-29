@@ -136,7 +136,7 @@
 			{%- endunless -%}
 		</div>
 
-		<footer class="border-t mt-4 border-orange-grayish pt-3 text-sm leading-4 uppercase">
+		<footer class="border-t mt-2 lg:mt-4 border-orange-grayish pt-1.5 lg:pt-3 text-[0.5rem] lg:text-sm leading-[1.125rem] lg:leading-4 uppercase">
 			<div class="flex justify-between">
 				<h3{% if card_product.featured_media == nil and settings.card_style == 'standard' %} id="title-{{ section_id }}-{{ card_product.id }}"{% endif %}>
 					{{- card_product.title | escape -}}

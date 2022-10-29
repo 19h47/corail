@@ -1,4 +1,12 @@
-{% assign classes = classes | default: 'py-3' %}
+{% liquid
+	assign hide_on_mobile_classes = ''
+
+	if section.settings.hide_on_mobile
+		assign hide_on_mobile_classes = ' hidden lg:block'
+	endif
+
+	assign classes = classes | default: 'py-3' | append: hide_on_mobile_classes
+%}
 
 {% render 'announcement', classes: classes, text: section.settings.text, link: section.settings.link, attributes: block.shopify_attributes %}
 
