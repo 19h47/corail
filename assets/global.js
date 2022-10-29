@@ -1,3 +1,4 @@
+/* eslint-disable max-classes-per-file */
 function getFocusableElements(container) {
 	return Array.from(
 		container.querySelectorAll(
@@ -427,14 +428,10 @@ class HeaderDrawer extends MenuDrawer {
 
 	openMenuDrawer(summaryElement) {
 		this.header = this.header || document.getElementById("shopify-section-header");
-		this.borderOffset =
-			this.borderOffset ||
-			this.closest(".header-wrapper").classList.contains("header-wrapper--border-bottom")
-				? 1
-				: 0;
+
 		document.documentElement.style.setProperty(
 			"--header-bottom-position",
-			`${parseInt(this.header.getBoundingClientRect().bottom - this.borderOffset)}px`
+			`${parseInt(this.header.getBoundingClientRect().bottom, 10)}px`
 		);
 		this.header.classList.add("menu-open");
 

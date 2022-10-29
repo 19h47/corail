@@ -1438,7 +1438,7 @@ a:not([href]){
 	left: 0px;
 	right: 0px;
 	top: 0px;
-	z-index: 50;
+	z-index: 60;
 }
 
 .sr-only{
@@ -1630,6 +1630,11 @@ a:not([href]){
 	margin-right: auto;
 }
 
+.my-4{
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}
+
 .mb-24{
 	margin-bottom: 6rem;
 }
@@ -1794,6 +1799,10 @@ a:not([href]){
 	margin-right: 1.25rem;
 }
 
+.ml-2\.5{
+	margin-left: 0.625rem;
+}
+
 .block{
 	display: block;
 }
@@ -1922,6 +1931,10 @@ a:not([href]){
 	height: 0.5rem;
 }
 
+.h-2\.5{
+	height: 0.625rem;
+}
+
 .w-\[1\.125rem\]{
 	width: 1.125rem;
 }
@@ -2004,6 +2017,10 @@ a:not([href]){
 
 .w-2{
 	width: 0.5rem;
+}
+
+.w-2\.5{
+	width: 0.625rem;
 }
 
 .max-w-\[16rem\]{
@@ -2151,6 +2168,12 @@ a:not([href]){
 	margin-bottom: calc(0.875rem * var(--tw-space-y-reverse));
 }
 
+.space-y-4 > :not([hidden]) ~ :not([hidden]){
+	--tw-space-y-reverse: 0;
+	margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
+	margin-bottom: calc(1rem * var(--tw-space-y-reverse));
+}
+
 .divide-y-\[0\.0625rem\] > :not([hidden]) ~ :not([hidden]){
 	--tw-divide-y-reverse: 0;
 	border-top-width: calc(0.0625rem * calc(1 - var(--tw-divide-y-reverse)));
@@ -2172,6 +2195,10 @@ a:not([href]){
 
 .overflow-y-auto{
 	overflow-y: auto;
+}
+
+.overflow-x-hidden{
+	overflow-x: hidden;
 }
 
 .truncate{
@@ -2354,11 +2381,6 @@ a:not([href]){
 	padding-bottom: 1.375rem;
 }
 
-.px-6{
-	padding-left: 1.5rem;
-	padding-right: 1.5rem;
-}
-
 .px-8{
 	padding-left: 2rem;
 	padding-right: 2rem;
@@ -2407,6 +2429,16 @@ a:not([href]){
 .py-\[0\.3125rem\]{
 	padding-top: 0.3125rem;
 	padding-bottom: 0.3125rem;
+}
+
+.px-6{
+	padding-left: 1.5rem;
+	padding-right: 1.5rem;
+}
+
+.py-4{
+	padding-top: 1rem;
+	padding-bottom: 1rem;
 }
 
 .py-2\.5{
@@ -2575,6 +2607,10 @@ a:not([href]){
 
 .leading-\[2\.75rem\]{
 	line-height: 2.75rem;
+}
+
+.leading-8{
+	line-height: 2rem;
 }
 
 .text-gray-very-dark{
@@ -2996,6 +3032,16 @@ a:not([href]){
 
 .is-active.is-active\:underline{
 	text-decoration-line: underline;
+}
+
+.expanded\:bg-gray-very-dark[aria-expanded='true']{
+	--tw-bg-opacity: 1;
+	background-color: rgb(51 51 51 / var(--tw-bg-opacity));
+}
+
+.expanded\:text-white[aria-expanded='true']{
+	--tw-text-opacity: 1;
+	color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 [aria-expanded='true'] > .parent-expanded\:block{

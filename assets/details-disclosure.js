@@ -1,3 +1,4 @@
+/* eslint-disable max-classes-per-file */
 class DetailsDisclosure extends HTMLElement {
 	constructor() {
 		super();
@@ -18,9 +19,9 @@ class DetailsDisclosure extends HTMLElement {
 		if (!this.animations) this.animations = this.content.getAnimations();
 
 		if (this.mainDetailsToggle.hasAttribute("open")) {
-			this.animations.forEach((animation) => animation.play());
+			this.animations.forEach(animation => animation.play());
 		} else {
-			this.animations.forEach((animation) => animation.cancel());
+			this.animations.forEach(animation => animation.cancel());
 		}
 	}
 
@@ -39,11 +40,17 @@ class HeaderMenu extends DetailsDisclosure {
 	}
 
 	onToggle() {
-		if (!this.header) return;
+		if (!this.header) {
+			return;
+		}
+
 		this.header.preventHide = this.mainDetailsToggle.open;
 
-		if (document.documentElement.style.getPropertyValue("--header-bottom-position-desktop") !== "")
+		if ("" !== document.documentElement.style.getPropertyValue("--header-bottom-position-desktop")) {
+			// eslint-disable-next-line no-useless-return
 			return;
+		}
+
 		document.documentElement.style.setProperty(
 			"--header-bottom-position-desktop",
 			`${Math.floor(this.header.getBoundingClientRect().bottom)}px`

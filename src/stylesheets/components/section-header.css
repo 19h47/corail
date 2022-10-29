@@ -6,6 +6,6 @@
 
 @layer components {
 	.section-header {
-		@apply sticky z-50 top-0 inset-x-0;
+		@apply sticky z-[60] top-0 inset-x-0;
 	}
 }
