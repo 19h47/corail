@@ -1,18 +1,26 @@
-<div class="twocolumn my-[16rem]">
+<div class="twocolumn my-28 lg:my-[16rem]">
 	<div class="container">
-		<div class="row mb-24">
-			<div class="col-8/12 ml-2/12"><h2 class="font-bold text-[7.5rem] text-center leading-[6.5625rem] font-display uppercase">{{ section.settings.title }}</h2></div>
-		</div>
+
+		{% if section.settings.title != blank %}
+			<div class="row mb-14 lg:mb-24">
+				<div class="lg:col-8/12 lg:ml-2/12">
+					<h2 class="font-bold text-[3.125rem] leading-[2.8125rem] lg:text-[7.5rem] text-center lg:leading-[6.5625rem] font-display uppercase">
+						{{ section.settings.title }}
+					</h2>
+				</div>
+			</div>
+		{% endif %}
+
 		<div class="row ">
-			<div class="col-6/12">
+			<div class="lg:col-6/12">
 				{{ section.settings.column_left_image | image_url: width: 692, height: 888 | image_tag:
 					loading: 'lazy',
 					widths: '275, 550, 710, 1420',
-					class: 'w-full h-[55.5rem] object-cover object-center block'
+					class: 'w-full h-[22.5rem] lg:h-[55.5rem] object-cover object-center block'
 				}}
 
 				{% if section.settings.column_left_icon_research or section.settings.column_left_icon_technical or section.settings.column_left_icon_recycled %}
-					<div class="flex justify-around mt-24 text-orange-dark-grayish text-center">
+					<div class="hidden lg:flex justify-around mt-24 text-orange-dark-grayish text-center">
 						{% if section.settings.column_left_icon_research %}
 							<div>
 								{% render 'svg', icon: 'decor-01', classes: 'w-28 h-28 fill-current block mx-auto' %}
@@ -37,19 +45,22 @@
 				{% endif %}
 
 			</div>
-			<div class="col-6/12">
+			<div class="lg:col-6/12 mt-8 lg:mt-0">
 				<div class="row">
-					<div class="col-4/6 ml-1/6">
-						<h3 class="font-semibold text-[2.5rem] leading-[2.75rem] uppercase font-display">
+					<div class="lg:col-4/6 lg:ml-1/6">
+						<h3 class="font-semibold text-3xl leading-8 text-[2.5rem] lg:leading-[2.75rem] uppercase font-display">
 							{{ section.settings.column_right_title }}
 						</h3>
 
 						{% if section.settings.column_right_content != blank %}
-							<p class="mt-2.5">{{ section.settings.column_right_content | newline_to_br }}</p>
+							<p class="{% if section.settings.column_right_title != blank %} mt-2.5 {% endif %} font-medium font-display leading-5 lg:text-lg lg:leading-[1.5rem]">{{ section.settings.column_right_content | newline_to_br }}</p>
 						{% endif %}
 
 						{% if section.settings.column_right_button_link != blank %}
-							<a href="{{ section.settings.column_right_button_link }}" class="mt-10 button button-red inline-block align-middle">
+							<a
+								href="{{ section.settings.column_right_button_link }}"
+								class="{% if section.settings.column_right_title != blank or section.settings.column_right_content != blank %} mt-5 lg:mt-10 {% endif %} button button-red inline-block align-middle"
+							>
 								&rightarrow;&nbsp;{{ section.settings.column_right_button_label }}
 							</a>
 						{% endif %}
@@ -59,7 +70,7 @@
 				{{ section.settings.column_right_image | image_url: width: 692, height: 888 | image_tag:
 					loading: 'lazy',
 					widths: '275, 550, 710, 1420',
-					class: 'w-full h-[55.5rem] mt-24 object-cover object-center block'
+					class: 'w-full h-[22.5rem] lg:h-[55.5rem] mt-24 object-cover object-center block'
 				}}
 			</div>
 		</div>

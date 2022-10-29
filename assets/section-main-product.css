@@ -346,9 +346,9 @@ a.product__text {
 
 @media screen and (max-width: 749px) {
 	.product__media-list {
-		margin-left: -2.5rem;
-		margin-bottom: 3rem;
-		width: calc(100% + 4rem);
+		/* margin-left: -2.5rem; */
+		/* margin-bottom: 3rem; */
+		/* width: calc(100% + 4rem); */
 	}
 
 	.product__media-wrapper slider-component:not(.thumbnail-slider--no-slide) {
@@ -370,7 +370,7 @@ a.product__text {
 	}
 
 	.product__media-list .product__media-item {
-		width: calc(100% - 3rem - var(--grid-mobile-horizontal-spacing));
+		/* width: calc(100% - 3rem - var(--grid-mobile-horizontal-spacing)); */
 	}
 
 	.product--mobile-columns .product__media-item {

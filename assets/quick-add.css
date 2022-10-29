@@ -91,7 +91,7 @@
 	}
 
 	quick-add-modal .product--mobile-columns .product__media-item {
-		width: calc(100% - 3rem - var(--grid-mobile-horizontal-spacing));
+		/* width: calc(100% - 3rem - var(--grid-mobile-horizontal-spacing)); */
 	}
 }
 

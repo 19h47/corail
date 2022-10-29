@@ -170,18 +170,22 @@
 		</script>
   	</head>
 
-  	<body data-page-type="{{ request.page_type }}" class="{% if request.page_type == 'product' %} mb-24 {% endif %}">
+  	<body data-page-type="{{ request.page_type }}" class="{% if request.page_type == 'product' %} lg:mb-24 {% endif %}">
 		{% comment %} <a class="skip-to-content-link button visually-hidden" href="#MainContent">
 			{{ "accessibility.skip_to_text" | t }}
 		</a> {% endcomment %}
 
-		{%- if settings.cart_type == 'drawer' -%}
-			{%- render 'cart-drawer' -%}
-		{%- endif -%}
+		{%- liquid
+			if settings.cart_type == 'drawer'
+				render 'cart-drawer'
+			endif
+		-%}
 
-		{% if request.page_type != 'product' %}
-    		{% section 'announcement-bar' %}
-		{% endif %}
+		{%- liquid
+			if request.page_type != 'product'
+    			section 'announcement-bar'
+			endif
+		-%}
 
 		{% section 'header' %}
 

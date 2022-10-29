@@ -1,4 +1,6 @@
-{% render 'announcement', classes: 'py-3', text: section.settings.text, link: section.settings.link, attributes: block.shopify_attributes %}
+{% assign classes = classes | default: 'py-3' %}
+
+{% render 'announcement', classes: classes, text: section.settings.text, link: section.settings.link, attributes: block.shopify_attributes %}
 
 {% schema %}
 {
@@ -16,6 +18,11 @@
       "type": "url",
       "id": "link",
       "label": "t:sections.announcement.settings.link.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "hide_on_mobile",
+      "label": "t:sections.announcement.settings.hide_on_mobile.label"
     }
   ],
   "presets": [

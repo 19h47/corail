@@ -1,3 +1,20 @@
+{% comment %}
+    Renders a Announcement bar
+
+    Accepts:
+    - text: {String} Text
+    - classes: {String} Classes (optional)
+    - attributes
+	- link: {String} Link (optionnal)
+
+    Usage:
+    {% render 'annoucement' %}
+{% endcomment %}
+
+{% assign text = text | default: '' %}
+{% assign classes = classes | default: '' %}
+{% assign attributes = attributes | default: '' %}
+
 {%- if text != blank -%}
 	<div
 		class="overflow-hidden text-xs text-center uppercase  whitespace-nowrap {{ classes }}"
