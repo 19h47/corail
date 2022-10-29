@@ -140,7 +140,8 @@
       "type": "announcement",
       "settings": {
         "text": "Livraison offerte rettours offerts - Paiement en 3x sans frais",
-        "link": ""
+        "link": "",
+        "hide_on_mobile": true
       }
     },
     "5352a5eb-3296-4b9c-9021-e759c6c0ea6b": {
