@@ -455,7 +455,7 @@
 					"label": "Lien"
 				},
 				"hide_on_mobile": {
-					"label": "Cacher la bar d'annonce sur mobile"
+					"label": "Cacher la barre d'annonce sur mobile"
 				}
 			},
 			"presets": {
