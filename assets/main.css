@@ -784,6 +784,14 @@ button.swiper-pagination-bullet {
 	overflow: hidden;
 }
 
+/*
+ * Swiper pagination
+ *
+ * @author Jérémy Levron <jeremylevron@19h47.fr> (https://19h47.fr)
+ * @package WordPress
+ * @subpackage Corail
+ */
+
 /**
  * Grid
  *
@@ -1441,6 +1449,26 @@ a:not([href]){
 	z-index: 60;
 }
 
+.swiper-pagination{
+	display: inline-flex;
+	width: auto !important;
+	align-items: center;
+	justify-content: center;
+	gap: 0.75rem;
+}
+
+.swiper-pagination .swiper-pagination-bullet{
+	margin: 0px !important;
+	--tw-bg-opacity: 1 !important;
+	background-color: rgb(255 255 255 / var(--tw-bg-opacity)) !important;
+	opacity: 1 !important;
+}
+
+.swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active{
+	--tw-bg-opacity: 1 !important;
+	background-color: rgb(51 51 51 / var(--tw-bg-opacity)) !important;
+}
+
 .sr-only{
 	position: absolute;
 	width: 1px;
@@ -1542,6 +1570,10 @@ a:not([href]){
 	bottom: 100%;
 }
 
+.\!bottom-0{
+	bottom: 0px !important;
+}
+
 .isolate{
 	isolation: isolate;
 }
@@ -1629,6 +1661,16 @@ a:not([href]){
 	margin-right: auto;
 }
 
+.my-2{
+	margin-top: 0.5rem;
+	margin-bottom: 0.5rem;
+}
+
+.mx-2{
+	margin-left: 0.5rem;
+	margin-right: 0.5rem;
+}
+
 .my-4{
 	margin-top: 1rem;
 	margin-bottom: 1rem;
@@ -1670,6 +1712,10 @@ a:not([href]){
 	margin-left: 0.25rem;
 }
 
+.-mb-11{
+	margin-bottom: -2.75rem;
+}
+
 .mb-3{
 	margin-bottom: 0.75rem;
 }
@@ -1708,6 +1754,10 @@ a:not([href]){
 
 .ml-2{
 	margin-left: 0.5rem;
+}
+
+.mb-6{
+	margin-bottom: 1.5rem;
 }
 
 .mb-\[1\.625rem\]{
@@ -1834,6 +1884,10 @@ a:not([href]){
 	height: 1.75rem;
 }
 
+.\!h-auto{
+	height: auto !important;
+}
+
 .h-\[25rem\]{
 	height: 25rem;
 }
@@ -1890,6 +1944,14 @@ a:not([href]){
 	height: 1.5rem;
 }
 
+.h-\[6\.375rem\]{
+	height: 6.375rem;
+}
+
+.h-\[27\.5rem\]{
+	height: 27.5rem;
+}
+
 .h-\[4\.25rem\]{
 	height: 4.25rem;
 }
@@ -1906,12 +1968,12 @@ a:not([href]){
 	height: 25.5rem;
 }
 
-.h-\[16\.875rem\]{
-	height: 16.875rem;
+.h-12{
+	height: 3rem;
 }
 
-.h-\[1\.875rem\]{
-	height: 1.875rem;
+.h-\[16\.875rem\]{
+	height: 16.875rem;
 }
 
 .h-2{
@@ -1986,6 +2048,10 @@ a:not([href]){
 	width: 1.5rem;
 }
 
+.w-\[6\.375rem\]{
+	width: 6.375rem;
+}
+
 .w-\[4\.25rem\]{
 	width: 4.25rem;
 }
@@ -1994,8 +2060,8 @@ a:not([href]){
 	width: 50%;
 }
 
-.w-\[1\.875rem\]{
-	width: 1.875rem;
+.w-12{
+	width: 3rem;
 }
 
 .w-2{
@@ -2012,6 +2078,10 @@ a:not([href]){
 
 .max-w-9\/12{
 	max-width: 75%;
+}
+
+.max-w-none{
+	max-width: none;
 }
 
 .flex-1{
@@ -2168,12 +2238,20 @@ a:not([href]){
 	border-color: rgb(207 205 201 / var(--tw-divide-opacity));
 }
 
+.overflow-auto{
+	overflow: auto;
+}
+
 .overflow-hidden{
 	overflow: hidden;
 }
 
 .overflow-visible{
 	overflow: visible;
+}
+
+.\!overflow-visible{
+	overflow: visible !important;
 }
 
 .overflow-y-auto{
@@ -2206,6 +2284,10 @@ a:not([href]){
 	border-width: 1px;
 }
 
+.border-\[0\.0625rem\]{
+	border-width: 0.0625rem;
+}
+
 .border-x{
 	border-left-width: 1px;
 	border-right-width: 1px;
@@ -2220,12 +2302,12 @@ a:not([href]){
 	border-bottom-width: 1px;
 }
 
-.border-t{
-	border-top-width: 1px;
-}
-
 .border-b-\[0\.0625rem\]{
 	border-bottom-width: 0.0625rem;
+}
+
+.border-t{
+	border-top-width: 1px;
 }
 
 .border-orange-grayish{
@@ -2394,6 +2476,11 @@ a:not([href]){
 	padding-right: 0.5rem;
 }
 
+.py-5{
+	padding-top: 1.25rem;
+	padding-bottom: 1.25rem;
+}
+
 .px-3{
 	padding-left: 0.75rem;
 	padding-right: 0.75rem;
@@ -2417,6 +2504,16 @@ a:not([href]){
 .py-\[0\.3125rem\]{
 	padding-top: 0.3125rem;
 	padding-bottom: 0.3125rem;
+}
+
+.px-1\.5{
+	padding-left: 0.375rem;
+	padding-right: 0.375rem;
+}
+
+.px-1{
+	padding-left: 0.25rem;
+	padding-right: 0.25rem;
 }
 
 .px-6{
@@ -3073,6 +3170,10 @@ a:not([href]){
 		right: 0px;
 	}
 
+	.lg\:left-auto{
+		left: auto;
+	}
+
 	.lg\:z-3{
 		z-index: 3;
 	}
@@ -3155,6 +3256,10 @@ a:not([href]){
 
 	.lg\:ml-1\/12{
 		margin-left: 8.333333333333334%;
+	}
+
+	.lg\:mb-16{
+		margin-bottom: 4rem;
 	}
 
 	.lg\:mt-10{
@@ -3257,6 +3362,10 @@ a:not([href]){
 		height: 4.75rem;
 	}
 
+	.lg\:h-auto{
+		height: auto;
+	}
+
 	.lg\:h-\[57\.75rem\]{
 		height: 57.75rem;
 	}
@@ -3303,6 +3412,10 @@ a:not([href]){
 
 	.lg\:h-\[28rem\]{
 		height: 28rem;
+	}
+
+	.lg\:max-h-\[calc\(100vh_-_10\.5rem\)\]{
+		max-height: calc(100vh - 10.5rem);
 	}
 
 	.lg\:w-\[3\.625rem\]{

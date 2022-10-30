@@ -24,28 +24,37 @@
 {% endcomment %}
 
 {%- liquid
-  unless lazy_load == false
-    assign lazy = 'lazy'
-  endunless
+	assign desktop_columns = 1
+	assign lazy_load = lazy_load | default: true
+	assign loop = loop | default: false
+	assign media = media | default: nil
+	assign mobile_columns = 1
+	assign modal_id = modal_id | default: ''
+	assign position = position | default: 0
+	assign xr_button = xr_button | default: false
 
-  assign desktop_columns = 1
-  if desktop_layout == 'columns' and media_count > 1
-    assign desktop_columns = 2
-  endif
+	unless lazy_load == false
+		assign lazy = 'lazy'
+	endunless
 
-  assign mobile_columns = 1
-  if mobile_layout == 'columns' and media_count > 1
-    assign mobile_columns = 2
-  endif
+	if desktop_layout == 'columns' and media_count > 1
+		assign desktop_columns = 2
+	endif
+
+	if mobile_layout == 'columns' and media_count > 1
+		assign mobile_columns = 2
+	endif
 -%}
 
 {%- capture sizes -%}
-  (min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | times: media_width | divided_by: desktop_columns | round }}px, (min-width: 990px) calc({{ media_width | times: 100 | divided_by: desktop_columns }}vw - 10rem), (min-width: 750px) calc((100vw - 11.5rem) / 2), calc(100vw / {{ mobile_columns }} - 4rem)
+  	(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | times: media_width | divided_by: desktop_columns | round }}px, (min-width: 990px) calc({{ media_width | times: 100 | divided_by: desktop_columns }}vw - 10rem), (min-width: 750px) calc((100vw - 11.5rem) / 2), calc(100vw / {{ mobile_columns }} - 4rem)
 {%- endcapture -%}
 
 <noscript>
 	{%- if media.media_type == 'video' or media.media_type == 'external_video' -%}
-		<span class="product__media-icon motion-reduce quick-add-hidden">{% render 'icon-play' %}</span>
+		<span class="product__media-icon motion-reduce quick-add-hidden">
+			{% render 'svg', icon: 'play', classes: 'w-5 h-5 fill-current ml-1' %}
+		</span>
 		<div class="product__media media global-media-settings" style="padding-top: {{ 1 | divided_by: media.preview_image.aspect_ratio | times: 100 }}%;">
 			{{ media.preview_image | image_url: width: 1946 | image_tag:
 				loading: lazy,
@@ -69,34 +78,38 @@
 	{%- endif -%}
 </noscript>
 
-<modal-opener class="product__modal-opener product__modal-opener--{{ media.media_type }} no-js-hidden" data-modal="#ProductModal-{{ modal_id }}">
-	<span class="product__media-icon motion-reduce quick-add-hidden" aria-hidden="true">
+<modal-opener
+	data-modal="#ProductModal-{{ modal_id }}"
+	class="w-full h-full relative"
+>
+	<button
+		type="button"
+		class="w-12 h-12 flex items-center justify-center rounded-full border-[0.0625rem] border-orange-grayish bg-white absolute top-0 left-0 lg:left-auto lg:right-0 m-5 z-2"
+		aria-haspopup="dialog"
+		data-media-id="{{ media.id }}"
+	>
+		<span class="sr-only">{{- 'products.product.media.open_media' | t: index: position -}}</span>
 		{%- liquid
 			case media.media_type
 				when 'video' or 'external_video'
-					render 'icon-play'
+					render 'svg', icon: 'play', classes: 'w-5 h-5 fill-current ml-1'
 				when 'model'
 					render 'icon-3d-model'
 				else
-					render 'icon-zoom'
+					render 'svg', icon: 'magnifying-glass', classes: 'w-5 h-5 fill-current'
 			endcase
 		-%}
-	</span>
+	</button>
 
-	<div class="product__media media media--transparent global-media-settings relative" style="padding-top: {{ 1 | divided_by: media.preview_image.aspect_ratio | times: 100 }}%;">
-		{{ media.preview_image | image_url: width: 1946 | image_tag:
+	{{- media.preview_image
+		| image_url: width: 1946
+		| image_tag:
 			loading: lazy,
 			sizes: sizes,
 			widths: '246, 493, 600, 713, 823, 990, 1100, 1206, 1346, 1426, 1646, 1946',
-			class: 'absolute inset-0 object-cover object-center',
+			class: 'absolute bg-orange-grayish inset-0 object-cover object-center w-full h-full',
 			alt: media.preview_image.alt | escape
-		}}
-	</div>
-  	<button class="product__media-toggle quick-add-hidden" type="button" aria-haspopup="dialog" data-media-id="{{ media.id }}">
-		<span class="sr-only">
-      		{{ 'products.product.media.open_media' | t: index: position }}
-    	</span>
-  	</button>
+	-}}
 </modal-opener>
 
 {%- if media.media_type != 'image' -%}
@@ -114,7 +127,7 @@
 				{%- render 'icon-3d-model' -%}
 			{%- else -%}
 				<span class="sr-only">{{ 'products.product.media.play_video' | t }}</span>
-				{% render 'svg', icon: 'play', classes: 'w-full h-full fill-current', description: shop.name %}
+				{% render 'svg', icon: 'play', classes: 'w-full h-full fill-current ml-1', description: shop.name %}
 			{%- endif -%}
 		</span>
 
@@ -122,7 +135,7 @@
 			loading: lazy,
 			sizes: sizes,
 			widths: '246, 493, 600, 713, 823, 990, 1100, 1206, 1346, 1426, 1646, 1946',
-			class: 'h-full w-full object-cover object-center',
+			class: 'h-full w-full object-cover object-center bg-orange-grayish',
 			alt: media.preview_image.alt | escape
 		}}
   	</button>

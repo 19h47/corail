@@ -7,7 +7,10 @@ class SlideshowComponent extends SliderComponent {
 		if (!this.sliderControlWrapper) return;
 
 		this.sliderFirstItemNode = this.slider.querySelector(".slideshow__slide");
-		if (this.sliderItemsToShow.length > 0) this.currentPage = 1;
+
+		if (0 < this.sliderItemsToShow.length) {
+			this.currentPage = 1;
+		}
 
 		this.sliderControlLinksArray = Array.from(
 			this.sliderControlWrapper.querySelectorAll(".slider-counter__link")

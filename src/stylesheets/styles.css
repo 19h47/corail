@@ -5,6 +5,7 @@
 @import "./components/section-header";
 @import "./components/spinner";
 @import "./components/swiper";
+@import "./components/swiper-pagination";
 
 @import "./utilities/grid";
 @import "./utilities/marquee";

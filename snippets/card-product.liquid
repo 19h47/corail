@@ -34,7 +34,7 @@
     	endif
 	-%}
 
-	<article class="relative group">
+	<article class="relative group {{ classes }}">
 
 		<div class="relative h-[16.875rem] bg-gray-very-light {% if 'large' == size %} lg:h-[38rem] {% else %} lg:h-[28rem] {% endif %}">
 			{%- if card_product.featured_media -%}
@@ -106,37 +106,35 @@
 			</div>
 
 			{%- unless card_product.has_only_default_variant -%}
-				<div class="space-y-2 absolute bottom-0 inset-x-0 m-5 z-1 max-w-9/12">
+				<div class="space-y-2 absolute bottom-0 inset-x-0 m-5 z-1 max-w-9/12 hidden lg:block">
 					{%- for option in card_product.options_with_values -%}
-						<div class="flex flex-wrap gap-2">
-							{%- for value in option.values -%}
-
-								{% liquid
-									assign variant_needed = null
-
-									for variant in card_product.variants
-										if variant.options contains value
-											assign variant_needed = variant
-										endif
-									endfor
-								%}
-
-								{% if variant_needed.metafields.corail.color and option.name == 'Couleur' %}
-									{% comment %} <div
-										class="block w-[1.875rem] h-[1.875rem] flex-shrink-0"
-										style="background-color: {{ variant_needed.metafields.corail.color }}"
-									></div> {% endcomment %}
-								{% else %}
+						{% if option.name == 'Taille' %}
+							<div class="flex flex-wrap gap-2">
+								{%- for value in option.values -%}
 									<div class="py-[0.3125rem] text-sm px-2.5 bg-gray-very-light">{{- value -}}</div>
-								{% endif %}
-							{%- endfor -%}
-						</div>
+								{%- endfor -%}
+							</div>
+						{%- endif -%}
 					{%- endfor -%}
 				</div>
 			{%- endunless -%}
 		</div>
 
-		<footer class="border-t mt-2 lg:mt-4 border-orange-grayish pt-1.5 lg:pt-3 text-[0.5rem] lg:text-sm leading-[1.125rem] lg:leading-4 uppercase">
+		{%- unless card_product.has_only_default_variant -%}
+			<div class="space-y-2 lg:hidden my-2 mx-2">
+				{%- for option in card_product.options_with_values -%}
+					{%- if option.name == 'Taille' -%}
+						<div class="flex flex-wrap gap-2">
+							{%- for value in option.values -%}
+								<div class="py-[0.3125rem] text-[0.5rem] px-1.5 bg-gray-very-light">{{- value -}}</div>
+							{%- endfor -%}
+						</div>
+					{%- endif -%}
+				{%- endfor -%}
+			</div>
+		{%- endunless -%}
+
+		<footer class="border-t mt-auto lg:mt-4 mx-2 lg:mx-0 border-orange-grayish pt-1.5 lg:pt-3 text-[0.5rem] lg:text-sm leading-[1.125rem] lg:leading-4 uppercase">
 			<div class="flex justify-between">
 				<h3{% if card_product.featured_media == nil and settings.card_style == 'standard' %} id="title-{{ section_id }}-{{ card_product.id }}"{% endif %}>
 					{{- card_product.title | escape -}}

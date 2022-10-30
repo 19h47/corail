@@ -70,7 +70,7 @@
 											</span>
 										</summary>
 
-										<div id="MegaMenu-Content-{{ forloop.index }}" class="mega-menu__content bg-white text-gray-very-dark " tabindex="-1">
+										<div id="MegaMenu-Content-{{ forloop.index }}" class="mega-menu__content bg-white text-gray-very-dark overflow-auto border-b-[0.0625rem] border-orange-grayish {% if request.page_type == 'product' %} lg:max-h-[calc(100vh_-_10.5rem)] {% else %} {% endif %}" tabindex="-1">
 											<ul class="mega-menu__list grid text-sm font-medium list-none {% if link.levels == 1 %} mega-menu__list--condensed {% endif %}" role="list">
 												{%- for childlink in link.links -%}
 													<li class="relative py-8 px-16">
@@ -109,7 +109,7 @@
 												{%- endfor -%}
 											</ul>
 
-											<span class="absolute block bottom-0 inset-x-0 bg-orange-grayish h-[0.0625rem] w-full"></span>
+
 										</div>
 									</details>
 								</header-menu>
@@ -151,7 +151,7 @@
 											</span>
 										</summary>
 
-										<div id="MegaMenu-Content-{{ forloop.index }}" class="py-8 px-16 absolute top-[100%] border-x border-b border-x-orange-grayish border-b-orange-grayish right-0 overflow-y-auto -z-1 bg-white text-gray-very-dark" tabindex="-1">
+										<div id="MegaMenu-Secondary-{{ forloop.index }}" class="py-8 px-16 absolute top-[100%] border-x border-b border-x-orange-grayish border-b-orange-grayish right-0 overflow-y-auto -z-1 bg-white text-gray-very-dark {% if request.page_type == 'product' %} lg:max-h-[calc(100vh_-_10.5rem)] {% else %} {% endif %}" tabindex="-1">
 
 											{% comment %}
 

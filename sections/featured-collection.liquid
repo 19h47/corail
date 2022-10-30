@@ -67,7 +67,7 @@
 					{%- for product in section.settings.collection.products limit: section.settings.products_to_show -%}
 						<div
 							id="Slide-{{ section.id }}-{{ forloop.index }}"
-							class="swiper-slide"
+							class="swiper-slide !h-auto"
 						>
 						  	{% render 'card-product',
 								card_product: product,
@@ -77,6 +77,7 @@
 								show_rating: section.settings.show_rating,
 								show_quick_add: section.settings.enable_quick_add,
 								section_id: section.id,
+								classes: 'h-full flex flex-col lg:block lg:h-auto'
 						  	%}
 						</div>
 					{%- else -%}
