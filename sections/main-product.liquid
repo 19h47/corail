@@ -205,7 +205,7 @@
 									{%- if product.selected_or_first_available_variant.featured_media != null -%}
 										{%- assign featured_media = product.selected_or_first_available_variant.featured_media -%}
 
-										<li class="swiper-slide w-[6.375rem] h-[6.375rem] border-[0.0625rem] border-orange-grayish bg-orange-grayish">
+										<li class="swiper-slide w-[6.375rem] h-[6.375rem] cursor-pointer border-[0.0625rem] border-orange-grayish bg-orange-grayish">
 
 											{% comment %} {% render 'product-thumbnail', media: featured_media, media_count: media_count, mobile_layout: section.settings.mobile_thumbnails, loop: section.settings.enable_video_looping, modal_id: section.id, xr_button: true, media_width: media_width, lazy_load: false %} {% endcomment %}
 
@@ -232,7 +232,7 @@
 
 									{%- for media in product.media -%}
 										{%- unless media.id == product.selected_or_first_available_variant.featured_media.id -%}
-											<li class="swiper-slide w-[6.375rem] h-[6.375rem] border-[0.0625rem] border-orange-grayish bg-orange-grayish product__media-item {% if single_media_visible %} product__media-item--single {% endif %}{% if product.selected_or_first_available_variant.featured_media == null and forloop.index == 1 %} is-active {% endif %}{% if media.media_type != 'image' %} product__media-item--full {% endif %}{% if section.settings.hide_variants and variant_images contains media.src %} product__media-item--variant {% endif %}">
+											<li class="swiper-slide w-[6.375rem] h-[6.375rem] cursor-pointer border-[0.0625rem] border-orange-grayish bg-orange-grayish product__media-item {% if single_media_visible %} product__media-item--single {% endif %}{% if product.selected_or_first_available_variant.featured_media == null and forloop.index == 1 %} is-active {% endif %}{% if media.media_type != 'image' %} product__media-item--full {% endif %}{% if section.settings.hide_variants and variant_images contains media.src %} product__media-item--variant {% endif %}">
 												<img
 													srcset="
 														{% if media.preview_image.width >= 59 %}{{ media.preview_image | image_url: width: 59 }} 59w,{% endif %}
