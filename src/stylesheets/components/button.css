@@ -7,8 +7,13 @@
  */
 
 @layer components {
-	.button {
+	.button,
+	.shopify-payment-button button[type="button"] {
 		@apply text-center text-xs uppercase rounded-full bg-white text-gray-very-dark py-4 px-8 transition-colors duration-1000 ease-in-out;
+	}
+
+	.shopify-payment-button button[type="button"] {
+		@apply inline-block align-middle
 	}
 
 	.button[disabled],
@@ -16,7 +21,8 @@
 		@apply cursor-not-allowed opacity-50;
 	}
 
-	.button.button-red {
+	.button.button-red,
+	.shopify-payment-button button[type="button"] {
 		@apply bg-red-very-light text-white;
 	}
 
@@ -24,7 +30,9 @@
 		@apply bg-gray-very-dark text-white;
 	}
 
-	.button:hover {
+	.button:hover:not([disabled]),
+	.button.button-red:hover:not([disabled]),
+	.shopify-payment-button button[type="button"]:hover:not([disabled]) {
 		@apply bg-gray-very-dark text-white;
 	}
 

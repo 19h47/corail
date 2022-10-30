@@ -1365,7 +1365,8 @@ a:not([href]){
 	--tw-backdrop-sepia:  ;
 }
 
-.button{
+.button, 
+	.shopify-payment-button button[type="button"]{
 	border-radius: 9999px;
 	--tw-bg-opacity: 1;
 	background-color: rgb(255 255 255 / var(--tw-bg-opacity));
@@ -1390,7 +1391,8 @@ a:not([href]){
 	opacity: 0.5;
 }
 
-.button.button-red{
+.button.button-red, 
+	.shopify-payment-button button[type="button"]{
 	--tw-bg-opacity: 1;
 	background-color: rgb(255 125 108 / var(--tw-bg-opacity));
 	--tw-text-opacity: 1;
@@ -1404,7 +1406,9 @@ a:not([href]){
 	color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.button:hover{
+.button:hover:not([disabled]), 
+	.button.button-red:hover:not([disabled]), 
+	.shopify-payment-button button[type="button"]:hover:not([disabled]){
 	--tw-bg-opacity: 1;
 	background-color: rgb(51 51 51 / var(--tw-bg-opacity));
 	--tw-text-opacity: 1;
@@ -3458,8 +3462,16 @@ a:not([href]){
 		flex-direction: row;
 	}
 
+	.lg\:flex-wrap{
+		flex-wrap: wrap;
+	}
+
 	.lg\:items-end{
 		align-items: flex-end;
+	}
+
+	.lg\:gap-4{
+		gap: 1rem;
 	}
 
 	.lg\:gap-y-0{

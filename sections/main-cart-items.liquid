@@ -1,6 +1,5 @@
 {{ 'component-cart.css' | asset_url | stylesheet_tag }}
 {{ 'component-cart-items.css' | asset_url | stylesheet_tag }}
-{{ 'component-totals.css' | asset_url | stylesheet_tag }}
 {{ 'component-discounts.css' | asset_url | stylesheet_tag }}
 {{ 'component-loading-overlay.css' | asset_url | stylesheet_tag }}
 
@@ -86,7 +85,7 @@
 											<p class="caption-with-letter-spacing">{{ item.product.vendor }}</p>
 										{%- endif -%}
 
-										<a href="{{ item.url }}" class="cart-item__name h4 break">
+										<a href="{{ item.url }}" class="cart-item__name break">
 											{{ item.product.title | escape }}
 										</a>
 

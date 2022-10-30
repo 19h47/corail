@@ -9,6 +9,17 @@ if (!customElements.get("variant-radios")) {
 			this.addEventListener("change", this.updateVariantButtons);
 		}
 
+		// eslint-disable-next-line class-methods-use-this
+		setInputAvailability(listOfOptions, listOfAvailableOptions) {
+			listOfOptions.forEach(input => {
+				if (listOfAvailableOptions.includes(input.getAttribute('value'))) {
+					input.classList.remove('disabled');
+				} else {
+					input.classList.add('disabled');
+				}
+			});
+		}
+
 		updateOptions() {
 			this.options = this.fieldsets.map(
 				fieldset =>
