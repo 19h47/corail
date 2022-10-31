@@ -398,7 +398,7 @@
 		"drawercommintments": {
 			"name": "Tiroir",
 			"presets": "Tiroir",
-			"blocks": { "page": { "name": "Page" } }
+			"blocks": { "pages": { "name": "Pages", "settings": {"page": {"label": "Page"}} } }
 		},
 		"twoimage": {
 			"name": "Deux images",
