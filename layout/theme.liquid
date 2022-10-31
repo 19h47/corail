@@ -171,10 +171,10 @@
 		</script>
   	</head>
 
-  	<body class="cursor-wait has-scroll-init:cursor-pointer" data-page-type="{{ request.page_type }}" class="{% if request.page_type == 'product' %} lg:mb-24 {% endif %}">
-		{% comment %} <a class="skip-to-content-link button visually-hidden" href="#MainContent">
+  	<body class="{% if request.page_type != 'product' %} cursor-wait has-scroll-init:cursor-pointer js-scroll {% endif %}" data-page-type="{{ request.page_type }}">
+		<a class="skip-to-content-link button sr-only" href="#MainContent">
 			{{ "accessibility.skip_to_text" | t }}
-		</a> {% endcomment %}
+		</a>
 
 		{%- liquid
 			if settings.cart_type == 'drawer'

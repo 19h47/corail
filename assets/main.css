@@ -1,3 +1,6 @@
+/*!********************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[8].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[8].use[2]!./src/stylesheets/styles.css ***!
+  \********************************************************************************************************************************************************************************/
 /**
  * Base
  *
@@ -1879,6 +1882,10 @@ html,
 	margin-left: 0.625rem;
 }
 
+.mb-0{
+	margin-bottom: 0px;
+}
+
 .block{
 	display: block;
 }
@@ -2137,6 +2144,10 @@ html,
 
 .cursor-pointer{
 	cursor: pointer;
+}
+
+.cursor-zoom-out{
+	cursor: zoom-out;
 }
 
 .list-none{
@@ -2595,6 +2606,10 @@ html,
 
 .pt-1{
 	padding-top: 0.25rem;
+}
+
+.pb-11{
+	padding-bottom: 2.75rem;
 }
 
 .text-left{
@@ -3658,6 +3673,14 @@ html,
 		padding-top: 0.75rem;
 	}
 
+	.lg\:pb-0{
+		padding-bottom: 0px;
+	}
+
+	.lg\:pb-24{
+		padding-bottom: 6rem;
+	}
+
 	.lg\:text-right{
 		text-align: right;
 	}
@@ -3827,3 +3850,5 @@ html,
 	}
 }
 
+
+/*# sourceMappingURL=main.css.map*/
