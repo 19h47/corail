@@ -2341,12 +2341,12 @@ html,
 	border-right-width: 0.0625rem;
 }
 
-.border-b{
-	border-bottom-width: 1px;
-}
-
 .border-b-\[0\.0625rem\]{
 	border-bottom-width: 0.0625rem;
+}
+
+.border-b{
+	border-bottom-width: 1px;
 }
 
 .border-t{
