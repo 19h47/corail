@@ -1892,6 +1892,10 @@ html,
 	margin-left: 0.625rem;
 }
 
+.ml-1\/12{
+	margin-left: 8.333333333333334%;
+}
+
 .block{
 	display: block;
 }
@@ -3439,6 +3443,10 @@ html,
 
 	.lg\:mt-1{
 		margin-top: 0.25rem;
+	}
+
+	.lg\:mt-16{
+		margin-top: 4rem;
 	}
 
 	.lg\:block{

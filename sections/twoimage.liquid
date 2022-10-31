@@ -2,20 +2,25 @@
 	<div class="container">
 
 		<div class="row ">
-			<div class="lg:col-5/12 lg:ml-1/12">
-				{{ section.settings.left_image | image_url: width: 692, height: 888 | image_tag:
-					loading: 'lazy',
-					widths: '275, 550, 710, 1420',
-					class: 'w-full h-[14rem] lg:h-[31.375rem] object-cover object-center block'
-				}}
-			</div>
-			<div class="lg:col-5/12 mt-16 hidden lg:block">
-				{{ section.settings.right_image | image_url: width: 692, height: 888 | image_tag:
-					loading: 'lazy',
-					widths: '275, 550, 710, 1420',
-					class: 'w-full h-[14rem] lg:h-[31.375rem] mt-24 object-cover object-center hidden lg:block'
-				}}
-			</div>
+			{% if section.settings.left_image != blank %}
+				<div class="lg:col-5/12 lg:ml-1/12 {% if section.settings.right_image != blank %} lg:col-5/12 {% else %} lg:col-10/12 {% endif %}">
+					{{ section.settings.left_image | image_url: width: 692, height: 888 | image_tag:
+						loading: 'lazy',
+						widths: '275, 550, 710, 1420',
+						class: 'w-full h-[14rem] lg:h-[31.375rem] object-cover object-center block'
+					}}
+				</div>
+			{% endif %}
+
+			{% if section.settings.left_image != blank %}
+				<div class="{% if section.settings.left_image != blank %} lg:mt-16 lg:col-5/12 hidden lg:block {% else %} lg: ml-1/12 lg:col-10/12 {% endif %}">
+					{{ section.settings.right_image | image_url: width: 692, height: 888 | image_tag:
+						loading: 'lazy',
+						widths: '275, 550, 710, 1420',
+						class: 'w-full h-[14rem] lg:h-[31.375rem] mt-24 object-cover object-center hidden lg:block'
+					}}
+				</div>
+			{% endif %}
 		</div>
 	</div>
 </div>
