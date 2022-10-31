@@ -1,10 +1,28 @@
-<div class="drawercommintments">DRAWER COMMINTMENTS</div>
+{% if section.blocks != blank %}
+	<div class="drawercommintments fixed bottom-0 inset-x-0 bg-white">
+		<ul class="divide-y-[0.0625rem] divide-orange-grayish border-t-[0.0625rem] border-orange-grayish">
+			{%- for block in section.blocks -%}
+				{% case block.type %}
+					{%- when 'page' -%}
+						<li>
+							<a class="py-3 flex items-center text-sm uppercase leading-none font-medium" href="{{ block.settings.page.title.url }}">
+								{%- render 'svg', icon: 'bars-small', classes: 'w-2 h-4 mr-5 fill-current' -%}
+								<span class="text-3xl inline-block mr-1.5">
+									{{- forloop.index | prepend: '00' | slice: -2, 2 | append: '.' -}}
+								</span>
+								&lowbar;{{ block.settings.page.title | escape }}
+							</a>
+						</li>
+				{%- endcase -%}
+			{%- endfor -%}
+		</ul>
+	</div>
+{% endif %}
 
 {% schema %}
 {
   "name": "t:sections.drawercommintments.name",
-  "tag": "section",
-  "class": "section",
+  "class": "section-drawercommintments",
   "settings": [
 
   ],
