@@ -5,9 +5,15 @@
       "type": "main-page",
       "settings": {
       }
+    },
+    "d3fec925-5fe1-433d-a840-f94da2b324f7": {
+      "type": "logo",
+      "settings": {
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "d3fec925-5fe1-433d-a840-f94da2b324f7"
   ]
 }
