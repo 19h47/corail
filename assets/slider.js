@@ -25,7 +25,7 @@ if (!customElements.get("slider-component")) {
 				...parameters,
 			});
 
-			console.log(parameters);
+			// console.log(parameters);
 
 			if ($next) {
 				$next.addEventListener("click", () => this.next());

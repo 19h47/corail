@@ -36,7 +36,7 @@ class VariantSelects extends HTMLElement {
 	}
 
 	updateMedia() {
-		console.log('VariantSelects.updateMedia');
+		// console.log('VariantSelects.updateMedia');
 
 		if (!this.currentVariant) {
 			return;
@@ -50,12 +50,14 @@ class VariantSelects extends HTMLElement {
 			`[id^="MediaGallery-${this.dataset.section}"]`
 		);
 
-		mediaGalleries.forEach(mediaGallery =>
-			mediaGallery.setActiveMedia(
-				`${this.dataset.section}-${this.currentVariant.featured_media.id}`,
-				true
-			)
-		);
+		mediaGalleries.forEach(mediaGallery => {
+			if (this.dataset.section && this.currentVariant.featured_media.id) {
+				mediaGallery.setActiveMedia(
+					`${this.dataset.section}-${this.currentVariant.featured_media.id}`,
+					true
+				);
+			}
+		});
 
 		const modalContent = document.querySelector(
 			`#ProductModal-${this.dataset.section} .product-media-modal__content`
@@ -140,7 +142,7 @@ class VariantSelects extends HTMLElement {
 	removeErrorMessage() {
 		const section = this.closest("section");
 
-		console.log(section);
+		// console.log(section);
 
 		if (!section) {
 			return;
@@ -148,7 +150,7 @@ class VariantSelects extends HTMLElement {
 
 		const productForm = section.querySelector("product-form");
 
-		console.log(productForm);
+		// console.log(productForm);
 
 		if (productForm) {
 			productForm.handleErrorMessage();
@@ -220,7 +222,7 @@ class VariantSelects extends HTMLElement {
 
 	// eslint-disable-next-line default-param-last
 	toggleAddButton(disable = true, text, modifyClass = true) {
-		console.log("toggleAddButton");
+		// console.log("toggleAddButton");
 
 		const productForm = document.getElementById(`product-form-${this.dataset.section}`);
 

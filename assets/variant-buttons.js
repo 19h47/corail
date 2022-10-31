@@ -14,11 +14,13 @@ if (!customElements.get("variant-buttons")) {
 		}
 
 		onVariantChange() {
+			// console.log('VariantButtons.onVariantChange');
+
 			this.fieldsets.forEach($fieldset => {
 				const { value } = [...$fieldset.querySelectorAll("input")].find(radio => radio.checked);
 				const $input = this.variantRadiosInputs.find($i => $i.value === value);
 
-				console.log($input, value);
+				// console.log($input, value);
 
 				if ($input) {
 					$input.checked = true;
