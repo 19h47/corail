@@ -1,0 +1,38 @@
+{% if section.settings.image != blank %}
+	<div class="image my-14">
+		<div class="container">
+			<div class="row ">
+				<div class="lg:col-10/12 lg:ml-1/12">
+					{{ section.settings.image | image_url: width: 692, height: 888 | image_tag:
+						loading: 'lazy',
+						widths: '275, 550, 710, 1420',
+						class: 'w-full h-[14rem] lg:h-[31.375rem] object-cover object-center block'
+					}}
+				</div>
+			</div>
+		</div>
+	</div>
+{% endif %}
+
+{% schema %}
+{
+  "name": "t:sections.image.name",
+  "class": "section",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "t:sections.image.settings.image.label"
+    }
+  ],
+  "blocks": [
+
+  ],
+  "presets": [
+    {
+      "name": "t:sections.image.presets.name"
+    }
+  ]
+}
+{% endschema %}

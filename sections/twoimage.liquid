@@ -1,15 +1,15 @@
-<div class="twoimage my-28 lg:my-[16rem]">
+<div class="twoimage my-14">
 	<div class="container">
 
 		<div class="row ">
-			<div class="lg:col-6/12">
+			<div class="lg:col-5/12 lg:ml-1/12">
 				{{ section.settings.left_image | image_url: width: 692, height: 888 | image_tag:
 					loading: 'lazy',
 					widths: '275, 550, 710, 1420',
 					class: 'w-full h-[14rem] lg:h-[31.375rem] object-cover object-center block'
 				}}
 			</div>
-			<div class="col-6/12 mt-16 hidden lg:block">
+			<div class="lg:col-5/12 mt-16 hidden lg:block">
 				{{ section.settings.right_image | image_url: width: 692, height: 888 | image_tag:
 					loading: 'lazy',
 					widths: '275, 550, 710, 1420',

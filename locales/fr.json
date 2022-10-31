@@ -246,14 +246,22 @@
     "twoimage": {
       "name": "Deux images",
       "settings": {
-        "title": {
-          "label": "Titre"
-        },
         "left_image": {
           "label": "Image de gauche"
         },
         "right_image": {
           "label": "Image de droite"
+        }
+      },
+      "presets": {
+        "name": "Deux images"
+      }
+    },
+    "image": {
+      "name": "Image",
+      "settings": {
+        "image": {
+          "label": "Image"
         }
       },
       "presets": {

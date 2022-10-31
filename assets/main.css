@@ -1723,6 +1723,11 @@ html,
 	margin-bottom: 1.25rem;
 }
 
+.my-14{
+	margin-top: 3.5rem;
+	margin-bottom: 3.5rem;
+}
+
 .-mt-\[4rem\]{
 	margin-top: -4rem;
 }
@@ -2764,6 +2769,10 @@ html,
 	line-height: 2.8125rem;
 }
 
+.leading-\[5\.5rem\]{
+	line-height: 5.5rem;
+}
+
 .text-gray-very-dark{
 	--tw-text-opacity: 1;
 	color: rgb(51 51 51 / var(--tw-text-opacity));
@@ -2871,6 +2880,12 @@ html,
 
 .col-4\/12{
 	width: 33.333333%;
+	padding-left: 0.625rem;
+	padding-right: 0.625rem;
+}
+
+.col-5\/12{
+	width: 41.666667%;
 	padding-left: 0.625rem;
 	padding-right: 0.625rem;
 }
@@ -3844,6 +3859,12 @@ html,
 
 	.lg\:col-9\/12{
 		width: 75%;
+		padding-left: 0.625rem;
+		padding-right: 0.625rem;
+	}
+
+	.lg\:col-10\/12{
+		width: 83.333333%;
 		padding-left: 0.625rem;
 		padding-right: 0.625rem;
 	}
