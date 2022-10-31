@@ -6,22 +6,22 @@
       "settings": {
       }
     },
-    "7260c216-9e57-46f7-a358-6d7e30cdf3d1": {
-      "type": "logo",
-      "settings": {
-      }
-    },
     "c3990efb-0191-449c-8e29-7bf79ac24085": {
       "type": "twoimage",
       "settings": {
         "left_image": "shopify:\/\/shop_images\/calm-sea-rolling-with-the-current.jpg",
         "right_image": "shopify:\/\/shop_images\/contrast-between-sand-and-sea.jpg"
       }
+    },
+    "7260c216-9e57-46f7-a358-6d7e30cdf3d1": {
+      "type": "logo",
+      "settings": {
+      }
     }
   },
   "order": [
     "main",
-    "7260c216-9e57-46f7-a358-6d7e30cdf3d1",
-    "c3990efb-0191-449c-8e29-7bf79ac24085"
+    "c3990efb-0191-449c-8e29-7bf79ac24085",
+    "7260c216-9e57-46f7-a358-6d7e30cdf3d1"
   ]
 }
