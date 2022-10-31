@@ -7,6 +7,25 @@ function getFocusableElements(container) {
 	);
 }
 
+// eslint-disable-next-line no-undef, no-unused-vars
+const scroll = new LocomotiveNativeScroll();
+
+const isOntop = () => {
+	const top = window.pageYOffset || document.documentElement.scrollTop;
+
+	if (0 >= top) {
+		document.documentElement.classList.add('is-ontop');
+	} else {
+		document.documentElement.classList.remove('is-ontop');
+	}
+}
+
+scroll.on('scroll', ({ direction }) => {
+	document.documentElement.setAttribute('data-direction', direction || 'down');
+
+	isOntop();
+});
+
 document.querySelectorAll('[id^="Details-"] summary').forEach(summary => {
 	summary.setAttribute("role", "button");
 	summary.setAttribute("aria-expanded", summary.parentNode.hasAttribute("open"));

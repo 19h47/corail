@@ -1271,6 +1271,41 @@ a:not([href]){
 		font-display: swap;
 	}
 
+/*! loconative-scroll v1.0.0 | MIT License | https://github.com/quentinhocde/loconative-scroll */
+
+html {
+		scroll-behavior: initial;
+	}
+
+html,
+	body {
+		width: 100%;
+		min-height: 100%;
+	}
+
+[data-scroll-direction="vertical"] [data-scroll-wrapper] {
+		height: 100vh;
+		overflow-x: hidden;
+		overflow-y: scroll;
+	}
+
+[data-scroll-direction="horizontal"] [data-scroll-wrapper] {
+		width: 100vw;
+		height: 100vh;
+		overflow-x: scroll;
+	}
+
+[data-scroll-direction="horizontal"] [data-scroll-container] {
+		height: 100%;
+		display: inline-flex;
+		min-width: var(--scrollContainerWidth);
+	}
+
+[data-scroll-direction="horizontal"] [data-scroll-section] {
+		flex-shrink: 0;
+		height: 100vh;
+	}
+
 *, ::before, ::after{
 	--tw-border-spacing-x: 0;
 	--tw-border-spacing-y: 0;
@@ -2096,6 +2131,10 @@ a:not([href]){
 	flex-shrink: 0;
 }
 
+.cursor-wait{
+	cursor: wait;
+}
+
 .cursor-pointer{
 	cursor: pointer;
 }
@@ -2353,10 +2392,6 @@ a:not([href]){
 .bg-red-very-light{
 	--tw-bg-opacity: 1;
 	background-color: rgb(255 125 108 / var(--tw-bg-opacity));
-}
-
-.bg-current{
-	background-color: currentColor;
 }
 
 .bg-gray-very-dark{
@@ -2760,6 +2795,12 @@ a:not([href]){
 	filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
+.transition-colors{
+	transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	transition-duration: 150ms;
+}
+
 .transition-opacity{
 	transition-property: opacity;
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -2945,6 +2986,11 @@ a:not([href]){
 	transform-origin: top;
 }
 
+.after\:origin-left::after{
+	content: var(--tw-content);
+	transform-origin: left;
+}
+
 .after\:scale-y-100::after{
 	content: var(--tw-content);
 	--tw-scale-y: 1;
@@ -2954,6 +3000,12 @@ a:not([href]){
 .after\:scale-y-0::after{
 	content: var(--tw-content);
 	--tw-scale-y: 0;
+	transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.after\:scale-x-0::after{
+	content: var(--tw-content);
+	--tw-scale-x: 0;
 	transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -3108,8 +3160,28 @@ a:not([href]){
 	border-color: rgb(207 205 201 / var(--tw-border-opacity));
 }
 
+.is-inview.is-inview\:after\:scale-x-100::after{
+	content: var(--tw-content);
+	--tw-scale-x: 1;
+	transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .is-active.is-active\:underline{
 	text-decoration-line: underline;
+}
+
+.is-ontop .is-ontop\:bg-white\/0{
+	background-color: rgb(255 255 255 / 0);
+}
+
+.is-ontop .is-ontop\:bg-white{
+	--tw-bg-opacity: 1;
+	background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.is-ontop .is-ontop\:text-white{
+	--tw-text-opacity: 1;
+	color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .expanded\:bg-gray-very-dark[aria-expanded='true']{
@@ -3146,6 +3218,10 @@ a:not([href]){
 
 [open='true'] > .parent-open\:hidden{
 	display: none;
+}
+
+.has-scroll-init .has-scroll-init\:cursor-pointer{
+	cursor: pointer;
 }
 
 @media (min-width: 1024px){
