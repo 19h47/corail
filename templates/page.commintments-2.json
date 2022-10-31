@@ -2,12 +2,20 @@
   "layout": "commintments",
   "sections": {
     "main": {
-		"type": "main-commintments",
+      "type": "main-commintments",
       "settings": {
+      }
+    },
+    "66e11768-6009-47fd-8dbf-c63bf6d3aecf": {
+      "type": "twoimage",
+      "settings": {
+        "left_image": "shopify:\/\/shop_images\/a-view-of-the-sea-from-a-rocky-cliff-side.jpg",
+        "right_image": "shopify:\/\/shop_images\/a-flock-of-seagulls-fly-over-a-beach-to-the-sea.jpg"
       }
     }
   },
   "order": [
-    "main"
+    "main",
+    "66e11768-6009-47fd-8dbf-c63bf6d3aecf"
   ]
 }

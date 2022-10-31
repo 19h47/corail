@@ -395,17 +395,17 @@
         }
       }
     },
-	"image": {
-		"name": "Image",
-		"settings": {
-		  "image": {
-			"label": "Image"
-		  }
-		},
-		"presets": {
-		  "name": "Image"
-		}
-	  },
+    "image": {
+      "name": "Image",
+      "settings": {
+        "image": {
+          "label": "Image"
+        }
+      },
+      "presets": {
+        "name": "Image"
+      }
+    },
     "drawercommintments": {
       "name": "Tiroir",
       "presets": {

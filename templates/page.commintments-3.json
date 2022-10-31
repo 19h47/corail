@@ -2,7 +2,7 @@
   "layout": "commintments",
   "sections": {
     "main": {
-		"type": "main-commintments",
+      "type": "main-commintments",
       "settings": {
       }
     },
