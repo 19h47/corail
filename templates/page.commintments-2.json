@@ -1,12 +1,10 @@
 {
-  "sections": {
-    "main": {
-      "type": "main-page",
-      "settings": {
-      }
-    }
-  },
-  "order": [
-    "main"
-  ]
+	"layout": "commintments",
+	"sections": {
+		"main": {
+			"type": "main-page",
+			"settings": {}
+		}
+	},
+	"order": ["main"]
 }
