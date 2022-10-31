@@ -1,7 +1,7 @@
 {% if section.settings.image != blank %}
 	<div class="image my-14">
-		<div class="container">
-			<div class="row ">
+		<div class="lg:container">
+			<div class="lg:row">
 				<div class="lg:col-10/12 lg:ml-1/12">
 					{{ section.settings.image | image_url: width: 692, height: 888 | image_tag:
 						loading: 'lazy',

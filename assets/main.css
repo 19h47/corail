@@ -2673,6 +2673,10 @@ html,
 	font-size: 5.625rem;
 }
 
+.text-\[2\.8125rem\]{
+	font-size: 2.8125rem;
+}
+
 .text-\[2\.5rem\]{
 	font-size: 2.5rem;
 }
@@ -3708,6 +3712,10 @@ html,
 	.lg\:text-xl{
 		font-size: 1.25rem;
 		line-height: 1.75rem;
+	}
+
+	.lg\:text-\[5\.625rem\]{
+		font-size: 5.625rem;
 	}
 
 	.lg\:text-6xl{
