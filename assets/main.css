@@ -1,3 +1,6 @@
+/*!********************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[8].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[8].use[2]!./src/stylesheets/styles.css ***!
+  \********************************************************************************************************************************************************************************/
 /**
  * Base
  *
@@ -1680,11 +1683,6 @@ html,
 	margin-right: 1.25rem;
 }
 
-.my-5{
-	margin-top: 1.25rem;
-	margin-bottom: 1.25rem;
-}
-
 .my-auto{
 	margin-top: auto;
 	margin-bottom: auto;
@@ -1718,6 +1716,11 @@ html,
 .my-4{
 	margin-top: 1rem;
 	margin-bottom: 1rem;
+}
+
+.my-5{
+	margin-top: 1.25rem;
+	margin-bottom: 1.25rem;
 }
 
 .-mt-\[4rem\]{
@@ -1932,8 +1935,8 @@ html,
 	height: auto !important;
 }
 
-.h-\[26\.25rem\]{
-	height: 26.25rem;
+.h-\[25rem\]{
+	height: 25rem;
 }
 
 .h-10{
@@ -2026,6 +2029,10 @@ html,
 
 .h-2\.5{
 	height: 0.625rem;
+}
+
+.h-\[26\.25rem\]{
+	height: 26.25rem;
 }
 
 .w-\[1\.125rem\]{
@@ -3295,6 +3302,10 @@ html,
 		margin-top: -4.5rem;
 	}
 
+	.lg\:mb-11{
+		margin-bottom: 2.75rem;
+	}
+
 	.lg\:mt-0{
 		margin-top: 0px;
 	}
@@ -3305,10 +3316,6 @@ html,
 
 	.lg\:mb-24{
 		margin-bottom: 6rem;
-	}
-
-	.lg\:mb-11{
-		margin-bottom: 2.75rem;
 	}
 
 	.lg\:mt-\[9\.75rem\]{
@@ -3451,8 +3458,8 @@ html,
 		height: auto;
 	}
 
-	.lg\:h-\[57\.5rem\]{
-		height: 57.5rem;
+	.lg\:h-\[57\.75rem\]{
+		height: 57.75rem;
 	}
 
 	.lg\:h-\[22\.75rem\]{
@@ -3495,6 +3502,14 @@ html,
 		height: 28rem;
 	}
 
+	.lg\:h-\[57\.5rem\]{
+		height: 57.5rem;
+	}
+
+	.lg\:h-\[31\.375rem\]{
+		height: 31.375rem;
+	}
+
 	.lg\:max-h-\[calc\(100vh_-_10\.5rem\)\]{
 		max-height: calc(100vh - 10.5rem);
 	}
@@ -3529,6 +3544,10 @@ html,
 
 	.lg\:w-\[3\.125rem\]{
 		width: 3.125rem;
+	}
+
+	.lg\:flex-grow{
+		flex-grow: 1;
 	}
 
 	.lg\:flex-row{
@@ -3647,10 +3666,6 @@ html,
 		padding-bottom: 3.5rem;
 	}
 
-	.lg\:pb-11{
-		padding-bottom: 2.75rem;
-	}
-
 	.lg\:pb-24{
 		padding-bottom: 6rem;
 	}
@@ -3669,6 +3684,10 @@ html,
 
 	.lg\:pt-3{
 		padding-top: 0.75rem;
+	}
+
+	.lg\:pb-11{
+		padding-bottom: 2.75rem;
 	}
 
 	.lg\:text-right{
@@ -3840,3 +3859,5 @@ html,
 	}
 }
 
+
+/*# sourceMappingURL=main.css.map*/

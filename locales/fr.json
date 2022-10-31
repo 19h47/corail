@@ -243,6 +243,23 @@
 		}
 	},
 	"sections": {
+		"twoimage": {
+			"name": "Deux images",
+			"settings": {
+				"title": {
+					"label": "Titre"
+				},
+				"left_image": {
+					"label": "Image de gauche"
+				},
+				"right_image": {
+					"label": "Image de droite"
+				}
+			},
+			"presets": {
+				"name": "Deux images"
+			}
+		},
 		"twocolumn": {
 			"name": "Deux colonnes",
 			"settings": {
