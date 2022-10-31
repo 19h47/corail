@@ -6,6 +6,12 @@
       "settings": {
       }
     },
+    "a47143b9-abcb-4717-b2c0-728c5deddb31": {
+      "type": "image",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/an-aerial-shot-of-a-factory-complex.jpg"
+      }
+    },
     "f26a43b5-6ff3-45bf-a839-d8f3236ce24e": {
       "type": "logo",
       "settings": {
@@ -14,6 +20,7 @@
   },
   "order": [
     "main",
+    "a47143b9-abcb-4717-b2c0-728c5deddb31",
     "f26a43b5-6ff3-45bf-a839-d8f3236ce24e"
   ]
 }
