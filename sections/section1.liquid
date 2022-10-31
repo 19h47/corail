@@ -1,0 +1,37 @@
+{% for block in section.blocks %}
+    {% assign b = block.settings %}
+    {% if page.handle == b.page_handle %}
+        <section {{ block.shopify_attributes }}>
+            <img src="{{b.image | img_url }}">
+        </section>
+    {% break %}
+    {% endif %}
+{% endfor %}
+
+{% schema %}
+{
+    "name": "Landing page image",
+    "blocks": [{
+        "name" : "Landing Page Image",
+        "type": "Hero",
+        "settings": [
+        {
+            "type": "text",
+            "id": "title",
+            "label": "Name of this section"
+        },
+        {
+            "type": "textarea",
+            "id": "page_handle",
+            "label": "The pages where this image is shown"
+        },
+        {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Choose an image"
+        }
+        ]
+    }
+    ]
+}
+{% endschema %}
