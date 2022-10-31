@@ -4,77 +4,66 @@
 <section class="bg-cyan-very-dark-grayish text-white py-12 lg:py-14" style="background-size: 4.5rem 4.5rem; background-image: linear-gradient(to right, rgba(255,255,255, 0.06) 0.0625rem, transparent 0.0625rem), linear-gradient(to bottom, rgba(255,255,255, 0.06) 0.0625rem, transparent 0.0625rem);">
 	<div class="container flex flex-col gap-y-12 lg:gap-y-0">
 
-		<div class="row lg:-mt-[21.75rem] lg:relative lg:z-3 lg:order-2">
-			<div>
-				<div class="font-bold text-6xl leading-[3.125rem] lg:text-[7.5rem] lg:leading-[8rem] uppercase text-center font-display">
-					less<br>
-					<span data-scroll class="after:scale-x-0 after:transition-transform after:origin-left is-inview:after:scale-x-100 after:duration-1000 after:ease-in-out after:bg-red-very-light after:h-2.5 lg:after:h-4 relative after:inset-0 after:my-auto after:-mx-8 after:absolute">plastic,</span><br>
-					more<br>
-					corail°<br>
-				</div>
-			</div>
-		</div>
-
-		<div class="row lg:-mt-10 lg:relative lg:z-1 lg:order-3">
-			<div class="lg:col-8/12 lg:ml-2/12">
-				<noscript>
-					<div class="video-section__media"
-					  	{% if section.settings.video_cover_image != blank %} style="padding-bottom: {{ 1 | divided_by: section.settings.video_cover_image.aspect_ratio | times: 100 }}%;"{% endif %}
+		<div class="row lg:-mt-10 relative z-1 lg:order-2">
+			<div class="lg:col-8/12 lg:ml-2/12 lg:order-2">
+				{%- if section.settings.video -%}
+					<div class="relative lg:-mt-[2.625rem]" style="padding-bottom: {{ 100 | divided_by: section.settings.video.preview_image.aspect_ratio }}%">
+						<video class="absolute inset-0 w-full h-full object-cover object-center" autoplay loop muted poster="{{ section.settings.video.preview_image }}">
+							{% for source in section.settings.video.sources %}
+								<source src="{{ source.url }}" type="{{ source.mime_type }}">
+							{% endfor %}
+						</video>
+					</div>
+				{%- elsif section.settings.video_url -%}
+					<deferred-media
+						class="video-section__media lg:-mt-[2.625rem] deferred-media no-js-hidden global-media-settings"
+						data-media-id="{{ section.settings.video_url.id }}"
+						{% if section.settings.video_cover_image != blank %} style="padding-bottom: {{ 1 | divided_by: section.settings.video_cover_image.aspect_ratio | times: 100 }}%;"{% endif %}
 					>
-					  	<a href="{{ section.settings.video_url }}" class="video-section__poster media media--transparent media--landscape{% if section.settings.video_cover_image == blank %} video-section__placeholder{% endif %}">
+						<button
+							id="Deferred-Poster-Modal-{{ section.settings.video_url.id }}"
+							class="video-section__poster media deferred-media__poster media--landscape"
+							type="button"
+							aria-label="{{ 'sections.video.load_video' | t: description: section.settings.description | escape }}"
+						>
 							{%- if section.settings.video_cover_image != blank -%}
-						  		{%- capture sizes -%}(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 }}px, (min-width: 750px) calc(100vw - 10rem), 100vw{%- endcapture -%}
-						  		{%- assign alt = 'sections.video.load_video' | t: description: section.settings.description | escape -%}
-						  		{{ section.settings.video_cover_image | image_url: width: 3840 | image_tag:
+								{%- capture sizes -%}(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 }}px, (min-width: 750px) calc(100vw - 10rem), 100vw{%- endcapture -%}
+								{%- assign alt = 'sections.video.load_video' | t: description: section.settings.description | escape -%}
+								{{ section.settings.video_cover_image | image_url: width: 3840 | image_tag:
 									loading: 'lazy',
 									sizes: sizes,
 									widths: '375, 750, 1100, 1500, 1780, 2000, 3000, 3840',
 									alt: alt
-						  		}}
+								}}
 							{%- else -%}
-						  		{{ 'collection-2' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
+								{{ 'collection-2' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
 							{%- endif -%}
-						</a>
+
+							<span class="absolute text-white z-1 inset-0 lg:w-[3.625rem] lg:h-[4.75rem] m-auto w-8 h-9">
+								{% render 'svg', icon: 'play', classes: 'w-full h-full fill-current', description: shop.name %}
+							</span>
+						</button>
+
+						<template>
+						{%- if section.settings.video_url.type == 'youtube' -%}
+							<iframe src="https://www.youtube.com/embed/{{ section.settings.video_url.id }}?enablejsapi=1" class="js-youtube" allow="autoplay; encrypted-media" allowfullscreen title="{{ section.settings.description | escape }}"></iframe>
+						{%- else -%}
+							<iframe src="https://player.vimeo.com/video/{{ section.settings.video_url.id }}" class="js-vimeo" allow="autoplay; encrypted-media" allowfullscreen title="{{ section.settings.description | escape }}"></iframe>
+						{%- endif -%}
+						</template>
+					</deferred-media>
+				{% endif %}
+			</div>
+
+			<div class="row -mt-7 lg:-mt-[20.125rem] relative z-3 lg:order-1">
+				<div>
+					<div class="font-bold text-6xl leading-[3.125rem] lg:text-[7.5rem] lg:leading-[8rem] uppercase text-center font-display">
+						less<br>
+						<span data-scroll class="after:scale-x-0 after:transition-transform after:origin-left is-inview:after:scale-x-100 after:duration-1000 after:ease-in-out after:bg-red-very-light after:h-2.5 lg:after:h-4 relative after:inset-0 after:my-auto after:-mx-8 after:absolute">plastic,</span><br>
+						more<br>
+						corail°<br>
 					</div>
-				</noscript>
-
-				<deferred-media
-					class="video-section__media deferred-media no-js-hidden global-media-settings"
-					data-media-id="{{ section.settings.video_url.id }}"
-					{% if section.settings.video_cover_image != blank %} style="padding-bottom: {{ 1 | divided_by: section.settings.video_cover_image.aspect_ratio | times: 100 }}%;"{% endif %}
-				>
-					<button
-					  	id="Deferred-Poster-Modal-{{ section.settings.video_url.id }}"
-					  	class="video-section__poster media deferred-media__poster media--landscape"
-					  	type="button"
-					  	aria-label="{{ 'sections.video.load_video' | t: description: section.settings.description | escape }}"
-					>
-					  	{%- if section.settings.video_cover_image != blank -%}
-							{%- capture sizes -%}(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 }}px, (min-width: 750px) calc(100vw - 10rem), 100vw{%- endcapture -%}
-							{%- assign alt = 'sections.video.load_video' | t: description: section.settings.description | escape -%}
-							{{ section.settings.video_cover_image | image_url: width: 3840 | image_tag:
-						  		loading: 'lazy',
-						  		sizes: sizes,
-						  		widths: '375, 750, 1100, 1500, 1780, 2000, 3000, 3840',
-						  		alt: alt
-							}}
-					  	{%- else -%}
-							{{ 'collection-2' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
-					  	{%- endif -%}
-
-					  	<span class="absolute text-white z-1 inset-0 lg:w-[3.625rem] lg:h-[4.75rem] m-auto w-8 h-9">
-							{% render 'svg', icon: 'play', classes: 'w-full h-full fill-current', description: shop.name %}
-						</span>
-					</button>
-
-					<template>
-					  {%- if section.settings.video_url.type == 'youtube' -%}
-						<iframe src="https://www.youtube.com/embed/{{ section.settings.video_url.id }}?enablejsapi=1" class="js-youtube" allow="autoplay; encrypted-media" allowfullscreen title="{{ section.settings.description | escape }}"></iframe>
-					  {%- else -%}
-						<iframe src="https://player.vimeo.com/video/{{ section.settings.video_url.id }}" class="js-vimeo" allow="autoplay; encrypted-media" allowfullscreen title="{{ section.settings.description | escape }}"></iframe>
-					  {%- endif -%}
-					</template>
-				  </deferred-media>
+				</div>
 			</div>
 		</div>
 
@@ -100,7 +89,7 @@
 					<h2 class="font-display font-semibold text-3xl leading-none uppercase">{{- section.settings.title | escape -}}</h2>
 
 					{% if section.settings.content != blank %}
-						<p class="mt-2">{{- section.settings.content | newline_to_br -}}</p>
+						<p class="mt-2 leading-6">{{- section.settings.content | newline_to_br -}}</p>
 					{% endif %}
 
 					{% if section.settings.link_url != blank %}
@@ -163,11 +152,11 @@
       "id": "video_cover_image",
       "label": "t:sections.tech.settings.video_cover_image.label"
     },
-	{
-		"type": "video",
-		"id": "video",
-		"label": "t:sections.tech.settings.video.label"
-	  },
+    {
+      "type": "video",
+      "id": "video",
+      "label": "t:sections.tech.settings.video.label"
+    },
     {
       "type": "video_url",
       "id": "video_url",

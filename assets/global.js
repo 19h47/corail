@@ -7,28 +7,26 @@ function getFocusableElements(container) {
 	);
 }
 
-const $scroll = document.querySelector('.js-scroll');
 
-if ($scroll) {
-	// eslint-disable-next-line no-undef, no-unused-vars
-	const scroll = new LocomotiveNativeScroll({ el: $scroll });
+// eslint-disable-next-line no-undef, no-unused-vars
+const scroll = new LocomotiveNativeScroll({ smooth: false });
 
-	const isOntop = () => {
-		const top = window.pageYOffset || document.documentElement.scrollTop;
+const isOntop = () => {
+	const top = window.pageYOffset || document.documentElement.scrollTop;
 
-		if (0 >= top) {
-			document.documentElement.classList.add('is-ontop');
-		} else {
-			document.documentElement.classList.remove('is-ontop');
-		}
+	if (0 >= top) {
+		document.documentElement.classList.add('is-ontop');
+	} else {
+		document.documentElement.classList.remove('is-ontop');
 	}
-
-	scroll.on('scroll', ({ direction }) => {
-		document.documentElement.setAttribute('data-direction', direction || 'down');
-
-		isOntop();
-	});
 }
+
+scroll.on('scroll', ({ direction }) => {
+	document.documentElement.setAttribute('data-direction', direction || 'down');
+
+	isOntop();
+});
+
 
 document.querySelectorAll('[id^="Details-"] summary').forEach(summary => {
 	summary.setAttribute("role", "button");
