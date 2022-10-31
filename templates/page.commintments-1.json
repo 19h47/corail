@@ -1,10 +1,19 @@
 {
-	"layout": "commintments",
-	"sections": {
-		"main": {
-			"type": "main-page",
-			"settings": {}
-		}
-	},
-	"order": ["main"]
+  "layout": "commintments",
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+      }
+    },
+    "7260c216-9e57-46f7-a358-6d7e30cdf3d1": {
+      "type": "logo",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "main",
+    "7260c216-9e57-46f7-a358-6d7e30cdf3d1"
+  ]
 }

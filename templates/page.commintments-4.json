@@ -1,10 +1,19 @@
 {
-	"layout": "commintments",
-	"sections": {
-		"main": {
-			"type": "main-page",
-			"settings": {}
-		}
-	},
-	"order": ["main"]
+  "layout": "commintments",
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+      }
+    },
+    "21348535-fa1c-4b95-9255-eee59005213f": {
+      "type": "logo",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "main",
+    "21348535-fa1c-4b95-9255-eee59005213f"
+  ]
 }
