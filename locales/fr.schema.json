@@ -395,7 +395,11 @@
 				}
 			}
 		},
-		"drawer": { "name": "Tiroir", "presets": "Tiroir" },
+		"drawercommintments": {
+			"name": "Tiroir",
+			"presets": "Tiroir",
+			"blocks": { "page": { "name": "Page" } }
+		},
 		"twoimage": {
 			"name": "Deux images",
 			"settings": {
