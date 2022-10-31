@@ -1,4 +1,4 @@
-{% if section.settings.left_image != blank or section.settings.left_image != blank %}
+{% if section.settings.left_image != blank or section.settings.right_image != blank %}
 	<div class="twoimage my-14">
 		<div class="container">
 
@@ -13,7 +13,7 @@
 					</div>
 				{% endif %}
 
-				{% if section.settings.left_image != blank %}
+				{% if section.settings.right_image != blank %}
 					<div class="{% if section.settings.left_image != blank %} lg:mt-16 lg:col-5/12 hidden lg:block {% else %} lg: ml-1/12 lg:col-10/12 {% endif %}">
 						{{ section.settings.right_image | image_url: width: 692, height: 888 | image_tag:
 							loading: 'lazy',
