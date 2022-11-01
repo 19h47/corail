@@ -270,10 +270,6 @@ body,
 	height: 1em;
 }
 
-.overflow-hidden {
-	overflow: hidden;
-}
-
 .skip-to-content-link:focus {
 	z-index: 9999;
 	position: inherit;
@@ -617,16 +613,6 @@ summary::-webkit-details-marker {
 
 .disclosure-has-popup[open] > summary + * {
 	z-index: 100;
-}
-
-@media screen and (min-width: 750px) {
-	.disclosure-has-popup[open] > summary + * {
-		z-index: 4;
-	}
-
-	.facets .disclosure-has-popup[open] > summary + * {
-		z-index: 2;
-	}
 }
 
 /* base-focus */

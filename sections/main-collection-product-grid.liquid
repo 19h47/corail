@@ -12,7 +12,7 @@
 <div class="section-{{ section.id }}-padding">
 
  	{% comment %} Sort is the first tabbable element when filter type is vertical {% endcomment %}
-  	{%- if section.settings.enable_sorting and section.settings.filter_type == 'vertical' -%}
+  	{% comment %} {%- if section.settings.enable_sorting and section.settings.filter_type == 'vertical' -%}
 		<facet-filters-form class="facets facets-vertical-sort container small-hide no-js-hidden">
 			<form class="facets-vertical-form" id="FacetSortForm">
 				<div class="facet-filters sorting caption">
@@ -47,22 +47,28 @@
 						{%- endif -%}
 						</span>
 					</h2>
-					{% comment %} <div class="loading-overlay__spinner js-loading-overlay-spinner">
+					<div class="loading-overlay__spinner js-loading-overlay-spinner">
 						<svg aria-hidden="true" focusable="false" role="presentation" class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
 						<circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
 						</svg>
-					</div> {% endcomment %}
+					</div>
 				</div>
 			</form>
 		</facet-filters-form>
-  	{%- endif -%}
+  	{%- endif -%} {% endcomment %}
 
   	<div class="{% if section.settings.filter_type == 'vertical' %} facets-vertical page-width {% endif %}">
-    	{{ 'component-facets.css' | asset_url | stylesheet_tag }}
-    	<script src="{{ 'facets.js' | asset_url }}" defer="defer"></script>
+
+		{{ 'component-facets.css' | asset_url | stylesheet_tag }}
+
+		<script src="{{ 'facets.js' | asset_url }}" defer="defer"></script>
 
 		{%- if section.settings.enable_filtering or section.settings.enable_sorting -%}
-			<aside aria-labelledby="verticalTitle" class="facets-wrapper{% unless section.settings.enable_filtering %} facets-wrapper--no-filters{% endunless %}{% if section.settings.filter_type != 'vertical' %} page-width{% endif %}" id="main-collection-filters" data-id="{{ section.id }}">
+			<aside
+				aria-labelledby="verticalTitle"
+				class="facets-wrapper container mb-24 {% unless section.settings.enable_filtering %} facets-wrapper--no-filters {% endunless %}"
+				id="main-collection-filters"
+				data-id="{{ section.id }}">
 				{% render 'facets', results: collection, enable_filtering: section.settings.enable_filtering, enable_sorting: section.settings.enable_sorting, filter_type: section.settings.filter_type %}
 			</aside>
     	{%- endif -%}
@@ -80,7 +86,7 @@
 						</div>
 					</div>
 				{%- else -%}
-					<div class="collection {% if section.settings.filter_type != 'vertical' %} page-width{% endif %}">
+					<div class="collection relative {% if section.settings.filter_type != 'vertical' %} page-width{% endif %}">
 						<div class="loading-overlay"></div>
 
 						<ul id="product-grid" data-id="{{ section.id }}" class="row gap-y-[6.75rem]">
@@ -101,7 +107,8 @@
 										show_quick_add: section.settings.enable_quick_add,
 										show_badge: true,
 										section_id: section.id,
-										size: 'large'
+										size: 'large',
+										show_secondary_image: true
 									%}
 								</li>
 							{%- endfor -%}

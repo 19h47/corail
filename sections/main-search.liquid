@@ -73,24 +73,24 @@
         <form action="{{ routes.search_url }}" method="get" role="search" class="search">
           <div class="field">
             <input
-              class="search__input field__input"
-              id="Search-In-Template"
-              type="search"
-              name="q"
-              value="{{ search.terms | escape }}"
-              placeholder="{{ 'general.search.search' | t }}"
-              {%- if settings.predictive_search_enabled -%}
-                role="combobox"
-                aria-expanded="false"
-                aria-owns="predictive-search-results-list"
-                aria-controls="predictive-search-results-list"
-                aria-haspopup="listbox"
-                aria-autocomplete="list"
-                autocorrect="off"
-                autocomplete="off"
-                autocapitalize="off"
-                spellcheck="false"
-              {%- endif -%}
+				class="search__input field__input"
+				id="Search-In-Template"
+				type="search"
+				name="q"
+				value="{{ search.terms | escape }}"
+				placeholder="{{ 'general.search.search' | t }}"
+				{% if settings.predictive_search_enabled %}
+					role="combobox"
+					aria-expanded="false"
+					aria-owns="predictive-search-results-list"
+					aria-controls="predictive-search-results-list"
+					aria-haspopup="listbox"
+					aria-autocomplete="list"
+					autocorrect="off"
+					autocomplete="off"
+					autocapitalize="off"
+					spellcheck="false"
+				{% endif %}
             >
             <label class="field__label" for="Search-In-Template">{{ 'general.search.search' | t }}</label>
             <input name="options[prefix]" type="hidden" value="last">

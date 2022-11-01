@@ -21,7 +21,7 @@
 		role="region" aria-label="{{ 'sections.header.announcement' | t }}"
 		{{ attributes }}
 	>
-		{%- if link != blank -%}<a class="hover:underline" href="{{ link }}" class="">{%- endif -%}
+		{%- if link != blank -%}<a class="hover:underline" href="{{ link }}">{%- endif -%}
 			<ul class="marquee flex gap-x-2 items-center" style="animation-duration: 120s;">
 				{% for i in (1..10) %}
 					<li class="flex items-center flex-wrap"><p>{{- text | escape -}}</p></li>

@@ -7,7 +7,6 @@ function getFocusableElements(container) {
 	);
 }
 
-
 // eslint-disable-next-line no-undef, no-unused-vars
 const scroll = new LocomotiveNativeScroll({ smooth: false });
 
@@ -15,18 +14,17 @@ const isOntop = () => {
 	const top = window.pageYOffset || document.documentElement.scrollTop;
 
 	if (0 >= top) {
-		document.documentElement.classList.add('is-ontop');
+		document.documentElement.classList.add("is-ontop");
 	} else {
-		document.documentElement.classList.remove('is-ontop');
+		document.documentElement.classList.remove("is-ontop");
 	}
-}
+};
 
-scroll.on('scroll', ({ direction }) => {
-	document.documentElement.setAttribute('data-direction', direction || 'down');
+scroll.on("scroll", ({ direction }) => {
+	document.documentElement.setAttribute("data-direction", direction || "down");
 
 	isOntop();
 });
-
 
 document.querySelectorAll('[id^="Details-"] summary').forEach(summary => {
 	summary.setAttribute("role", "button");
@@ -121,6 +119,7 @@ function focusVisiblePolyfill() {
 		}
 	});
 
+	// eslint-disable-next-line no-unused-vars
 	window.addEventListener("mousedown", event => {
 		mouseClick = true;
 	});
@@ -139,6 +138,7 @@ function focusVisiblePolyfill() {
 	);
 }
 
+// eslint-disable-next-line no-unused-vars
 function pauseAllMedia() {
 	document.querySelectorAll(".js-youtube").forEach(video => {
 		video.contentWindow.postMessage(
@@ -164,7 +164,9 @@ function removeTrapFocus(elementToFocus = null) {
 }
 
 function onKeyUpEscape(event) {
-	if ("ESCAPE" !== event.code.toUpperCase()) return;
+	if ("ESCAPE" !== event.code.toUpperCase()) {
+		return;
+	}
 
 	const openDetailsElement = event.target.closest("details[open]");
 	if (!openDetailsElement) return;
@@ -175,6 +177,7 @@ function onKeyUpEscape(event) {
 	summaryElement.focus();
 }
 
+// eslint-disable-next-line no-unused-vars
 function debounce(fn, wait) {
 	let t;
 	return (...args) => {
@@ -183,6 +186,7 @@ function debounce(fn, wait) {
 	};
 }
 
+// eslint-disable-next-line no-unused-vars
 function fetchConfig(type = "json") {
 	return {
 		method: "POST",
@@ -323,7 +327,9 @@ class MenuDrawer extends HTMLElement {
 	}
 
 	onKeyUp(event) {
-		if ("ESCAPE" !== event.code.toUpperCase()) return;
+		if ("ESCAPE" !== event.code.toUpperCase()) {
+			return;
+		}
 
 		const openDetailsElement = event.target.closest("details[open]");
 		if (!openDetailsElement) return;
@@ -334,6 +340,8 @@ class MenuDrawer extends HTMLElement {
 	}
 
 	onSummaryClick(event) {
+		console.log('MenuDrawer.onSummaryClick', event);
+
 		const summaryElement = event.currentTarget;
 		const detailsElement = summaryElement.parentNode;
 		const parentMenuElement = detailsElement.closest(".has-submenu");
@@ -370,11 +378,16 @@ class MenuDrawer extends HTMLElement {
 		});
 		summaryElement.setAttribute("aria-expanded", true);
 		trapFocus(this.mainDetailsToggle, summaryElement);
-		document.body.classList.add(`overflow-hidden-${this.dataset.breakpoint}`);
+
+		document.body.classList.add(`overflow-hidden`);
 	}
 
 	closeMenuDrawer(event, elementToFocus = false) {
-		if (event === undefined) return;
+		console.log("closeMenuDrawer", event, elementToFocus);
+
+		if (event === undefined) {
+			return;
+		}
 
 		this.mainDetailsToggle.classList.remove("menu-opening");
 		this.mainDetailsToggle.querySelectorAll("details").forEach(details => {
@@ -384,12 +397,20 @@ class MenuDrawer extends HTMLElement {
 		this.mainDetailsToggle.querySelectorAll(".submenu-open").forEach(submenu => {
 			submenu.classList.remove("submenu-open");
 		});
-		document.body.classList.remove(`overflow-hidden-${this.dataset.breakpoint}`);
+
+		document.body.classList.remove(`overflow-hidden`);
 		removeTrapFocus(elementToFocus);
 		this.closeAnimation(this.mainDetailsToggle);
 	}
 
+	// eslint-disable-next-line no-unused-vars
 	onFocusOut(event) {
+		console.log(
+			"MenuDrawer.onFocusOut",
+			this.mainDetailsToggle.hasAttribute("open"),
+			!this.mainDetailsToggle.contains(document.activeElement)
+		);
+
 		setTimeout(() => {
 			if (
 				this.mainDetailsToggle.hasAttribute("open") &&
@@ -413,6 +434,7 @@ class MenuDrawer extends HTMLElement {
 		this.closeAnimation(detailsElement);
 	}
 
+	// eslint-disable-next-line class-methods-use-this
 	closeAnimation(detailsElement) {
 		let animationStart;
 
@@ -462,7 +484,7 @@ class HeaderDrawer extends MenuDrawer {
 
 		summaryElement.setAttribute("aria-expanded", true);
 		trapFocus(this.mainDetailsToggle, summaryElement);
-		document.body.classList.add(`overflow-hidden-${this.dataset.breakpoint}`);
+		document.body.classList.add(`overflow-hidden`);
 	}
 
 	closeMenuDrawer(event, elementToFocus) {
@@ -566,7 +588,6 @@ class DeferredMedia extends HTMLElement {
 }
 
 customElements.define("deferred-media", DeferredMedia);
-
 
 class ProductRecommendations extends HTMLElement {
 	constructor() {

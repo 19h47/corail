@@ -1,6 +1,8 @@
 {% comment %}theme-check-disable UndefinedObject{% endcomment %}
 {{ 'section-footer.css' | asset_url | stylesheet_tag }}
 
+<script src="{{ 'coordinates.js' | asset_url }}" defer></script>
+
 <link rel="stylesheet" href="{{ 'component-newsletter.css' | asset_url }}" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="{{ 'component-list-payment.css' | asset_url }}" media="print" onload="this.media='all'">
 
@@ -16,7 +18,7 @@
 				{% render 'svg', icon: 'c-logo', classes: 'absolute inset-0 m-auto h-10 w-10 fill-current', description: shop.name %}
 			</a>
 
-			<hr class="w-full h-[0.0625rem] lg:h-full block lg:w-[0.0625rem] bg-orange-grayish"></hr>
+			<hr class="w-full h-[0.0625rem] lg:h-full block lg:w-[0.0625rem] bg-orange-grayish"/>
 
 			<div class="flex flex-1 py-24 lg:py-0 justify-center items-center font-semibold font-display text-xl leading-5 text-center">
 				<p>
@@ -151,11 +153,11 @@
 	<hr class="bg-orange-grayish w-full h-[0.0625rem] lg:hidden absolute inset-x-0 bottom-0 mb-11">
 
 	<button type="button" class="flex gap-x-8 lg:gap-x-32 items-center group text-white bg-red-very-light px-5 py-1.5 lg:py-5 lg:pl-14 {% if request.page_type != 'product' %} fixed {% else %} absolute lg:mb-24 {% endif %} bottom-0 right-0 z-50">
-		<p class="uppercase font-semibold font-display lg:text-xl leading-none lg:leading-6">{{ 'general.newsletter.label' | t }}</p>
-		<p class="button-secondary inline-block align-middle group-hover:text-red-very-light group-hover:bg-white group-hover:border-red-very-light">
+		<div class="uppercase font-semibold font-display lg:text-xl leading-none lg:leading-6">{{ 'general.newsletter.label' | t }}</div>
+		<div class="button-secondary inline-block align-middle group-hover:text-red-very-light group-hover:bg-white group-hover:border-red-very-light">
 			<span class="hidden lg:inline">{{ 'general.newsletter.title' | t }}</span>
 			<span class="text-xs lg:hidden">&rightarrow;</span>
-		</p>
+		</div>
 	</button>
 </footer>
 

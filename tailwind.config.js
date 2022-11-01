@@ -65,7 +65,7 @@ module.exports = {
 	plugins: [
 		plugin(({ addVariant }) => addVariant("is-inview", ".is-inview&")),
 		plugin(({ addVariant }) => addVariant("is-active", ".is-active&")),
-		plugin(({ addVariant }) => addVariant("is-disabled", "[aria-disabled='true']&")),
+		plugin(({ addVariant }) => addVariant("is-disabled", ["[aria-disabled='true']&", '.disabled&', '.is-disabled&'])),
 		plugin(({ addVariant }) => addVariant("is-ontop", ".is-ontop &")),
 		plugin(({ addVariant }) => addVariant("expanded", "&[aria-expanded='true']")),
 		plugin(({ addVariant }) => addVariant("parent-expanded", "[aria-expanded='true'] > &")),

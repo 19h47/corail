@@ -12,12 +12,23 @@
   - show_quick_add: {Boolean} Show the quick add button.
   - section_id: {String} The ID of the section that contains this card.
   - horizontal_class: {Boolean} Add a card--horizontal class if set to true. Default: false
+  - classes: {String} Classes
+  - size: {String} Size of the product card. Values are "small" and "large". Default is "small" (optional)
 
   Usage:
   {% render 'card-product', show_vendor: section.settings.show_vendor %}
 {% endcomment %}
 
 {{ 'component-rating.css' | asset_url | stylesheet_tag }}
+
+{% liquid
+	assign card_product = card_product | default: null
+	assign media_aspect_ratio = media_aspect_ratio | default: 'square'
+	assign classes = classes | default: ''
+	assign size = size | default: 'small'
+	assign show_secondary_image = show_secondary_image | default: false
+
+%}
 
 {%- if card_product and card_product != empty -%}
   	{%- liquid
@@ -34,7 +45,7 @@
     	endif
 	-%}
 
-	<article class="relative group {{ classes }}">
+	<article class="relative {% if card_product.media[1] != nil and show_secondary_image %} group {% endif %} {{ classes }}">
 
 		<div class="relative h-[16.875rem] bg-gray-very-light {% if 'large' == size %} lg:h-[38rem] {% else %} lg:h-[28rem] {% endif %}">
 			{%- if card_product.featured_media -%}
@@ -61,24 +72,38 @@
 				{% comment %}theme-check-enable ImgLazyLoading{% endcomment %}
 
 				{%- if card_product.media[1] != nil and show_secondary_image -%}
-					<img
-						srcset="
-							{%- if card_product.media[1].width >= 165 -%}{{ card_product.media[1] | image_url: width: 165 }} 165w,{%- endif -%}
-							{%- if card_product.media[1].width >= 360 -%}{{ card_product.media[1] | image_url: width: 360 }} 360w,{%- endif -%}
-							{%- if card_product.media[1].width >= 533 -%}{{ card_product.media[1] | image_url: width: 533 }} 533w,{%- endif -%}
-							{%- if card_product.media[1].width >= 720 -%}{{ card_product.media[1] | image_url: width: 720 }} 720w,{%- endif -%}
-							{%- if card_product.media[1].width >= 940 -%}{{ card_product.media[1] | image_url: width: 940 }} 940w,{%- endif -%}
-							{%- if card_product.media[1].width >= 1066 -%}{{ card_product.media[1] | image_url: width: 1066 }} 1066w,{%- endif -%}
-							{{ card_product.media[1] | image_url }} {{ card_product.media[1].width }}w
-						"
-						src="{{ card_product.media[1] | image_url: width: 533 }}"
-						sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
-						alt=""
-						class="absolute inset-0 w-full h-full object-cover object-center opacity-0 duration-1000 ease-in-out transition-opacity group-hover:opacity-100"
-						loading="lazy"
-						width="{{ card_product.media[1].width }}"
-						height="{{ card_product.media[1].height }}"
-					>
+					{% if 'video' == card_product.media[1].media_type %}
+						<video
+							class="absolute inset-0 w-full h-full object-cover object-center opacity-0 duration-1000 ease-in-out transition-opacity group-hover:opacity-100"
+							autoplay
+							loop
+							muted
+							poster="{{ card_product.media[1].preview_image }}"
+						>
+							{% for source in card_product.media[1].sources %}
+								<source src="{{ source.url }}" type="{{ source.mime_type }}">
+							{% endfor %}
+						</video>
+					{% else %}
+						<img
+							srcset="
+								{%- if card_product.media[1].width >= 165 -%}{{ card_product.media[1] | image_url: width: 165 }} 165w,{%- endif -%}
+								{%- if card_product.media[1].width >= 360 -%}{{ card_product.media[1] | image_url: width: 360 }} 360w,{%- endif -%}
+								{%- if card_product.media[1].width >= 533 -%}{{ card_product.media[1] | image_url: width: 533 }} 533w,{%- endif -%}
+								{%- if card_product.media[1].width >= 720 -%}{{ card_product.media[1] | image_url: width: 720 }} 720w,{%- endif -%}
+								{%- if card_product.media[1].width >= 940 -%}{{ card_product.media[1] | image_url: width: 940 }} 940w,{%- endif -%}
+								{%- if card_product.media[1].width >= 1066 -%}{{ card_product.media[1] | image_url: width: 1066 }} 1066w,{%- endif -%}
+								{{ card_product.media[1] | image_url }} {{ card_product.media[1].width }}w
+							"
+							src="{{ card_product.media[1] | image_url: width: 533 }}"
+							sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
+							alt=""
+							class="absolute inset-0 w-full h-full object-cover object-center opacity-0 duration-1000 ease-in-out transition-opacity group-hover:opacity-100"
+							loading="lazy"
+							width="{{ card_product.media[1].width }}"
+							height="{{ card_product.media[1].height }}"
+						>
+					{% endif %}
 				{%- endif -%}
 
 			{%- endif -%}
@@ -437,50 +462,4 @@
       </div>
     </div>
   </div> {% endcomment %}
-{%- else -%}
-  <div class="product-card-wrapper card-wrapper underline-links-hover">
-    <div
-      class="
-        card
-        card--{{ settings.card_style }}
-        card--text
-        {% if extend_height %} card--extend-height{% endif %}
-        {% if settings.card_style == 'card' %} color-{{ settings.card_color_scheme }}{% endif %}
-        {% if card_product.featured_media == nil and settings.card_style == 'card' %} ratio{% endif %}
-        {{ horizontal_class }}
-      "
-      style="--ratio-percent: 100%;"
-    >
-      <div
-        class="card__inner {% if settings.card_style == 'standard' %}color-{{ settings.card_color_scheme }}{% endif %}{% if settings.card_style == 'standard' %} ratio{% endif %}"
-        style="--ratio-percent: 100%;"
-      >
-        <div class="card__content">
-          <div class="card__information">
-            <h3 class="card__heading">
-              <a role="link" aria-disabled="true" class="">
-                {{ 'onboarding.product_title' | t }}
-              </a>
-            </h3>
-          </div>
-        </div>
-      </div>
-      <div class="card__content">
-        <div class="card__information">
-          <h3 class="card__heading{% if settings.card_style == 'standard' %} h5{% endif %}">
-            <a role="link" aria-disabled="true" class="">
-              {{ 'onboarding.product_title' | t }}
-            </a>
-          </h3>
-          <div class="card-information">
-            {%- if show_vendor -%}
-              <span class="visually-hidden">{{ 'accessibility.vendor' | t }}</span>
-              <div class="caption-with-letter-spacing light">{{ 'products.product.vendor' | t }}</div>
-            {%- endif -%}
-            {% render 'price' %}
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 {%- endif -%}
