@@ -589,10 +589,6 @@ input.mobile-facets__checkbox {
 }
 
 @media screen and (min-width: 750px) {
-	.facets-vertical {
-		display: flex;
-	}
-
 	.facets-wrap-vertical {
 		border: none;
 		padding-left: 0;

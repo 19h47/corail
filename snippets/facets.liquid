@@ -137,7 +137,7 @@
 
 								<div class="has-submenu relative z-1 overflow-y-auto flex-grow flex flex-col">
 
-									{%- if enable_filtering -%}
+									{%- if enable_filtering and results.filters != empty -%}
 										<div class="space-y-5 p-5">
 											{%- for filter in results.filters -%}
 												{% case filter.type %}
@@ -265,7 +265,7 @@
 									{%- endif -%}
 
 									{%- if enable_sorting -%}
-										<hr class="w-full h-[0.0625rem] block bg-orange-grayish">
+										{% if results.filters != empty %}<hr class="w-full h-[0.0625rem] block bg-orange-grayish">{% endif %}
 										<div class="mobile-facets__details js-filter p-5" data-index="mobile-{{ forloop.index }}">
 											<div class="mobile-facets__summary">
 												<div class="mobile-facets__sort">
