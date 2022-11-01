@@ -7,7 +7,7 @@
 <script src="{{ 'coordinates.js' | asset_url }}" defer></script>
 
 <div class="text-white relative image-banner h-[36.625rem] lg:h-[52.625rem]">
-	<video class="h-full w-full object-cover relative z-10" loop muted autoplay src="{{ section.settings.video }}"></video>
+	<video class="h-full w-full object-cover relative z-10" loop muted autoplay playsinline src="{{ section.settings.video }}"></video>
 
 	{%- if section.blocks -%}
 		<div class="absolute text-center my-auto inset-0 z-20 flex items-center">
