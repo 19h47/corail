@@ -1,0 +1,47 @@
+<div>
+	SLIDER
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.slider.name",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+
+  ],
+  "blocks": [
+    {
+      "type": "slide",
+      "name": "t:sections.slider.blocks.slide.name",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "t:sections.slider.blocks.slide.settings.image.label"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "t:sections.slider.blocks.slide.settings.title.label",
+          "placeholder": "t:sections.slider.blocks.slide.settings.title.placeholder"
+        },
+        {
+          "type": "text",
+          "id": "content",
+          "label": "t:sections.slider.blocks.slide.settings.content.label",
+          "placeholder": "t:sections.slider.blocks.slide.settings.content.placeholder"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.slider.presets.name",
+      "blocks": [
+
+      ]
+    }
+  ]
+}
+{% endschema %}
