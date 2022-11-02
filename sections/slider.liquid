@@ -1,7 +1,7 @@
 <script src="{{ 'swiper.js' | asset_url }}" defer="defer"></script>
 <script src="{{ 'slider.js' | asset_url }}" defer="defer"></script>
 
-<slider-component class="block my-16 lg:my-28" data-parameters='{"spaceBetween":20}'>
+<slider-component class="block my-16 lg:my-28 overflow-hidden" data-parameters='{"spaceBetween":20}'>
 	{% if section.settings.title != blank %}
 		<div class="container mb-6">
 			<div class="row">

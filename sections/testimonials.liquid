@@ -1,7 +1,7 @@
 <script src="{{ 'swiper.js' | asset_url }}" defer="defer"></script>
 <script src="{{ 'slider.js' | asset_url }}" defer="defer"></script>
 
-<slider-component class="block my-16 lg:my-28" data-parameters='{"spaceBetween":20}'>
+<slider-component class="block my-16 lg:my-28 overflow-hidden" data-parameters='{"spaceBetween":20}'>
 	{% if section.settings.title != blank %}
 		<div class="container mb-6">
 			<div class="row">
@@ -23,17 +23,19 @@
 						{% for block in section.blocks %}
 							{%- case block.type -%}
 								{%- when 'slide' -%}
-									<div class="w-full lg:w-3/10 swiper-slide swiper-slide">
+									<div class="w-full relative lg:w-3/10 h-[15.25rem] swiper-slide swiper-slide border-orange-grayish border-[0.0625rem] px-8 pb-4 pt-12">
+										{% render 'svg', icon: 'quote-left', classes: 'm-4 absolute top-0 left-0 w-4 h-4 fill-current' %}
+										{% render 'svg', icon: 'quote-right', classes: 'm-4 absolute right-0 bottom-0 w-4 h-4 fill-current' %}
 
+										<div class="h-full flex flex-col">
+											{%- if block.settings.content -%}
+												<p class="text-xl font-medium font-display">{{- block.settings.content -}}</p>
+											{%- endif -%}
 
-										{%- if block.settings.title -%}
-											{{- block.settings.title -}}
-										{%- endif -%}
-										{%- if block.settings.content -%}
-											{{- block.settings.content -}}
-										{%- endif -%}
-
-
+											{%- if block.settings.title -%}
+												<p class="mt-auto text-xs">{{- block.settings.title -}}</p>
+											{%- endif -%}
+										</div>
 									</div>
 							{%- endcase -%}
 						{% endfor %}
