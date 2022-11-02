@@ -1714,6 +1714,11 @@ html,
 	margin-bottom: 3.5rem;
 }
 
+.my-\[4\.5rem\]{
+	margin-top: 4.5rem;
+	margin-bottom: 4.5rem;
+}
+
 .my-6{
 	margin-top: 1.5rem;
 	margin-bottom: 1.5rem;
@@ -4028,13 +4033,17 @@ html,
 		line-height: 1.75rem;
 	}
 
-	.lg\:text-\[5\.625rem\]{
-		font-size: 5.625rem;
+	.lg\:text-\[9\.375rem\]{
+		font-size: 9.375rem;
 	}
 
 	.lg\:text-6xl{
 		font-size: 3.75rem;
 		line-height: 1;
+	}
+
+	.lg\:text-\[5\.625rem\]{
+		font-size: 5.625rem;
 	}
 
 	.lg\:text-4xl{
@@ -4072,6 +4081,10 @@ html,
 
 	.lg\:leading-6{
 		line-height: 1.5rem;
+	}
+
+	.lg\:leading-none{
+		line-height: 1;
 	}
 
 	.lg\:leading-\[5\.125rem\]{
