@@ -395,22 +395,28 @@
         }
       }
     },
-	"timeline": {
-		"name": "Timeline",
-		"blocks": {
-			"item": {
-				"name": "Item",
-				"settings": {
-					"image": { "label": "Image" },
-					"title": { "label": "Titre" },
-					"content": { "label": "Contenu" }
-				}
-			}
-		},
-		"presets": {
-			"name": "Timeline"
-		}
-	},
+    "timeline": {
+      "name": "Timeline",
+      "blocks": {
+        "item": {
+          "name": "Item",
+          "settings": {
+            "image": {
+              "label": "Image"
+            },
+            "title": {
+              "label": "Titre"
+            },
+            "content": {
+              "label": "Contenu"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Timeline"
+      }
+    },
     "image": {
       "name": "Image",
       "settings": {

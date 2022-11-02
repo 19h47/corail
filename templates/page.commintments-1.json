@@ -13,6 +13,42 @@
         "right_image": "shopify:\/\/shop_images\/contrast-between-sand-and-sea.jpg"
       }
     },
+    "f4b7179e-b899-4a13-94cb-cf90156c0788": {
+      "type": "timeline",
+      "blocks": {
+        "b2ad8133-3164-45fc-8971-a172500ba236": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/a-bird-on-a-stack-of-wood-in-the-sea.jpg",
+            "title": "THE PLASTIC THREAT",
+            "content": "Our mission has been the same since the beginning: turning a threat into an opportunity and thinking beyond the clean-up. Removing the plastic from the sea is the first step, turning it into a high-performance material is the solution. We believe upcycling and education are the keys to ensure a sustainable change of mindset."
+          }
+        },
+        "7b6aac9e-1641-45ff-b126-98a0fc7583d8": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/red-sea-arch.jpg",
+            "title": "THE SEA IS OUR R&D",
+            "content": "The sea is the source of everything, the source of life itself. When designing our products or thinking about our processes, our inspiration always comes from what we find in the sea: wonders of breathing systems, ultra-adaptable organisms, light-generating lifeforms. Our research relies on watching and duplicating what the sea has already created and perfected."
+          }
+        },
+        "a7f65b92-acce-4664-b631-fa62402a689a": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/a-view-of-the-sea-from-a-rocky-cliff-side.jpg",
+            "title": "REBUIlDING",
+            "content": "Our biggest project to finally close the loop. Clean up, get inspiration, rebuild. We are currently working on projects to revitalize marine life in damaged spots to turn the light back on in places where it has long been turned off. Cleaning up is a start, rebuilding is the main purpose."
+          }
+        }
+      },
+      "block_order": [
+        "b2ad8133-3164-45fc-8971-a172500ba236",
+        "7b6aac9e-1641-45ff-b126-98a0fc7583d8",
+        "a7f65b92-acce-4664-b631-fa62402a689a"
+      ],
+      "settings": {
+      }
+    },
     "7260c216-9e57-46f7-a358-6d7e30cdf3d1": {
       "type": "logo",
       "settings": {
@@ -22,6 +58,7 @@
   "order": [
     "main",
     "c3990efb-0191-449c-8e29-7bf79ac24085",
+    "f4b7179e-b899-4a13-94cb-cf90156c0788",
     "7260c216-9e57-46f7-a358-6d7e30cdf3d1"
   ]
 }
