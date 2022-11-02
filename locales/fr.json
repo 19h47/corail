@@ -254,6 +254,9 @@
 						"content": { "label": "Contenu" }
 					}
 				}
+			},
+			"presets": {
+				"name": "Timeline"
 			}
 		},
 		"twoimage": {
