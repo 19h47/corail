@@ -395,20 +395,22 @@
         }
       }
     },
-	"key-figure": {
-		"name": "Chiffre clé",
-		"settings": {
-			"title": {
-				"label": "Titre",
-				"placeholder": "Titre"
-			},
-			"key-figure": {
-				"label": "Chiffre clé",
-				"placeholder": "Chiffre clé"
-			}
-		},
-		"presets": {"name": "Chiffre clé"}
-	},
+    "key-figure": {
+      "name": "Chiffre clé",
+      "settings": {
+        "title": {
+          "label": "Titre",
+          "placeholder": "Titre"
+        },
+        "key-figure": {
+          "label": "Chiffre clé",
+          "placeholder": "Chiffre clé"
+        }
+      },
+      "presets": {
+        "name": "Chiffre clé"
+      }
+    },
     "timeline": {
       "name": "Timeline",
       "blocks": {
