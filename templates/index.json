@@ -29,7 +29,7 @@
       "type": "featured-collection",
       "settings": {
         "title": "We make sneakers with marine waste collected and transformed by us.",
-        "description": "<p>From the sea<br\/>To save the earth<\/p>",
+        "description": "",
         "show_description": false,
         "collection": "all",
         "products_to_show": 4,
