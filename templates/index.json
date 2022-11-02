@@ -28,7 +28,7 @@
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
-        "title": "We make sneakers with marine waste collected and transformed by us.",
+        "title": "We make\nsneakers with\nmarine waste\ncollected and transformed\nby us.",
         "description": "",
         "show_description": false,
         "collection": "all",
