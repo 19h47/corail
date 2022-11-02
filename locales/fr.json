@@ -253,10 +253,12 @@
               "label": "Image"
             },
             "title": {
-              "label": "Titre"
+              "label": "Titre",
+			  "placeholder": "Titre"
             },
             "content": {
-              "label": "Contenu"
+              "label": "Contenu",
+			  "placeholder": "Contenu"
             }
           }
         }
