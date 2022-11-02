@@ -50,6 +50,48 @@
         "title": "THE CREW"
       }
     },
+    "092917c6-4968-410c-bdff-e90015882067": {
+      "type": "testimonials",
+      "blocks": {
+        "d5e622a1-ad28-41ec-b616-afd4a26085b6": {
+          "type": "slide",
+          "settings": {
+            "title": "TONY",
+            "content": "Somedays, we used to fish more plastic than fishes."
+          }
+        },
+        "52f70789-205c-40db-a56f-dd9605ad3767": {
+          "type": "slide",
+          "settings": {
+            "title": "EDDY",
+            "content": "Many fishermen burn their fishing nets because there is zero recycling solution."
+          }
+        },
+        "b95f9264-5712-4344-92e6-b500eaaf7eb8": {
+          "type": "slide",
+          "settings": {
+            "title": "ALEX",
+            "content": "We have fished toys, clothes, scooters and even an old WWI bomb."
+          }
+        },
+        "c5af06e0-3566-47a2-9d19-954af2ba56cd": {
+          "type": "slide",
+          "settings": {
+            "title": "DOUMé",
+            "content": "There, you have a fisherman who cleans up the sea."
+          }
+        }
+      },
+      "block_order": [
+        "d5e622a1-ad28-41ec-b616-afd4a26085b6",
+        "52f70789-205c-40db-a56f-dd9605ad3767",
+        "b95f9264-5712-4344-92e6-b500eaaf7eb8",
+        "c5af06e0-3566-47a2-9d19-954af2ba56cd"
+      ],
+      "settings": {
+        "title": "TESTIMONIALS"
+      }
+    },
     "9b18aba4-b044-42b7-b38e-d48b9bbc39c0": {
       "type": "timeline",
       "blocks": {
@@ -87,6 +129,7 @@
     "main",
     "393a6aca-4427-4144-9b8a-3138582cc7dd",
     "26e58ee6-4b94-4271-8e35-b382b3602b57",
+    "092917c6-4968-410c-bdff-e90015882067",
     "9b18aba4-b044-42b7-b38e-d48b9bbc39c0",
     "21348535-fa1c-4b95-9255-eee59005213f"
   ]
