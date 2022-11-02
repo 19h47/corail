@@ -246,10 +246,15 @@
 		"slider": {
 			"name": "Carrousel",
 			"presets": { "name": "Carrousel" },
-			"settings": {
-				"image": { "label": "Image" },
-				"title": { "label": "Titre", "placeholder": "Titre" },
-				"content": { "label": "Contenu", "placeholder": "Contenu" }
+			"blocks": {
+				"slide": {
+
+					"settings": {
+						"image": { "label": "Image" },
+						"title": { "label": "Titre", "placeholder": "Titre" },
+						"content": { "label": "Contenu", "placeholder": "Contenu" }
+					}
+				}
 			}
 		},
 		"timeline": {
