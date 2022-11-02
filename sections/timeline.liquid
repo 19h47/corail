@@ -1,5 +1,60 @@
-<div class="timeline my-[3.75rem] lg:my-10">
-	TIMELINE
+<div class="timeline my-[3.75rem] lg:my-10 relative py-14">
+
+	<span class="bg-orange-light w-[0.875rem] hidden lg:block h-[0.3125rem] rounded-full sticky top-[11.75rem] mx-auto z-2"></span>
+
+	<div class="absolute inset-0 flex items-center pointer-events-none z-1">
+		<div
+			style="background: linear-gradient( #CFCDC9, #CFCDC9, 0.0625rem, transparent 0.0625rem ); background-size: 1rem 2.25rem"
+			class="relative w-[0.1875rem] h-full mx-auto after:absolute after:bg-orange-grayish after:rounded-full after:top-0 after:-ml-[0.0625rem] after:w-[0.3125rem] after:h-[0.3125rem] before:absolute before:bg-orange-grayish before:rounded-full before:bottom-0 before:-ml-[0.0625rem] before:w-[0.3125rem] before:h-[0.3125rem]"
+		>
+			<span class="w-[0.0625rem] h-full block bg-orange-grayish mx-auto"></span>
+		</div>
+	</div>
+
+	<div class="container space-y-8 lg:space-y-[4.625rem] relative z-3">
+		{% for block in section.blocks %}
+			{%- case block.type -%}
+				{%- when 'item' -%}
+					<div class="lg:row">
+						<div class="lg:col-10/12 lg:ml-1/12">
+							<div class="row">
+								{% assign mod = forloop.index | modulo: 2 %}
+
+								{% if  block.settings.image %}
+									<div class="lg:col-6/12 {% if mod == 0 %} lg:order-1 {% else %} lg:order-2 {% endif %}">
+										<div class="h-[12.25rem] lg:h-[15.5rem] {% if mod == 0 %} lg:pr-7 {% else %} lg:pl-7 {% endif %}">
+											{{ block.settings.image | image_url: width: 692, height: 888 | image_tag:
+												loading: 'lazy',
+												widths: '275, 550, 710, 1420',
+												class: 'w-full h-full object-cover object-center'
+											}}
+										</div>
+									</div>
+								{% endif %}
+
+								{% if block.settings.title != blank or block.settings.content != blank %}
+									<div class="lg:col-6/12 {% if block.settings.image != blank %} mt-10 lg:mt-4 {% endif %} {% if mod == 0 %} lg:order-2 {% else %} lg:order-1 {% endif %}">
+										<div class="{% if mod == 0 %} lg:pl-7 {% else %} lg:pr-7 {% endif %}">
+											{% if block.settings.title != blank %}
+												<h2 class="font-semibold text-3xl uppercase font-display">
+													{{ block.settings.title }}
+												</h2>
+											{% endif %}
+											{% if block.settings.content != blank %}
+												<p class="font-medium font-display {% if block.settings.title != blank %} mt-3 lg:mt-5 {% endif %}">
+													{{ block.settings.content | newline_to_br }}
+												</p>
+											{% endif %}
+										</div>
+									</div>
+								{% endif %}
+
+							</div>
+						</div>
+					</div>
+			{%- endcase -%}
+		{% endfor %}
+	</div>
 </div>
 
 {% schema %}
