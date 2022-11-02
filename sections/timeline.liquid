@@ -37,7 +37,7 @@
 										<div class="{% if mod == 0 %} lg:pl-7 {% else %} lg:pr-7 {% endif %}">
 											{% if block.settings.title != blank %}
 												<h2 class="font-semibold text-3xl uppercase font-display">
-													{{ block.settings.title }}
+													{{ block.settings.title | newline_to_br }}
 												</h2>
 											{% endif %}
 											{% if block.settings.content != blank %}
