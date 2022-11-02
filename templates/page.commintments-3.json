@@ -18,13 +18,41 @@
         "ce0214bc-a408-4ee5-8b7e-fdfcb52e381f": {
           "type": "item",
           "settings": {
-            "title": "",
-            "content": ""
+            "image": "shopify:\/\/shop_images\/bright-blue-day-water-rock.jpg",
+            "title": "THE ENGINE ROOM",
+            "content": "The CORAIL° Lab is where the marine waste we collect are sorted, storaged and grinded in order to be used in the making of our products. We invested in second-hand grinders and machines with huge standards of quality to ensure our workers comfort: sound-reducing systems, anti-dust silos and heat-preventing engines."
+          }
+        },
+        "51d76eaf-2bfb-4e30-81b1-86fa503e20b5": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/filling-water-bottle.jpg",
+            "title": "STARTED FROMTHE BOTTLE",
+            "content": "The first marine waste we were able to transform inside the CORAIL° Lab was the PET bottle. It is versatile materials we grind for two purposes: the transparent bottles are turned into fabrics in France, and the colored ones plus the caps and labels are injected into our outsoles, in Portugal."
+          }
+        },
+        "869058f9-f469-4dfb-9e32-6ea3507a12b9": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/close-up-of-jean-fabric.jpg",
+            "title": "resurrectingthe ghost nets",
+            "content": "After months of testing, we are now able to grind one of the biggest challenges we faced: the discarded fishing nets found at the bottom of the ocean. Mixed with grinded PET bottles, they make our patented SEADUST, the raw materials which will the foundation of our future models."
+          }
+        },
+        "b519a0fe-a0cb-4b22-a6ce-21fb925d9b2d": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/boat-towed-in-water.jpg",
+            "title": "what’s next?",
+            "content": "After the PET bottles in 2019 and the fishing nets in 2022, we are working on the next marine waste we will be able to transform and inject into our products. We conduct tests everyday on different sea pollution collected by our crew. As long as there will be marine waste, we will try to transform it into the CORAIL° Lab."
           }
         }
       },
       "block_order": [
-        "ce0214bc-a408-4ee5-8b7e-fdfcb52e381f"
+        "ce0214bc-a408-4ee5-8b7e-fdfcb52e381f",
+        "51d76eaf-2bfb-4e30-81b1-86fa503e20b5",
+        "869058f9-f469-4dfb-9e32-6ea3507a12b9",
+        "b519a0fe-a0cb-4b22-a6ce-21fb925d9b2d"
       ],
       "settings": {
       }
