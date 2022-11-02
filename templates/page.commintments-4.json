@@ -6,6 +6,13 @@
       "settings": {
       }
     },
+    "393a6aca-4427-4144-9b8a-3138582cc7dd": {
+      "type": "twoimage",
+      "settings": {
+        "left_image": "shopify:\/\/shop_images\/school-of-koi-fish.jpg",
+        "right_image": "shopify:\/\/shop_images\/fish-and-chips-sign.jpg"
+      }
+    },
     "21348535-fa1c-4b95-9255-eee59005213f": {
       "type": "logo",
       "settings": {
@@ -14,6 +21,7 @@
   },
   "order": [
     "main",
+    "393a6aca-4427-4144-9b8a-3138582cc7dd",
     "21348535-fa1c-4b95-9255-eee59005213f"
   ]
 }
