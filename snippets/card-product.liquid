@@ -132,7 +132,7 @@
 			</div>
 
 			{%- unless card_product.has_only_default_variant -%}
-				<div class="space-y-2 absolute bottom-0 inset-x-0 m-5 z-1 max-w-9/12 hidden lg:block">
+				<div class="space-y-2 absolute bottom-0 inset-x-0 m-5 z-1 hidden lg:block">
 					{%- for option in card_product.options_with_values -%}
 						{% if option.name == 'Taille' %}
 							<div class="flex flex-wrap gap-2">
