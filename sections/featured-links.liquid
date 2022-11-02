@@ -4,7 +4,7 @@
 			{% case block.type %}
 				{% when 'column' %}
 					<div class="lg:col-6/12">
-						<div class="relative h-[26.25rem] lg:h-[57.5rem]">
+						<div class="relative h-[26.25rem] lg:h-[54rem]">
 							<img
 								srcset="{%- if block.settings.image.src.width >= 165 -%}{{ block.settings.image.src | image_url: width: 165 }} 165w,{%- endif -%}
 								{%- if block.settings.image.src.width >= 360 -%}{{ block.settings.image.src | image_url: width: 360 }} 360w,{%- endif -%}

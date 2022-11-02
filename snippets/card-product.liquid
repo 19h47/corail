@@ -45,7 +45,7 @@
     	endif
 	-%}
 
-	<article class="relative {% if card_product.media[1] != nil and show_secondary_image %} group {% endif %} {{ classes }}">
+	<article class="relative flex flex-col justify-between h-full {% if card_product.media[1] != nil and show_secondary_image %} group {% endif %} {{ classes }}">
 
 		<div class="relative h-[16.875rem] bg-gray-very-light {% if 'large' == size %} lg:h-[38rem] {% else %} lg:h-[28rem] {% endif %}">
 			{%- if card_product.featured_media -%}
@@ -160,7 +160,7 @@
 			</div>
 		{%- endunless -%}
 
-		<footer class="border-t mt-auto lg:mt-4 mx-2 lg:mx-0 border-orange-grayish pt-1.5 lg:pt-3 text-[0.5rem] lg:text-sm leading-[1.125rem] lg:leading-4 uppercase">
+		<footer class="border-t mt-2 lg:mt-4 mx-2 lg:mx-0 border-orange-grayish pt-1.5 lg:pt-3 text-[0.5rem] lg:text-sm leading-[1.125rem] lg:leading-4 uppercase">
 			<div class="flex justify-between">
 				<h3{% if card_product.featured_media == nil and settings.card_style == 'standard' %} id="title-{{ section_id }}-{{ card_product.id }}"{% endif %}>
 					{{- card_product.title | escape -}}

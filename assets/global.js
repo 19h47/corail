@@ -1,11 +1,25 @@
 /* eslint-disable max-classes-per-file */
-function getFocusableElements(container) {
-	return Array.from(
-		container.querySelectorAll(
-			"summary, a[href], button:enabled, [tabindex]:not([tabindex^='-']), [draggable], area, input:not([type=hidden]):enabled, select:enabled, textarea:enabled, object, iframe"
-		)
-	);
-}
+
+// eslint-disable-next-line no-unused-vars, no-return-assign
+const convertToDMS = (D, lng) => ({
+	// eslint-disable-next-line no-nested-ternary
+	dir: 0 > D ? (lng ? "W" : "S") : lng ? "E" : "N",
+	// eslint-disable-next-line no-bitwise
+	deg: 0 | (0 > D ? (D = -D) : D),
+	// eslint-disable-next-line no-bitwise
+	min: 0 | (((D += 1e-9) % 1) * 60),
+	// eslint-disable-next-line no-bitwise
+	sec: (0 | (((D * 60) % 1) * 6000)) / 100,
+});
+
+// eslint-disable-next-line no-unused-vars
+const getRandomFloat = (min, max, decimals = 2) => parseFloat((Math.random() * (max - min) + min).toFixed(decimals));
+
+const getFocusableElements = container => Array.from(
+	container.querySelectorAll(
+		"summary, a[href], button:enabled, [tabindex]:not([tabindex^='-']), [draggable], area, input:not([type=hidden]):enabled, select:enabled, textarea:enabled, object, iframe"
+	)
+)
 
 // eslint-disable-next-line no-undef, no-unused-vars
 const scroll = new LocomotiveNativeScroll({ smooth: false });
@@ -17,6 +31,12 @@ const isOntop = () => {
 		document.documentElement.classList.add("is-ontop");
 	} else {
 		document.documentElement.classList.remove("is-ontop");
+	}
+
+	if (Math.round(window.pageYOffset + window.innerHeight) >= document.body.scrollHeight) {
+		document.documentElement.classList.add("is-onbottom");
+	} else {
+		document.documentElement.classList.remove("is-onbottom");
 	}
 };
 

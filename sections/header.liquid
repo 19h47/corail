@@ -202,12 +202,17 @@
 
 			<details-modal class="hidden lg:block">
 				<details>
-					<summary class="block w-[4.5rem] h-[4.375rem] relative" aria-haspopup="dialog" aria-label="{{ 'general.search.search' | t }}">
+					<summary class="block w-[4.375rem] h-[4.375rem] relative" aria-haspopup="dialog" aria-label="{{ 'general.search.search' | t }}">
 						{% render 'svg', icon: 'magnifying-glass', classes: 'm-auto absolute inset-0 w-[1.125rem] h-[1.125rem] fill-current block parent-open:hidden' %}
 						{% render 'svg', icon: 'close', classes: 'm-auto absolute inset-0 w-[1.125rem] h-[1.125rem] fill-current hidden parent-open:block' %}
 					</summary>
 
-					<div class="font-display search-modal bg-white absolute inset-0 z-4" role="dialog" aria-modal="true" aria-label="{{ 'general.search.search' | t }}">
+					<div
+						class="font-display search-modal bg-white absolute inset-0 z-4 text-gray-very-dark"
+						role="dialog"
+						aria-modal="true"
+						aria-label="{{ 'general.search.search' | t }}"
+					>
 
 						<div class="modal-overlay js-modal-overlay"></div>
 
@@ -223,7 +228,7 @@
 							<form action="{{ routes.search_url }}" method="get" role="search" class="search w-full">
 								<div class="relative">
 									<input
-										class="pr-[4.5rem] w-full h-[4.375rem] pl-2.5"
+										class="pr-[4.375rem] w-full h-[4.375rem] pl-2.5"
 										id="Search-In-Modal-1"
 										type="search"
 										name="q"
@@ -245,7 +250,7 @@
 
 									<input type="hidden" name="options[prefix]" value="last">
 
-									<button class="absolute right-0 inset-y-0 flex items-center justify-center w-[4.5rem] h-[4.375rem]" aria-label="{{ 'general.search.search' | t }}">
+									<button class="absolute right-0 inset-y-0 flex items-center justify-center w-[4.375rem] h-[4.375rem]" aria-label="{{ 'general.search.search' | t }}">
 										{% render 'svg', icon: 'magnifying-glass', classes: 'w-[1.125rem] h-[1.125rem] fill-current block' %}
 									</button>
 								</div>
@@ -268,7 +273,7 @@
 							{%- endif -%}
 
 
-							<button type="button" class="relative w-[4.5rem] h-[4.375rem] flex items-center justify-center" aria-label="{{ 'accessibility.close' | t }}">
+							<button type="button" class="relative w-[4.375rem] h-[4.375rem] flex items-center justify-center" aria-label="{{ 'accessibility.close' | t }}">
 								<span class="absolute right-[100%] bg-orange-grayish w-[0.0625rem] h-full block"></span>
 								{% render 'svg',
 									classes: 'w-[1.125rem] h-[1.125rem] fill-current',
