@@ -1,0 +1,89 @@
+<script src="{{ 'swiper.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'slider.js' | asset_url }}" defer="defer"></script>
+
+<slider-component class="block my-16 lg:my-28" data-parameters='{"spaceBetween":20}'>
+	{% if section.settings.title != blank %}
+		<div class="container mb-6">
+			<div class="row">
+				<div class="lg:ml-1/12 lg:col-5/12">
+					<h2 class="text-6xl font-bold font-display">{{- section.settings.title -}}</h2>
+				</div>
+
+				<div class="lg:col-5/12 flex justify-end items-start">
+					{% render 'slider-navigation' %}
+				</div>
+
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="row">
+				<div class="lg:col-10/12 lg:ml-1/12 swiper overflow-visible">
+					<div class="swiper-wrapper">
+						{% for block in section.blocks %}
+							{%- case block.type -%}
+								{%- when 'slide' -%}
+									<div class="w-full lg:w-3/10 swiper-slide swiper-slide">
+
+
+										{%- if block.settings.title -%}
+											{{- block.settings.title -}}
+										{%- endif -%}
+										{%- if block.settings.content -%}
+											{{- block.settings.content -}}
+										{%- endif -%}
+
+
+									</div>
+							{%- endcase -%}
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+		</div>
+	{% endif %}
+</slider-component>
+
+{% schema %}
+{
+  "name": "t:sections.testimonials.name",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "t:sections.testimonials.settings.title.label",
+      "placeholder": "t:sections.testimonials.settings.title.placeholder"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "slide",
+      "name": "t:sections.testimonials.blocks.slide.name",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "t:sections.testimonials.blocks.slide.settings.title.label",
+          "placeholder": "t:sections.testimonials.blocks.slide.settings.title.placeholder"
+        },
+        {
+          "type": "text",
+          "id": "content",
+          "label": "t:sections.testimonials.blocks.slide.settings.content.label",
+          "placeholder": "t:sections.testimonials.blocks.slide.settings.content.placeholder"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.testimonials.presets.name",
+      "blocks": [
+
+      ]
+    }
+  ]
+}
+{% endschema %}

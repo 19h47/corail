@@ -1,14 +1,56 @@
-<div>
+<script src="{{ 'swiper.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'slider.js' | asset_url }}" defer="defer"></script>
+
+<slider-component class="block my-16 lg:my-28" data-parameters='{"spaceBetween":20}'>
 	{% if section.settings.title != blank %}
+		<div class="container mb-6">
+			<div class="row">
+				<div class="lg:ml-1/12 lg:col-5/12">
+					<h2 class="text-6xl font-bold font-display">{{- section.settings.title -}}</h2>
+				</div>
+
+				<div class="lg:col-5/12 flex justify-end items-start">
+					{% render 'slider-navigation' %}
+				</div>
+
+			</div>
+		</div>
+
 		<div class="container">
 			<div class="row">
-				<div class="lg:ml-1/12 lg:col-10/12">
-					<h2 class="text-6xl font-bold font-display">{{- section.settings.title -}}</h2>
+				<div class="lg:col-10/12 lg:ml-1/12 swiper overflow-visible">
+					<div class="swiper-wrapper">
+						{% for block in section.blocks %}
+							{%- case block.type -%}
+								{%- when 'slide' -%}
+									<div class="w-full lg:w-4/10 swiper-slide swiper-slide">
+										{{- block.settings.image | image_url: width: 692, height: 888 | image_tag:
+											loading: 'lazy',
+											widths: '275, 550, 710, 1420',
+											class: 'w-full h-[24.5rem] lg:h-[29.75rem] object-cover object-center'
+										-}}
+										{%- if block.settings.title or block.settings.content -%}
+											<p class="mt-4 text-xs uppercase">
+												{%- if block.settings.title -%}
+													<strong class="font-bold">{{- block.settings.title -}}</strong>
+												{%- endif -%}
+												{%- if block.settings.content -%}
+													{%- if block.settings.title -%}
+														{{- '&comma;&nbsp;' -}}
+													{%- endif -%}
+													{{- block.settings.content -}}
+												{%- endif -%}
+											</p>
+										{%- endif -%}
+									</div>
+							{%- endcase -%}
+						{% endfor %}
+					</div>
 				</div>
 			</div>
 		</div>
 	{% endif %}
-</div>
+</slider-component>
 
 {% schema %}
 {

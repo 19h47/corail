@@ -395,6 +395,33 @@
         }
       }
     },
+	"testimonials": {
+		"name": "Témoignages",
+		"presets": {
+		  "name": "Témoignages"
+		},
+		"settings": {
+		  "title": {
+			"label": "Titre",
+			"placeholder": "Titre"
+		  }
+		},
+		"blocks": {
+		  "slide": {
+			"name": "Slide",
+			"settings": {
+			  "title": {
+				"label": "Titre",
+				"placeholder": "Titre"
+			  },
+			  "content": {
+				"label": "Contenu",
+				"placeholder": "Contenu"
+			  }
+			}
+		  }
+		}
+	  },
     "slider": {
       "name": "Carrousel",
       "presets": {

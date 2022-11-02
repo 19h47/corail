@@ -77,6 +77,10 @@
 		@apply col w-5/12;
 	}
 
+	.col-5\.5\/12 {
+		@apply col w-5.5/12;
+	}
+
 	.col-6\/10 {
 		@apply col w-6/10;
 	}
