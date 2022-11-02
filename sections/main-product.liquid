@@ -44,17 +44,17 @@
 
 
 
-	<div class="fixed bottom-0 inset-x z-[100] py-2 bg-white w-full hidden lg:block">
+	<div class="fixed bottom-0 inset-x z-[100] py-2 bg-white w-full hidden lg:block is-ontop:opacity-0 is-ontop:invisible transition-all duration-1000 ease-in-out">
 		<hr class="absolute bottom-full bg-orange-grayish w-full h-[0.0625rem]">
 		<div class="container">
 			<div class="row">
 				<div class="flex justify-between gap-x-7 items-center">
 					<div class="flex items-center gap-x-7">
-						<p class="text-[2.5rem] font-semibold font-display uppercase leading-10">
+						<p class="text-4xl font-semibold font-display uppercase">
 							{{ product.title | truncate: 12, "..." | escape }}
 						</p>
 
-						<div class="text-[2.5rem] leading-10 font-medium font-display" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
+						<div class="text-3xl font-medium font-display" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
 							{%- render 'price', product: product, use_variant: true, show_badges: false, price_class: '' -%}
 						</div>
 					</div>

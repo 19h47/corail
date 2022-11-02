@@ -34,7 +34,7 @@
   <script src="{{ 'cart-drawer.js' | asset_url }}" defer="defer"></script>
 {%- endif -%}
 
-<sticky-header class="header-wrapper block h-16 lg:h-[4.5rem] relative z-20 bg-white {% if request.page_type == 'index' %} is-ontop:text-white is-ontop:bg-white/0 transition-colors duration-1000 ease-in-out {% endif %}">
+<sticky-header class="header-wrapper block h-16 lg:h-[4.375rem] relative z-20 bg-white {% if request.page_type == 'index' %} is-ontop:text-white is-ontop:bg-white/0 transition-colors duration-1000 ease-in-out {% endif %}">
 
 	<hr class="w-full h-[0.0625rem] absolute bottom-[100%] inset-x-0 block bg-orange-grayish {% if request.page_type == 'index' %} transition-colors duration-1000 ease-in-out is-ontop:bg-white/0 {% endif %}" />
 
@@ -46,7 +46,7 @@
 
 		<span class="w-[0.0625rem] h-full block lg:hidden bg-orange-grayish {% if request.page_type == 'index' %} transition-colors duration-1000 ease-in-out is-ontop:bg-white {% endif %}"></span>
 
-		<a href="{{ routes.root_url }}" class="lg:px-10 py-[1.375rem] lg:py-[1.625rem] w-full lg:w-auto flex justify-center">
+		<a href="{{ routes.root_url }}" class="lg:px-10 items-center w-full lg:w-auto flex justify-center">
 			{% render 'svg', icon: 'corail-logo', classes: 'h-5 w-28 fill-current', description: shop.name %}
 		</a>
 
@@ -61,7 +61,7 @@
 								<header-menu>
 									<details id="Details-HeaderMenu-{{ forloop.index }}" class="mega-menu">
 										<summary>
-											<span class="group relative px-8 py-7 block text-sm uppercase font-medium leading-4 hover:after:scale-y-100 parent-expanded:after:scale-y-100 after:absolute after:top-0 after:h-[0.1875rem] after:bg-current after:w-full after:inset-x-0 after:transition-transform after:duration-1000 after:ease-in-out after:origin-top {% if link.current %} after:scale-y-100 {% else %} after:scale-y-0 {% endif %}">
+											<span class="group relative px-8 py-[1.6875rem] block text-sm uppercase font-medium leading-4 hover:after:scale-y-100 parent-expanded:after:scale-y-100 after:absolute after:top-0 after:h-[0.1875rem] after:bg-current after:w-full after:inset-x-0 after:transition-transform after:duration-1000 after:ease-in-out after:origin-top {% if link.current %} after:scale-y-100 {% else %} after:scale-y-0 {% endif %}">
 												<span class="group-hover:opacity-100 group-focus:opacity-100 duration-1000 ease-in-out transition-opacity grandparent-expanded:opacity-100 {% if link.current %} opacity-100 {% else %} opacity-0 {% endif %} h-full w-[0.0625rem] bg-orange-grayish {% if request.page_type == 'index' %} is-ontop:bg-white duration-1000 ease-in-out {% endif %} block absolute right-[calc(100%_-_0.03125rem)] inset-y-0"></span>
 													{{- link.title | escape -}}
 												<span class="group-hover:opacity-100 group-focus:opacity-100 duration-1000 ease-in-out transition-opacity grandparent-expanded:opacity-100 {% if link.current %} opacity-100 {% else %} opacity-0 {% endif %} h-full w-[0.0625rem] bg-orange-grayish {% if request.page_type == 'index' %} is-ontop:bg-white duration-1000 ease-in-out {% endif %} block absolute left-[calc(100%_-_0.03125rem)] inset-y-0"></span>
@@ -111,7 +111,7 @@
 								</header-menu>
 							{%- else -%}
 								<a
-									class="group relative px-8 py-7 block text-sm uppercase font-medium leading-4 hover:after:scale-y-100 after:absolute after:top-0 after:h-[0.1875rem] after:bg-current after:w-full after:inset-x-0 after:transition-transform after:duration-1000 after:ease-in-out after:origin-top {% if link.current %} after:scale-y-100 {% else %} after:scale-y-0 {% endif %}"
+									class="group relative px-8 py-[1.6875rem] block text-sm uppercase font-medium leading-4 hover:after:scale-y-100 after:absolute after:top-0 after:h-[0.1875rem] after:bg-current after:w-full after:inset-x-0 after:transition-transform after:duration-1000 after:ease-in-out after:origin-top {% if link.current %} after:scale-y-100 {% else %} after:scale-y-0 {% endif %}"
 									href="{{ link.url }}"
 									{% if link.current %} aria-current="page"{% endif %}
 								>
@@ -140,7 +140,7 @@
 								<header-menu>
 									<details id="Details-HeaderSecondaryMenu-{{ forloop.index }}" class="static">
 										<summary>
-											<span class="group relative px-8 py-7 block text-sm uppercase font-medium leading-4 hover:after:scale-y-100 parent-expanded:after:scale-y-100 after:absolute after:top-0 after:h-[0.1875rem] after:bg-current after:w-full after:inset-x-0 after:transition-transform after:duration-1000 after:ease-in-out after:origin-top {% if link.current %} after:scale-y-100 {% else %} after:scale-y-0 {% endif %}">
+											<span class="group relative px-8 py-[1.6875rem] block text-sm uppercase font-medium leading-4 hover:after:scale-y-100 parent-expanded:after:scale-y-100 after:absolute after:top-0 after:h-[0.1875rem] after:bg-current after:w-full after:inset-x-0 after:transition-transform after:duration-1000 after:ease-in-out after:origin-top {% if link.current %} after:scale-y-100 {% else %} after:scale-y-0 {% endif %}">
 												<span class="group-hover:opacity-100 group-focus:opacity-100 duration-1000 ease-in-out transition-opacity grandparent-expanded:opacity-100 {% if link.current %} opacity-100 {% else %} opacity-0 {% endif %} h-full w-[0.0625rem] bg-orange-grayish {% if request.page_type == 'index' %} is-ontop:bg-white duration-1000 ease-in-out {% endif %} block absolute right-[calc(100%_-_0.03125rem)] inset-y-0"></span>
 													{{- link.title | escape -}}
 												<span class="group-hover:opacity-100 group-focus:opacity-100 duration-1000 ease-in-out transition-opacity grandparent-expanded:opacity-100 {% if link.current %} opacity-100 {% else %} opacity-0 {% endif %} h-full w-[0.0625rem] bg-orange-grayish {% if request.page_type == 'index' %} is-ontop:bg-white duration-1000 ease-in-out {% endif %} block absolute left-[calc(100%_-_0.03125rem)] inset-y-0"></span>
@@ -191,7 +191,7 @@
 									</details>
 								</header-menu>
 							{% else %}
-								<a class="px-8 py-7 block text-sm uppercase font-medium leading-4" href="{{ link.url }}" {% if link.current %} aria-current="page"{% endif %}>
+								<a class="px-8 py-[1.6875rem] block text-sm uppercase font-medium leading-4" href="{{ link.url }}" {% if link.current %} aria-current="page"{% endif %}>
 									{{ link.title | escape }}
 								</a>
 							{% endif %}
@@ -202,7 +202,7 @@
 
 			<details-modal class="hidden lg:block">
 				<details>
-					<summary class="block w-[4.5rem] h-[4.5rem] relative" aria-haspopup="dialog" aria-label="{{ 'general.search.search' | t }}">
+					<summary class="block w-[4.5rem] h-[4.375rem] relative" aria-haspopup="dialog" aria-label="{{ 'general.search.search' | t }}">
 						{% render 'svg', icon: 'magnifying-glass', classes: 'm-auto absolute inset-0 w-[1.125rem] h-[1.125rem] fill-current block parent-open:hidden' %}
 						{% render 'svg', icon: 'close', classes: 'm-auto absolute inset-0 w-[1.125rem] h-[1.125rem] fill-current hidden parent-open:block' %}
 					</summary>
@@ -223,7 +223,7 @@
 							<form action="{{ routes.search_url }}" method="get" role="search" class="search w-full">
 								<div class="relative">
 									<input
-										class="pr-[4.5rem] w-full h-[4.5rem] pl-2.5"
+										class="pr-[4.5rem] w-full h-[4.375rem] pl-2.5"
 										id="Search-In-Modal-1"
 										type="search"
 										name="q"
@@ -245,7 +245,7 @@
 
 									<input type="hidden" name="options[prefix]" value="last">
 
-									<button class="absolute right-0 inset-y-0 flex items-center justify-center w-[4.5rem] h-[4.5rem]" aria-label="{{ 'general.search.search' | t }}">
+									<button class="absolute right-0 inset-y-0 flex items-center justify-center w-[4.5rem] h-[4.375rem]" aria-label="{{ 'general.search.search' | t }}">
 										{% render 'svg', icon: 'magnifying-glass', classes: 'w-[1.125rem] h-[1.125rem] fill-current block' %}
 									</button>
 								</div>
@@ -268,7 +268,7 @@
 							{%- endif -%}
 
 
-							<button type="button" class="relative w-[4.5rem] h-[4.5rem] flex items-center justify-center" aria-label="{{ 'accessibility.close' | t }}">
+							<button type="button" class="relative w-[4.5rem] h-[4.375rem] flex items-center justify-center" aria-label="{{ 'accessibility.close' | t }}">
 								<span class="absolute right-[100%] bg-orange-grayish w-[0.0625rem] h-full block"></span>
 								{% render 'svg',
 									classes: 'w-[1.125rem] h-[1.125rem] fill-current',
@@ -288,7 +288,7 @@
 				<span class="w-[0.0625rem] h-full block bg-orange-grayish {% if request.page_type == 'index' %} transition-colors duration-1000 ease-in-out is-ontop:bg-white {% endif %}"></span>
 			{% endif %}
 
-			<a href="{{ routes.cart_url }}" id="cart-icon-bubble" class="font-semibold text-sm leading-[1.125rem] flex p-[1.4375rem] lg:p-[1.6875rem] {% if cart != empty and request.page_type != 'index' %} bg-gray-very-dark text-white relative z-1 {% endif %}">
+			<a href="{{ routes.cart_url }}" id="cart-icon-bubble" class="font-semibold text-sm leading-[1.125rem] flex items-center p-[1.4375rem] lg:px-[1.6875rem] {% if cart != empty and request.page_type != 'index' %} bg-gray-very-dark text-white relative z-1 {% endif %}">
 				{%- render 'svg', icon: 'bag-shopping', classes: 'mr-2 w-[1.125rem] h-[1.125rem] fill-current flex-shrink-0' -%}
 
 				<span class="sr-only">{{ 'sections.header.cart_count' | t: count: cart.item_count }}</span>

@@ -152,7 +152,7 @@
 
 	<hr class="bg-orange-grayish w-full h-[0.0625rem] lg:hidden absolute inset-x-0 bottom-0 mb-11">
 
-	<button type="button" class="flex gap-x-8 lg:gap-x-32 items-center group text-white bg-red-very-light px-5 py-1.5 lg:py-5 lg:pl-14 {% if request.page_type != 'product' %} fixed {% else %} absolute lg:mb-24 {% endif %} bottom-0 right-0 z-50">
+	<button type="button" class="flex gap-x-8 lg:gap-x-32 items-center group text-white bg-red-very-light px-4 py-1.5 lg:py-4 {% if request.page_type != 'product' %} fixed {% else %} absolute lg:mb-24 {% endif %} bottom-0 right-0 z-50">
 		<div class="uppercase font-semibold font-display lg:text-xl leading-none lg:leading-6">{{ 'general.newsletter.label' | t }}</div>
 		<div class="button-secondary inline-block align-middle group-hover:text-red-very-light group-hover:bg-white group-hover:border-red-very-light">
 			<span class="hidden lg:inline">{{ 'general.newsletter.title' | t }}</span>

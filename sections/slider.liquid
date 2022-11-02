@@ -1,5 +1,13 @@
 <div>
-	SLIDER
+	{% if section.settings.title != blank %}
+		<div class="container">
+			<div class="row">
+				<div class="lg:ml-1/12 lg:col-10/12">
+					<h2 class="text-6xl font-bold font-display">{{- section.settings.title -}}</h2>
+				</div>
+			</div>
+		</div>
+	{% endif %}
 </div>
 
 {% schema %}

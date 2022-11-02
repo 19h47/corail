@@ -37,8 +37,11 @@
 		<div class="lg:row">
 			<div class="lg:col-3/12">
 				<div class="mx-5 lg:mx-0 lg:flex lg:flex-col lg:justify-between lg:pb-11 lg:h-full">
+
 					{%- if section.settings.title != blank -%}
-						<h2 class="font-display font-semibold text-4xl uppercase">{{ section.settings.title | escape }}</h2>
+						<h2 class="font-display font-semibold text-3xl uppercase">
+							{{- section.settings.title | escape -}}
+						</h2>
 					{%- endif -%}
 
 					<footer class="mt-14">
@@ -47,6 +50,7 @@
 							<li>{% render 'svg', icon: 'sea', classes: 'h-7 w-7 fill-current', description: shop.name %}</li>
 							<li>{% render 'svg', icon: 'bottle', classes: 'h-7 w-7 fill-current', description: shop.name %}</li>
 						</ul>
+
 						{%- if section.settings.description != blank -%}
 							<div class="text-xl leading-6 font-display font-semibold mt-7 uppercase">{{- section.settings.description -}}</div>
 						{%- endif -%}
@@ -100,7 +104,7 @@
   "class": "section",
   "settings": [
     {
-      "type": "text",
+      "type": "textarea",
       "id": "title",
       "default": "Featured collection",
       "label": "t:sections.featured-collection.settings.title.label"
