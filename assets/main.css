@@ -1715,6 +1715,11 @@ html,
 	margin-bottom: 1.5rem;
 }
 
+.my-\[3\.75rem\]{
+	margin-top: 3.75rem;
+	margin-bottom: 3.75rem;
+}
+
 .my-28{
 	margin-top: 7rem;
 	margin-bottom: 7rem;
@@ -1725,14 +1730,14 @@ html,
 	margin-right: auto;
 }
 
-.my-2{
-	margin-top: 0.5rem;
-	margin-bottom: 0.5rem;
-}
-
 .mx-2{
 	margin-left: 0.5rem;
 	margin-right: 0.5rem;
+}
+
+.my-2{
+	margin-top: 0.5rem;
+	margin-bottom: 0.5rem;
 }
 
 .my-4{
@@ -3445,6 +3450,11 @@ html,
 		margin-bottom: 5rem;
 	}
 
+	.lg\:my-10{
+		margin-top: 2.5rem;
+		margin-bottom: 2.5rem;
+	}
+
 	.lg\:my-\[16rem\]{
 		margin-top: 16rem;
 		margin-bottom: 16rem;
@@ -3666,12 +3676,12 @@ html,
 		height: 30.5rem;
 	}
 
-	.lg\:h-\[38rem\]{
-		height: 38rem;
-	}
-
 	.lg\:h-\[28rem\]{
 		height: 28rem;
+	}
+
+	.lg\:h-\[38rem\]{
+		height: 38rem;
 	}
 
 	.lg\:max-h-\[calc\(100vh_-_10\.5rem\)\]{

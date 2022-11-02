@@ -1,0 +1,43 @@
+<div class="timeline my-[3.75rem] lg:my-10">
+	TIMELINE
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.timeline.name",
+  "class": "section",
+  "tag": "section",
+  "settings": [
+
+  ],
+  "blocks": [
+    {
+      "type": "item",
+      "id": "item",
+      "label": "t:sections.timeline.blocks.item.label",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "t:sections.timeline.blocks.item.settings.image.label"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "t:sections.timeline.blocks.item.settings.title.label"
+        },
+        {
+          "type": "textarea",
+          "id": "content",
+          "label": "t:sections.timeline.blocks.item.settings.content.label"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.timeline.presets.name"
+    }
+  ]
+}
+{% endschema %}

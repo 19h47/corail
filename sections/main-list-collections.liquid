@@ -1,37 +1,46 @@
 {{ 'component-card.css' | asset_url | stylesheet_tag }}
 {{ 'section-collection-list.css' | asset_url | stylesheet_tag }}
 
-<div class="page-width">
-  <h1 class="title title--primary">{{ section.settings.title | escape }}</h1>
-  {%- liquid
-    case section.settings.sort
-      when 'products_high' or 'products_low'
-        assign collections = collections | sort: 'all_products_count'
-      when 'date' or 'date_reversed'
-        assign collections = collections | sort: 'published_at'
-    endcase
+<div class="container mt-16 mb-24">
+	<div class="row">
+		<h1 class="text-[2.5rem] leading-9 lg:text-[5.625rem] lg:leading-[5.125rem] font-display font-semibold uppercase">
+			{{ section.settings.title | escape }}
+		</h1>
+	</div>
 
-    if section.settings.sort == 'products_high' or section.settings.sort == 'date_reversed' or section.settings.sort == 'alphabetical_reversed'
-      assign collections = collections | reverse
-    endif
+	{%- liquid
+		case section.settings.sort
+			when 'products_high' or 'products_low'
+				assign collections = collections | sort: 'all_products_count'
+			when 'date' or 'date_reversed'
+				assign collections = collections | sort: 'published_at'
+		endcase
 
-    assign moduloResult = 28 | modulo: section.settings.columns_desktop
-    assign paginate_by = 30
-    if moduloResult == 0
-      assign paginate_by = 28
-    endif
-  -%}
-  {%- paginate collections by paginate_by -%}
-    <ul class="collection-list grid grid--{{ section.settings.columns_desktop }}-col-desktop grid--{{ section.settings.columns_mobile }}-col-tablet-down" role="list">
-      {%- for collection in collections -%}
-        <li class="collection-list__item grid__item">
-          {% render 'card-collection', card_collection: collection, media_aspect_ratio: section.settings.image_ratio, columns: 3 %}
-        </li>
-      {%- endfor -%}
-    </ul>
-    {% render 'pagination', paginate: paginate %}
-  {%- endpaginate -%}
+		if section.settings.sort == 'products_high' or section.settings.sort == 'date_reversed' or section.settings.sort == 'alphabetical_reversed'
+			assign collections = collections | reverse
+		endif
+
+		assign moduloResult = 28 | modulo: section.settings.columns_desktop
+		assign paginate_by = 30
+		if moduloResult == 0
+			assign paginate_by = 28
+		endif
+	-%}
 </div>
+
+<div class="container">
+	{%- paginate collections by paginate_by -%}
+		<ul class="collection-list grid grid--{{ section.settings.columns_desktop }}-col-desktop grid--{{ section.settings.columns_mobile }}-col-tablet-down row gap-y-[6.75rem]" role="list">
+			{%- for collection in collections -%}
+				<li class="collection-list__item grid__item col-6/12 lg:col-4/12">
+					{% render 'card-collection', card_collection: collection, media_aspect_ratio: section.settings.image_ratio, columns: 3 %}
+				</li>
+			{%- endfor -%}
+		</ul>
+		{% render 'pagination', paginate: paginate %}
+	{%- endpaginate -%}
+</div>
+
 {% schema %}
 {
   "name": "t:sections.main-list-collections.name",

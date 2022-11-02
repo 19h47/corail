@@ -71,6 +71,14 @@
 										show_secondary_image: true
 									%}
 								</li>
+
+								{% if collection.products.size > 6 and forloop.index == 6 %}
+									<li class="col-6/12 lg:col-4/12">
+										<div class="h-full flex items-center justify-center font-display uppercase text-center font-semibold text-xl leading-5">
+											<p>From the sea
+										</div>
+									</li>
+								{% endif %}
 							{%- endfor -%}
 						</ul>
 
