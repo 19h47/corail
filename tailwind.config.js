@@ -75,5 +75,6 @@ module.exports = {
 		plugin(({ addVariant }) => addVariant("grandparent-expanded", "[aria-expanded='true'] > * > &")),
 		plugin(({ addVariant }) => addVariant("parent-open", "[open='true'] > &")),
 		plugin(({ addVariant }) => addVariant("has-scroll-init", ".has-scroll-init &")),
+		plugin(({ addVariant }) => addVariant("open", "&[open]")),
 	],
 };

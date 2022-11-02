@@ -1,5 +1,4 @@
 {% if section.blocks != blank %}
-
 	{% assign count = 0 %}
 
 	{%- for block in section.blocks -%}
@@ -11,40 +10,18 @@
 		{%- endcase -%}
 	{%- endfor -%}
 
-	<div
-		class="drawercommintments z-10 group fixed lg:absolute lg:h-full lg:left-0 lg:top-0 bottom-0 inset-x-0 lg:inset-x-auto lg:flex"
-	>
-		<div class="lg:sticky lg:top-[4.375rem] lg:h-[calc(100vh_+_4.375rem)]">
-			{%- for block in section.blocks -%}
-				{% case block.type %}
-					{%- when 'page' -%}
-						{% if page.url == block.settings.page.url %}
-							<button
-								class="py-3 lg:pl-7 text-left flex lg:flex-col items-center lg:items-start text-sm uppercase leading-none font-medium lg:order-2"
-								type="button"
-							>
-								{%- render 'svg', icon: 'bars-small', classes: 'w-2 h-4 mr-5 fill-current lg:hidden' -%}
-								<span class="text-3xl inline-block mr-1.5 lg:mr-0">
-									{{- forloop.index | prepend: '00' | slice: -2, 2 | append: '.' -}}
-								</span>
-								<div class="lg:[writing-mode:tb-rl] lg:-rotate-180 lg:mt-1.5">
-									<span class="hidden lg:inline">{{- forloop.index | prepend: '00' | slice: -2, 2 -}}</span>
-									{{- '&lowbar;' -}}
-									{{- block.settings.page.title | escape -}}
-								</div>
-							</button>
-						{% endif %}
-				{%- endcase -%}
-			{%- endfor -%}
-
-			<ul class="divide-y-[0.0625rem] bg-white divide-orange-grayish lg:divide-y-0 border-t-[0.0625rem] border-orange-grayish lg:border-t-0 lg:order-1 lg:flex lg:flex-row-reverse lg:absolute lg:inset-y-0 lg:right-[100%] lg:translate-x-0 lg:transition-transform lg:duration-1000 lg:ease-in-out lg:group-hover:translate-x-full">
+	<details-disclosure>
+		<div class="drawercommintments z-10 fixed lg:absolute lg:h-full lg:left-0 lg:top-0 bottom-0 inset-x-0 lg:inset-x-auto lg:flex border-t-[0.0625rem] border-orange-grayish lg:border-t-0">
+			<details class="group lg:sticky lg:top-[4.375rem] lg:h-[calc(100vh_+_4.375rem)]">
 				{%- for block in section.blocks -%}
 					{% case block.type %}
 						{%- when 'page' -%}
-							<li>
-								<a
-									class="py-3 lg:pl-7 lg:h-full text-left flex lg:flex-col items-center lg:items-start text-sm uppercase leading-none font-medium lg:border-r-[0.0625rem] lg:border-orange-grayish"
-									href="{{ block.settings.page.url }}"
+							{% if page.url == block.settings.page.url %}
+
+								<summary
+									class="py-3 lg:pl-7 text-left flex lg:flex-col items-center lg:items-start text-sm uppercase leading-none font-medium lg:order-2 bg-white lg:bg-transparent"
+									role="button"
+									aria-expanded="false"
 								>
 									{%- render 'svg', icon: 'bars-small', classes: 'w-2 h-4 mr-5 fill-current lg:hidden' -%}
 									<span class="text-3xl inline-block mr-1.5 lg:mr-0">
@@ -55,13 +32,40 @@
 										{{- '&lowbar;' -}}
 										{{- block.settings.page.title | escape -}}
 									</div>
-								</a>
-							</li>
+								</summary>
+
+							{% endif %}
 					{%- endcase -%}
 				{%- endfor -%}
-			</ul>
+
+				<ul class=" bg-white lg:order-1 lg:flex lg:flex-row-reverse lg:absolute lg:inset-y-0 lg:right-[100%] lg:translate-x-0 lg:group-open:translate-x-full">
+					{%- for block in section.blocks -%}
+						{% case block.type %}
+							{%- when 'page' -%}
+								<li>
+									<a
+										class="py-3 lg:pl-7 lg:h-full text-left lg:flex-col items-center lg:items-start text-sm uppercase leading-none font-medium border-t-[0.0625rem] lg:border-t-0 lg:border-r-[0.0625rem] border-orange-grayish {% if page.url == block.settings.page.url %} hidden lg:flex {% else %} flex {% endif %}"
+										href="{{ block.settings.page.url }}"
+									>
+										{%- render 'svg', icon: 'bars-small', classes: 'w-2 h-4 mr-5 fill-current lg:hidden' -%}
+										<span class="text-3xl inline-block mr-1.5 lg:mr-0">
+											{{- forloop.index | prepend: '00' | slice: -2, 2 | append: '.' -}}
+										</span>
+										<div class="lg:[writing-mode:tb-rl] lg:-rotate-180 lg:mt-1.5">
+											<span class="hidden lg:inline">{{- forloop.index | prepend: '00' | slice: -2, 2 -}}</span>
+											{{- '&lowbar;' -}}
+											{{- block.settings.page.title | escape -}}
+										</div>
+									</a>
+								</li>
+						{%- endcase -%}
+					{%- endfor -%}
+				</ul>
+			</details>
 		</div>
-	</div>
+	</details-disclosure>
+
+	<script src="{{ 'details-disclosure.js' | asset_url }}" defer="defer"></script>
 {% endif %}
 
 {% schema %}

@@ -523,10 +523,6 @@ hr {
 	fill: rgba(var(--color-foreground), 0.55);
 }
 
-details > * {
-	box-sizing: border-box;
-}
-
 .break {
 	word-break: break-word;
 }

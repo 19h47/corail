@@ -171,7 +171,7 @@
 		</script>
   	</head>
 
-  	<body class="{% if request.page_type != 'product' %} cursor-wait has-scroll-init:cursor-auto {% endif %}" data-page-type="{{ request.page_type }}">
+  	<body class="cursor-wait has-scroll-init:cursor-auto" data-page-type="{{ request.page_type }}" data-page-template-suffix="{{ page.template_suffix }}">
 		<a class="skip-to-content-link button sr-only" href="#MainContent">
 			{{ "accessibility.skip_to_text" | t }}
 		</a>
