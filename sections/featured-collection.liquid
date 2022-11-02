@@ -40,7 +40,7 @@
 
 					{%- if section.settings.title != blank -%}
 						<h2 class="font-display font-semibold text-3xl uppercase">
-							{{- section.settings.title | escape -}}
+							{{- section.settings.title | newline_to_br | escape -}}
 						</h2>
 					{%- endif -%}
 
