@@ -13,6 +13,13 @@
         "right_image": "shopify:\/\/shop_images\/a-flock-of-seagulls-fly-over-a-beach-to-the-sea.jpg"
       }
     },
+    "24f5ddf5-da2f-4977-ac24-a100226845ad": {
+      "type": "key-figure",
+      "settings": {
+        "key_figure": 21043,
+        "title": "KILOS OFMARINE WASTE"
+      }
+    },
     "38b5b15c-b217-4562-b466-891522a1cd67": {
       "type": "timeline",
       "blocks": {
@@ -58,13 +65,6 @@
       "settings": {
       }
     },
-    "24f5ddf5-da2f-4977-ac24-a100226845ad": {
-      "type": "key-figure",
-      "settings": {
-        "key_figure": 21043,
-        "title": "KILOS OFMARINE WASTE"
-      }
-    },
     "9c7747d0-44c9-4e75-9183-babbaa625576": {
       "type": "logo",
       "settings": {
@@ -74,8 +74,8 @@
   "order": [
     "main",
     "66e11768-6009-47fd-8dbf-c63bf6d3aecf",
-    "38b5b15c-b217-4562-b466-891522a1cd67",
     "24f5ddf5-da2f-4977-ac24-a100226845ad",
+    "38b5b15c-b217-4562-b466-891522a1cd67",
     "9c7747d0-44c9-4e75-9183-babbaa625576"
   ]
 }
