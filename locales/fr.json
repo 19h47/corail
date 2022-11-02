@@ -247,7 +247,7 @@
 			"name": "Timeline",
 			"blocks": {
 				"item": {
-					"label": "Item",
+					"name": "Item",
 					"settings": {
 						"image": { "label": "Image" },
 						"title": { "label": "Titre" },
