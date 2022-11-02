@@ -406,11 +406,11 @@
             },
             "title": {
               "label": "Titre",
-			  "placeholder": "Titre"
+              "placeholder": "Titre"
             },
             "content": {
               "label": "Contenu",
-			  "placeholder": "Contenu"
+              "placeholder": "Contenu"
             }
           }
         }

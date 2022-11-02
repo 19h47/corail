@@ -12,6 +12,23 @@
         "image": "shopify:\/\/shop_images\/an-aerial-shot-of-a-factory-complex.jpg"
       }
     },
+    "b314cfce-96c6-4ff6-ac91-48361e279069": {
+      "type": "timeline",
+      "blocks": {
+        "ce0214bc-a408-4ee5-8b7e-fdfcb52e381f": {
+          "type": "item",
+          "settings": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "block_order": [
+        "ce0214bc-a408-4ee5-8b7e-fdfcb52e381f"
+      ],
+      "settings": {
+      }
+    },
     "f26a43b5-6ff3-45bf-a839-d8f3236ce24e": {
       "type": "logo",
       "settings": {
@@ -21,6 +38,7 @@
   "order": [
     "main",
     "a47143b9-abcb-4717-b2c0-728c5deddb31",
+    "b314cfce-96c6-4ff6-ac91-48361e279069",
     "f26a43b5-6ff3-45bf-a839-d8f3236ce24e"
   ]
 }
