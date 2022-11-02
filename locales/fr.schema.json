@@ -400,7 +400,7 @@
 		"presets": { "name": "Carrousel" },
 		"blocks": {
 			"slide": {
-
+				"name": "Slide",
 				"settings": {
 					"image": { "label": "Image" },
 					"title": { "label": "Titre", "placeholder": "Titre" },
