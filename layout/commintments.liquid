@@ -178,11 +178,14 @@
 			</a>
 
 			{% section 'header' %}
-			{% section 'drawercommintments' %}
 
-			<main id="MainContent" class="content-for-layout" role="main" tabindex="-1">
-				 {{ content_for_layout }}
-			</main>
+			<div class="lg:flex">
+				{% section 'drawercommintments' %}
+
+				<main id="MainContent" class="content-for-layout" role="main" tabindex="-1">
+					{{ content_for_layout }}
+				</main>
+			</div>
 
 			{% section 'footer' %}
 

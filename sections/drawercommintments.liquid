@@ -1,16 +1,60 @@
 {% if section.blocks != blank %}
-	<div class="drawercommintments fixed bottom-0 inset-x-0 bg-white">
-		<ul class="divide-y-[0.0625rem] divide-orange-grayish border-t-[0.0625rem] border-orange-grayish">
+
+	{% assign count = 0 %}
+
+	{%- for block in section.blocks -%}
+		{% case block.type %}
+			{%- when 'page' -%}
+				{% if page.url != block.settings.page.url %}
+					{% assign count = count | plus: 1 %}
+				{% endif %}
+		{%- endcase -%}
+	{%- endfor -%}
+
+	<div
+		class="drawercommintments group fixed lg:sticky lg:h-screen lg:left-0 lg:top-[4.5rem] bottom-0 lg:bottom-auto inset-x-0 lg:inset-x-auto bg-white lg:flex"
+	>
+
+		{%- for block in section.blocks -%}
+			{% case block.type %}
+				{%- when 'page' -%}
+					{% if page.url == block.settings.page.url %}
+						<button
+							class="py-3 lg:pl-7 lg:h-full text-left flex lg:flex-col items-center lg:items-start text-sm uppercase leading-none font-medium lg:order-2"
+							type="button"
+						>
+							{%- render 'svg', icon: 'bars-small', classes: 'w-2 h-4 mr-5 fill-current lg:hidden' -%}
+							<span class="text-3xl inline-block mr-1.5 lg:mr-0">
+								{{- forloop.index | prepend: '00' | slice: -2, 2 | append: '.' -}}
+							</span>
+							<div class="lg:[writing-mode:tb-rl] lg:-rotate-180 lg:mt-1.5">
+								<span class="hidden lg:inline">{{- forloop.index | prepend: '00' | slice: -2, 2 -}}</span>
+								{{- '&lowbar;' -}}
+								{{- block.settings.page.title | escape -}}
+							</div>
+						</button>
+					{% endif %}
+			{%- endcase -%}
+		{%- endfor -%}
+
+		<ul class="divide-y-[0.0625rem] bg-white divide-orange-grayish lg:divide-y-0 border-t-[0.0625rem] border-orange-grayish lg:border-t-0 lg:order-1 lg:flex lg:flex-row-reverse lg:absolute lg:inset-y-0 lg:right-[100%] lg:translate-x-0 lg:transition-transform lg:duration-1000 lg:ease-in-out lg:group-hover:translate-x-full">
 			{%- for block in section.blocks -%}
 				{% case block.type %}
 					{%- when 'page' -%}
 						<li>
-							<a class="py-3 flex items-center text-sm uppercase leading-none font-medium" href="{{ block.settings.page.title.url }}">
-								{%- render 'svg', icon: 'bars-small', classes: 'w-2 h-4 mr-5 fill-current' -%}
-								<span class="text-3xl inline-block mr-1.5">
+							<a
+								class="py-3 lg:pl-7 lg:h-full text-left flex lg:flex-col items-center lg:items-start text-sm uppercase leading-none font-medium lg:border-r-[0.0625rem] lg:border-orange-grayish"
+								href="{{ block.settings.page.url }}"
+							>
+								{%- render 'svg', icon: 'bars-small', classes: 'w-2 h-4 mr-5 fill-current lg:hidden' -%}
+								<span class="text-3xl inline-block mr-1.5 lg:mr-0">
 									{{- forloop.index | prepend: '00' | slice: -2, 2 | append: '.' -}}
 								</span>
-								&lowbar;{{ block.settings.page.title | escape }}
+								<div class="lg:[writing-mode:tb-rl] lg:-rotate-180 lg:mt-1.5">
+									<span class="hidden lg:inline">{{- forloop.index | prepend: '00' | slice: -2, 2 -}}</span>
+									{{- '&lowbar;' -}}
+									{{- block.settings.page.title | escape -}}
+								</div>
 							</a>
 						</li>
 				{%- endcase -%}
