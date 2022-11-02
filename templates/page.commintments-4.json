@@ -13,6 +13,33 @@
         "right_image": "shopify:\/\/shop_images\/fish-and-chips-sign.jpg"
       }
     },
+    "9b18aba4-b044-42b7-b38e-d48b9bbc39c0": {
+      "type": "timeline",
+      "blocks": {
+        "6d0faf3d-4570-4b4a-8780-1acac0494f64": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/flavored-salt-spills-from-jar.jpg",
+            "title": "A LONG-TERM PARTNERSHIP",
+            "content": "The collaboration with our fishermen crew is built on a steady partnership: we pay them monthly, regardless of how much marine waste they collect, to ensure a sustainable additional income for them and valuable partners for us, who know the sea and its characteristics better than anyone."
+          }
+        },
+        "f02826ed-762f-449a-befe-f5d2383e8aeb": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/fishing-tackle-box.jpg",
+            "title": "aN ALTERNATIVETO FISHING",
+            "content": "We have met the fishermen we work with during a particularly hot summer which made it impossible for them to fish. The point of our partnership is to provide our crew with an additional activity when global warming and climate change have made fishing a tougher and tougher job."
+          }
+        }
+      },
+      "block_order": [
+        "6d0faf3d-4570-4b4a-8780-1acac0494f64",
+        "f02826ed-762f-449a-befe-f5d2383e8aeb"
+      ],
+      "settings": {
+      }
+    },
     "21348535-fa1c-4b95-9255-eee59005213f": {
       "type": "logo",
       "settings": {
@@ -22,6 +49,7 @@
   "order": [
     "main",
     "393a6aca-4427-4144-9b8a-3138582cc7dd",
+    "9b18aba4-b044-42b7-b38e-d48b9bbc39c0",
     "21348535-fa1c-4b95-9255-eee59005213f"
   ]
 }
