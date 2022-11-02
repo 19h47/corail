@@ -246,6 +246,12 @@
 		"slider": {
 			"name": "Carrousel",
 			"presets": { "name": "Carrousel" },
+			"settings": {
+				"title": {
+					"label": "Titre",
+					"placeholder": "Titre"
+				}
+			},
 			"blocks": {
 				"slide": {
 					"name": "Slide",
