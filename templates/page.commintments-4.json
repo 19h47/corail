@@ -13,6 +13,43 @@
         "right_image": "shopify:\/\/shop_images\/fish-and-chips-sign.jpg"
       }
     },
+    "26e58ee6-4b94-4271-8e35-b382b3602b57": {
+      "type": "slider",
+      "blocks": {
+        "ef0078bf-0628-4ced-ad87-90f3aeb63bcc": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/fisherman-casts-off.jpg",
+            "title": "Jules Dubois",
+            "content": "pêcheur corail°"
+          }
+        },
+        "ee65d6c0-d0b9-4325-b35d-713367f155b3": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/kayakers-and-the-mountains.jpg",
+            "title": "Lorem Ipsum",
+            "content": "Dolor si"
+          }
+        },
+        "1c6e5533-6d4e-427b-926e-e22a7b12b8c1": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/purple-fish.jpg",
+            "title": "Consectetur Adipiscing",
+            "content": "Elit"
+          }
+        }
+      },
+      "block_order": [
+        "ef0078bf-0628-4ced-ad87-90f3aeb63bcc",
+        "ee65d6c0-d0b9-4325-b35d-713367f155b3",
+        "1c6e5533-6d4e-427b-926e-e22a7b12b8c1"
+      ],
+      "settings": {
+        "title": "THE CREW"
+      }
+    },
     "9b18aba4-b044-42b7-b38e-d48b9bbc39c0": {
       "type": "timeline",
       "blocks": {
@@ -49,6 +86,7 @@
   "order": [
     "main",
     "393a6aca-4427-4144-9b8a-3138582cc7dd",
+    "26e58ee6-4b94-4271-8e35-b382b3602b57",
     "9b18aba4-b044-42b7-b38e-d48b9bbc39c0",
     "21348535-fa1c-4b95-9255-eee59005213f"
   ]

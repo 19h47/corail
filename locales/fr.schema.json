@@ -395,26 +395,36 @@
         }
       }
     },
-	"slider": {
-		"name": "Carrousel",
-		"presets": { "name": "Carrousel" },
-		"settings": {
-			"title": {
-				"label": "Titre",
-				"placeholder": "Titre"
-			}
-		},
-		"blocks": {
-			"slide": {
-				"name": "Slide",
-				"settings": {
-					"image": { "label": "Image" },
-					"title": { "label": "Titre", "placeholder": "Titre" },
-					"content": { "label": "Contenu", "placeholder": "Contenu" }
-				}
-			}
-		}
-	},
+    "slider": {
+      "name": "Carrousel",
+      "presets": {
+        "name": "Carrousel"
+      },
+      "settings": {
+        "title": {
+          "label": "Titre",
+          "placeholder": "Titre"
+        }
+      },
+      "blocks": {
+        "slide": {
+          "name": "Slide",
+          "settings": {
+            "image": {
+              "label": "Image"
+            },
+            "title": {
+              "label": "Titre",
+              "placeholder": "Titre"
+            },
+            "content": {
+              "label": "Contenu",
+              "placeholder": "Contenu"
+            }
+          }
+        }
+      }
+    },
     "key-figure": {
       "name": "Chiffre clé",
       "settings": {
