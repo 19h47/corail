@@ -1,5 +1,5 @@
 {% comment %}
-  Renders product variant options
+  Renders product variant options fixed
   Accepts:
   - product: {Object} product object.
   - option: {Object} current product_option object.
@@ -11,17 +11,14 @@
     block: block
   %}
 {% endcomment %}
+
 {%- liquid
 	assign variants_available_arr = product.variants | map: 'available'
 	assign variants_option1_arr = product.variants | map: 'option1'
 	assign variants_option2_arr = product.variants | map: 'option2'
 	assign variants_option3_arr = product.variants | map: 'option3'
-
-	assign product_form_id = 'product-form-' | append: section.id
-  -%}
-
-  {%- for value in option.values -%}
-
+-%}
+{%- for value in option.values -%}
 	{%- liquid
 		assign option_disabled = true
 
@@ -45,10 +42,9 @@
 	<div>
 		<input
 			type="radio"
-			id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
-			name="{{ option.name }}"
+			id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}-button"
+			name="{{ option.name }}-button"
 			value="{{ value | escape }}"
-			form="{{ product_form_id }}"
 			{% if option.selected_value == value %} checked {% endif %}
 			class="peer {% if option_disabled %} disabled {% endif %}"
 		>
@@ -66,17 +62,19 @@
 		{% if variant_needed.metafields.corail.color and option.name == 'Couleur' %}
 			<label
 				class="peer-checked:after:border-orange-grayish peer-checked:after-border-[0.0625rem] relative after:-m-1 after:inset-0 peer-checked:after:border after:rounded-full after:absolute cursor-pointer block border-gray-very-light border w-5 h-5 rounded-full {% if '#FFFFFF' == variant_needed.metafields.corail.color %} border-gray-very-light {% endif %}"
-				for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
+				data-option-id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
 				data-option="{{ value }}"
 				style="background-color: {{ variant_needed.metafields.corail.color }}"
+				for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}-button"
 			></label>
 		{% else %}
 			<label
-				class="py-2.5 lg:py-2 block cursor-pointer text-sm px-2 lg:px-2.5 bg-gray-very-light peer-checked:bg-gray-very-dark peer-checked:text-gray-very-light"
-				for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
+				class="py-2 block cursor-pointer text-sm px-2.5 bg-gray-very-light {% if option.selected_value == value %} is-active {% endif %} peer-checked:bg-gray-very-dark peer-checked:text-gray-very-light"
+				data-option-id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
+				for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}-button"
 			>
 				{{ value }}
 			</label>
 		{% endif %}
 	</div>
-{%- endfor -%}
+{% endfor %}
