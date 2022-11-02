@@ -11,6 +11,7 @@
     block: block
   %}
 {% endcomment %}
+
 {%- liquid
 	assign variants_available_arr = product.variants | map: 'available'
 	assign variants_option1_arr = product.variants | map: 'option1'
@@ -18,9 +19,9 @@
 	assign variants_option3_arr = product.variants | map: 'option3'
 
 	assign product_form_id = 'product-form-' | append: section.id
-  -%}
+-%}
 
-  {%- for value in option.values -%}
+{%- for value in option.values -%}
 
 	{%- liquid
 		assign option_disabled = true
