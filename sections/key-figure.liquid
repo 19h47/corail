@@ -1,5 +1,5 @@
 
-<section class="my-[4.5rem] text-center">
+<section class="my-[4.5rem]">
 	{% if section.settings.key_figure != empty %}
 		<p class="lg:text-[9.375rem] font-display font-bold leading-none">
 			{{ section.settings.key_figure }}
@@ -7,7 +7,7 @@
 	{% endif %}
 	{% if section.settings.title != empty %}
 		<p class="lg:text-6xl font-display font-bold lg:leading-none">
-			{{ section.settings.title | newline_to_br }}
+			{{ section.settings.title }}
 		</p>
 	{% endif %}
 </section>
@@ -19,13 +19,13 @@
   "class": "section section-key-figure",
   "settings": [
     {
-      "type": "text",
+      "type": "number",
       "id": "key_figure",
       "label": "t:sections.key-figure.settings.key-figure.label",
       "placeholder": "t:sections.key-figure.settings.key-figure.placeholder"
     },
     {
-      "type": "textarea",
+      "type": "text",
       "id": "title",
       "label": "t:sections.key-figure.settings.title.label",
       "placeholder": "t:sections.key-figure.settings.title.placeholder"
