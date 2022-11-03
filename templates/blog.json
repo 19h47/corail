@@ -1,19 +1,44 @@
 {
   "sections": {
+    "97b8a2d5-b5be-4c4a-b369-861b25df757d": {
+      "type": "highlights-articles",
+      "blocks": {
+        "dbe3ff3e-8bb3-4d48-9800-87cfbffea61a": {
+          "type": "article",
+          "settings": {
+            "article": "stories\/le-manta-geant-des-mers-contre-la-pollution"
+          }
+        },
+        "f57a317a-8f65-4076-a2a9-1b8084e5533e": {
+          "type": "article",
+          "settings": {
+            "article": "stories\/if-the-ocean-dies-we-die-paul-watson"
+          }
+        },
+        "061c3e49-7b8e-4bda-b803-7c4a4742c02d": {
+          "type": "article",
+          "settings": {
+            "article": "stories\/a-unique-seaweed-based-material"
+          }
+        }
+      },
+      "block_order": [
+        "dbe3ff3e-8bb3-4d48-9800-87cfbffea61a",
+        "f57a317a-8f65-4076-a2a9-1b8084e5533e",
+        "061c3e49-7b8e-4bda-b803-7c4a4742c02d"
+      ],
+      "settings": {
+      }
+    },
     "main": {
       "type": "main-blog",
       "settings": {
-        "layout": "collage",
-        "show_image": true,
-        "image_height": "medium",
-        "show_date": true,
-        "show_author": false,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "layout": "collage"
       }
     }
   },
   "order": [
+    "97b8a2d5-b5be-4c4a-b369-861b25df757d",
     "main"
   ]
 }
