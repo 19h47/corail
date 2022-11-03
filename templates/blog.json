@@ -41,11 +41,17 @@
       "settings": {
         "layout": "collage"
       }
+    },
+    "88b8fcd2-d20c-4b78-8861-5cb6ac5d6849": {
+      "type": "logo",
+      "settings": {
+      }
     }
   },
   "order": [
     "97b8a2d5-b5be-4c4a-b369-861b25df757d",
     "6a8d34d8-9b97-4560-b43d-ab98e88f4e0f",
-    "main"
+    "main",
+    "88b8fcd2-d20c-4b78-8861-5cb6ac5d6849"
   ]
 }
