@@ -866,7 +866,7 @@
         "name": "Articles de blog"
       }
     },
-	"flters-articles": {
+	"filters-articles": {
 		"name": "Filtres des articles",
 		"presets": {
 			"name": "Filtres des articles"
