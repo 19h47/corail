@@ -194,7 +194,7 @@
       "type": "featured-blog",
       "settings": {
         "heading": "Corail° Stories",
-        "blog": "stories",
+        "blog": "articles",
         "post_limit": 3
       }
     },
