@@ -8,11 +8,19 @@
 
 <div class="text-white relative image-banner h-[36.625rem] lg:h-[52.625rem]">
 
-
 	{% if section.settings.video %}
 		<video
 			class="h-full w-full object-cover relative z-10"
-			loop muted autoplay playsinline src="{{ section.settings.video }}"></video>
+			loop
+			muted
+			autoplay
+			playsinline
+			poster="{{ section.settings.video.preview_image | image_url }}"
+		>
+			{% for source in section.settings.video.sources %}
+				<source src="{{ source.url }}" type="{{ source.mime_type }}">
+			{% endfor %}
+		</video>
 	{% endif %}
 
 	{%- if section.blocks -%}

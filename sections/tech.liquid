@@ -8,7 +8,7 @@
 			<div class="lg:col-8/12 lg:ml-2/12 lg:order-2">
 				{%- if section.settings.video -%}
 					<div class="relative lg:-mt-[2.625rem]" style="padding-bottom: {{ 100 | divided_by: section.settings.video.preview_image.aspect_ratio }}%">
-						<video class="absolute inset-0 w-full h-full object-cover object-center" autoplay loop playsinline muted poster="{{ section.settings.video.preview_image | image_url  }}">
+						<video class="absolute inset-0 w-full h-full object-cover object-center" autoplay loop playsinline muted poster="{{ section.settings.video.preview_image | image_url }}">
 							{% for source in section.settings.video.sources %}
 								<source src="{{ source.url }}" type="{{ source.mime_type }}">
 							{% endfor %}
