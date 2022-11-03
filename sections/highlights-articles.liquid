@@ -1,7 +1,7 @@
 <script src="{{ 'swiper.js' | asset_url }}" defer="defer"></script>
 <script src="{{ 'slider.js' | asset_url }}" defer="defer"></script>
 
-<slider-component class="highlights-articles my-14 block" data-parameters='{"spaceBetween":20,"slidesPerView":1}'>
+<slider-component class="highlights-articles my-14 block overflow-hidden" data-parameters='{"spaceBetween":20,"slidesPerView":1}'>
 	<div class="container">
 		<div class="row relative">
 
@@ -10,7 +10,7 @@
     			<button class="pointer-events-auto button-secondary text-gray-very-dark border-orange-grayish inline-block align-middle js-next hover:bg-red-very-light hover:text-white hover:border-red-very-light" type="button">&rightarrow;</button>
 			</div>
 
-			<div class="lg:col-10/12 lg:ml-1/12 swiper relative z-1">
+			<div class="lg:col-10/12 lg:ml-1/12 swiper relative z-1 overflow-visible">
 				<div class="swiper-wrapper">
 					{%- for block in section.blocks -%}
 						{%- case block.type -%}
