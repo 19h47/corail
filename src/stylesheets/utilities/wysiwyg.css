@@ -23,4 +23,8 @@
 	.wysiwyg > p > a {
 		@apply underline;
 	}
+
+	.wysiwyg > img {
+		@apply w-full h-auto block my-8;
+	}
 }

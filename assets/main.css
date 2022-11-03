@@ -1616,6 +1616,10 @@ html,
 	left: 0px;
 }
 
+.left-9{
+	left: 2.25rem;
+}
+
 .bottom-full{
 	bottom: 100%;
 }
@@ -1852,6 +1856,10 @@ html,
 
 .mb-14{
 	margin-bottom: 3.5rem;
+}
+
+.ml-1\/10{
+	margin-left: 10%;
 }
 
 .mt-16{
@@ -2839,6 +2847,10 @@ html,
 	padding-left: 0.5rem;
 }
 
+.pt-5{
+	padding-top: 1.25rem;
+}
+
 .pb-4{
 	padding-bottom: 1rem;
 }
@@ -2987,6 +2999,10 @@ html,
 	line-height: 1.125rem;
 }
 
+.leading-\[1\.375rem\]{
+	line-height: 1.375rem;
+}
+
 .leading-9{
 	line-height: 2.25rem;
 }
@@ -2997,10 +3013,6 @@ html,
 
 .leading-8{
 	line-height: 2rem;
-}
-
-.leading-\[1\.375rem\]{
-	line-height: 1.375rem;
 }
 
 .leading-\[10\.3125rem\]{
@@ -3161,6 +3173,18 @@ html,
 	padding-right: 0.625rem;
 }
 
+.col-7\/10{
+	width: 70%;
+	padding-left: 0.625rem;
+	padding-right: 0.625rem;
+}
+
+.col-9\/12{
+	width: 75%;
+	padding-left: 0.625rem;
+	padding-right: 0.625rem;
+}
+
 .marquee {
 		animation-name: marquee-text-animation;
 		animation-timing-function: linear;
@@ -3198,6 +3222,14 @@ html,
 
 .wysiwyg > p > a{
 	text-decoration-line: underline;
+}
+
+.wysiwyg > img{
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+	display: block;
+	height: auto;
+	width: 100%;
 }
 
 .before\:absolute::before{

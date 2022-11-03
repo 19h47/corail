@@ -101,6 +101,10 @@
 		@apply col w-8/12;
 	}
 
+	.col-9\/10 {
+		@apply col w-9/10;
+	}
+
 	.col-9\/12 {
 		@apply col w-9/12;
 	}

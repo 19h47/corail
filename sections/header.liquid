@@ -34,7 +34,7 @@
   <script src="{{ 'cart-drawer.js' | asset_url }}" defer="defer"></script>
 {%- endif -%}
 
-<sticky-header class="header-wrapper block h-16 lg:h-[4.375rem] relative z-20 bg-white {% if request.page_type == 'index' %} is-ontop:text-white is-ontop:bg-white/0 transition-colors duration-1000 ease-in-out {% endif %}">
+<sticky-header class="header-wrapper block h-16 lg:h-[4.375rem] relative z-20 bg-white {% if 'article' == request.page_type or 'index' == request.page_type %} is-ontop:text-white is-ontop:bg-white/0 transition-colors duration-1000 ease-in-out {% endif %}">
 
 	<hr class="w-full h-[0.0625rem] absolute bottom-[100%] inset-x-0 block bg-orange-grayish {% if request.page_type == 'index' %} transition-colors duration-1000 ease-in-out is-ontop:bg-white/0 {% endif %}" />
 

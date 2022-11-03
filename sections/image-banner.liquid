@@ -23,6 +23,29 @@
 		</video>
 	{% endif %}
 
+	{% if section.settings.image %}
+		{%-liquid
+			assign image_height = section.settings.image.width | divided_by: section.settings.image.aspect_ratio
+
+			if section.settings.image != blank
+			  	assign sizes = "(min-width: 750px) 50vw, 100vw"
+			elsif section.settings.image != blank
+			 	 assign sizes = "50vw"
+			else
+			  	assign sizes = "100vw"
+			endif
+		-%}
+		{{ section.settings.image | image_url: width: 1500 | image_tag:
+			loading: 'lazy',
+			width: section.settings.image.width,
+			height: image_height,
+			class: 'w-full h-full object-cover object-center relative z-10',
+			sizes: sizes,
+			widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840',
+			alt: section.settings.image.alt | escape
+		}}
+	{% endif %}
+
 	{%- if section.blocks -%}
 		<div class="absolute text-center my-auto inset-0 z-20 flex items-center">
 			<div class="container">
