@@ -868,11 +868,6 @@
 		},
 		"highlights-articles": {
 			"name": "Articles à la une",
-			"settings": {
-				"title": {
-					"label": "Titre"
-				}
-			},
 			"blocks": {
 				"article": {
 					"name": "Article",
