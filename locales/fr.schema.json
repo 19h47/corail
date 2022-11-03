@@ -875,7 +875,10 @@
       },
 	  "blocks": {
 		"article": {
-			"label": "Article"
+			"name": "Article",
+			"settings": {
+				"label": "Article"
+			}
 		}
 	  },
       "presets": {
