@@ -1,6 +1,63 @@
-<div class="highlights-articles">
-	HIGHLIGHTS ARTICLES
-</div>
+<script src="{{ 'swiper.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'slider.js' | asset_url }}" defer="defer"></script>
+
+<slider-component class="highlights-articles my-14 block" data-parameters='{"spaceBetween":20,"slidesPerView":1}'>
+	<div class="container">
+		<div class="row relative">
+
+			<div class="lg:col-10/12 mt-9 z-2 lg:ml-1/12 hidden lg:flex justify-between absolute top-0 inset-x-0 pointer-events-none">
+				<button class="pointer-events-auto button-secondary text-gray-very-dark border-orange-grayish inline-block align-middle js-previous hover:bg-red-very-light hover:text-white hover:border-red-very-light" type="button">&leftarrow;</button>
+    			<button class="pointer-events-auto button-secondary text-gray-very-dark border-orange-grayish inline-block align-middle js-next hover:bg-red-very-light hover:text-white hover:border-red-very-light" type="button">&rightarrow;</button>
+			</div>
+
+			<div class="lg:col-10/12 lg:ml-1/12 swiper relative z-1">
+				<div class="swiper-wrapper">
+					{%- for block in section.blocks -%}
+						{%- case block.type -%}
+								{%- when 'article' -%}
+								<article class="text-center swiper-slide">
+									<div class="row">
+										<div class="lg:col-7/10 lg:ml-1.5/10">
+											<div class="text-xs uppercase text-orange-grayish mb-4">
+												{{- block.settings.article.published_at | time_tag: format: 'date' -}}
+											</div>
+											<h2 class="font-medium font-display text-2xl lg:text-6xl">
+												{{- block.settings.article.title -}}
+											</h2>
+											{% if block.settings.article.tags != empty %}
+												<div class="text-xs uppercase mt-5">{{ block.settings.article.tags | join: ' / ' }}</div>
+											{% endif %}
+										</div>
+									</div>
+
+									<div class="h-44 lg:h-[34.5rem] w-full bg-orange-grayish mt-5 lg:mt-9">
+										{%- if block.settings.article.image -%}
+											<img
+												srcset="{%- if block.settings.article.image.src.width >= 165 -%}{{ block.settings.article.image.src | image_url: width: 165 }} 165w,{%- endif -%}
+												{%- if block.settings.article.image.src.width >= 360 -%}{{ block.settings.article.image.src | image_url: width: 360 }} 360w,{%- endif -%}
+												{%- if block.settings.article.image.src.width >= 533 -%}{{ block.settings.article.image.src | image_url: width: 533 }} 533w,{%- endif -%}
+												{%- if block.settings.article.image.src.width >= 720 -%}{{ block.settings.article.image.src | image_url: width: 720 }} 720w,{%- endif -%}
+												{%- if block.settings.article.image.src.width >= 1000 -%}{{ block.settings.article.image.src | image_url: width: 1000 }} 1000w,{%- endif -%}
+												{%- if block.settings.article.image.src.width >= 1500 -%}{{ block.settings.article.image.src | image_url: width: 1500 }} 1500w,{%- endif -%}
+												{{ block.settings.article.image.src | image_url }} {{ block.settings.article.image.src.width }}w"
+												src="{{ block.settings.article.image.src | image_url: width: 533 }}"
+												sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
+												alt="{{ block.settings.article.image.src.alt | escape }}"
+												class="w-full h-full object-cover object-center block"
+												loading="lazy"
+												width="{{ block.settings.article.image.width }}"
+												height="{{ block.settings.article.image.height }}"
+											>
+										{% endif %}
+									</div>
+								</article>
+						{%- endcase -%}
+					{%- endfor -%}
+				</div>
+			</div>
+		</div>
+	</div>
+</slider-component>
 
 {% schema %}
 {
