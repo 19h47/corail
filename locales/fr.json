@@ -243,18 +243,18 @@
     }
   },
   "sections": {
-	"filters-articles": {
-		"name": "Filtres des articles",
-		"settings": {
-			"title": {
-				"label": "Titre",
-				"placeholder": "Titre"
-			}
-		},
-		"presets": {
-			"name": "Filtres des articles"
-		}
-	},
+    "filters-articles": {
+      "name": "Filtres des articles",
+      "settings": {
+        "title": {
+          "label": "Titre",
+          "placeholder": "Titre"
+        }
+      },
+      "presets": {
+        "name": "Filtres des articles"
+      }
+    },
     "slider": {
       "name": "Carrousel",
       "presets": {
