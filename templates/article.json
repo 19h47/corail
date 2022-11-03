@@ -36,9 +36,25 @@
       ],
       "settings": {
       }
+    },
+    "bc99d552-f438-4af9-bb14-792816f1bab8": {
+      "type": "marquee",
+      "settings": {
+        "title": "More stories"
+      }
+    },
+    "cfc71c0f-f244-4b81-8003-c917bcd51fb1": {
+      "type": "featured-blog",
+      "settings": {
+        "heading": "Corail° Stories",
+        "blog": "stories",
+        "post_limit": 4
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "bc99d552-f438-4af9-bb14-792816f1bab8",
+    "cfc71c0f-f244-4b81-8003-c917bcd51fb1"
   ]
 }
