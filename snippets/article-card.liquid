@@ -17,7 +17,8 @@
 			<header class="flex justify-between">
 				<p>A-2022°08’22J</p>
 				<volume type="button" class="relative z-2 cursor-pointer w-6 h-6 flex items-center justify-center">
-					{% render 'svg', icon: 'microphone', classes: 'w-4 h-[1.375rem] fill-current pointer-events-none' %}
+					{% render 'svg', icon: 'microphone-on', classes: 'w-4 h-[1.375rem] fill-current pointer-events-none block parent-active:hidden' %}
+					{% render 'svg', icon: 'microphone-off', classes: 'w-4 h-[1.375rem] fill-current pointer-events-none hidden parent-active:block' %}
 				</volume>
 			</header>
 			<audio src="{{ article.metafields.corail.audio.value.url }}" type="audio/mpeg"></audio>
@@ -31,17 +32,60 @@
 			{% endif %}
 
 			<footer class="mt-6 flex justify-end text-xs">
-				<current-time>00:00</current-time>/<duration></duration>
+				<current-time style="font-variant-numeric: tabular-nums;">00:00</current-time>/<duration style="font-variant-numeric: tabular-nums;">00:00</duration>
 			</footer>
 
 			<div class="absolute bottom-0 inset-x-0 w-full h-1">
-				<tracking class="origin-left block absolute transition-transform duration-1000 ease-linear inset-0 w-full h-full bg-gray-very-dark" style="transform: scaleX(0)"></tracking>
+				<tracking class="origin-left block absolute transition-transform duration-500 ease-linear inset-0 w-full h-full bg-gray-very-dark" style="transform: scaleX(0)"></tracking>
 			</div>
 
-			<button type="button" class="absolute inset-0 z-1"></button>
+			<button type="button" class="absolute inset-0 z-1 w-full h-full"></button>
 		</article-audio>
 
 		<script src="{{ 'article-audio.js' | asset_url }}" defer="defer"></script>
+
+	{% elsif article.tags contains 'Vidéo' and article.metafields.corail.video.value %}
+		<article-video class="block border-orange-grayish border-[0.0625rem] relative">
+			<div class="relative z-1" style="padding-bottom: {{ 1 | divided_by: article.metafields.corail.video.value.aspect_ratio | times: 100 }}%;">
+				<video playsinline poster="{{ article.metafields.corail.video.value.preview_image | image_url  }}" class="absolute inset-0 z-1 w-full h-full object-cover object-center">
+					{% for source in article.metafields.corail.video.value.sources %}
+						<source src="{{ source.url }}" type="{{ source.mime_type }}">
+					{% endfor %}
+				</video>
+
+				<state class="absolute z-2 inset-0 flex justify-center items-center w-full h-full">
+					{% render 'svg', icon: 'play', classes: 'w-14 h-14 fill-white block parent-active:hidden' %}
+					{% render 'svg', icon: 'pause', classes: 'w-14 h-14 fill-white hidden group-hover:block' %}
+				</state>
+			</div>
+			<div class="relative z-1 my-6 mx-5 flex items-center">
+				<div class="mr-5 flex-shrink-0">
+					<state class="w-8 h-8 rounded-full flex items-center justify-center border-current border-[0.125rem]">
+						{% render 'svg', icon: 'play', classes: 'w-1.5 h-1.5 fill-current -mr-0.5 block parent-active:hidden' %}
+						{% render 'svg', icon: 'pause', classes: 'w-1.5 h-1.5 fill-current hidden parent-active:block' %}
+					</state>
+				</div>
+				<div>
+					<p class="font-bold font-display uppercase">
+						{{- article.title -}}
+					</p>
+					{% if article.metafields.corail.author.value != blank %}
+						<p class="text-xs uppercase -mt-1">By {{ article.metafields.corail.author.value }}</p>
+					{% endif %}
+				</div>
+				<div class="ml-auto flex items-center text-xs">
+					<current-time style="font-variant-numeric: tabular-nums;">00:00</current-time>/<duration style="font-variant-numeric: tabular-nums;">00:00</duration>
+				</div>
+			</div>
+
+			<div class="absolute bottom-0 inset-x-0 w-full h-1 z-2">
+				<tracking class="origin-left block absolute transition-transform duration-500 ease-linear inset-0 w-full h-full bg-gray-very-dark" style="transform: scaleX(0)"></tracking>
+			</div>
+
+			<button type="button" class="absolute inset-0 z-3 w-full h-full"></button>
+		</article-video>
+
+		<script src="{{ 'article-video.js' | asset_url }}" defer="defer"></script>
 	{% else %}
 		<article class="article-card relative">
 

@@ -1,16 +1,4 @@
-const getFormatedTime = (time) => {
-	const minutes = parseInt(time / 60, 10)
-		.toString()
-		.padStart(2, "0");
-	const seconds = Math.floor(time % 60)
-		.toString()
-		.padStart(2, "0");
-
-	return `${minutes}:${seconds}`;
-};
-
-const getPercentage = (currentTime, duration) => Math.floor((currentTime / duration) * 100);
-
+/* global getPercentage, getFormatedTime */
 if (!customElements.get("article-audio")) {
 	class ArticleAudio extends HTMLElement {
 		constructor() {
@@ -36,7 +24,7 @@ if (!customElements.get("article-audio")) {
 				}
 			}, 200);
 
-			this.$button.addEventListener("click", () => this.toggle(), false);
+			this.$button.addEventListener("click", () => this.toggle());
 			this.$volume.addEventListener("click", () => this.toggleVolume());
 		}
 

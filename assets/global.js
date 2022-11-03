@@ -21,6 +21,21 @@ const getFocusableElements = container => Array.from(
 	)
 )
 
+// eslint-disable-next-line no-unused-vars
+const getFormatedTime = time => {
+	const minutes = parseInt(time / 60, 10)
+		.toString()
+		.padStart(2, '0');
+	const seconds = Math.floor(time % 60)
+		.toString()
+		.padStart(2, '0');
+
+	return `${minutes}:${seconds}`;
+};
+
+// eslint-disable-next-line no-unused-vars
+const getPercentage = (currentTime, duration) => Math.floor((currentTime / duration) * 100);
+
 // eslint-disable-next-line no-undef, no-unused-vars
 const scroll = new LocomotiveNativeScroll({ smooth: false });
 
