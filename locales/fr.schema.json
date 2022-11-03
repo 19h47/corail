@@ -866,12 +866,12 @@
         "name": "Articles de blog"
       }
     },
-	"filters-articles": {
-		"name": "Filtres des articles",
-		"presets": {
-			"name": "Filtres des articles"
-		}
-	},
+    "filters-articles": {
+      "name": "Filtres des articles",
+      "presets": {
+        "name": "Filtres des articles"
+      }
+    },
     "highlights-articles": {
       "name": "Articles à la une",
       "blocks": {

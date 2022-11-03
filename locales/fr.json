@@ -243,12 +243,12 @@
     }
   },
   "sections": {
-	"filters-articles": {
-		"name": "Filtres des articles",
-		"presets": {
-			"name": "Filtres des articles"
-		}
-	},
+    "filters-articles": {
+      "name": "Filtres des articles",
+      "presets": {
+        "name": "Filtres des articles"
+      }
+    },
     "slider": {
       "name": "Carrousel",
       "presets": {

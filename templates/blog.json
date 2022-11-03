@@ -30,6 +30,11 @@
       "settings": {
       }
     },
+    "6a8d34d8-9b97-4560-b43d-ab98e88f4e0f": {
+      "type": "filters-articles",
+      "settings": {
+      }
+    },
     "main": {
       "type": "main-blog",
       "settings": {
@@ -39,6 +44,7 @@
   },
   "order": [
     "97b8a2d5-b5be-4c4a-b369-861b25df757d",
+    "6a8d34d8-9b97-4560-b43d-ab98e88f4e0f",
     "main"
   ]
 }
