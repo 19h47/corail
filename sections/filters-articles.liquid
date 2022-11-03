@@ -1,7 +1,6 @@
 
 
 <div>
-	FILTERS ARTICLES
 
 	{% liquid
 		assign tags_article_count = 0
@@ -23,11 +22,14 @@
 		endfor
 	%}
 
-	<a href="/tagged/article">{{ 'Article' }}({{ tags_article_count }})</a>
-	<a href="/tagged/video">{{ 'Vidéo' }}({{ tags_video_count }})</a>
-	<a href="/tagged/podcast">{{ 'Podcast' }}({{ tags_video_count }})</a>
+	<ul>
+		<li><a href="{{ blog.url }}">Tous</a></li>
+		<li><a href="{{ blog.url }}/tagged/article">{{ 'Article' }}({{ tags_article_count }})</a></li>
+		<li><a href="{{ blog.url }}/tagged/video">{{ 'Vidéo' }}({{ tags_video_count }})</a></li>
+		<li><a href="{{ blog.url }}/tagged/podcast">{{ 'Podcast' }}({{ tags_podcast_count }})</a></li>
+	</ul>
 
-	{{ 'Article' | link_to_tag: 'Article' }}
+
 
 </div>
 
@@ -39,7 +41,12 @@
   "tag": "section",
   "class": "section",
   "settings": [
-
+    {
+      "type": "text",
+      "id": "title",
+      "label": "t:sections.filters-articles.settings.title.label",
+      "placeholder": "t:sections.filters-articles.settings.title.placeholder"
+    }
   ],
   "blocks": [
 
