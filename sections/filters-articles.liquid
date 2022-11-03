@@ -1,36 +1,74 @@
+{% liquid
+	assign tags_article_count = 0
+	assign tags_article_url = blog.url | append: '/tagged/article'
+	assign tags_video_count = 0
+	assign tags_video_url = blog.url | append: '/tagged/video'
+	assign tags_podcast_count = 0
+	assign tags_podcast_url = blog.url | append: '/tagged/podcast'
 
+	for article in blog.articles
+		if article.tags contains 'Article'
+			assign tags_article_count = tags_article_count | plus: 1
+		endif
 
-<div>
+		if article.tags contains 'Vidéo'
+			assign tags_video_count = tags_video_count | plus: 1
+		endif
 
-	{% liquid
-		assign tags_article_count = 0
-		assign tags_podcast_count = 0
-		assign tags_video_count = 0
+		if article.tags contains 'Podcast'
+			assign tags_podcast_count = tags_podcast_count | plus: 1
+		endif
+	endfor
+%}
 
-		for article in blog.articles
-			if article.tags contains 'Article'
-				assign tags_article_count = tags_article_count | plus: 1
-			endif
+<div class="hidden lg:block my-14">
 
-			if article.tags contains 'Vidéo'
-				assign tags_video_count = tags_video_count | plus: 1
-			endif
+	<div class="container">
+		<div class="row lg:items-end">
+			<div class="lg:col-6/12">
+				{% if section.settings.title != blank %}
+					<h2 class="text-6xl font-semibold font-display uppercase">{{- section.settings.title -}}</h2>
+				{% endif %}
+			</div>
 
-			if article.tags contains 'Podcast'
-				assign tags_podcast_count = tags_podcast_count | plus: 1
-			endif
-		endfor
-	%}
-
-	<ul>
-		<li><a href="{{ blog.url }}">Tous</a></li>
-		<li><a href="{{ blog.url }}/tagged/article">{{ 'Article' }}({{ tags_article_count }})</a></li>
-		<li><a href="{{ blog.url }}/tagged/video">{{ 'Vidéo' }}({{ tags_video_count }})</a></li>
-		<li><a href="{{ blog.url }}/tagged/podcast">{{ 'Podcast' }}({{ tags_podcast_count }})</a></li>
-	</ul>
-
-
-
+			<div class="lg:col-6/12 flex justify-end">
+				<ul class="uppercase inline-flex gap-12">
+					<li>
+						<a
+							class="font-bold px-0.5 py-1.5 after:w-full after:h-[0.1875rem] after:bg-current after:opacity-0 after:inset-x-0 after:absolute relative after:top-[100%] hover:after:opacity-100"
+							href="{{ blog.url }}"
+						>
+							Tous
+						</a>
+					</li>
+					<li>
+						<a
+							href="{{ tags_article_url }}"
+							class="px-0.5 py-1.5 after:w-full after:h-[0.1875rem] after:bg-current after:opacity-0 after:inset-x-0 after:absolute relative after:top-[100%] hover:after:opacity-100 {% if current_tags contains 'Article' %} font-bold text-red-light after:opacity-100 {% endif %}"
+						>
+							{{ 'Article' }}({{ tags_article_count }})
+						</a>
+					</li>
+					<li>
+						<a
+							href="{{ tags_video_url }}"
+							class="px-0.5 py-1.5 after:w-full after:h-[0.1875rem] after:bg-current after:opacity-0 after:inset-x-0 after:absolute relative after:top-[100%] hover:after:opacity-100 {% if current_tags contains 'Vidéo' %} font-bold text-red-light after:opacity-100 {% endif %}"
+						>
+							{{ 'Vidéo' }}({{ tags_video_count }})
+						</a>
+					</li>
+					<li>
+						<a
+							href="{{ tags_podcast_url }}"
+							class="px-0.5 py-1.5 after:w-full after:h-[0.1875rem] after:bg-current after:opacity-0 after:inset-x-0 after:absolute relative after:top-[100%] hover:after:opacity-100 {% if current_tags contains 'Podcast' %} font-bold text-red-light after:opacity-100 {% endif %}"
+						>
+							{{ 'Podcast' }}({{ tags_podcast_count }})
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
 </div>
 
 {% comment %} tagged/video {% endcomment %}
