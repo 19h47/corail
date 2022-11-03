@@ -63,25 +63,16 @@
   "settings": [
     {
       "type": "text",
-      "id": "heading",
+      "id": "title",
       "default": "Corail° Stories",
       "label": "t:sections.highlights-articles.settings.heading.label"
-    },
-    {
-      "type": "blog",
-      "id": "blog",
-      "label": "t:sections.highlights-articles.settings.blog.label"
-    },
-    {
-      "type": "range",
-      "id": "post_limit",
-      "min": 1,
-      "max": 4,
-      "step": 1,
-      "default": 4,
-      "label": "t:sections.highlights-articles.settings.post_limit.label"
     }
   ],
+  "blocks": [{
+	"type": "article",
+	"id": "article",
+	"label": "t:sections.highlights-articles.blocks.article.label"
+}],
   "presets": [
     {
       "name": "t:sections.highlights-articles.presets.name",

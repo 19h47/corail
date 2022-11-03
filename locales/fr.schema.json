@@ -869,16 +869,15 @@
     "highlights-articles": {
       "name": "Articles à la une",
       "settings": {
-        "heading": {
+        "title": {
           "label": "Titre"
-        },
-        "blog": {
-          "label": "Blog"
-        },
-        "post_limit": {
-          "label": "Nombre d'articles de blog à afficher"
         }
       },
+	  "blocks": {
+		"article": {
+			"label": "Article"
+		}
+	  },
       "presets": {
         "name": "Articles à la une"
       }
