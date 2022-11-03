@@ -243,6 +243,12 @@
     }
   },
   "sections": {
+	"flters-articles": {
+		"name": "Filtres des articles",
+		"presets": {
+			"name": "Filtres des articles"
+		}
+	},
     "slider": {
       "name": "Carrousel",
       "presets": {

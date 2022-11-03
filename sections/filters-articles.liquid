@@ -1,0 +1,53 @@
+
+
+<div>
+	FILTERS ARTICLES
+
+	{% liquid
+		assign tags_article_count = 0
+		assign tags_podcast_count = 0
+		assign tags_video_count = 0
+
+		for article in blog.articles
+			if article.tags contains 'Article'
+				assign tags_article_count = tags_article_count | plus: 1
+			endif
+
+			if article.tags contains 'Vidéo'
+				assign tags_video_count = tags_video_count | plus: 1
+			endif
+
+			if article.tags contains 'Podcast'
+				assign tags_podcast_count = tags_podcast_count | plus: 1
+			endif
+		endfor
+	%}
+
+	<a href="/tagged/article">{{ 'Article' }}({{ tags_article_count }})</a>
+	<a href="/tagged/video">{{ 'Vidéo' }}({{ tags_video_count }})</a>
+	<a href="/tagged/podcast">{{ 'Podcast' }}({{ tags_video_count }})</a>
+
+	{{ 'Article' | link_to_tag: 'Article' }}
+
+</div>
+
+{% comment %} tagged/video {% endcomment %}
+
+{% schema %}
+{
+  "name": "t:sections.filters-articles.name",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+
+  ],
+  "blocks": [
+
+  ],
+  "presets": [
+    {
+      "name": "t:sections.filters-articles.presets.name"
+    }
+  ]
+}
+{% endschema %}

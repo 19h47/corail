@@ -866,6 +866,12 @@
         "name": "Articles de blog"
       }
     },
+	"flters-articles": {
+		"name": "Filtres des articles",
+		"presets": {
+			"name": "Filtres des articles"
+		}
+	},
     "highlights-articles": {
       "name": "Articles à la une",
       "blocks": {
