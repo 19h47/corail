@@ -866,6 +866,23 @@
         "name": "Articles de blog"
       }
     },
+    "highlights-articles": {
+      "name": "Articles à la une",
+      "settings": {
+        "heading": {
+          "label": "Titre"
+        },
+        "blog": {
+          "label": "Blog"
+        },
+        "post_limit": {
+          "label": "Nombre d'articles de blog à afficher"
+        }
+      },
+      "presets": {
+        "name": "Articles à la une"
+      }
+    },
     "featured-links": {
       "name": "Liens",
       "blocks": {

@@ -1,0 +1,94 @@
+<link rel="stylesheet" href="{{ 'component-slider.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'component-card.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'component-article-card.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'section-featured-blog.css' | asset_url }}" media="print" onload="this.media='all'">
+
+<noscript>{{ 'component-slider.css' | asset_url | stylesheet_tag }}</noscript>
+<noscript>{{ 'component-card.css' | asset_url | stylesheet_tag }}</noscript>
+<noscript>{{ 'component-article-card.css' | asset_url | stylesheet_tag }}</noscript>
+
+{{ 'section-featured-blog.css' | asset_url | stylesheet_tag }}
+
+{%- liquid
+
+	if section.settings.post_limit <= section.settings.blog.articles_count
+  	endif
+-%}
+
+<div class="featured-blog my-16 space-y-11 lg:space-y-8">
+	<div class="container">
+		<div class="row items-center">
+			{%- unless section.settings.heading == blank -%}
+				<div class="lg:col-6/12">
+					<h2 class="font-semibold text-3xl lg:text-5xl leading-none uppercase font-display">
+						{{ section.settings.heading | escape }}
+					</h2>
+				</div>
+			{%- endunless -%}
+
+			<div class="lg:col-6/12 hidden lg:flex justify-end">
+				<a href="{{ section.settings.blog.url }}" class="button button-red">
+					&rightarrow;&nbsp;{{ 'sections.featured_blog.view_all' | t }}
+				</a>
+			</div>
+
+		</div>
+	</div>
+	<div class="container">
+		<ul class="row">
+			{%- for article in section.settings.blog.articles limit: section.settings.post_limit -%}
+				<li class="lg:w-3/12 {% if forloop.first %}{% else %} hidden lg:block {% endif %}">
+					{% render 'article-card', blog: section.settings.blog, article: article, media_aspect_ratio: 1.66, show_excerpt: true %}
+				</li>
+			{%- endfor -%}
+		</ul>
+	</div>
+
+	<div class="container lg:hidden">
+		<div class="row">
+			<div>
+				<a href="{{ section.settings.blog.url }}" class="button button-red w-full inline-block align-middle">
+					&rightarrow;&nbsp;{{ 'sections.featured_blog.view_all' | t }}
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.highlights-articles.name",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "default": "Corail° Stories",
+      "label": "t:sections.highlights-articles.settings.heading.label"
+    },
+    {
+      "type": "blog",
+      "id": "blog",
+      "label": "t:sections.highlights-articles.settings.blog.label"
+    },
+    {
+      "type": "range",
+      "id": "post_limit",
+      "min": 1,
+      "max": 4,
+      "step": 1,
+      "default": 4,
+      "label": "t:sections.highlights-articles.settings.post_limit.label"
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.highlights-articles.presets.name",
+      "settings": {
+        "blog": "News"
+      }
+    }
+  ]
+}
+{% endschema %}
