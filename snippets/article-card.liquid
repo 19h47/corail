@@ -12,43 +12,76 @@
 {% endcomment %}
 
 {%- if article and article != empty -%}
-	<article class="article-card relative">
+	{% if article.tags contains 'Podcast' and article.metafields.corail.audio.value %}
+		<article-audio class="border-orange-grayish border-[0.0625rem] py-5 px-10 block relative">
+			<header class="flex justify-between">
+				<p>A-2022°08’22J</p>
+				<volume type="button" class="relative z-2 cursor-pointer w-6 h-6 flex items-center justify-center">
+					{% render 'svg', icon: 'microphone', classes: 'w-4 h-[1.375rem] fill-current pointer-events-none' %}
+				</volume>
+			</header>
+			<audio src="{{ article.metafields.corail.audio.value.url }}" type="audio/mpeg"></audio>
 
-		<a
-			href="{{ article.url }}"
-			class="relative h-[25.5rem] lg:h-[30.5rem] text-white flex after:h-[10.625rem] lg:after:h-[18.375rem] after:w-full after:absolute after:z-10 after:inset-x-0 after:bottom-0 after:from-black after:bg-gradient-to-t">
-			{%- if article.image -%}
-				<img
-					srcset="{%- if article.image.src.width >= 165 -%}{{ article.image.src | image_url: width: 165 }} 165w,{%- endif -%}
-					{%- if article.image.src.width >= 360 -%}{{ article.image.src | image_url: width: 360 }} 360w,{%- endif -%}
-					{%- if article.image.src.width >= 533 -%}{{ article.image.src | image_url: width: 533 }} 533w,{%- endif -%}
-					{%- if article.image.src.width >= 720 -%}{{ article.image.src | image_url: width: 720 }} 720w,{%- endif -%}
-					{%- if article.image.src.width >= 1000 -%}{{ article.image.src | image_url: width: 1000 }} 1000w,{%- endif -%}
-					{%- if article.image.src.width >= 1500 -%}{{ article.image.src | image_url: width: 1500 }} 1500w,{%- endif -%}
-					{{ article.image.src | image_url }} {{ article.image.src.width }}w"
-					src="{{ article.image.src | image_url: width: 533 }}"
-					sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
-					alt="{{ article.image.src.alt | escape }}"
-					class="absolute inset-0 z-0 w-full h-full object-cover object-center"
-					loading="lazy"
-					width="{{ article.image.width }}"
-					height="{{ article.image.height }}"
-				>
+			<p class="mt-[10.5rem] font-medium font-display text-[2.5rem] leading-[2.75rem]">
+				{{- article.title -}}
+			</p>
+
+			{% if article.metafields.corail.author.value != blank %}
+				<p class="text-xs mt-5 uppercase">By {{ article.metafields.corail.author.value }}</p>
 			{% endif %}
 
-			<div class="relative z-20 p-5 lg:p-8 mt-auto mr-16 lg:mr-0">
-				<h2 class="font-medium text-xl leading-6 lg:text-3xl lg:leading-8 font-display">{{- article.title | escape -}}</h2>
-				<div class="uppercase text-orange-grayish text-sm lg:text-xs mt-2.5 lg:mt-1">{{- article.published_at | time_tag: format: 'date' -}}</div>
+			<footer class="mt-6 flex justify-end text-xs">
+				<current-time>00:00</current-time>/<duration></duration>
+			</footer>
+
+			<div class="absolute bottom-0 inset-x-0 w-full h-1">
+				<tracking class="origin-left block absolute transition-transform duration-1000 ease-linear inset-0 w-full h-full bg-gray-very-dark" style="transform: scaleX(0)"></tracking>
 			</div>
 
-		</a>
+			<button type="button" class="absolute inset-0 z-1"></button>
+		</article-audio>
 
-		{% if article.tags %}
-			<footer class="border-t mt-5 lg:mt-4 border-orange-grayish pt-3 text-sm leading-4 uppercase">
-				{{ article.tags | join: ' / ' }}
-			</footer>
-		{% endif %}
+		<script src="{{ 'article-audio.js' | asset_url }}" defer="defer"></script>
+	{% else %}
+		<article class="article-card relative">
 
-		<a class="absolute inset-0 w-full h-full z-1 block" href="{{ article.url }}"></a>
-	</article>
+			<a
+				href="{{ article.url }}"
+				class="relative h-[25.5rem] lg:h-[30.5rem] bg-orange-grayish text-white flex after:h-[10.625rem] lg:after:h-[18.375rem] after:w-full after:absolute after:z-10 after:inset-x-0 after:bottom-0 after:from-black after:bg-gradient-to-t"
+			>
+				{%- if article.image -%}
+					<img
+						srcset="{%- if article.image.src.width >= 165 -%}{{ article.image.src | image_url: width: 165 }} 165w,{%- endif -%}
+						{%- if article.image.src.width >= 360 -%}{{ article.image.src | image_url: width: 360 }} 360w,{%- endif -%}
+						{%- if article.image.src.width >= 533 -%}{{ article.image.src | image_url: width: 533 }} 533w,{%- endif -%}
+						{%- if article.image.src.width >= 720 -%}{{ article.image.src | image_url: width: 720 }} 720w,{%- endif -%}
+						{%- if article.image.src.width >= 1000 -%}{{ article.image.src | image_url: width: 1000 }} 1000w,{%- endif -%}
+						{%- if article.image.src.width >= 1500 -%}{{ article.image.src | image_url: width: 1500 }} 1500w,{%- endif -%}
+						{{ article.image.src | image_url }} {{ article.image.src.width }}w"
+						src="{{ article.image.src | image_url: width: 533 }}"
+						sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
+						alt="{{ article.image.src.alt | escape }}"
+						class="absolute inset-0 z-0 w-full h-full object-cover object-center"
+						loading="lazy"
+						width="{{ article.image.width }}"
+						height="{{ article.image.height }}"
+					>
+				{% endif %}
+
+				<div class="relative z-20 p-5 lg:p-8 mt-auto mr-16 lg:mr-0">
+					<h2 class="font-medium text-xl leading-6 lg:text-3xl lg:leading-8 font-display">{{- article.title | escape -}}</h2>
+					<div class="uppercase text-orange-grayish text-sm lg:text-xs mt-2.5 lg:mt-1">{{- article.published_at | time_tag: format: 'date' -}}</div>
+				</div>
+
+			</a>
+
+			{% if article.tags %}
+				<footer class="border-t mt-5 lg:mt-4 border-orange-grayish pt-3 text-sm leading-4 uppercase">
+					{{ article.tags | join: ' / ' }}
+				</footer>
+			{% endif %}
+
+			<a class="absolute inset-0 w-full h-full z-1 block" href="{{ article.url }}"></a>
+		</article>
+	{% endif %}
 {% endif %}

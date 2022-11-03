@@ -22,6 +22,7 @@
 
 		assign moduloResult = 28 | modulo: section.settings.columns_desktop
 		assign paginate_by = 30
+
 		if moduloResult == 0
 			assign paginate_by = 28
 		endif
@@ -37,7 +38,14 @@
 				</li>
 			{%- endfor -%}
 		</ul>
-		{% render 'pagination', paginate: paginate %}
+
+		{%- if paginate.pages > 1 -%}
+			<div class="row mt-16">
+				<div>
+					{%- render 'pagination', paginate: paginate -%}
+				</div>
+			</div>
+		{%- endif -%}
 	{%- endpaginate -%}
 </div>
 

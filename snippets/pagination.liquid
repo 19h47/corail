@@ -11,43 +11,63 @@
     - anchor: {String} (optional) This can be added so that on page reload it takes you to wherever you've placed your anchor tag.
 {% endcomment %}
 
-<link rel="stylesheet" href="{{ 'component-pagination.css' | asset_url }}" media="print" onload="this.media='all'">
-<noscript>{{ 'component-pagination.css' | asset_url | stylesheet_tag }}</noscript>
 
 {%- if paginate.parts.size > 0 -%}
-  <div class="pagination-wrapper">
-    <nav class="pagination" role="navigation" aria-label="{{ 'general.pagination.label' | t }}">
-      <ul class="pagination__list" role="list">
-      {%- if paginate.previous -%}
-        <li>
-          <a href="{{ paginate.previous.url }}{{ anchor }}" class="pagination__item pagination__item--next pagination__item-arrow link motion-reduce" aria-label="{{ 'general.pagination.previous' | t }}">
-            {% render 'icon-caret' %}
-          </a>
-        </li>
-      {%- endif -%}
 
-      {%- for part in paginate.parts -%}
-        <li>
-          {%- if part.is_link -%}
-            <a href="{{ part.url }}{{ anchor }}" class="pagination__item link" aria-label="{{ 'general.pagination.page' | t: number: part.title }}">{{ part.title }}</a>
-          {%- else -%}
-            {%- if part.title == paginate.current_page -%}
-              <a role="link" aria-disabled="true" class="pagination__item pagination__item--current light" aria-current="page" aria-label="{{ 'general.pagination.page' | t: number: part.title }}">{{ part.title }}</a>
-            {%- else -%}
-              <span class="pagination__item">{{ part.title }}</span>
-            {%- endif -%}
-          {%- endif -%}
-        </li>
-      {%- endfor -%}
+	<nav class="text-gray-very-dark" role="navigation" aria-label="{{ 'general.pagination.label' | t }}">
+		<ul class="flex justify-center items-center gap-2" role="list">
+			{%- if paginate.previous -%}
+				<li>
+					<a
+						href="{{ paginate.previous.url }}{{ anchor }}"
+						class="pointer-events-auto button-secondary text-gray-very-dark border-orange-grayish inline-block align-middle hover:bg-red-very-light hover:text-white hover:border-red-very-light"
+						aria-label="{{ 'general.pagination.previous' | t }}"
+					>
+						&leftarrow;
+					</a>
+				</li>
+			{%- endif -%}
 
-      {%- if paginate.next -%}
-        <li>
-          <a href="{{ paginate.next.url }}{{ anchor }}" class="pagination__item pagination__item--prev pagination__item-arrow link motion-reduce" aria-label="{{ 'general.pagination.next' | t }}" >
-            {%- render 'icon-caret' -%}
-          </a>
-        </li>
-      {%- endif -%}
-      </ul>
-    </nav>
-  </div>
+			{%- for part in paginate.parts -%}
+				<li>
+					{%- if part.is_link -%}
+						<a
+							href="{{ part.url }}{{ anchor }}"
+							class="pointer-events-auto button-secondary text-gray-very-dark border-orange-grayish inline-block align-middle hover:bg-red-very-light hover:text-white hover:border-red-very-light"
+							aria-label="{{ 'general.pagination.page' | t: number: part.title }}"
+						>
+							{{ part.title }}
+						</a>
+					{%- else -%}
+						{%- if part.title == paginate.current_page -%}
+							<a
+								role="link"
+								aria-disabled="true"
+								class="pointer-events-auto button-secondary text-gray-very-dark border-orange-grayish inline-block align-middle"
+								aria-current="page"
+								aria-label="{{ 'general.pagination.page' | t: number: part.title }}"
+							>
+								{{ part.title }}
+							</a>
+						{%- else -%}
+							<span class="pagination__item">{{ part.title }}</span>
+						{%- endif -%}
+					{%- endif -%}
+				</li>
+			{%- endfor -%}
+
+			{%- if paginate.next -%}
+				<li>
+					<a
+						href="{{ paginate.next.url }}{{ anchor }}"
+						class="pointer-events-auto button-secondary text-gray-very-dark border-orange-grayish inline-block align-middle hover:bg-red-very-light hover:text-white hover:border-red-very-light"
+						aria-label="{{ 'general.pagination.next' | t }}"
+					>
+						&rightarrow;
+					</a>
+				</li>
+			{%- endif -%}
+		</ul>
+	</nav>
+
 {%- endif -%}
