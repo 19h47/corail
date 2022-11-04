@@ -1797,7 +1797,10 @@
       "settings": {
         "video": {
           "label": "Vidéo"
-        }
+        },
+		"collection": {
+			"label": "Collection"
+		}
       },
       "blocks": {
         "images": {

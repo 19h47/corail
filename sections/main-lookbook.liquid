@@ -1,25 +1,68 @@
-<div class="relative flex flex-col">
+<script src="{{ 'gsap.min.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'ScrollTrigger.min.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'main-lookbook.js' | asset_url }}" defer="defer"></script>
 
-	<div class="absolute right-0 inset-y-0 h-full z-3 is-ontop:text-white text-right hidden lg:block">
-		<div class="top-[4.375rem] sticky h-[calc(100vh_-_4.375rem)] flex">
+<main-lookbook class="relative flex flex-col">
+	<div class="absolute inset-0 h-full z-3 is-ontop:text-white text-right hidden lg:block">
+		<div class="top-[4.375rem] inset-x-0 sticky h-[calc(100vh_-_4.375rem)] flex justify-end">
 			<div class="mr-2.5" style="padding: {{ 60 | times: 100 | divided_by: 900 }}vh 0;">
-				<ul class="flex justify-between h-full flex-col text-3xs">
-					<li class="transition-all duration-1000 ease-in-out is-active is-active:text-xs">-90000ft</li>
-					<li class="transition-all duration-1000 ease-in-out is-active:text-xs">-80000ft</li>
-					<li class="transition-all duration-1000 ease-in-out is-active:text-xs">-70000ft</li>
-					<li class="transition-all duration-1000 ease-in-out is-active:text-xs">-60000ft</li>
-					<li class="transition-all duration-1000 ease-in-out is-active:text-xs">-50000ft</li>
-					<li class="transition-all duration-1000 ease-in-out is-active:text-xs">-40000ft</li>
-					<li class="transition-all duration-1000 ease-in-out is-active:text-xs">-30000ft</li>
-					<li class="transition-all duration-1000 ease-in-out is-active:text-xs">-20000ft</li>
-					<li class="transition-all duration-1000 ease-in-out is-active:text-xs">-10000ft</li>
-					<li class="transition-all duration-1000 ease-in-out is-active:text-xs">-9999ft</li>
+				<ul class="js-foot flex justify-between h-full flex-col text-3xs">
+					<li>-90000ft</li>
+					<li>-80000ft</li>
+					<li>-70000ft</li>
+					<li>-60000ft</li>
+					<li>-50000ft</li>
+					<li>-40000ft</li>
+					<li>-30000ft</li>
+					<li>-20000ft</li>
+					<li>-10000ft</li>
+					<li>-9999ft</li>
 				</ul>
 			</div>
-			<scrollbar class="block w-2 relative is-ontop:bg-white bg-orange-grayish transition-colors duration-1000 ease-in-out">
-				<thumb class="block absolute h-20 top-0 w-full inset-x-0 bg-red-light rounded-br-full rounded-bl-full after:rounded-full after:w-1 after:h-1 after:bg-white after:absolute after:bottom-0 after:inset-x-0 after:mx-0.5 after:mb-[0.1875rem]"></thumb>
+			<scrollbar class="overflow-hidden block w-2 relative is-ontop:bg-white bg-orange-grayish transition-colors duration-1000 ease-in-out">
+				<thumb
+					class="block absolute top-0 h-full w-full inset-x-0 bg-red-light rounded-br-full rounded-bl-full after:rounded-full after:w-1 after:h-1 after:bg-white after:absolute after:bottom-0 after:inset-x-0 after:mx-0.5 after:mb-[0.1875rem]"
+				></thumb>
 			</scrollbar>
+
+
+
+				<marker
+					style="transform: translate3d( {{ 1291 | times: 100 | divided_by: 1440 }}vw, {{ 48 | times: 100 | divided_by: 900 }}vh, 0);"
+					class="top-0 left-0 absolute -mt-[0.5625rem] -ml-[0.5625rem] rounded-full w-[1.125rem] h-[1.125rem] is-ontop:bg-white bg-gray-very-dark block"
+				><span class="absolute inset-0 -mt-[0.6875rem] -ml-[0.6875rem] rounded-full w-10 h-10 border-[0.0625rem] border-red-light" style="opacity: 0; transform: scale(0);"></span></marker>
+				<marker
+					style="transform: translate3d( {{ 786 | times: 100 | divided_by: 1440 }}vw, {{ 165 | times: 100 | divided_by: 900 }}vh, 0);"
+					class="top-0 left-0 absolute -mt-[0.5625rem] -ml-[0.5625rem] rounded-full w-[1.125rem] h-[1.125rem] is-ontop:bg-white bg-gray-very-dark block"
+				><span class="absolute inset-0 -mt-[0.6875rem] -ml-[0.6875rem] rounded-full w-10 h-10 border-[0.0625rem] border-red-light" style="opacity: 0; transform: scale(0);"></span></marker>
+				<marker
+					style="transform: translate3d( {{ 220 | times: 100 | divided_by: 1440 }}vw, {{ 196 | times: 100 | divided_by: 900 }}vh, 0 );"
+					class="top-0 left-0 absolute -mt-[0.5625rem] -ml-[0.5625rem] rounded-full w-[1.125rem] h-[1.125rem] is-ontop:bg-white bg-gray-very-dark block"
+				><span class="absolute inset-0 -mt-[0.6875rem] -ml-[0.6875rem] rounded-full w-10 h-10 border-[0.0625rem] border-red-light" style="opacity: 0; transform: scale(0);"></span></marker>
+				<marker
+					style="transform: translate3d( {{ 1260 | times: 100 | divided_by: 1440 }}vw, {{ 472 | times: 100 | divided_by: 900 }}vh, 0 );"
+					class="top-0 left-0 absolute -mt-[0.5625rem] -ml-[0.5625rem] rounded-full w-[1.125rem] h-[1.125rem] is-ontop:bg-white bg-gray-very-dark block"
+				><span class="absolute inset-0 -mt-[0.6875rem] -ml-[0.6875rem] rounded-full w-10 h-10 border-[0.0625rem] border-red-light" style="opacity: 0; transform: scale(0);"></span></marker>
+				<marker
+					style="transform: translate3d( {{ 518 | times: 100 | divided_by: 1440 }}vw, {{ 581 | times: 100 | divided_by: 900 }}vh, 0 );"
+					class="top-0 left-0 absolute -mt-[0.5625rem] -ml-[0.5625rem] rounded-full w-[1.125rem] h-[1.125rem] is-ontop:bg-white bg-gray-very-dark block"
+				><span class="absolute inset-0 -mt-[0.6875rem] -ml-[0.6875rem] rounded-full w-10 h-10 border-[0.0625rem] border-red-light" style="opacity: 0; transform: scale(0);"></span></marker>
+				<marker
+					style="transform: translate3d( {{ 161 | times: 100 | divided_by: 1440 }}vw, {{ 706 | times: 100 | divided_by: 900 }}vh, 0 );"
+					class="top-0 left-0 absolute -mt-[0.5625rem] -ml-[0.5625rem] rounded-full w-[1.125rem] h-[1.125rem] is-ontop:bg-white bg-gray-very-dark block"
+				><span class="absolute inset-0 -mt-[0.6875rem] -ml-[0.6875rem] rounded-full w-10 h-10 border-[0.0625rem] border-red-light" style="opacity: 0; transform: scale(0);"></span></marker>
+				<marker
+					style="transform: translate3d( {{ 1035 | times: 100 | divided_by: 1440 }}vw, {{ 615 | times: 100 | divided_by: 900 }}vh, 0 );"
+					class="top-0 left-0 absolute -mt-[0.5625rem] -ml-[0.5625rem] rounded-full w-[1.125rem] h-[1.125rem] is-ontop:bg-white bg-gray-very-dark block"
+				><span class="absolute inset-0 -mt-[0.6875rem] -ml-[0.6875rem] rounded-full w-10 h-10 border-[0.0625rem] border-red-light" style="opacity: 0; transform: scale(0);"></span></marker>
+				<marker
+					style="transform: translate3d( {{ 741 | times: 100 | divided_by: 1440 }}vw, {{ 770 | times: 100 | divided_by: 900 }}vh, 0 );"
+					class="top-0 left-0 absolute -mt-[0.5625rem] -ml-[0.5625rem] rounded-full w-[1.125rem] h-[1.125rem] is-ontop:bg-white bg-gray-very-dark block"
+				><span class="absolute inset-0 -mt-[0.6875rem] -ml-[0.6875rem] rounded-full w-10 h-10 border-[0.0625rem] border-red-light" style="opacity: 0; transform: scale(0);"></span></marker>
+
+
 		</div>
+
 	</div>
 
 	<div class="absolute top-0 inset-x-0 h-full w-full z-2">
@@ -118,9 +161,7 @@
 			{%- endcase -%}
 		{% endfor %}
 	</div>
-
-
-</div>
+</main-lookbook>
 
 {% schema %}
 {
@@ -132,6 +173,11 @@
       "type": "video",
       "id": "video",
       "label": "t:sections.main-lookbook.settings.video.label"
+    },
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "t:sections.main-lookbook.settings.collection.label"
     }
   ],
   "blocks": [
