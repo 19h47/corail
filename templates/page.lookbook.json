@@ -2,7 +2,36 @@
   "sections": {
     "main": {
       "type": "main-lookbook",
+      "blocks": {
+        "7dd001e3-7882-4280-a875-f4557e0dede4": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/city-from-the-sea.jpg",
+            "title": "Lorem ipsum"
+          }
+        },
+        "9ddc1ceb-ab30-403d-8766-bf31cc8477e2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/rocky-sea-by-forested-mountains.jpg",
+            "title": "Dolor sit"
+          }
+        },
+        "52520463-673f-4297-90e8-a0237b6e519d": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/ice-cracks-on-a-frozen-sea.jpg",
+            "title": "Emectur rupet"
+          }
+        }
+      },
+      "block_order": [
+        "7dd001e3-7882-4280-a875-f4557e0dede4",
+        "9ddc1ceb-ab30-403d-8766-bf31cc8477e2",
+        "52520463-673f-4297-90e8-a0237b6e519d"
+      ],
       "settings": {
+        "video": "shopify:\/\/files\/videos\/video (1).mp4"
       }
     }
   },
