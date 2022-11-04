@@ -8,8 +8,10 @@
           "settings": {
             "image_left": "shopify:\/\/shop_images\/boat-near-waterfall.jpg",
             "title_left": "Lorem ipsum",
+            "product_left": "agnes-b",
             "image_right": "shopify:\/\/shop_images\/two-people-on-a-small-boat-in-the-center-of-frame.jpg",
-            "title_right": "Dolor sit"
+            "title_right": "Dolor sit",
+            "product_right": ""
           }
         },
         "36fedb83-3316-49b6-9196-5f995094e702": {
@@ -17,8 +19,10 @@
           "settings": {
             "image_left": "shopify:\/\/shop_images\/city-from-the-sea.jpg",
             "title_left": "Amet",
+            "product_left": "",
             "image_right": "shopify:\/\/shop_images\/rocky-sea-by-forested-mountains.jpg",
-            "title_right": "Consectetur adipiscing"
+            "title_right": "Consectetur adipiscing",
+            "product_right": ""
           }
         },
         "36cb3f64-26ed-43ab-843a-0f42bfadd28c": {
@@ -26,8 +30,10 @@
           "settings": {
             "image_left": "shopify:\/\/shop_images\/ice-cracks-on-a-frozen-sea.jpg",
             "title_left": "Elit",
+            "product_left": "",
             "image_right": "shopify:\/\/shop_images\/aerial-view-of-mountains-of-crushed-metal-cubes.jpg",
-            "title_right": "Duis"
+            "title_right": "Duis",
+            "product_right": ""
           }
         }
       },

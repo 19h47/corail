@@ -1824,9 +1824,9 @@
             "title_right": {
               "label": "Titre de droite"
             },
-			"product_right": {
-				"label": "Produit de droite"
-			  }
+            "product_right": {
+              "label": "Produit de droite"
+            }
           }
         }
       }
