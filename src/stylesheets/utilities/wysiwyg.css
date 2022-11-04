@@ -27,4 +27,29 @@
 	.wysiwyg > img {
 		@apply w-full h-auto block my-8;
 	}
+
+	.wysiwyg blockquote {
+		@apply text-xl lg:text-[2.5rem] font-medium text-center lg:text-left lg:w-5/7 lg:ml-1/7;
+	}
+
+	.wysiwyg blockquote p {
+		@apply lg:mx-10;
+	}
+
+	.wysiwyg blockquote::before,
+	.wysiwyg blockquote::after {
+		@apply block font-display text-[2.8125rem] lg:text-[5.625rem] leading-none;
+	}
+
+	.wysiwyg blockquote::before {
+		@apply text-left;
+
+		content: "“";
+	}
+
+	.wysiwyg blockquote::after {
+		@apply text-right;
+
+		content: "”";
+	}
 }

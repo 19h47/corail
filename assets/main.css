@@ -1,6 +1,3 @@
-/*!********************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[8].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[8].use[2]!./src/stylesheets/styles.css ***!
-  \********************************************************************************************************************************************************************************/
 /**
  * Base
  *
@@ -1739,6 +1736,11 @@ html,
 	margin-bottom: 1.5rem;
 }
 
+.-mx-5{
+	margin-left: -1.25rem;
+	margin-right: -1.25rem;
+}
+
 .my-\[3\.75rem\]{
 	margin-top: 3.75rem;
 	margin-bottom: 3.75rem;
@@ -1767,11 +1769,6 @@ html,
 .my-4{
 	margin-top: 1rem;
 	margin-bottom: 1rem;
-}
-
-.-mx-5{
-	margin-left: -1.25rem;
-	margin-right: -1.25rem;
 }
 
 .mb-\[3\.75rem\]{
@@ -1866,8 +1863,16 @@ html,
 	margin-bottom: 3.5rem;
 }
 
-.ml-1\/10{
-	margin-left: 10%;
+.mt-4{
+	margin-top: 1rem;
+}
+
+.mb-1\.5{
+	margin-bottom: 0.375rem;
+}
+
+.mb-1{
+	margin-bottom: 0.25rem;
 }
 
 .mt-16{
@@ -1900,10 +1905,6 @@ html,
 
 .ml-4{
 	margin-left: 1rem;
-}
-
-.mt-4{
-	margin-top: 1rem;
 }
 
 .mr-6{
@@ -1992,30 +1993,6 @@ html,
 
 .mr-3{
 	margin-right: 0.75rem;
-}
-
-.-ml-5{
-	margin-left: -1.25rem;
-}
-
-.-mr-2\.5{
-	margin-right: -0.625rem;
-}
-
-.-mr-2{
-	margin-right: -0.5rem;
-}
-
-.mb-1\.5{
-	margin-bottom: 0.375rem;
-}
-
-.mb-1{
-	margin-bottom: 0.25rem;
-}
-
-.mt-32{
-	margin-top: 8rem;
 }
 
 .block{
@@ -2118,6 +2095,14 @@ html,
 	height: 14rem;
 }
 
+.h-\[15\.75rem\]{
+	height: 15.75rem;
+}
+
+.h-\[10\.875rem\]{
+	height: 10.875rem;
+}
+
 .h-32{
 	height: 8rem;
 }
@@ -2198,18 +2183,6 @@ html,
 	height: 0.625rem;
 }
 
-.h-\[50\.875rem\]{
-	height: 50.875rem;
-}
-
-.h-\[15\.75rem\]{
-	height: 15.75rem;
-}
-
-.h-\[10\.875rem\]{
-	height: 10.875rem;
-}
-
 .w-\[1\.125rem\]{
 	width: 1.125rem;
 }
@@ -2270,6 +2243,10 @@ html,
 	width: calc(50vw + 2.5rem);
 }
 
+.w-\[calc\(100\%_\+_2\.5rem\)\]{
+	width: calc(100% + 2.5rem);
+}
+
 .w-32{
 	width: 8rem;
 }
@@ -2312,22 +2289,6 @@ html,
 
 .w-2\.5{
 	width: 0.625rem;
-}
-
-.w-\[calc\(100\%_\+_1\.875rem\)\]{
-	width: calc(100% + 1.875rem);
-}
-
-.w-\[calc\(100\%_\+_1\.25rem\)\]{
-	width: calc(100% + 1.25rem);
-}
-
-.w-\[calc\(100\%_\+_3\.75rem\)\]{
-	width: calc(100% + 3.75rem);
-}
-
-.w-\[calc\(100\%_\+_2\.5rem\)\]{
-	width: calc(100% + 2.5rem);
 }
 
 .max-w-\[16\.375rem\]{
@@ -2931,10 +2892,6 @@ html,
 	padding-top: 0.25rem;
 }
 
-.pt-5{
-	padding-top: 1.25rem;
-}
-
 .text-left{
 	text-align: left;
 }
@@ -3233,18 +3190,6 @@ html,
 	padding-right: 0.625rem;
 }
 
-.col-7\/10{
-	width: 70%;
-	padding-left: 0.625rem;
-	padding-right: 0.625rem;
-}
-
-.col-9\/12{
-	width: 75%;
-	padding-left: 0.625rem;
-	padding-right: 0.625rem;
-}
-
 .marquee {
 		animation-name: marquee-text-animation;
 		animation-timing-function: linear;
@@ -3290,6 +3235,56 @@ html,
 	display: block;
 	height: auto;
 	width: 100%;
+}
+
+.wysiwyg blockquote{
+	text-align: center;
+	font-size: 1.25rem;
+	line-height: 1.75rem;
+	font-weight: 500;
+}
+
+@media (min-width: 1024px){
+
+	.wysiwyg blockquote{
+		margin-left: 14.285714285714286%;
+		width: 71.42857142857143%;
+		text-align: left;
+		font-size: 2.5rem;
+	}
+
+	.wysiwyg blockquote p{
+		margin-left: 2.5rem;
+		margin-right: 2.5rem;
+	}
+}
+
+.wysiwyg blockquote::before, 
+	.wysiwyg blockquote::after{
+	display: block;
+	font-family: "Roobert", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+	font-size: 2.8125rem;
+	line-height: 1;
+}
+
+@media (min-width: 1024px){
+
+	.wysiwyg blockquote::before, 
+	.wysiwyg blockquote::after{
+		font-size: 5.625rem;
+	}
+}
+
+.wysiwyg blockquote::before{
+	text-align: left;
+
+		content: "“";
+}
+
+.wysiwyg blockquote::after{
+	text-align: right;
+
+		content: "”";
 }
 
 .before\:absolute::before{
@@ -3900,6 +3895,22 @@ html,
 		margin-left: 16.666666666666668%;
 	}
 
+	.lg\:-mr-2\.5{
+		margin-right: -0.625rem;
+	}
+
+	.lg\:-mr-2{
+		margin-right: -0.5rem;
+	}
+
+	.lg\:ml-1\/10{
+		margin-left: 10%;
+	}
+
+	.lg\:\!mt-32{
+		margin-top: 8rem !important;
+	}
+
 	.lg\:ml-8\/12{
 		margin-left: 66.66666666666667%;
 	}
@@ -3996,22 +4007,6 @@ html,
 		margin-top: 4rem;
 	}
 
-	.lg\:\!mt-32{
-		margin-top: 8rem !important;
-	}
-
-	.lg\:ml-1\/10{
-		margin-left: 10%;
-	}
-
-	.lg\:-mr-2\.5{
-		margin-right: -0.625rem;
-	}
-
-	.lg\:-mr-2{
-		margin-right: -0.5rem;
-	}
-
 	.lg\:block{
 		display: block;
 	}
@@ -4076,6 +4071,14 @@ html,
 		height: 47.5rem;
 	}
 
+	.lg\:h-\[50\.875rem\]{
+		height: 50.875rem;
+	}
+
+	.lg\:h-\[22\.75rem\]{
+		height: 22.75rem;
+	}
+
 	.lg\:h-\[6\.875rem\]{
 		height: 6.875rem;
 	}
@@ -4106,14 +4109,6 @@ html,
 
 	.lg\:h-\[38rem\]{
 		height: 38rem;
-	}
-
-	.lg\:h-\[50\.875rem\]{
-		height: 50.875rem;
-	}
-
-	.lg\:h-\[22\.75rem\]{
-		height: 22.75rem;
 	}
 
 	.lg\:max-h-\[calc\(100vh_-_10\.5rem\)\]{
@@ -4158,14 +4153,6 @@ html,
 
 	.lg\:w-3\/10{
 		width: 30%;
-	}
-
-	.lg\:w-\[calc\(100\%_\+_1\.875rem\)\]{
-		width: calc(100% + 1.875rem);
-	}
-
-	.lg\:w-\[calc\(100\%_\+_3\.75rem\)\]{
-		width: calc(100% + 3.75rem);
 	}
 
 	.lg\:translate-x-0{
@@ -4336,16 +4323,16 @@ html,
 		padding-bottom: 0px;
 	}
 
+	.lg\:pt-5{
+		padding-top: 1.25rem;
+	}
+
 	.lg\:pr-7{
 		padding-right: 1.75rem;
 	}
 
 	.lg\:pt-3{
 		padding-top: 0.75rem;
-	}
-
-	.lg\:pt-5{
-		padding-top: 1.25rem;
 	}
 
 	.lg\:text-right{
@@ -4455,6 +4442,20 @@ html,
 	.lg\:leading-4{
 		line-height: 1rem;
 	}
+
+	.lg\:transition-colors{
+		transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+		transition-duration: 150ms;
+	}
+
+	.lg\:duration-1000{
+		transition-duration: 1000ms;
+	}
+
+	.lg\:ease-in-out{
+		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	}
 	.lg\:container{
 		margin-left: auto;
 		margin-right: auto;
@@ -4562,7 +4563,14 @@ html,
 		--tw-translate-x: 100%;
 		transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 	}
+
+	.is-ontop .lg\:is-ontop\:bg-white\/0{
+		background-color: rgb(255 255 255 / 0);
+	}
+
+	.is-ontop .lg\:is-ontop\:text-white{
+		--tw-text-opacity: 1;
+		color: rgb(255 255 255 / var(--tw-text-opacity));
+	}
 }
 
-
-/*# sourceMappingURL=main.css.map*/

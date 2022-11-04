@@ -192,7 +192,7 @@
 
     	<main
 			id="MainContent"
-			class="content-for-layout {% if 'index' == request.page_type or 'article' == request.page_type  %} -mt-[4rem] lg:-mt-[4.375rem] relative z-10 {% endif %}"
+			class="content-for-layout {% if 'index' == request.page_type %} -mt-[4rem] {% endif %} {% if 'index' == request.page_type or 'article' == request.page_type %} lg:-mt-[4.375rem] relative z-10 {% endif %}"
 			role="main"
 			tabindex="-1"
 		>
