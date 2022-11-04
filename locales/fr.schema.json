@@ -1803,18 +1803,18 @@
         "images": {
           "name": "Images",
           "settings": {
-			"header_left": {
-				"content": "Colonne de gauche"
-			},
+            "header_left": {
+              "content": "Colonne de gauche"
+            },
             "image_left": {
               "label": "Image de gauche"
             },
             "title_left": {
               "label": "Titre de gauche"
             },
-			"header_right": {
-				"content": "Colonne de droite"
-			},
+            "header_right": {
+              "content": "Colonne de droite"
+            },
             "image_right": {
               "label": "Image de droite"
             },

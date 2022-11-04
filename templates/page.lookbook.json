@@ -3,32 +3,38 @@
     "main": {
       "type": "main-lookbook",
       "blocks": {
-        "7dd001e3-7882-4280-a875-f4557e0dede4": {
-          "type": "image",
+        "5adf0be5-e617-4fa7-a202-14347b22b5c8": {
+          "type": "images",
           "settings": {
-            "image": "shopify:\/\/shop_images\/city-from-the-sea.jpg",
-            "title": "Lorem ipsum"
+            "image_left": "shopify:\/\/shop_images\/boat-near-waterfall.jpg",
+            "title_left": "Lorem ipsum",
+            "image_right": "shopify:\/\/shop_images\/two-people-on-a-small-boat-in-the-center-of-frame.jpg",
+            "title_right": "Dolor sit"
           }
         },
-        "9ddc1ceb-ab30-403d-8766-bf31cc8477e2": {
-          "type": "image",
+        "36fedb83-3316-49b6-9196-5f995094e702": {
+          "type": "images",
           "settings": {
-            "image": "shopify:\/\/shop_images\/rocky-sea-by-forested-mountains.jpg",
-            "title": "Dolor sit"
+            "image_left": "shopify:\/\/shop_images\/city-from-the-sea.jpg",
+            "title_left": "Amet",
+            "image_right": "shopify:\/\/shop_images\/rocky-sea-by-forested-mountains.jpg",
+            "title_right": "Consectetur adipiscing"
           }
         },
-        "52520463-673f-4297-90e8-a0237b6e519d": {
-          "type": "image",
+        "36cb3f64-26ed-43ab-843a-0f42bfadd28c": {
+          "type": "images",
           "settings": {
-            "image": "shopify:\/\/shop_images\/ice-cracks-on-a-frozen-sea.jpg",
-            "title": "Emectur rupet"
+            "image_left": "shopify:\/\/shop_images\/ice-cracks-on-a-frozen-sea.jpg",
+            "title_left": "Elit",
+            "image_right": "shopify:\/\/shop_images\/aerial-view-of-mountains-of-crushed-metal-cubes.jpg",
+            "title_right": "Duis"
           }
         }
       },
       "block_order": [
-        "7dd001e3-7882-4280-a875-f4557e0dede4",
-        "9ddc1ceb-ab30-403d-8766-bf31cc8477e2",
-        "52520463-673f-4297-90e8-a0237b6e519d"
+        "5adf0be5-e617-4fa7-a202-14347b22b5c8",
+        "36fedb83-3316-49b6-9196-5f995094e702",
+        "36cb3f64-26ed-43ab-843a-0f42bfadd28c"
       ],
       "settings": {
         "video": "shopify:\/\/files\/videos\/video (1).mp4"
