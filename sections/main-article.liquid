@@ -1,5 +1,8 @@
 {{ 'section-blog-post.css' | asset_url | stylesheet_tag }}
 
+<script src="{{ 'swiper.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'slider.js' | asset_url }}" defer="defer"></script>
+
 <article class="article-template relative" itemscope itemtype="http://schema.org/BlogPosting">
 
 	{%- for block in section.blocks -%}
@@ -35,20 +38,33 @@
 
 	<div class="container">
 		<div class="row">
-			<div class="col-3/12 relative pt-5">
+			<div class="lg:col-3/12 relative lg:pt-5">
 
-				<div class="lg:h-[22.75rem] relative">
-					<p class="text-xs text-orange-grayish uppercase" itemprop="dateCreated pubdate datePublished">
+				<div class="lg:h-[22.75rem] relative py-5 lg:py-0">
+					<div class="text-xs text-orange-grayish uppercase flex justify-between lg:block" itemprop="dateCreated pubdate datePublished">
 						{{ article.published_at | time_tag: format: 'date' }}
-					</p>
+
+						<ul class="flex gap-2 flex-wrap lg:hidden">
+							<li>
+								<a class="block" href="https://twitter.com/intent/tweet?url={{ shop.url | append: request.path }}">
+									{% render 'svg', icon: 'twitter', classes: 'w-[1.125rem] h-[1.125rem] fill-current' %}
+								</a>
+							</li>
+							<li>
+								<a class="block" href="https://www.facebook.com/sharer.php?u={{ shop.url | append: request.path }}">
+									{% render 'svg', icon: 'facebook', classes: 'w-[1.125rem] h-[1.125rem] fill-current' %}
+								</a>
+							</li>
+						</ul>
+					</div>
 
 					{% if  article.tags %}
 						<p class="text-xs uppercase">{{ article.tags | join: ' / ' }}</p>
 					{% endif %}
-					<hr class=" inset-x-0 w-[calc(100%_+_1.875rem)] h-[0.0625rem] bg-orange-grayish -ml-5 -mr-2.5 absolute bottom-0">
+					<hr class=" inset-x-0 w-[calc(100%_+_2.5rem)] h-[0.0625rem] bg-orange-grayish -mx-5 lg:-mr-2.5 absolute bottom-0">
 				</div>
 
-				<div class="text-orange-dark-grayish mt-4">
+				<div class="text-orange-dark-grayish mt-4 hidden lg:block">
 
 					<p class="mb-1.5 uppercase text-sm">Share this story</p>
 					<ul class="flex gap-2 flex-wrap">
@@ -65,28 +81,59 @@
 					</ul>
 				</div>
 
-				<hr class="absolute right-0 inset-y-0 w-[0.0625rem] h-full bg-orange-grayish">
+				<hr class="absolute right-0 inset-y-0 w-[0.0625rem] h-full bg-orange-grayish hidden lg:block">
 			</div>
-			<div class="col-9/12">
-				<div class="row">
-					<div class="col-7/10 ml-1/10 my-16 space-y-8">
+			<div class="lg:col-9/12 overflow-hidden">
+				<div class="lg:row">
+					<div class="lg:col-7/10 lg:ml-1/10 my-16 space-y-8">
 						{%- for block in section.blocks -%}
 							{%- case block.type -%}
 								{%- when '@app' -%}
 									{% render block %}
 
-								{%- when 'title'-%}
+								{%- when 'title' -%}
 									<header class="font-display text-center" {{ block.shopify_attributes }}>
 										<p class="text-xl leading-[1.375rem]">Corail° Stories</p>
 										<h1 class="text-6xl mt-5" itemprop="headline">{{ article.title | escape }}</h1>
 									</header>
 
-								{%- when 'content'-%}
+								{%- when 'content' -%}
 									<div class="wysiwyg font-display text-xl left-9 font-medium" itemprop="articleBody" {{ block.shopify_attributes }}>
 										{{- article.content -}}
 									</div>
 							{%- endcase -%}
 						{%- endfor -%}
+
+						{% liquid
+							assign slider_image = false
+
+							for block in section.blocks
+								if block.type == 'slider_image'
+									assign slider_image = true
+								endif
+							endfor
+						%}
+
+						{% if slider_image %}
+							<slider-component class="lg:!mt-32 block" data-parameters='{"spaceBetween":20,"slidesPerView":1}'>
+								<div class="swiper overflow-visible">
+									<ul class="swiper-wrapper">
+										{%- for block in section.blocks -%}
+											{%- case block.type -%}
+												{%- when 'slider_image' -%}
+													<li class="swiper-slide">
+														{{ block.settings.image | image_url: width: 810, height: 552 | image_tag:
+															loading: 'lazy',
+															widths: '255, 550, 710, 1420',
+															class: 'w-full h-[10.875rem] lg:h-[34.5rem] object-cover object-center block'
+														}}
+													</li>
+											{%- endcase -%}
+										{% endfor %}
+									</ul>
+								</div>
+							</slider-component>
+						{% endif %}
 					</div>
 				</div>
 			</div>
@@ -159,6 +206,11 @@
     {
       "type": "featured_image",
       "name": "t:sections.main-article.blocks.featured_image.name",
+      "limit": 1
+    },
+    {
+      "type": "title",
+      "name": "t:sections.main-article.blocks.title.name",
       "limit": 1
     },
     {
