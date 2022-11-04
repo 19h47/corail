@@ -8,6 +8,11 @@
           "settings": {
           }
         },
+        "67722c4e-eda6-4f67-a732-eb0674a3d273": {
+          "type": "title",
+          "settings": {
+          }
+        },
         "content": {
           "type": "content",
           "settings": {
@@ -34,6 +39,7 @@
       },
       "block_order": [
         "featured_image",
+        "67722c4e-eda6-4f67-a732-eb0674a3d273",
         "content",
         "17403898-d04d-4119-8d1f-3ba0e0b652fb",
         "b3bf812f-1617-459f-8603-44cecb223d1e",
