@@ -1793,7 +1793,24 @@
       "name": "Page"
     },
     "main-lookbook": {
-      "name": "Lookbook"
+      "name": "Lookbook",
+	  "settings": {
+		"video": {
+			"label": "Vidéo"
+		},
+		"blocks": {
+			"image": {
+				"settings": {
+					"image": {
+						"label": "Image"
+					},
+					"title": {
+						"label": "Titre"
+					}
+				}
+			}
+		}
+	  }
     },
     "main-password-footer": {
       "name": "Pied de page du mot de passe"

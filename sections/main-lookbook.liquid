@@ -1,8 +1,8 @@
-LOOKBOOK
 <div>
 	<div class="container my-16">
 		<div class="row">
 			<div>
+				LOOKBOOK
 				<h1 class="text-center font-medium font-display text-6xl">{{- page.title | escape -}}</h1>
 			</div>
 		</div>
@@ -25,11 +25,33 @@ LOOKBOOK
 
 {% schema %}
 {
-  "name": "t:sections.main-look.name",
+  "name": "t:sections.main-lookbook.name",
   "tag": "section",
   "class": "section",
   "settings": [
-
+    {
+      "type": "video",
+      "id": "video",
+      "label": "t:sections.main-lookbook.settings.video.label"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image",
+      "name": "t:sections.main-lookbook.blocks.image.name",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "t:sections.main-lookbook.blocks.image.settings.image.label"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "t:sections.main-lookbook.blocks.image.settings.text.label"
+        }
+      ]
+    }
   ]
 }
 {% endschema %}
