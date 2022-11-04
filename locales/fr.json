@@ -243,27 +243,6 @@
     }
   },
   "sections": {
-	"main-lookbook": {
-		"name": "Lookbook",
-		"settings": {
-			"video": {
-				"label": "Vidéo"
-			},
-			"blocks": {
-				"image": {
-					"name": "Image",
-					"settings": {
-						"image": {
-							"label": "Image"
-						},
-						"title": {
-							"label": "Titre"
-						}
-					}
-				}
-			}
-		}
-	},
     "filters-articles": {
       "name": "Filtres des articles",
       "settings": {

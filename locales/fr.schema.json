@@ -1797,17 +1797,17 @@
 			"settings": {
 				"video": {
 					"label": "Vidéo"
-				},
-				"blocks": {
-					"image": {
-						"name": "Image",
-						"settings": {
-							"image": {
-								"label": "Image"
-							},
-							"title": {
-								"label": "Titre"
-							}
+				}
+			},
+			"blocks": {
+				"image": {
+					"name": "Image",
+					"settings": {
+						"image": {
+							"label": "Image"
+						},
+						"title": {
+							"label": "Titre"
 						}
 					}
 				}
