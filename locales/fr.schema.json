@@ -1513,17 +1513,14 @@
     "main-article": {
       "name": "Article de blog",
       "blocks": {
-		"slider_image": {
-			"name": "Carrousel",
-			"settings": {
-				"image": {
-
-
-						"label": "Image"
-
-				}
-			}
-		},
+        "slider_image": {
+          "name": "Carrousel",
+          "settings": {
+            "image": {
+              "label": "Image"
+            }
+          }
+        },
         "featured_image": {
           "name": "Image vedette",
           "settings": {
