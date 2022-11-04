@@ -1792,6 +1792,9 @@
     "main-page": {
       "name": "Page"
     },
+    "main-lookbook": {
+      "name": "Lookbook"
+    },
     "main-password-footer": {
       "name": "Pied de page du mot de passe"
     },
