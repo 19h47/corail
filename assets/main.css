@@ -1639,6 +1639,22 @@ html,
 	top: 11.75rem;
 }
 
+.top-10{
+	top: 2.5rem;
+}
+
+.top-\[6\.875rem\]{
+	top: 6.875rem;
+}
+
+.top-\[4\.375rem\]{
+	top: 4.375rem;
+}
+
+.-bottom-\[calc\(100vh_-_4\.375rem\)\]{
+	bottom: calc(calc(100vh - 4.375rem) * -1);
+}
+
 .isolate{
 	isolation: isolate;
 }
@@ -1998,6 +2014,14 @@ html,
 	margin-right: 0.75rem;
 }
 
+.-mb-\[calc\(100vh_-_4\.375rem\)\]{
+	margin-bottom: calc(calc(100vh - 4.375rem) * -1);
+}
+
+.mt-\[calc\(100vh_-_4\.375rem\)\]{
+	margin-top: calc(100vh - 4.375rem);
+}
+
 .block{
 	display: block;
 }
@@ -2184,6 +2208,22 @@ html,
 
 .h-2\.5{
 	height: 0.625rem;
+}
+
+.h-screen{
+	height: 100vh;
+}
+
+.h-\[calc\(100vh_-_72\.5rem\)\]{
+	height: calc(100vh - 72.5rem);
+}
+
+.h-\[calc\(100vh_-_6\.875rem\)\]{
+	height: calc(100vh - 6.875rem);
+}
+
+.h-\[calc\(100vh_-_4\.375rem\)\]{
+	height: calc(100vh - 4.375rem);
 }
 
 .w-\[1\.125rem\]{
@@ -2672,6 +2712,10 @@ html,
 	fill: #fff;
 }
 
+.fill-orange-grayish{
+	fill: #CFCDC9;
+}
+
 .object-contain{
 	-o-object-fit: contain;
 	   object-fit: contain;
@@ -3105,6 +3149,10 @@ html,
 
 .opacity-0{
 	opacity: 0;
+}
+
+.opacity-50{
+	opacity: 0.5;
 }
 
 .filter{
@@ -3697,6 +3745,14 @@ html,
 .is-ontop .is-ontop\:bg-white{
 	--tw-bg-opacity: 1;
 	background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.is-ontop .is-ontop\:fill-white{
+	fill: #fff;
+}
+
+.is-ontop .is-ontop\:fill-white\/50{
+	fill: rgb(255 255 255 / 0.5);
 }
 
 .is-ontop .is-ontop\:text-white{

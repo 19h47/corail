@@ -1800,14 +1800,26 @@
         }
       },
       "blocks": {
-        "image": {
-          "name": "Image",
+        "images": {
+          "name": "Images",
           "settings": {
-            "image": {
-              "label": "Image"
+			"header_left": {
+				"content": "Colonne de gauche"
+			},
+            "image_left": {
+              "label": "Image de gauche"
             },
-            "title": {
-              "label": "Titre"
+            "title_left": {
+              "label": "Titre de gauche"
+            },
+			"header_right": {
+				"content": "Colonne de droite"
+			},
+            "image_right": {
+              "label": "Image de droite"
+            },
+            "title_right": {
+              "label": "Titre de droite"
             }
           }
         }

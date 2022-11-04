@@ -1,26 +1,42 @@
-<div>
-	<div class="container my-16">
-		<div class="row">
-			<div>
-				LOOKBOOK
-				<h1 class="text-center font-medium font-display text-6xl">{{- page.title | escape -}}</h1>
-			</div>
-		</div>
+<div class="relative">
+
+	<div class="absolute top-0 inset-x-0 h-full w-full">
+		{% render 'target.svg', classes: 'is-ontop:fill-white opacity-50 transition-color duration-1000 ease-in-out fill-orange-grayish sticky inset-x-0 top-[4.375rem] w-full h-[calc(100vh_-_4.375rem)] z-2' %}
 	</div>
 
-	{% if page.content != blank %}
-		<hr class="bg-orange-grayish">
-		<div class="container">
-			<div class="row">
-				<div class="col-3/12 lg:block hidden relative">
-					<span class="h-full w-[0.0625rem] bg-orange-grayish block absolute right-0 inset-y-0"></span>
-				</div>
-				<div class="lg:col-6/12 lg:ml-1/12 my-16 wysiwyg">
-					{{- page.content -}}
-				</div>
-			</div>
-		</div>
-	{% endif %}
+	<div class="">
+		{% if section.settings.video %}
+			<video
+				class="h-full w-full object-cover relative z-1"
+				loop
+				muted
+				autoplay
+				playsinline
+				poster="{{ section.settings.video.preview_image | image_url }}"
+			>
+				{% for source in section.settings.video.sources %}
+					<source src="{{ source.url }}" type="{{ source.mime_type }}">
+				{% endfor %}
+			</video>
+		{% endif %}
+
+
+	</div>
+
+	{% for block in section.blocks %}
+		{%- case block.type -%}
+
+			{%- when 'image' -%}
+				{%- capture sizes -%}(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2){%- endcapture -%}
+				{{ block.settings.image | image_url: width: 1500 | image_tag:
+					loading: 'lazy',
+					sizes: sizes,
+					widths: '165, 360, 535, 750, 1070, 1250, 1500'
+				}}
+		{%- endcase -%}
+	{% endfor %}
+
+
 </div>
 
 {% schema %}
@@ -37,18 +53,36 @@
   ],
   "blocks": [
     {
-      "type": "image",
-      "name": "t:sections.main-lookbook.blocks.image.name",
+      "type": "images",
+      "name": "t:sections.main-lookbook.blocks.images.name",
       "settings": [
         {
+          "type": "header",
+          "content": "t:sections.main-lookbook.blocks.images.settings.header_left.content"
+        },
+        {
           "type": "image_picker",
-          "id": "image",
-          "label": "t:sections.main-lookbook.blocks.image.settings.image.label"
+          "id": "image_left",
+          "label": "t:sections.main-lookbook.blocks.images.settings.image_left.label"
         },
         {
           "type": "text",
-          "id": "title",
-          "label": "t:sections.main-lookbook.blocks.image.settings.title.label"
+          "id": "title_left",
+          "label": "t:sections.main-lookbook.blocks.images.settings.title_left.label"
+        },
+        {
+          "type": "header",
+          "content": "t:sections.main-lookbook.blocks.images.settings.header_right.content"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_right",
+          "label": "t:sections.main-lookbook.blocks.images.settings.image_right.label"
+        },
+        {
+          "type": "text",
+          "id": "title_right",
+          "label": "t:sections.main-lookbook.blocks.images.settings.title_right.label"
         }
       ]
     }
