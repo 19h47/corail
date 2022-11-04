@@ -39,7 +39,6 @@ if (!customElements.get("main-lookbook")) {
 				if (0 === index) {
 					footTimeline.to($feet, { duration: 1, fontSize: "0.875rem", ease: "power4.out" }, "<");
 				} else {
-
 					footTimeline
 						.to(this.foot[index - 1], { duration: 1, fontSize: "0.5rem", ease: "power4.in" })
 						.to($feet, { duration: 1, fontSize: "0.875rem", ease: "power4.out" }, "<");
@@ -56,32 +55,31 @@ if (!customElements.get("main-lookbook")) {
 				},
 			});
 
-			const deactiveMarkers = () => {
-				console.log('deactive');
-				this.markers.forEach($m => $m.classList.remove('is-active'));
-			};
-			const activeMarker = $marker => {
-				console.log('active');
-				$marker.classList.add('is-active')
-			}
+			const deactiveMarkers = () => this.markers.forEach($m => $m.classList.remove("is-active"));
+			const activeMarker = $marker => $marker.classList.add("is-active");
 
 			this.markers.forEach(($marker, index) => {
 				// console.log($marker);
-				markersTimeline
-					.call(deactiveMarkers, null, '+=1')
-					.call(activeMarker, [$marker], '+=1');
+				markersTimeline.call(deactiveMarkers, null, "+=1").call(activeMarker, [$marker], "+=1");
 
 				if (0 === index) {
 					markersTimeline
 						.to($marker, { duration: 2, backgroundColor: "#FF7D6C", ease: "power4.out" })
-						.to($marker.querySelector('span'), { duration: 2, scale: 1, opacity: 1, ease: "power4.out" }, "-=2");
+						.to(
+							$marker.querySelector("span"),
+							{ duration: 2, scale: 1, opacity: 1, ease: "power4.out" },
+							"-=2"
+						);
 				} else {
-
 					markersTimeline
-						.to(this.markers[index - 1], { duration: 2, backgroundColor: "#333333", ease: "power4.in" })
-						.to(this.spans[index - 1], { duration: 2, scale: 0, opacity: 0, ease: "power4.in" })
-						.to($marker, { duration: 2, backgroundColor: "#FF7D6C", ease: "power4.out" })
-						.to($marker.querySelector('span'), { duration: 2, scale: 1, opacity: 2, ease: "power4.out" }, "-=2");
+						.set(this.markers[index - 1], { clearProps: "backgroundColor" })
+						.set(this.spans[index - 1], { duration: 2, scale: 0, opacity: 0, ease: "power4.in" })
+						.to($marker, { duration: 2, backgroundColor: "#FF7D6C", ease: "power4.out" }, "-=2")
+						.to(
+							$marker.querySelector("span"),
+							{ duration: 2, scale: 1, opacity: 2, ease: "power4.out" },
+							"-=2"
+						);
 				}
 			});
 		}
