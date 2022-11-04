@@ -1623,6 +1623,10 @@ html,
 	left: 2.25rem;
 }
 
+.top-\[4\.375rem\]{
+	top: 4.375rem;
+}
+
 .bottom-full{
 	bottom: 100%;
 }
@@ -1637,22 +1641,6 @@ html,
 
 .top-\[11\.75rem\]{
 	top: 11.75rem;
-}
-
-.top-10{
-	top: 2.5rem;
-}
-
-.top-\[6\.875rem\]{
-	top: 6.875rem;
-}
-
-.top-\[4\.375rem\]{
-	top: 4.375rem;
-}
-
-.-bottom-\[calc\(100vh_-_4\.375rem\)\]{
-	bottom: calc(calc(100vh - 4.375rem) * -1);
 }
 
 .isolate{
@@ -1788,6 +1776,11 @@ html,
 .my-4{
 	margin-top: 1rem;
 	margin-bottom: 1rem;
+}
+
+.my-24{
+	margin-top: 6rem;
+	margin-bottom: 6rem;
 }
 
 .mb-\[3\.75rem\]{
@@ -2014,12 +2007,8 @@ html,
 	margin-right: 0.75rem;
 }
 
-.-mb-\[calc\(100vh_-_4\.375rem\)\]{
-	margin-bottom: calc(calc(100vh - 4.375rem) * -1);
-}
-
-.mt-\[calc\(100vh_-_4\.375rem\)\]{
-	margin-top: calc(100vh - 4.375rem);
+.ml-2\/12{
+	margin-left: 16.666666666666668%;
 }
 
 .block{
@@ -2138,6 +2127,10 @@ html,
 	height: 1.5rem;
 }
 
+.h-\[calc\(100vh_-_4\.375rem\)\]{
+	height: calc(100vh - 4.375rem);
+}
+
 .h-\[6\.375rem\]{
 	height: 6.375rem;
 }
@@ -2208,22 +2201,6 @@ html,
 
 .h-2\.5{
 	height: 0.625rem;
-}
-
-.h-screen{
-	height: 100vh;
-}
-
-.h-\[calc\(100vh_-_72\.5rem\)\]{
-	height: calc(100vh - 72.5rem);
-}
-
-.h-\[calc\(100vh_-_6\.875rem\)\]{
-	height: calc(100vh - 6.875rem);
-}
-
-.h-\[calc\(100vh_-_4\.375rem\)\]{
-	height: calc(100vh - 4.375rem);
 }
 
 .w-\[1\.125rem\]{
@@ -2378,6 +2355,10 @@ html,
 	list-style-type: none;
 }
 
+.flex-row{
+	flex-direction: row;
+}
+
 .flex-col{
 	flex-direction: column;
 }
@@ -2525,6 +2506,12 @@ html,
 	--tw-space-y-reverse: 0;
 	margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
 	margin-bottom: calc(1rem * var(--tw-space-y-reverse));
+}
+
+.space-y-24 > :not([hidden]) ~ :not([hidden]){
+	--tw-space-y-reverse: 0;
+	margin-top: calc(6rem * calc(1 - var(--tw-space-y-reverse)));
+	margin-bottom: calc(6rem * var(--tw-space-y-reverse));
 }
 
 .divide-y-\[0\.0625rem\] > :not([hidden]) ~ :not([hidden]){
@@ -2708,12 +2695,12 @@ html,
 	fill: currentColor;
 }
 
-.fill-white{
-	fill: #fff;
-}
-
 .fill-orange-grayish{
 	fill: #CFCDC9;
+}
+
+.fill-white{
+	fill: #fff;
 }
 
 .object-contain{
@@ -3239,6 +3226,12 @@ html,
 	padding-right: 0.625rem;
 }
 
+.col-5\/12{
+	width: 41.666667%;
+	padding-left: 0.625rem;
+	padding-right: 0.625rem;
+}
+
 .col-6\/12{
 	width: 50%;
 	padding-left: 0.625rem;
@@ -3749,10 +3742,6 @@ html,
 
 .is-ontop .is-ontop\:fill-white{
 	fill: #fff;
-}
-
-.is-ontop .is-ontop\:fill-white\/50{
-	fill: rgb(255 255 255 / 0.5);
 }
 
 .is-ontop .is-ontop\:text-white{

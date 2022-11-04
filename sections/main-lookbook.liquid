@@ -1,6 +1,6 @@
-<div class="relative">
+<div class="relative flex flex-col">
 
-	<div class="absolute top-0 inset-x-0 h-full w-full">
+	<div class="absolute top-0 inset-x-0 h-full w-full z-2">
 		{% render 'target.svg', classes: 'is-ontop:fill-white opacity-50 transition-color duration-1000 ease-in-out fill-orange-grayish sticky inset-x-0 top-[4.375rem] w-full h-[calc(100vh_-_4.375rem)] z-2' %}
 	</div>
 
@@ -23,18 +23,35 @@
 
 	</div>
 
-	{% for block in section.blocks %}
-		{%- case block.type -%}
+	<div class="relative z-3 space-y-24 my-24">
+		{% for block in section.blocks %}
+			{%- case block.type -%}
 
-			{%- when 'image' -%}
-				{%- capture sizes -%}(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2){%- endcapture -%}
-				{{ block.settings.image | image_url: width: 1500 | image_tag:
-					loading: 'lazy',
-					sizes: sizes,
-					widths: '165, 360, 535, 750, 1070, 1250, 1500'
-				}}
-		{%- endcase -%}
-	{% endfor %}
+				{%- when 'images' -%}
+					{% assign mod = forloop.index | modulo: 2 %}
+					{%- capture sizes -%}(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2){%- endcapture -%}
+
+					<div class="container">
+						<div class="row">
+							<div class="ml-1/12 {% if mod == 0 %} col-3/12  {% else %} col-5/12 {% endif %}">
+								{{ block.settings.image_left | image_url: width: 1500 | image_tag:
+									loading: 'lazy',
+									sizes: sizes,
+									widths: '165, 360, 535, 750, 1070, 1250, 1500'
+								}}
+							</div>
+							<div class=" ml-2/12 {% if mod == 0 %} col-5/12 {% else %} col-3/12 {% endif %}">
+								{{ block.settings.image_right | image_url: width: 1500 | image_tag:
+									loading: 'lazy',
+									sizes: sizes,
+									widths: '165, 360, 535, 750, 1070, 1250, 1500'
+								}}
+							</div>
+						</div>
+					</div>
+			{%- endcase -%}
+		{% endfor %}
+	</div>
 
 
 </div>
@@ -71,6 +88,11 @@
           "label": "t:sections.main-lookbook.blocks.images.settings.title_left.label"
         },
         {
+          "type": "product",
+          "id": "product_left",
+          "label": "t:sections.main-lookbook.blocks.images.settings.product_left.label"
+        },
+        {
           "type": "header",
           "content": "t:sections.main-lookbook.blocks.images.settings.header_right.content"
         },
@@ -83,6 +105,11 @@
           "type": "text",
           "id": "title_right",
           "label": "t:sections.main-lookbook.blocks.images.settings.title_right.label"
+        },
+        {
+          "type": "product",
+          "id": "product_right",
+          "label": "t:sections.main-lookbook.blocks.images.settings.product_right.label"
         }
       ]
     }

@@ -1812,6 +1812,9 @@
             "title_left": {
               "label": "Titre de gauche"
             },
+            "product_left": {
+              "label": "Produit de gauche"
+            },
             "header_right": {
               "content": "Colonne de droite"
             },
@@ -1820,7 +1823,10 @@
             },
             "title_right": {
               "label": "Titre de droite"
-            }
+            },
+			"product_right": {
+				"label": "Produit de droite"
+			  }
           }
         }
       }
