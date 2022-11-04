@@ -1,7 +1,29 @@
 <div class="relative flex flex-col">
 
+	<div class="absolute right-0 inset-y-0 h-full z-3 is-ontop:text-white text-right hidden lg:block">
+		<div class="top-[4.375rem] sticky h-[calc(100vh_-_4.375rem)] flex">
+			<div class="mr-2.5" style="padding: {{ 60 | times: 100 | divided_by: 900 }}vh 0;">
+				<ul class="flex justify-between h-full flex-col text-3xs">
+					<li class="transition-all duration-1000 ease-in-out is-active is-active:text-xs">-90000ft</li>
+					<li class="transition-all duration-1000 ease-in-out is-active:text-xs">-80000ft</li>
+					<li class="transition-all duration-1000 ease-in-out is-active:text-xs">-70000ft</li>
+					<li class="transition-all duration-1000 ease-in-out is-active:text-xs">-60000ft</li>
+					<li class="transition-all duration-1000 ease-in-out is-active:text-xs">-50000ft</li>
+					<li class="transition-all duration-1000 ease-in-out is-active:text-xs">-40000ft</li>
+					<li class="transition-all duration-1000 ease-in-out is-active:text-xs">-30000ft</li>
+					<li class="transition-all duration-1000 ease-in-out is-active:text-xs">-20000ft</li>
+					<li class="transition-all duration-1000 ease-in-out is-active:text-xs">-10000ft</li>
+					<li class="transition-all duration-1000 ease-in-out is-active:text-xs">-9999ft</li>
+				</ul>
+			</div>
+			<scrollbar class="block w-2 relative is-ontop:bg-white bg-orange-grayish transition-colors duration-1000 ease-in-out">
+				<thumb class="block absolute h-20 top-0 w-full inset-x-0 bg-red-light rounded-br-full rounded-bl-full after:rounded-full after:w-1 after:h-1 after:bg-white after:absolute after:bottom-0 after:inset-x-0 after:mx-0.5 after:mb-[0.1875rem]"></thumb>
+			</scrollbar>
+		</div>
+	</div>
+
 	<div class="absolute top-0 inset-x-0 h-full w-full z-2">
-		{% render 'target.svg', classes: 'is-ontop:fill-white opacity-50 transition-color duration-1000 ease-in-out fill-orange-grayish sticky inset-x-0 top-[4.375rem] w-full h-[calc(100vh_-_4.375rem)] z-2' %}
+		{% render 'target.svg', classes: 'is-ontop:fill-white opacity-50 transition-colors duration-1000 ease-in-out fill-orange-grayish sticky inset-x-0 top-[4.375rem] w-full h-[calc(100vh_-_4.375rem)] z-2' %}
 	</div>
 
 	<div class="">
@@ -23,32 +45,76 @@
 
 	</div>
 
-	<div class="relative z-3 space-y-24 my-24">
+	<div class="relative z-3 space-y-10 my-10 lg:space-y-24 lg:my-24">
+		{% assign index = 0 %}
+
 		{% for block in section.blocks %}
 			{%- case block.type -%}
 
 				{%- when 'images' -%}
-					{% assign mod = forloop.index | modulo: 2 %}
-					{%- capture sizes -%}(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2){%- endcapture -%}
 
-					<div class="container">
-						<div class="row">
-							<div class="ml-1/12 {% if mod == 0 %} col-3/12  {% else %} col-5/12 {% endif %}">
-								{{ block.settings.image_left | image_url: width: 1500 | image_tag:
-									loading: 'lazy',
-									sizes: sizes,
-									widths: '165, 360, 535, 750, 1070, 1250, 1500'
-								}}
-							</div>
-							<div class=" ml-2/12 {% if mod == 0 %} col-5/12 {% else %} col-3/12 {% endif %}">
-								{{ block.settings.image_right | image_url: width: 1500 | image_tag:
-									loading: 'lazy',
-									sizes: sizes,
-									widths: '165, 360, 535, 750, 1070, 1250, 1500'
-								}}
+					{% if block.settings.image_left != nil or block.settings.image_right != nil %}
+						{% assign mod = forloop.index | modulo: 2 %}
+						{%- capture sizes -%}(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2){%- endcapture -%}
+
+						<div class="container" data-even="{% if mod == 0 %}true{% else %}false{% endif %}">
+							<div class="row">
+								<div class="lg:ml-1/12 {% if mod == 0 %} lg:col-3/12  {% else %} lg:col-5/12 {% endif %}">
+									{% if block.settings.image_left != nil %}
+										{% if block.settings.product_left != blank %}<a href="{{ product.settings.product_left.url }}" class="block">{% endif %}
+
+										{% if block.settings.title_left != empty %}
+											<p class="uppercase text-sm lg:mb-2.5 mb-1.5 {% if mod != 0 %} lg:hidden {% endif %}">
+												{{- index | prepend: '00' | slice: -2, 2 | append: '.' -}}&nbsp;{{ block.settings.title_left }}
+											</p>
+										{% endif %}
+
+										{{ block.settings.image_left | image_url: width: 1500 | image_tag:
+											loading: 'lazy',
+											sizes: sizes,
+											widths: '165, 360, 535, 750, 1070, 1250, 1500'
+										}}
+
+										{% if block.settings.title_left != empty %}
+											<p class="uppercase text-sm lg:mt-2.5 mt-1.5 hidden {% if mod != 0 %} lg:block  {% endif %}">
+												{{- index | prepend: '00' | slice: -2, 2 | append: '.' -}}&nbsp;{{ block.settings.title_left }}
+											</p>
+										{% endif %}
+
+
+										{% if block.settings.product_left != blank %}</a>{% endif %}
+										{% assign index = index | plus: 1 %}
+									{% endif %}
+								</div>
+								<div class="lg:ml-2/12 {% if mod == 0 %} lg:col-5/12 {% else %} lg:col-3/12 {% endif %} {% if block.settings.image_left != nil %} mt-10 lg:mt-0 {% endif %}">
+									{% if block.settings.image_right != nil %}
+										{% if block.settings.product_right != blank %}<a href="{{ block.settings.product_right.url }}" class="block">{% endif %}
+
+										{% if block.settings.title_right != empty %}
+											<p class="uppercase text-sm lg:mb-2.5 mb-1.5 {% if mod == 0 %} lg:hidden {% else %} lg:block {% endif %}">
+												{{- index | prepend: '00' | slice: -2, 2 | append: '.' -}}&nbsp;{{ block.settings.title_right }}
+											</p>
+										{% endif %}
+
+										{{ block.settings.image_right | image_url: width: 1500 | image_tag:
+											loading: 'lazy',
+											sizes: sizes,
+											widths: '165, 360, 535, 750, 1070, 1250, 1500'
+										}}
+
+										{% if block.settings.title_right != empty %}
+											<p class="uppercase text-sm lg:mt-2.5 mt-1.5 hidden {% if mod == 0 %}  lg:block {% endif %}">
+												{{- index | prepend: '00' | slice: -2, 2 | append: '.' -}}&nbsp;{{ block.settings.title_right }}
+											</p>
+										{% endif %}
+
+										{% assign index = index | plus: 1 %}
+										{% if block.settings.product_right != blank %}</a>{% endif %}
+									{% endif %}
+								</div>
 							</div>
 						</div>
-					</div>
+					{% endif %}
 			{%- endcase -%}
 		{% endfor %}
 	</div>

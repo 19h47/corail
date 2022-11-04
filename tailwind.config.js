@@ -8,7 +8,9 @@ const colors = {
 	cyan: { "very-dark-grayish": "#37403A" },
 };
 
-const fontSize = {};
+const fontSize = {
+	'3xs': [`${8 / 16}rem`, `${8 / 16}rem`],
+};
 
 const maxWidth = {
 	344: `${1376 / 16}rem`,
