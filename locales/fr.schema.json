@@ -1800,6 +1800,9 @@
         },
 		"collection": {
 			"label": "Collection"
+		},
+		"name": {
+			"label": "Nom de la collection"
 		}
       },
       "blocks": {
