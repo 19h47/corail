@@ -1798,9 +1798,9 @@
         "video": {
           "label": "Vidéo"
         },
-		"collection": {
-			"label": "Collection"
-		}
+        "collection": {
+          "label": "Collection"
+        }
       },
       "blocks": {
         "images": {
