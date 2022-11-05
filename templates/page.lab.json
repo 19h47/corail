@@ -3,6 +3,20 @@
   "sections": {
     "main": {
       "type": "main-lab",
+      "blocks": {
+        "abb4afb5-7ce4-491a-a095-9a39f027376c": {
+          "type": "introduction",
+          "settings": {
+            "anchor": "Corail LAB",
+            "title": "Définition",
+            "content": "Espace d’innovation, de création et d’échange proposé par la marque CORAIL°, visant à transformer les déchets marins en nouveaux matériaux les idées en projets de création et d’échange proposé par la marque CORAIL°, visant à transformer les déchets marins en nouveaux matériaux\nles idées en projets.",
+            "image": "shopify:\/\/shop_images\/flavored-salt-spills-from-jar.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "abb4afb5-7ce4-491a-a095-9a39f027376c"
+      ],
       "settings": {
         "video": "shopify:\/\/files\/videos\/Video Of Workspace.mp4"
       }
