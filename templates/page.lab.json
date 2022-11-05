@@ -20,11 +20,54 @@
           "settings": {
             "anchor": "From pollution, to solution"
           }
+        },
+        "c5cd00c5-d747-44fa-ad02-8c89ffc05de6": {
+          "type": "slider_content_title",
+          "settings": {
+            "anchor": "Lab Materials",
+            "title": "Materials"
+          }
+        },
+        "32527381-1c8c-474e-a690-fe6120c70241": {
+          "type": "slider_content",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/japanese-garden-rock-texture.jpg",
+            "title": "C-FIBER",
+            "content": "Espace d’innovation, de création et d’échange proposé par la marque CORAIL°, visant à transformer les déchets marins en nouveaux matériaux et les idées en projets."
+          }
+        },
+        "c49c0432-c868-45a2-84b1-8775a42b39e4": {
+          "type": "slider_content",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/waterfall-into-a-crater.jpg",
+            "title": "PANettle",
+            "content": "Espace d’innovation, de création et d’échange proposé par la marque CORAIL°, visant à transformer les déchets marins en nouveaux matériaux et les idées en projets."
+          }
+        },
+        "cef84017-8525-4777-9374-2c20ea15cdd1": {
+          "type": "slider_content",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/man-scaling-a-rock-climbing-wall.jpg",
+            "title": "FRUTFIBER",
+            "content": "Espace d’innovation, de création et d’échange proposé par la marque CORAIL°, visant à transformer les déchets marins en nouveaux matériaux et les idées en projets."
+          }
+        },
+        "554994e8-765f-4166-8d90-9e05d4ac613e": {
+          "type": "slider_image_title",
+          "settings": {
+            "anchor": "Lab-house",
+            "title": "Lab-house"
+          }
         }
       },
       "block_order": [
         "abb4afb5-7ce4-491a-a095-9a39f027376c",
-        "a4e0ab0e-11ea-403a-a414-745c2d0fa0d0"
+        "a4e0ab0e-11ea-403a-a414-745c2d0fa0d0",
+        "c5cd00c5-d747-44fa-ad02-8c89ffc05de6",
+        "32527381-1c8c-474e-a690-fe6120c70241",
+        "c49c0432-c868-45a2-84b1-8775a42b39e4",
+        "cef84017-8525-4777-9374-2c20ea15cdd1",
+        "554994e8-765f-4166-8d90-9e05d4ac613e"
       ],
       "settings": {
         "video": "shopify:\/\/files\/videos\/Video Of Workspace.mp4"
