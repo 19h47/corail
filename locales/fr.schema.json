@@ -1815,6 +1815,7 @@
 				"introduction": {
 					"name": "Introduction",
 					"settings": {
+						"anchor": {"label": "Ancre"},
 						"title": { "label": "Titre" },
 						"content": { "label": "Contenu" },
 						"image": { "label": "Image" }
