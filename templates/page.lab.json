@@ -13,18 +13,16 @@
             "image": "shopify:\/\/shop_images\/flavored-salt-spills-from-jar.jpg"
           }
         },
-        "4c056e99-abd4-4936-a10e-2a9eba20fea1": {
-          "type": "key_figures",
+        "a4e0ab0e-11ea-403a-a414-745c2d0fa0d0": {
+          "type": "content",
           "settings": {
-            "anchor": "From pollution, to solution",
-            "title": "2000 BOTTLES\n100 BASKETS",
-            "content": "Espace d’innovation, de création et d’échange proposé par la marque CORAIL°, visant à transformer les déchets marins en nouveaux matériaux et les idées en projets."
+            "anchor": "From pollution, to solution"
           }
         }
       },
       "block_order": [
         "abb4afb5-7ce4-491a-a095-9a39f027376c",
-        "4c056e99-abd4-4936-a10e-2a9eba20fea1"
+        "a4e0ab0e-11ea-403a-a414-745c2d0fa0d0"
       ],
       "settings": {
         "video": "shopify:\/\/files\/videos\/Video Of Workspace.mp4"
