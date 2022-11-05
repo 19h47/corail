@@ -1075,7 +1075,7 @@
       "name": "Pied de page",
       "blocks": {
         "link_list": {
-          "name": "Menu",
+          "name": "Menu principal",
           "settings": {
             "heading": {
               "label": "Menu principal du pied de page"
@@ -1087,7 +1087,7 @@
           }
         },
         "link_list_secondary": {
-          "name": "Menu",
+          "name": "Menu secondaire",
           "settings": {
             "heading": {
               "label": "Menu secondaire du pied de page"
