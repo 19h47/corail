@@ -19,11 +19,50 @@
       "type": "logo",
       "settings": {
       }
+    },
+    "187bb045-7b95-4bed-9568-26e07605085f": {
+      "type": "lab-slider-content",
+      "blocks": {
+        "daf42957-09e1-421c-b2e1-83fcc5b30f57": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/rocky-sea-by-forested-mountains.jpg",
+            "title": "C-FIBER",
+            "content": "Espace d’innovation, de création et d’échange proposé par la marque CORAIL°, visant à transformer les déchets marins en nouveaux matériaux et les idées en projets."
+          }
+        },
+        "c2d07b5a-fcc5-4444-a26d-f7120dad204c": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/ice-cracks-on-a-frozen-sea.jpg",
+            "title": "PANettle",
+            "content": "Espace d’innovation, de création et d’échange proposé par la marque CORAIL°, visant à transformer les déchets marins en nouveaux matériaux et les idées en projets."
+          }
+        },
+        "59f3362d-ae19-4a38-a042-f21d70fca1b8": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/man-scaling-a-rock-climbing-wall.jpg",
+            "title": "FRUTFIBER",
+            "content": "Espace d’innovation, de création et d’échange proposé par la marque CORAIL°, visant à transformer les déchets marins en nouveaux matériaux et les idées en projets."
+          }
+        }
+      },
+      "block_order": [
+        "daf42957-09e1-421c-b2e1-83fcc5b30f57",
+        "c2d07b5a-fcc5-4444-a26d-f7120dad204c",
+        "59f3362d-ae19-4a38-a042-f21d70fca1b8"
+      ],
+      "settings": {
+        "anchor": "Lab Materials",
+        "title": "Materials"
+      }
     }
   },
   "order": [
     "main",
     "0dbe9a85-a8fe-48eb-bf3d-0d4e3f1e1ddc",
-    "34f17f54-25d2-4af2-83b6-293e46a79012"
+    "34f17f54-25d2-4af2-83b6-293e46a79012",
+    "187bb045-7b95-4bed-9568-26e07605085f"
   ]
 }

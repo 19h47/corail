@@ -395,80 +395,82 @@
         }
       }
     },
-	"lab-content": {
-		"name": "Lab / Contenu",
-		"settings": {
-		  "anchor": {
-			"label": "Ancre"
-		  },
-		  "title": {
-			"label": "Titre"
-		  }
-		},
-		"presets": { "name": "Lab / Contenu" }
-	  },
-	  "lab-slider-image": {
-		"name": "Lab / Carrousel d'images",
-		"settings": {
-			"anchor": {
-			  "label": "Ancre"
-			},
-			"title": {
-			  "label": "Titre"
-			}
-		  },
-		"blocks": {
-			"slide": {
-				"name": "Tuile",
-				"settings": {
-
-					"image": {
-					  "label": "Image"
-					},
-					"title": {
-					  "label": "Titre"
-					},
-					"content": {
-					  "label": "Contenu"
-					}
-				}
-			}
-		},
-		"presets": {"name": "Lab / Carrousel d'images"}
-	  },
-	  "lab-slider-content": {
-		"name": "Lab / Carrousel de contenus",
-		"settings": {
-			"settings": {
-				"anchor": {
-				  "label": "Ancre"
-				},
-				"title": {
-				  "label": "Titre"
-				}
-			  }
-		},
-		"blocks": {
-			"slide": {
-				"name": "Tuile",
-				"settings": {
-
-					"image": {
-					  "label": "Image"
-					},
-					"title": {
-					  "label": "Titre"
-					},
-					"content": {
-					  "label": "Contenu"
-					}
-				}
-			}
-		},
-		"presets": {
-			"name": "Lab / Carrousel de contenus"
-		}
-	  },
+    "lab-content": {
+      "name": "Lab \/ Contenu",
+      "settings": {
+        "anchor": {
+          "label": "Ancre"
+        },
+        "title": {
+          "label": "Titre"
+        }
+      },
+      "presets": {
+        "name": "Lab \/ Contenu"
+      }
+    },
+    "lab-slider-image": {
+      "name": "Lab \/ Carrousel d'images",
+      "settings": {
+        "anchor": {
+          "label": "Ancre"
+        },
+        "title": {
+          "label": "Titre"
+        }
+      },
+      "blocks": {
+        "slide": {
+          "name": "Tuile",
+          "settings": {
+            "image": {
+              "label": "Image"
+            },
+            "title": {
+              "label": "Titre"
+            },
+            "content": {
+              "label": "Contenu"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Lab \/ Carrousel d'images"
+      }
+    },
+    "lab-slider-content": {
+      "name": "Lab \/ Carrousel de contenus",
+      "settings": {
+        "settings": {
+          "anchor": {
+            "label": "Ancre"
+          },
+          "title": {
+            "label": "Titre"
+          }
+        }
+      },
+      "blocks": {
+        "slide": {
+          "name": "Tuile",
+          "settings": {
+            "image": {
+              "label": "Image"
+            },
+            "title": {
+              "label": "Titre"
+            },
+            "content": {
+              "label": "Contenu"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Lab \/ Carrousel de contenus"
+      }
+    },
     "testimonials": {
       "name": "Témoignages",
       "presets": {
