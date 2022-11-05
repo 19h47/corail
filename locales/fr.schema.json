@@ -1828,6 +1828,41 @@
 						"title": {"label": "Titre"},
 						"content": {"label": "Contenu"}
 					}
+				},
+				"content": {
+					"name": "Contenu",
+					"settings": {
+						"anchor": {"label": "Ancre"},
+						"title": {"label": "Titre"}
+					}
+				},
+				"slider_image_title": {
+					"name": "Titre du carrousel d'images",
+					"settings": {
+						"anchor": {"label": "Ancre"},
+						"title": {"label": "Titre"}
+					}
+				},
+				"slider_image": {
+					"name": "Image du carrousel d'images",
+					"settings": {
+						"image": {"label": "Image"}
+					}
+				},
+				"slider_content_title": {
+					"name": "Titre du carrousel de contenus",
+					"settings": {
+						"anchor": {"label": "Ancre"},
+						"title": {"label": "Titre"}
+					}
+				},
+				"slider_content": {
+					"name": "Contenu du carrousel de contenus",
+					"settings": {
+						"image": {"label": "Image"},
+						"title": {"label": "Titre"},
+						"content": {"label": "Contenu"}
+					}
 				}
 			}
 		},
