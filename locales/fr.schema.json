@@ -418,15 +418,18 @@
 			}
 		  },
 		"blocks": {
-		  "image": {
-			"label": "Image"
-		  },
-		  "title": {
-			"label": "Titre"
-		  },
-		  "content": {
-			"label": "Contenu"
-		  }
+			"slide": {
+
+				"image": {
+				  "label": "Image"
+				},
+				"title": {
+				  "label": "Titre"
+				},
+				"content": {
+				  "label": "Contenu"
+				}
+			}
 		},
 		"presets": {"name": "Lab / Carrousel d'images"}
 	  },
@@ -443,15 +446,18 @@
 			  }
 		},
 		"blocks": {
-		  "image": {
-			"label": "Image"
-		  },
-		  "title": {
-			"label": "Titre"
-		  },
-		  "content": {
-			"label": "Contenu"
-		  }
+			"slide": {
+
+				"image": {
+				  "label": "Image"
+				},
+				"title": {
+				  "label": "Titre"
+				},
+				"content": {
+				  "label": "Contenu"
+				}
+			}
 		},
 		"presets": {
 			"name": "Lab / Carrousel de contenus"
