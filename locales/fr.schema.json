@@ -419,7 +419,7 @@
 		  },
 		"blocks": {
 			"slide": {
-
+				"name": "Tuile",
 				"image": {
 				  "label": "Image"
 				},
@@ -447,7 +447,7 @@
 		},
 		"blocks": {
 			"slide": {
-
+				"name": "Tuile",
 				"image": {
 				  "label": "Image"
 				},
