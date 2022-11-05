@@ -3,11 +3,26 @@
     "main": {
       "type": "main-lab",
       "settings": {
-        "video": "shopify://files/videos/Video Of Workspace.mp4"
+        "video": "shopify:\/\/files\/videos\/Video Of Workspace.mp4"
+      }
+    },
+    "0dbe9a85-a8fe-48eb-bf3d-0d4e3f1e1ddc": {
+      "type": "featured-blog",
+      "settings": {
+        "heading": "Corail° Stories",
+        "blog": "stories",
+        "post_limit": 4
+      }
+    },
+    "34f17f54-25d2-4af2-83b6-293e46a79012": {
+      "type": "logo",
+      "settings": {
       }
     }
   },
   "order": [
-    "main"
+    "main",
+    "0dbe9a85-a8fe-48eb-bf3d-0d4e3f1e1ddc",
+    "34f17f54-25d2-4af2-83b6-293e46a79012"
   ]
 }

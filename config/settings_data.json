@@ -390,11 +390,8 @@
           ],
           "settings": {
             "newsletter_enable": true,
-            "newsletter_heading": "Subscribe to our emails",
-            "show_social": true,
             "enable_country_selector": false,
-            "enable_language_selector": false,
-            "payment_enable": true
+            "enable_language_selector": false
           }
         },
         "main-password-header": {
