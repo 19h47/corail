@@ -141,10 +141,10 @@
 
 	<div class="relative">
 		<hr class="bg-orange-grayish absolute top-0 inset-x-0 w-full h-[0.0625rem]">
-		<div class="py-11 lg:py-[1.4375rem] px-5 lg:px-4 text-display" {{ block.shopify_attributes }}>
+		<div class="py-11 lg:py-[1.4375rem] px-5 lg:px-4 text-display min-h-[4.375rem]" {{ block.shopify_attributes }}>
 			{%- for block in section.blocks -%}
 
-				{%- if block.type == 'link_list_secondary' and block.settings.menu != blank -%}
+				{%- if block.type == 'link_list' and block.settings.menu != blank -%}
 					<nav class="text-orange-dark-grayish font-display">
 						<ul class="inline-flex flex-col lg:flex-row gap-y-4 lg:gap-y-0 lg:gap-x-8">
 							{%- for link in block.settings.menu.links -%}
@@ -175,8 +175,6 @@
 		</button>
 	{% endif %}
 </footer>
-
-
 
 {% render 'icons' % %}
 
