@@ -396,7 +396,7 @@
       }
     },
 	"lab-content": {
-		"name": "Contenu",
+		"name": "Lab / Contenu",
 		"settings": {
 		  "anchor": {
 			"label": "Ancre"
@@ -404,7 +404,8 @@
 		  "title": {
 			"label": "Titre"
 		  }
-		}
+		},
+		"presets": { "name": "Lab / Contenu" }
 	  },
 	  "slider_image": {
 		"name": "Lab / Carrousel d'images",
