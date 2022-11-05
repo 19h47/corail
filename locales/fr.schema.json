@@ -1818,15 +1818,10 @@
 						"anchor": {"label": "Ancre"},
 						"title": { "label": "Titre" },
 						"content": { "label": "Contenu" },
-						"image": { "label": "Image" }
-					}
-				},
-				"key_figures": {
-					"name": "Chiffre clé",
-					"settings": {
-						"anchor": {"label": "Ancre"},
-						"title": {"label": "Titre"},
-						"content": {"label": "Contenu"}
+						"image": { "label": "Image" },
+						"key_figures_header": {"content": "Chiffre clés"},
+						"key_figures_title": {"label": "Titre"},
+						"key_figures_content": {"label": "Contenu"}
 					}
 				},
 				"content": {
