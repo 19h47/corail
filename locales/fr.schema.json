@@ -1842,7 +1842,9 @@
 				"slider_image": {
 					"name": "Image du carrousel d'images",
 					"settings": {
-						"image": {"label": "Image"}
+						"image": {"label": "Image"},
+						"title": {"label": "Titre"},
+						"content": {"label": "Contenu"}
 					}
 				},
 				"slider_content_title": {
