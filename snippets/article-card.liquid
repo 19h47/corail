@@ -47,7 +47,7 @@
 	{% elsif article.tags contains 'Vidéo' and article.metafields.corail.video.value %}
 		<article-video class="block border-orange-grayish border-[0.0625rem] relative">
 			<div class="relative z-1" style="padding-bottom: {{ 1 | divided_by: article.metafields.corail.video.value.aspect_ratio | times: 100 }}%;">
-				<video playsinline poster="{{ article.metafields.corail.video.value.preview_image | image_url  }}" class="absolute inset-0 z-1 w-full h-full object-cover object-center">
+				<video playsinline poster="{{ article.metafields.corail.video.value.preview_image | image_url }}" class="absolute inset-0 z-1 w-full h-full object-cover object-center">
 					{% for source in article.metafields.corail.video.value.sources %}
 						<source src="{{ source.url }}" type="{{ source.mime_type }}">
 					{% endfor %}

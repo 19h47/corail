@@ -9,8 +9,8 @@
     "56c9abd1-8026-4102-ab34-34b86411ac23": {
       "type": "twoimage",
       "settings": {
-        "left_image": "shopify:\/\/shop_images\/pinks-and-blues-in-folded-abstract-pattern.jpg",
-        "right_image": "shopify:\/\/shop_images\/yellow-and-purple-in-folded-abstract-pattern.jpg"
+        "left_image": "shopify://shop_images/pinks-and-blues-in-folded-abstract-pattern.jpg",
+        "right_image": "shopify://shop_images/yellow-and-purple-in-folded-abstract-pattern.jpg"
       }
     },
     "53085385-79b7-48e4-9966-e7e2a2da5341": {
@@ -19,7 +19,7 @@
         "615aa38b-93ba-41d1-92c9-ddac6aac4a40": {
           "type": "item",
           "settings": {
-            "image": "shopify:\/\/shop_images\/handmade-soap-wrapped.jpg",
+            "image": "shopify://shop_images/handmade-soap-wrapped.jpg",
             "title": "HANDMADE IN\nPORTUGAL",
             "content": "Our shoes are assembled in a specialized workshop, near Porto, with decades of experience in the making of technical sneakers. Their excellence relies in the perfect balance between the resistance of handcrafting and the precision of technology. The workhop also garantees the best working conditions for the artisans."
           }
@@ -27,7 +27,7 @@
         "38555656-3cab-40b7-9027-a72d41d12add": {
           "type": "item",
           "settings": {
-            "image": "shopify:\/\/shop_images\/different-colored-yarn-twists.jpg",
+            "image": "shopify://shop_images/different-colored-yarn-twists.jpg",
             "title": "HANDCRAFTED TO LAST",
             "content": "While making our sneakers, the resistance is the first concern of our workshop: every stitching is doubled by hand to ensure its long-lastingness, the outsole is both stitched and glued to the upper part and every gesture is made by artisans with years of experience in the industry and a strong knowledge of both the handcrafting and the handling of machines."
           }
@@ -35,7 +35,7 @@
         "4e90f6f3-a681-454b-aa6a-e74f6a41ad36": {
           "type": "item",
           "settings": {
-            "image": "shopify:\/\/shop_images\/floating-cubes-on-blue.jpg",
+            "image": "shopify://shop_images/floating-cubes-on-blue.jpg",
             "title": "TESTED IN EXTREME\nCONDITIONS",
             "content": "Every material we make is tested to make sure it meets our resistance and quality standards. Thus, our outside material is breathable and water-repellent, our outsole provides lab-tested cushioning and the whole pair is built to offer arch support and breathability. Recycled can be high-quality."
           }
@@ -43,7 +43,7 @@
         "4558932d-2c9a-444f-9e06-7252ceebcef1": {
           "type": "item",
           "settings": {
-            "image": "shopify:\/\/shop_images\/aerial-view-of-mountains-of-crushed-metal-cubes.jpg",
+            "image": "shopify://shop_images/aerial-view-of-mountains-of-crushed-metal-cubes.jpg",
             "title": "RECYCLE THE RECYCLED",
             "content": "When your pair of CORAIL° is worn out, you can send it to our partner Gebetex, a French sorting factory that will give it a new life as a building material. We are also currently working on a new project that will enable us to use old shoes to make new ones. Closing the loop."
           }

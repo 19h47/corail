@@ -99,7 +99,9 @@
                 </modal-opener>
                 <modal-dialog id="PopupModal-{{ block.id }}" class="modal-video media-modal color-background-1">
                   <div class="modal-video__content" role="dialog" aria-label="{{ block.settings.description | escape }}" aria-modal="true" tabindex="-1">
-                    <button id="ModalClose-{{ block.id }}" type="button" class="modal-video__toggle" aria-label="{{ 'accessibility.close' | t }}">{% render 'icon-close' %}</button>
+                    <button id="ModalClose-{{ block.id }}" type="button" class="modal-video__toggle" aria-label="{{ 'accessibility.close' | t }}">
+						CLOSE
+					</button>
                     <div class="modal-video__content-info">
                       <deferred-media class="modal-video__video template-popup">
                         <template>

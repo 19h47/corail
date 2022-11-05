@@ -1,14 +1,19 @@
-{% if section.blocks != blank %}
-	{% assign count = 0 %}
 
-	{%- for block in section.blocks -%}
-		{% case block.type %}
-			{%- when 'page' -%}
-				{% if page.url != block.settings.page.url %}
-					{% assign count = count | plus: 1 %}
-				{% endif %}
-		{%- endcase -%}
-	{%- endfor -%}
+{% if section.blocks != blank %}
+
+	{%
+		liquid
+			assign count = 0
+
+			for block in section.blocks
+				case block.type
+					when 'page'
+						if page.url != block.settings.page.url
+							assign count = count | plus: 1
+						endif
+				endcase
+			endfor
+	%}
 
 	<details-disclosure>
 		<div class="drawercommintments z-10 fixed lg:absolute lg:h-full lg:left-0 lg:top-0 bottom-0 inset-x-0 lg:inset-x-auto lg:flex border-t-[0.0625rem] border-orange-grayish lg:border-t-0">

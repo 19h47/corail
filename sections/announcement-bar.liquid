@@ -1,11 +1,14 @@
-{%- for block in section.blocks -%}
-	{%- case block.type -%}
-		{%- when 'announcement' -%}
-			{%- if block.settings.text != blank -%}
-				{% render 'announcement', classes: 'bg-white text-gray-very-dark py-3', text: block.settings.text, link: block.settings.link, attributes: block.shopify_attributes %}
-			{%- endif -%}
-	{%- endcase -%}
-{%- endfor -%}
+{%
+	liquid
+		for block in section.blocks
+			case block.type
+				when 'announcement'
+					if block.settings.text != blank
+						render 'announcement', classes: 'bg-white text-gray-very-dark py-3', text: block.settings.text, link: block.settings.link, attributes: block.shopify_attributes
+					endif
+			endcase
+		endfor
+%}
 
 {% schema %}
 {

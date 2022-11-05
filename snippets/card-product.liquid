@@ -79,7 +79,7 @@
 							loop
 							muted
 							playsinline
-							poster="{{ card_product.media[1].preview_image | image_url  }}"
+							poster="{{ card_product.media[1].preview_image | image_url }}"
 						>
 							{% for source in card_product.media[1].sources %}
 								<source src="{{ source.url }}" type="{{ source.mime_type }}">

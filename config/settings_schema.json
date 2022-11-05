@@ -4,8 +4,8 @@
     "theme_name": "Corail",
     "theme_version": "0.0.0",
     "theme_author": "Jérémy Levron",
-    "theme_documentation_url": "https:\/\/github.com\/19h47\/corail",
-    "theme_support_url": "https:\/\/github.com\/19h47\/corail"
+    "theme_documentation_url": "https://github.com/19h47/corail",
+    "theme_support_url": "https://github.com/19h47/corail"
   },
   {
     "name": "t:settings_schema.colors.name",

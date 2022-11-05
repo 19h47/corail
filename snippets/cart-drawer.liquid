@@ -22,7 +22,9 @@
           				<div class="cart-drawer__warnings center{% if settings.cart_drawer_collection != blank %} cart-drawer__warnings--has-collection{% endif %}">
             				<div class="cart-drawer__empty-content">
               					<h2 class="{% if cart == empty %} block {% else %} hidden {% endif %}">{{ 'sections.cart.empty' | t }}</h2>
-              					<button class="drawer__close js-drawer-close" type="button" onclick="this.closest('cart-drawer').close()" aria-label="{{ 'accessibility.close' | t }}">{% render 'icon-close' %}</button>
+              					<button class="drawer__close js-drawer-close" type="button" onclick="this.closest('cart-drawer').close()" aria-label="{{ 'accessibility.close' | t }}">
+									CLOSE
+								</button>
               					<a href="{{ routes.all_products_collection_url }}" class="button">
 									{{ 'general.continue_shopping' | t }}
 								</a>
@@ -49,7 +51,9 @@
 
       <div class="drawer__header">
         <h2 class="drawer__heading">{{ 'sections.cart.title' | t }}</h2>
-        <button class="drawer__close js-drawer-close" type="button" onclick="this.closest('cart-drawer').close()" aria-label="{{ 'accessibility.close' | t }}">{% render 'icon-close' %}</button>
+        <button class="drawer__close js-drawer-close" type="button" onclick="this.closest('cart-drawer').close()" aria-label="{{ 'accessibility.close' | t }}">
+			CLOSE
+		</button>
       </div>
       <cart-drawer-items {% if cart == empty %}class=" is-empty"{% endif %}>
         <form action="{{ routes.cart_url }}" id="CartDrawer-Form" class="cart__contents cart-drawer__form" method="post">

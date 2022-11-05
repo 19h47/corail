@@ -21,19 +21,19 @@
         "17403898-d04d-4119-8d1f-3ba0e0b652fb": {
           "type": "slider_image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/boat-near-waterfall.jpg"
+            "image": "shopify://shop_images/boat-near-waterfall.jpg"
           }
         },
         "b3bf812f-1617-459f-8603-44cecb223d1e": {
           "type": "slider_image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/boat-towed-in-water.jpg"
+            "image": "shopify://shop_images/boat-towed-in-water.jpg"
           }
         },
         "4c9756ab-98ce-474a-904d-0df412a57e02": {
           "type": "slider_image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/two-people-on-a-small-boat-in-the-center-of-frame.jpg"
+            "image": "shopify://shop_images/two-people-on-a-small-boat-in-the-center-of-frame.jpg"
           }
         }
       },
