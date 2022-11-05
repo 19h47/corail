@@ -35,7 +35,7 @@
 
 				{%- for block in section.blocks -%}
 					{%- if block.type == 'link_list_secondary' and block.settings.menu != blank -%}
-						<nav class="text-orange-dark-grayish font-display uppercase text-right">
+						<nav class="text-orange-dark-grayish font-display uppercase text-right mt-14 hidden lg:block">
 							<ul>
 								{%- for link in block.settings.menu.links -%}
 									<li>
