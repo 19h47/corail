@@ -13,7 +13,7 @@
           "type": "button",
           "settings": {
             "button_label": "Voir la collection",
-            "button_link": "https://19h47.fr"
+            "button_link": "https:\/\/19h47.fr"
           }
         }
       },
@@ -22,7 +22,7 @@
         "77e1adaf-ffa1-4d4c-a3af-c222a74cbaa2"
       ],
       "settings": {
-        "image": "shopify://shop_images/92b477b7a5f3c240a611cd046defe8ca.png"
+        "image": "shopify:\/\/shop_images\/92b477b7a5f3c240a611cd046defe8ca.png"
       }
     },
     "featured_collection": {
@@ -45,126 +45,23 @@
         "title": "From the sea"
       }
     },
-    "collage": {
-      "type": "collage",
-      "disabled": true,
-      "blocks": {
-        "collection-0": {
-          "type": "collection",
-          "settings": {
-            "collection": ""
-          }
-        },
-        "product": {
-          "type": "product",
-          "settings": {
-            "product": "",
-            "second_image": false
-          }
-        },
-        "collection-1": {
-          "type": "collection",
-          "settings": {
-            "collection": ""
-          }
-        }
-      },
-      "block_order": [
-        "collection-0",
-        "product",
-        "collection-1"
-      ],
-      "settings": {
-        "heading": "Multimedia collage",
-        "heading_size": "h2",
-        "desktop_layout": "left",
-        "mobile_layout": "collage",
-        "card_styles": "product-card-wrapper",
-        "color_scheme": "background-1",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "video": {
-      "type": "video",
-      "disabled": true,
-      "settings": {
-        "heading": "",
-        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-        "description": ""
-      }
-    },
-    "multicolumn": {
-      "type": "multicolumn",
-      "disabled": true,
-      "blocks": {
-        "column1": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column2": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column3": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "column1",
-        "column2",
-        "column3"
-      ],
-      "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "image_width": "third",
-        "image_ratio": "adapt",
-        "columns_desktop": 3,
-        "column_alignment": "center",
-        "background_style": "none",
-        "button_label": "",
-        "button_link": "",
-        "color_scheme": "background-1",
-        "columns_mobile": "1",
-        "swipe_on_mobile": true,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "9a562e76-1cbf-464f-8250-9df50fef249b": {
       "type": "featured-links",
       "blocks": {
         "fee4603b-41ce-4d85-bc48-880934cef334": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/putting-on-your-shoes.jpg",
+            "image": "shopify:\/\/shop_images\/putting-on-your-shoes.jpg",
             "link_title": "Women shoes",
-            "link_url": "shopify://collections/frontpage"
+            "link_url": "shopify:\/\/collections\/frontpage"
           }
         },
         "0f7fd138-12f8-4290-aaca-f5510c15b121": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/modern-blue-handbag.jpg",
+            "image": "shopify:\/\/shop_images\/modern-blue-handbag.jpg",
             "link_title": "Men shoes",
-            "link_url": "shopify://collections"
+            "link_url": "shopify:\/\/collections"
           }
         }
       },
@@ -181,13 +78,13 @@
         "title": "CORAIL° Lab",
         "content": "CORAIL°Lab est un espace permettant de réfléchir à des solutions innovantes pour retirer puis transformer les déchets marins en matière première. Grâce à celle-ci, nous créons des produits lifestyle accessibles par une grande majorité de la population.",
         "link_title": "Découvrir le Lab",
-        "link_url": "shopify://pages/lab",
-        "video_cover_image": "shopify://shop_images/japanese-garden-rock-texture.jpg",
-        "video": "shopify://files/videos/Pexels Videos 1918465.mp4",
-        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "link_url": "shopify:\/\/pages\/lab",
+        "video_cover_image": "shopify:\/\/shop_images\/japanese-garden-rock-texture.jpg",
+        "video": "shopify:\/\/files\/videos\/Pexels Videos 1918465.mp4",
+        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
         "video_description": "",
-        "image_1": "shopify://shop_images/trying-on-shoes.jpg",
-        "image_2": "shopify://shop_images/insulation-between-studs.jpg"
+        "image_1": "shopify:\/\/shop_images\/trying-on-shoes.jpg",
+        "image_2": "shopify:\/\/shop_images\/insulation-between-studs.jpg"
       }
     },
     "1664891410510688cf": {
@@ -208,9 +105,6 @@
     "image_banner",
     "featured_collection",
     "73cfb848-0cf0-4279-878d-1aaed515e933",
-    "collage",
-    "video",
-    "multicolumn",
     "9a562e76-1cbf-464f-8250-9df50fef249b",
     "89e98e22-4773-418d-9dba-1ac026db6b99",
     "1664891410510688cf",
