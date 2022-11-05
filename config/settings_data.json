@@ -149,16 +149,16 @@
               "menu": "footer"
             }
           },
-          "5349340b-cb14-4c4b-bfc0-4f1e9a46aea3": {
+          "5df64fb9-93cc-492f-8062-61b4135d6fcd": {
             "type": "link_list_secondary",
             "settings": {
-              "menu_secondary": "footer-secondary"
+              "menu": "footer-secondary"
             }
           }
         },
         "block_order": [
           "a2c474f6-3ede-4f2e-a146-b658e64e17b4",
-          "5349340b-cb14-4c4b-bfc0-4f1e9a46aea3"
+          "5df64fb9-93cc-492f-8062-61b4135d6fcd"
         ],
         "settings": {
           "newsletter_enable": true,
