@@ -149,13 +149,6 @@
               "menu": "footer"
             }
           },
-          "footer-1": {
-            "type": "link_list",
-            "disabled": true,
-            "settings": {
-              "menu": "footer"
-            }
-          },
           "footer-2": {
             "type": "text",
             "disabled": true,
@@ -166,16 +159,12 @@
         },
         "block_order": [
           "footer-0",
-          "footer-1",
           "footer-2"
         ],
         "settings": {
           "newsletter_enable": true,
-          "newsletter_heading": "Subscribe to our emails",
-          "show_social": true,
           "enable_country_selector": true,
-          "enable_language_selector": true,
-          "payment_enable": false
+          "enable_language_selector": true
         }
       },
       "main-password-header": {
