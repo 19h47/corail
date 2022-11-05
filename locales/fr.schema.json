@@ -395,63 +395,63 @@
         }
       }
     },
-	"lab-content": {
-		"name": "Contenu",
-		"settings": {
-		  "anchor": {
-			"label": "Ancre"
-		  },
-		  "title": {
-			"label": "Titre"
-		  }
-		}
-	  },
-	  "slider_image": {
-		"name": "Lab / Carrousel d'images",
-		"settings": {
-			"anchor": {
-			  "label": "Ancre"
-			},
-			"title": {
-			  "label": "Titre"
-			}
-		  },
-		"blocks": {
-		  "image": {
-			"label": "Image"
-		  },
-		  "title": {
-			"label": "Titre"
-		  },
-		  "content": {
-			"label": "Contenu"
-		  }
-		}
-	  },
-	  "lab-slider-content": {
-		"name": "Lab / Carrousel d'images",
-		"settings": {
-			"settings": {
-				"anchor": {
-				  "label": "Ancre"
-				},
-				"title": {
-				  "label": "Titre"
-				}
-			  }
-		},
-		"blocks": {
-		  "image": {
-			"label": "Image"
-		  },
-		  "title": {
-			"label": "Titre"
-		  },
-		  "content": {
-			"label": "Contenu"
-		  }
-		}
-	  },
+    "lab-content": {
+      "name": "Contenu",
+      "settings": {
+        "anchor": {
+          "label": "Ancre"
+        },
+        "title": {
+          "label": "Titre"
+        }
+      }
+    },
+    "slider_image": {
+      "name": "Lab \/ Carrousel d'images",
+      "settings": {
+        "anchor": {
+          "label": "Ancre"
+        },
+        "title": {
+          "label": "Titre"
+        }
+      },
+      "blocks": {
+        "image": {
+          "label": "Image"
+        },
+        "title": {
+          "label": "Titre"
+        },
+        "content": {
+          "label": "Contenu"
+        }
+      }
+    },
+    "lab-slider-content": {
+      "name": "Lab \/ Carrousel d'images",
+      "settings": {
+        "settings": {
+          "anchor": {
+            "label": "Ancre"
+          },
+          "title": {
+            "label": "Titre"
+          }
+        }
+      },
+      "blocks": {
+        "image": {
+          "label": "Image"
+        },
+        "title": {
+          "label": "Titre"
+        },
+        "content": {
+          "label": "Contenu"
+        }
+      }
+    },
     "testimonials": {
       "name": "Témoignages",
       "presets": {
