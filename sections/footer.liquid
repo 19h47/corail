@@ -34,10 +34,10 @@
 				</coordinates-dms>
 
 				{%- for block in section.blocks -%}
-					{%- if block.type == 'link_list_secondary' and block.settings.menu_secondary != blank -%}
+					{%- if block.type == 'link_list_secondary' and block.settings.menu != blank -%}
 						<nav class="text-orange-dark-grayish font-display uppercase text-right mt-14 hidden lg:block">
 							<ul>
-								{%- for link in block.settings.menu_secondary.links -%}
+								{%- for link in block.settings.menu.links -%}
 									<li>
 										<a class="hover:underline font-medium {% if link.active %} is-active {% endif %}" href="{{ link.url }}">
 											{{- link.title -}}
@@ -259,7 +259,7 @@
       "settings": [
         {
           "type": "link_list",
-          "id": "menu_secondary",
+          "id": "menu",
           "default": "footer",
           "label": "t:sections.footer.blocks.link_list_secondary.settings.menu.label",
           "info": "t:sections.footer.blocks.link_list_secondary.settings.menu.info"
