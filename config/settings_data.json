@@ -143,22 +143,22 @@
       "footer": {
         "type": "footer",
         "blocks": {
-          "footer-0": {
-            "type": "link_list",
-            "settings": {
-              "menu": "footer"
-            }
-          },
           "a09f9a8d-4ac1-4360-9042-5bc0926f32d6": {
             "type": "link_list_secondary",
             "settings": {
               "menu": "footer-secondary"
             }
+          },
+          "footer-0": {
+            "type": "link_list",
+            "settings": {
+              "menu": "footer"
+            }
           }
         },
         "block_order": [
-          "footer-0",
-          "a09f9a8d-4ac1-4360-9042-5bc0926f32d6"
+          "a09f9a8d-4ac1-4360-9042-5bc0926f32d6",
+          "footer-0"
         ],
         "settings": {
           "newsletter_enable": true,
