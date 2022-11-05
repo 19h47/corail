@@ -142,6 +142,24 @@
       },
       "footer": {
         "type": "footer",
+        "blocks": {
+          "a2c474f6-3ede-4f2e-a146-b658e64e17b4": {
+            "type": "link_list",
+            "settings": {
+              "menu": "footer"
+            }
+          },
+          "2b5761a6-3ffb-4e41-819f-27c9290d920c": {
+            "type": "link_list_secondary",
+            "settings": {
+              "menu": "footer-secondary"
+            }
+          }
+        },
+        "block_order": [
+          "a2c474f6-3ede-4f2e-a146-b658e64e17b4",
+          "2b5761a6-3ffb-4e41-819f-27c9290d920c"
+        ],
         "settings": {
           "newsletter_enable": true,
           "enable_country_selector": true,
