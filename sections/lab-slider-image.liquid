@@ -2,48 +2,50 @@
 
 {% schema %}
 {
-	"name": "t:sections.lab-slider-image.name",
-	"tag": "section",
-	"class": "section section-lab-slider-image",
-	"settings": [
-	  {
-		"type": "text",
-		"id": "anchor",
-		"label": "t:sections.lab-slider-image.settings.anchor.label",
-		"placeholder": "t:sections.lab-slider-image.settings.anchor.placeholder"
-	  },
-	  {
-		"type": "text",
-		"id": "title",
-		"label": "t:sections.lab-slider-image.settings.title.label",
-		"placeholder": "t:sections.lab-slider-image.settings.title.placeholder"
-	  }
-	],
-	"blocks": [
-		{
-			"type": "slide",
-			"name": "t:sections.lab-slider-image.blocks.slide.name",
-			"settings": {
-				"type": "image_picker",
-				"id": "image",
-				"label": "t:sections.lab-slider-image.blocks.slide.settings.image.label"
-			  },
-			  {
-				"type": "text",
-				"id": "title",
-				"label": "t:sections.lab-slider-image.blocks.slide.settings.title.label"
-			  },
-			  {
-				"type": "textarea",
-				"id": "content",
-				"label": "t:sections.lab-slider-image.blocks.slide.settings.content.label"
-			  }
-		}
-	],
-	"presets": [
-	  {
-		"name": "t:sections.lab-slider-image.presets.name"
-	  }
-	]
-  }
+  "name": "t:sections.lab-slider-image.name",
+  "tag": "section",
+  "class": "section section-lab-slider-image",
+  "settings": [
+    {
+      "type": "text",
+      "id": "anchor",
+      "label": "t:sections.lab-slider-image.settings.anchor.label",
+      "placeholder": "t:sections.lab-slider-image.settings.anchor.placeholder"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "t:sections.lab-slider-image.settings.title.label",
+      "placeholder": "t:sections.lab-slider-image.settings.title.placeholder"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "slide",
+      "name": "t:sections.lab-slider-image.blocks.slide.name",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "t:sections.lab-slider-image.blocks.slide.settings.image.label"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "t:sections.lab-slider-image.blocks.slide.settings.title.label"
+        },
+        {
+          "type": "textarea",
+          "id": "content",
+          "label": "t:sections.lab-slider-image.blocks.slide.settings.content.label"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.lab-slider-image.presets.name"
+    }
+  ]
+}
 {% endschema %}
