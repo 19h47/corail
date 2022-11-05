@@ -1820,6 +1820,13 @@
 						"content": { "label": "Contenu" },
 						"image": { "label": "Image" }
 					}
+				},
+				"key_figures": {
+					"name": "Chiffre clé",
+					"settings": {
+						"title": {"label": "Titre"},
+						"content": {"label": "Contenu"}
+					}
 				}
 			}
 		},
