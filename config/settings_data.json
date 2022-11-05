@@ -149,13 +149,6 @@
               "menu": "footer"
             }
           },
-          "footer-2": {
-            "type": "text",
-            "disabled": true,
-            "settings": {
-              "heading": "Our mission"
-            }
-          },
           "a09f9a8d-4ac1-4360-9042-5bc0926f32d6": {
             "type": "link_list_secondary",
             "settings": {
@@ -165,7 +158,6 @@
         },
         "block_order": [
           "footer-0",
-          "footer-2",
           "a09f9a8d-4ac1-4360-9042-5bc0926f32d6"
         ],
         "settings": {
