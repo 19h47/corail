@@ -3,6 +3,7 @@
     "main": {
       "type": "main-lab",
       "settings": {
+        "video": "shopify:\/\/files\/videos\/Video Of Workspace.mp4"
       }
     }
   },
