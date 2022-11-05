@@ -420,14 +420,17 @@
 		"blocks": {
 			"slide": {
 				"name": "Tuile",
-				"image": {
-				  "label": "Image"
-				},
-				"title": {
-				  "label": "Titre"
-				},
-				"content": {
-				  "label": "Contenu"
+				"settings": {
+
+					"image": {
+					  "label": "Image"
+					},
+					"title": {
+					  "label": "Titre"
+					},
+					"content": {
+					  "label": "Contenu"
+					}
 				}
 			}
 		},
@@ -448,14 +451,17 @@
 		"blocks": {
 			"slide": {
 				"name": "Tuile",
-				"image": {
-				  "label": "Image"
-				},
-				"title": {
-				  "label": "Titre"
-				},
-				"content": {
-				  "label": "Contenu"
+				"settings": {
+
+					"image": {
+					  "label": "Image"
+					},
+					"title": {
+					  "label": "Titre"
+					},
+					"content": {
+					  "label": "Contenu"
+					}
 				}
 			}
 		},
