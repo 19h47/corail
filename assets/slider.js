@@ -6,8 +6,8 @@ if (!customElements.get("slider-component")) {
 
 			const parameters = JSON.parse(this.getAttribute("data-parameters")) || {};
 
-			const $next = this.querySelector(".js-next");
-			const $previous = this.querySelector(".js-previous");
+			const next = [...this.querySelectorAll(".js-next")];
+			const previous = [...this.querySelectorAll(".js-previous")];
 			const $swiper = this.querySelector(".swiper");
 
 			if (
@@ -16,7 +16,9 @@ if (!customElements.get("slider-component")) {
 				parameters.breakpoints[1024].thumbs
 			) {
 				parameters.breakpoints[1024].thumbs = {
-					swiper: document.querySelector(`slider-component${parameters.breakpoints[1024].thumbs} .swiper`).swiper
+					swiper: document.querySelector(
+						`slider-component${parameters.breakpoints[1024].thumbs} .swiper`
+					).swiper,
 				};
 			}
 
@@ -27,13 +29,8 @@ if (!customElements.get("slider-component")) {
 
 			// console.log(parameters);
 
-			if ($next) {
-				$next.addEventListener("click", () => this.next());
-			}
-
-			if ($previous) {
-				$previous.addEventListener("click", () => this.previous());
-			}
+			next.forEach(el => el.addEventListener("click", () => this.next()));
+			previous.forEach(el => el.addEventListener("click", () => this.previous()));
 		}
 
 		next() {

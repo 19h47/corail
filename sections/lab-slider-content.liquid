@@ -1,4 +1,58 @@
-<div>LAB SLIDER CONTENT</div>
+<style>
+	@media (min-width: 1024px) {
+		.section-lab-slider-content li {
+			width: {{ 364 | times: 100 | divided_by: 1046 }}%;
+		}
+	}
+</style>
+
+<script src="{{ 'swiper.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'slider.js' | asset_url }}" defer="defer"></script>
+
+{%- capture sizes -%}(min-width: {{ settings.page_width }}px) {% if section.blocks.size == 1 %}calc({{ settings.page_width }}px - 100px){% else %}{{ settings.page_width | minus: 100 | times: 0.67 | round }}px{% endif %}, (min-width: 750px){% if section.blocks.size == 1 %} calc(100vw - 100px){% else %} 500px{% endif %}, calc(100vw - 30px)}{%- endcapture -%}
+
+<slider-component class="block overflow-hidden my-36" data-parameters='{"spaceBetween":20}'>
+	<div class="container">
+		<div class="row mb-4 lg:mb-9">
+			<div class="lg:col-9/12 lg:ml-3/12 lg:relative">
+				<h2 class="text-[3.125rem] lg:text-[5.625rem] uppercase font-bold font-display text-center leading-[5.5rem]">
+					{{- section.settings.title -}}
+				</h2>
+
+				<div class="absolute inset-0 lg:flex items-center justify-end hidden">{% render 'slider-navigation' %}</div>
+			</div>
+
+			{% comment %} 354 1046 {% endcomment %}
+		</div>
+
+		<div class="row">
+			<div class="lg:col-9/12 lg:ml-3/12 swiper overflow-visible">
+				<ul class="swiper-wrapper">
+					{% for block in section.blocks %}
+						<li class="swiper-slide">
+							<div class="rounded-[1.25rem] h-[24.625rem] overflow-hidden">
+								{{ block.settings.image | image_url: width: 354 | image_tag:
+									loading: 'lazy',
+									sizes: sizes,
+									widths: '550, 720, 990, 1100, 1500, 2200, 3000',
+									class: 'w-full h-full object-cover object-center block'
+								}}
+							</div>
+							<p class="pt-10 text-xl font-display uppercase font-semibold">{{ block.settings.title }}</p>
+							<p class="mt-2.5">{{ block.settings.content }}</p>
+						</li>
+					{% endfor %}
+				</ul>
+			</div>
+		</div>
+
+		<div class="row lg:hidden mt-16">
+			<div class="flex justify-center">
+				{% render 'slider-navigation' %}
+			</div>
+		</div>
+	</div>
+</slider-component>
 
 {% schema %}
 {

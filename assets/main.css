@@ -1,6 +1,3 @@
-/*!********************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[8].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[8].use[2]!./src/stylesheets/styles.css ***!
-  \********************************************************************************************************************************************************************************/
 /**
  * Base
  *
@@ -1738,6 +1735,11 @@ html,
 	margin-bottom: 4.375rem;
 }
 
+.my-36{
+	margin-top: 9rem;
+	margin-bottom: 9rem;
+}
+
 .my-6{
 	margin-top: 1.5rem;
 	margin-bottom: 1.5rem;
@@ -1880,6 +1882,18 @@ html,
 	margin-bottom: 3.5rem;
 }
 
+.mt-2\.5{
+	margin-top: 0.625rem;
+}
+
+.mt-2{
+	margin-top: 0.5rem;
+}
+
+.mt-16{
+	margin-top: 4rem;
+}
+
 .mt-4{
 	margin-top: 1rem;
 }
@@ -1892,20 +1906,8 @@ html,
 	margin-bottom: 0.25rem;
 }
 
-.mt-16{
-	margin-top: 4rem;
-}
-
 .mb-24{
 	margin-bottom: 6rem;
-}
-
-.mt-2{
-	margin-top: 0.5rem;
-}
-
-.mt-2\.5{
-	margin-top: 0.625rem;
 }
 
 .mr-2\.5{
@@ -2138,6 +2140,10 @@ html,
 
 .h-\[14rem\]{
 	height: 14rem;
+}
+
+.h-\[24\.625rem\]{
+	height: 24.625rem;
 }
 
 .h-\[15\.75rem\]{
@@ -2960,6 +2966,10 @@ html,
 	padding-left: 0.5rem;
 }
 
+.pt-10{
+	padding-top: 2.5rem;
+}
+
 .pb-4{
 	padding-bottom: 1rem;
 }
@@ -3034,6 +3044,10 @@ html,
 	line-height: 2rem;
 }
 
+.text-\[3\.125rem\]{
+	font-size: 3.125rem;
+}
+
 .text-\[2\.5rem\]{
 	font-size: 2.5rem;
 }
@@ -3054,10 +3068,6 @@ html,
 
 .text-\[9\.375rem\]{
 	font-size: 9.375rem;
-}
-
-.text-\[3\.125rem\]{
-	font-size: 3.125rem;
 }
 
 .text-\[0\.5rem\]{
@@ -3113,16 +3123,16 @@ html,
 	line-height: 1.125rem;
 }
 
+.leading-\[5\.5rem\]{
+	line-height: 5.5rem;
+}
+
 .leading-\[1\.375rem\]{
 	line-height: 1.375rem;
 }
 
 .leading-9{
 	line-height: 2.25rem;
-}
-
-.leading-\[5\.5rem\]{
-	line-height: 5.5rem;
 }
 
 .leading-8{
@@ -3902,6 +3912,10 @@ html,
 		position: absolute;
 	}
 
+	.lg\:relative{
+		position: relative;
+	}
+
 	.lg\:sticky{
 		position: sticky;
 	}
@@ -4048,6 +4062,14 @@ html,
 		margin-left: 16.666666666666668%;
 	}
 
+	.lg\:mb-9{
+		margin-bottom: 2.25rem;
+	}
+
+	.lg\:ml-3\/12{
+		margin-left: 25%;
+	}
+
 	.lg\:-mr-2\.5{
 		margin-right: -0.625rem;
 	}
@@ -4066,10 +4088,6 @@ html,
 
 	.lg\:ml-8\/12{
 		margin-left: 66.66666666666667%;
-	}
-
-	.lg\:ml-3\/12{
-		margin-left: 25%;
 	}
 
 	.lg\:mb-16{
@@ -4765,5 +4783,3 @@ html,
 	}
 }
 
-
-/*# sourceMappingURL=main.css.map*/
