@@ -1783,6 +1783,11 @@ html,
 	margin-bottom: 1rem;
 }
 
+.my-32{
+	margin-top: 8rem;
+	margin-bottom: 8rem;
+}
+
 .mb-\[3\.75rem\]{
 	margin-bottom: 3.75rem;
 }
@@ -2229,6 +2234,10 @@ html,
 
 .h-2\.5{
 	height: 0.625rem;
+}
+
+.h-\[14\.75rem\]{
+	height: 14.75rem;
 }
 
 .min-h-\[4\.375rem\]{
@@ -3031,6 +3040,10 @@ html,
 
 .text-\[2\.8125rem\]{
 	font-size: 2.8125rem;
+}
+
+.text-\[5\.625rem\]{
+	font-size: 5.625rem;
 }
 
 .text-3xs{
@@ -3978,6 +3991,11 @@ html,
 		margin-bottom: 16rem;
 	}
 
+	.lg\:mx-14{
+		margin-left: 3.5rem;
+		margin-right: 3.5rem;
+	}
+
 	.lg\:mb-0{
 		margin-bottom: 0px;
 	}
@@ -4272,6 +4290,10 @@ html,
 
 	.lg\:h-\[38rem\]{
 		height: 38rem;
+	}
+
+	.lg\:h-\[33\.875rem\]{
+		height: 33.875rem;
 	}
 
 	.lg\:max-h-\[calc\(100vh_-_10\.5rem\)\]{
