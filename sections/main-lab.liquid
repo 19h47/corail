@@ -1,34 +1,32 @@
 
-	<div class="py-5">
-		<div class="container">
-			<div class="row">
-				<div>
-					<div class="h-[20.1875rem] lg:h-[44.625rem] rounded-[1.25rem] overflow-hidden relative bg-orange-grayish">
-						{% if section.settings.video %}
-							<video
-								class="h-full w-full object-cover relative z-1"
-								loop
-								muted
-								autoplay
-								playsinline
-								poster="{{ section.settings.video.preview_image | image_url }}"
-							>
-								{% for source in section.settings.video.sources %}
-									<source src="{{ source.url }}" type="{{ source.mime_type }}">
-								{% endfor %}
-							</video>
-						{% endif %}
+<div class="py-5">
+	<div class="container">
+		<div class="row">
+			<div>
+				<div class="h-[20.1875rem] lg:h-[44.625rem] rounded-[1.25rem] overflow-hidden relative bg-orange-grayish">
+					{% if section.settings.video %}
+						<video
+							class="h-full w-full object-cover relative z-1"
+							loop
+							muted
+							autoplay
+							playsinline
+							poster="{{ section.settings.video.preview_image | image_url }}"
+						>
+							{% for source in section.settings.video.sources %}
+								<source src="{{ source.url }}" type="{{ source.mime_type }}">
+							{% endfor %}
+						</video>
+					{% endif %}
 
-						<div class="absolute inset-0 flex items-center justify-center z-2">
-							<h1 class="font-display font-medium text-6xl uppercase text-white">{{- page.title -}}</h1>
-						</div>
+					<div class="absolute inset-0 flex items-center justify-center z-2">
+						<h1 class="font-display font-medium text-6xl uppercase text-white">{{- page.title -}}</h1>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-
-
+</div>
 
 {% schema %}
 {
