@@ -407,7 +407,7 @@
 		},
 		"presets": { "name": "Lab / Contenu" }
 	  },
-	  "slider_image": {
+	  "lab-slider-image": {
 		"name": "Lab / Carrousel d'images",
 		"settings": {
 			"anchor": {
@@ -427,7 +427,8 @@
 		  "content": {
 			"label": "Contenu"
 		  }
-		}
+		},
+		"presets": {"name": "Lab / Carrousel d'image"}
 	  },
 	  "lab-slider-content": {
 		"name": "Lab / Carrousel d'images",
@@ -451,6 +452,9 @@
 		  "content": {
 			"label": "Contenu"
 		  }
+		},
+		"presets": {
+			"name": "Lab / Carrousel d'images"
 		}
 	  },
     "testimonials": {
