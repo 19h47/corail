@@ -6,19 +6,19 @@
         "dbe3ff3e-8bb3-4d48-9800-87cfbffea61a": {
           "type": "article",
           "settings": {
-            "article": "stories/le-manta-geant-des-mers-contre-la-pollution"
+            "article": "stories\/le-manta-geant-des-mers-contre-la-pollution"
           }
         },
         "f57a317a-8f65-4076-a2a9-1b8084e5533e": {
           "type": "article",
           "settings": {
-            "article": "stories/if-the-ocean-dies-we-die-paul-watson"
+            "article": "stories\/if-the-ocean-dies-we-die-paul-watson"
           }
         },
         "061c3e49-7b8e-4bda-b803-7c4a4742c02d": {
           "type": "article",
           "settings": {
-            "article": "stories/a-unique-seaweed-based-material"
+            "article": "stories\/a-unique-seaweed-based-material"
           }
         }
       },
@@ -39,7 +39,6 @@
     "main": {
       "type": "main-blog",
       "settings": {
-        "layout": "collage"
       }
     },
     "88b8fcd2-d20c-4b78-8861-5cb6ac5d6849": {

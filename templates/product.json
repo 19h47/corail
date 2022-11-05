@@ -41,7 +41,7 @@
         "ecddec68-4937-46a0-ad05-4a502005e951": {
           "type": "announcement",
           "settings": {
-            "text": "//FREE 72H WORLDWIDE DELIVERY//FREE RETURNS//PAY IN 3 TIMES FOR FREE"
+            "text": "\/\/FREE 72H WORLDWIDE DELIVERY\/\/FREE RETURNS\/\/PAY IN 3 TIMES FOR FREE"
           }
         },
         "caption": {
@@ -126,8 +126,6 @@
         "share"
       ],
       "settings": {
-        "media_position": "left",
-        "gallery_layout": "stacked",
         "media_size": "large",
         "mobile_thumbnails": "hide",
         "hide_variants": true,
@@ -151,39 +149,39 @@
           "type": "collapsible_tab",
           "settings": {
             "title": "Composition",
-            "content": "<p>//90% recycled upper, made with recycled plastic waste and corn-based induction<br/>//signature recycled outsole, made of 80% recycled rubber and 20% SEADUST<br/>//100% recycled laces made with PET bottles<br/>//handmade in our workshop in Portugal<br/>//abrasion-tested, friction-tested, bend-tested<br/>//water-repellent treatment</p>"
+            "content": "<p>\/\/90% recycled upper, made with recycled plastic waste and corn-based induction<br\/>\/\/signature recycled outsole, made of 80% recycled rubber and 20% SEADUST<br\/>\/\/100% recycled laces made with PET bottles<br\/>\/\/handmade in our workshop in Portugal<br\/>\/\/abrasion-tested, friction-tested, bend-tested<br\/>\/\/water-repellent treatment<\/p>"
           }
         },
         "a3d26fe5-8b20-421d-a36d-7371219c9f0d": {
           "type": "collapsible_tab",
           "settings": {
             "title": "Livraison",
-            "content": "<p>//Lorem ipsum dolor sit amet, consectetur adipiscing elit<br/>//Fusce eu purus et ante vehicula laoreet<br/>//Nulla facilisi<br/>//Aliquam pellentesque ut tortor aliquet hendrerit</p>"
+            "content": "<p>\/\/Lorem ipsum dolor sit amet, consectetur adipiscing elit<br\/>\/\/Fusce eu purus et ante vehicula laoreet<br\/>\/\/Nulla facilisi<br\/>\/\/Aliquam pellentesque ut tortor aliquet hendrerit<\/p>"
           }
         },
         "ef963a79-a748-461c-85e0-0b3b2b4a321c": {
           "type": "collapsible_tab",
           "settings": {
             "title": "Echanges et retours",
-            "content": "<p>//Aliquam cursus purus id leo varius, eu condimentum ex facilisis<br/>//Ut mollis consectetur imperdiet<br/>//Cras viverra mi at felis laoreet, sed condimentum erat pharetra</p>"
+            "content": "<p>\/\/Aliquam cursus purus id leo varius, eu condimentum ex facilisis<br\/>\/\/Ut mollis consectetur imperdiet<br\/>\/\/Cras viverra mi at felis laoreet, sed condimentum erat pharetra<\/p>"
           }
         },
         "template--15990350479528__5352a5eb-3296-4b9c-9021-e759c6c0ea6b-166669405224db7574-1": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/person-stands-on-rocks-poking-out-of-the-ocean-shoreline.jpg"
+            "image": "shopify:\/\/shop_images\/person-stands-on-rocks-poking-out-of-the-ocean-shoreline.jpg"
           }
         },
         "d6ea013c-9ab6-46e8-86de-20702f42ff31": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/person-fishing-on-the-beach-is-silhouetted-at-sunset.jpg"
+            "image": "shopify:\/\/shop_images\/person-fishing-on-the-beach-is-silhouetted-at-sunset.jpg"
           }
         },
         "324a9f25-d1c3-420a-8866-ba0bac024883": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/green-and-white-marbled-coloring.jpg"
+            "image": "shopify:\/\/shop_images\/green-and-white-marbled-coloring.jpg"
           }
         }
       },
@@ -212,7 +210,7 @@
         "image-with-text-1": {
           "type": "text",
           "settings": {
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
             "text_style": "body"
           }
         }
@@ -258,7 +256,7 @@
       "type": "twocolumn",
       "settings": {
         "title": "Started from the bottle",
-        "column_left_image": "shopify://shop_images/aged-tree-bark-texture.jpg",
+        "column_left_image": "shopify:\/\/shop_images\/aged-tree-bark-texture.jpg",
         "column_left_title_research": "Research",
         "column_left_icon_research": true,
         "column_left_title_technical": "Semelle technique",
@@ -268,15 +266,15 @@
         "column_right_title": "matériaux et procédés INNOVANT",
         "column_right_content": "CORAIL°Lab est un espace permettant de réfléchir à des solutions innovantes pour retirer puis transformer les déchets marins en matière première.",
         "column_right_button_label": "Découvrir le Lab",
-        "column_right_button_link": "shopify://pages/lab",
-        "column_right_image": "shopify://shop_images/green-and-white-marbled-coloring.jpg"
+        "column_right_button_link": "shopify:\/\/pages\/lab",
+        "column_right_image": "shopify:\/\/shop_images\/green-and-white-marbled-coloring.jpg"
       }
     },
     "6a936414-7d9e-4e58-8e5a-38c840ae7acb": {
       "type": "twocolumn",
       "settings": {
         "title": "HANDMADE TO LAST",
-        "column_left_image": "shopify://shop_images/legs-dangling-over-ledge-showing-off-fashion-sneakers.jpg",
+        "column_left_image": "shopify:\/\/shop_images\/legs-dangling-over-ledge-showing-off-fashion-sneakers.jpg",
         "column_left_title_research": "RESISTANCE TESTED INEXTREME CONDITIONS",
         "column_left_icon_research": false,
         "column_left_title_technical": "",
@@ -287,7 +285,7 @@
         "column_right_content": "Our products are handmade in our workshop in Portugal and submitted to extreme durability tests to insure their quality and long-lastingness. The real sustainable product is the one you keep.",
         "column_right_button_label": "OUR WORKSHOP",
         "column_right_button_link": "#",
-        "column_right_image": "shopify://shop_images/white-speckled-sneakers-and-dark-denim-beside-brick-wall.jpg"
+        "column_right_image": "shopify:\/\/shop_images\/white-speckled-sneakers-and-dark-denim-beside-brick-wall.jpg"
       }
     },
     "634fcd5e-4684-44fe-b78a-33275a9b184c": {

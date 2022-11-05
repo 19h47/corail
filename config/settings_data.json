@@ -102,14 +102,14 @@
     "sold_out_badge_color_scheme": "inverse",
     "accent_icons": "text",
     "social_twitter_link": "",
-    "social_facebook_link": "https://facebook.com/",
+    "social_facebook_link": "https:\/\/facebook.com\/",
     "social_pinterest_link": "",
-    "social_instagram_link": "https://instagram.com/",
+    "social_instagram_link": "https:\/\/instagram.com\/",
     "social_tiktok_link": "",
     "social_tumblr_link": "",
-    "social_twitch_link": "https://twitch.com/",
+    "social_twitch_link": "https:\/\/twitch.com\/",
     "social_snapchat_link": "",
-    "social_youtube_link": "https://youtube.com/",
+    "social_youtube_link": "https:\/\/youtube.com\/",
     "social_vimeo_link": "",
     "predictive_search_enabled": true,
     "predictive_search_show_vendor": false,
@@ -123,7 +123,7 @@
             "type": "announcement",
             "settings": {
               "text": "Livraison offerte - Retours offerts - Paiement en 3x sans frais",
-              "link": "https://19h47.fr"
+              "link": "https:\/\/19h47.fr"
             }
           }
         },
@@ -142,24 +142,6 @@
       },
       "footer": {
         "type": "footer",
-        "blocks": {
-          "a09f9a8d-4ac1-4360-9042-5bc0926f32d6": {
-            "type": "link_list_secondary",
-            "settings": {
-              "menu": "footer-secondary"
-            }
-          },
-          "footer-0": {
-            "type": "link_list",
-            "settings": {
-              "menu": "footer"
-            }
-          }
-        },
-        "block_order": [
-          "a09f9a8d-4ac1-4360-9042-5bc0926f32d6",
-          "footer-0"
-        ],
         "settings": {
           "newsletter_enable": true,
           "enable_country_selector": true,
