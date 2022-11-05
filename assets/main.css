@@ -1748,6 +1748,11 @@ html,
 	margin-right: -1.25rem;
 }
 
+.my-32{
+	margin-top: 8rem;
+	margin-bottom: 8rem;
+}
+
 .my-10{
 	margin-top: 2.5rem;
 	margin-bottom: 2.5rem;
@@ -1781,11 +1786,6 @@ html,
 .my-4{
 	margin-top: 1rem;
 	margin-bottom: 1rem;
-}
-
-.my-32{
-	margin-top: 8rem;
-	margin-bottom: 8rem;
 }
 
 .mb-\[3\.75rem\]{
@@ -1904,6 +1904,10 @@ html,
 	margin-top: 0.5rem;
 }
 
+.mt-2\.5{
+	margin-top: 0.625rem;
+}
+
 .mr-2\.5{
 	margin-right: 0.625rem;
 }
@@ -1950,10 +1954,6 @@ html,
 
 .mb-\[1\.625rem\]{
 	margin-bottom: 1.625rem;
-}
-
-.mt-2\.5{
-	margin-top: 0.625rem;
 }
 
 .ml-4{
@@ -2160,6 +2160,10 @@ html,
 	height: 20.1875rem;
 }
 
+.h-\[14\.75rem\]{
+	height: 14.75rem;
+}
+
 .h-\[calc\(100vh_-_4\.375rem\)\]{
 	height: calc(100vh - 4.375rem);
 }
@@ -2234,10 +2238,6 @@ html,
 
 .h-2\.5{
 	height: 0.625rem;
-}
-
-.h-\[14\.75rem\]{
-	height: 14.75rem;
 }
 
 .min-h-\[4\.375rem\]{
@@ -3040,10 +3040,6 @@ html,
 
 .text-\[2\.8125rem\]{
 	font-size: 2.8125rem;
-}
-
-.text-\[5\.625rem\]{
-	font-size: 5.625rem;
 }
 
 .text-3xs{
@@ -3971,6 +3967,11 @@ html,
 		margin-bottom: 5rem;
 	}
 
+	.lg\:mx-14{
+		margin-left: 3.5rem;
+		margin-right: 3.5rem;
+	}
+
 	.lg\:my-24{
 		margin-top: 6rem;
 		margin-bottom: 6rem;
@@ -3989,11 +3990,6 @@ html,
 	.lg\:my-\[16rem\]{
 		margin-top: 16rem;
 		margin-bottom: 16rem;
-	}
-
-	.lg\:mx-14{
-		margin-left: 3.5rem;
-		margin-right: 3.5rem;
 	}
 
 	.lg\:mb-0{
@@ -4256,6 +4252,10 @@ html,
 		height: 44.625rem;
 	}
 
+	.lg\:h-\[33\.875rem\]{
+		height: 33.875rem;
+	}
+
 	.lg\:h-\[calc\(100vh_-_4\.375rem\)\]{
 		height: calc(100vh - 4.375rem);
 	}
@@ -4290,10 +4290,6 @@ html,
 
 	.lg\:h-\[38rem\]{
 		height: 38rem;
-	}
-
-	.lg\:h-\[33\.875rem\]{
-		height: 33.875rem;
 	}
 
 	.lg\:max-h-\[calc\(100vh_-_10\.5rem\)\]{

@@ -20,7 +20,7 @@
 					{% endif %}
 
 					<div class="absolute inset-0 flex items-center justify-center z-2">
-						<h1 class="font-display font-medium text-6xl uppercase text-white">{{- page.title -}}</h1>
+						<h1 class="font-display font-semibold text-6xl uppercase text-white">{{- page.title -}}</h1>
 					</div>
 				</div>
 			</div>
@@ -52,67 +52,7 @@
 			</div>
 		</div>
 	{% endif %}
-
-	{% if 'content' == block.type %}
-		<div>
-			<div class="container">
-				<div class="row">
-					<div>
-						CONTENT
-					</div>
-				</div>
-			</div>
-		</div>
-	{% endif %}
-
 {% endfor %}
-
-<div>
-	<div class="container">
-		<div class="row">
-			<div>
-				{% for block in section.blocks %}
-					{% if 'slider_content_title' == block.type %}
-						<h2 class="font-bold text-[5.625rem] font-display uppercase">{{ block.settings.title }}</h2>
-					{% endif %}
-
-				{% endfor %}
-
-				<ul>
-					{% for block in section.blocks %}
-						{% if 'slider_content' == block.type %}
-							<li>SLIDER CONTENT</li>
-						{% endif %}
-					{% endfor %}
-				</ul>
-			</div>
-		</div>
-	</div>
-</div>
-
-<div>
-	<div class="container">
-		<div class="row">
-			<div>
-				{% for block in section.blocks %}
-					{% if 'slider_image_title' == block.type %}
-						<h2 class="font-bold text-[5.625rem] font-display uppercase">{{ block.settings.title }}</h2>
-					{% endif %}
-
-				{% endfor %}
-
-				<ul>
-					{% for block in section.blocks %}
-						{% if 'slider_content' == block.type %}
-							<li>SLIDER IMAGE</li>
-						{% endif %}
-					{% endfor %}
-				</ul>
-			</div>
-		</div>
-	</div>
-</div>
-
 
 {% schema %}
 {
@@ -169,94 +109,6 @@
           "type": "textarea",
           "id": "key_figures_content",
           "label": "t:sections.main-lab.blocks.introduction.settings.key_figures_content.label"
-        }
-      ]
-    },
-    {
-      "type": "content",
-      "limit": 1,
-      "name": "t:sections.main-lab.blocks.content.name",
-      "settings": [
-        {
-          "type": "text",
-          "id": "anchor",
-          "label": "t:sections.main-lab.blocks.content.settings.anchor.label"
-        }
-      ]
-    },
-    {
-      "type": "slider_content_title",
-      "limit": 1,
-      "name": "t:sections.main-lab.blocks.slider_content_title.name",
-      "settings": [
-        {
-          "type": "text",
-          "id": "anchor",
-          "label": "t:sections.main-lab.blocks.slider_content_title.settings.anchor.label"
-        },
-        {
-          "type": "text",
-          "id": "title",
-          "label": "t:sections.main-lab.blocks.slider_content_title.settings.title.label"
-        }
-      ]
-    },
-    {
-      "type": "slider_content",
-      "name": "t:sections.main-lab.blocks.slider_content.name",
-      "settings": [
-        {
-          "type": "image_picker",
-          "id": "image",
-          "label": "t:sections.main-lab.blocks.slider_content.settings.image.label"
-        },
-        {
-          "type": "text",
-          "id": "title",
-          "label": "t:sections.main-lab.blocks.slider_content.settings.title.label"
-        },
-        {
-          "type": "textarea",
-          "id": "content",
-          "label": "t:sections.main-lab.blocks.slider_content.settings.content.label"
-        }
-      ]
-    },
-    {
-      "type": "slider_image_title",
-      "limit": 1,
-      "name": "t:sections.main-lab.blocks.slider_image_title.name",
-      "settings": [
-        {
-          "type": "text",
-          "id": "anchor",
-          "label": "t:sections.main-lab.blocks.slider_image_title.settings.anchor.label"
-        },
-        {
-          "type": "text",
-          "id": "title",
-          "label": "t:sections.main-lab.blocks.slider_image_title.settings.title.label"
-        }
-      ]
-    },
-    {
-      "type": "slider_image",
-      "name": "t:sections.main-lab.blocks.slider_image.name",
-      "settings": [
-        {
-          "type": "image_picker",
-          "id": "image",
-          "label": "t:sections.main-lab.blocks.slider_image.settings.image.label"
-        },
-        {
-          "type": "text",
-          "id": "title",
-          "label": "t:sections.main-lab.blocks.slider_image.settings.title.label"
-        },
-        {
-          "type": "textarea",
-          "id": "content",
-          "label": "t:sections.main-lab.blocks.slider_image.settings.content.label"
         }
       ]
     }

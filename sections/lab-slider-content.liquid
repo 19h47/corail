@@ -1,0 +1,49 @@
+<div>LAB SLIDER CONTENT</div>
+
+{% schema %}
+{
+	"name": "t:sections.lab-slider-content.name",
+	"tag": "section",
+	"class": "section section-lab-slider-content",
+	"settings": [
+	  {
+		"type": "text",
+		"id": "anchor",
+		"label": "t:sections.lab-slider-content.settings.anchor.label",
+		"placeholder": "t:sections.lab-slider-content.settings.anchor.placeholder"
+	  },
+	  {
+		"type": "text",
+		"id": "title",
+		"label": "t:sections.lab-slider-content.settings.title.label",
+		"placeholder": "t:sections.lab-slider-content.settings.title.placeholder"
+	  }
+	],
+	"blocks": [
+		{
+			"type": "slide",
+			"name": "t:sections.lab-slider-content.blocks.slide.name",
+			"settings": {
+				"type": "image_picker",
+				"id": "image",
+				"label": "t:sections.lab-slider-content.blocks.slide.settings.image.label"
+			},
+			{
+				"type": "text",
+				"id": "title",
+				"label": "t:sections.lab-slider-content.blocks.slide.settings.title.label"
+			},
+			{
+				"type": "textarea",
+				"id": "content",
+				"label": "t:sections.lab-slider-content.blocks.slide.settings.content.label"
+			}
+		}
+	],
+	"presets": [
+		{
+			"name": "t:sections.lab-slider-content.presets.name"
+		}
+	]
+  }
+{% endschema %}
