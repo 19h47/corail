@@ -1078,7 +1078,19 @@
           "name": "Menu",
           "settings": {
             "heading": {
-              "label": "En-tête"
+              "label": "Menu principal du pied de page"
+            },
+            "menu": {
+              "label": "Menu",
+              "info": "Affiche uniquement les éléments de menu de niveau supérieur."
+            }
+          }
+        },
+        "link_list_secondary": {
+          "name": "Menu",
+          "settings": {
+            "heading": {
+              "label": "Menu secondaire du pied de page"
             },
             "menu": {
               "label": "Menu",

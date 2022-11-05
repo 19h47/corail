@@ -1,3 +1,6 @@
+/*!********************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[8].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[8].use[2]!./src/stylesheets/styles.css ***!
+  \********************************************************************************************************************************************************************************/
 /**
  * Base
  *
@@ -2224,6 +2227,14 @@ html,
 	height: 0.625rem;
 }
 
+.h-\[44\.625rem\]{
+	height: 44.625rem;
+}
+
+.h-\[20\.1875rem\]{
+	height: 20.1875rem;
+}
+
 .w-\[1\.125rem\]{
 	width: 1.125rem;
 }
@@ -2586,6 +2597,10 @@ html,
 
 .rounded-lg{
 	border-radius: 0.5rem;
+}
+
+.rounded-\[1\.25rem\]{
+	border-radius: 1.25rem;
 }
 
 .rounded-br-full{
@@ -2958,6 +2973,10 @@ html,
 
 .pt-1{
 	padding-top: 0.25rem;
+}
+
+.pt-5{
+	padding-top: 1.25rem;
 }
 
 .text-left{
@@ -4255,6 +4274,10 @@ html,
 		height: 38rem;
 	}
 
+	.lg\:h-\[44\.625rem\]{
+		height: 44.625rem;
+	}
+
 	.lg\:max-h-\[calc\(100vh_-_10\.5rem\)\]{
 		max-height: calc(100vh - 10.5rem);
 	}
@@ -4728,3 +4751,5 @@ html,
 	}
 }
 
+
+/*# sourceMappingURL=main.css.map*/

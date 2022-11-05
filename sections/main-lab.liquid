@@ -1,5 +1,32 @@
-<div class="block">
-	LAB
+<div class="block" style="background-color: #ECEAE8; background-size: 4.5rem 4.5rem; background-image: linear-gradient(to right, rgba(221, 216, 209,1) 0.0625rem, transparent 0.0625rem), linear-gradient(to bottom, rgba(221, 216, 209, 1) 0.0625rem, transparent 0.0625rem);">
+	<div class="py-5">
+		<div class="container">
+			<div class="row">
+				<div>
+					<div class="h-[20.1875rem] lg:h-[44.625rem] rounded-[1.25rem] overflow-hidden relative bg-orange-grayish">
+						{% if section.settings.video %}
+							<video
+								class="h-full w-full object-cover relative z-1"
+								loop
+								muted
+								autoplay
+								playsinline
+								poster="{{ section.settings.video.preview_image | image_url }}"
+							>
+								{% for source in section.settings.video.sources %}
+									<source src="{{ source.url }}" type="{{ source.mime_type }}">
+								{% endfor %}
+							</video>
+						{% endif %}
+
+						<div class="absolute inset-0 flex items-center justify-center z-2">
+							<h1 class="font-display font-medium text-6xl uppercase text-white">{{- page.title -}}</h1>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
 
 {% schema %}
