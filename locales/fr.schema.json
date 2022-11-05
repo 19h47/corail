@@ -1824,6 +1824,7 @@
 				"key_figures": {
 					"name": "Chiffre clé",
 					"settings": {
+						"anchor": {"label": "Ancre"},
 						"title": {"label": "Titre"},
 						"content": {"label": "Contenu"}
 					}
