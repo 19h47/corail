@@ -2,12 +2,19 @@
 	<div class="image my-14">
 		<div class="lg:container">
 			<div class="lg:row">
-				<div class="lg:col-10/12 lg:ml-1/12">
-					{{ section.settings.image | image_url: width: 692, height: 888 | image_tag:
-						loading: 'lazy',
-						widths: '275, 550, 710, 1420',
-						class: 'w-full h-[14rem] lg:h-[33.375rem] object-cover object-center block'
-					}}
+				<div class="{% unless section.settings.radius %} lg:col-10/12 lg:ml-1/12 {% endunless %}">
+					<div class="relative {% if section.settings.radius %} overflow-hidden rounded-[1.25rem] {% endif %}">
+						{{ section.settings.image | image_url: width: 692, height: 888 | image_tag:
+							loading: 'lazy',
+							widths: '275, 550, 710, 1420',
+							class: 'w-full h-[14rem] lg:h-[33.375rem] object-cover object-center block relative z-1'
+						}}
+						{% if section.settings.title != blank %}
+							<div class="absolute flex items-center justify-center z-2 inset-0 leading-none font-bold">
+								<p class="text-white text-[5.625rem] text-center font-display uppercase">{{- section.settings.title | newline_to_br -}}</p>
+							</div>
+						{% endif %}
+					</div>
 				</div>
 			</div>
 		</div>
