@@ -355,7 +355,9 @@
       "settings": {
         "image": {
           "label": "Image"
-        }
+        },
+		"title": {"label": "Titre"},
+		"radius": {"label": "Coins arrondis"}
       },
       "presets": {
         "name": "Image"
