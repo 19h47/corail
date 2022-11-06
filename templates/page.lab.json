@@ -45,6 +45,44 @@
         "title": "Materials"
       }
     },
+    "5372bd44-c21e-48e5-8177-bdd5b3213182": {
+      "type": "lab-slider-image",
+      "blocks": {
+        "0064150f-cc3d-4d0b-9aeb-e372f7b6ac59": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/science-research-lab-microscope.jpg",
+            "title": "MArseille Lab",
+            "content": "The CORAIL° Lab is located in our harbour, in Marseille, France. It enables us to sort and transform the marine waste we collect in ultra-short circuit. In this innovative space, our fishermen and technicians turn marine waste into high-performance materials we use to create our products."
+          }
+        },
+        "4073072f-62f3-43dd-88d2-6486e8ae05e0": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/research-lab-pressure-guage.jpg",
+            "title": "",
+            "content": ""
+          }
+        },
+        "8cd71456-7b6d-4373-b6bd-51b81144c50a": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/science-lab-chemical-bottles.jpg",
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "block_order": [
+        "0064150f-cc3d-4d0b-9aeb-e372f7b6ac59",
+        "4073072f-62f3-43dd-88d2-6486e8ae05e0",
+        "8cd71456-7b6d-4373-b6bd-51b81144c50a"
+      ],
+      "settings": {
+        "anchor": "",
+        "title": ""
+      }
+    },
     "0dbe9a85-a8fe-48eb-bf3d-0d4e3f1e1ddc": {
       "type": "featured-blog",
       "settings": {
@@ -62,6 +100,7 @@
   "order": [
     "main",
     "187bb045-7b95-4bed-9568-26e07605085f",
+    "5372bd44-c21e-48e5-8177-bdd5b3213182",
     "0dbe9a85-a8fe-48eb-bf3d-0d4e3f1e1ddc",
     "34f17f54-25d2-4af2-83b6-293e46a79012"
   ]
