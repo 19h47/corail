@@ -20,7 +20,7 @@
 					{% endif %}
 
 					<div class="absolute inset-0 flex items-center justify-center z-2">
-						<h1 class="font-display font-semibold text-6xl uppercase text-white">{{- page.title -}}</h1>
+						<h1 class="font-display font-semibold text-[2.5rem] lg:text-6xl uppercase text-white text-center">{{- page.title -}}</h1>
 					</div>
 				</div>
 			</div>
@@ -30,22 +30,22 @@
 
 {% for block in section.blocks %}
 	{% if 'introduction' == block.type %}
-		<div class="my-32">
+		<div class="lg:my-32">
 			<div class="container">
 				<div class="row lg:items-center">
-					<div class="lg:ml-3/12 lg:col-4/12">
+					<div class="lg:col-4/12 lg:order-2">
+						<div class="lg:mx-14">
+							<h2 class="font-semibold text-3xl font-display uppercase">{{- block.settings.title -}}</h2>
+							<p class="mt-2.5">{{- block.settings.content -}}</p>
+						</div>
+					</div>
+					<div class="lg:ml-3/12 lg:col-4/12 lg:order-1 mt-6 lg:mt-0">
 						<div class="h-[14.75rem] lg:h-[33.875rem] rounded-[1.25rem] overflow-hidden">
 							{{ block.settings.image | image_url: width: 692, height: 888 | image_tag:
 								loading: 'lazy',
 								widths: '275, 550, 710, 1420',
 								class: 'w-full h-full object-cover object-center block'
 							}}
-						</div>
-					</div>
-					<div class="lg:col-4/12">
-						<div class="lg:mx-14">
-							<h2 class="font-semibold text-3xl font-display uppercase">{{- block.settings.title -}}</h2>
-							<p class="mt-2.5">{{- block.settings.content -}}</p>
 						</div>
 					</div>
 				</div>

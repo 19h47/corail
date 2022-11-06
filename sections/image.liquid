@@ -3,7 +3,7 @@
 		<div class="lg:container">
 			<div class="lg:row">
 				<div class="{% unless section.settings.radius %} lg:col-10/12 lg:ml-1/12 {% endunless %}">
-					<div class="relative {% if section.settings.radius %} overflow-hidden rounded-[1.25rem] {% endif %}">
+					<div class="relative {% if section.settings.radius %} lg:overflow-hidden lg:rounded-[1.25rem] {% endif %}">
 						{{ section.settings.image | image_url: width: 692, height: 888 | image_tag:
 							loading: 'lazy',
 							widths: '275, 550, 710, 1420',

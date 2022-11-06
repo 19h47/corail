@@ -1735,11 +1735,6 @@ html,
 	margin-bottom: 4.375rem;
 }
 
-.my-36{
-	margin-top: 9rem;
-	margin-bottom: 9rem;
-}
-
 .my-6{
 	margin-top: 1.5rem;
 	margin-bottom: 1.5rem;
@@ -1748,11 +1743,6 @@ html,
 .-mx-5{
 	margin-left: -1.25rem;
 	margin-right: -1.25rem;
-}
-
-.my-32{
-	margin-top: 8rem;
-	margin-bottom: 8rem;
 }
 
 .my-10{
@@ -3976,9 +3966,19 @@ html,
 		margin-right: 0px;
 	}
 
+	.lg\:my-36{
+		margin-top: 9rem;
+		margin-bottom: 9rem;
+	}
+
 	.lg\:my-20{
 		margin-top: 5rem;
 		margin-bottom: 5rem;
+	}
+
+	.lg\:my-32{
+		margin-top: 8rem;
+		margin-bottom: 8rem;
 	}
 
 	.lg\:mx-14{
@@ -4436,6 +4436,14 @@ html,
 		margin-bottom: calc(4.625rem * var(--tw-space-y-reverse));
 	}
 
+	.lg\:overflow-hidden{
+		overflow: hidden;
+	}
+
+	.lg\:rounded-\[1\.25rem\]{
+		border-radius: 1.25rem;
+	}
+
 	.lg\:border-t-0{
 		border-top-width: 0px;
 	}
@@ -4694,6 +4702,12 @@ html,
 		padding-right: 0.625rem;
 	}
 
+	.lg\:col-3\/8{
+		width: 37.5%;
+		padding-left: 0.625rem;
+		padding-right: 0.625rem;
+	}
+
 	.lg\:col-3\.5\/12{
 		width: 29.166666666666668%;
 		padding-left: 0.625rem;
@@ -4714,6 +4728,12 @@ html,
 
 	.lg\:col-4\/12{
 		width: 33.333333%;
+		padding-left: 0.625rem;
+		padding-right: 0.625rem;
+	}
+
+	.lg\:col-5\/8{
+		width: 62.5%;
 		padding-left: 0.625rem;
 		padding-right: 0.625rem;
 	}

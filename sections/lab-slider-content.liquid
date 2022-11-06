@@ -11,7 +11,7 @@
 
 {%- capture sizes -%}(min-width: {{ settings.page_width }}px) {% if section.blocks.size == 1 %}calc({{ settings.page_width }}px - 100px){% else %}{{ settings.page_width | minus: 100 | times: 0.67 | round }}px{% endif %}, (min-width: 750px){% if section.blocks.size == 1 %} calc(100vw - 100px){% else %} 500px{% endif %}, calc(100vw - 30px)}{%- endcapture -%}
 
-<slider-component class="block overflow-hidden my-36" data-parameters='{"spaceBetween":20}'>
+<slider-component class="block overflow-hidden my-12 lg:my-36" data-parameters='{"spaceBetween":20}'>
 	<div class="container">
 		<div class="row mb-4 lg:mb-9">
 			<div class="lg:col-9/12 lg:ml-3/12 lg:relative">
@@ -38,8 +38,13 @@
 									class: 'w-full h-full object-cover object-center block'
 								}}
 							</div>
-							<p class="pt-10 text-xl font-display uppercase font-semibold">{{ block.settings.title }}</p>
-							<p class="mt-2.5">{{ block.settings.content }}</p>
+							{% if block.settings.title != blank %}
+								<p class="pt-10 text-xl font-display uppercase font-semibold">{{- block.settings.title -}}</p>
+							{% endif %}
+
+							{% if block.settings.content != blank %}
+								<p class="mt-2.5">{{ block.settings.content }}</p>
+							{% endif %}
 						</li>
 					{% endfor %}
 				</ul>
