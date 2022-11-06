@@ -29,6 +29,56 @@
         "radius": true
       }
     },
+    "7cede3da-85c8-4e61-b525-b27649a90776": {
+      "type": "lab-content",
+      "blocks": {
+        "02e83352-cdfe-41d8-84b5-e1719383ef9d": {
+          "type": "content",
+          "settings": {
+            "image_left": "shopify:\/\/shop_images\/navy-blue-and-white-left-shoe.jpg",
+            "title_left": "UPCYCLING MARINE WASTE",
+            "content_left": "The CORAIL° Lab is the engine room of our project, where we upcycle marine waste to address the sea pollution issue through innovation. And also where we crush a lot of plastic. A lot.",
+            "icon": "decor-01",
+            "title_right": "INSIDE THE GRINDER",
+            "content_right": "Tu use and ucpycle the warine waste we collect,we need to grind them fist. A big part of the CORAIL° Lab is about grindind plastic plastic waste, fishing nets and much more.\nGrinders gotta grind.",
+            "image_right": "shopify:\/\/shop_images\/filling-water-bottle.jpg"
+          }
+        },
+        "e415ea90-0da6-4648-a54f-358fc1c687d3": {
+          "type": "content",
+          "settings": {
+            "image_left": "shopify:\/\/shop_images\/science-lab-chemical-bottles.jpg",
+            "title_left": "Maecenas lobortis",
+            "content_left": "Cursus odio, eu ultrices elit hendrerit non. Integer aliquam vehicula cursus. Sed viverra placerat varius. Duis porta orci et velit sodales rhoncus",
+            "icon": "decor-03",
+            "title_right": "Sed ac diam a leo scelerisque dictum",
+            "content_right": "Nec vel lacus. Suspendisse lacinia sed massa et viverra. Donec in dignissim dolor. Cras ornare eros ac nisl volutpat, ac venenatis augue euismod",
+            "image_right": "shopify:\/\/shop_images\/research-lab-pressure-guage.jpg"
+          }
+        },
+        "0c048e64-b77b-4fe5-bf2b-9ba3b243976d": {
+          "type": "content",
+          "settings": {
+            "image_left": "shopify:\/\/shop_images\/purple-fish.jpg",
+            "title_left": "Sed eu arcu non nisi",
+            "content_left": "Vulputate bibendum. Aliquam sit amet dictum erat, a blandit erat. Proin ante ligula, maximus tristique facilisis ac, interdum in arcu.",
+            "icon": "decor-01",
+            "title_right": "Aenean efficitur",
+            "content_right": "Lacus ac mollis malesuada. Nam cursus, leo dapibus aliquet placerat, lacus mi iaculis est, eget lacinia tortor mauris sed",
+            "image_right": "shopify:\/\/shop_images\/aerial-view-of-mountains-of-crushed-metal-cubes.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "02e83352-cdfe-41d8-84b5-e1719383ef9d",
+        "e415ea90-0da6-4648-a54f-358fc1c687d3",
+        "0c048e64-b77b-4fe5-bf2b-9ba3b243976d"
+      ],
+      "settings": {
+        "anchor": "",
+        "title": ""
+      }
+    },
     "187bb045-7b95-4bed-9568-26e07605085f": {
       "type": "lab-slider-content",
       "blocks": {
@@ -122,6 +172,7 @@
   "order": [
     "main",
     "5153db78-0223-4783-9f3b-d0fbec0eace1",
+    "7cede3da-85c8-4e61-b525-b27649a90776",
     "187bb045-7b95-4bed-9568-26e07605085f",
     "5372bd44-c21e-48e5-8177-bdd5b3213182",
     "0dbe9a85-a8fe-48eb-bf3d-0d4e3f1e1ddc",
