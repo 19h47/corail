@@ -7,6 +7,12 @@
         "video": "shopify:\/\/files\/videos\/Video Of Workspace.mp4"
       }
     },
+    "5153db78-0223-4783-9f3b-d0fbec0eace1": {
+      "type": "image",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/electronic-components-for-science-project.jpg"
+      }
+    },
     "187bb045-7b95-4bed-9568-26e07605085f": {
       "type": "lab-slider-content",
       "blocks": {
@@ -99,6 +105,7 @@
   },
   "order": [
     "main",
+    "5153db78-0223-4783-9f3b-d0fbec0eace1",
     "187bb045-7b95-4bed-9568-26e07605085f",
     "5372bd44-c21e-48e5-8177-bdd5b3213182",
     "0dbe9a85-a8fe-48eb-bf3d-0d4e3f1e1ddc",
