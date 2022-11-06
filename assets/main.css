@@ -1,3 +1,6 @@
+/*!********************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[8].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[8].use[2]!./src/stylesheets/styles.css ***!
+  \********************************************************************************************************************************************************************************/
 /**
  * Base
  *
@@ -1515,6 +1518,50 @@ html,
 	background-color: rgb(51 51 51 / var(--tw-bg-opacity)) !important;
 }
 
+.swiper-pagination-with-numbers-bullets{
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+.swiper-pagination-with-numbers-bullets .swiper-pagination-bullet{
+	display: flex;
+	height: 1.5rem;
+	width: 1.5rem;
+	transform-origin: center;
+	align-items: center;
+	justify-content: center;
+	--tw-text-opacity: 1;
+	color: rgb(255 255 255 / var(--tw-text-opacity));
+	opacity: 0.2;
+	transition-property: all;
+	transition-duration: 1000ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+		background-color: #8b857c;
+		transform: scale(0.25);
+}
+
+.swiper-pagination-with-numbers-bullets .swiper-pagination-bullet > span{
+	opacity: 0;
+	transition-property: opacity;
+	transition-delay: 500ms;
+	transition-duration: 500ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.swiper-pagination-with-numbers-bullets
+		.swiper-pagination-bullet.swiper-pagination-bullet-active{
+	opacity: 1;
+		transform: scale(1);
+}
+
+.swiper-pagination-with-numbers-bullets
+		.swiper-pagination-bullet.swiper-pagination-bullet-active
+		> span{
+	opacity: 1;
+}
+
 .sr-only{
 	position: absolute;
 	width: 1px;
@@ -1872,16 +1919,24 @@ html,
 	margin-bottom: 3.5rem;
 }
 
-.mt-2\.5{
-	margin-top: 0.625rem;
+.mb-20{
+	margin-bottom: 5rem;
+}
+
+.mt-16{
+	margin-top: 4rem;
 }
 
 .mt-2{
 	margin-top: 0.5rem;
 }
 
-.mt-16{
-	margin-top: 4rem;
+.mb-16{
+	margin-bottom: 4rem;
+}
+
+.mt-2\.5{
+	margin-top: 0.625rem;
 }
 
 .mt-4{
@@ -2130,6 +2185,14 @@ html,
 
 .h-\[14rem\]{
 	height: 14rem;
+}
+
+.h-\[22\.25rem\]{
+	height: 22.25rem;
+}
+
+.h-\[12rem\]{
+	height: 12rem;
 }
 
 .h-\[24\.625rem\]{
@@ -3273,6 +3336,12 @@ html,
 	padding-right: 0.625rem;
 }
 
+.col-3\/9{
+	width: 33.333333333333336%;
+	padding-left: 0.625rem;
+	padding-right: 0.625rem;
+}
+
 .col-3\/12{
 	width: 25%;
 	padding-left: 0.625rem;
@@ -3956,6 +4025,10 @@ html,
 		order: 1;
 	}
 
+	.lg\:order-3{
+		order: 3;
+	}
+
 	.lg\:my-16{
 		margin-top: 4rem;
 		margin-bottom: 4rem;
@@ -4004,6 +4077,11 @@ html,
 	.lg\:my-\[16rem\]{
 		margin-top: 16rem;
 		margin-bottom: 16rem;
+	}
+
+	.lg\:my-auto{
+		margin-top: auto;
+		margin-bottom: auto;
 	}
 
 	.lg\:mb-0{
@@ -4062,12 +4140,12 @@ html,
 		margin-left: 16.666666666666668%;
 	}
 
-	.lg\:mb-9{
-		margin-bottom: 2.25rem;
-	}
-
 	.lg\:ml-3\/12{
 		margin-left: 25%;
+	}
+
+	.lg\:mb-9{
+		margin-bottom: 2.25rem;
 	}
 
 	.lg\:-mr-2\.5{
@@ -4258,6 +4336,14 @@ html,
 		height: 47.5rem;
 	}
 
+	.lg\:h-\[20\.125rem\]{
+		height: 20.125rem;
+	}
+
+	.lg\:h-\[13\.875rem\]{
+		height: 13.875rem;
+	}
+
 	.lg\:h-\[50\.875rem\]{
 		height: 50.875rem;
 	}
@@ -4352,6 +4438,10 @@ html,
 
 	.lg\:w-3\/10{
 		width: 30%;
+	}
+
+	.lg\:max-w-\[15\.875rem\]{
+		max-width: 15.875rem;
 	}
 
 	.lg\:translate-x-0{
@@ -4660,6 +4750,10 @@ html,
 		line-height: 1rem;
 	}
 
+	.lg\:leading-\[5\.5rem\]{
+		line-height: 5.5rem;
+	}
+
 	.lg\:transition-colors{
 		transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
 		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -4708,8 +4802,20 @@ html,
 		padding-right: 0.625rem;
 	}
 
+	.lg\:col-3\/9{
+		width: 33.333333333333336%;
+		padding-left: 0.625rem;
+		padding-right: 0.625rem;
+	}
+
 	.lg\:col-3\.5\/12{
 		width: 29.166666666666668%;
+		padding-left: 0.625rem;
+		padding-right: 0.625rem;
+	}
+
+	.lg\:col-3\/9{
+		width: 33.333333333333336%;
 		padding-left: 0.625rem;
 		padding-right: 0.625rem;
 	}
@@ -4803,3 +4909,5 @@ html,
 	}
 }
 
+
+/*# sourceMappingURL=main.css.map*/

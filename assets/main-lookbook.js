@@ -1,9 +1,9 @@
-/* global gsap, ScrollTrigger */
+/* global gsap, ScrollTrigger, ScrollToPlugin */
 
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 if (!customElements.get("main-lookbook")) {
-	class ArticleAudio extends HTMLElement {
+	class MainLookbook extends HTMLElement {
 		constructor() {
 			super();
 
@@ -85,5 +85,5 @@ if (!customElements.get("main-lookbook")) {
 		}
 	}
 
-	customElements.define("main-lookbook", ArticleAudio);
+	customElements.define("main-lookbook", MainLookbook);
 }

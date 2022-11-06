@@ -54,6 +54,10 @@
 		@apply col w-3.5/12;
 	}
 
+	.col-3\/9 {
+		@apply col w-3/9;
+	}
+
 	.col-3\/12 {
 		@apply col w-3/12;
 	}

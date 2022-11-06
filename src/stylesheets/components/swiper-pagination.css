@@ -18,4 +18,31 @@
 	.swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
 		@apply !bg-gray-very-dark;
 	}
+
+	.swiper-pagination-with-numbers-bullets {
+		@apply flex items-center gap-2
+	}
+
+	.swiper-pagination-with-numbers-bullets .swiper-pagination-bullet {
+		@apply w-6 h-6 transition-all duration-1000 ease-in-out origin-center flex items-center justify-center text-white opacity-20;
+
+		background-color: #8b857c;
+		transform: scale(0.25);
+	}
+
+	.swiper-pagination-with-numbers-bullets .swiper-pagination-bullet > span {
+		@apply opacity-0 delay-500 transition-opacity duration-500 ease-in-out;
+	}
+
+	.swiper-pagination-with-numbers-bullets
+		.swiper-pagination-bullet.swiper-pagination-bullet-active {
+		@apply opacity-100;
+		transform: scale(1);
+	}
+
+	.swiper-pagination-with-numbers-bullets
+		.swiper-pagination-bullet.swiper-pagination-bullet-active
+		> span {
+		@apply opacity-100;
+	}
 }

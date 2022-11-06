@@ -16,7 +16,7 @@
 		<div class="row mb-4 lg:mb-9">
 			<div class="lg:col-9/12 lg:ml-3/12 lg:relative">
 				<h2 class="text-[3.125rem] lg:text-[5.625rem] uppercase font-bold font-display text-center leading-[5.5rem]">
-					{{- section.settings.title -}}
+					{{- section.settings.title | newline_to_br -}}
 				</h2>
 
 				<div class="absolute inset-0 lg:flex items-center justify-end hidden">{% render 'slider-navigation' %}</div>
@@ -65,12 +65,6 @@
   "tag": "section",
   "class": "section section-lab-slider-content",
   "settings": [
-    {
-      "type": "text",
-      "id": "anchor",
-      "label": "t:sections.lab-slider-content.settings.anchor.label",
-      "placeholder": "t:sections.lab-slider-content.settings.anchor.placeholder"
-    },
     {
       "type": "text",
       "id": "title",

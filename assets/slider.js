@@ -22,6 +22,10 @@ if (!customElements.get("slider-component")) {
 				};
 			}
 
+			if (parameters.pagination && parameters.pagination.renderBullet) {
+				parameters.pagination.renderBullet = (index, className) => `<span class="${className}"><span>${(index + 1)}</span></span>`
+			}
+
 			this.swiper = new Swiper($swiper, {
 				...{ slidesPerView: "auto" },
 				...parameters,
