@@ -10,7 +10,9 @@
     "5153db78-0223-4783-9f3b-d0fbec0eace1": {
       "type": "image",
       "settings": {
-        "image": "shopify:\/\/shop_images\/electronic-components-for-science-project.jpg"
+        "image": "shopify:\/\/shop_images\/electronic-components-for-science-project.jpg",
+        "title": "THE ENGINE\nROOM",
+        "radius": true
       }
     },
     "187bb045-7b95-4bed-9568-26e07605085f": {
