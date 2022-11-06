@@ -1,4 +1,14 @@
-<div>LAB CONTENT</div>
+<div>
+	<div class="container">
+		<div class="row">
+			<div class="lg:col-9/12 lg:ml-3/12">
+				<h2 class="text-[3.125rem] lg:text-[5.625rem] uppercase font-bold font-display text-center leading-[5.5rem]">
+					{{- section.settings.title -}}
+				</h2>
+			</div>
+		</div>
+	</div>
+</div>
 
 {% schema %}
 {
@@ -13,7 +23,7 @@
       "placeholder": "t:sections.lab-content.settings.anchor.placeholder"
     },
     {
-      "type": "text",
+      "type": "textarea",
       "id": "title",
       "label": "t:sections.lab-content.settings.title.label",
       "placeholder": "t:sections.lab-content.settings.title.placeholder"
