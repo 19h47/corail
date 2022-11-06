@@ -960,9 +960,9 @@
     "featured-blog": {
       "name": "Articles de blog",
       "settings": {
-		"anchor": {
-			"label": "Ancre"
-		},
+        "anchor": {
+          "label": "Ancre"
+        },
         "heading": {
           "label": "Titre"
         },

@@ -7,7 +7,6 @@
         "f9da1ff0-06e6-49e4-b645-ce3f9598e6f5": {
           "type": "introduction",
           "settings": {
-            "anchor": "Corail LAB",
             "title": "DEfinition",
             "content": "The CORAIL° Lab is an innovative space at the heart of our harbor, in Marseille, France, in which we think and design solutions to collect, transform and upcycle marine waste and transform it into high-performance raw materials we later inject into our products.",
             "image": "shopify:\/\/shop_images\/waterfall-into-a-crater.jpg"
@@ -75,7 +74,6 @@
         "0c048e64-b77b-4fe5-bf2b-9ba3b243976d"
       ],
       "settings": {
-        "anchor": "Corail LAB",
         "title": "From pollution, \nto solution."
       }
     },
@@ -113,7 +111,6 @@
         "59f3362d-ae19-4a38-a042-f21d70fca1b8"
       ],
       "settings": {
-        "anchor": "Lab Materials",
         "title": "Materials"
       }
     },
@@ -151,13 +148,13 @@
         "8cd71456-7b6d-4373-b6bd-51b81144c50a"
       ],
       "settings": {
-        "anchor": "Lab-house",
         "title": "Lab-house"
       }
     },
     "0dbe9a85-a8fe-48eb-bf3d-0d4e3f1e1ddc": {
       "type": "featured-blog",
       "settings": {
+        "anchor": "relatives-articles",
         "heading": "Corail° Stories",
         "blog": "stories",
         "post_limit": 4
