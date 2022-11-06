@@ -37,7 +37,7 @@ const getFormatedTime = time => {
 const getPercentage = (currentTime, duration) => Math.floor((currentTime / duration) * 100);
 
 // eslint-disable-next-line no-undef, no-unused-vars
-const scroll = new LocomotiveNativeScroll({ smooth: false });
+const scroll = new LocomotiveNativeScroll({ smooth: false, repeat: true });
 
 const isOntop = () => {
 	const top = window.pageYOffset || document.documentElement.scrollTop;
@@ -60,6 +60,33 @@ scroll.on("scroll", ({ direction }) => {
 
 	isOntop();
 });
+
+const anchorLinks = document.querySelector('anchor-links');
+
+if (anchorLinks) {
+	const anchors = [...anchorLinks.querySelectorAll('a')]
+
+	console.log(anchors);
+
+	scroll.on('call', (func, way, obj) => {
+		console.log(func, way, obj);
+
+		if ('enter' === way && 'anchor' === func) {
+			anchors.forEach($anchor => {
+				if ($anchor.href.split('#')[1] === obj.el.id) {
+					$anchor.classList.add('is-active');
+				} else {
+					$anchor.classList.remove('is-active');
+				}
+			})
+		}
+
+		// if ('exit' === way && 'anchor' === func) {
+		// 	anchors.forEach($anchor => $anchor.classList.remove('is-active'))
+		// }
+	})
+}
+
 
 document.querySelectorAll('[id^="Details-"] summary').forEach(summary => {
 	summary.setAttribute("role", "button");

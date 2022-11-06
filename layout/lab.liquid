@@ -193,20 +193,40 @@
 
     	<main
 			id="MainContent"
-			class="content-for-layout {% if 'index' == request.page_type %} -mt-[4rem] {% endif %} {% if 'index' == request.page_type or 'article' == request.page_type %} lg:-mt-[4.375rem] relative z-10 {% endif %}"
+			class="content-for-layout relative {% if 'index' == request.page_type %} -mt-[4rem] {% endif %} {% if 'index' == request.page_type or 'article' == request.page_type %} lg:-mt-[4.375rem] relative z-10 {% endif %}"
 			role="main"
 			tabindex="-1"
 			style="background-color: #ECEAE8; background-size: 4.5rem 4.5rem; background-image: linear-gradient(to right, rgba(221, 216, 209,1) 0.0625rem, transparent 0.0625rem), linear-gradient(to bottom, rgba(221, 216, 209, 1) 0.0625rem, transparent 0.0625rem);"
 		>
-			<div>
-				<ul>
-					<li><a href="#corail-lab">Corail LAB</a></li>
-					<li><a href="#from-pollution-to-solution">From pollution, to solution</a></li>
-					<li><a href="#lab-materials">Lab Materials </a></li>
-					<li><a href="#lab-house">Lab-house</a></li>
-					<li><a href="#relative-articles">Relatives Articles</a></li>
+			<anchor-links class="hidden lg:block absolute top-0 left-0 h-full p-5 is-ontop:opacity-0 opacity-100 duration-1000 ease-in-out transition-opacity z-10">
+				<ul class="sticky top-[5.625rem] text-sm leading-8">
+					<li>
+						<a href="#corail-lab" class="is-active:after:scale-x-100 after:absolute after:origin-left after:bg-red-light  after:h-[0.1875rem] after:scale-x-0 after:duration-1000 after:ease-in-out after:transition-transform relative inline-block align-middle after:inset-0 after:my-auto">
+							Corail LAB
+						</a>
+					</li>
+					<li>
+						<a href="#from-pollution-to-solution" class="is-active:after:scale-x-100 after:absolute after:origin-left after:bg-red-light  after:h-[0.1875rem] after:scale-x-0 after:duration-1000 after:ease-in-out after:transition-transform relative inline-block align-middle after:inset-0 after:my-auto">
+							From pollution, to solution
+						</a>
+					</li>
+					<li>
+						<a href="#lab-materials" class="is-active:after:scale-x-100 after:absolute after:origin-left after:bg-red-light  after:h-[0.1875rem] after:scale-x-0 after:duration-1000 after:ease-in-out after:transition-transform relative inline-block align-middle after:inset-0 after:my-auto">
+							Lab Materials
+						</a>
+					</li>
+					<li>
+						<a href="#lab-house" class="is-active:after:scale-x-100 after:absolute after:origin-left after:bg-red-light  after:h-[0.1875rem] after:scale-x-0 after:duration-1000 after:ease-in-out after:transition-transform relative inline-block align-middle after:inset-0 after:my-auto">
+							Lab-house
+						</a>
+					</li>
+					<li>
+						<a href="#relatives-articles" class="is-active:after:scale-x-100 after:absolute after:origin-left after:bg-red-light  after:h-[0.1875rem] after:scale-x-0 after:duration-1000 after:ease-in-out after:transition-transform relative inline-block align-middle after:inset-0 after:my-auto">
+							Relatives Articles
+						</a>
+					</li>
 				</ul>
-			</div>
+			</anchor-links>
       		{{ content_for_layout }}
     	</main>
 

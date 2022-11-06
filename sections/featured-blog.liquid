@@ -15,7 +15,15 @@
   	endif
 -%}
 
-<div class="featured-blog my-16 space-y-11 lg:space-y-8">
+<div
+	class="featured-blog my-16 space-y-11 lg:space-y-8"
+	{% if section.settings.anchor != blank %}
+		id="{{ section.settings.anchor }}"
+		style="scroll-margin-top: 6rem;"
+		data-scroll
+		data-scroll-call="anchor"
+	{% endif %}
+>
 	<div class="container">
 		<div class="row items-center">
 			{%- unless section.settings.heading == blank -%}

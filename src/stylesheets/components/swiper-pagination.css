@@ -20,7 +20,7 @@
 	}
 
 	.swiper-pagination-with-numbers-bullets {
-		@apply flex items-center gap-2
+		@apply flex items-center gap-2 text-sm font-semibold font-display;
 	}
 
 	.swiper-pagination-with-numbers-bullets .swiper-pagination-bullet {
