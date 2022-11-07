@@ -3,7 +3,7 @@
 <div class="customer account">
   	<div class="container my-16">
 		<div class="row">
-			<div>
+			<div class="lg:col-8/12 lg:ml-2/12">
 				<h1 class="text-center font-medium font-display text-6xl">{{ 'customer.account.title' | t }}</h1>
 				<a class="py-1 flex items-center hover:underline" href="{{ routes.account_logout_url }}">
 					{% render 'svg', icon: 'account', classes: 'fill-current w-5 h-5 mr-2' %}
@@ -13,8 +13,8 @@
 		</div>
 
 		<div class="row">
-			<div>
-				<h2>{{ 'customer.orders.title' | t }}</h2>
+			<div class="lg:col-8/12 lg:ml-2/12">
+				<h2 class="text-center text-xl font-display mb-5 font-semibold uppercase">{{ 'customer.orders.title' | t }}</h2>
 				{% paginate customer.orders by 20 %}
 					{%- if customer.orders.size > 0 -%}
 					<table role="table" class="order-history">
@@ -104,16 +104,17 @@
 				{% endpaginate %}
 			</div>
 
-			<div class="row">
-				<div>
-					<h2>{{ 'customer.account.details' | t }}</h2>
+		</div>
 
-					{{ customer.default_address | format_address }}
+		<div class="row">
+			<div class="lg:col-8/12 lg:ml-2/12">
+				<h2 class="text-center text-xl font-display mb-5 font-semibold uppercase">{{ 'customer.account.details' | t }}</h2>
 
-					<a class="hover:unerline" href="{{ routes.account_addresses_url }}">
-						{{ 'customer.account.view_addresses' | t }} ({{ customer.addresses_count }})
-					</a>
-				</div>
+				{{ customer.default_address | format_address }}
+
+				<a class="hover:unerline" href="{{ routes.account_addresses_url }}">
+					{{ 'customer.account.view_addresses' | t }} ({{ customer.addresses_count }})
+				</a>
 			</div>
 		</div>
   	</div>

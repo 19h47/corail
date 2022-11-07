@@ -14,9 +14,11 @@
 			<div class="row">
 				<div class="lg:col-8/12 lg:ml-2/12">
 					<h1 class="text-center font-medium font-display text-6xl">{{ 'customer.addresses.title' | t }}</h1>
+
 					<a href="{{ routes.account_url }}">
 						{{ 'customer.account.return' | t }}
 					</a>
+
 					<div data-address>
 					  	<button
 							type="button"
@@ -27,7 +29,9 @@
 					  	</button>
 
 						<div id="AddAddress">
-							<h2 id="AddressNewHeading">{{ 'customer.addresses.add_new' | t }}</h2>
+
+							<h2 class="text-center text-xl font-display mb-5 font-semibold uppercase" id="AddressNewHeading">{{ 'customer.addresses.add_new' | t }}</h2>
+
 							{%- form 'customer_address', customer.new_address, aria-labelledBy: 'AddressNewHeading' -%}
 								<div class="field">
 									<input type="text" id="AddressFirstNameNew" name="address[first_name]" value="{{ form.first_name }}" autocomplete="given-name" placeholder="{{ 'customer.addresses.first_name' | t }}">
