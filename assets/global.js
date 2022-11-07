@@ -61,20 +61,18 @@ scroll.on("scroll", ({ direction }) => {
 	isOntop();
 });
 
-const anchorLinks = document.querySelector('anchor-links');
+const anchorLinks = [...document.querySelectorAll('.js-anchors')];
 
 if (anchorLinks) {
-	const anchors = [...anchorLinks.querySelectorAll('a')]
-
-	console.log(anchors);
+	const anchors = [...anchorLinks.map(a => [...a.querySelectorAll('a')])].flat()
+	const $summary = document.querySelector('.js-anchor-summary');
 
 	scroll.on('call', (func, way, obj) => {
-		console.log(func, way, obj);
-
 		if ('enter' === way && 'anchor' === func) {
 			anchors.forEach($anchor => {
 				if ($anchor.href.split('#')[1] === obj.el.id) {
 					$anchor.classList.add('is-active');
+					$summary.innerHTML = $anchor.innerHTML
 				} else {
 					$anchor.classList.remove('is-active');
 				}
