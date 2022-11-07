@@ -9,7 +9,7 @@
           "settings": {
             "title": "DEfinition",
             "content": "The CORAIL° Lab is an innovative space at the heart of our harbor, in Marseille, France, in which we think and design solutions to collect, transform and upcycle marine waste and transform it into high-performance raw materials we later inject into our products.",
-            "image": "shopify:\/\/shop_images\/waterfall-into-a-crater.jpg"
+            "image": "shopify:\/\/shop_images\/Carrousel_3.jpg"
           }
         }
       },
@@ -17,13 +17,12 @@
         "f9da1ff0-06e6-49e4-b645-ce3f9598e6f5"
       ],
       "settings": {
-        "video": ""
+        "video": "shopify:\/\/files\/videos\/BOUCLE Flakes (2000 x 1000).mp4"
       }
     },
     "5153db78-0223-4783-9f3b-d0fbec0eace1": {
       "type": "image",
       "settings": {
-        "image": "shopify:\/\/shop_images\/electronic-components-for-science-project.jpg",
         "title": "THE ENGINE\nROOM",
         "radius": true
       }
@@ -34,37 +33,31 @@
         "02e83352-cdfe-41d8-84b5-e1719383ef9d": {
           "type": "content",
           "settings": {
-            "image_left": "shopify:\/\/shop_images\/navy-blue-and-white-left-shoe.jpg",
             "title_left": "UPCYCLING MARINE WASTE",
             "content_left": "The CORAIL° Lab is the engine room of our project, where we upcycle marine waste to address the sea pollution issue through innovation. And also where we crush a lot of plastic. A lot.",
             "icon": "decor-01",
             "title_right": "INSIDE THE GRINDER",
-            "content_right": "Tu use and ucpycle the warine waste we collect,we need to grind them fist. A big part of the CORAIL° Lab is about grindind plastic plastic waste, fishing nets and much more.\nGrinders gotta grind.",
-            "image_right": "shopify:\/\/shop_images\/filling-water-bottle.jpg"
+            "content_right": "Tu use and ucpycle the warine waste we collect,we need to grind them fist. A big part of the CORAIL° Lab is about grindind plastic plastic waste, fishing nets and much more.\nGrinders gotta grind."
           }
         },
         "e415ea90-0da6-4648-a54f-358fc1c687d3": {
           "type": "content",
           "settings": {
-            "image_left": "shopify:\/\/shop_images\/science-lab-chemical-bottles.jpg",
             "title_left": "Maecenas lobortis",
             "content_left": "Cursus odio, eu ultrices elit hendrerit non. Integer aliquam vehicula cursus. Sed viverra placerat varius. Duis porta orci et velit sodales rhoncus",
             "icon": "decor-03",
             "title_right": "Sed ac diam a leo scelerisque dictum",
-            "content_right": "Nec vel lacus. Suspendisse lacinia sed massa et viverra. Donec in dignissim dolor. Cras ornare eros ac nisl volutpat, ac venenatis augue euismod",
-            "image_right": "shopify:\/\/shop_images\/research-lab-pressure-guage.jpg"
+            "content_right": "Nec vel lacus. Suspendisse lacinia sed massa et viverra. Donec in dignissim dolor. Cras ornare eros ac nisl volutpat, ac venenatis augue euismod"
           }
         },
         "0c048e64-b77b-4fe5-bf2b-9ba3b243976d": {
           "type": "content",
           "settings": {
-            "image_left": "shopify:\/\/shop_images\/purple-fish.jpg",
             "title_left": "Sed eu arcu non nisi",
             "content_left": "Vulputate bibendum. Aliquam sit amet dictum erat, a blandit erat. Proin ante ligula, maximus tristique facilisis ac, interdum in arcu.",
             "icon": "decor-04",
             "title_right": "Aenean efficitur",
-            "content_right": "Lacus ac mollis malesuada. Nam cursus, leo dapibus aliquet placerat, lacus mi iaculis est, eget lacinia tortor mauris sed",
-            "image_right": "shopify:\/\/shop_images\/aerial-view-of-mountains-of-crushed-metal-cubes.jpg"
+            "content_right": "Lacus ac mollis malesuada. Nam cursus, leo dapibus aliquet placerat, lacus mi iaculis est, eget lacinia tortor mauris sed"
           }
         }
       },
@@ -83,7 +76,6 @@
         "daf42957-09e1-421c-b2e1-83fcc5b30f57": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/rocky-sea-by-forested-mountains.jpg",
             "title": "C-FIBER",
             "content": "Espace d’innovation, de création et d’échange proposé par la marque CORAIL°, visant à transformer les déchets marins en nouveaux matériaux et les idées en projets."
           }
@@ -91,7 +83,6 @@
         "c2d07b5a-fcc5-4444-a26d-f7120dad204c": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/ice-cracks-on-a-frozen-sea.jpg",
             "title": "PANettle",
             "content": "Espace d’innovation, de création et d’échange proposé par la marque CORAIL°, visant à transformer les déchets marins en nouveaux matériaux et les idées en projets."
           }
@@ -99,7 +90,6 @@
         "59f3362d-ae19-4a38-a042-f21d70fca1b8": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/man-scaling-a-rock-climbing-wall.jpg",
             "title": "FRUTFIBER",
             "content": "Espace d’innovation, de création et d’échange proposé par la marque CORAIL°, visant à transformer les déchets marins en nouveaux matériaux et les idées en projets."
           }
@@ -120,7 +110,6 @@
         "0064150f-cc3d-4d0b-9aeb-e372f7b6ac59": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/science-research-lab-microscope.jpg",
             "title": "MArseille Lab",
             "content": "The CORAIL° Lab is located in our harbour, in Marseille, France. It enables us to sort and transform the marine waste we collect in ultra-short circuit. In this innovative space, our fishermen and technicians turn marine waste into high-performance materials we use to create our products."
           }
@@ -128,7 +117,6 @@
         "4073072f-62f3-43dd-88d2-6486e8ae05e0": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/research-lab-pressure-guage.jpg",
             "title": "",
             "content": ""
           }
@@ -136,7 +124,6 @@
         "8cd71456-7b6d-4373-b6bd-51b81144c50a": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/science-lab-chemical-bottles.jpg",
             "title": "",
             "content": ""
           }
