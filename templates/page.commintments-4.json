@@ -84,7 +84,7 @@
         "c5af06e0-3566-47a2-9d19-954af2ba56cd": {
           "type": "slide",
           "settings": {
-            "title": "DOUMé",
+            "title": "DOUMÉ",
             "content": "There, you have a fisherman who cleans up the sea."
           }
         }
@@ -105,6 +105,7 @@
         "6d0faf3d-4570-4b4a-8780-1acac0494f64": {
           "type": "item",
           "settings": {
+            "image": "shopify:\/\/shop_images\/MG_3502.jpg",
             "title": "A LONG-TERM\nPARTNERSHIP",
             "content": "The collaboration with our fishermen crew is built on a steady partnership: we pay them monthly, regardless of how much marine waste they collect, to ensure a sustainable additional income for them and valuable partners for us, who know the sea and its characteristics better than anyone."
           }
@@ -112,6 +113,7 @@
         "f02826ed-762f-449a-befe-f5d2383e8aeb": {
           "type": "item",
           "settings": {
+            "image": "shopify:\/\/shop_images\/MG_3556-2.jpg",
             "title": "aN ALTERNATIVE\nTO FISHING",
             "content": "We have met the fishermen we work with during a particularly hot summer which made it impossible for them to fish. The point of our partnership is to provide our crew with an additional activity when global warming and climate change have made fishing a tougher and tougher job."
           }
