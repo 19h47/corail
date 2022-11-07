@@ -472,7 +472,7 @@
 												<legend class="border-b border-orange-grayish mb-3 w-full text-sm pb-2 flex">
 													{{ option.name }}&nbsp;<span class="js-legend">{% if option.selected_value %}({{ option.selected_value }}){% endif %}</span>
 
-													{% if 'Taille' == option.name %}
+													{% if 'Taille' == option.name or 'pointure' == option.name %}
 														<div class="ml-auto flex items-center"><a class="text-xs text-gray-dark underline" href="">Guide des tailles</a>&nbsp;&UpperRightArrow;</div>
 													{% endif %}
 												</legend>

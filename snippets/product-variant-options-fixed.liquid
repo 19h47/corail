@@ -39,42 +39,45 @@
 			endcase
 		endfor
 	-%}
-	<div>
-		<input
-			type="radio"
-			id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}-button"
-			name="{{ option.name }}-button"
-			value="{{ value | escape }}"
-			{% if option.selected_value == value %} checked {% endif %}
-			class="peer {% if option_disabled %} disabled {% endif %}"
-		>
 
-		{% liquid
-			assign variant_needed = null
-
-			for variant in product.variants
-				if variant.options contains value
-					assign variant_needed = variant
-				endif
-			endfor
-		%}
-
-		{% if variant_needed.metafields.corail.color and option.name == 'Couleur' %}
-			<label
-				class="peer-checked:after:border-orange-grayish peer-checked:after-border-[0.0625rem] relative after:-m-1 after:inset-0 peer-checked:after:border after:rounded-full after:absolute cursor-pointer block border-gray-very-light border w-5 h-5 rounded-full {% if '#FFFFFF' == variant_needed.metafields.corail.color %} border-gray-very-light {% endif %}"
-				data-option-id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
-				data-option="{{ value }}"
-				style="background-color: {{ variant_needed.metafields.corail.color }}"
-				for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}-button"
-			></label>
-		{% else %}
-			<label
-				class="py-2 block cursor-pointer text-sm px-2.5 bg-gray-very-light {% if option.selected_value == value %} is-active {% endif %} peer-checked:bg-gray-very-dark peer-checked:text-gray-very-light"
-				data-option-id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
-				for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}-button"
+	{% if option_disabled != true %}
+		<div>
+			<input
+				type="radio"
+				id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}-button"
+				name="{{ option.name }}-button"
+				value="{{ value | escape }}"
+				{% if option.selected_value == value %} checked {% endif %}
+				class="peer {% if option_disabled %} disabled {% endif %}"
 			>
-				{{ value }}
-			</label>
-		{% endif %}
-	</div>
+
+			{% liquid
+				assign variant_needed = null
+
+				for variant in product.variants
+					if variant.options contains value
+						assign variant_needed = variant
+					endif
+				endfor
+			%}
+
+			{% if variant_needed.metafields.corail.color and option.name == 'Couleur' %}
+				<label
+					class="peer-checked:after:border-orange-grayish peer-checked:after-border-[0.0625rem] relative after:-m-1 after:inset-0 peer-checked:after:border after:rounded-full after:absolute cursor-pointer block border-gray-very-light border w-5 h-5 rounded-full {% if '#FFFFFF' == variant_needed.metafields.corail.color %} border-gray-very-light {% endif %}"
+					data-option-id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
+					data-option="{{ value }}"
+					style="background-color: {{ variant_needed.metafields.corail.color }}"
+					for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}-button"
+				></label>
+			{% else %}
+				<label
+					class="py-2 block cursor-pointer text-sm px-2.5 bg-gray-very-light {% if option.selected_value == value %} is-active {% endif %} peer-checked:bg-gray-very-dark peer-checked:text-gray-very-light"
+					data-option-id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
+					for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}-button"
+				>
+					{{ value }}
+				</label>
+			{% endif %}
+		</div>
+	{% endif %}
 {% endfor %}
