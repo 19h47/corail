@@ -9,6 +9,7 @@
     "66e11768-6009-47fd-8dbf-c63bf6d3aecf": {
       "type": "twoimage",
       "settings": {
+        "left_image": "shopify:\/\/shop_images\/Photo-Stock-Bouteille-Plastique-_Commintment-_2.jpg",
         "right_image": "shopify:\/\/shop_images\/Boat_Chalut.jpg"
       }
     },
@@ -25,6 +26,7 @@
         "d4bcdc31-c755-4c37-a01e-a470677d42e5": {
           "type": "item",
           "settings": {
+            "image": "shopify:\/\/shop_images\/P1125339.jpg",
             "title": "OUR SEA CLEAn-UP\nOPERATION",
             "content": "The whole idea behind CORAIL° is to offer total transparency on recycled products. The best way to guarantee it is to collect the waste ourselves. With that in mind, we started our own sea clean-up operation, with a crew of fishermen from Marseille, in the South of France, one of the most polluted seaside region in Europe."
           }
@@ -32,6 +34,7 @@
         "df9e8f81-913d-433e-830c-3b59c2eb9d75": {
           "type": "item",
           "settings": {
+            "image": "shopify:\/\/shop_images\/P1114607.jpg",
             "title": "PARTNERSHIPS",
             "content": "After a while, it became necessary for us to open our clean-up operation to new partners in order to maximize our ecological impact and to meet the sneakers demand. That is why we now work with several environmental organizations in the Marseille area, that organize seaside cleanups. They then send us the marine waste they have collected in order to be transformed in the CORAIL° Lab."
           }
@@ -39,6 +42,7 @@
         "997f5418-eca7-4eb4-acd6-fb1257055d59": {
           "type": "item",
           "settings": {
+            "image": "shopify:\/\/shop_images\/P1125227-2.jpg",
             "title": "PREVENTION ACTIONS",
             "content": "We also act ahead of the the pollution to prevent plastic waste to end up the sea. Thus, we installed anti-pollution nets in our harbour to catch any floating waste. We also have set up selective sorting garbage bins next to the CORAIL° Lab to make our harbour a recycling-driven clean space."
           }
@@ -46,6 +50,7 @@
         "d412d6b1-7a66-4a1b-9270-882179efc9c9": {
           "type": "item",
           "settings": {
+            "image": "shopify:\/\/shop_images\/Main_de_flakes.jpg",
             "title": "IMPACT & OBJECTIVES",
             "content": "Since the beginning of our clean-up operation, more than 20 tons of marine waste were collected and processed by our crew and partners. We are planning on greatly increasing this number in the months to come and, moreover, to find new innovative outlets for all the types of waste we collect."
           }
