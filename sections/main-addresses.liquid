@@ -23,18 +23,21 @@
 					</div>
 
 					<div data-address class="mt-5">
-					  	<button
-							type="button"
-							aria-expanded="false"
-							aria-controls="AddAddress"
-							class="button button-gray inline-block align-middle"
-					  	>
-							{{ 'customer.addresses.add_new' | t }}
-					  	</button>
+
+						<div class="text-center">
+							<button
+								type="button"
+								aria-expanded="false"
+								aria-controls="AddAddress"
+								class="button button-gray inline-block align-middle"
+							>
+								{{- 'customer.addresses.add_new' | t -}}
+							</button>
+						</div>
 
 						<div id="AddAddress">
 
-							<h2 class="text-center text-xl font-display mb-5 font-semibold uppercase" id="AddressNewHeading">{{ 'customer.addresses.add_new' | t }}</h2>
+							<h2 class="text-xl font-display mt-5 mb-5 font-semibold uppercase" id="AddressNewHeading">{{ 'customer.addresses.add_new' | t }}</h2>
 
 							{%- form 'customer_address', customer.new_address, aria-labelledBy: 'AddressNewHeading' -%}
 								<div class="field">
@@ -149,7 +152,7 @@
 									</button>
 								</div>
 
-								<div class="mt-10" id="EditAddress_{{ address.id }}">
+								<div class="mt-16" id="EditAddress_{{ address.id }}">
 									<h2 class="text-center text-xl font-display mb-5 font-semibold uppercase">{{- 'customer.addresses.edit_address' | t -}}</h2>
 
 									{%- form 'customer_address', address -%}
