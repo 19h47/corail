@@ -23,26 +23,28 @@
 						{% for block in section.blocks %}
 							{%- case block.type -%}
 								{%- when 'slide' -%}
-									<div class="w-full lg:w-4/10 swiper-slide swiper-slide">
-										{{- block.settings.image | image_url: width: 692, height: 888 | image_tag:
-											loading: 'lazy',
-											widths: '275, 550, 710, 1420',
-											class: 'w-full h-[24.5rem] lg:h-[29.75rem] object-cover object-center'
-										-}}
-										{%- if block.settings.title or block.settings.content -%}
-											<p class="mt-4 text-xs uppercase">
-												{%- if block.settings.title -%}
-													<strong class="font-bold">{{- block.settings.title -}}</strong>
-												{%- endif -%}
-												{%- if block.settings.content -%}
+									{% if block.settings.image %}
+										<div class="w-full lg:w-4/10 swiper-slide swiper-slide">
+											{{- block.settings.image | image_url: width: 692, height: 888 | image_tag:
+												loading: 'lazy',
+												widths: '275, 550, 710, 1420',
+												class: 'w-full h-[24.5rem] lg:h-[29.75rem] object-cover object-center'
+											-}}
+											{%- if block.settings.title or block.settings.content -%}
+												<p class="mt-4 text-xs uppercase">
 													{%- if block.settings.title -%}
-														{{- '&comma;&nbsp;' -}}
+														<strong class="font-bold">{{- block.settings.title -}}</strong>
 													{%- endif -%}
-													{{- block.settings.content -}}
-												{%- endif -%}
-											</p>
-										{%- endif -%}
-									</div>
+													{%- if block.settings.content -%}
+														{%- if block.settings.title -%}
+															{{- '&comma;&nbsp;' -}}
+														{%- endif -%}
+														{{- block.settings.content -}}
+													{%- endif -%}
+												</p>
+											{%- endif -%}
+										</div>
+									{% endif %}
 							{%- endcase -%}
 						{% endfor %}
 					</div>
