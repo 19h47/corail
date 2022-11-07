@@ -1401,7 +1401,8 @@ html,
 }
 
 .button, 
-	.shopify-payment-button button[type="button"]{
+	.shopify-payment-button button[type="button"], 
+	.shopify-challenge__button{
 	border-radius: 9999px;
 	--tw-bg-opacity: 1;
 	background-color: rgb(255 255 255 / var(--tw-bg-opacity));
@@ -1434,7 +1435,8 @@ html,
 	color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.button.button-gray{
+.button.button-gray, 
+	.shopify-challenge__button{
 	--tw-bg-opacity: 1;
 	background-color: rgb(51 51 51 / var(--tw-bg-opacity));
 	--tw-text-opacity: 1;

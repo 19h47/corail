@@ -8,12 +8,13 @@
 
 @layer components {
 	.button,
-	.shopify-payment-button button[type="button"] {
+	.shopify-payment-button button[type="button"],
+	.shopify-challenge__button {
 		@apply text-center text-xs uppercase rounded-full bg-white text-gray-very-dark py-4 px-8 transition-colors duration-1000 ease-in-out;
 	}
 
 	.shopify-payment-button button[type="button"] {
-		@apply inline-block align-middle
+		@apply inline-block align-middle;
 	}
 
 	.button[disabled],
@@ -26,7 +27,8 @@
 		@apply bg-red-very-light text-white;
 	}
 
-	.button.button-gray {
+	.button.button-gray,
+	.shopify-challenge__button {
 		@apply bg-gray-very-dark text-white;
 	}
 
@@ -44,6 +46,6 @@
 	}
 
 	.button-secondary.button-gray {
-		@apply text-gray-very-dark border-gray-very-dark
+		@apply text-gray-very-dark border-gray-very-dark;
 	}
 }

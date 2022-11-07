@@ -453,19 +453,6 @@ h6:empty {
 	display: none;
 }
 
-.customer a {
-	cursor: pointer;
-	display: inline-block;
-	border: none;
-	box-shadow: none;
-	text-decoration: underline;
-	text-underline-offset: 0.3rem;
-	color: rgb(var(--color-link));
-	background-color: transparent;
-	font-size: 1.4rem;
-	font-family: inherit;
-}
-
 .link-with-icon {
 	display: inline-flex;
 	font-size: 1.4rem;
@@ -522,18 +509,6 @@ hr {
 	--duration-short: 100ms;
 	--duration-default: 200ms;
 	--duration-long: 500ms;
-}
-
-.customer a {
-	color: rgba(var(--color-link), var(--alpha-link));
-	text-underline-offset: 0.3rem;
-	text-decoration-thickness: 0.1rem;
-	transition: text-decoration-thickness ease 100ms;
-}
-
-.customer a:hover {
-	color: rgb(var(--color-link));
-	text-decoration-thickness: 0.2rem;
 }
 
 .icon-arrow {
@@ -788,8 +763,6 @@ deferred-media {
 /* component-button */
 /* Button - default */
 
-.shopify-challenge__button,
-.customer button,
 .shopify-payment-button [role="button"],
 .cart__dynamic-checkout-buttons [role="button"],
 .cart__dynamic-checkout-buttons iframe {
@@ -804,37 +777,11 @@ deferred-media {
 	position: relative;
 }
 
-.shopify-challenge__button,
-.customer button {
-	min-width: calc(12rem + var(--buttons-border-width) * 2);
-	min-height: calc(4.5rem + var(--buttons-border-width) * 2);
-}
-
 .cart__dynamic-checkout-buttons iframe {
 	box-shadow: var(--shadow-horizontal-offset) var(--shadow-vertical-offset)
 		var(--shadow-blur-radius) rgba(var(--color-base-text), var(--shadow-opacity));
 }
 
-.shopify-challenge__button,
-.customer button {
-	display: inline-flex;
-	justify-content: center;
-	align-items: center;
-	border: 0;
-	padding: 0 3rem;
-	cursor: pointer;
-	font: inherit;
-	font-size: 1.5rem;
-	text-decoration: none;
-	color: rgb(var(--color-button-text));
-	transition: box-shadow var(--duration-short) ease;
-	-webkit-appearance: none;
-	appearance: none;
-	background-color: rgba(var(--color-button), var(--alpha-button-background));
-}
-
-.shopify-challenge__button:before,
-.customer button:before,
 .shopify-payment-button [role="button"]:before,
 .cart__dynamic-checkout-buttons [role="button"]:before {
 	content: "";
@@ -849,31 +796,6 @@ deferred-media {
 		var(--shadow-blur-radius) rgba(var(--color-shadow), var(--shadow-opacity));
 }
 
-.shopify-challenge__button:after,
-.customer button:after {
-	content: "";
-	position: absolute;
-	top: var(--buttons-border-width);
-	right: var(--buttons-border-width);
-	bottom: var(--buttons-border-width);
-	left: var(--buttons-border-width);
-	z-index: 1;
-	border-radius: var(--buttons-radius);
-	box-shadow: 0 0 0 calc(var(--buttons-border-width) + var(--border-offset))
-			rgba(var(--color-button-text), var(--border-opacity)),
-		0 0 0 var(--buttons-border-width) rgba(var(--color-button), var(--alpha-button-background));
-	transition: box-shadow var(--duration-short) ease;
-}
-
-.shopify-challenge__button:hover::after,
-.customer button:hover::after {
-	--border-offset: 1.3px;
-	box-shadow: 0 0 0 calc(var(--buttons-border-width) + var(--border-offset))
-			rgba(var(--color-button-text), var(--border-opacity)),
-		0 0 0 calc(var(--buttons-border-width) + 1px)
-			rgba(var(--color-button), var(--alpha-button-background));
-}
-
 .shopify-payment-button [role="button"]:focus-visible,
 .shopify-payment-button [role="button"]:focus {
 	outline: 0;
@@ -884,18 +806,6 @@ deferred-media {
 
 .shopify-payment-button [role="button"]:focus:not(:focus-visible):not(.focused) {
 	box-shadow: inherit;
-}
-
-.shopify-challenge__button::selection,
-.customer button::selection {
-	background-color: rgba(var(--color-button-text), 0.3);
-}
-
-.shopify-challenge__button,
-.customer button {
-	font-size: 1.5rem;
-	letter-spacing: 0.1rem;
-	line-height: calc(1 + 0.2 / var(--font-body-scale));
 }
 
 .field:not(:focus-visible):not(.focused) + .share-button__copy:not(:focus-visible):not(.focused),
@@ -1681,11 +1591,6 @@ details-disclosure > details {
 
 /* outline and border styling for Windows High Contrast Mode */
 @media (forced-colors: active) {
-	.shopify-challenge__button,
-	.customer button {
-		border: transparent solid 1px;
-	}
-
 	.shopify-payment-button [role="button"]:focus-visible,
 	.shopify-payment-button [role="button"]:focus {
 		outline: solid transparent 1px;

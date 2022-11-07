@@ -1,23 +1,5 @@
-.customer:not(.account):not(.order) {
-	margin: 0 auto;
-	max-width: 33.4rem;
-	padding-left: 1.5rem;
-	padding-right: 1.5rem;
-	text-align: center;
-}
-
-@media screen and (min-width: 750px) {
-	.customer:not(.account):not(.order) {
-		max-width: 47.8rem;
-	}
-}
-
 .customer form {
 	margin-top: 4rem;
-}
-
-.customer button {
-	margin: 4rem 0 1.5rem;
 }
 
 .customer ul {
@@ -324,23 +306,9 @@
 }
 
 /* Login */
-.login a {
-	display: block;
-	margin: 0 auto;
-	width: fit-content;
-}
-
-.login a[href="#recover"] {
-	margin-left: 0;
-	margin-right: 0;
-}
 
 .login .field + a {
 	margin-top: 1rem;
-}
-
-.login p {
-	margin: 1.5rem 0;
 }
 
 .login h3 {
