@@ -106,13 +106,18 @@
 
 		</div>
 
+		{% comment %} DETAILS {% endcomment %}
 		<div class="row">
 			<div class="lg:col-8/12 lg:ml-2/12">
-				<h2 class="text-center text-xl font-display mb-5 font-semibold uppercase">{{ 'customer.account.details' | t }}</h2>
+				<h2 class="text-center text-xl font-display mb-5 font-semibold uppercase">
+					{{ 'customer.account.details' | t }}
+				</h2>
 
-				{{ customer.default_address | format_address }}
+				<div class="my-5 text-center">
+					{{ customer.default_address | format_address }}
+				</div>
 
-				<a class="hover:unerline" href="{{ routes.account_addresses_url }}">
+				<a class="hover:underline" href="{{ routes.account_addresses_url }}">
 					{{ 'customer.account.view_addresses' | t }} ({{ customer.addresses_count }})
 				</a>
 			</div>
