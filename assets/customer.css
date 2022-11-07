@@ -587,22 +587,9 @@
 	}
 }
 
-label[for="AddressCountryNew"],
-label[for="AddressProvinceNew"] {
-	display: block;
-	font-size: 1.4rem;
-	margin-bottom: 0.6rem;
-}
-
 .addresses form {
 	display: flex;
 	flex-flow: row wrap;
-}
-
-.addresses ul {
-	list-style: none;
-	padding-left: 0;
-	text-align: center;
 }
 
 li[data-address] {
@@ -631,10 +618,6 @@ li[data-address] > h2 {
 	li[data-address] > h2 {
 		font-size: calc(var(--font-heading-scale) * 2.2rem);
 	}
-}
-
-.addresses ul p {
-	margin-bottom: 0;
 }
 
 .addresses input[type="checkbox"] {
