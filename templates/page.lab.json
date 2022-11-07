@@ -56,6 +56,7 @@
         "daf42957-09e1-421c-b2e1-83fcc5b30f57": {
           "type": "slide",
           "settings": {
+            "image": "shopify:\/\/shop_images\/P1125505.jpg",
             "title": "C-FIBER",
             "content": "Espace d’innovation, de création et d’échange proposé par la marque CORAIL°, visant à transformer les déchets marins en nouveaux matériaux et les idées en projets."
           }
@@ -63,6 +64,7 @@
         "c2d07b5a-fcc5-4444-a26d-f7120dad204c": {
           "type": "slide",
           "settings": {
+            "image": "shopify:\/\/shop_images\/BOUTEILLE_LAB.png",
             "title": "PANettle",
             "content": "Espace d’innovation, de création et d’échange proposé par la marque CORAIL°, visant à transformer les déchets marins en nouveaux matériaux et les idées en projets."
           }
@@ -70,6 +72,7 @@
         "59f3362d-ae19-4a38-a042-f21d70fca1b8": {
           "type": "slide",
           "settings": {
+            "image": "shopify:\/\/shop_images\/filet.jpg",
             "title": "FRUTFIBER",
             "content": "Espace d’innovation, de création et d’échange proposé par la marque CORAIL°, visant à transformer les déchets marins en nouveaux matériaux et les idées en projets."
           }
@@ -93,26 +96,10 @@
             "title": "MArseille Lab",
             "content": "The CORAIL° Lab is located in our harbour, in Marseille, France. It enables us to sort and transform the marine waste we collect in ultra-short circuit. In this innovative space, our fishermen and technicians turn marine waste into high-performance materials we use to create our products."
           }
-        },
-        "4073072f-62f3-43dd-88d2-6486e8ae05e0": {
-          "type": "slide",
-          "settings": {
-            "title": "",
-            "content": ""
-          }
-        },
-        "8cd71456-7b6d-4373-b6bd-51b81144c50a": {
-          "type": "slide",
-          "settings": {
-            "title": "",
-            "content": ""
-          }
         }
       },
       "block_order": [
-        "0064150f-cc3d-4d0b-9aeb-e372f7b6ac59",
-        "4073072f-62f3-43dd-88d2-6486e8ae05e0",
-        "8cd71456-7b6d-4373-b6bd-51b81144c50a"
+        "0064150f-cc3d-4d0b-9aeb-e372f7b6ac59"
       ],
       "settings": {
         "title": "Lab-house"
