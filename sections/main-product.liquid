@@ -49,10 +49,10 @@
 				<div class="flex justify-between gap-x-7 items-center">
 					<div class="flex items-center gap-x-7">
 						<p class="text-4xl font-semibold font-display uppercase">
-							{{ product.title | truncate: 12, "..." | escape }}
+							{{- product.title | truncate: 12, "..." | escape -}}
 						</p>
 
-						<div class="text-2xl font-medium font-display" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
+						<div class="text-2xl font-medium font-display js-main-product" id="price-fixed-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
 							{%- render 'price', product: product, use_variant: true, show_badges: false, price_class: '' -%}
 						</div>
 					</div>
@@ -77,9 +77,8 @@
 											</fieldset>
 										{%- endfor -%}
 
-										<script type="application/json">
-											{{ product.variants | json }}
-										</script>
+										<script type="application/json">{{- product.variants | json -}}</script>
+
 									</variant-buttons>
 								{% endunless %}
 
@@ -95,9 +94,9 @@
 
 									<span>
 										{%- if product.selected_or_first_available_variant.available -%}
-											{{ 'products.product.add_to_cart' | t }}
+											{{- 'products.product.add_to_cart' | t -}}
 										{%- else -%}
-											{{ 'products.product.sold_out' | t }}
+											{{- 'products.product.sold_out' | t -}}
 										{%- endif -%}
 									</span>
 
@@ -324,9 +323,9 @@
 									</h1>
 
 									{% if product.tags %}
-										<div class="hidden lg:flex flex-wrap ml-4">
+										<div class="hidden lg:flex flex-wrap ml-4 gap-0.5">
 											{% for tag in product.tags %}
-												<div class="text-sm font-display border border-gray-very-dark px-3 py-[0.0625rem] font-medium rounded-full">
+												<div class="text-sm font-display border text-center border-gray-very-dark px-3 py-[0.0625rem] font-medium rounded-full">
 													{{- tag -}}
 												</div>
 											{% endfor %}
@@ -518,7 +517,7 @@
 												value="{{ product.selected_or_first_available_variant.id }}"
 												disabled
 											>
-											<div class="product-form__buttons flex flex-col lg:flex-row gap-4 lg:flex-wrap">
+											<div class="product-form__buttons flex flex-col gap-4">
 												<button
 													type="submit"
 													name="add"

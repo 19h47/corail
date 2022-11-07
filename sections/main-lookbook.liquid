@@ -102,7 +102,9 @@
 	</div>
 
 	<div class="relative z-3 space-y-10 my-10 lg:space-y-24 lg:my-24">
+		{% comment %}theme-check-disable LiquidTag{% endcomment %}
 		{% assign index = 0 %}
+		{% comment %}theme-check-enable LiquidTag{% endcomment %}
 
 		{% for block in section.blocks %}
 			{%- case block.type -%}

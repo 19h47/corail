@@ -1,34 +1,3 @@
-slider-component {
-	--desktop-margin-left-first-item: max(
-		5rem,
-		calc((100vw - var(--page-width) + 10rem - var(--grid-desktop-horizontal-spacing)) / 2)
-	);
-	position: relative;
-	display: block;
-}
-
-slider-component.slider-component-full-width {
-	--desktop-margin-left-first-item: 1.5rem;
-}
-
-@media screen and (max-width: 749px) {
-	slider-component.page-width {
-		padding: 0 1.5rem;
-	}
-}
-
-@media screen and (min-width: 749px) and (max-width: 990px) {
-	slider-component.page-width {
-		padding: 0 5rem;
-	}
-}
-
-@media screen and (max-width: 989px) {
-	.no-js slider-component .slider {
-		padding-bottom: 3rem;
-	}
-}
-
 @media screen and (max-width: 749px) {
 	.slider.slider--mobile {
 		position: relative;

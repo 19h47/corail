@@ -1,22 +1,5 @@
-<link rel="stylesheet" href="{{ 'component-slider.css' | asset_url }}" media="print" onload="this.media='all'">
-<link rel="stylesheet" href="{{ 'component-card.css' | asset_url }}" media="print" onload="this.media='all'">
-<link rel="stylesheet" href="{{ 'component-article-card.css' | asset_url }}" media="print" onload="this.media='all'">
-<link rel="stylesheet" href="{{ 'section-featured-blog.css' | asset_url }}" media="print" onload="this.media='all'">
-
-<noscript>{{ 'component-slider.css' | asset_url | stylesheet_tag }}</noscript>
-<noscript>{{ 'component-card.css' | asset_url | stylesheet_tag }}</noscript>
-<noscript>{{ 'component-article-card.css' | asset_url | stylesheet_tag }}</noscript>
-
-{{ 'section-featured-blog.css' | asset_url | stylesheet_tag }}
-
-{%- liquid
-
-	if section.settings.post_limit <= section.settings.blog.articles_count
-  	endif
--%}
-
 <div
-	class="featured-blog my-16 space-y-11 lg:space-y-8"
+	class="my-16 space-y-11 lg:space-y-8"
 	{% if section.settings.anchor != blank %}
 		id="{{ section.settings.anchor }}"
 		style="scroll-margin-top: 6rem;"
@@ -67,7 +50,7 @@
 {
   "name": "t:sections.featured-blog.name",
   "tag": "section",
-  "class": "section",
+  "class": "section featured-blog",
   "settings": [
     {
       "type": "text",

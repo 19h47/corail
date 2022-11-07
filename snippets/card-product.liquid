@@ -23,8 +23,9 @@
 
 {% liquid
 	assign card_product = card_product | default: null
-	assign media_aspect_ratio = media_aspect_ratio | default: 'square'
 	assign classes = classes | default: ''
+	assign media_aspect_ratio = media_aspect_ratio | default: 'square'
+	assign section_id = section_id | default: ''
 	assign size = size | default: 'small'
 	assign show_secondary_image = show_secondary_image | default: false
 

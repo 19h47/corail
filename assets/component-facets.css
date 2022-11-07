@@ -272,11 +272,6 @@
 	color: rgba(var(--color-foreground), 0.4);
 }
 
-.facets__price {
-	display: flex;
-	padding: 2rem;
-}
-
 .facets__price .field + .field-currency {
 	margin-left: 2rem;
 }
@@ -426,10 +421,6 @@ a.active-facets__button.focused .active-facets__button-inner,
 .mobile-facets__header-inner {
 	flex-grow: 1;
 	position: relative;
-}
-
-.mobile-facets__info {
-	padding: 0 2.6rem;
 }
 
 .mobile-facets__count {

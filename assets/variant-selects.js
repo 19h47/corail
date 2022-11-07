@@ -168,30 +168,24 @@ class VariantSelects extends HTMLElement {
 			.then(response => response.text())
 			.then(responseText => {
 				// prevent unnecessary ui changes from abandoned selections
-				if (this.currentVariant.id !== requestedVariantId) return;
+				if (this.currentVariant.id !== requestedVariantId) {
+					return;
+				}
 
 				const html = new DOMParser().parseFromString(responseText, "text/html");
 				const destination = document.getElementById(`price-${this.dataset.section}`);
-				const source = html.getElementById(
-					`price-${
-						this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section
-					}`
-				);
-				const skuSource = html.getElementById(
-					`Sku-${
-						this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section
-					}`
-				);
+				const source = html.getElementById(`price-${this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section}`);
+				const skuSource = html.getElementById(`Sku-${this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section}`);
 				const skuDestination = document.getElementById(`Sku-${this.dataset.section}`);
-				const inventorySource = html.getElementById(
-					`Inventory-${
-						this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section
-					}`
-				);
+				const inventorySource = html.getElementById(`Inventory-${this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section}`);
 				const inventoryDestination = document.getElementById(`Inventory-${this.dataset.section}`);
+
+				const $priceFixed = html.getElementById(`price-fixed-${this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section}`);
+
 
 				if (source && destination) {
 					destination.innerHTML = source.innerHTML;
+					$priceFixed.innerHTML = source.innerHTML;
 				}
 
 				if (inventorySource && inventoryDestination) {
@@ -208,7 +202,9 @@ class VariantSelects extends HTMLElement {
 
 				const price = document.getElementById(`price-${this.dataset.section}`);
 
-				if (price) price.classList.remove("visibility-hidden");
+				if (price) {
+					price.classList.remove("visibility-hidden");
+				}
 
 				if (inventoryDestination)
 					inventoryDestination.classList.toggle(

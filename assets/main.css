@@ -2518,6 +2518,14 @@ html,
 	gap: 1rem;
 }
 
+.gap-0\.5{
+	gap: 0.125rem;
+}
+
+.gap-0{
+	gap: 0px;
+}
+
 .gap-x-5{
 	-moz-column-gap: 1.25rem;
 	     column-gap: 1.25rem;
@@ -4514,10 +4522,6 @@ html,
 
 	.lg\:flex-col{
 		flex-direction: column;
-	}
-
-	.lg\:flex-wrap{
-		flex-wrap: wrap;
 	}
 
 	.lg\:items-start{

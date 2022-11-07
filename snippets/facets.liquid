@@ -204,15 +204,17 @@
 																{% render 'svg', icon: 'chevron-right', classes: 'w-2.5 h-2.5 ml-2.5' %}
 															</summary>
 															<div id="FacetMobile-{{ forloop.index }}-{{ section.id }}" class="mobile-facets__submenu bg-white">
+
 																<button class="p-5 uppercase font-bold flex font-display leading-7 items-center border-b-[0.0625rem] border-orange-grayish" aria-expanded="true" type="button">
 																	{% render 'svg', icon: 'chevron-left', classes: 'w-2.5 h-2.5 mr-2.5' %}
 																	{{ filter.label | escape }}
 																</button>
 
 																{%- assign max_price_amount = filter.range_max | money | strip_html | escape -%}
-																<p class="mobile-facets__info">{{ "products.facets.max_price" | t: price: max_price_amount }}</p>
 
-																<price-range class="facets__price">
+																<p class="px-5 my-5 font-display font-medium">{{ "products.facets.max_price" | t: price: max_price_amount }}</p>
+
+																<price-range class="facets__price px-5 flex">
 																	<span class="field-currency">{{ cart.currency.symbol }}</span>
 																	<div class="field">
 																		<input class="field__input"

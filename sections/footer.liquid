@@ -1,13 +1,4 @@
-{% comment %}theme-check-disable UndefinedObject{% endcomment %}
-{{ 'section-footer.css' | asset_url | stylesheet_tag }}
-
 <script src="{{ 'coordinates.js' | asset_url }}" defer></script>
-
-<link rel="stylesheet" href="{{ 'component-newsletter.css' | asset_url }}" media="print" onload="this.media='all'">
-<link rel="stylesheet" href="{{ 'component-list-payment.css' | asset_url }}" media="print" onload="this.media='all'">
-
-<noscript>{{ 'component-newsletter.css' | asset_url | stylesheet_tag }}</noscript>
-<noscript>{{ 'component-list-payment.css' | asset_url | stylesheet_tag }}</noscript>
 
 <footer class="{% if page.template_suffix contains 'commintments' %} {% else %} pb-11 relative lg:pb-0 {% endif %}">
 	<div class="relative lg:h-[22rem]">

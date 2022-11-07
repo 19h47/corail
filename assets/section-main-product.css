@@ -108,12 +108,7 @@
 */
 
 .shopify-payment-button__more-options {
-	margin: 1.6rem 0 1rem;
-	font-size: 1.2rem;
-	line-height: calc(1 + 0.5 / var(--font-body-scale));
-	letter-spacing: 0.05rem;
-	text-decoration: underline;
-	text-underline-offset: 0.3rem;
+	margin-top: 1.25rem;
 }
 
 .shopify-payment-button__button + .shopify-payment-button__button--hidden {

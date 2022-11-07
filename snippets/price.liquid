@@ -37,8 +37,7 @@
   		{%- if price_class %} {{ price_class }}{% endif -%}
   		{%- if available == false %} price--sold-out {% endif -%}
   		{%- if compare_at_price > price %} price--on-sale {% endif -%}
-  		{%- if product.price_varies == false and product.compare_at_price_varies %} price--no-compare{% endif -%}
-
+  		{%- if product.price_varies == false and product.compare_at_price_varies %} price--no-compare {% endif -%}
 		{%- if show_badges %} price--show-badge {% endif -%}
 	"
 >
@@ -50,15 +49,16 @@
 	</div>
 
 	<div class="{% if compare_at_price > price %} hidden {% else %} block {% endif %}">
+
 		{%- unless product.price_varies == false and product.compare_at_price_varies %}
 			<span class="sr-only">{{ 'products.product.price.regular_price' | t }}</span>
 			<span>
-				<s class="price-item price-item--regular">
-					{% if settings.currency_code_enabled %}
-						{{ compare_at_price | money_with_currency }}
-					{% else %}
-						{{ compare_at_price | money }}
-					{% endif %}
+				<s class="mr-1 text-xs text-orange-grayish">
+					{%- if settings.currency_code_enabled -%}
+						{{- compare_at_price | money_with_currency -}}
+					{%- else %}
+						{{- compare_at_price | money -}}
+					{%- endif -%}
 				</s>
 			</span>
 		{%- endunless -%}
@@ -67,7 +67,7 @@
 		<span class="price-item price-item--sale price-item--last">{{ money_price }}</span>
 	</div>
 
-	<small class="unit-price caption {% if product.selected_or_first_available_variant.unit_price_measurement == nil %} hidden {% endif %}">
+	<small class="unit-price {% if product.selected_or_first_available_variant.unit_price_measurement == nil %} hidden {% endif %}">
 		<span class="visually-hidden">{{ 'products.product.price.unit_price' | t }}</span>
 		<span class="price-item price-item--last">
 			<span>{{- product.selected_or_first_available_variant.unit_price | money -}}</span>
