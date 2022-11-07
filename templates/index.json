@@ -13,7 +13,7 @@
           "type": "button",
           "settings": {
             "button_label": "Voir la collection",
-            "button_link": "https:\/\/19h47.fr"
+            "button_link": "shopify:\/\/collections\/la-marseille-21"
           }
         }
       },
@@ -22,14 +22,14 @@
         "77e1adaf-ffa1-4d4c-a3af-c222a74cbaa2"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/92b477b7a5f3c240a611cd046defe8ca.png"
+        "image": "shopify:\/\/shop_images\/83d1f73346e589a1eb00561c2449e4ac.jpg"
       }
     },
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
         "title": "We make\nsneakers with\nmarine waste\ncollected and transformed\nby us.",
-        "description": "",
+        "description": "<p>FROM THE SEA <\/p>",
         "show_description": false,
         "collection": "all",
         "products_to_show": 4,
@@ -51,17 +51,17 @@
         "fee4603b-41ce-4d85-bc48-880934cef334": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/putting-on-your-shoes.jpg",
+            "image": "shopify:\/\/shop_images\/NawelOdin-Corail_25-10-1172.jpg",
             "link_title": "Women shoes",
-            "link_url": "shopify:\/\/collections\/frontpage"
+            "link_url": "shopify:\/\/pages\/femmes"
           }
         },
         "0f7fd138-12f8-4290-aaca-f5510c15b121": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/modern-blue-handbag.jpg",
+            "image": "shopify:\/\/shop_images\/NawelOdin-Corail_25-10-1164.jpg",
             "link_title": "Men shoes",
-            "link_url": "shopify:\/\/collections"
+            "link_url": "shopify:\/\/pages\/hommes"
           }
         }
       },
@@ -79,12 +79,11 @@
         "content": "CORAIL°Lab est un espace permettant de réfléchir à des solutions innovantes pour retirer puis transformer les déchets marins en matière première. Grâce à celle-ci, nous créons des produits lifestyle accessibles par une grande majorité de la population.",
         "link_title": "Découvrir le Lab",
         "link_url": "shopify:\/\/pages\/lab",
-        "video_cover_image": "shopify:\/\/shop_images\/japanese-garden-rock-texture.jpg",
-        "video": "",
+        "video": "shopify:\/\/files\/videos\/BOUCLE Flakes (2000 x 1000).mp4",
         "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
         "video_description": "",
-        "image_1": "shopify:\/\/shop_images\/trying-on-shoes.jpg",
-        "image_2": "shopify:\/\/shop_images\/insulation-between-studs.jpg"
+        "image_1": "shopify:\/\/shop_images\/Image_block_Corail_Lab_bas_2.jpg",
+        "image_2": "shopify:\/\/shop_images\/Main_Flakes_Log.jpg"
       }
     },
     "1664891410510688cf": {
