@@ -3,32 +3,34 @@
 		{%- for block in section.blocks -%}
 			{% case block.type %}
 				{% when 'column' %}
-					<div class="lg:col-6/12">
-						<div class="relative h-[26.25rem] lg:h-[54rem] lg:max-h-screen">
-							<img
-								srcset="{%- if block.settings.image.src.width >= 165 -%}{{ block.settings.image.src | image_url: width: 165 }} 165w,{%- endif -%}
-								{%- if block.settings.image.src.width >= 360 -%}{{ block.settings.image.src | image_url: width: 360 }} 360w,{%- endif -%}
-								{%- if block.settings.image.src.width >= 533 -%}{{ block.settings.image.src | image_url: width: 533 }} 533w,{%- endif -%}
-								{%- if block.settings.image.src.width >= 720 -%}{{ block.settings.image.src | image_url: width: 720 }} 720w,{%- endif -%}
-								{%- if block.settings.image.src.width >= 1000 -%}{{ block.settings.image.src | image_url: width: 1000 }} 1000w,{%- endif -%}
-								{%- if block.settings.image.src.width >= 1500 -%}{{ block.settings.image.src | image_url: width: 1500 }} 1500w,{%- endif -%}
-								{{ block.settings.image.src | image_url }} {{ block.settings.image.src.width }}w"
-								src="{{ block.settings.image.src | image_url: width: 533 }}"
-								sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
-								alt="{{ block.settings.image.src.alt | escape }}"
-								loading="lazy"
-								width="{{ block.settings.image.width }}"
-								height="{{ block.settings.image.height }}"
-								class="object-center absolute inset-0 object-cover w-full h-full z-10"
-							>
+					{% if block.settings.image != nil %}
+						<div class="lg:col-6/12">
+							<div class="relative h-[26.25rem] lg:h-[54rem] lg:max-h-screen">
+								<img
+									srcset="{%- if block.settings.image.src.width >= 165 -%}{{ block.settings.image.src | image_url: width: 165 }} 165w,{%- endif -%}
+									{%- if block.settings.image.src.width >= 360 -%}{{ block.settings.image.src | image_url: width: 360 }} 360w,{%- endif -%}
+									{%- if block.settings.image.src.width >= 533 -%}{{ block.settings.image.src | image_url: width: 533 }} 533w,{%- endif -%}
+									{%- if block.settings.image.src.width >= 720 -%}{{ block.settings.image.src | image_url: width: 720 }} 720w,{%- endif -%}
+									{%- if block.settings.image.src.width >= 1000 -%}{{ block.settings.image.src | image_url: width: 1000 }} 1000w,{%- endif -%}
+									{%- if block.settings.image.src.width >= 1500 -%}{{ block.settings.image.src | image_url: width: 1500 }} 1500w,{%- endif -%}
+									{{ block.settings.image.src | image_url }} {{ block.settings.image.src.width }}w"
+									src="{{ block.settings.image.src | image_url: width: 533 }}"
+									sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
+									alt="{{ block.settings.image.src.alt | escape }}"
+									loading="lazy"
+									width="{{ block.settings.image.width }}"
+									height="{{ block.settings.image.height }}"
+									class="object-center absolute inset-0 object-cover w-full h-full z-10"
+								>
 
-							{% if block.settings.link_url %}
-								<a class="flex items-center justify-center h-full group relative z-20" href="{{ block.settings.link_url }}">
-									<p class="button group-hover:bg-gray-very-dark group-hover:text-white group-focus:bg-gray-very-dark group-focus:text-white">&rightarrow;&nbsp;{{ block.settings.link_title }}</p>
-								</a>
-							{% endif %}
+								{% if block.settings.link_url %}
+									<a class="flex items-center justify-center h-full group relative z-20" href="{{ block.settings.link_url }}">
+										<p class="button group-hover:bg-gray-very-dark group-hover:text-white group-focus:bg-gray-very-dark group-focus:text-white">&rightarrow;&nbsp;{{ block.settings.link_title }}</p>
+									</a>
+								{% endif %}
+							</div>
 						</div>
-					</div>
+					{% endif %}
 			{% endcase %}
 		{%- endfor -%}
 	</div>

@@ -1,50 +1,52 @@
-<div
-	class="my-16 space-y-11 lg:space-y-8"
-	{% if section.settings.anchor != blank %}
-		id="{{ section.settings.anchor }}"
-		style="scroll-margin-top: 6rem;"
-		data-scroll
-		data-scroll-call="anchor"
-	{% endif %}
->
-	<div class="container">
-		<div class="row items-center">
-			{%- unless section.settings.heading == blank -%}
-				<div class="lg:col-6/12">
-					<h2 class="font-semibold text-3xl lg:text-5xl leading-none uppercase font-display">
-						{{ section.settings.heading | escape }}
-					</h2>
+{% if section.settings.blog.articles %}
+	<div
+		class="my-16 space-y-11 lg:space-y-8"
+		{% if section.settings.anchor != blank %}
+			id="{{ section.settings.anchor }}"
+			style="scroll-margin-top: 6rem;"
+			data-scroll
+			data-scroll-call="anchor"
+		{% endif %}
+	>
+		<div class="container">
+			<div class="row items-center">
+				{%- unless section.settings.heading == blank -%}
+					<div class="lg:col-6/12">
+						<h2 class="font-semibold text-3xl lg:text-5xl leading-none uppercase font-display">
+							{{ section.settings.heading | escape }}
+						</h2>
+					</div>
+				{%- endunless -%}
+
+				<div class="lg:col-6/12 hidden lg:flex justify-end">
+					<a href="{{ section.settings.blog.url }}" class="button button-red">
+						&rightarrow;&nbsp;{{ 'sections.featured_blog.view_all' | t }}
+					</a>
 				</div>
-			{%- endunless -%}
 
-			<div class="lg:col-6/12 hidden lg:flex justify-end">
-				<a href="{{ section.settings.blog.url }}" class="button button-red">
-					&rightarrow;&nbsp;{{ 'sections.featured_blog.view_all' | t }}
-				</a>
 			</div>
-
 		</div>
-	</div>
-	<div class="container">
-		<ul class="row">
-			{%- for article in section.settings.blog.articles limit: section.settings.post_limit -%}
-				<li class="lg:w-3/12 {% if forloop.first %}{% else %} hidden lg:block {% endif %}">
-					{% render 'article-card', blog: section.settings.blog, article: article, media_aspect_ratio: 1.66, show_image: section.settings.show_image, show_date: section.settings.show_date, show_author: section.settings.show_author, show_excerpt: true %}
-				</li>
-			{%- endfor -%}
-		</ul>
-	</div>
+		<div class="container">
+			<ul class="row">
+				{%- for article in section.settings.blog.articles limit: section.settings.post_limit -%}
+					<li class="lg:w-3/12 {% if forloop.first %}{% else %} hidden lg:block {% endif %}">
+						{% render 'article-card', blog: section.settings.blog, article: article, media_aspect_ratio: 1.66, show_image: section.settings.show_image, show_date: section.settings.show_date, show_author: section.settings.show_author, show_excerpt: true %}
+					</li>
+				{%- endfor -%}
+			</ul>
+		</div>
 
-	<div class="container lg:hidden">
-		<div class="row">
-			<div>
-				<a href="{{ section.settings.blog.url }}" class="button button-red w-full inline-block align-middle">
-					&rightarrow;&nbsp;{{ 'sections.featured_blog.view_all' | t }}
-				</a>
+		<div class="container lg:hidden">
+			<div class="row">
+				<div>
+					<a href="{{ section.settings.blog.url }}" class="button button-red w-full inline-block align-middle">
+						&rightarrow;&nbsp;{{ 'sections.featured_blog.view_all' | t }}
+					</a>
+				</div>
 			</div>
 		</div>
 	</div>
-</div>
+{% endif %}
 
 {% schema %}
 {
