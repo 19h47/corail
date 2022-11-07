@@ -1,7 +1,6 @@
 .loading-overlay {
   position: absolute;
   z-index: 1;
-  width: 1.8rem;
 }
 
 @media screen and (max-width: 749px) {

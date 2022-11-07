@@ -217,10 +217,6 @@ cart-drawer-items {
   margin-bottom: 0;
 }
 
-.cart-drawer .cart-items th {
-  border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.08);
-}
-
 .cart-drawer .cart-item:last-child {
   margin-bottom: 1.5rem;
 }

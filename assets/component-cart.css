@@ -7,16 +7,6 @@ cart-items {
 	display: block;
 }
 
-.cart__items {
-	position: relative;
-	padding-bottom: 3rem;
-	border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.08);
-}
-
-.cart__items--disabled {
-	pointer-events: none;
-}
-
 .cart__note {
 	height: fit-content;
 }
@@ -49,14 +39,6 @@ cart-items {
 .cart__note .field__input:focus,
 .cart__note .field__input {
 	border-bottom-right-radius: 0;
-}
-
-@media screen and (min-width: 750px) {
-	.cart__items {
-		grid-column-start: 1;
-		grid-column-end: 3;
-		padding-bottom: 4rem;
-	}
 }
 
 .cart__ctas button {

@@ -432,10 +432,6 @@ table:not([class]) th {
 	text-align: right;
 }
 
-.uppercase {
-	text-transform: uppercase;
-}
-
 .light {
 	opacity: 0.7;
 }

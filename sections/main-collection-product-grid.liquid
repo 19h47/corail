@@ -83,7 +83,9 @@
 						</ul>
 
 						{%- if paginate.pages > 1 -%}
-							{% render 'pagination', paginate: paginate, anchor: '' %}
+							<div class="mt-16">
+								{% render 'pagination', paginate: paginate, anchor: '' %}
+							</div>
 						{%- endif -%}
 					</div>
 				{%- endif -%}

@@ -1,7 +1,10 @@
+/* global debounce, fetchConfig, routes, trapFocus */
+
+// eslint-disable-next-line max-classes-per-file
 class CartRemoveButton extends HTMLElement {
 	constructor() {
 		super();
-		this.addEventListener("click", (event) => {
+		this.addEventListener("click", event => {
 			event.preventDefault();
 			const cartItems = this.closest("cart-items") || this.closest("cart-drawer-items");
 			cartItems.updateQuantity(this.dataset.index, 0);
@@ -20,11 +23,11 @@ class CartItems extends HTMLElement {
 			document.getElementById("CartDrawer-LineItemStatus");
 
 		this.currentItemCount = Array.from(this.querySelectorAll('[name="updates[]"]')).reduce(
-			(total, quantityInput) => total + parseInt(quantityInput.value),
+			(total, quantityInput) => total + parseInt(quantityInput.value, 10),
 			0
 		);
 
-		this.debouncedOnChange = debounce((event) => {
+		this.debouncedOnChange = debounce(event => {
 			this.onChange(event);
 		}, 300);
 
@@ -39,6 +42,7 @@ class CartItems extends HTMLElement {
 		);
 	}
 
+	// eslint-disable-next-line class-methods-use-this
 	getSectionsToRender() {
 		return [
 			{
@@ -70,25 +74,23 @@ class CartItems extends HTMLElement {
 		const body = JSON.stringify({
 			line,
 			quantity,
-			sections: this.getSectionsToRender().map((section) => section.section),
+			sections: this.getSectionsToRender().map(section => section.section),
 			sections_url: window.location.pathname,
 		});
 
 		fetch(`${routes.cart_change_url}`, { ...fetchConfig(), ...{ body } })
-			.then((response) => {
-				return response.text();
-			})
-			.then((state) => {
+			.then(response => response.text())
+			.then(state => {
 				const parsedState = JSON.parse(state);
-				this.classList.toggle("is-empty", parsedState.item_count === 0);
+				this.classList.toggle("is-empty", 0 === parsedState.item_count);
 				const cartDrawerWrapper = document.querySelector("cart-drawer");
 				const cartFooter = document.getElementById("main-cart-footer");
 
-				if (cartFooter) cartFooter.classList.toggle("is-empty", parsedState.item_count === 0);
+				if (cartFooter) cartFooter.classList.toggle("is-empty", 0 === parsedState.item_count);
 				if (cartDrawerWrapper)
-					cartDrawerWrapper.classList.toggle("is-empty", parsedState.item_count === 0);
+					cartDrawerWrapper.classList.toggle("is-empty", 0 === parsedState.item_count);
 
-				this.getSectionsToRender().forEach((section) => {
+				this.getSectionsToRender().forEach(section => {
 					const elementToReplace =
 						document.getElementById(section.id).querySelector(section.selector) ||
 						document.getElementById(section.id);
@@ -103,21 +105,22 @@ class CartItems extends HTMLElement {
 					document.getElementById(`CartItem-${line}`) ||
 					document.getElementById(`CartDrawer-Item-${line}`);
 				if (lineItem && lineItem.querySelector(`[name="${name}"]`)) {
+					// eslint-disable-next-line no-unused-expressions
 					cartDrawerWrapper
 						? trapFocus(cartDrawerWrapper, lineItem.querySelector(`[name="${name}"]`))
 						: lineItem.querySelector(`[name="${name}"]`).focus();
-				} else if (parsedState.item_count === 0 && cartDrawerWrapper) {
+				} else if (0 === parsedState.item_count && cartDrawerWrapper) {
 					trapFocus(
 						cartDrawerWrapper.querySelector(".js-drawer-inner-empty"),
 						cartDrawerWrapper.querySelector("a")
 					);
-				} else if (document.querySelector(".cart-item") && cartDrawerWrapper) {
-					trapFocus(cartDrawerWrapper, document.querySelector(".cart-item__name"));
+				} else if (document.querySelector(".js-cart-item") && cartDrawerWrapper) {
+					trapFocus(cartDrawerWrapper, document.querySelector(".js-cart-item-name"));
 				}
 				this.disableLoading();
 			})
 			.catch(() => {
-				this.querySelectorAll(".loading-overlay").forEach((overlay) =>
+				this.querySelectorAll(".loading-overlay").forEach(overlay =>
 					overlay.classList.add("hidden")
 				);
 				const errors =
@@ -153,21 +156,21 @@ class CartItems extends HTMLElement {
 		}, 1000);
 	}
 
+	// eslint-disable-next-line class-methods-use-this
 	getSectionInnerHTML(html, selector) {
 		return new DOMParser().parseFromString(html, "text/html").querySelector(selector).innerHTML;
 	}
 
 	enableLoading(line) {
-		const mainCartItems =
-			document.getElementById("main-cart-items") || document.getElementById("CartDrawer-CartItems");
-		mainCartItems.classList.add("cart__items--disabled");
+		const mainCartItems = document.getElementById("main-cart-items") || document.getElementById("CartDrawer-CartItems");
+		mainCartItems.classList.add("pointer-events-none");
 
 		const cartItemElements = this.querySelectorAll(`#CartItem-${line} .loading-overlay`);
 		const cartDrawerItemElements = this.querySelectorAll(
 			`#CartDrawer-Item-${line} .loading-overlay`
 		);
 
-		[...cartItemElements, ...cartDrawerItemElements].forEach((overlay) =>
+		[...cartItemElements, ...cartDrawerItemElements].forEach(overlay =>
 			overlay.classList.remove("hidden")
 		);
 
@@ -175,10 +178,10 @@ class CartItems extends HTMLElement {
 		this.lineItemStatusElement.setAttribute("aria-hidden", false);
 	}
 
+	// eslint-disable-next-line class-methods-use-this
 	disableLoading() {
-		const mainCartItems =
-			document.getElementById("main-cart-items") || document.getElementById("CartDrawer-CartItems");
-		mainCartItems.classList.remove("cart__items--disabled");
+		const mainCartItems = document.getElementById("main-cart-items") || document.getElementById("CartDrawer-CartItems");
+		mainCartItems.classList.remove("pointer-events-none");
 	}
 }
 
@@ -193,7 +196,7 @@ if (!customElements.get("cart-note")) {
 
 				this.addEventListener(
 					"change",
-					debounce((event) => {
+					debounce(event => {
 						const body = JSON.stringify({ note: event.target.value });
 						fetch(`${routes.cart_update_url}`, { ...fetchConfig(), ...{ body } });
 					}, 300)

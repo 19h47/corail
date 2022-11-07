@@ -41,11 +41,18 @@ const scroll = new LocomotiveNativeScroll({ smooth: false, repeat: true });
 
 const isOntop = () => {
 	const top = window.pageYOffset || document.documentElement.scrollTop;
+	const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
 
 	if (0 >= top) {
 		document.documentElement.classList.add("is-ontop");
 	} else {
 		document.documentElement.classList.remove("is-ontop");
+	}
+
+	if (viewportHeight >= top) {
+		document.documentElement.classList.remove("is-scrolled-screen");
+	} else {
+		document.documentElement.classList.add("is-scrolled-screen");
 	}
 
 	if (Math.round(window.pageYOffset + window.innerHeight) >= document.body.scrollHeight) {
