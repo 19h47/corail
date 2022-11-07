@@ -27,16 +27,18 @@
 				<div class="lg:col-8/12 lg:ml-3/12 swiper overflow-visible">
 					<ul class="swiper-wrapper">
 						{% for block in section.blocks %}
-							{% if block.settings.image != nil %}
+							{% if block.settings.image != nil or block.settings.title != blank or block.settings.content != blank %}
 								<li class="swiper-slide">
-									<div class="rounded-[1.25rem] h-[24.625rem] overflow-hidden">
-										{{ block.settings.image | image_url: width: 354 | image_tag:
-											loading: 'lazy',
-											sizes: sizes,
-											widths: '550, 720, 990, 1100, 1500, 2200, 3000',
-											class: 'w-full h-full object-cover object-center block'
-										}}
-									</div>
+									{% if block.settings.image != nil %}
+										<div class="rounded-[1.25rem] h-[24.625rem] overflow-hidden">
+											{{ block.settings.image | image_url: width: 354 | image_tag:
+												loading: 'lazy',
+												sizes: sizes,
+												widths: '550, 720, 990, 1100, 1500, 2200, 3000',
+												class: 'w-full h-full object-cover object-center block'
+											}}
+										</div>
+									{% endif %}
 
 									{% if block.settings.title != blank or block.settings.content != blank %}
 										<div class="lg:row mt-6">
