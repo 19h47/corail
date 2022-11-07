@@ -35,13 +35,13 @@
 			  	assign sizes = "100vw"
 			endif
 		-%}
-		{{ section.settings.image | image_url: width: 1500 | image_tag:
+		{{ section.settings.image | image_url: width: 1440, height: 840 | image_tag:
 			loading: 'lazy',
 			width: section.settings.image.width,
 			height: image_height,
 			class: 'w-full h-full object-cover object-center relative z-10',
 			sizes: sizes,
-			widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840',
+			widths: '320, 1440',
 			alt: section.settings.image.alt | escape
 		}}
 	{% endif %}
