@@ -35,25 +35,27 @@
 						{%- for block in section.blocks -%}
 							{% case block.type %}
 								{%- when 'image' -%}
-									<div class="swiper-slide h-[14rem] lg:h-[47.5rem]">
-										<img
-											srcset="{%- if block.settings.image.width >= 165 -%}{{ block.settings.image | image_url: width: 165 }} 165w,{%- endif -%}
-											{%- if block.settings.image.width >= 330 -%}{{ block.settings.image | image_url: width: 330 }} 330w,{%- endif -%}
-											{%- if block.settings.image.width >= 535 -%}{{ block.settings.image | image_url: width: 535 }} 535w,{%- endif -%}
-											{%- if block.settings.image.width >= 750 -%}{{ block.settings.image | image_url: width: 750 }} 750w,{%- endif -%}
-											{%- if block.settings.image.width >= 1000 -%}{{ block.settings.image | image_url: width: 1000 }} 1000w,{%- endif -%}
-											{%- if block.settings.image.width >= 1500 -%}{{ block.settings.image | image_url: width: 1500 }} 1500w,{%- endif -%}
-											{%- if block.settings.image.width >= 3000 -%}{{ block.settings.image | image_url: width: 3000 }} 3000w,{%- endif -%}
-											{{ block.settings.image | image_url }} {{ block.settings.image.width }}w"
-											src="{{ block.settings.image | image_url: width: 1500 }}"
-											sizes=""
-											alt=""
-											height="{{ block.settings.image.height }}"
-											width="{{ block.settings.image.width }}"
-											loading="lazy"
-											class="motion-reduce w-full h-full object-cover object-center"
-										>
-									</div>
+									{% if block.settings.image %}
+										<div class="swiper-slide h-[14rem] lg:h-[47.5rem]">
+											<img
+												srcset="{%- if block.settings.image.width >= 165 -%}{{ block.settings.image | image_url: width: 165 }} 165w,{%- endif -%}
+												{%- if block.settings.image.width >= 330 -%}{{ block.settings.image | image_url: width: 330 }} 330w,{%- endif -%}
+												{%- if block.settings.image.width >= 535 -%}{{ block.settings.image | image_url: width: 535 }} 535w,{%- endif -%}
+												{%- if block.settings.image.width >= 750 -%}{{ block.settings.image | image_url: width: 750 }} 750w,{%- endif -%}
+												{%- if block.settings.image.width >= 1000 -%}{{ block.settings.image | image_url: width: 1000 }} 1000w,{%- endif -%}
+												{%- if block.settings.image.width >= 1500 -%}{{ block.settings.image | image_url: width: 1500 }} 1500w,{%- endif -%}
+												{%- if block.settings.image.width >= 3000 -%}{{ block.settings.image | image_url: width: 3000 }} 3000w,{%- endif -%}
+												{{ block.settings.image | image_url }} {{ block.settings.image.width }}w"
+												src="{{ block.settings.image | image_url: width: 1500 }}"
+												sizes=""
+												alt=""
+												height="{{ block.settings.image.height }}"
+												width="{{ block.settings.image.width }}"
+												loading="lazy"
+												class="w-full h-full object-cover object-center"
+											>
+										</div>
+									{% endif %}
 							{%- endcase -%}
 						{%- endfor -%}
 					</div>
