@@ -53,7 +53,7 @@
 									<input type="text" id="AddressCityNew" name="address[city]" value="{{ form.city }}" autocomplete="address-level2" placeholder="{{ 'customer.addresses.city' | t }}">
 									<label for="AddressCityNew">{{ 'customer.addresses.city' | t }}</label>
 								</div>
-								<div>
+								<div class="w-full">
 									<label for="AddressCountryNew">{{ 'customer.addresses.country' | t }}</label>
 									<div class="select">
 									<select
@@ -96,10 +96,12 @@
 									{{ form.set_as_default_checkbox }}
 									<label for="address_default_address_new">{{ 'customer.addresses.set_default' | t }}</label>
 								</div>
-								<div>
-									<button>{{ 'customer.addresses.add' | t }}</button>
-									<button type="reset">{{ 'customer.addresses.cancel' | t }}</button>
+
+								<div class="mt-5 text-center w-full">
+									<button class="button button-red block w-full">{{ 'customer.addresses.add' | t }}</button>
+									<button class="mt-2.5 hover:underline" type="reset">{{ 'customer.addresses.cancel' | t }}</button>
 								</div>
+
 							{%- endform -%}
 						</div>
 					</div>
