@@ -175,6 +175,11 @@
 																				{% render 'svg', icon: 'at', classes: 'w-5 h-5 mr-2' %}
 																				{{ grandchildlink.title | replace: '[icon-at] ', '' | escape }}
 																			</a>
+																		{% elsif grandchildlink.title contains '[icon-account] ' %}
+																			<a href="{{ grandchildlink.url }}" class="py-1 flex items-center hover:underline">
+																				{% render 'svg', icon: 'account', classes: 'w-5 h-5 mr-2' %}
+																				{{ grandchildlink.title | replace: '[icon-account] ', '' | escape }}
+																			</a>
 																		{% else %}
 																			<a href="{{ grandchildlink.url }}" class="py-1 inline-block align-middle hover:underline is-active:underline  {% if grandchildlink.current %} is-active {% endif %}"{% if grandchildlink.current %} aria-current="page"{% endif %}>
 																				{{ grandchildlink.title | escape }}
