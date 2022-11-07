@@ -127,11 +127,13 @@
 											</p>
 										{% endif %}
 
-										{{ block.settings.image_left | image_url: width: 1500 | image_tag:
-											loading: 'lazy',
-											sizes: sizes,
-											widths: '165, 360, 535, 750, 1070, 1250, 1500'
-										}}
+										{% if block.settings.image_left != nil %}
+											{{ block.settings.image_left | image_url: width: 1500 | image_tag:
+												loading: 'lazy',
+												sizes: sizes,
+												widths: '165, 360, 535, 750, 1070, 1250, 1500'
+											}}
+										{% endif %}
 
 										{% if block.settings.title_left != empty %}
 											<p class="uppercase text-sm lg:mt-2.5 mt-1.5 hidden {% if mod != 0 %} lg:block  {% endif %}">
@@ -154,11 +156,13 @@
 											</p>
 										{% endif %}
 
-										{{ block.settings.image_right | image_url: width: 1500 | image_tag:
-											loading: 'lazy',
-											sizes: sizes,
-											widths: '165, 360, 535, 750, 1070, 1250, 1500'
-										}}
+										{% if block.settings.image_right != nil %}
+											{{ block.settings.image_right | image_url: width: 1500 | image_tag:
+												loading: 'lazy',
+												sizes: sizes,
+												widths: '165, 360, 535, 750, 1070, 1250, 1500'
+											}}
+										{% endif %}
 
 										{% if block.settings.title_right != empty %}
 											<p class="uppercase text-sm lg:mt-2.5 mt-1.5 hidden {% if mod == 0 %}  lg:block {% endif %}">
