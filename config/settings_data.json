@@ -137,8 +137,8 @@
       "header": {
         "type": "header",
         "settings": {
-          "menu": "main-menu",
-          "secondary-menu": "secondaire-menu"
+          "menu": "main-menu-01",
+          "secondary-menu": ""
         }
       },
       "footer": {
@@ -153,7 +153,7 @@
           "5df64fb9-93cc-492f-8062-61b4135d6fcd": {
             "type": "link_list_secondary",
             "settings": {
-              "menu": "footer-secondary"
+              "menu": ""
             }
           }
         },
