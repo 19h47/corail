@@ -1,7 +1,3 @@
-.customer form {
-	margin-top: 4rem;
-}
-
 .customer strong {
 	font-weight: normal;
 	color: rgb(var(--color-foreground));
@@ -579,12 +575,6 @@
 
 .addresses li > button + button {
 	margin-top: 0rem;
-}
-
-@media screen and (min-width: 750px) {
-	.addresses li > button:first-of-type {
-		margin-top: 3rem;
-	}
 }
 
 .addresses form {
