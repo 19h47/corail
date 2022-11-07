@@ -25,13 +25,6 @@
             "content": "These sneakers are made with SEADUST, an innovative material grinded in our CORAIL° Lab with discarded fishing nets and PET bottles collected in Marseille, France."
           }
         },
-        "vendor": {
-          "type": "text",
-          "disabled": true,
-          "settings": {
-            "text": "{{ product.vendor }}"
-          }
-        },
         "a13c66e5-b37d-433e-80c5-d3dc4ce746b8": {
           "type": "taxes",
           "disabled": true,
@@ -112,7 +105,6 @@
         "price",
         "description",
         "3881603f-1c4f-469c-a6c4-c79d1ba8d940",
-        "vendor",
         "a13c66e5-b37d-433e-80c5-d3dc4ce746b8",
         "ecddec68-4937-46a0-ad05-4a502005e951",
         "caption",
@@ -183,6 +175,12 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/Carrousel_3.jpg"
           }
+        },
+        "584270be-9e33-4ac9-8583-b74a8e61f4f0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Carrousel_4.jpg"
+          }
         }
       },
       "block_order": [
@@ -191,45 +189,10 @@
         "ef963a79-a748-461c-85e0-0b3b2b4a321c",
         "template--15990350479528__5352a5eb-3296-4b9c-9021-e759c6c0ea6b-166669405224db7574-1",
         "d6ea013c-9ab6-46e8-86de-20702f42ff31",
-        "324a9f25-d1c3-420a-8866-ba0bac024883"
+        "324a9f25-d1c3-420a-8866-ba0bac024883",
+        "584270be-9e33-4ac9-8583-b74a8e61f4f0"
       ],
       "settings": {
-      }
-    },
-    "image-with-text": {
-      "type": "image-with-text",
-      "disabled": true,
-      "blocks": {
-        "image-with-text-0": {
-          "type": "heading",
-          "settings": {
-            "heading": "Image with text",
-            "heading_size": "h1"
-          }
-        },
-        "image-with-text-1": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "text_style": "body"
-          }
-        }
-      },
-      "block_order": [
-        "image-with-text-0",
-        "image-with-text-1"
-      ],
-      "settings": {
-        "height": "small",
-        "desktop_image_width": "medium",
-        "layout": "text_first",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "color_scheme": "background-2",
-        "mobile_content_alignment": "left",
-        "padding_top": 36,
-        "padding_bottom": 36
       }
     },
     "43dfab5f-1246-4a2e-a403-00608e142f00": {
@@ -256,6 +219,7 @@
       "type": "twocolumn",
       "settings": {
         "title": "Started from the bottle",
+        "column_left_image": "shopify:\/\/shop_images\/LAB_3D.jpg",
         "column_left_title_research": "Research",
         "column_left_icon_research": true,
         "column_left_title_technical": "Semelle technique",
@@ -264,14 +228,16 @@
         "column_left_icon_recycled": true,
         "column_right_title": "matériaux et procédés INNOVANT",
         "column_right_content": "CORAIL°Lab est un espace permettant de réfléchir à des solutions innovantes pour retirer puis transformer les déchets marins en matière première.",
-        "column_right_button_label": "Découvrir le Lab",
-        "column_right_button_link": "shopify:\/\/pages\/lab"
+        "column_right_button_label": "",
+        "column_right_button_link": "",
+        "column_right_image": "shopify:\/\/shop_images\/Items_6Columns.png"
       }
     },
     "6a936414-7d9e-4e58-8e5a-38c840ae7acb": {
       "type": "twocolumn",
       "settings": {
         "title": "HANDMADE TO LAST",
+        "column_left_image": "shopify:\/\/shop_images\/0S1A4671.jpg",
         "column_left_title_research": "RESISTANCE TESTED INEXTREME CONDITIONS",
         "column_left_icon_research": false,
         "column_left_title_technical": "",
@@ -281,7 +247,8 @@
         "column_right_title": "RESISTANCE TESTED IN EXTREME CONDITIONS",
         "column_right_content": "Our products are handmade in our workshop in Portugal and submitted to extreme durability tests to insure their quality and long-lastingness. The real sustainable product is the one you keep.",
         "column_right_button_label": "OUR WORKSHOP",
-        "column_right_button_link": "#"
+        "column_right_button_link": "shopify:\/\/pages\/handmade-to-last-long",
+        "column_right_image": "shopify:\/\/shop_images\/0S1A4761-2.jpg"
       }
     },
     "634fcd5e-4684-44fe-b78a-33275a9b184c": {
@@ -294,7 +261,6 @@
     "main",
     "7d00fc27-c309-4d0a-9c10-bc7f88577e55",
     "5352a5eb-3296-4b9c-9021-e759c6c0ea6b",
-    "image-with-text",
     "43dfab5f-1246-4a2e-a403-00608e142f00",
     "product-recommendations",
     "206fe739-7a26-40e7-85fd-b60e38b52282",
