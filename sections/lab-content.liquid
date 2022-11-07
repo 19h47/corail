@@ -10,15 +10,17 @@
 	data-scroll-call="anchor"
 >
 
-	<div class="container mb-20 lg:order-1">
-		<div class="row">
-			<div class="lg:col-9/12 lg:ml-3/12">
-				<h2 class="text-[3.125rem] leading-none lg:text-[5.625rem] uppercase font-bold font-display text-center lg:leading-[5.5rem]">
-					{{- section.settings.title | newline_to_br -}}
-				</h2>
+	{% if section.settings.title != blank %}
+		<div class="container mb-20 lg:order-1">
+			<div class="row">
+				<div class="lg:col-9/12 lg:ml-3/12">
+					<h2 class="text-[3.125rem] leading-none lg:text-[5.625rem] uppercase font-bold font-display text-center lg:leading-[5.5rem]">
+						{{- section.settings.title | newline_to_br -}}
+					</h2>
+				</div>
 			</div>
 		</div>
-	</div>
+	{% endif %}
 
 	<div class="container lg:order-3 mb-20 lg:mb-0 w-full">
 		<div class="row">
@@ -43,32 +45,44 @@
 									</div>
 
 									<div class="lg:col-3/9 lg:order-1 mt-5 lg:mt-0">
-										<div class="rounded-[1.25rem] overflow-hidden lg:max-w-[15.875rem]">
-											{{ block.settings.image_left | image_url: width: 692, height: 888 | image_tag:
-												loading: 'lazy',
-												widths: '275, 550, 710, 1420',
-												class: 'w-full h-[22.25rem] lg:h-[20.125rem] object-cover object-center block'
-											}}
-										</div>
+										{% if block.settings.image_left %}
+											<div class="rounded-[1.25rem] overflow-hidden lg:max-w-[15.875rem]">
+												{{ block.settings.image_left | image_url: width: 692, height: 888 | image_tag:
+													loading: 'lazy',
+													widths: '275, 550, 710, 1420',
+													class: 'w-full h-[22.25rem] lg:h-[20.125rem] object-cover object-center block'
+												}}
+											</div>
+										{% endif %}
 										<div class="mt-5 lg:mt-16">
-											<h3 class="font-semibold text-2xl font-display uppercase">{{ block.settings.title_left }}</h3>
-											<p class="mt-2">{{ block.settings.content_left | newline_to_br }}</p>
+											{% if block.settings.title_left %}
+												<h3 class="font-semibold text-2xl font-display uppercase">{{ block.settings.title_left }}</h3>
+											{% endif %}
+											{% if block.settings.content_left %}
+												<p class="mt-2">{{ block.settings.content_left | newline_to_br }}</p>
+											{% endif %}
 										</div>
 									</div>
 
 									<div class="lg:col-3/9 lg:order-3 mt-5 lg:mt-0 flex flex-col">
 
-										<div class="rounded-[1.25rem] overflow-hidden lg:order-2">
-											{{ block.settings.image_right | image_url: width: 692, height: 888 | image_tag:
-												loading: 'lazy',
-												widths: '275, 550, 710, 1420',
-												class: 'w-full h-[12rem] lg:h-[13.875rem] object-cover object-center block'
-											}}
-										</div>
+										{% if block.settings.image_right  %}
+											<div class="rounded-[1.25rem] overflow-hidden lg:order-2">
+												{{ block.settings.image_right | image_url: width: 692, height: 888 | image_tag:
+													loading: 'lazy',
+													widths: '275, 550, 710, 1420',
+													class: 'w-full h-[12rem] lg:h-[13.875rem] object-cover object-center block'
+												}}
+											</div>
+										{% endif %}
 
 										<div class="mt-5 lg:mt-0 lg:mb-16 lg:order-1">
-											<h3 class="font-semibold text-2xl font-display uppercase">{{ block.settings.title_right }}</h3>
-											<p class="mt-2">{{ block.settings.content_right | newline_to_br }}</p>
+											{% if block.settings.title_right %}
+												<h3 class="font-semibold text-2xl font-display uppercase">{{ block.settings.title_right }}</h3>
+											{% endif %}
+											{% if block.settings.content_right %}
+												<p class="mt-2">{{ block.settings.content_right | newline_to_br }}</p>
+											{% endif %}
 										</div>
 
 									</div>
