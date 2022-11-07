@@ -4450,6 +4450,10 @@ html,
 		height: 38rem;
 	}
 
+	.lg\:max-h-screen{
+		max-height: 100vh;
+	}
+
 	.lg\:max-h-\[calc\(100vh_-_10\.5rem\)\]{
 		max-height: calc(100vh - 10.5rem);
 	}
