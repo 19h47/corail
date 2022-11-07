@@ -1,6 +1,6 @@
 {{ 'customer.css' | asset_url | stylesheet_tag }}
 
-<div class="customer space-y-16 account section-{{ section.id }}-padding">
+<div class="customer account">
   	<div class="container">
 		<div class="row">
 			<div>
@@ -13,12 +13,10 @@
 				</a>
 			</div>
 		</div>
-  	</div>
 
-  	<div class="container">
 		<div class="row">
 			<div>
-				  <h2>{{ 'customer.orders.title' | t }}</h2>
+				<h2>{{ 'customer.orders.title' | t }}</h2>
 				{% paginate customer.orders by 20 %}
 					{%- if customer.orders.size > 0 -%}
 					<table role="table" class="order-history">
@@ -108,14 +106,16 @@
 				{% endpaginate %}
 			</div>
 
-			<div>
-			<h2>{{ 'customer.account.details' | t }}</h2>
+			<div class="row">
+				<div>
+					<h2>{{ 'customer.account.details' | t }}</h2>
 
-			{{ customer.default_address | format_address }}
+					{{ customer.default_address | format_address }}
 
-			<a href="{{ routes.account_addresses_url }}">
-				{{ 'customer.account.view_addresses' | t }} ({{ customer.addresses_count }})
-			</a>
+					<a class="hover:unerline" href="{{ routes.account_addresses_url }}">
+						{{ 'customer.account.view_addresses' | t }} ({{ customer.addresses_count }})
+					</a>
+				</div>
 			</div>
 		</div>
   	</div>
