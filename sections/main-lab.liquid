@@ -35,17 +35,25 @@
 				<div class="row lg:items-center">
 					<div class="lg:col-4/12 lg:order-2">
 						<div class="lg:mx-14">
-							<h2 class="font-semibold text-3xl font-display uppercase">{{- block.settings.title -}}</h2>
-							<p class="mt-2.5">{{- block.settings.content -}}</p>
+
+							{% if block.settings.title %}
+								<h2 class="font-semibold text-3xl font-display uppercase">{{- block.settings.title -}}</h2>
+							{% endif %}
+
+							{% if block.settings.content %}
+								<p class="mt-2.5">{{- block.settings.content -}}</p>
+							{% endif %}
 						</div>
 					</div>
 					<div class="lg:ml-3/12 lg:col-4/12 lg:order-1 mt-6 lg:mt-0">
 						<div class="h-[14.75rem] lg:h-[33.875rem] rounded-[1.25rem] overflow-hidden">
-							{{ block.settings.image | image_url: width: 692, height: 888 | image_tag:
-								loading: 'lazy',
-								widths: '275, 550, 710, 1420',
-								class: 'w-full h-full object-cover object-center block'
-							}}
+							{% if block.settings.image != nil %}
+								{{ block.settings.image | image_url: width: 692, height: 888 | image_tag:
+									loading: 'lazy',
+									widths: '275, 550, 710, 1420',
+									class: 'w-full h-full object-cover object-center block'
+								}}
+							{% endif %}
 						</div>
 					</div>
 				</div>
