@@ -36,7 +36,7 @@
 							{% case block.type %}
 								{%- when 'image' -%}
 									{% if block.settings.image %}
-										<div class="swiper-slide h-[14rem] lg:h-[47.5rem]">
+										<div class="swiper-slide h-[14rem] lg:h-[47.5rem] lg:max-h-screen">
 											<img
 												srcset="{%- if block.settings.image.width >= 165 -%}{{ block.settings.image | image_url: width: 165 }} 165w,{%- endif -%}
 												{%- if block.settings.image.width >= 330 -%}{{ block.settings.image | image_url: width: 330 }} 330w,{%- endif -%}
