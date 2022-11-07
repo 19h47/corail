@@ -13,11 +13,13 @@
 
 		<div class="row ">
 			<div class="lg:col-6/12">
-				{{ section.settings.column_left_image | image_url: width: 692, height: 888 | image_tag:
-					loading: 'lazy',
-					widths: '275, 550, 710, 1420',
-					class: 'w-full h-[22.5rem] lg:h-[54rem] object-cover object-center block'
-				}}
+				{% if section.settings.column_left_image %}
+					{{- section.settings.column_left_image | image_url: width: 692, height: 888 | image_tag:
+						loading: 'lazy',
+						widths: '275, 550, 710, 1420',
+						class: 'w-full h-[22.5rem] lg:h-[54rem] object-cover object-center block'
+					-}}
+				{% endif %}
 
 				{% if section.settings.column_left_icon_research or section.settings.column_left_icon_technical or section.settings.column_left_icon_recycled %}
 					<div class="hidden lg:flex justify-around mt-24 text-orange-dark-grayish text-center">
@@ -67,11 +69,13 @@
 
 					</div>
 				</div>
-				{{ section.settings.column_right_image | image_url: width: 692, height: 888 | image_tag:
-					loading: 'lazy',
-					widths: '275, 550, 710, 1420',
-					class: 'w-full h-[22.5rem] lg:h-[54rem] mt-24 object-cover object-center hidden lg:block'
-				}}
+				{% if section.settings.column_right_image %}
+					{{- section.settings.column_right_image | image_url: width: 692, height: 888 | image_tag:
+						loading: 'lazy',
+						widths: '275, 550, 710, 1420',
+						class: 'w-full h-[22.5rem] lg:h-[54rem] mt-24 object-cover object-center hidden lg:block'
+					-}}
+				{% endif %}
 			</div>
 		</div>
 	</div>
