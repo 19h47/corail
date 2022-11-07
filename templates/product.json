@@ -169,16 +169,19 @@
         "template--15990350479528__5352a5eb-3296-4b9c-9021-e759c6c0ea6b-166669405224db7574-1": {
           "type": "image",
           "settings": {
+            "image": "shopify:\/\/shop_images\/Carrousel_1.jpg"
           }
         },
         "d6ea013c-9ab6-46e8-86de-20702f42ff31": {
           "type": "image",
           "settings": {
+            "image": "shopify:\/\/shop_images\/Carrousel_2.jpg"
           }
         },
         "324a9f25-d1c3-420a-8866-ba0bac024883": {
           "type": "image",
           "settings": {
+            "image": "shopify:\/\/shop_images\/Carrousel_3.jpg"
           }
         }
       },
