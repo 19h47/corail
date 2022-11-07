@@ -4557,9 +4557,9 @@ html,
 		     column-gap: 2rem;
 	}
 
-	.lg\:gap-x-32{
-		-moz-column-gap: 8rem;
-		     column-gap: 8rem;
+	.lg\:gap-x-2{
+		-moz-column-gap: 0.5rem;
+		     column-gap: 0.5rem;
 	}
 
 	.lg\:gap-y-\[6\.75rem\]{
