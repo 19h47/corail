@@ -27,8 +27,8 @@
 				<div class="lg:col-8/12 lg:ml-3/12 swiper overflow-visible">
 					<ul class="swiper-wrapper">
 						{% for block in section.blocks %}
-							<li class="swiper-slide">
-								{% if block.settings.image != nil %}
+							{% if block.settings.image != nil %}
+								<li class="swiper-slide">
 									<div class="rounded-[1.25rem] h-[24.625rem] overflow-hidden">
 										{{ block.settings.image | image_url: width: 354 | image_tag:
 											loading: 'lazy',
@@ -37,19 +37,19 @@
 											class: 'w-full h-full object-cover object-center block'
 										}}
 									</div>
-								{% endif %}
 
-								{% if block.settings.title != blank or block.settings.content != blank %}
-									<div class="lg:row mt-6">
-										<div class="lg:col-3/8">
-											<p class="text-xl font-display uppercase font-semibold">{{ block.settings.title }}</p>
+									{% if block.settings.title != blank or block.settings.content != blank %}
+										<div class="lg:row mt-6">
+											<div class="lg:col-3/8">
+												<p class="text-xl font-display uppercase font-semibold">{{ block.settings.title }}</p>
+											</div>
+											<div class="lg:col-5/8 mt-6 lg:mt-0">
+												<p>{{ block.settings.content }}</p>
+											</div>
 										</div>
-										<div class="lg:col-5/8 mt-6 lg:mt-0">
-											<p>{{ block.settings.content }}</p>
-										</div>
-									</div>
-								{% endif %}
-							</li>
+									{% endif %}
+								</li>
+							{% endif %}
 						{% endfor %}
 					</ul>
 				</div>

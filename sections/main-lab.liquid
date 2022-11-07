@@ -4,9 +4,9 @@
 		<div class="row">
 			<div>
 				<div class="h-[20.1875rem] lg:h-[44.625rem] rounded-[1.25rem] overflow-hidden relative bg-orange-grayish">
-					{% if section.settings.video %}
+					{% if section.settings.video != nil %}
 						<video
-							class="h-full w-full object-cover relative z-1"
+							class="h-full w-full object-cover object-center block relative z-1"
 							loop
 							muted
 							autoplay
@@ -17,6 +17,14 @@
 								<source src="{{ source.url }}" type="{{ source.mime_type }}">
 							{% endfor %}
 						</video>
+					{% endif %}
+
+					{% if section.settings.image != nil %}
+						{{ section.settings.image | image_url: width: 1400, height: 714 | image_tag:
+							loading: 'lazy',
+							widths: '280, 1400',
+							class: 'w-full h-full object-cover object-center block relative z-1'
+						}}
 					{% endif %}
 
 					<div class="absolute inset-0 flex items-center justify-center z-2">
@@ -72,6 +80,11 @@
       "type": "video",
       "id": "video",
       "label": "t:sections.main-lab.settings.video.label"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "t:sections.main-lab.settings.image.label"
     }
   ],
   "blocks": [
