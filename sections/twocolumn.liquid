@@ -58,7 +58,7 @@
 							<p class="{% if section.settings.column_right_title != blank %} mt-2.5 {% endif %} font-medium font-display leading-5 lg:text-lg lg:leading-[1.5rem]">{{ section.settings.column_right_content | newline_to_br }}</p>
 						{% endif %}
 
-						{% if section.settings.column_right_button_link != blank %}
+						{% if section.settings.column_right_button_link != nil %}
 							<a
 								href="{{ section.settings.column_right_button_link }}"
 								class="{% if section.settings.column_right_title != blank or section.settings.column_right_content != blank %} mt-5 lg:mt-10 {% endif %} button button-red inline-block align-middle"
