@@ -362,17 +362,6 @@
 	margin-bottom: 1rem;
 }
 
-:is(.account, .order) h2 {
-	margin-top: 4rem;
-	margin-bottom: 1rem;
-}
-
-@media screen and (min-width: 990px) {
-	:is(.account, .order) h2 {
-		margin-top: 0;
-	}
-}
-
 .account a svg {
 	width: 1.5rem;
 	margin-bottom: -0.03rem;

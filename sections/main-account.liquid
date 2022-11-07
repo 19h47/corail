@@ -1,11 +1,13 @@
 {{ 'customer.css' | asset_url | stylesheet_tag }}
 
 <div class="customer account">
-  	<div class="container my-16">
+  	<div class="container my-16 space-y-16">
+
 		<div class="row">
 			<div class="lg:col-8/12 lg:ml-2/12">
 				<h1 class="text-center font-medium font-display text-6xl">{{ 'customer.account.title' | t }}</h1>
-				<a class="justify-center flex items-center hover:underline" href="{{ routes.account_logout_url }}">
+
+				<a class="justify-center flex items-center hover:underline mt-5" href="{{ routes.account_logout_url }}">
 					{% render 'svg', icon: 'account', classes: 'fill-current w-5 h-5 mr-2' %}
 					{{ 'customer.log_out' | t }}
 				</a>
@@ -14,7 +16,8 @@
 
 		<div class="row">
 			<div class="lg:col-8/12 lg:ml-2/12">
-				<h2 class="text-center text-xl font-display mb-5 font-semibold uppercase">{{ 'customer.orders.title' | t }}</h2>
+				<h2 class="text-xl font-display mb-5 font-semibold uppercase">{{ 'customer.orders.title' | t }}</h2>
+
 				{% paginate customer.orders by 20 %}
 					{%- if customer.orders.size > 0 -%}
 					<table role="table" class="order-history">
@@ -103,17 +106,16 @@
 					{%- endif -%}
 				{% endpaginate %}
 			</div>
-
 		</div>
 
 		{% comment %} DETAILS {% endcomment %}
 		<div class="row">
 			<div class="lg:col-8/12 lg:ml-2/12">
-				<h2 class="text-center text-xl font-display mb-5 font-semibold uppercase">
+				<h2 class="text-xl font-display mb-5 font-semibold uppercase">
 					{{ 'customer.account.details' | t }}
 				</h2>
 
-				<div class="my-5 text-center">
+				<div class="my-5">
 					{{ customer.default_address | format_address }}
 				</div>
 
