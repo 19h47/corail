@@ -71,7 +71,7 @@
 			{%- if section.settings.image_1 != blank -%}
 				<div class="lg:col-3/12 lg:ml-1/12">
 					<div class="relative">
-						{{ section.settings.image_1 | image_url: width: 338, height: 416 | image_tag:
+						{{ section.settings.image_1 | image_url: width: 338 | image_tag:
 							loading: 'lazy',
 							width: section.settings.image_1.width,
 							height: section.settings.image_1.height,

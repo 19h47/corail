@@ -20,7 +20,7 @@
 					{% endif %}
 
 					{% if section.settings.image != nil %}
-						{{ section.settings.image | image_url: width: 1400, height: 714 | image_tag:
+						{{ section.settings.image | image_url: width: 1400 | image_tag:
 							loading: 'lazy',
 							widths: '280, 1400',
 							class: 'w-full h-full object-cover object-center block relative z-1'
@@ -56,7 +56,7 @@
 					<div class="lg:ml-3/12 lg:col-4/12 lg:order-1 mt-6 lg:mt-0">
 						<div class="h-[14.75rem] lg:h-[33.875rem] rounded-[1.25rem] overflow-hidden">
 							{% if block.settings.image != nil %}
-								{{ block.settings.image | image_url: width: 692, height: 888 | image_tag:
+								{{ block.settings.image | image_url: width: 692 | image_tag:
 									loading: 'lazy',
 									widths: '275, 550, 710, 1420',
 									class: 'w-full h-full object-cover object-center block'

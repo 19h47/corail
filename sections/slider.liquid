@@ -25,7 +25,7 @@
 								{%- when 'slide' -%}
 									{% if block.settings.image %}
 										<div class="w-full lg:w-4/10 swiper-slide swiper-slide">
-											{{- block.settings.image | image_url: width: 692, height: 888 | image_tag:
+											{{- block.settings.image | image_url: width: 692 | image_tag:
 												loading: 'lazy',
 												widths: '275, 550, 710, 1420',
 												class: 'w-full h-[24.5rem] lg:h-[29.75rem] object-cover object-center'

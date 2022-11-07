@@ -5,7 +5,7 @@
 				<div class="{% unless section.settings.radius %} lg:col-10/12 lg:ml-1/12 {% endunless %}">
 					<div class="relative {% if section.settings.radius %} lg:overflow-hidden lg:rounded-[1.25rem] {% endif %}">
 						{% if section.settings.image != nil %}
-							{{ section.settings.image | image_url: width: 1400, height: 714 | image_tag:
+							{{ section.settings.image | image_url: width: 1400 | image_tag:
 								loading: 'lazy',
 								widths: '280, 1400',
 								class: 'w-full h-[14rem] lg:h-[33.375rem] object-cover object-center block relative z-1'

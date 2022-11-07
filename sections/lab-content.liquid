@@ -47,7 +47,7 @@
 									<div class="lg:col-3/9 lg:order-1 mt-5 lg:mt-0">
 										{% if block.settings.image_left %}
 											<div class="rounded-[1.25rem] overflow-hidden lg:max-w-[15.875rem]">
-												{{ block.settings.image_left | image_url: width: 692, height: 888 | image_tag:
+												{{ block.settings.image_left | image_url: width: 692 | image_tag:
 													loading: 'lazy',
 													widths: '275, 550, 710, 1420',
 													class: 'w-full h-[22.25rem] lg:h-[20.125rem] object-cover object-center block'
@@ -68,7 +68,7 @@
 
 										{% if block.settings.image_right  %}
 											<div class="rounded-[1.25rem] overflow-hidden lg:order-2">
-												{{ block.settings.image_right | image_url: width: 692, height: 888 | image_tag:
+												{{ block.settings.image_right | image_url: width: 692 | image_tag:
 													loading: 'lazy',
 													widths: '275, 550, 710, 1420',
 													class: 'w-full h-[12rem] lg:h-[13.875rem] object-cover object-center block'
