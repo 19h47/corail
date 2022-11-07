@@ -589,10 +589,6 @@
 	}
 }
 
-.addresses form button:first-of-type {
-	margin-right: 1rem;
-}
-
 label[for="AddressCountryNew"],
 label[for="AddressProvinceNew"] {
 	display: block;
