@@ -12,7 +12,7 @@
 
 		<div class="container my-16">
 			<div class="row">
-				<div>
+				<div class="lg:col-8/12 lg:ml-2/12">
 					<h1 class="text-center font-medium font-display text-6xl">{{ 'customer.addresses.title' | t }}</h1>
 					<a href="{{ routes.account_url }}">
 						{{ 'customer.account.return' | t }}
@@ -207,7 +207,7 @@
 											{{ 'customer.addresses.set_default' | t }}
 											</label>
 										</div>
-										<div class="mt-5 text-center">
+										<div class="mt-5 text-center w-full">
 											<button class="button button-red block w-full">{{ 'customer.addresses.update' | t }}</button>
 											<button class="mt-2.5 hover:underline" type="reset">{{ 'customer.addresses.cancel' | t }}</button>
 										</div>

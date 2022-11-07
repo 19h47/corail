@@ -4154,6 +4154,10 @@ html,
 		margin-bottom: 2.25rem;
 	}
 
+	.lg\:ml-2\/12{
+		margin-left: 16.666666666666668%;
+	}
+
 	.lg\:-mr-2\.5{
 		margin-right: -0.625rem;
 	}
@@ -4196,10 +4200,6 @@ html,
 
 	.lg\:mt-2{
 		margin-top: 0.5rem;
-	}
-
-	.lg\:ml-2\/12{
-		margin-left: 16.666666666666668%;
 	}
 
 	.lg\:mt-4{
