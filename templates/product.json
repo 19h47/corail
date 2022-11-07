@@ -196,42 +196,6 @@
       "settings": {
       }
     },
-    "image-with-text": {
-      "type": "image-with-text",
-      "disabled": true,
-      "blocks": {
-        "image-with-text-0": {
-          "type": "heading",
-          "settings": {
-            "heading": "Image with text",
-            "heading_size": "h1"
-          }
-        },
-        "image-with-text-1": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "text_style": "body"
-          }
-        }
-      },
-      "block_order": [
-        "image-with-text-0",
-        "image-with-text-1"
-      ],
-      "settings": {
-        "height": "small",
-        "desktop_image_width": "medium",
-        "layout": "text_first",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "color_scheme": "background-2",
-        "mobile_content_alignment": "left",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "43dfab5f-1246-4a2e-a403-00608e142f00": {
       "type": "marquee",
       "settings": {
@@ -256,6 +220,7 @@
       "type": "twocolumn",
       "settings": {
         "title": "Started from the bottle",
+        "column_left_image": "shopify:\/\/shop_images\/LAB_3D.jpg",
         "column_left_title_research": "Research",
         "column_left_icon_research": true,
         "column_left_title_technical": "Semelle technique",
@@ -264,8 +229,9 @@
         "column_left_icon_recycled": true,
         "column_right_title": "matériaux et procédés INNOVANT",
         "column_right_content": "CORAIL°Lab est un espace permettant de réfléchir à des solutions innovantes pour retirer puis transformer les déchets marins en matière première.",
-        "column_right_button_label": "Découvrir le Lab",
-        "column_right_button_link": "shopify:\/\/pages\/lab"
+        "column_right_button_label": "",
+        "column_right_button_link": "shopify:\/\/pages\/lab",
+        "column_right_image": "shopify:\/\/shop_images\/Items_6Columns.png"
       }
     },
     "6a936414-7d9e-4e58-8e5a-38c840ae7acb": {
@@ -294,7 +260,6 @@
     "main",
     "7d00fc27-c309-4d0a-9c10-bc7f88577e55",
     "5352a5eb-3296-4b9c-9021-e759c6c0ea6b",
-    "image-with-text",
     "43dfab5f-1246-4a2e-a403-00608e142f00",
     "product-recommendations",
     "206fe739-7a26-40e7-85fd-b60e38b52282",
