@@ -138,7 +138,7 @@
         "type": "header",
         "settings": {
           "menu": "main-menu-01",
-          "secondary-menu": ""
+          "secondary-menu": "secondaire-menu"
         }
       },
       "footer": {
