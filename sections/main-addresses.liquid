@@ -13,17 +13,21 @@
 		<div class="container my-16">
 			<div class="row">
 				<div class="lg:col-8/12 lg:ml-2/12">
-					<h1 class="text-center font-medium font-display text-6xl">{{ 'customer.addresses.title' | t }}</h1>
 
-					<a href="{{ routes.account_url }}">
-						{{ 'customer.account.return' | t }}
-					</a>
+					<div class="text-center">
+						<h1 class="font-medium font-display text-6xl">{{ 'customer.addresses.title' | t }}</h1>
 
-					<div data-address>
+						<a class="hover:underline mt-5" href="{{ routes.account_url }}">
+							{{ 'customer.account.return' | t }}
+						</a>
+					</div>
+
+					<div data-address class="mt-5">
 					  	<button
 							type="button"
 							aria-expanded="false"
 							aria-controls="AddAddress"
+							class="button button-gray inline-block align-middle"
 					  	>
 							{{ 'customer.addresses.add_new' | t }}
 					  	</button>
