@@ -338,8 +338,7 @@
 }
 
 .activate button[name="decline"],
-.addresses li > button,
-.addresses form button[type] {
+.addresses li > button {
 	background-color: rgba(var(--color-background), var(--alpha-button-background));
 	color: rgb(var(--color-link));
 }
@@ -578,8 +577,7 @@
 	margin-right: 0.5rem;
 }
 
-.addresses li > button + button,
-.addresses form button + button {
+.addresses li > button + button {
 	margin-top: 0rem;
 }
 
@@ -599,11 +597,6 @@ label[for="AddressProvinceNew"] {
 .addresses form {
 	display: flex;
 	flex-flow: row wrap;
-}
-
-.addresses form > div {
-	width: 100%;
-	text-align: left;
 }
 
 .addresses ul {
