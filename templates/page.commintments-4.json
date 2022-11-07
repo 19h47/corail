@@ -9,8 +9,6 @@
     "393a6aca-4427-4144-9b8a-3138582cc7dd": {
       "type": "twoimage",
       "settings": {
-        "left_image": "shopify://shop_images/school-of-koi-fish.jpg",
-        "right_image": "shopify://shop_images/fish-and-chips-sign.jpg"
       }
     },
     "26e58ee6-4b94-4271-8e35-b382b3602b57": {
@@ -19,7 +17,7 @@
         "ef0078bf-0628-4ced-ad87-90f3aeb63bcc": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/fisherman-casts-off.jpg",
+            "image": "shopify:\/\/shop_images\/PORTRAIT_3.jpg",
             "title": "Jules Dubois",
             "content": "pêcheur corail°"
           }
@@ -27,24 +25,33 @@
         "ee65d6c0-d0b9-4325-b35d-713367f155b3": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/kayakers-and-the-mountains.jpg",
-            "title": "Lorem Ipsum",
-            "content": "Dolor si"
+            "image": "shopify:\/\/shop_images\/PORTRAIT_2.jpg",
+            "title": "",
+            "content": ""
           }
         },
         "1c6e5533-6d4e-427b-926e-e22a7b12b8c1": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/purple-fish.jpg",
-            "title": "Consectetur Adipiscing",
-            "content": "Elit"
+            "image": "shopify:\/\/shop_images\/PORTRAIT_1.jpg",
+            "title": "",
+            "content": ""
+          }
+        },
+        "5b407deb-f006-41c7-9aa9-575dcafa4130": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/PORTRAIT_4.jpg",
+            "title": "",
+            "content": ""
           }
         }
       },
       "block_order": [
         "ef0078bf-0628-4ced-ad87-90f3aeb63bcc",
         "ee65d6c0-d0b9-4325-b35d-713367f155b3",
-        "1c6e5533-6d4e-427b-926e-e22a7b12b8c1"
+        "1c6e5533-6d4e-427b-926e-e22a7b12b8c1",
+        "5b407deb-f006-41c7-9aa9-575dcafa4130"
       ],
       "settings": {
         "title": "THE CREW"
@@ -98,7 +105,6 @@
         "6d0faf3d-4570-4b4a-8780-1acac0494f64": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/flavored-salt-spills-from-jar.jpg",
             "title": "A LONG-TERM\nPARTNERSHIP",
             "content": "The collaboration with our fishermen crew is built on a steady partnership: we pay them monthly, regardless of how much marine waste they collect, to ensure a sustainable additional income for them and valuable partners for us, who know the sea and its characteristics better than anyone."
           }
@@ -106,7 +112,6 @@
         "f02826ed-762f-449a-befe-f5d2383e8aeb": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/fishing-tackle-box.jpg",
             "title": "aN ALTERNATIVE\nTO FISHING",
             "content": "We have met the fishermen we work with during a particularly hot summer which made it impossible for them to fish. The point of our partnership is to provide our crew with an additional activity when global warming and climate change have made fishing a tougher and tougher job."
           }
