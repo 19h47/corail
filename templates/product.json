@@ -175,6 +175,12 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/Carrousel_3.jpg"
           }
+        },
+        "584270be-9e33-4ac9-8583-b74a8e61f4f0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Carrousel_4.jpg"
+          }
         }
       },
       "block_order": [
@@ -183,7 +189,8 @@
         "ef963a79-a748-461c-85e0-0b3b2b4a321c",
         "template--15990350479528__5352a5eb-3296-4b9c-9021-e759c6c0ea6b-166669405224db7574-1",
         "d6ea013c-9ab6-46e8-86de-20702f42ff31",
-        "324a9f25-d1c3-420a-8866-ba0bac024883"
+        "324a9f25-d1c3-420a-8866-ba0bac024883",
+        "584270be-9e33-4ac9-8583-b74a8e61f4f0"
       ],
       "settings": {
       }
