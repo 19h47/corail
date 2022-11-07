@@ -1,14 +1,32 @@
-{% if section.settings.image != blank %}
+{% if section.settings.image != nil or section.settings.video != nil %}
 	<div class="image my-14">
 		<div class="lg:container">
 			<div class="lg:row">
 				<div class="{% unless section.settings.radius %} lg:col-10/12 lg:ml-1/12 {% endunless %}">
 					<div class="relative {% if section.settings.radius %} lg:overflow-hidden lg:rounded-[1.25rem] {% endif %}">
-						{{ section.settings.image | image_url: width: 692, height: 888 | image_tag:
-							loading: 'lazy',
-							widths: '275, 550, 710, 1420',
-							class: 'w-full h-[14rem] lg:h-[33.375rem] object-cover object-center block relative z-1'
-						}}
+						{% if section.settings.image != nil %}
+							{{ section.settings.image | image_url: width: 1400, height: 714 | image_tag:
+								loading: 'lazy',
+								widths: '280, 1400',
+								class: 'w-full h-[14rem] lg:h-[33.375rem] object-cover object-center block relative z-1'
+							}}
+						{% endif %}
+
+						{% if section.settings.video != nil %}
+							<video
+								class="w-full h-[14rem] lg:h-[33.375rem] object-cover object-center block relative z-1"
+								loop
+								muted
+								autoplay
+								playsinline
+								poster="{{ section.settings.video.preview_image | image_url }}"
+							>
+								{% for source in section.settings.video.sources %}
+									<source src="{{ source.url }}" type="{{ source.mime_type }}">
+								{% endfor %}
+							</video>
+						{% endif %}
+
 						{% if section.settings.title != blank %}
 							<div class="absolute flex items-center justify-center z-2 inset-0 leading-none font-bold">
 								<p class="text-white text-[3.125rem] lg:text-[5.625rem] text-center font-display uppercase">{{- section.settings.title | newline_to_br -}}</p>
@@ -31,6 +49,11 @@
       "type": "image_picker",
       "id": "image",
       "label": "t:sections.image.settings.image.label"
+    },
+    {
+      "type": "video",
+      "id": "video",
+      "label": "t:sections.main-lab.settings.video.label"
     },
     {
       "type": "textarea",
