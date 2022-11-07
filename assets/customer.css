@@ -358,11 +358,6 @@
 	}
 }
 
-:is(.account, .order) p {
-	margin: 0 0 2rem;
-	font-size: 1.6rem;
-}
-
 :is(.account, .order) h1 {
 	margin-bottom: 1rem;
 }
