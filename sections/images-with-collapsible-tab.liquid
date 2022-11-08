@@ -3,7 +3,7 @@
 
 
 <slider-component class="block images-with-collapsible-tab relative my-12 lg:my-16 overflow-hidden" data-parameters='{"spaceBetween":20}'>
-	<div class="hidden lg:block w-[calc(50vw_+_2.5rem)] bg-white absolute inset-y-0 left-0 z-2 pointer-events-none"></div>
+	<div class="hidden lg:block w-[calc(50vw_+_0.625rem)] bg-white absolute inset-y-0 left-0 z-2 pointer-events-none"></div>
 
 	<div class="lg:container">
 		<div class="lg:row">
@@ -36,7 +36,7 @@
 							{% case block.type %}
 								{%- when 'image' -%}
 									{% if block.settings.image %}
-										<div class="swiper-slide h-[14rem] lg:h-[47.5rem] lg:max-h-screen">
+										<div class="swiper-slide h-[14rem] lg:h-[28rem]">
 											<img
 												srcset="{%- if block.settings.image.width >= 165 -%}{{ block.settings.image | image_url: width: 165 }} 165w,{%- endif -%}
 												{%- if block.settings.image.width >= 330 -%}{{ block.settings.image | image_url: width: 330 }} 330w,{%- endif -%}
