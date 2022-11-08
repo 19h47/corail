@@ -959,7 +959,6 @@ deferred-media {
 .select__select,
 .customer select {
 	cursor: pointer;
-	line-height: calc(1 + 0.6 / var(--font-body-scale));
 	padding: 0 2rem;
 	margin: var(--inputs-border-width);
 	min-height: calc(var(--inputs-border-width) * 2);
@@ -1009,7 +1008,7 @@ deferred-media {
 .customer .field input:not(:placeholder-shown) ~ label,
 .customer .field input:-webkit-autofill ~ label {
 	top: calc(var(--inputs-border-width) + 0.5rem);
-	left: calc(var(--inputs-border-width) + 2rem);
+	left: calc(var(--inputs-border-width) + 1rem);
 }
 
 .field__input:focus,
