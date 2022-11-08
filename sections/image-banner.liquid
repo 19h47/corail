@@ -41,8 +41,11 @@
 						{%- for block in section.blocks -%}
 							{%- case block.type -%}
 								{%- when 'heading' -%}
-									<h2 class="font-semibold text-6xl font-display" {{ block.shopify_attributes }}>
-										{{ block.settings.heading | newline_to_br }}
+									<h2
+										class="font-semibold text-[3.125rem] lg:text-6xl font-display"
+										{{ block.shopify_attributes }}
+									>
+										{{- block.settings.heading | newline_to_br -}}
 									</h2>
 								{%- when 'button' -%}
 									<div class="mt-[4.75rem]" {{ block.shopify_attributes }}>
