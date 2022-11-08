@@ -20,7 +20,7 @@
 					</div>
 				{% endif %}
 
-				<ul class="row {% if section.settings.heading != blank %} mt-14 {% endif %}" role="list">
+				<ul class="row gap-y-11 lg:gap-y-[6.75rem] {% if section.settings.heading != blank %} mt-14 {% endif %}" role="list">
 					{% for recommendation in recommendations.products %}
 						<li class="col-6/12 lg:col-3/12">
 							{% render 'card-product',
