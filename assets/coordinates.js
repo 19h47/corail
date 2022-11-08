@@ -11,8 +11,6 @@ if (!customElements.get("coordinates-dms")) {
 				this.children[0].innerHTML = `${dmsX.deg}°${dmsX.min}′${dmsX.sec}″ ${dmsX.dir}`;
 				this.children[1].innerHTML = `${dmsY.deg}°${dmsY.min}′${dmsY.sec}″ ${dmsY.dir}`;
 			});
-
-			console.dir(this);
 		}
 	}
 
