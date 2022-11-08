@@ -22,7 +22,7 @@
 
 				<ul class="flex lg:row {% if section.settings.heading != blank %} mt-14 {% endif %}" role="list">
 					{% for recommendation in recommendations.products %}
-						<li class="w-6/12 lg:col-4/12">
+						<li class="w-6/12 lg:col-3/12">
 							{% render 'card-product',
 								card_product: recommendation,
 								media_aspect_ratio: section.settings.image_ratio,
