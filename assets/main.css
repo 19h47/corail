@@ -2915,11 +2915,6 @@ html,
 	padding-bottom: 6rem;
 }
 
-.px-5{
-	padding-left: 1.25rem;
-	padding-right: 1.25rem;
-}
-
 .py-8{
 	padding-top: 2rem;
 	padding-bottom: 2rem;
@@ -2943,6 +2938,11 @@ html,
 .px-16{
 	padding-left: 4rem;
 	padding-right: 4rem;
+}
+
+.px-5{
+	padding-left: 1.25rem;
+	padding-right: 1.25rem;
 }
 
 .py-5{
@@ -4694,11 +4694,6 @@ html,
 	.lg\:py-\[1\.4375rem\]{
 		padding-top: 1.4375rem;
 		padding-bottom: 1.4375rem;
-	}
-
-	.lg\:px-4{
-		padding-left: 1rem;
-		padding-right: 1rem;
 	}
 
 	.lg\:py-3{
