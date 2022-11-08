@@ -80,7 +80,7 @@
 
 <modal-opener
 	data-modal="#ProductModal-{{ modal_id }}"
-	class="w-full h-full relative block"
+	class="w-full h-full relative block lg:max-h-screen"
 >
 	<button
 		type="button"
@@ -102,11 +102,10 @@
 	</button>
 
 	{{- media.preview_image
-		| image_url: width: 1946
+		| image_url: width: 830
 		| image_tag:
 			loading: lazy,
-			sizes: sizes,
-			widths: '246, 493, 600, 713, 823, 990, 1100, 1206, 1346, 1426, 1646, 1946',
+			widths: '320,830',
 			class: 'absolute bg-orange-grayish inset-0 object-cover object-center w-full h-full',
 			alt: media.preview_image.alt | escape
 	-}}
