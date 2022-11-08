@@ -79,7 +79,8 @@
 															</p>
 														{% else %}
 															<a
-																href="{{ childlink.url }}" class="font-bold text-sm leading-7 uppercase mb-3 hover:underline is-active:underline mega-menu__link--level-2 {% if childlink.current %} is-active {% endif %}"
+																href="{{ childlink.url }}"
+																class="font-bold text-sm leading-7 uppercase mb-3 hover:underline is-active:underline mega-menu__link--level-2 {% if childlink.current %} is-active {% endif %}"
 																{% if childlink.current %} aria-current="page"{% endif %}
 															>
 																{{ childlink.title | escape }}

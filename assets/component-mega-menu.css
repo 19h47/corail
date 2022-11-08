@@ -42,14 +42,6 @@
 	word-wrap: break-word;
 }
 
-.mega-menu__link--level-2 {
-	font-size: 1.4rem;
-}
-
-.mega-menu__link--level-2:not(:only-child) {
-	margin-bottom: 0.8rem;
-}
-
 .header--top-center .mega-menu__list {
 	display: flex;
 	justify-content: center;
