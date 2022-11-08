@@ -13,7 +13,7 @@
           "type": "button",
           "settings": {
             "button_label": "Découvrir",
-            "button_link": "shopify:\/\/collections\/line-90"
+            "button_link": "shopify:\/\/collections\/origins-line-90"
           }
         }
       },
@@ -53,7 +53,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/NawelOdin-Corail_25-10-1172.jpg",
             "link_title": "ORIGINS",
-            "link_url": "shopify:\/\/collections\/origins-line-90-femme"
+            "link_url": ""
           }
         },
         "0f7fd138-12f8-4290-aaca-f5510c15b121": {
