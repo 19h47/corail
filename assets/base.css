@@ -986,7 +986,7 @@ deferred-media {
 .customer .field input {
 	flex-grow: 1;
 	text-align: left;
-	padding: 1.5rem;
+	padding: 1rem;
 	margin: var(--inputs-border-width);
 	transition: box-shadow var(--duration-short) ease;
 }
