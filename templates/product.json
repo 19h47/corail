@@ -141,7 +141,7 @@
           "type": "collapsible_tab",
           "settings": {
             "title": "Composition",
-            "content": "<p>\/\/90% recycled upper, made with recycled plastic waste and corn-based induction<br\/>\/\/signature recycled outsole, made of 80% recycled rubber and 20% SEADUST<br\/>\/\/100% recycled laces made with PET bottles<br\/>\/\/handmade in our workshop in Portugal<br\/>\/\/abrasion-tested, friction-tested, bend-tested<br\/>\/\/water-repellent treatment<\/p>"
+            "content": "<p>{{ product.metafields.corail.composition | metafield_tag }}<\/p>"
           }
         },
         "a3d26fe5-8b20-421d-a36d-7371219c9f0d": {
