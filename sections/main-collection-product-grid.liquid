@@ -34,61 +34,54 @@
     	{%- endif -%}
 
 		<div class="container" id="ProductGridContainer">
-			{%- paginate collection.products by section.settings.products_per_page -%}
-				{%- if collection.products.size == 0 -%}
-					<div class="collection collection--empty page-width" id="product-grid" data-id="{{ section.id }}">
-						<div class="loading-overlay"></div>
-						<div class="title-wrapper center">
-							<h2 class="title title--primary">
-								{{ 'sections.collection_template.empty' | t }}<br>
-								{{ 'sections.collection_template.use_fewer_filters_html' | t: link: collection.url, class: "underline" }}
-							</h2>
-						</div>
+
+			{%- if collection.products.size == 0 -%}
+				<div class="collection collection--empty page-width" id="product-grid" data-id="{{ section.id }}">
+					<div class="loading-overlay"></div>
+					<div class="title-wrapper center">
+						<h2 class="title title--primary">
+							{{ 'sections.collection_template.empty' | t }}<br>
+							{{ 'sections.collection_template.use_fewer_filters_html' | t: link: collection.url, class: "underline" }}
+						</h2>
 					</div>
-				{%- else -%}
-					<div class="collection relative">
-						<div class="loading-overlay"></div>
+				</div>
+			{%- else -%}
+				<div class="collection relative">
+					<div class="loading-overlay"></div>
 
-						<ul id="product-grid" data-id="{{ section.id }}" class="row gap-y-11 lg:gap-y-[6.75rem]">
-							{%- for product in collection.products -%}
-								{% assign lazy_load = false %}
-								{%- if forloop.index > 2 -%}
-									{%- assign lazy_load = true -%}
-								{%- endif -%}
+					<ul id="product-grid" data-id="{{ section.id }}" class="row gap-y-11 lg:gap-y-[6.75rem]">
+						{%- for product in collection.products -%}
+							{% assign lazy_load = false %}
+							{%- if forloop.index > 2 -%}
+								{%- assign lazy_load = true -%}
+							{%- endif -%}
 
+							<li class="col-6/12 lg:col-3/12">
+								{% render 'card-product',
+									card_product: product,
+									media_aspect_ratio: section.settings.image_ratio,
+									show_secondary_image: section.settings.show_secondary_image,
+									show_vendor: section.settings.show_vendor,
+									show_rating: section.settings.show_rating,
+									lazy_load: lazy_load,
+									show_quick_add: section.settings.enable_quick_add,
+									show_badge: true,
+									section_id: section.id,
+									show_secondary_image: true
+								%}
+							</li>
+
+							{% if collection.products.size > 6 and forloop.index == 6 %}
 								<li class="col-6/12 lg:col-3/12">
-									{% render 'card-product',
-										card_product: product,
-										media_aspect_ratio: section.settings.image_ratio,
-										show_secondary_image: section.settings.show_secondary_image,
-										show_vendor: section.settings.show_vendor,
-										show_rating: section.settings.show_rating,
-										lazy_load: lazy_load,
-										show_quick_add: section.settings.enable_quick_add,
-										show_badge: true,
-										section_id: section.id,
-										show_secondary_image: true
-									%}
+									<div class="h-full flex items-center justify-center font-display uppercase text-center font-semibold text-xl leading-5">
+										<p>From the sea
+									</div>
 								</li>
-
-								{% if collection.products.size > 6 and forloop.index == 6 %}
-									<li class="col-6/12 lg:col-3/12">
-										<div class="h-full flex items-center justify-center font-display uppercase text-center font-semibold text-xl leading-5">
-											<p>From the sea
-										</div>
-									</li>
-								{% endif %}
-							{%- endfor -%}
-						</ul>
-
-						{%- if paginate.pages > 1 -%}
-							<div class="mt-16">
-								{% render 'pagination', paginate: paginate, anchor: '' %}
-							</div>
-						{%- endif -%}
-					</div>
-				{%- endif -%}
-			{%- endpaginate -%}
+							{% endif %}
+						{%- endfor -%}
+					</ul>
+				</div>
+			{%- endif -%}
 		</div>
   	</div>
 </div>
@@ -188,20 +181,6 @@
       "default": "horizontal",
       "label": "t:sections.main-collection-product-grid.settings.filter_type.label",
       "info": "t:sections.main-collection-product-grid.settings.filter_type.info"
-    },
-    {
-      "type": "checkbox",
-      "id": "enable_sorting",
-      "default": true,
-      "label": "t:sections.main-collection-product-grid.settings.enable_sorting.label"
-    },
-    {
-      "type": "header",
-      "content": "t:sections.main-collection-product-grid.settings.header_mobile.content"
-    },
-    {
-      "type": "header",
-      "content": "t:sections.all.padding.section_padding_heading"
     }
   ]
 }
