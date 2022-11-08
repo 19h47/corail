@@ -12,8 +12,8 @@
         "77e1adaf-ffa1-4d4c-a3af-c222a74cbaa2": {
           "type": "button",
           "settings": {
-            "button_label": "Voir la collection",
-            "button_link": "shopify:\/\/collections\/la-marseille-22"
+            "button_label": "Découvrir",
+            "button_link": "shopify:\/\/collections\/line-90"
           }
         }
       },
@@ -76,7 +76,7 @@
       "type": "tech",
       "settings": {
         "title": "CORAIL° Lab",
-        "content": "CORAIL°Lab est un espace permettant de réfléchir à des solutions innovantes pour retirer puis transformer les déchets marins en matière première. Grâce à celle-ci, nous créons des produits lifestyle accessibles par une grande majorité de la population.",
+        "content": "Le CORAIL° Lab est un espace innovant au sein de notre port, dans lequel nous réfléchissons à des solutions pour retirer puis transformer et valoriser les déchets marins et en faire des matières premières haute-performance.",
         "link_title": "Découvrir le Lab",
         "link_url": "shopify:\/\/pages\/lab",
         "video": "shopify:\/\/files\/videos\/BOUCLE Flakes (2000 x 1000).mp4",
