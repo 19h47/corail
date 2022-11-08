@@ -21,7 +21,7 @@ if (!customElements.get('quantity-input')) {
 				this.input.stepDown();
 			}
 
-			console.log(event.target.name, previousValue, this.input.value);
+			// console.log(event.target.name, previousValue, this.input.value);
 
 			if (previousValue !== this.input.value) {
 				this.input.dispatchEvent(this.changeEvent);

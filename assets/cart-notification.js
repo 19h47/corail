@@ -1,3 +1,4 @@
+/* global removeTrapFocus, trapFocus */
 class CartNotification extends HTMLElement {
 	constructor() {
 		super();
@@ -32,7 +33,6 @@ class CartNotification extends HTMLElement {
 		this.cartItemKey = parsedState.key;
 
 		this.getSectionsToRender().forEach((section => {
-			console.log(section, section.selector)
 			document.getElementById(section.id).innerHTML = this.getSectionInnerHTML(parsedState.sections[section.id], section.selector);
 		}));
 
@@ -55,6 +55,7 @@ class CartNotification extends HTMLElement {
 		];
 	}
 
+	// eslint-disable-next-line class-methods-use-this
 	getSectionInnerHTML(html, selector = '.shopify-section') {
 		return new DOMParser()
 			.parseFromString(html, 'text/html')

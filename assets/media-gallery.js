@@ -50,7 +50,7 @@ if (!customElements.get("media-gallery")) {
 		}
 
 		setActiveMedia(mediaId, prepend) {
-			console.log("MediaGallery.setActiveMedia", mediaId, prepend);
+			// console.log("MediaGallery.setActiveMedia", mediaId, prepend);
 
 			const activeMedia = this.elements.viewer.querySelector(`[data-media-id="${mediaId}"]`);
 			const activeMediaThumbs = this.elements.thumbs.querySelector(`[data-media-id="${mediaId}"]`);
@@ -62,7 +62,7 @@ if (!customElements.get("media-gallery")) {
 				.querySelectorAll("[data-media-id]")
 				.forEach(element => element.classList.remove("is-active"));
 
-			console.log(activeMedia, activeMediaThumbs);
+			// console.log(activeMedia, activeMediaThumbs);
 
 			activeMedia.classList.add("is-active");
 			activeMediaThumbs.classList.add("is-active");

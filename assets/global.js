@@ -1,12 +1,26 @@
 /* eslint-disable max-classes-per-file */
 
+function onKeyUpEscape(event) {
+	if ("ESCAPE" !== event.code.toUpperCase()) {
+		return;
+	}
+
+	const openDetailsElement = event.target.closest("details[open]");
+	if (!openDetailsElement) return;
+
+	const summaryElement = openDetailsElement.querySelector("summary");
+	openDetailsElement.removeAttribute("open");
+	summaryElement.setAttribute("aria-expanded", false);
+	summaryElement.focus();
+}
+
 // eslint-disable-next-line no-unused-vars, no-return-assign
 const convertToDMS = (D, lng) => ({
 	// eslint-disable-next-line no-nested-ternary
 	dir: 0 > D ? (lng ? "W" : "S") : lng ? "E" : "N",
-	// eslint-disable-next-line no-bitwise
+	// eslint-disable-next-line no-bitwise, no-param-reassign
 	deg: 0 | (0 > D ? (D = -D) : D),
-	// eslint-disable-next-line no-bitwise
+	// eslint-disable-next-line no-bitwise, no-param-reassign
 	min: 0 | (((D += 1e-9) % 1) * 60),
 	// eslint-disable-next-line no-bitwise
 	sec: (0 | (((D * 60) % 1) * 6000)) / 100,
@@ -230,20 +244,6 @@ function removeTrapFocus(elementToFocus = null) {
 	if (elementToFocus) elementToFocus.focus();
 }
 
-function onKeyUpEscape(event) {
-	if ("ESCAPE" !== event.code.toUpperCase()) {
-		return;
-	}
-
-	const openDetailsElement = event.target.closest("details[open]");
-	if (!openDetailsElement) return;
-
-	const summaryElement = openDetailsElement.querySelector("summary");
-	openDetailsElement.removeAttribute("open");
-	summaryElement.setAttribute("aria-expanded", false);
-	summaryElement.focus();
-}
-
 // eslint-disable-next-line no-unused-vars
 function debounce(fn, wait) {
 	let t;
@@ -407,7 +407,7 @@ class MenuDrawer extends HTMLElement {
 	}
 
 	onSummaryClick(event) {
-		console.log('MenuDrawer.onSummaryClick', event);
+		// console.log('MenuDrawer.onSummaryClick', event);
 
 		const summaryElement = event.currentTarget;
 		const detailsElement = summaryElement.parentNode;
@@ -422,6 +422,7 @@ class MenuDrawer extends HTMLElement {
 
 		if (detailsElement === this.mainDetailsToggle) {
 			if (isOpen) event.preventDefault();
+			// eslint-disable-next-line no-unused-expressions
 			isOpen ? this.closeMenuDrawer(event, summaryElement) : this.openMenuDrawer(summaryElement);
 
 			if (window.matchMedia("(max-width: 990px)")) {
@@ -450,7 +451,7 @@ class MenuDrawer extends HTMLElement {
 	}
 
 	closeMenuDrawer(event, elementToFocus = false) {
-		console.log("closeMenuDrawer", event, elementToFocus);
+		// console.log("closeMenuDrawer", event, elementToFocus);
 
 		if (event === undefined) {
 			return;
@@ -472,11 +473,11 @@ class MenuDrawer extends HTMLElement {
 
 	// eslint-disable-next-line no-unused-vars
 	onFocusOut(event) {
-		console.log(
-			"MenuDrawer.onFocusOut",
-			this.mainDetailsToggle.hasAttribute("open"),
-			!this.mainDetailsToggle.contains(document.activeElement)
-		);
+		// console.log(
+		// 	"MenuDrawer.onFocusOut",
+		// 	this.mainDetailsToggle.hasAttribute("open"),
+		// 	!this.mainDetailsToggle.contains(document.activeElement)
+		// );
 
 		setTimeout(() => {
 			if (
