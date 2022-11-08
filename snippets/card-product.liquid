@@ -52,7 +52,7 @@
 			{%- if card_product.featured_media -%}
 
 				{% comment %}theme-check-disable ImgLazyLoading{% endcomment %}
-				<img
+				{% comment %} <img
 					srcset="
 						{%- if card_product.featured_media.width >= 165 -%}{{ card_product.featured_media | image_url: width: 165 }} 165w,{%- endif -%}
 						{%- if card_product.featured_media.width >= 360 -%}{{ card_product.featured_media | image_url: width: 360 }} 360w,{%- endif -%}
@@ -69,8 +69,18 @@
 					{% unless lazy_load == false %}loading="lazy"{% endunless %}
 					width="{{ card_product.featured_media.width }}"
 					height="{{ card_product.featured_media.height }}"
-				>
+				> {% endcomment %}
 				{% comment %}theme-check-enable ImgLazyLoading{% endcomment %}
+
+				{{ card_product.featured_media | image_url: width: 456 | image_tag:
+					loading: 'lazy',
+					width: card_product.featured_media.width,
+					height: card_product.featured_media.height,
+					class: 'w-full h-full object-cover object-center opacity-100 duration-1000 ease-in-out transition-opacity group-hover:opacity-0',
+					widths: '160,338,456',
+					alt: card_product.featured_media.alt | default: card_product.title | escape
+				}}
+
 
 				{%- if card_product.media[1] != nil and show_secondary_image -%}
 					{% if 'video' == card_product.media[1].media_type %}
@@ -87,24 +97,14 @@
 							{% endfor %}
 						</video>
 					{% else %}
-						<img
-							srcset="
-								{%- if card_product.media[1].width >= 165 -%}{{ card_product.media[1] | image_url: width: 165 }} 165w,{%- endif -%}
-								{%- if card_product.media[1].width >= 360 -%}{{ card_product.media[1] | image_url: width: 360 }} 360w,{%- endif -%}
-								{%- if card_product.media[1].width >= 533 -%}{{ card_product.media[1] | image_url: width: 533 }} 533w,{%- endif -%}
-								{%- if card_product.media[1].width >= 720 -%}{{ card_product.media[1] | image_url: width: 720 }} 720w,{%- endif -%}
-								{%- if card_product.media[1].width >= 940 -%}{{ card_product.media[1] | image_url: width: 940 }} 940w,{%- endif -%}
-								{%- if card_product.media[1].width >= 1066 -%}{{ card_product.media[1] | image_url: width: 1066 }} 1066w,{%- endif -%}
-								{{ card_product.media[1] | image_url }} {{ card_product.media[1].width }}w
-							"
-							src="{{ card_product.media[1] | image_url: width: 533 }}"
-							sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
-							alt=""
-							class="absolute inset-0 w-full h-full object-cover object-center opacity-0 duration-1000 ease-in-out transition-opacity group-hover:opacity-100"
-							loading="lazy"
-							width="{{ card_product.media[1].width }}"
-							height="{{ card_product.media[1].height }}"
-						>
+						{{ card_product.media[1] | image_url: width: 456 | image_tag:
+							loading: 'lazy',
+							width: card_product.media[1].width,
+							height: card_product.media[1].height,
+							class: 'absolute inset-0 w-full h-full object-cover object-center opacity-0 duration-1000 ease-in-out transition-opacity group-hover:opacity-100',
+							widths: '160,338,456',
+							alt: card_product.media[1].alt | default: card_product.title | escape
+						}}
 					{% endif %}
 				{%- endif -%}
 
@@ -122,7 +122,7 @@
 						</div>
 					{% elsif card_product.tags contains 'preorder' %}
 						<div class="py-2 px-5 rounded-full text-sm uppercase text-white bg-red-very-light">
-							'products.product.preorder' | t
+							{{ 'products.product.preorder' | t }}
 						</div>
 					{% elsif card_product.tags contains 'new' %}
 						<div class="py-2 px-5 rounded-full text-sm uppercase text-white bg-red-very-light">
@@ -227,7 +227,7 @@
 
 		<footer class="border-t mt-2 lg:mt-4 mx-2 lg:mx-0 border-orange-grayish pt-1.5 lg:pt-3 text-[0.5rem] lg:text-sm leading-[1.125rem] lg:leading-4 uppercase">
 			<div class="flex justify-between">
-				<h3{% if card_product.featured_media == nil and settings.card_style == 'standard' %} id="title-{{ section_id }}-{{ card_product.id }}"{% endif %}>
+				<h3 {% if card_product.featured_media == nil and settings.card_style == 'standard' %} id="title-{{ section_id }}-{{ card_product.id }}" {% endif %}>
 					{{- card_product.title | escape -}}
 				</h3>
 				{%- render 'price', product: card_product, price_class: '' -%}

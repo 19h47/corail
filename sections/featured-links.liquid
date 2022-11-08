@@ -26,13 +26,15 @@
 									class: 'object-center absolute inset-0 object-cover w-full h-full z-10',
 									sizes: sizes,
 									widths: '696',
-									alt: block.settings.image.alt | default: '' | escape
+									alt: block.settings.image.alt | default: 'image' | escape
 								}}
 
 								{% if block.settings.link_url %}
-									<a class="flex items-center justify-center h-full group relative z-20" href="{{ block.settings.link_url }}">
-										<p class="button group-hover:bg-gray-very-dark group-hover:text-white group-focus:bg-gray-very-dark group-focus:text-white">&rightarrow;&nbsp;{{ block.settings.link_title }}</p>
-									</a>
+									<p class="flex items-center justify-center h-full group relative z-20" href="{{ block.settings.link_url }}">
+										<a class="button group-hover:bg-gray-very-dark group-hover:text-white group-focus:bg-gray-very-dark group-focus:text-white">
+											&rightarrow;&nbsp;{{ block.settings.link_title }}
+										</a>
+									</p>
 								{% endif %}
 							</div>
 						</div>
