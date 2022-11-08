@@ -53,7 +53,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/NawelOdin-Corail_25-10-1172.jpg",
             "link_title": "ORIGINS",
-            "link_url": "shopify:\/\/pages\/femmes"
+            "link_url": "shopify:\/\/collections\/origins"
           }
         },
         "0f7fd138-12f8-4290-aaca-f5510c15b121": {
@@ -61,7 +61,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/NawelOdin-Corail_25-10-1164.jpg",
             "link_title": "LINE 90",
-            "link_url": "shopify:\/\/pages\/hommes"
+            "link_url": "shopify:\/\/collections\/line-90"
           }
         }
       },
