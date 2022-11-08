@@ -56,10 +56,10 @@
 			{% render 'svg', icon: 'play', classes: 'w-5 h-5 fill-current ml-1' %}
 		</span>
 		<div class="product__media media global-media-settings" style="padding-top: {{ 1 | divided_by: media.preview_image.aspect_ratio | times: 100 }}%;">
-			{{ media.preview_image | image_url: width: 1946 | image_tag:
+			{{ media.preview_image | image_url: width: 1660 | image_tag:
 				loading: lazy,
 				sizes: sizes,
-				widths: '246, 493, 600, 713, 823, 990, 1100, 1206, 1346, 1426, 1646, 1946',
+				widths: '320,640,830,1660',
 				alt: media.preview_image.alt | escape
 			}}
 		</div>
@@ -68,10 +68,10 @@
 		</a>
 	{%- else -%}
 		<div class="product__media media global-media-settings" style="padding-top: {{ 1 | divided_by: media.preview_image.aspect_ratio | times: 100 }}%;">
-			{{ media.preview_image | image_url: width: 1946 | image_tag:
+			{{ media.preview_image | image_url: width: 1660 | image_tag:
 				loading: lazy,
 				sizes: sizes,
-				widths: '246, 493, 600, 713, 823, 990, 1100, 1206, 1346, 1426, 1646, 1946',
+				widths: '320,640,830,1660',
 				alt: media.preview_image.alt | escape
 			}}
 		</div>
@@ -105,7 +105,8 @@
 		| image_url: width: 1660
 		| image_tag:
 			loading: lazy,
-			widths: '640,1660',
+			widths: '320,640,830,1660',
+			sizes: sizes,
 			class: 'absolute bg-orange-grayish inset-0 object-cover object-center w-full h-full',
 			alt: media.preview_image.alt | escape
 	-}}
@@ -130,10 +131,10 @@
 			{%- endif -%}
 		</span>
 
-		{{ media.preview_image | image_url: width: 1946 | image_tag:
+		{{ media.preview_image | image_url: width: 1660 | image_tag:
 			loading: lazy,
 			sizes: sizes,
-			widths: '246, 493, 600, 713, 823, 990, 1100, 1206, 1346, 1426, 1646, 1946',
+			widths: '320,640,830,1660',
 			class: 'h-full w-full object-cover object-center bg-orange-grayish',
 			alt: media.preview_image.alt | escape
 		}}
