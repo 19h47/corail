@@ -1,3 +1,5 @@
+{% assign content = assign | default: '' %}
+
 <details class="p-5" id="Details-{{ block_id }}-{{ section_id }}">
 	<summary class="flex items-center">
 		<div class="summary__title">
@@ -9,7 +11,9 @@
 		{% render 'svg', icon: 'plus', classes: 'parent-expanded:hidden block ml-auto w-2 h-2 fill-current flex-shrink-0' %}
 	</summary>
 
-	<div class="wysiwyg mt-5 text-sm leading-6" id="ProductAccordion-{{ block_id }}-{{ section_id }}">
-		{{ content | newline_to_br }}
-	</div>
+	{% if content != blank %}
+		<div class="wysiwyg mt-5 text-sm leading-6" id="ProductAccordion-{{ block_id }}-{{ section_id }}">
+			{{- content -}}
+		</div>
+	{% endif %}
 </details>
