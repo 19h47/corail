@@ -334,7 +334,7 @@
 								</div>
 
 							{%- when 'price' -%}
-								<div class="text-xl leading-[1.375rem] lg:leading-[2.75rem] lg:text-4xl font-medium font-display" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
+								<div class="text-xl leading-[1.375rem] font-medium font-display" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
 									{%- render 'price', product: product, use_variant: true, show_badges: false, price_class: '' -%}
 								</div>
 
