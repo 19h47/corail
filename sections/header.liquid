@@ -42,9 +42,9 @@
 
 		{%- if section.settings.menu != blank -%}
 			{% render 'header-drawer', links: section.settings.menu.links %}
+			<span class="w-[0.0625rem] h-full block lg:hidden bg-orange-grayish {% if request.page_type == 'index' %} transition-colors duration-1000 ease-in-out is-ontop:bg-white {% endif %}"></span>
 		{%- endif -%}
 
-		<span class="w-[0.0625rem] h-full block lg:hidden bg-orange-grayish {% if request.page_type == 'index' %} transition-colors duration-1000 ease-in-out is-ontop:bg-white {% endif %}"></span>
 
 		<a href="{{ routes.root_url }}" class="lg:px-10 items-center w-full lg:w-auto flex justify-center">
 			{% render 'svg', icon: 'corail-logo', classes: 'h-5 w-28 fill-current', description: shop.name %}

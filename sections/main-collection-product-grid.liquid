@@ -19,7 +19,7 @@
 			<script src="{{ 'facets.js' | asset_url }}" defer="defer"></script>
 			<aside
 				aria-labelledby="verticalTitle"
-				class="facets-wrapper container mb-24 {% unless section.settings.enable_filtering %} facets-wrapper--no-filters {% endunless %}"
+				class="facets-wrapper container mb-12 {% unless section.settings.enable_filtering %} facets-wrapper--no-filters {% endunless %}"
 				id="main-collection-filters"
 				data-id="{{ section.id }}"
 			>
@@ -33,7 +33,7 @@
 
     	{%- endif -%}
 
-		<div class="lg:container" id="ProductGridContainer">
+		<div class="container" id="ProductGridContainer">
 			{%- paginate collection.products by section.settings.products_per_page -%}
 				{%- if collection.products.size == 0 -%}
 					<div class="collection collection--empty page-width" id="product-grid" data-id="{{ section.id }}">
@@ -46,17 +46,17 @@
 						</div>
 					</div>
 				{%- else -%}
-					<div class="collection relative {% if section.settings.filter_type != 'vertical' %} page-width{% endif %}">
+					<div class="collection relative">
 						<div class="loading-overlay"></div>
 
-						<ul id="product-grid" data-id="{{ section.id }}" class="flex flex-wrap lg:row gap-y-11 lg:gap-y-[6.75rem]">
+						<ul id="product-grid" data-id="{{ section.id }}" class="row gap-y-11 lg:gap-y-[6.75rem]">
 							{%- for product in collection.products -%}
 								{% assign lazy_load = false %}
 								{%- if forloop.index > 2 -%}
 									{%- assign lazy_load = true -%}
 								{%- endif -%}
 
-								<li class="w-6/12 lg:col-4/12">
+								<li class="col-6/12 lg:col-4/12">
 									{% render 'card-product',
 										card_product: product,
 										media_aspect_ratio: section.settings.image_ratio,

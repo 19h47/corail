@@ -48,12 +48,12 @@
 		<span class="price-item price-item--regular">{{ money_price }}</span>
 	</div>
 
-	<div class="{% if compare_at_price > price %} block {% else %} hidden {% endif %}">
+	<div class="{% if compare_at_price > price %} flex flex-col text-right lg:text-left lg:block {% else %} hidden {% endif %}">
 
 		{%- unless product.price_varies == false and product.compare_at_price_varies %}
 			<span class="sr-only">{{ 'products.product.price.regular_price' | t }}</span>
 			<span>
-				<s class="mr-1 text-xs text-orange-grayish">
+				<s class="lg:mr-1 lg:text-xs text-orange-grayish">
 					{%- if settings.currency_code_enabled -%}
 						{{- compare_at_price | money_with_currency -}}
 					{%- else %}

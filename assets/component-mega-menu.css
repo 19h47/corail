@@ -11,10 +11,6 @@
 	z-index: -1;
 }
 
-.shopify-section-header-sticky .mega-menu__content {
-	max-height: calc(100vh - var(--header-bottom-position-desktop, 20rem) - 4rem);
-}
-
 .js .mega-menu__content {
 	opacity: 0;
 	transform: translateY(-1.5rem);
