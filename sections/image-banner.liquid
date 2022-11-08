@@ -23,28 +23,16 @@
 		</video>
 	{% endif %}
 
-	{% if section.settings.image %}
-		{%-liquid
-			assign image_height = section.settings.image.width | divided_by: section.settings.image.aspect_ratio
-
-			if section.settings.image != blank
-			  	assign sizes = "(min-width: 750px) 50vw, 100vw"
-			elsif section.settings.image != blank
-			 	 assign sizes = "50vw"
-			else
-			  	assign sizes = "100vw"
-			endif
-		-%}
-		{{ section.settings.image | image_url: width: 1440 | image_tag:
+	{%- if section.settings.image -%}
+		{{- section.settings.image | image_url: width: 1440 | image_tag:
 			loading: 'lazy',
 			width: section.settings.image.width,
-			height: image_height,
+			height: section.settings.image.height,
 			class: 'w-full h-full object-cover object-center relative z-10',
-			sizes: sizes,
 			widths: '1440',
 			alt: section.settings.image.alt | escape
-		}}
-	{% endif %}
+		-}}
+	{%- endif -%}
 
 	{%- if section.blocks -%}
 		<div class="absolute text-center my-auto inset-0 z-20 flex items-center">
