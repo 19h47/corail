@@ -993,7 +993,6 @@ deferred-media {
 
 .field__label,
 .customer .field label {
-	font-size: 1.6rem;
 	left: calc(var(--inputs-border-width) + 2rem);
 	top: calc(1rem + var(--inputs-border-width));
 	margin-bottom: 0;
@@ -1001,8 +1000,6 @@ deferred-media {
 	position: absolute;
 	transition: top var(--duration-short) ease, font-size var(--duration-short) ease;
 	color: rgba(var(--color-foreground), 0.75);
-	letter-spacing: 0.1rem;
-	line-height: 1.5;
 }
 
 .field__input:focus ~ .field__label,
@@ -1011,10 +1008,8 @@ deferred-media {
 .customer .field input:focus ~ label,
 .customer .field input:not(:placeholder-shown) ~ label,
 .customer .field input:-webkit-autofill ~ label {
-	font-size: 1rem;
 	top: calc(var(--inputs-border-width) + 0.5rem);
 	left: calc(var(--inputs-border-width) + 2rem);
-	letter-spacing: 0.04rem;
 }
 
 .field__input:focus,
@@ -1023,7 +1018,7 @@ deferred-media {
 .customer .field input:focus,
 .customer .field input:not(:placeholder-shown),
 .customer .field input:-webkit-autofill {
-	padding: 2.2rem 1.5rem 0.8rem 2rem;
+	padding: 2.2rem 1rem 0.8rem 1rem;
 	margin: var(--inputs-border-width);
 }
 

@@ -286,10 +286,6 @@ cart-drawer-items {
   transform: rotate(180deg);
 }
 
-.drawer__footer .cart__dynamic-checkout-buttons {
-  max-width: 100%;
-}
-
 .drawer__footer #dynamic-checkout-cart ul {
   flex-wrap: wrap !important;
   flex-direction: row !important;

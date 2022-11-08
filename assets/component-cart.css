@@ -53,11 +53,6 @@ cart-items {
 	margin-bottom: 1rem;
 }
 
-.cart__dynamic-checkout-buttons {
-	max-width: 36rem;
-	margin: 0 auto;
-}
-
 .cart__dynamic-checkout-buttons div[role="button"] {
 	border-radius: var(--buttons-radius-outset) !important;
 }
