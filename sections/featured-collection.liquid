@@ -44,7 +44,7 @@
 						</h2>
 					{%- endif -%}
 
-					<footer class="mt-14">
+					<footer class="mt-2 lg:mt-14">
 						<ul class="flex gap-2">
 							<li>{% render 'svg', icon: 'shoe', classes: 'h-7 w-7 fill-current', description: shop.name %}</li>
 							{% comment %} <li>{% render 'svg', icon: 'shirt', classes: 'h-7 w-7 fill-current', description: shop.name %}</li> {% endcomment %}
@@ -58,7 +58,7 @@
 
 						<a
 							href="{{ section.settings.collection.url }}"
-							class="button mt-14 button-red lg:hidden inline-block align-middle w-full"
+							class="button mt-2 lg:mt-14 button-red lg:hidden inline-block align-middle w-full"
 							aria-label="{{ 'sections.featured_collection.view_all_label' | t: collection_name: section.settings.collection.title }}"
 						>
 							&rightarrow;&nbsp;{{- 'sections.featured_collection.view_all' | t -}}

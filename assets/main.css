@@ -1865,12 +1865,16 @@ html,
 	margin-bottom: 3rem;
 }
 
-.mt-14{
-	margin-top: 3.5rem;
+.mt-2{
+	margin-top: 0.5rem;
 }
 
 .mt-4{
 	margin-top: 1rem;
+}
+
+.mt-14{
+	margin-top: 3.5rem;
 }
 
 .mt-12{
@@ -1935,10 +1939,6 @@ html,
 
 .mb-20{
 	margin-bottom: 5rem;
-}
-
-.mt-2{
-	margin-top: 0.5rem;
 }
 
 .mt-2\.5{
@@ -4173,6 +4173,10 @@ html,
 		margin-top: 0.25rem;
 	}
 
+	.lg\:mt-14{
+		margin-top: 3.5rem;
+	}
+
 	.lg\:mt-0{
 		margin-top: 0px;
 	}
@@ -4203,10 +4207,6 @@ html,
 
 	.lg\:mb-11{
 		margin-bottom: 2.75rem;
-	}
-
-	.lg\:mt-\[9\.75rem\]{
-		margin-top: 9.75rem;
 	}
 
 	.lg\:ml-1\/6{
