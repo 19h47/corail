@@ -102,14 +102,14 @@
     "sold_out_badge_color_scheme": "inverse",
     "accent_icons": "text",
     "social_twitter_link": "",
-    "social_facebook_link": "https:\/\/facebook.com\/",
+    "social_facebook_link": "https:\/\/facebook.com\/corail.baskets",
     "social_pinterest_link": "",
-    "social_instagram_link": "https:\/\/instagram.com\/",
+    "social_instagram_link": "https:\/\/instagram.com\/corail.lab",
     "social_tiktok_link": "",
     "social_tumblr_link": "",
-    "social_twitch_link": "https:\/\/twitch.com\/",
+    "social_twitch_link": "",
     "social_snapchat_link": "",
-    "social_youtube_link": "https:\/\/youtube.com\/",
+    "social_youtube_link": "",
     "social_vimeo_link": "",
     "predictive_search_enabled": true,
     "predictive_search_show_vendor": false,
@@ -124,7 +124,7 @@
             "type": "announcement",
             "settings": {
               "text": "Livraison offerte - Retours offerts - Paiement en 3x sans frais",
-              "link": "https:\/\/19h47.fr"
+              "link": "#"
             }
           }
         },
