@@ -50,7 +50,7 @@
 								{%- when 'button' -%}
 									<div class="mt-[4.75rem]" {{ block.shopify_attributes }}>
 										{%- if block.settings.button_label != blank -%}
-											<a{% if block.settings.button_link == blank %} role="link" aria-disabled="true" {% else %} href="{{ block.settings.button_link }}"{% endif %} class="button">
+											<a{% if block.settings.button_link == blank %} role="link" aria-disabled="true" {% else %} href="{{ block.settings.button_link }}"{% endif %} class="button align-middle inline-block">
 												&rightarrow;&nbsp;{{ block.settings.button_label | escape }}
 											</a>
 										{%- endif -%}
