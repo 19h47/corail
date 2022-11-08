@@ -52,7 +52,7 @@
           "type": "column",
           "settings": {
             "image": "shopify:\/\/shop_images\/NawelOdin-Corail_25-10-1172.jpg",
-            "link_title": "Women shoes",
+            "link_title": "ORIGINS",
             "link_url": "shopify:\/\/pages\/femmes"
           }
         },
@@ -60,7 +60,7 @@
           "type": "column",
           "settings": {
             "image": "shopify:\/\/shop_images\/NawelOdin-Corail_25-10-1164.jpg",
-            "link_title": "Men shoes",
+            "link_title": "LINE 90",
             "link_url": "shopify:\/\/pages\/hommes"
           }
         }
