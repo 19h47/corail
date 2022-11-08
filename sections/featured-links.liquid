@@ -29,13 +29,13 @@
 									alt: block.settings.image.alt | escape
 								}}
 
-								{% if block.settings.link_url %}
+								{% comment %} {% if block.settings.link_url %} {% endcomment %}
 									<p class="flex items-center justify-center h-full group relative z-20" href="{{ block.settings.link_url }}">
 										<a class="button group-hover:bg-gray-very-dark group-hover:text-white group-focus:bg-gray-very-dark group-focus:text-white">
 											&rightarrow;&nbsp;{{ block.settings.link_title }}
 										</a>
 									</p>
-								{% endif %}
+								{% comment %} {% endif %} {% endcomment %}
 							</div>
 						</div>
 					{% endif %}
