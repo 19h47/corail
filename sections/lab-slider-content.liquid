@@ -1,7 +1,13 @@
 <script src="{{ 'swiper.js' | asset_url }}" defer="defer"></script>
 <script src="{{ 'slider.js' | asset_url }}" defer="defer"></script>
 
-{%- capture sizes -%}(min-width: {{ settings.page_width }}px) {% if section.blocks.size == 1 %}calc({{ settings.page_width }}px - 100px){% else %}{{ settings.page_width | minus: 100 | times: 0.67 | round }}px{% endif %}, (min-width: 750px){% if section.blocks.size == 1 %} calc(100vw - 100px){% else %} 500px{% endif %}, calc(100vw - 30px)}{%- endcapture -%}
+<style>
+	@media (min-width: 1024px) {
+		.section-lab-slider-content li {
+			width: {{ 1046 | minus: 40 | divided_by: 3 | times: 100 | divided_by: 1046 }}%;
+		}
+	}
+</style>
 
 {% liquid
 	assign count = 0
@@ -44,10 +50,9 @@
 							<li class="swiper-slide lg:w-1/3">
 								{% if block.settings.image != nil %}
 									<div class="rounded-[1.25rem] h-[24.625rem] overflow-hidden">
-										{{ block.settings.image | image_url: width: 354 | image_tag:
+										{{ block.settings.image | image_url: width: 336 | image_tag:
 											loading: 'lazy',
-											sizes: sizes,
-											widths: '550, 720, 990, 1100, 1500, 2200, 3000',
+											widths: '281,336',
 											class: 'w-full h-full object-cover object-center block'
 										}}
 									</div>
