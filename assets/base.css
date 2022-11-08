@@ -362,17 +362,6 @@ h6,
 	letter-spacing: 0.18rem;
 }
 
-.caption-large,
-.customer .field input,
-.customer select,
-.field__input,
-.form__label,
-.select__select {
-	font-size: 1.3rem;
-	line-height: calc(1 + 0.5 / var(--font-body-scale));
-	letter-spacing: 0.04rem;
-}
-
 .color-foreground {
 	color: rgb(var(--color-foreground));
 }
@@ -855,9 +844,6 @@ deferred-media {
 .customer select {
 	-webkit-appearance: none;
 	appearance: none;
-	background-color: rgb(var(--color-background));
-	color: rgb(var(--color-foreground));
-	font-size: 1.6rem;
 	width: 100%;
 	box-sizing: border-box;
 	transition: box-shadow var(--duration-short) ease;
