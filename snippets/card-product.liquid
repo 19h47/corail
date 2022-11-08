@@ -180,7 +180,7 @@
 		</div>
 
 		{%- unless card_product.has_only_default_variant -%}
-			<div class="space-y-2 lg:hidden my-2 mx-2">
+			<div class="space-y-2 lg:hidden my-2">
 				{%- for option in card_product.options_with_values -%}
 					{%- if option.name == 'Taille' or 'pointure' == option.name -%}
 
@@ -225,7 +225,7 @@
 			</div>
 		{%- endunless -%}
 
-		<footer class="border-t mt-2 lg:mt-4 mx-2 lg:mx-0 border-orange-grayish pt-1.5 lg:pt-3 text-[0.5rem] lg:text-sm leading-none lg:leading-4 uppercase">
+		<footer class="border-t mt-2 lg:mt-4 border-orange-grayish pt-1.5 lg:pt-3 text-[0.5rem] lg:text-sm leading-none lg:leading-4 uppercase">
 			<div class="flex justify-between">
 				<h3 {% if card_product.featured_media == nil and settings.card_style == 'standard' %} id="title-{{ section_id }}-{{ card_product.id }}" {% endif %} class="flex-shrink-0">
 					{{- card_product.title | escape -}}

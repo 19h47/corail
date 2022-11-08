@@ -22,7 +22,7 @@
 
 											<div id="link-{{ link.handle | escape }}" class="menu-drawer__submenu has-submenu absolute inset-y-0 left-0 w-full bg-white z-1" tabindex="-1">
 												<div class="h-full overflow-x-hidden overflow-y-auto">
-													<button class="flex items-center px-5 py-4 uppercase font-bold font-display text-xl w-full border-b border-orange-grayish" aria-expanded="true">
+													<button class="flex items-center px-5 py-4 uppercase font-bold font-display text-xl w-full border-b border-orange-grayish text-left" aria-expanded="true">
 														{% render 'svg', icon: 'chevron-left', classes: 'w-5 h-5 mr-5' %}
 														{{ link.title | escape }}
 													</button>
@@ -55,7 +55,7 @@
 
 																			<div id="childlink-{{ childlink.handle | escape }}" class="menu-drawer__submenu has-submenu absolute inset-y-0 left-0 w-full bg-white z-1">
 
-																				<button class="flex items-center px-5 py-4 uppercase font-bold font-display text-xl w-full border-b border-orange-grayish" aria-expanded="true">
+																				<button class="flex items-center px-5 py-4 uppercase font-bold font-display text-xl w-full border-b border-orange-grayish text-left" aria-expanded="true">
 																					{% render 'svg', icon: 'chevron-left', classes: 'w-5 h-5 mr-5' %}
 																					{{ link.title | escape }}&nbsp;/&nbsp;{{ childlink.title | escape }}
 																				</button>
@@ -123,7 +123,7 @@
 											<div id="link-{{ link.handle | escape }}" class="menu-drawer__submenu has-submenu absolute inset-y-0 left-0 w-full bg-white z-1" tabindex="-1">
 
 												<div class="h-full overflow-x-hidden overflow-y-auto">
-													<button class="flex items-center px-5 py-4 uppercase font-bold font-display text-xl w-full border-b border-orange-grayish" aria-expanded="true">
+													<button class="flex items-center px-5 py-4 uppercase font-bold font-display text-xl w-full border-b border-orange-grayish text-left" aria-expanded="true">
 														{% render 'svg', icon: 'chevron-left', classes: 'w-5 h-5 mr-5' %}
 														{{ link.title | escape }}
 													</button>
@@ -154,7 +154,7 @@
 
 																			<div id="childlink-{{ childlink.handle | escape }}" class="menu-drawer__submenu has-submenu absolute inset-y-0 left-0 w-full bg-white z-1">
 
-																				<button class="flex items-center px-5 py-4 uppercase font-bold font-display text-xl w-full border-b border-orange-grayish" aria-expanded="true">
+																				<button class="flex items-center px-5 py-4 uppercase font-bold font-display text-xl w-full border-b border-orange-grayish text-left" aria-expanded="true">
 																					{% render 'svg', icon: 'chevron-left', classes: 'w-5 h-5 mr-5' %}
 																					{{ link.title | escape }}&nbsp;/&nbsp;{{ childlink.title | escape }}
 																				</button>
