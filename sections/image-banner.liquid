@@ -24,11 +24,11 @@
 	{% endif %}
 
 	{%- if section.settings.image -%}
-		{{- section.settings.image | image_url: width: 2880 | image_tag:
+		{{- section.settings.image | image_url: width: 1440 | image_tag:
 			width: section.settings.image.width,
 			height: section.settings.image.height,
 			class: 'w-full h-full object-cover object-center relative z-10',
-			widths: '320,1440,2880',
+			widths: '320,1440',
 			alt: section.settings.image.alt | default: 'image-banner' | escape
 		-}}
 	{%- endif -%}
@@ -84,6 +84,11 @@
       "type": "image_picker",
       "id": "image",
       "label": "t:sections.image-banner.settings.image.label"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_mobile",
+      "label": "t:sections.image-banner.settings.image_mobile.label"
     },
     {
       "type": "video",

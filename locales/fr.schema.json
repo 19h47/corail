@@ -1355,6 +1355,9 @@
         "image": {
           "label": "Image"
         },
+        "image_mobile": {
+          "label": "Image mobile"
+        },
         "video": {
           "label": "Vidéo"
         },
