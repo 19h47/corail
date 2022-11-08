@@ -134,7 +134,7 @@
 
 			{%- if section.settings.secondary-menu != blank -%}
 				<nav class="hidden lg:flex items-center font-display">
-					<ul class="flex list-none">
+					<div class="flex">
 						{%- for link in section.settings.secondary-menu.links -%}
 							{% if link.links != blank %}
 								<header-menu>
@@ -205,7 +205,7 @@
 								</a>
 							{% endif %}
 						{% endfor %}
-					</ul>
+					</div>
 				</nav>
 			{% endif %}
 
