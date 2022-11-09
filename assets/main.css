@@ -4497,8 +4497,8 @@ html,
 		max-height: calc(100vh - 10.5rem);
 	}
 
-	.lg\:max-h-\[100vh_-_2\.5rem\]{
-		max-height: 100vh - 2.5rem;
+	.lg\:max-h-\[calc\(100vh_-_2\.5rem\)\]{
+		max-height: calc(100vh - 2.5rem);
 	}
 
 	.lg\:w-\[3\.625rem\]{
