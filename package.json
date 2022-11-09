@@ -9,7 +9,7 @@
   "scripts": {
     "dev": "webpack --mode=development --config webpack/webpack.config.js",
     "prod": "webpack --mode=production --config webpack/webpack.config.js",
-    "serve": "shopify theme dev --store corail-development",
+    "serve": "shopify theme dev --store corail-la-basket-qui-sauve-locean",
     "pull": "shopify theme pull",
     "shopify": "shopify"
   },

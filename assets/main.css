@@ -1,3 +1,6 @@
+/*!********************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[8].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[8].use[2]!./src/stylesheets/styles.css ***!
+  \********************************************************************************************************************************************************************************/
 /**
  * Base
  *
@@ -2453,6 +2456,12 @@ html,
 	list-style-type: none;
 }
 
+.appearance-none{
+	-webkit-appearance: none;
+	   -moz-appearance: none;
+	        appearance: none;
+}
+
 .flex-col{
 	flex-direction: column;
 }
@@ -2527,6 +2536,11 @@ html,
 	     column-gap: 2rem;
 }
 
+.gap-x-2{
+	-moz-column-gap: 0.5rem;
+	     column-gap: 0.5rem;
+}
+
 .gap-y-28{
 	row-gap: 7rem;
 }
@@ -2551,11 +2565,6 @@ html,
 
 .gap-y-12{
 	row-gap: 3rem;
-}
-
-.gap-x-2{
-	-moz-column-gap: 0.5rem;
-	     column-gap: 0.5rem;
 }
 
 .gap-x-1\.5{
@@ -3734,12 +3743,6 @@ html,
 	background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.after\:bg-red-very-light::after{
-	content: var(--tw-content);
-	--tw-bg-opacity: 1;
-	background-color: rgb(255 125 108 / var(--tw-bg-opacity));
-}
-
 .after\:bg-orange-grayish::after{
 	content: var(--tw-content);
 	--tw-bg-opacity: 1;
@@ -3917,12 +3920,6 @@ html,
 .header-is-open .header-is-open\:\!text-gray-very-dark{
 	--tw-text-opacity: 1 !important;
 	color: rgb(51 51 51 / var(--tw-text-opacity)) !important;
-}
-
-.is-inview.is-inview\:after\:scale-x-100::after{
-	content: var(--tw-content);
-	--tw-scale-x: 1;
-	transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .is-active.is-active\:underline{
@@ -4198,6 +4195,10 @@ html,
 
 	.lg\:mt-auto{
 		margin-top: auto;
+	}
+
+	.lg\:ml-8{
+		margin-left: 2rem;
 	}
 
 	.lg\:ml-1\/12{
@@ -5194,3 +5195,5 @@ html,
 	}
 }
 
+
+/*# sourceMappingURL=main.css.map*/

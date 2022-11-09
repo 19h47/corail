@@ -223,6 +223,49 @@
 				</nav>
 			{% endif %}
 
+			<div class="flex text-sm h-[4.375rem] items-center {% if section.settings.secondary-menu != blank %} lg:ml-8 {% endif %}">
+				<localization-form class="block">
+					{%- form 'localization', id: 'HeaderLanguageForm', class: 'localization-form' -%}
+						<select class="bg-transparent appearance-none" name="locale_code">
+							{%- for language in localization.available_languages -%}
+								<option value="{{ language.iso_code }}" lang="{{ language.iso_code }}" {%- if language.iso_code == localization.language.iso_code %} selected {% endif %}>
+									{{- language.iso_code | upcase -}}
+								</option>
+							{%- endfor -%}
+						</select>
+					{%- endform -%}
+				</localization-form>
+				{% comment %} /
+				<localization-form class="block">
+					{%- form 'localization', id: 'FooterCountryForm', class: 'localization-form' -%}
+						<select class="bg-transparent appearance-none" name="currency_code">
+							{%- for country in localization.available_countries -%}
+								<option value="{{ country.iso_code }}" {%- if country.iso_code == localization.country.iso_code %} selected{% endif %}>
+								  {{ country.name }} ({{ country.currency.iso_code }} {{ country.currency.symbol }})
+								</option>
+							  {%- endfor -%}
+						</select>
+					{% endform %}
+				</localization-form> {% endcomment %}
+			</div>
+
+			{% javascript %}
+				class LocalizationForm extends HTMLElement {
+					constructor() {
+						super();
+
+						this.$form = this.querySelector('form');
+						this.$select = this.$form.querySelector('select');
+
+						console.log(this.$select);
+
+						this.$select.addEventListener('change', () => this.$form.submit())
+					}
+				}
+
+				customElements.define('localization-form', LocalizationForm);
+			{% endjavascript %}
+
 			<details-modal class="hidden lg:block">
 				<details>
 					<summary class="block w-[4.375rem] h-[4.375rem] relative" aria-haspopup="dialog" aria-label="{{ 'general.search.search' | t }}">
