@@ -31,8 +31,8 @@
         "title": "NOUS FABRIQUONS DES BASKETS AVEC DES DÉCHETS MARINS QUE NOUS RÉCOLTONS À MARSEILLE.",
         "description": "<p>FROM THE SEA <\/p>",
         "show_description": false,
-        "collection": "origins-line-90-femme",
-        "products_to_show": 4,
+        "collection": "all",
+        "products_to_show": 12,
         "show_secondary_image": true,
         "show_vendor": false,
         "show_rating": false,
@@ -42,7 +42,7 @@
     "73cfb848-0cf0-4279-878d-1aaed515e933": {
       "type": "marquee",
       "settings": {
-        "title": "From the sea From the sea"
+        "title": "From the sea"
       }
     },
     "9a562e76-1cbf-464f-8250-9df50fef249b": {
@@ -53,7 +53,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/NawelOdin-Corail_25-10-1172.jpg",
             "link_title": "ORIGINS",
-            "link_url": "shopify:\/\/collections\/origins-femme"
+            "link_url": "shopify:\/\/collections\/origins"
           }
         },
         "0f7fd138-12f8-4290-aaca-f5510c15b121": {
