@@ -16,7 +16,7 @@
 										<details id="Details-menu-drawer-menu-item-{{ forloop.index }}">
 
 											<summary class="uppercase font-bold font-display leading-7 flex items-center {% if link.child_active %} is-active {% endif %}">
-												{{ link.title | escape }}
+												{{ link.title }}
 												{% render 'svg', icon: 'chevron-right', classes: 'ml-2.5 w-2.5 h-2.5' %}
 											</summary>
 
@@ -33,7 +33,7 @@
 
 															{% if childlink.title == '#' and childlink.url == '#' and childlink.links != 'blank' %}
 																{% for grandchildlink in childlink.links %}
-																	<li>
+																	<li data-type="{{ link.type }}">
 																		<a class="font-display leading-8" href="{{ grandchildlink.url }}">
 																			{{ grandchildlink.title }}
 																		</a>
