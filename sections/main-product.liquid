@@ -453,7 +453,7 @@
 													{% if section.settings.size_chart_url and 'Taille' == option.name or 'pointure' == option.name %}
 														<div class="ml-auto flex items-center">
 															<a class="text-xs text-gray-dark underline" target="_blank" href="{{ sections.settings.size_chart_url }}">
-																{{- 't:sections.main-product.size_chart' -}}
+																{{- 't:sections.main-product.size_chart' | t -}}
 															</a>&nbsp;&UpperRightArrow;
 														</div>
 													{% endif %}
