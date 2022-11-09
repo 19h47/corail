@@ -282,9 +282,9 @@
 
 							{%- when 'notice' -%}
 
-								{% if block.settings.title or block.settings.content %}
+								{% if block.settings.title != blank or block.settings.content != blank %}
 									<div class="bg-red-light text-white rounded-lg font-display p-[1.625rem] lg:p-6 mt-6 lg:mt-4 mb-[1.625rem] lg:mb-6">
-										{% if block.settings.title %}
+										{% if block.settings.title != blank %}
 											<div class="font-bold text-xl uppercase flex">
 												{{- block.settings.title -}}
 												<div class="flex-shrink-0 ml-auto flex gap-4">
@@ -293,8 +293,8 @@
 												</div>
 											</div>
 										{% endif %}
-										{% if block.settings.content %}
-											<div class="font-medium {% if block.settings.title %} mt-2.5 lg:mt-0 {% endif %}">{{- block.settings.content -}}</div>
+										{% if block.settings.content != blank %}
+											<div class="font-medium {% if block.settings.title != blank %} mt-2.5 lg:mt-0 {% endif %}">{{- block.settings.content -}}</div>
 										{% endif %}
 									</div>
 								{% endif %}
