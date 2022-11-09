@@ -885,15 +885,11 @@ deferred-media {
 	pointer-events: none;
 	content: "";
 	position: absolute;
-	top: var(--inputs-border-width);
-	right: var(--inputs-border-width);
-	bottom: var(--inputs-border-width);
-	left: var(--inputs-border-width);
-	border: 0.1rem solid transparent;
-	border-radius: var(--inputs-radius);
-	box-shadow: 0 0 0 var(--inputs-border-width)
-		rgba(var(--color-foreground), var(--inputs-border-opacity));
-	transition: box-shadow var(--duration-short) ease;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	border: 0.0625rem solid #CFCDC9;
 	z-index: 1;
 }
 
@@ -991,7 +987,7 @@ deferred-media {
 	text-align: left;
 	padding: 1rem;
 	margin: var(--inputs-border-width);
-	transition: box-shadow var(--duration-short) ease;
+	transition: box-shadow 1s ease-in-out;
 }
 
 .field__label,
@@ -1002,7 +998,6 @@ deferred-media {
 	pointer-events: none;
 	position: absolute;
 	transition: top 1s ease-in-out, font-size 1s ease-in-out;
-	color: rgba(var(--color-foreground), 0.75);
 }
 
 .field__input:focus ~ .field__label,
