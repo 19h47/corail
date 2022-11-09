@@ -1,8 +1,8 @@
-<div class="timeline my-[3.75rem] lg:my-10 relative py-14">
+<div class="timeline my-[3.75rem] lg:my-10 relative lg:py-14">
 
 	<span class="bg-orange-light w-[0.875rem] hidden lg:block h-[0.3125rem] rounded-full sticky top-[11.75rem] mx-auto z-2"></span>
 
-	<div class="absolute inset-0 flex items-center pointer-events-none z-1">
+	<div class="absolute hidden lg:flex inset-0 items-center pointer-events-none z-1">
 		<div
 			style="background: linear-gradient( #CFCDC9, #CFCDC9, 0.0625rem, transparent 0.0625rem ); background-size: 1rem 2.25rem"
 			class="relative w-[0.1875rem] h-full mx-auto after:absolute after:bg-orange-grayish after:rounded-full after:top-0 after:-ml-[0.0625rem] after:w-[0.3125rem] after:h-[0.3125rem] before:absolute before:bg-orange-grayish before:rounded-full before:bottom-0 before:-ml-[0.0625rem] before:w-[0.3125rem] before:h-[0.3125rem]"
@@ -23,9 +23,9 @@
 								{% if  block.settings.image %}
 									<div class="lg:col-6/12 {% if mod == 0 %} lg:order-1 {% else %} lg:order-2 {% endif %}">
 										<div class="h-[12.25rem] lg:h-[15.5rem] {% if mod == 0 %} lg:pr-7 {% else %} lg:pl-7 {% endif %}">
-											{{ block.settings.image | image_url: width: 692, height: 888 | image_tag:
+											{{ block.settings.image | image_url: width: 710 | image_tag:
 												loading: 'lazy',
-												widths: '275, 550, 710, 1420',
+												widths: '562, 710',
 												class: 'w-full h-full object-cover object-center'
 											}}
 										</div>

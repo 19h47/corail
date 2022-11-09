@@ -223,7 +223,7 @@
 				</nav>
 			{% endif %}
 
-			<div class="flex text-sm h-[4.375rem] items-center {% if section.settings.secondary-menu != blank %} lg:ml-8 {% endif %}">
+			<div class="flex text-sm h-full items-center mr-4 lg:mr-0 {% if section.settings.secondary-menu != blank %} lg:ml-8 {% endif %}">
 				<localization-form class="block">
 					{%- form 'localization', id: 'HeaderLanguageForm', class: 'localization-form' -%}
 						<select class="bg-transparent appearance-none" name="locale_code">

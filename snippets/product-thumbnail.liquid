@@ -54,24 +54,32 @@
 	data-modal="#ProductModal-{{ modal_id }}"
 	class="w-full h-full relative block lg:max-h-screen"
 >
-	<button
-		type="button"
-		class="w-12 h-12 flex items-center justify-center rounded-full border-[0.0625rem] border-orange-grayish bg-white absolute top-0 left-0 lg:left-auto lg:right-0 m-5 z-2"
-		aria-haspopup="dialog"
-		data-media-id="{{ media.id }}"
-	>
-		<span class="sr-only">{{- 'products.product.media.open_media' | t: index: position -}}</span>
-		{%- liquid
-			case media.media_type
-				when 'video' or 'external_video'
-					render 'svg', icon: 'play', classes: 'w-5 h-5 fill-current ml-1'
-				when 'model'
-					render 'icon-3d-model'
-				else
-					render 'svg', icon: 'magnifying-glass', classes: 'w-5 h-5 fill-current'
-			endcase
-		-%}
-	</button>
+	{% if media.media_type == 'video' or media.media_type == 'external_video' or media.media_type == 'model' %}
+		<button
+			type="button"
+			class="w-12 h-12 flex items-center justify-center rounded-full border-[0.0625rem] border-orange-grayish bg-white absolute top-0 left-0 lg:left-auto lg:right-0 m-5 z-2"
+			aria-haspopup="dialog"
+			data-media-id="{{ media.id }}"
+		>
+			<span class="sr-only">{{- 'products.product.media.open_media' | t: index: position -}}</span>
+			{%- liquid
+				case media.media_type
+					when 'video' or 'external_video'
+						render 'svg', icon: 'play', classes: 'w-5 h-5 fill-current ml-1'
+					else
+						render 'icon-3d-model'
+				endcase
+			-%}
+		</button>
+	{% else %}
+		<button
+			type="button"
+			class="w-full h-full absolute inset-0 z-2"
+			aria-haspopup="dialog"
+			data-media-id="{{ media.id }}"
+			aria-label="{{ media.preview_image.alt }}"
+		></button>
+	{% endif %}
 
 	{{- media.preview_image
 		| image_url: width: 1660, height: 1504
