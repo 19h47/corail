@@ -47,7 +47,7 @@
 
 
 		<a href="{{ routes.root_url }}" class="lg:px-10 items-center w-full lg:w-auto flex justify-center">
-			{% render 'svg', icon: 'corail-logo', classes: 'h-5 w-28 fill-current', description: shop.name %}
+			{% render 'svg', icon: 'corail-logo', classes: 'h-5 w-28 max-w-full fill-current', description: shop.name %}
 		</a>
 
 		<span class="w-[0.0625rem] relative -right-[0.03125rem] h-full hidden lg:block bg-orange-grayish header-is-open:!bg-orange-grayish {% if request.page_type == 'index' %} transition-colors duration-1000 ease-in-out is-ontop:bg-white {% endif %}"></span>
@@ -223,7 +223,11 @@
 				</nav>
 			{% endif %}
 
-			<div class="flex text-sm h-full items-center mr-4 lg:mr-0 {% if section.settings.secondary-menu != blank %} lg:ml-8 {% endif %}">
+			{% if request.page_type == 'index' %}
+				<span class="w-[0.0625rem] h-full block bg-orange-grayish lg:hidden {% if request.page_type == 'index' %} is-ontop:bg-white {% endif %} header-is-open:!bg-orange-grayish transition-colors duration-1000 ease-in-out"></span>
+			{% endif %}
+
+			<div class="flex text-sm h-full items-center mx-4 lg:mx-0 {% if section.settings.secondary-menu != blank %} lg:ml-8 {% endif %}">
 				<localization-form class="block">
 					{%- form 'localization', id: 'HeaderLanguageForm', class: '' -%}
 						<select class="bg-transparent appearance-none" name="locale_code">
@@ -337,11 +341,11 @@
 			</details-modal>
 
 			{% if cart == empty or request.page_type == 'index' %}
-				<span class="w-[0.0625rem] h-full block bg-orange-grayish {% if request.page_type == 'index' %} is-ontop:bg-white {% endif %} header-is-open:!bg-orange-grayish transition-colors duration-1000 ease-in-out"></span>
+				<span class="w-[0.0625rem] h-full bg-orange-grayish {% if request.page_type == 'index' %} is-ontop:bg-white {% endif %} header-is-open:!bg-orange-grayish transition-colors duration-1000 ease-in-out"></span>
 			{% endif %}
 
-			<a href="{{ routes.cart_url }}" id="cart-icon-bubble" class="font-semibold text-sm leading-[1.125rem] flex items-center p-[1.4375rem] lg:px-[1.6875rem] {% if cart != empty and request.page_type != 'index' %} bg-gray-very-dark text-white relative z-1 {% endif %}">
-				{%- render 'svg', icon: 'bag-shopping', classes: 'mr-2 w-[1.125rem] h-[1.125rem] fill-current flex-shrink-0' -%}
+			<a href="{{ routes.cart_url }}" id="cart-icon-bubble" class="font-semibold text-sm leading-[1.125rem] flex items-center px-4 py-[1.4375rem] lg:px-[1.6875rem] {% if cart != empty and request.page_type != 'index' %} bg-gray-very-dark text-white relative z-1 {% endif %}">
+				{%- render 'svg', icon: 'bag-shopping', classes: 'hidden lg:block mr-2 w-[1.125rem] h-[1.125rem] fill-current flex-shrink-0' -%}
 
 				<span class="sr-only">{{ 'sections.header.cart_count' | t: count: cart.item_count }}</span>
 

@@ -27,22 +27,24 @@ const convertToDMS = (D, lng) => ({
 });
 
 // eslint-disable-next-line no-unused-vars
-const getRandomFloat = (min, max, decimals = 2) => parseFloat((Math.random() * (max - min) + min).toFixed(decimals));
+const getRandomFloat = (min, max, decimals = 2) =>
+	parseFloat((Math.random() * (max - min) + min).toFixed(decimals));
 
-const getFocusableElements = container => Array.from(
-	container.querySelectorAll(
-		"summary, a[href], button:enabled, [tabindex]:not([tabindex^='-']), [draggable], area, input:not([type=hidden]):enabled, select:enabled, textarea:enabled, object, iframe"
-	)
-)
+const getFocusableElements = container =>
+	Array.from(
+		container.querySelectorAll(
+			"summary, a[href], button:enabled, [tabindex]:not([tabindex^='-']), [draggable], area, input:not([type=hidden]):enabled, select:enabled, textarea:enabled, object, iframe"
+		)
+	);
 
 // eslint-disable-next-line no-unused-vars
 const getFormatedTime = time => {
 	const minutes = parseInt(time / 60, 10)
 		.toString()
-		.padStart(2, '0');
+		.padStart(2, "0");
 	const seconds = Math.floor(time % 60)
 		.toString()
-		.padStart(2, '0');
+		.padStart(2, "0");
 
 	return `${minutes}:${seconds}`;
 };
@@ -82,54 +84,64 @@ scroll.on("scroll", ({ direction }) => {
 	isOntop();
 });
 
-const anchorLinks = [...document.querySelectorAll('.js-anchors')];
+const anchorLinks = [...document.querySelectorAll(".js-anchors")];
 
 if (anchorLinks) {
-	const anchors = [...anchorLinks.map(a => [...a.querySelectorAll('a')])].flat()
-	const $summary = document.querySelector('.js-anchor-summary');
+	const anchors = [...anchorLinks.map(a => [...a.querySelectorAll("a")])].flat();
+	const $summary = document.querySelector(".js-anchor-summary");
 
-	scroll.on('call', (func, way, obj) => {
-		if ('enter' === way && 'anchor' === func) {
+	scroll.on("call", (func, way, obj) => {
+		if ("enter" === way && "anchor" === func) {
 			anchors.forEach($anchor => {
-				if ($anchor.href.split('#')[1] === obj.el.id) {
-					$anchor.classList.add('is-active');
-					$summary.innerHTML = $anchor.innerHTML
+				if ($anchor.href.split("#")[1] === obj.el.id) {
+					$anchor.classList.add("is-active");
+					$summary.innerHTML = $anchor.innerHTML;
 				} else {
-					$anchor.classList.remove('is-active');
+					$anchor.classList.remove("is-active");
 				}
-			})
+			});
 		}
 
 		// if ('exit' === way && 'anchor' === func) {
 		// 	anchors.forEach($anchor => $anchor.classList.remove('is-active'))
 		// }
-	})
+	});
 }
 
+document.querySelectorAll('[id^="Details-"]').forEach($details => {
+	const summaries = $details.querySelectorAll("summary");
 
-document.querySelectorAll('[id^="Details-"] summary').forEach(summary => {
-	summary.setAttribute("role", "button");
-	summary.setAttribute("aria-expanded", summary.parentNode.hasAttribute("open"));
+	if ("Details-menu-drawer-container" === $details.id) {
+		$details.addEventListener("toggle", () => {
+			if ($details.open) {
+				return document.documentElement.classList.add("header-is-open");
+			}
+			return document.documentElement.classList.remove("header-is-open");
 
-	if (summary.nextElementSibling.getAttribute("id")) {
-		summary.setAttribute("aria-controls", summary.nextElementSibling.id);
+		});
 	}
 
-	summary.addEventListener("click", event => {
-		event.currentTarget.setAttribute(
-			"aria-expanded",
-			!event.currentTarget.closest("details").hasAttribute("open")
-		);
-		document.documentElement.classList.toggle('header-is-open');
+	summaries.forEach(summary => {
+		summary.setAttribute("role", "button");
+		summary.setAttribute("aria-expanded", summary.parentNode.hasAttribute("open"));
+
+		if (summary.nextElementSibling.getAttribute("id")) {
+			summary.setAttribute("aria-controls", summary.nextElementSibling.id);
+		}
+
+		summary.addEventListener("click", event => {
+			event.currentTarget.setAttribute(
+				"aria-expanded",
+				!event.currentTarget.closest("details").hasAttribute("open")
+			);
+		});
+
+		if (summary.closest("header-drawer")) {
+			return;
+		}
+
+		summary.parentElement.addEventListener("keyup", onKeyUpEscape);
 	});
-
-	
-
-	if (summary.closest("header-drawer")) {
-		return;
-	}
-
-	summary.parentElement.addEventListener("keyup", onKeyUpEscape);
 });
 
 const trapFocusHandlers = {};
