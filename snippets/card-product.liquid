@@ -72,12 +72,12 @@
 				> {% endcomment %}
 				{% comment %}theme-check-enable ImgLazyLoading{% endcomment %}
 
-				{{ card_product.featured_media | image_url: width: 456 | image_tag:
-					loading: 'lazy',
+				{{ card_product.featured_media | image_url: width: 456, height: 652 | image_tag:
 					width: card_product.featured_media.width,
 					height: card_product.featured_media.height,
 					class: 'w-full h-full object-cover object-center opacity-100 duration-1000 ease-in-out transition-opacity group-hover:opacity-0',
-					widths: '160,338,456',
+					widths: '160,206,338,456',
+					sizes: '(min-width: 1024px) 50vw, 25vw',
 					alt: card_product.featured_media.alt | default: card_product.title | escape
 				}}
 
@@ -97,12 +97,13 @@
 							{% endfor %}
 						</video>
 					{% else %}
-						{{ card_product.media[1] | image_url: width: 456 | image_tag:
+						{{ card_product.media[1] | image_url: width: 456, height: 652 | image_tag:
 							loading: 'lazy',
 							width: card_product.media[1].width,
 							height: card_product.media[1].height,
 							class: 'absolute inset-0 w-full h-full object-cover object-center opacity-0 duration-1000 ease-in-out transition-opacity group-hover:opacity-100',
-							widths: '160,338,456',
+							widths: '160,206,338,456',
+							sizes: '(min-width: 1024px) 50vw, 25vw',
 							alt: card_product.media[1].alt | default: card_product.title | escape
 						}}
 					{% endif %}
