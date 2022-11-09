@@ -58,9 +58,9 @@
       "previous_slide": "Faire glisser vers la gauche",
       "name": "Carrousel"
     },
-	"commintments": {
-		"label": "Commintments"
-	}
+    "commintments": {
+      "label": "Commintments"
+    }
   },
   "newsletter": {
     "label": "E-mail",
