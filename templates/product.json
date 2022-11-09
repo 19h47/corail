@@ -122,8 +122,7 @@
         "mobile_thumbnails": "hide",
         "hide_variants": true,
         "enable_video_looping": false,
-        "padding_top": 36,
-        "padding_bottom": 12
+        "size_chart_url": "shopify:\/\/pages\/quelle-taille"
       }
     },
     "7d00fc27-c309-4d0a-9c10-bc7f88577e55": {
