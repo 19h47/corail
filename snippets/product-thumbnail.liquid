@@ -50,34 +50,6 @@
   	(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | times: media_width | divided_by: desktop_columns | round }}px, (min-width: 990px) calc({{ media_width | times: 100 | divided_by: desktop_columns }}vw - 10rem), (min-width: 750px) calc((100vw - 11.5rem) / 2), calc(100vw / {{ mobile_columns }} - 4rem)
 {%- endcapture -%}
 
-<noscript>
-	{%- if media.media_type == 'video' or media.media_type == 'external_video' -%}
-		<span class="product__media-icon motion-reduce quick-add-hidden">
-			{% render 'svg', icon: 'play', classes: 'w-5 h-5 fill-current ml-1' %}
-		</span>
-		<div class="product__media media global-media-settings" style="padding-top: {{ 1 | divided_by: media.preview_image.aspect_ratio | times: 100 }}%;">
-			{{ media.preview_image | image_url: width: 1660 | image_tag:
-				loading: lazy,
-				sizes: sizes,
-				widths: '320,640,830,1660',
-				alt: media.preview_image.alt | escape
-			}}
-		</div>
-		<a href="{% if media.media_type == 'video' %}{{ media.sources[1].url }}{% else %}{{ media | external_video_url }}{% endif %}" class="product__media-toggle">
-			<span class="sr-only">{{ 'products.product.video_exit_message' | t: title: product.title | escape }}</span>
-		</a>
-	{%- else -%}
-		<div class="product__media media global-media-settings" style="padding-top: {{ 1 | divided_by: media.preview_image.aspect_ratio | times: 100 }}%;">
-			{{ media.preview_image | image_url: width: 1660 | image_tag:
-				loading: lazy,
-				sizes: sizes,
-				widths: '320,640,830,1660',
-				alt: media.preview_image.alt | escape
-			}}
-		</div>
-	{%- endif -%}
-</noscript>
-
 <modal-opener
 	data-modal="#ProductModal-{{ modal_id }}"
 	class="w-full h-full relative block lg:max-h-screen"
@@ -102,10 +74,9 @@
 	</button>
 
 	{{- media.preview_image
-		| image_url: width: 830, height: 752
+		| image_url
 		| image_tag:
 			loading: lazy,
-			widths: '320,830',
 			sizes: '(min-width: 1024px) 100vw, 60vw',
 			class: 'absolute bg-orange-grayish inset-0 object-cover object-center w-full h-full',
 			alt: media.preview_image.alt | escape
