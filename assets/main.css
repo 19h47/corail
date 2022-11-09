@@ -1953,6 +1953,10 @@ html,
 	margin-bottom: 0.5rem;
 }
 
+.mr-4{
+	margin-right: 1rem;
+}
+
 .mb-1\.5{
 	margin-bottom: 0.375rem;
 }
@@ -2015,10 +2019,6 @@ html,
 
 .mt-\[1\.125rem\]{
 	margin-top: 1.125rem;
-}
-
-.mr-4{
-	margin-right: 1rem;
 }
 
 .-mt-7{
@@ -4562,6 +4562,10 @@ html,
 
 	.lg\:w-3\/10{
 		width: 30%;
+	}
+
+	.lg\:min-w-\[15\.5rem\]{
+		min-width: 15.5rem;
 	}
 
 	.lg\:max-w-\[15\.875rem\]{
