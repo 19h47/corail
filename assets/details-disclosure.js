@@ -45,12 +45,14 @@ if (!customElements.get('details-disclosure')) {
 		}
 
 		onToggle() {
-			this.header.preventHide = this.mainDetailsToggle.open;
 
 			if (!this.header) {
 				return;
 			}
 
+			document.documentElement.classList.toggle('header-is-open');
+
+			this.header.preventHide = this.mainDetailsToggle.open;
 
 			if ("" !== document.documentElement.style.getPropertyValue("--header-bottom-position-desktop")) {
 				// eslint-disable-next-line no-useless-return
