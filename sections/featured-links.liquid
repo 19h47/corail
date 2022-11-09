@@ -7,13 +7,13 @@
 						<div class="lg:col-6/12">
 							<div class="relative h-[26.25rem] lg:h-[54rem] lg:max-h-screen">
 
-								{{ block.settings.image | image_url: width: 696, height: 920 | image_tag:
+								{{ block.settings.image | image_url: width: 1392, height: 1842 | image_tag:
 									loading: 'lazy',
 									width: block.settings.image.width,
 									height: block.settings.image.height,
 									class: 'object-center absolute inset-0 object-cover w-full h-full z-10',
 									sizes: '(min-width: 1024px) 100vw, 50vw',
-									widths: '320,640,696,1392',
+									widths: '640,1392',
 									alt: block.settings.image.alt | escape
 								}}
 
