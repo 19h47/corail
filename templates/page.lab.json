@@ -90,9 +90,11 @@
     },
     "5372bd44-c21e-48e5-8177-bdd5b3213182": {
       "type": "lab-slider-image",
+      "disabled": true,
       "blocks": {
         "0064150f-cc3d-4d0b-9aeb-e372f7b6ac59": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "title": "MArseille Lab",
             "content": "The CORAIL° Lab est présent dans notre port, à Marseille, en France. Il nous permet de trier et transformer les déchets marins que nous récoltons en circuit-court. Dans cet espace innovant, nos pêcheurs et techniciens transforment les déchets marins en matières premières performantes que l’on utilise pour créer nos produits."
