@@ -14,11 +14,19 @@
     "26e58ee6-4b94-4271-8e35-b382b3602b57": {
       "type": "slider",
       "blocks": {
+        "5b407deb-f006-41c7-9aa9-575dcafa4130": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/PORTRAIT_4.jpg",
+            "title": "Tony",
+            "content": "pêcheur CORAIL°"
+          }
+        },
         "ef0078bf-0628-4ced-ad87-90f3aeb63bcc": {
           "type": "slide",
           "settings": {
             "image": "shopify:\/\/shop_images\/PORTRAIT_3.jpg",
-            "title": "Jules Dubois",
+            "title": "Alexis",
             "content": "pêcheur corail°"
           }
         },
@@ -26,32 +34,24 @@
           "type": "slide",
           "settings": {
             "image": "shopify:\/\/shop_images\/PORTRAIT_2.jpg",
-            "title": "",
-            "content": ""
+            "title": "ANGELO",
+            "content": "pêcheur CORAIL°"
           }
         },
         "1c6e5533-6d4e-427b-926e-e22a7b12b8c1": {
           "type": "slide",
           "settings": {
             "image": "shopify:\/\/shop_images\/PORTRAIT_1.jpg",
-            "title": "",
-            "content": ""
-          }
-        },
-        "5b407deb-f006-41c7-9aa9-575dcafa4130": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/PORTRAIT_4.jpg",
-            "title": "",
-            "content": ""
+            "title": "René",
+            "content": "pêcheur CORAIL°"
           }
         }
       },
       "block_order": [
+        "5b407deb-f006-41c7-9aa9-575dcafa4130",
         "ef0078bf-0628-4ced-ad87-90f3aeb63bcc",
         "ee65d6c0-d0b9-4325-b35d-713367f155b3",
-        "1c6e5533-6d4e-427b-926e-e22a7b12b8c1",
-        "5b407deb-f006-41c7-9aa9-575dcafa4130"
+        "1c6e5533-6d4e-427b-926e-e22a7b12b8c1"
       ],
       "settings": {
         "title": "L’ÉQUIPE"
@@ -71,7 +71,7 @@
           "type": "slide",
           "settings": {
             "title": "EDDY",
-            "content": "De nombreux pêcheurs brûlent leurs filmets de pêche parce qu’il existe zéro solution de recyclage."
+            "content": "De nombreux pêcheurs brûlent leurs filets de pêche parce qu’il existe zéro solution de recyclage."
           }
         },
         "b95f9264-5712-4344-92e6-b500eaaf7eb8": {

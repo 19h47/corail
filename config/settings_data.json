@@ -163,8 +163,7 @@
         ],
         "settings": {
           "newsletter_enable": true,
-          "enable_country_selector": true,
-          "enable_language_selector": true
+          "enable_country_selector": true
         }
       },
       "main-password-header": {
