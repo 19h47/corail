@@ -1,23 +1,26 @@
 {%- if cart != empty -%}
-  {%- for item in cart.items -%}
-    <div id="cart-notification-product-{{ item.key }}" class="cart-item">
-      {%- if item.image -%}
-        <div class="cart-notification-product__image global-media-settings">
-          <img
-            src="{{ item.image | image_url: width: 140 }}"
-            alt="{{ item.image.alt | escape }}"
-            width="70"
-            height="{{ 70 | divided_by: item.image.aspect_ratio | ceil }}"
-            loading="lazy"
-          >
-        </div>
-      {%- endif -%}
-      <div>
-        {%- if settings.show_vendor -%}
-          <p class="caption-with-letter-spacing light">{{ item.product.vendor }}</p>
+ 	{%- for item in cart.items -%}
+    	<div id="cart-notification-product-{{ item.key }}" class="cart-item">
+      		{%- if item.image -%}
+				<div class="cart-notification-product__image global-media-settings">
+					<img
+						src="{{ item.image | image_url: width: 140 }}"
+						alt="{{ item.image.alt | escape }}"
+						width="70"
+						height="{{ 70 | divided_by: item.image.aspect_ratio | ceil }}"
+						loading="lazy"
+					>
+				</div>
+			{%- endif -%}
+		<div>
+
+		{%- if settings.show_vendor -%}
+          	<p class="caption-with-letter-spacing light">{{ item.product.vendor }}</p>
         {%- endif -%}
-        <h3 class="cart-notification-product__name h4">{{ item.product.title | escape }}</h3>
-        <dl>
+
+		<h3 class="font-display uppercase font-semibold mb-4">{{ item.product.title | escape }}</h3>
+
+		<dl>
           {%- unless item.product.has_only_default_variant -%}
             {%- for option in item.options_with_values -%}
               <div class="product-option">

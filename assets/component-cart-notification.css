@@ -78,8 +78,3 @@
 .cart-notification-product__image:after {
   content: none;
 }
-
-.cart-notification-product__name {
-  margin-bottom: 0.5rem;
-  margin-top: 0;
-}
