@@ -63,24 +63,24 @@
 									<input type="text" id="AddressCityNew" name="address[city]" value="{{ form.city }}" autocomplete="address-level2" placeholder="{{ 'customer.addresses.city' | t }}">
 									<label for="AddressCityNew">{{ 'customer.addresses.city' | t }}</label>
 								</div>
+
 								<div class="w-full">
-									<label for="AddressCountryNew">{{ 'customer.addresses.country' | t }}</label>
+									<label class="mb-2.5 block" for="AddressCountryNew">{{ 'customer.addresses.country' | t }}</label>
 									<div class="select">
-									<select
-										id="AddressCountryNew"
-										name="address[country]"
-										data-default="{{ form.country }}"
-										autocomplete="country"
-									>
-										{{ all_country_option_tags }}
-									</select>
-									<svg aria-hidden="true" focusable="false" viewBox="0 0 10 6">
-										<use href="#icon-caret" />
-									</svg>
+										<select
+											id="AddressCountryNew"
+											name="address[country]"
+											data-default="{{ form.country }}"
+											autocomplete="country"
+										>
+											{{ all_country_option_tags }}
+										</select>
+										{% render 'svg', icon: 'chevron-down', classes: 'fill-current w-4 h-4 absolute inset-y-0 right-0 mr-4' %}
 									</div>
 								</div>
-								<div id="AddressProvinceContainerNew" style="display: none">
-									<label for="AddressProvinceNew">{{ 'customer.addresses.province' | t }}</label>
+
+								<div class="w-full" id="AddressProvinceContainerNew" style="display: none">
+									<label class="mb-2.5 block" for="AddressProvinceNew">{{ 'customer.addresses.province' | t }}</label>
 									<div class="select">
 										<select
 											id="AddressProvinceNew"
@@ -89,9 +89,7 @@
 											autocomplete="address-level1"
 										>
 										</select>
-										<svg aria-hidden="true" focusable="false" viewBox="0 0 10 6">
-											<use href="#icon-caret" />
-										</svg>
+										{% render 'svg', icon: 'chevron-down', classes: 'fill-current w-4 h-4 absolute inset-y-0 right-0 mr-4' %}
 									</div>
 								</div>
 								<div class="field">
@@ -193,9 +191,7 @@
 													data-form-id="{{ form.id }}"
 													autocomplete="country"
 												>{{- all_country_option_tags -}}</select>
-												<svg aria-hidden="true" focusable="false" viewBox="0 0 10 6">
-													<use href="#icon-caret" />
-												</svg>
+												{% render 'svg', icon: 'chevron-down', classes: 'fill-current w-4 h-4 absolute inset-y-0 right-0 mr-4' %}
 											</div>
 										</div>
 
@@ -210,9 +206,7 @@
 													data-default="{{ form.province }}"
 													autocomplete="address-level1"
 												></select>
-												<svg aria-hidden="true" focusable="false" viewBox="0 0 10 6">
-													<use href="#icon-caret" />
-												</svg>
+												{% render 'svg', icon: 'chevron-down', classes: 'fill-current w-4 h-4 absolute inset-y-0 right-0 mr-4' %}
 											</div>
 										</div>
 										<div class="field">

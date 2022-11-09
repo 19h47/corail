@@ -935,8 +935,7 @@ deferred-media {
 
 /* Select */
 
-.select .icon-caret,
-.customer select + svg {
+.select .icon-caret {
 	height: 0.6rem;
 	pointer-events: none;
 	position: absolute;
