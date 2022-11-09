@@ -281,16 +281,23 @@
 								{% render 'announcement', classes: 'my-6 text-orange-light hidden lg:block', text: block.settings.text %}
 
 							{%- when 'notice' -%}
-								<div class="bg-red-light text-white rounded-lg font-display p-[1.625rem] lg:p-6 mt-6 lg:mt-4 mb-[1.625rem] lg:mb-6">
-									<div class="font-bold text-xl uppercase flex">
-										{{- block.settings.title -}}
-										<div class="flex-shrink-0 ml-auto flex gap-4">
-											{% render 'svg', icon: 'bottle', classes: 'h-4 w-4 fill-current', description: product.title %}
-											{% render 'svg', icon: 'net', classes: 'h-4 w-4 fill-current', description: product.title %}
-										</div>
+
+								{% if block.settings.title or block.settings.content %}
+									<div class="bg-red-light text-white rounded-lg font-display p-[1.625rem] lg:p-6 mt-6 lg:mt-4 mb-[1.625rem] lg:mb-6">
+										{% if block.settings.title %}
+											<div class="font-bold text-xl uppercase flex">
+												{{- block.settings.title -}}
+												<div class="flex-shrink-0 ml-auto flex gap-4">
+													{% render 'svg', icon: 'bottle', classes: 'h-4 w-4 fill-current', description: product.title %}
+													{% render 'svg', icon: 'net', classes: 'h-4 w-4 fill-current', description: product.title %}
+												</div>
+											</div>
+										{% endif %}
+										{% if block.settings.content %}
+											<div class="font-medium {% if block.settings.title %} mt-2.5 lg:mt-0 {% endif %}">{{- block.settings.content -}}</div>
+										{% endif %}
 									</div>
-									<div class="font-medium mt-2.5 lg:mt-0">{{- block.settings.content -}}</div>
-								</div>
+								{% endif %}
 
 							{%- when 'title' -%}
 								<div class="flex items-start">
@@ -938,14 +945,12 @@
         {
           "type": "text",
           "id": "title",
-          "label": "t:sections.main-product.blocks.notice.settings.title",
-          "default": "Seadust inside"
+          "label": "t:sections.main-product.blocks.notice.settings.title"
         },
         {
           "type": "textarea",
           "id": "content",
-          "label": "t:sections.main-product.blocks.notice.settings.content",
-          "default": "These sneakers are made with SEADUST, an innovative material grinded in our CORAIL° Lab with discarded fishing nets and PET bottles collected in Marseille, France."
+          "label": "t:sections.main-product.blocks.notice.settings.content"
         }
       ]
     },
