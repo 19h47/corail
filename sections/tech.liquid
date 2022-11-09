@@ -71,12 +71,13 @@
 			{%- if section.settings.image_1 != blank -%}
 				<div class="lg:col-3/12 lg:ml-1/12">
 					<div class="relative">
-						{{ section.settings.image_1 | image_url: width: 338 | image_tag:
+						{{ section.settings.image_1 | image_url: width: 338, height: 416 | image_tag:
 							loading: 'lazy',
 							width: section.settings.image_1.width,
 							height: section.settings.image_1.height,
 							class: 'relative z-1',
-							widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840',
+							sizes: '(min-width: 1024px) 100vw, 25vw',
+							widths: '280,560,338,676',
 							alt: section.settings.image_1.alt | default: '' | escape
 						}}
 						{% render 'svg', icon: 'decor-01', classes: 'ml-8 lg:ml-0 lg:mr-3 -mt-9 lg:mt-0 relative lg:absolute z-2 lg:bottom-0 lg:left-0 lg:-mb-14 lg:-ml-16 h-28 w-28 fill-current', description: shop.name %}

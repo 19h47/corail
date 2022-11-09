@@ -93,8 +93,6 @@
 																	<li class="{% if grandchildlink.title contains '[all]' %} font-semibold mt-6 {% endif %}">
 																		<a href="{{ grandchildlink.url }}" class="py-1 inline-block align-middle hover:underline is-active:underline {% if grandchildlink.title contains '[all]' %} underline {% endif %} {% if grandchildlink.current %} is-active {% endif %}"{% if grandchildlink.current %} aria-current="page"{% endif %}>
 																			{{ grandchildlink.title | replace: ' [all]', '' | replace: ' [new]', '' | strip | escape }}
-
-																			{% if grandchildlink.title contains '[all]' %}<span class="hidden">ALL</span>{% endif %}
 																		</a>
 																		{% if grandchildlink.title contains '[new]' %}
 																			<sup class="text-xs text-red-very-light">{{ 'products.product.new' | t }}</sup>
