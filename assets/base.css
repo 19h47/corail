@@ -738,6 +738,15 @@ deferred-media {
 /* component-button */
 /* Button - default */
 
+.cart__dynamic-checkout-buttons .shopify-cleanslate ul {
+	flex-direction: column!important;
+}
+
+.cart__dynamic-checkout-buttons .shopify-cleanslate li {
+	height: auto!important;
+	flex-basis: 0!important;
+}
+
 .shopify-payment-button [role="button"],
 .cart__dynamic-checkout-buttons [role="button"],
 .cart__dynamic-checkout-buttons iframe {
