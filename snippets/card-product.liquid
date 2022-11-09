@@ -51,32 +51,11 @@
 		<div class="relative h-[16.875rem] bg-gray-very-light {% if 'large' == size %} lg:h-[38rem] {% else %} lg:h-[28rem] {% endif %}">
 			{%- if card_product.featured_media -%}
 
-				{% comment %}theme-check-disable ImgLazyLoading{% endcomment %}
-				{% comment %} <img
-					srcset="
-						{%- if card_product.featured_media.width >= 165 -%}{{ card_product.featured_media | image_url: width: 165 }} 165w,{%- endif -%}
-						{%- if card_product.featured_media.width >= 360 -%}{{ card_product.featured_media | image_url: width: 360 }} 360w,{%- endif -%}
-						{%- if card_product.featured_media.width >= 533 -%}{{ card_product.featured_media | image_url: width: 533 }} 533w,{%- endif -%}
-						{%- if card_product.featured_media.width >= 720 -%}{{ card_product.featured_media | image_url: width: 720 }} 720w,{%- endif -%}
-						{%- if card_product.featured_media.width >= 940 -%}{{ card_product.featured_media | image_url: width: 940 }} 940w,{%- endif -%}
-						{%- if card_product.featured_media.width >= 1066 -%}{{ card_product.featured_media | image_url: width: 1066 }} 1066w,{%- endif -%}
-						{{ card_product.featured_media | image_url }} {{ card_product.featured_media.width }}w
-					"
-					src="{{ card_product.featured_media | image_url: width: 533 }}"
-					sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
-					alt="{{ card_product.featured_media.alt | escape }}"
-					class="w-full h-full object-cover object-center opacity-100 duration-1000 ease-in-out transition-opacity group-hover:opacity-0"
-					{% unless lazy_load == false %}loading="lazy"{% endunless %}
-					width="{{ card_product.featured_media.width }}"
-					height="{{ card_product.featured_media.height }}"
-				> {% endcomment %}
-				{% comment %}theme-check-enable ImgLazyLoading{% endcomment %}
-
-				{{ card_product.featured_media | image_url: width: 456, height: 652 | image_tag:
+				{{ card_product.featured_media | image_url: width: 912, height: 1216 | image_tag:
 					width: card_product.featured_media.width,
 					height: card_product.featured_media.height,
 					class: 'w-full h-full object-cover object-center opacity-100 duration-1000 ease-in-out transition-opacity group-hover:opacity-0',
-					widths: '160,206,338,456',
+					widths: '320,912',
 					sizes: '(min-width: 1024px) 50vw, 25vw',
 					alt: card_product.featured_media.alt | default: card_product.title | escape
 				}}
@@ -97,12 +76,12 @@
 							{% endfor %}
 						</video>
 					{% else %}
-						{{ card_product.media[1] | image_url: width: 456, height: 652 | image_tag:
+						{{ card_product.media[1] | image_url: width: 912, height: 1216 | image_tag:
 							loading: 'lazy',
 							width: card_product.media[1].width,
 							height: card_product.media[1].height,
 							class: 'absolute inset-0 w-full h-full object-cover object-center opacity-0 duration-1000 ease-in-out transition-opacity group-hover:opacity-100',
-							widths: '160,206,338,456',
+							widths: '320,912',
 							sizes: '(min-width: 1024px) 50vw, 25vw',
 							alt: card_product.media[1].alt | default: card_product.title | escape
 						}}
