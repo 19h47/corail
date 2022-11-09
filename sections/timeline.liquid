@@ -22,11 +22,11 @@
 
 								{% if  block.settings.image %}
 									<div class="lg:col-6/12 {% if mod == 0 %} lg:order-1 {% else %} lg:order-2 {% endif %}">
-										<div class="h-[12.25rem] lg:h-[15.5rem] {% if mod == 0 %} lg:pr-7 {% else %} lg:pl-7 {% endif %}">
+										<div class="{% if mod == 0 %} lg:pr-7 {% else %} lg:pl-7 {% endif %}">
 											{{ block.settings.image | image_url: width: 710 | image_tag:
 												loading: 'lazy',
 												widths: '562, 710',
-												class: 'w-full h-full object-cover object-center'
+												class: 'w-full h-auto block object-cover object-center'
 											}}
 										</div>
 									</div>
