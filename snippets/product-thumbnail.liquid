@@ -74,7 +74,7 @@
 	</button>
 
 	{{- media.preview_image
-		| image_url
+		| image_url: width: 1660
 		| image_tag:
 			loading: lazy,
 			sizes: '(min-width: 1024px) 100vw, 60vw',
