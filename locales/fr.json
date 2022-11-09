@@ -243,9 +243,6 @@
     }
   },
   "sections": {
-	"main-product": {
-		"size_chart": "Guide des tailles"
-	},
     "filters-articles": {
       "name": "Filtres des articles",
       "settings": {
