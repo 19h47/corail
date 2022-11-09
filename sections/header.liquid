@@ -223,9 +223,7 @@
 				</nav>
 			{% endif %}
 
-			{% if request.page_type == 'index' %}
-				<span class="w-[0.0625rem] h-full block bg-orange-grayish lg:hidden {% if request.page_type == 'index' %} is-ontop:bg-white {% endif %} header-is-open:!bg-orange-grayish transition-colors duration-1000 ease-in-out"></span>
-			{% endif %}
+			<span class="w-[0.0625rem] h-full block bg-orange-grayish lg:hidden {% if request.page_type == 'index' %} is-ontop:bg-white {% endif %} header-is-open:!bg-orange-grayish transition-colors duration-1000 ease-in-out"></span>
 
 			<div class="flex text-sm h-full items-center mx-4 lg:mx-0 {% if section.settings.secondary-menu != blank %} lg:ml-8 {% endif %}">
 				<localization-form class="block">
