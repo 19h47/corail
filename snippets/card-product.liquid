@@ -51,14 +51,18 @@
 		<div class="relative h-[16.875rem] bg-gray-very-light {% if 'large' == size %} lg:h-[38rem] {% else %} lg:h-[28rem] {% endif %}">
 			{%- if card_product.featured_media -%}
 
-				{{ card_product.featured_media | image_url: width: 912 | image_tag:
-					width: card_product.featured_media.width,
-					height: card_product.featured_media.height,
-					class: 'w-full h-full object-cover object-center opacity-100 duration-1000 ease-in-out transition-opacity group-hover:opacity-0',
-					widths: '320, 676, 912',
-					sizes: '(min-width: 1024px) 50vw, 25vw',
-					alt: card_product.featured_media.alt | default: card_product.title | escape
-				}}
+				{{-
+					card_product.featured_media
+						| image_url: width: 912
+						| image_tag:
+							width: card_product.featured_media.width,
+							height: card_product.featured_media.height,
+							class: 'w-full h-full object-cover object-center opacity-100 duration-1000 ease-in-out transition-opacity group-hover:opacity-0',
+							widths: '320, 676, 912',
+							sizes: '(min-width: 1024px) 50vw, 25vw',
+							loading: 'lazy',
+							alt: card_product.featured_media.alt | default: card_product.title | escape
+				-}}
 
 
 				{%- if card_product.media[1] != nil and show_secondary_image -%}
@@ -71,12 +75,12 @@
 							playsinline
 							poster="{{ card_product.media[1].preview_image | image_url }}"
 						>
-							{% for source in card_product.media[1].sources %}
+							{%- for source in card_product.media[1].sources -%}
 								<source src="{{ source.url }}" type="{{ source.mime_type }}">
-							{% endfor %}
+							{%- endfor -%}
 						</video>
-					{% else %}
-						{{ card_product.media[1] | image_url: width: 912 | image_tag:
+					{%- else -%}
+						{{- card_product.media[1] | image_url: width: 912 | image_tag:
 							loading: 'lazy',
 							width: card_product.media[1].width,
 							height: card_product.media[1].height,
@@ -84,8 +88,8 @@
 							widths: '320, 676, 912',
 							sizes: '(min-width: 1024px) 50vw, 25vw',
 							alt: card_product.media[1].alt | default: card_product.title | escape
-						}}
-					{% endif %}
+						-}}
+					{%- endif -%}
 				{%- endif -%}
 
 			{%- endif -%}
