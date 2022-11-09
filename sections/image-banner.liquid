@@ -8,9 +8,23 @@
 
 <div class="text-white relative image-banner h-[36.625rem] lg:h-[52.625rem] lg:max-h-[calc(100vh_-_2.5rem)]">
 
+	{% liquid
+
+		assign video_class = 'h-full w-full object-cover object-center relative z-10'
+		assign image_class = 'w-full h-full object-cover object-center relative z-10'
+
+		if section.settings.video_mobile
+			assign video_class = ' hidden lg:block'
+		endif
+
+		if section.settings.image_mobile
+			assign image_class = image_class | append: ' hidden lg:block'
+		endif
+	%}
+
 	{% if section.settings.video %}
 		<video
-			class="h-full w-full object-cover relative z-10"
+			class="{{ video_class }}"
 			loop
 			muted
 			autoplay
@@ -23,13 +37,40 @@
 		</video>
 	{% endif %}
 
+	{% if section.settings.video_mobile %}
+		<video
+			class="h-full w-full object-cover relative z-10 lg:hidden"
+			loop
+			muted
+			autoplay
+			playsinline
+			poster="{{ section.settings.video_mobile.preview_image | image_url }}"
+		>
+			{% for source in section.settings.video_mobile.sources %}
+				<source src="{{ source.url }}" type="{{ source.mime_type }}">
+			{% endfor %}
+		</video>
+	{% endif %}
+
 	{%- if section.settings.image -%}
-		{{- section.settings.image | image_url: width: 1440, height: 842 | image_tag:
+		{{- section.settings.image | image_url: width: 2880 | image_tag:
 			width: section.settings.image.width,
 			height: section.settings.image.height,
-			class: 'w-full h-full object-cover object-center relative z-10',
+			class: image_class,
 			sizes: '100vw',
+			widths: '640, 2880',
 			alt: section.settings.image.alt | escape
+		-}}
+	{%- endif -%}
+
+	{%- if section.settings.image_mobile -%}
+		{{- section.settings.image_mobile | image_url: width: 640 | image_tag:
+			width: section.settings.image_mobile.width,
+			height: section.settings.image_mobile.height,
+			class: 'w-full h-full object-cover object-center relative z-10 lg:hidden',
+			sizes: '100vw',
+			sizes: '640',
+			alt: section.settings.image_mobile.alt | escape
 		-}}
 	{%- endif -%}
 
