@@ -80,14 +80,14 @@
 																							{% else %}
 																								<a
 																									href="{{ grandchildlink.url }}"
-																									class="is-active:underline font-display leading-8 {% if grandchildlink.current %} is-active {% endif %}"
+																									class="is-active:underline hover:underline font-display leading-8 {% if grandchildlink.current %} is-active {% endif %}"
 																									{% if grandchildlink.current %} aria-current="page"{% endif %}
 																								>
 																									{{ grandchildlink.title | replace: ' [new]', '' | strip | escape }}
-																									{% if grandchildlink.title contains '[new]' %}
-																										<sup class="text-xs text-red-very-light">{{ 'products.product.new' | t }}</sup>
-																									{% endif %}
 																								</a>
+																								{% if grandchildlink.title contains '[new]' %}
+																									<sup class="text-xs text-red-very-light">{{ 'products.product.new' | t }}</sup>
+																								{% endif %}
 																							{% endif %}
 																						</li>
 																					{%- endfor -%}
@@ -201,12 +201,12 @@
 																											{{ grandchildlink.title | replace: '[icon-account] ', '' | escape }}
 																										</a>
 																									{% elsif grandchildlink.title contains '[new]' %}
-																										<a href="{{ grandchildlink.url }}" class="py-1 flex items-center hover:underline">
-																											{{ grandchildlink.title | replace: ' [new]', '' | strip | escape }}
-																											{% if grandchildlink.title contains '[new]' %}
-																												<sup class="text-xs text-red-very-light">{{ 'products.product.new' | t }}</sup>
-																											{% endif %}
+																										<a href="{{ grandchildlink.url }}" class="py-1 hover:underline is-active:underline {% if grandchildlink.current %} is-active {% endif %}">
+																											{{- grandchildlink.title | replace: ' [new]', '' | strip | escape -}}
 																										</a>
+																										{% if grandchildlink.title contains '[new]' %}
+																											<sup class="text-xs text-red-very-light">{{ 'products.product.new' | t }}</sup>
+																										{% endif %}
 																									{% else %}
 																										<a
 																											href="{{ grandchildlink.url }}"
