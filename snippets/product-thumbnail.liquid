@@ -103,10 +103,10 @@
 			{%- endif -%}
 		</span>
 
-		{{ media.preview_image | image_url: width: 1660 | image_tag:
+		{{ media.preview_image | image_url: width: 1660, height: 1504 | image_tag:
 			loading: lazy,
 			sizes: sizes,
-			widths: '320,640,830,1660',
+			widths: '640,1660',
 			class: 'h-full w-full object-cover object-center bg-orange-grayish',
 			alt: media.preview_image.alt | escape
 		}}
