@@ -1355,8 +1355,14 @@
         "image": {
           "label": "Image"
         },
+        "image_mobile": {
+          "label": "Image pour mobile"
+        },
         "video": {
           "label": "Vidéo"
+        },
+        "video_mobile": {
+          "label": "Vidéo pour mobile"
         },
         "show_text_box": {
           "label": "Afficher le conteneur sur le bureau"
