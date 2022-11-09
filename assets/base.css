@@ -947,9 +947,8 @@ deferred-media {
 .select__select,
 .customer select {
 	cursor: pointer;
-	padding: 0 2rem;
+	padding: 1rem;
 	margin: var(--inputs-border-width);
-	min-height: calc(var(--inputs-border-width) * 2);
 }
 
 /* Field */
