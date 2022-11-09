@@ -165,7 +165,11 @@
 																{{ childlink.title | escape }}
 															</p>
 														{% else %}
-															<a href="{{ childlink.url }}" class="py-1 inline-block align-middle hover:underline is-active:underline {% if childlink.current %} is-active {% endif %}"{% if childlink.current %} aria-current="page"{% endif %}>
+															<a
+																href="{{ childlink.url }}"
+																class="py-1 inline-block align-middle hover:underline is-active:underline {% if childlink.current %} is-active {% endif %}"
+																{% if childlink.current %} aria-current="page" {% endif %}
+															>
 																{{ childlink.title | escape }}
 															</a>
 														{% endif %}

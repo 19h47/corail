@@ -50,10 +50,14 @@
 																		<details id="Details-menu-drawer-submenu-{{ forloop.index }}" class="my-4">
 
 																			<summary class="font-display font-bold uppercase flex items-center leading-8">
-																				{{ childlink.title | escape }}{% render 'svg', icon: 'chevron-right', classes: 'ml-2.5 w-2.5 h-2.5' %}
+																				{{- childlink.title | escape -}}
+																				{%- render 'svg', icon: 'chevron-right', classes: 'ml-2.5 w-2.5 h-2.5' -%}
 																			</summary>
 
-																			<div id="childlink-{{ childlink.handle | escape }}" class="menu-drawer__submenu has-submenu absolute inset-y-0 left-0 w-full bg-white z-1">
+																			<div
+																				id="childlink-{{ link.handle }}-{{ childlink.handle | escape }}-{{ forloop.index }}"
+																				class="menu-drawer__submenu has-submenu absolute inset-y-0 left-0 w-full bg-white z-1"
+																			>
 
 																				<button class="flex items-center px-5 py-4 uppercase font-bold font-display text-xl w-full border-b border-orange-grayish text-left" aria-expanded="true">
 																					{% render 'svg', icon: 'chevron-left', classes: 'w-5 h-5 mr-5' %}
@@ -152,7 +156,10 @@
 																				{{ childlink.title | escape }}{% render 'svg', icon: 'chevron-right', classes: 'ml-2.5 w-2.5 h-2.5' %}
 																			</summary>
 
-																			<div id="childlink-{{ childlink.handle | escape }}" class="menu-drawer__submenu has-submenu absolute inset-y-0 left-0 w-full bg-white z-1">
+																			<div
+																				id="childlink--{{ link.handle }}-{{ childlink.handle | escape }}-{{ forloop.index }}"
+																				class="menu-drawer__submenu has-submenu absolute inset-y-0 left-0 w-full bg-white z-1"
+																			>
 
 																				<button class="flex items-center px-5 py-4 uppercase font-bold font-display text-xl w-full border-b border-orange-grayish text-left" aria-expanded="true">
 																					{% render 'svg', icon: 'chevron-left', classes: 'w-5 h-5 mr-5' %}
