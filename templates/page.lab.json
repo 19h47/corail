@@ -8,7 +8,7 @@
           "type": "introduction",
           "settings": {
             "title": "DEfinition",
-            "content": "The CORAIL° Lab is an innovative space at the heart of our harbor, in Marseille, France, in which we think and design solutions to collect, transform and upcycle marine waste and transform it into high-performance raw materials we later inject into our products.",
+            "content": "Le CORAIL° Lab est un espace innovant au sein de notre port, à Marseille, France, dans lequel nous pensons et définissons des solutions pour collecter, transformer et recycler les déchets marins et les transformer en matériaux de haute qualité que nous ajoutons ensuite dans nos produits.",
             "image": "shopify:\/\/shop_images\/Carrousel_3.jpg"
           }
         }
@@ -35,11 +35,11 @@
           "type": "content",
           "settings": {
             "image_left": "shopify:\/\/shop_images\/Items_6Columns.png",
-            "title_left": "UPCYCLING MARINE WASTE",
-            "content_left": "The CORAIL° Lab is the engine room of our project, where we upcycle marine waste to address the sea pollution issue through innovation. And also where we crush a lot of plastic. A lot.",
+            "title_left": "RECYCLER LES DÉCHETS MARINS",
+            "content_left": "The CORAIL° Lab est la salle des machines de notre projet, où nous recyclons les déchets marins pour aborder le problème de la pollution des mers par l’innovation. C’est aussi ici que l’on broie beaucoup de plastique. Beaucoup.",
             "icon": "decor-03",
-            "title_right": "INSIDE THE GRINDER",
-            "content_right": "Tu use and ucpycle the warine waste we collect,we need to grind them fist. A big part of the CORAIL° Lab is about grindind plastic plastic waste, fishing nets and much more.\nGrinders gotta grind.",
+            "title_right": "DANS LA BROYEUSE",
+            "content_right": "Pour utiliser et recycler les déchets marins que l’on collecte, nous devons commencer par les broyer. Une grande partie du CORAIL° Lab est sur le broyage des bouteilles plastique, des filets de pêche et bien plus.",
             "image_right": "shopify:\/\/shop_images\/BOUTEILLE_LAB_2.png"
           }
         }
@@ -58,24 +58,24 @@
           "type": "slide",
           "settings": {
             "image": "shopify:\/\/shop_images\/P1125505.jpg",
-            "title": "C-FIBER",
-            "content": "Espace d’innovation, de création et d’échange proposé par la marque CORAIL°, visant à transformer les déchets marins en nouveaux matériaux et les idées en projets."
+            "title": "SEADUST",
+            "content": "Matière première performante fabriquée dans le CORAIL° Lab en broyant et mixant des filets de pêche et des bouteilles plastique récoltés dans la mer. Ces déchets sont ensuite transformés en tissu et injectés dans nos semelles extérieures."
           }
         },
         "c2d07b5a-fcc5-4444-a26d-f7120dad204c": {
           "type": "slide",
           "settings": {
             "image": "shopify:\/\/shop_images\/BOUTEILLE_LAB.png",
-            "title": "PANettle",
-            "content": "Espace d’innovation, de création et d’échange proposé par la marque CORAIL°, visant à transformer les déchets marins en nouveaux matériaux et les idées en projets."
+            "title": "BOUTEILLES PLASTIQUES",
+            "content": "Il y a plus de 200 millions de tonnes de plastique dans les océans. Les bouteilles plastique que nous récoltons sont broyées dans notre CORAIL° Lab, étiquettes et bouchons incluent, qui sont en général mis de côté et incinérés."
           }
         },
         "59f3362d-ae19-4a38-a042-f21d70fca1b8": {
           "type": "slide",
           "settings": {
             "image": "shopify:\/\/shop_images\/filet.jpg",
-            "title": "FRUTFIBER",
-            "content": "Espace d’innovation, de création et d’échange proposé par la marque CORAIL°, visant à transformer les déchets marins en nouveaux matériaux et les idées en projets."
+            "title": "FILETS DE PÊCHE",
+            "content": "Les océans sont hantés par les filets de pêche fantômes. Après des mois de recherche, nous sommes désormais capables de récolter, broyer et transformer ces filets de pêche dans notre CORAIL° Lab et de les introduire dans nos produits."
           }
         }
       },
@@ -85,7 +85,7 @@
         "59f3362d-ae19-4a38-a042-f21d70fca1b8"
       ],
       "settings": {
-        "title": "Materials"
+        "title": "MATÉRIAUX"
       }
     },
     "5372bd44-c21e-48e5-8177-bdd5b3213182": {
@@ -95,7 +95,7 @@
           "type": "slide",
           "settings": {
             "title": "MArseille Lab",
-            "content": "The CORAIL° Lab is located in our harbour, in Marseille, France. It enables us to sort and transform the marine waste we collect in ultra-short circuit. In this innovative space, our fishermen and technicians turn marine waste into high-performance materials we use to create our products."
+            "content": "The CORAIL° Lab est présent dans notre port, à Marseille, en France. Il nous permet de trier et transformer les déchets marins que nous récoltons en circuit-court. Dans cet espace innovant, nos pêcheurs et techniciens transforment les déchets marins en matières premières performantes que l’on utilise pour créer nos produits."
           }
         }
       },

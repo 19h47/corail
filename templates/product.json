@@ -22,7 +22,7 @@
           "type": "notice",
           "settings": {
             "title": "Seadust inside",
-            "content": "These sneakers are made with SEADUST, an innovative material grinded in our CORAIL° Lab with discarded fishing nets and PET bottles collected in Marseille, France."
+            "content": "Ces baskets sont fabriquées à partir de SEADUST, une matière innovante transformée dans notre CORAIL° Lab avec des filets de pêche et des bouteilles plastique recyclés et collectés à Marseille, France."
           }
         },
         "a13c66e5-b37d-433e-80c5-d3dc4ce746b8": {
@@ -147,14 +147,14 @@
           "type": "collapsible_tab",
           "settings": {
             "title": "Livraison",
-            "content": "<p>\/\/Lorem ipsum dolor sit amet, consectetur adipiscing elit<br\/>\/\/Fusce eu purus et ante vehicula laoreet<br\/>\/\/Nulla facilisi<br\/>\/\/Aliquam pellentesque ut tortor aliquet hendrerit<\/p>"
+            "content": "<p>\/Livraison gratuite en France métropolitaine et à l'international<strong> <br\/><\/strong>\/Livraison 3 à 6 jours<br\/><\/p>"
           }
         },
         "ef963a79-a748-461c-85e0-0b3b2b4a321c": {
           "type": "collapsible_tab",
           "settings": {
             "title": "Echanges et retours",
-            "content": "<p>\/\/Aliquam cursus purus id leo varius, eu condimentum ex facilisis<br\/>\/\/Ut mollis consectetur imperdiet<br\/>\/\/Cras viverra mi at felis laoreet, sed condimentum erat pharetra<\/p>"
+            "content": "<p>\/retours offerts en France et à l’international<\/p><p>\/échanges offerts en France et à l’international<\/p>"
           }
         },
         "template--15990350479528__5352a5eb-3296-4b9c-9021-e759c6c0ea6b-166669405224db7574-1": {
@@ -235,7 +235,7 @@
     "6a936414-7d9e-4e58-8e5a-38c840ae7acb": {
       "type": "twocolumn",
       "settings": {
-        "title": "HANDMADE TO LAST",
+        "title": "FAIT À LA MAIN POUR DURER",
         "column_left_image": "shopify:\/\/shop_images\/0S1A4671.jpg",
         "column_left_title_research": "RESISTANCE TESTED INEXTREME CONDITIONS",
         "column_left_icon_research": false,
@@ -243,9 +243,9 @@
         "column_left_icon_technical": false,
         "column_left_title_recycled": "",
         "column_left_icon_recycled": false,
-        "column_right_title": "RESISTANCE TESTED IN EXTREME CONDITIONS",
-        "column_right_content": "Our products are handmade in our workshop in Portugal and submitted to extreme durability tests to insure their quality and long-lastingness. The real sustainable product is the one you keep.",
-        "column_right_button_label": "OUR WORKSHOP",
+        "column_right_title": "RESISTANCE TESTÉE DANS DES CONDITIONS EXTRÊMES",
+        "column_right_content": "Nos produits sont fabriqués à la main dans un atelier au Portugal et sont testés dans des conditions extrêmes pour assurer la qualité et de la longue durée de vie. Le vrai produit durable est celui que vous gardez.",
+        "column_right_button_label": "NOTRE ATELIER",
         "column_right_button_link": "shopify:\/\/pages\/handmade-to-last-long",
         "column_right_image": "shopify:\/\/shop_images\/0S1A4761-2.jpg"
       }
