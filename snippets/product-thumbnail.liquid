@@ -102,11 +102,11 @@
 	</button>
 
 	{{- media.preview_image
-		| image_url: width: 1660
+		| image_url: width: 830, height: 752
 		| image_tag:
 			loading: lazy,
-			widths: '320,640,830,1660',
-			sizes: sizes,
+			widths: '320,830',
+			sizes: '(min-width: 1024px) 100vw, 60vw',
 			class: 'absolute bg-orange-grayish inset-0 object-cover object-center w-full h-full',
 			alt: media.preview_image.alt | escape
 	-}}
