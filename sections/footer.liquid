@@ -1,6 +1,6 @@
 <script src="{{ 'coordinates.js' | asset_url }}" defer></script>
 
-<footer class="relative {% if page.template_suffix contains 'commintments' %} {% else %} pb-11 lg:pb-0 {% endif %}">
+<footer class="{% if page.template_suffix contains 'commintments' %} {% else %} pb-11 relative lg:pb-0 {% endif %}">
 	<div class="relative lg:h-[22rem]">
 
 		<div class="flex flex-col lg:flex-row lg:h-full">
@@ -154,7 +154,10 @@
 		</div>
 	</div>
 
-	<hr class="bg-orange-grayish w-full h-[0.0625rem] lg:hidden absolute inset-x-0 bottom-0 mb-11">
+	{% if page.template_suffix contains 'commintments' %}
+	{% else %}
+		<hr class="bg-orange-grayish w-full h-[0.0625rem] lg:hidden absolute inset-x-0 bottom-0 mb-11">
+	{% endif %}
 
 	{% if section.settings.newsletter_enable %}
 		<button type="button" class="flex gap-x-8 lg:gap-x-2 items-center group text-white bg-red-very-light px-4 py-1.5 lg:py-3 {% if page.template_suffix contains 'commintments' %} hidden {% endif %} absolute bottom-0 right-0 z-50">
