@@ -120,7 +120,10 @@ document.querySelectorAll('[id^="Details-"] summary').forEach(summary => {
 			"aria-expanded",
 			!event.currentTarget.closest("details").hasAttribute("open")
 		);
+		document.documentElement.classList.toggle('header-is-open');
 	});
+
+	
 
 	if (summary.closest("header-drawer")) {
 		return;

@@ -1,6 +1,9 @@
 <header-drawer data-breakpoint="tablet">
 	<details id="Details-menu-drawer-container" class="lg:hidden">
-		<summary class="expanded:bg-gray-very-dark py-[1.375rem] px-6 expanded:text-white" aria-label="{{ 'sections.header.menu' | t }}">
+		<summary
+			class="expanded:bg-gray-very-dark py-[1.375rem] px-6 expanded:text-white"
+			aria-label="{{ 'sections.header.menu' | t }}"
+		>
 			{% render 'svg', icon: 'bars', classes: 'parent-expanded:hidden block h-5 w-4 fill-current', description: shop.name %}
 			{% render 'svg', icon: 'close', classes: 'parent-expanded:block hidden h-5 w-4 fill-current', description: shop.name %}
 		</summary>
