@@ -30,11 +30,11 @@
 								}}
 
 								{% if block.settings.link_url %}
-									<p class="flex items-center justify-center h-full group relative z-20">
-										<a href="{{ block.settings.link_url }}" class="button group-hover:bg-gray-very-dark group-hover:text-white group-focus:bg-gray-very-dark group-focus:text-white">
+									<a href="{{ block.settings.link_url }}" class="flex items-center justify-center h-full group relative z-20">
+										<p  class="button group-hover:bg-gray-very-dark group-hover:text-white group-focus:bg-gray-very-dark group-focus:text-white">
 											&rightarrow;&nbsp;{{ block.settings.link_title }}
-										</a>
-									</p>
+										</p>
+									</a>
 								{% endif %}
 							</div>
 						</div>
