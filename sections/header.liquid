@@ -225,7 +225,7 @@
 
 			<div class="flex text-sm h-full items-center mr-4 lg:mr-0 {% if section.settings.secondary-menu != blank %} lg:ml-8 {% endif %}">
 				<localization-form class="block">
-					{%- form 'localization', id: 'HeaderLanguageForm', class: 'localization-form' -%}
+					{%- form 'localization', id: 'HeaderLanguageForm', class: '' -%}
 						<select class="bg-transparent appearance-none" name="locale_code">
 							{%- for language in localization.available_languages -%}
 								<option value="{{ language.iso_code }}" lang="{{ language.iso_code }}" {%- if language.iso_code == localization.language.iso_code %} selected {% endif %}>
@@ -235,18 +235,16 @@
 						</select>
 					{%- endform -%}
 				</localization-form>
-				{% comment %} /
+				/
 				<localization-form class="block">
-					{%- form 'localization', id: 'FooterCountryForm', class: 'localization-form' -%}
-						<select class="bg-transparent appearance-none" name="currency_code">
-							{%- for country in localization.available_countries -%}
-								<option value="{{ country.iso_code }}" {%- if country.iso_code == localization.country.iso_code %} selected{% endif %}>
-								  {{ country.name }} ({{ country.currency.iso_code }} {{ country.currency.symbol }})
-								</option>
-							  {%- endfor -%}
+					{% form 'currency' %}
+						<select name="currency" class="bg-transparent appearance-none">
+							{% for currency in shop.enabled_currencies %}
+								<option {% if currency == cart.currency %} selected="true" {% endif %}>{{currency.iso_code}}</option>
+							{% endfor %}
 						</select>
-					{% endform %}
-				</localization-form> {% endcomment %}
+					  {% endform %}
+				</localization-form>
 			</div>
 
 			<details-modal class="hidden lg:block">
