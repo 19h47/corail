@@ -1849,6 +1849,10 @@ html,
 	margin-right: 0.5rem;
 }
 
+.mb-4{
+	margin-bottom: 1rem;
+}
+
 .mr-5{
 	margin-right: 1.25rem;
 }
@@ -1915,10 +1919,6 @@ html,
 
 .mt-9{
 	margin-top: 2.25rem;
-}
-
-.mb-4{
-	margin-bottom: 1rem;
 }
 
 .mt-5{
@@ -3163,12 +3163,12 @@ html,
 	line-height: 1.75rem;
 }
 
-.font-medium{
-	font-weight: 500;
-}
-
 .font-semibold{
 	font-weight: 600;
+}
+
+.font-medium{
+	font-weight: 500;
 }
 
 .font-bold{
@@ -3223,8 +3223,8 @@ html,
 	line-height: 2.25rem;
 }
 
-.leading-\[6\.25rem\]{
-	line-height: 6.25rem;
+.\!leading-\[6\.25rem\]{
+	line-height: 6.25rem !important;
 }
 
 .leading-\[2\.75rem\]{
