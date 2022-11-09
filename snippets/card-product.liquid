@@ -51,11 +51,11 @@
 		<div class="relative h-[16.875rem] bg-gray-very-light {% if 'large' == size %} lg:h-[38rem] {% else %} lg:h-[28rem] {% endif %}">
 			{%- if card_product.featured_media -%}
 
-				{{ card_product.featured_media | image_url: width: 912, height: 1216 | image_tag:
+				{{ card_product.featured_media | image_url: width: 456, scale: 2 | image_tag:
 					width: card_product.featured_media.width,
 					height: card_product.featured_media.height,
 					class: 'w-full h-full object-cover object-center opacity-100 duration-1000 ease-in-out transition-opacity group-hover:opacity-0',
-					widths: '320,912',
+					widths: '160,456',
 					sizes: '(min-width: 1024px) 50vw, 25vw',
 					alt: card_product.featured_media.alt | default: card_product.title | escape
 				}}
