@@ -108,9 +108,9 @@
 
 														<span class="absolute block left-[100%] inset-y-0 bg-orange-grayish w-[0.0625rem] h-full"></span>
 
-														{% comment %} {% if '#' == childlink.url and '#' == childlink.title and forloop.first %}
+														{% if '#' == childlink.url and '#' == childlink.title and forloop.first %}
 															<img class="mt-8 w-full h-auto block" alt="" src="{{ 'menu.png' | asset_img_url: '178x267', crop: 'center' }}" width="178" height="267" loading="lazy" />
-														{% endif %} {% endcomment %}
+														{% endif %}
 													</li>
 												{%- endfor -%}
 											</ul>
