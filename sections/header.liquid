@@ -34,15 +34,15 @@
   <script src="{{ 'cart-drawer.js' | asset_url }}" defer="defer"></script>
 {%- endif -%}
 
-<sticky-header class="header-wrapper block h-16 lg:h-[4.375rem] relative z-20 bg-white {% if 'article' == request.page_type %} lg:is-ontop:text-white lg:is-ontop:bg-white/0 lg:transition-colors lg:duration-1000 lg:ease-in-out {% endif %} {% if 'index' == request.page_type %} is-ontop:text-white is-ontop:bg-white/0 transition-colors duration-1000 ease-in-out {% endif %}">
+<sticky-header class="header-wrapper block h-16 lg:h-[4.375rem] relative z-20 bg-white header-is-open:!bg-white header-is-open:!text-gray-very-dark {% if 'article' == request.page_type %} lg:is-ontop:text-white lg:is-ontop:bg-white/0 lg:transition-colors lg:duration-1000 lg:ease-in-out {% endif %} {% if 'index' == request.page_type %} is-ontop:text-white is-ontop:bg-white/0 {% endif %}  transition-colors duration-1000 ease-in-out">
 
-	<hr class="w-full h-[0.0625rem] absolute bottom-[100%] inset-x-0 block bg-orange-grayish {% if request.page_type == 'index' %} transition-colors duration-1000 ease-in-out is-ontop:bg-white/0 {% endif %} {% if request.page_type == 'article' %} bg-transparent lg:transition-colors lg:duration-1000 lg:ease-in-out lg:is-ontop:bg-white/0 {% endif %}" />
+	<hr class="w-full h-[0.0625rem] absolute bottom-[100%] inset-x-0 block bg-orange-grayish header-is-open:!bg-orange-grayish {% if request.page_type == 'index' %} transition-colors duration-1000 ease-in-out is-ontop:bg-white/0 {% endif %} {% if request.page_type == 'article' %} bg-transparent lg:transition-colors lg:duration-1000 lg:ease-in-out lg:is-ontop:bg-white/0 {% endif %}" />
 
 	<div class="flex h-full">
 
 		{%- if section.settings.menu != blank -%}
 			{% render 'header-drawer', links: section.settings.menu.links %}
-			<span class="w-[0.0625rem] h-full block lg:hidden bg-orange-grayish {% if request.page_type == 'index' %} transition-colors duration-1000 ease-in-out is-ontop:bg-white {% endif %}"></span>
+			<span class="w-[0.0625rem] h-full block lg:hidden bg-orange-grayish header-is-open:!bg-orange-grayish {% if request.page_type == 'index' %} transition-colors duration-1000 ease-in-out is-ontop:bg-white {% endif %}"></span>
 		{%- endif -%}
 
 
@@ -50,7 +50,7 @@
 			{% render 'svg', icon: 'corail-logo', classes: 'h-5 w-28 fill-current', description: shop.name %}
 		</a>
 
-		<span class="w-[0.0625rem] relative -right-[0.03125rem] h-full hidden lg:block bg-orange-grayish {% if request.page_type == 'index' %} transition-colors duration-1000 ease-in-out is-ontop:bg-white {% endif %}"></span>
+		<span class="w-[0.0625rem] relative -right-[0.03125rem] h-full hidden lg:block bg-orange-grayish header-is-open:!bg-orange-grayish {% if request.page_type == 'index' %} transition-colors duration-1000 ease-in-out is-ontop:bg-white {% endif %}"></span>
 
 		{%- if section.settings.menu != blank -%}
 			<nav class="hidden lg:flex items-center font-display">

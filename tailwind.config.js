@@ -76,6 +76,7 @@ module.exports = {
 		},
 	},
 	plugins: [
+		plugin(({ addVariant }) => addVariant("header-is-open", ".header-is-open &")),
 		plugin(({ addVariant }) => addVariant("is-inview", ".is-inview&")),
 		plugin(({ addVariant }) => addVariant("is-active", ".is-active&")),
 		plugin(({ addVariant }) => addVariant("is-scrolled-screen", ".is-scrolled-screen &")),
