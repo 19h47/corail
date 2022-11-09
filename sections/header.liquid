@@ -242,7 +242,7 @@
 					{% form 'currency' %}
 						<select name="currency" class="bg-transparent appearance-none">
 							{% for currency in shop.enabled_currencies %}
-								<option {% if currency == cart.currency %} selected="true" {% endif %}>{{currency.iso_code}}</option>
+								<option {% if currency == cart.currency %} selected="true" {% endif %}>{{- currency.iso_code -}}</option>
 							{% endfor %}
 						</select>
 					  {% endform %}
