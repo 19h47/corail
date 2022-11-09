@@ -851,15 +851,10 @@ deferred-media {
 .select__select,
 .customer .field input,
 .customer select {
-	-webkit-appearance: none;
 	appearance: none;
 	width: 100%;
-	box-sizing: border-box;
 	transition: box-shadow var(--duration-short) ease;
 	border-radius: var(--inputs-radius);
-	height: 4.5rem;
-	min-height: calc(var(--inputs-border-width) * 2);
-	min-width: calc(7rem + (var(--inputs-border-width) * 2));
 	position: relative;
 	border: 0;
 }
@@ -1006,7 +1001,7 @@ deferred-media {
 	margin-bottom: 0;
 	pointer-events: none;
 	position: absolute;
-	transition: top var(--duration-short) ease, font-size var(--duration-short) ease;
+	transition: top 1s ease-in-out, font-size 1s ease-in-out;
 	color: rgba(var(--color-foreground), 0.75);
 }
 
