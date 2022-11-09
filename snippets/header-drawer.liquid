@@ -7,12 +7,12 @@
 		<div id="menu-drawer" class="menu-drawer w-full bg-white text-gray-very-dark" tabindex="-1">
 			<div class="menu-drawer__inner-container">
 				<div class="h-full flex flex-col justify-between overflow-y-auto">
-					<nav class="menu-drawer__navigation p-5">
-						<ul class="menu-drawer__menu has-submenu list-none space-y-4" role="list">
+					<nav class="menu-drawer__navigation p-5 h-full">
+						<ul class="menu-drawer__menu has-submenu list-none space-y-4 flex flex-col h-full" role="list">
 							{%- for link in section.settings.menu.links -%}
 								<li>
 
-									{%- if link.links != blank -%}
+									{%- if link.links != blank and link.title != '#' -%}
 										<details id="Details-menu-drawer-menu-item-{{ forloop.index }}">
 
 											<summary class="uppercase font-bold font-display leading-7 flex items-center {% if link.child_active %} is-active {% endif %}">
@@ -117,7 +117,7 @@
 
 							{%- for link in section.settings.secondary-menu.links -%}
 								{% if link.links != blank %}
-										<details id="Details-HeaderSecondaryMenu-{{ forloop.index }}">
+										<details class="!mt-auto" id="Details-HeaderSecondaryMenu-{{ forloop.index }}">
 
 											<summary class="uppercase font-bold font-display leading-7 flex items-center {% if link.child_active %} is-active {% endif %}">
 												{{ link.title | escape }}

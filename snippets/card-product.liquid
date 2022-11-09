@@ -61,7 +61,7 @@
 							widths: '320, 676, 912',
 							sizes: '(min-width: 1024px) 50vw, 25vw',
 							loading: 'lazy',
-							alt: card_product.featured_media.alt | default: card_product.title | escape
+							alt: card_product.featured_media.alt | default: card_product.title | strip_html | escape
 				-}}
 
 
@@ -87,7 +87,7 @@
 							class: 'absolute inset-0 w-full h-full object-cover object-center opacity-0 duration-1000 ease-in-out transition-opacity group-hover:opacity-100',
 							widths: '320, 676, 912',
 							sizes: '(min-width: 1024px) 50vw, 25vw',
-							alt: card_product.media[1].alt | default: card_product.title | escape
+							alt: card_product.media[1].alt | default: card_product.title | strip_html | escape
 						-}}
 					{%- endif -%}
 				{%- endif -%}
@@ -212,7 +212,7 @@
 		<footer class="border-t mt-2 lg:mt-4 border-orange-grayish pt-1.5 lg:pt-3 text-[0.5rem] lg:text-sm leading-none lg:leading-4 uppercase">
 			<div class="flex justify-between">
 				<h3 {% if card_product.featured_media == nil and settings.card_style == 'standard' %} id="title-{{ section_id }}-{{ card_product.id }}" {% endif %} class="flex-shrink-0">
-					{{- card_product.title | escape -}}
+					{{- card_product.title -}}
 				</h3>
 				{%- render 'price', product: card_product, price_class: '' -%}
 			</div>
@@ -223,7 +223,7 @@
 			href="{{ card_product.url }}"
 			id="StandardCardNoMediaLink-{{ section_id }}-{{ card_product.id }}"
 			aria-labelledby="StandardCardNoMediaLink-{{ section_id }}-{{ card_product.id }} NoMediaStandardBadge-{{ section_id }}-{{ card_product.id }}"
-			aria-label="{{ card_product.title }}"
+			aria-label="{{ card_product.title | strip_html | escape }}"
 		></a>
 	</article>
 {%- endif -%}

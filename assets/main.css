@@ -1777,11 +1777,6 @@ html,
 	margin-bottom: 3rem;
 }
 
-.my-5{
-	margin-top: 1.25rem;
-	margin-bottom: 1.25rem;
-}
-
 .my-14{
 	margin-top: 3.5rem;
 	margin-bottom: 3.5rem;
@@ -1800,6 +1795,11 @@ html,
 .my-6{
 	margin-top: 1.5rem;
 	margin-bottom: 1.5rem;
+}
+
+.my-5{
+	margin-top: 1.25rem;
+	margin-bottom: 1.25rem;
 }
 
 .-mx-5{
@@ -2087,6 +2087,10 @@ html,
 
 .mr-3{
 	margin-right: 0.75rem;
+}
+
+.\!mt-auto{
+	margin-top: auto !important;
 }
 
 .block{
@@ -2592,10 +2596,10 @@ html,
 	margin-bottom: calc(0.75rem * var(--tw-space-y-reverse));
 }
 
-.space-y-16 > :not([hidden]) ~ :not([hidden]){
+.space-y-12 > :not([hidden]) ~ :not([hidden]){
 	--tw-space-y-reverse: 0;
-	margin-top: calc(4rem * calc(1 - var(--tw-space-y-reverse)));
-	margin-bottom: calc(4rem * var(--tw-space-y-reverse));
+	margin-top: calc(3rem * calc(1 - var(--tw-space-y-reverse)));
+	margin-bottom: calc(3rem * var(--tw-space-y-reverse));
 }
 
 .space-y-8 > :not([hidden]) ~ :not([hidden]){
@@ -4125,6 +4129,11 @@ html,
 		margin-right: 0px;
 	}
 
+	.lg\:my-5{
+		margin-top: 1.25rem;
+		margin-bottom: 1.25rem;
+	}
+
 	.lg\:my-36{
 		margin-top: 9rem;
 		margin-bottom: 9rem;
@@ -4637,6 +4646,12 @@ html,
 		--tw-space-y-reverse: 0;
 		margin-top: calc(2rem * calc(1 - var(--tw-space-y-reverse)));
 		margin-bottom: calc(2rem * var(--tw-space-y-reverse));
+	}
+
+	.lg\:space-y-16 > :not([hidden]) ~ :not([hidden]){
+		--tw-space-y-reverse: 0;
+		margin-top: calc(4rem * calc(1 - var(--tw-space-y-reverse)));
+		margin-bottom: calc(4rem * var(--tw-space-y-reverse));
 	}
 
 	.lg\:space-y-24 > :not([hidden]) ~ :not([hidden]){

@@ -9,7 +9,7 @@
 
 <cart-items class="{% if cart == empty %} is-empty {% endif %}">
 
-	<div class="container my-16" style="{% if cart == empty %}display: none;{% endif %}">
+	<div class="container my-12 lg:smy-16" style="{% if cart == empty %}display: none;{% endif %}">
 		<div class="row">
 			<div>
 				<h1 class="font-semibold uppercase font-display text-6xl">{{ 'sections.cart.title' | t | escape }}</h1>
@@ -21,7 +21,7 @@
 	</div>
 
 	{% comment %} Warnings {% endcomment %}
-	<div class="container my-16" style="{% if cart != empty %}display: none;{% endif %}">
+	<div class="container my-12 lg:my-16" style="{% if cart != empty %} display: none; {% endif %}">
 		<div class="row">
 			<div class="space-y-8 {% if shop.customer_accounts_enabled and customer == nil %} lg:col-8/12 {% endif %}">
     			<h1 class="font-semibold uppercase font-display text-6xl">{{ 'sections.cart.empty' | t | escape }}</h1>
@@ -32,7 +32,7 @@
 			</div>
 
 			{%- if shop.customer_accounts_enabled and customer == nil -%}
-				<div class="lg:col-4/12 text-right">
+				<div class="lg:col-4/12 lg:text-right mt-5 lg:mt-0">
 					<div class="wysiwyg font-display">
 						<p>
 							{{ 'sections.cart.login.title' | t }}<br>
@@ -61,7 +61,7 @@
 		}
 	</style>
 
-	<div class="container my-16" style="{% if cart == empty %}display: none;{% endif %}">
+	<div class="container my-12 lg:my-16" style="{% if cart == empty %}display: none;{% endif %}">
 		<form action="{{ routes.cart_url }}" class="cart__contents" method="post" id="cart">
 			<div class="cart__items" id="main-cart-items" data-id="{{ section.id }}">
 				<div class="js-contents">
