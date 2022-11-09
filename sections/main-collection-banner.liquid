@@ -3,7 +3,7 @@
 <div>
 	<div class="container mt-16 mb-12">
 		<div class="row">
-			<div class="{% if section.settings.show_collection_description %} lg:col-6/12 {% endif %}">
+			<div class="{% if section.settings.show_collection_description and blank != collection.description %} lg:col-9/12 {% endif %}">
 				<h1 class="text-[2.5rem] leading-9 lg:text-[5.625rem] lg:leading-[5.125rem] font-display font-semibold uppercase">
 					<span class="sr-only">{{ 'sections.collection_template.title' | t }}: </span>
 					{{- collection.title | escape -}}
@@ -11,7 +11,7 @@
 			</div>
 
 			{%- if section.settings.show_collection_description and blank != collection.description -%}
-				<div class="lg:col-3/12 lg:ml-3/12">
+				<div class="lg:col-3/12">
 					<div class="font-display font-medium text-right">
 						{{- collection.description -}}
 					</div>
