@@ -154,7 +154,7 @@
           "type": "collapsible_tab",
           "settings": {
             "title": "Echanges et retours",
-            "content": "<p>\/retours offerts en France et à l’international<br\/>\/échanges offerts en France et à l’international<\/p>"
+            "content": "<p>\/retours offerts en France et à l’international<\/p><p>\/échanges offerts en France et à l’international<\/p>"
           }
         },
         "template--15990350479528__5352a5eb-3296-4b9c-9021-e759c6c0ea6b-166669405224db7574-1": {
@@ -243,9 +243,9 @@
         "column_left_icon_technical": false,
         "column_left_title_recycled": "",
         "column_left_icon_recycled": false,
-        "column_right_title": "RESISTANCE TESTED IN EXTREME CONDITIONS",
-        "column_right_content": "Our products are handmade in our workshop in Portugal and submitted to extreme durability tests to insure their quality and long-lastingness. The real sustainable product is the one you keep.",
-        "column_right_button_label": "OUR WORKSHOP",
+        "column_right_title": "RESISTANCE TESTÉE DANS DES CONDITIONS EXTRÊMES",
+        "column_right_content": "Nos produits sont fabriqués à la main dans un atelier au Portugal et sont testés dans des conditions extrêmes pour assurer la qualité et de la longue durée de vie. Le vrai produit durable est celui que vous gardez.",
+        "column_right_button_label": "NOTRE ATELIER",
         "column_right_button_link": "shopify:\/\/pages\/handmade-to-last-long",
         "column_right_image": "shopify:\/\/shop_images\/0S1A4761-2.jpg"
       }
