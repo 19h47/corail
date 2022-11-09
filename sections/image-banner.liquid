@@ -24,7 +24,7 @@
 	{% endif %}
 
 	{%- if section.settings.image -%}
-		{{- section.settings.image | image_url: width: 1440 | image_tag:
+		{{- section.settings.image | image_url: width: 1440, height: 842 | image_tag:
 			width: section.settings.image.width,
 			height: section.settings.image.height,
 			class: 'w-full h-full object-cover object-center relative z-10',
