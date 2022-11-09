@@ -739,12 +739,12 @@ deferred-media {
 /* Button - default */
 
 .cart__dynamic-checkout-buttons .shopify-cleanslate ul {
-	flex-direction: column!important;
+	flex-direction: column !important;
 }
 
 .cart__dynamic-checkout-buttons .shopify-cleanslate li {
-	height: auto!important;
-	flex-basis: 0!important;
+	height: auto !important;
+	flex-basis: 0 !important;
 }
 
 .shopify-payment-button [role="button"],
@@ -889,7 +889,7 @@ deferred-media {
 	right: 0;
 	bottom: 0;
 	left: 0;
-	border: 0.0625rem solid #CFCDC9;
+	border: 0.0625rem solid #cfcdc9;
 	z-index: 1;
 }
 
@@ -899,18 +899,6 @@ deferred-media {
 	font-weight: var(--font-body-weight);
 	font-size: 1.2rem;
 	color: rgba(var(--color-foreground), 0.75);
-}
-
-.field:hover.field:after,
-.select:hover.select:after,
-.select__select:hover.select__select:after,
-.customer .field:hover.field:after,
-.customer select:hover.select:after,
-.localization-form__select:hover.localization-form__select:after {
-	box-shadow: 0 0 0 calc(0.1rem + var(--inputs-border-width))
-		rgba(var(--color-foreground), var(--inputs-border-opacity));
-	outline: 0;
-	border-radius: var(--inputs-radius);
 }
 
 .field__input:focus-visible,
