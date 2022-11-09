@@ -21,8 +21,8 @@
         "3881603f-1c4f-469c-a6c4-c79d1ba8d940": {
           "type": "notice",
           "settings": {
-            "title": "Seadust inside",
-            "content": "Ces baskets sont fabriquées à partir de SEADUST, une matière innovante transformée dans notre CORAIL° Lab avec des filets de pêche et des bouteilles plastique recyclés et collectés à Marseille, France."
+            "title": "{{ product.metafields.corail.notice_title.value }}",
+            "content": "<p>{{ product.metafields.corail.notice_content | metafield_tag }}<\/p>"
           }
         },
         "a13c66e5-b37d-433e-80c5-d3dc4ce746b8": {
