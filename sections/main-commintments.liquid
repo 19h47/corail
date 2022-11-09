@@ -1,19 +1,21 @@
-<div class="mt-8 lg:mt-0 mb-14 lg:mb-16">
+<div class="mb-14 lg:mb-16">
 	<div class="container">
 		<div class="row">
 			<div class="lg:col-10/12 lg:ml-1/12">
-				<p class="font-semibold font-display lg:text-xl uppercase lg:leading-[6.25rem] leading-none text-center">Commintments</p>
-				<h1 class="text-center font-bold uppercase leading-[5.5rem] font-display text-[2.8125rem] lg:text-[5.625rem]">
+				<p class="font-semibold font-display lg:text-xl uppercase leading-[6.25rem] text-center">{{ 'general.commintments.label' | t }}</p>
+				<h1 class="text-center font-bold uppercase leading-[2.75rem] lg:leading-[5.5rem] font-display text-[2.8125rem] lg:text-[5.625rem]">
 					{{- page.title | escape -}}
 				</h1>
 			</div>
+
 			{% if page.content != blank %}
-				<div class="lg:col-6/12 lg:ml-3/12">
-					<div class="wysiwyg text-center mt-2 font-display font-medium">
+				<div class="lg:col-6/12 lg:ml-3/12 mt-2.5">
+					<div class="wysiwyg text-center font-display font-medium">
 						{{- page.content -}}
 					</div>
 				</div>
 			{% endif %}
+
 		</div>
 	</div>
 

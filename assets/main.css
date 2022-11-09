@@ -1965,6 +1965,10 @@ html,
 	margin-bottom: 0.25rem;
 }
 
+.mb-6{
+	margin-bottom: 1.5rem;
+}
+
 .mr-2\.5{
 	margin-right: 0.625rem;
 }
@@ -1999,10 +2003,6 @@ html,
 
 .ml-2{
 	margin-left: 0.5rem;
-}
-
-.mb-6{
-	margin-bottom: 1.5rem;
 }
 
 .mb-\[1\.625rem\]{
@@ -3124,6 +3124,10 @@ html,
 	font-size: 3.125rem;
 }
 
+.text-\[4\.6875rem\]{
+	font-size: 4.6875rem;
+}
+
 .text-\[2\.5rem\]{
 	font-size: 2.5rem;
 }
@@ -3215,6 +3219,14 @@ html,
 	line-height: 2.25rem;
 }
 
+.leading-\[6\.25rem\]{
+	line-height: 6.25rem;
+}
+
+.leading-\[2\.75rem\]{
+	line-height: 2.75rem;
+}
+
 .leading-\[10\.3125rem\]{
 	line-height: 10.3125rem;
 }
@@ -3225,10 +3237,6 @@ html,
 
 .leading-\[2\.8125rem\]{
 	line-height: 2.8125rem;
-}
-
-.leading-\[2\.75rem\]{
-	line-height: 2.75rem;
 }
 
 .text-gray-very-dark{
@@ -4831,20 +4839,12 @@ html,
 		line-height: 1.5rem;
 	}
 
-	.lg\:leading-none{
-		line-height: 1;
-	}
-
 	.lg\:leading-\[5\.5rem\]{
 		line-height: 5.5rem;
 	}
 
 	.lg\:leading-\[5\.125rem\]{
 		line-height: 5.125rem;
-	}
-
-	.lg\:leading-\[6\.25rem\]{
-		line-height: 6.25rem;
 	}
 
 	.lg\:leading-\[6\.5615rem\]{

@@ -43,13 +43,13 @@
 					{%- endcase -%}
 				{%- endfor -%}
 
-				<ul class=" bg-white lg:order-1 lg:flex lg:flex-row-reverse lg:absolute lg:inset-y-0 lg:right-[100%] lg:translate-x-0 lg:group-open:translate-x-full">
+				<ul class=" bg-white lg:order-1 lg:flex lg:flex-row-reverse bottom-0 absolute lg:inset-y-0 lg:right-[100%] lg:translate-x-0 lg:group-open:translate-x-full">
 					{%- for block in section.blocks -%}
 						{% case block.type %}
 							{%- when 'page' -%}
 								<li>
 									<a
-										class="py-3 lg:pl-7 lg:h-full text-left lg:flex-col items-center lg:items-start text-sm uppercase leading-none font-medium border-t-[0.0625rem] lg:border-t-0 lg:border-r-[0.0625rem] border-orange-grayish {% if page.url == block.settings.page.url %} hidden lg:flex {% else %} flex {% endif %}"
+										class="py-3 lg:pl-7 lg:h-full text-left lg:flex-col items-center lg:items-start text-sm uppercase leading-none font-medium border-t-[0.0625rem] lg:border-t-0 lg:border-r-[0.0625rem] border-orange-grayish flex"
 										href="{{ block.settings.page.url }}"
 									>
 										{%- render 'svg', icon: 'bars-small', classes: 'w-2 h-4 mr-5 fill-current lg:hidden' -%}
