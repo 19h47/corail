@@ -1001,7 +1001,7 @@ deferred-media {
 
 .field__label,
 .customer .field label {
-	left: calc(var(--inputs-border-width) + 2rem);
+	left: calc(var(--inputs-border-width) + 1rem);
 	top: calc(1rem + var(--inputs-border-width));
 	margin-bottom: 0;
 	pointer-events: none;
