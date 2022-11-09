@@ -24,13 +24,13 @@
 	{% endif %}
 
 	{%- if section.settings.image -%}
-		{{- section.settings.image | image_url: width: 2880, height: 1684 | image_tag:
+		{{- section.settings.image | image_url: width: 1440, scale: 2 | image_tag:
 			width: section.settings.image.width,
 			height: section.settings.image.height,
 			class: 'w-full h-full object-cover object-center relative z-10',
 			sizes: '100vw',
 			alt: section.settings.image.alt | escape
-			widths: '640,2880'
+			widths: '320,1440'
 		-}}
 	{%- endif -%}
 
