@@ -42,7 +42,7 @@
 
 		{%- if section.settings.menu != blank -%}
 			{% render 'header-drawer', links: section.settings.menu.links %}
-			<span class="w-[0.0625rem] h-full block lg:hidden bg-orange-grayish header-is-open:!bg-orange-grayish {% if request.page_type == 'index' %} transition-colors duration-1000 ease-in-out is-ontop:bg-white {% endif %}"></span>
+			<span class="w-[0.0625rem] h-full block lg:hidden bg-orange-grayish header-is-open:!bg-orange-grayish {% if request.page_type == 'index' %} is-ontop:bg-white {% endif %} transition-colors duration-1000 ease-in-out z-1"></span>
 		{%- endif -%}
 
 
@@ -68,7 +68,11 @@
 											</span>
 										</summary>
 
-										<div id="MegaMenu-Content-{{ forloop.index }}" class="mega-menu__content bg-white text-gray-very-dark overflow-auto border-b-[0.0625rem] border-orange-grayish {% if request.page_type == 'product' %} lg:max-h-[calc(100vh_-_10.5rem)] {% else %} {% endif %}" tabindex="-1">
+										<div
+											id="MegaMenu-Content-{{ forloop.index }}"
+											class="mega-menu__content bg-white text-gray-very-dark overflow-auto border-b-[0.0625rem] border-orange-grayish {% if request.page_type == 'product' %} lg:max-h-[calc(100vh_-_10.5rem)] {% endif %}"
+											tabindex="-1"
+										>
 											<ul class="mega-menu__list grid text-sm font-medium list-none {% if link.levels == 1 %} mega-menu__list--condensed {% endif %}" role="list">
 												{%- for childlink in link.links -%}
 													<li class="relative py-8 px-16">
