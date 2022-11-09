@@ -43,7 +43,7 @@
 					{%- endcase -%}
 				{%- endfor -%}
 
-				<ul class=" bg-white lg:order-1 lg:flex lg:flex-row-reverse bottom-0 absolute lg:inset-y-0 lg:right-[100%] lg:translate-x-0 lg:group-open:translate-x-full">
+				<ul class=" bg-white lg:order-1 lg:flex lg:flex-row-reverse bottom-0 inset-x-0 lg:left-auto absolute lg:inset-y-0 lg:right-[100%] lg:translate-x-0 lg:group-open:translate-x-full">
 					{%- for block in section.blocks -%}
 						{% case block.type %}
 							{%- when 'page' -%}
