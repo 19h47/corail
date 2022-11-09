@@ -14,9 +14,9 @@
 		<div class="row ">
 			<div class="lg:col-6/12">
 				{% if section.settings.column_left_image %}
-					{{- section.settings.column_left_image | image_url: width: 692, height: 888 | image_tag:
+					{{- section.settings.column_left_image | image_url: width: 1384, height: 1776 | image_tag:
 						loading: 'lazy',
-						widths: '275, 550, 710, 1420',
+						widths: '560, 1384',
 						class: 'w-full h-[22.5rem] lg:h-[54rem] object-cover object-center block'
 					-}}
 				{% endif %}
@@ -70,9 +70,9 @@
 					</div>
 				</div>
 				{% if section.settings.column_right_image %}
-					{{- section.settings.column_right_image | image_url: width: 692, height: 888 | image_tag:
+					{{- section.settings.column_right_image | image_url: width: 1384, height: 1776 | image_tag:
 						loading: 'lazy',
-						widths: '275, 550, 710, 1420',
+						widths: '560, 1384',
 						class: 'w-full h-[22.5rem] lg:h-[54rem] mt-24 object-cover object-center hidden lg:block'
 					-}}
 				{% endif %}

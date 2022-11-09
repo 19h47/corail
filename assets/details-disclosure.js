@@ -56,6 +56,7 @@ if (!customElements.get('details-disclosure')) {
 				return;
 			}
 
+			document.documentElement.classList.toggle('header-is-open');
 			document.documentElement.style.setProperty(
 				"--header-bottom-position-desktop",
 				`${Math.floor(this.header.getBoundingClientRect().bottom)}px`

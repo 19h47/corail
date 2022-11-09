@@ -77,7 +77,7 @@
 		| image_url: width: 1660, height: 1504
 		| image_tag:
 			loading: lazy,
-			widths: '640,1660',
+			widths: '640, 1660',
 			sizes: '(min-width: 1024px) 100vw, 60vw',
 			class: 'absolute bg-orange-grayish inset-0 object-cover object-center w-full h-full',
 			alt: media.preview_image.alt | escape
@@ -106,7 +106,7 @@
 		{{ media.preview_image | image_url: width: 1660, height: 1504 | image_tag:
 			loading: lazy,
 			sizes: sizes,
-			widths: '640,1660',
+			widths: '640, 1660',
 			class: 'h-full w-full object-cover object-center bg-orange-grayish',
 			alt: media.preview_image.alt | escape
 		}}
