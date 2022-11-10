@@ -579,7 +579,7 @@
 	.addresses form > div:nth-of-type(1),
 	.addresses form > div:nth-of-type(3),
 	.addresses form > div:nth-of-type(5) {
-		margin-right: 2rem;
+		margin-right: 1.25rem;
 	}
 
 	.addresses form > div:nth-of-type(2) {
@@ -593,7 +593,7 @@
 	.addresses form > div:nth-of-type(5),
 	.addresses form > div:nth-of-type(6) {
 		box-sizing: border-box;
-		flex-basis: calc(50% - 1rem);
+		flex-basis: calc(50% - 0.625rem);
 	}
 }
 
