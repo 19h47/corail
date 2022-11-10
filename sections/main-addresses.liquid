@@ -102,9 +102,9 @@
 									<input class="border-[0.0625rem] border-orange-grayish block w-full p-2" type="tel" id="AddressPhoneNew" name="address[phone]" value="{{ form.phone }}" autocomplete="tel" placeholder="{{ 'customer.addresses.phone' | t }}">
 								</div>
 
-								<div class="w-full">
+								<div class="w-full flex mt-4">
 									{{ form.set_as_default_checkbox }}
-									<label for="address_default_address_new">{{ 'customer.addresses.set_default' | t }}</label>
+									<label class="block text-sm" for="address_default_address_new">{{ 'customer.addresses.set_default' | t }}</label>
 								</div>
 
 								<div class="mt-5 text-center w-full">
@@ -215,10 +215,10 @@
 											<label class="block mb-2 text-sm" for="AddressPhone_{{ form.id }}">{{ 'customer.addresses.phone' | t }}</label>
 											<input class="border-[0.0625rem] border-orange-grayish block w-full p-2" type="tel" id="AddressPhone_{{ form.id }}"  name="address[phone]" value="{{ form.phone }}" autocomplete="tel" placeholder="{{ 'customer.addresses.phone' | t }}">
 										</div>
-										<div>
+										<div class="w-full flex mt-4">
 											{{ form.set_as_default_checkbox }}
-											<label class="block mb-2 text-sm" for="address_default_address_{{ form.id }}">
-											{{ 'customer.addresses.set_default' | t }}
+											<label class="block text-sm" for="address_default_address_{{ form.id }}">
+												{{ 'customer.addresses.set_default' | t }}
 											</label>
 										</div>
 										<div class="mt-5 text-center w-full">
