@@ -291,55 +291,6 @@ body,
 	font-weight: var(--font-body-weight);
 }
 
-h2,
-h3,
-h4,
-h5,
-.h2,
-.h3,
-.h4,
-.h5 {
-	word-break: break-word;
-}
-
-h3,
-.h3 {
-	font-size: calc(var(--font-heading-scale) * 1.7rem);
-}
-
-@media only screen and (min-width: 750px) {
-	h3,
-	.h3 {
-		font-size: calc(var(--font-heading-scale) * 1.8rem);
-	}
-}
-
-h4,
-.h4 {
-	font-family: var(--font-heading-family);
-	font-style: var(--font-heading-style);
-	font-size: calc(var(--font-heading-scale) * 1.5rem);
-}
-
-h5,
-.h5 {
-	font-size: calc(var(--font-heading-scale) * 1.2rem);
-}
-
-@media only screen and (min-width: 750px) {
-	h5,
-	.h5 {
-		font-size: calc(var(--font-heading-scale) * 1.3rem);
-	}
-}
-
-h6,
-.h6 {
-	color: rgba(var(--color-foreground), 0.75);
-	margin-block-start: 1.67em;
-	margin-block-end: 1.67em;
-}
-
 .caption {
 	font-size: 1rem;
 	letter-spacing: 0.07rem;
@@ -488,11 +439,6 @@ hr {
 
 .icon-arrow {
 	width: 1.5rem;
-}
-
-h3 .icon-arrow,
-.h3 .icon-arrow {
-	width: calc(var(--font-heading-scale) * 1.5rem);
 }
 
 /* arrow animation */
