@@ -85,7 +85,7 @@
 											{% if item.image %}
 
 											<a href="{{ item.url }}" class="block w-24 h-24 lg:w-32 lg:h-32">
-												<img src="{{ item.image | image_url: width: 300, height: 300 }}"
+												<img src="{{ item.image | image_url: width: 300 }}"
 													class="block object-center object-contain w-full h-full"
 													alt="{{ item.image.alt | escape }}"
 													loading="lazy"
