@@ -856,7 +856,6 @@ deferred-media {
 }
 
 .select:before,
-.customer select:before,
 .localization-form__select:before {
 	pointer-events: none;
 	content: "";
@@ -872,7 +871,6 @@ deferred-media {
 }
 
 .select:after,
-.customer select:after,
 .localization-form__select:after {
 	pointer-events: none;
 	content: "";
@@ -895,7 +893,6 @@ deferred-media {
 
 .field__input:focus-visible,
 .select__select:focus-visible,
-.customer select:focus-visible,
 .localization-form__select:focus-visible.localization-form__select:after {
 	box-shadow: 0 0 0 calc(0.1rem + var(--inputs-border-width)) rgba(var(--color-foreground));
 	outline: 0;
@@ -904,7 +901,6 @@ deferred-media {
 
 .field__input:focus,
 .select__select:focus,
-.customer select:focus,
 .localization-form__select:focus.localization-form__select:after {
 	box-shadow: 0 0 0 calc(0.1rem + var(--inputs-border-width)) rgba(var(--color-foreground));
 	outline: 0;
@@ -933,8 +929,7 @@ deferred-media {
 	right: calc(var(--inputs-border-width) + 1.5rem);
 }
 
-.select__select,
-.customer select {
+.select__select {
 	cursor: pointer;
 	padding: 1rem;
 	margin: var(--inputs-border-width);
@@ -1517,7 +1512,6 @@ details-disclosure > details {
 
 	.field__input:focus,
 	.select__select:focus,
-	.customer select:focus,
 	.localization-form__select:focus.localization-form__select:after {
 		outline: transparent solid 1px;
 	}
