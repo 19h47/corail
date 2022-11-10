@@ -125,7 +125,7 @@ document.querySelectorAll('[id^="Details-"]').forEach($details => {
 		summary.setAttribute("role", "button");
 		summary.setAttribute("aria-expanded", summary.parentNode.hasAttribute("open"));
 
-		if (summary.nextElementSibling.getAttribute("id")) {
+		if (summary.nextElementSibling && summary.nextElementSibling.getAttribute("id")) {
 			summary.setAttribute("aria-controls", summary.nextElementSibling.id);
 		}
 

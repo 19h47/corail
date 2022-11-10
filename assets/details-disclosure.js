@@ -42,6 +42,18 @@ if (!customElements.get('details-disclosure')) {
 		constructor() {
 			super();
 			this.header = document.querySelector(".header-wrapper");
+
+			const links = [...this.querySelectorAll('a[data-image]')];
+			const $image = this.querySelector('.js-header-menu-image');
+
+			links.forEach($link => {
+				const { image, title } = $link.dataset;
+
+				$link.addEventListener('mouseover', () => {
+					$image.src = image;
+					$image.alt = title;
+				})
+			})
 		}
 
 		onToggle() {

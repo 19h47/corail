@@ -42,7 +42,7 @@
 
 		{%- if section.settings.menu != blank -%}
 			{% render 'header-drawer', links: section.settings.menu.links %}
-			<span class="w-[0.0625rem] h-full block lg:hidden bg-orange-grayish header-is-open:!bg-orange-grayish {% if request.page_type == 'index' %} is-ontop:bg-white {% endif %} transition-colors duration-1000 ease-in-out"></span>
+			<span class="flex-shrink-0 w-[0.0625rem] h-full block lg:hidden bg-orange-grayish header-is-open:!bg-orange-grayish {% if request.page_type == 'index' %} is-ontop:bg-white {% endif %} transition-colors duration-1000 ease-in-out"></span>
 		{%- endif -%}
 
 
@@ -58,6 +58,7 @@
 					{%- for link in section.settings.menu.links -%}
 						<li>
 							{%- if link.links != blank -%}
+
 								<header-menu>
 									<details id="Details-HeaderMenu-{{ forloop.index }}" class="mega-menu">
 										<summary>
@@ -75,7 +76,7 @@
 										>
 											<ul class="mega-menu__list grid text-sm font-medium list-none {% if link.levels == 1 %} mega-menu__list--condensed {% endif %}" role="list">
 												{%- for childlink in link.links -%}
-													<li class="relative py-8 px-16">
+													<li class="relative py-8 px-16" data-type="{{ childlink.type }}">
 														{% if '#' == childlink.url and '#' == childlink.title %}
 														{% elsif '#' == childlink.url %}
 															<p class="font-bold text-sm leading-7 uppercase mb-3">
@@ -86,6 +87,12 @@
 																href="{{ childlink.url }}"
 																class="font-bold text-sm leading-7 block uppercase mb-3 hover:underline is-active:underline mega-menu__link--level-2 {% if childlink.current %} is-active {% endif %}"
 																{% if childlink.current %} aria-current="page"{% endif %}
+																{% if 'collection_link' == childlink.type and childlink.object.image %}
+																	data-type="{{ childlink.type }}"
+																	data-image="{{ childlink.object.image | image_url: width: 334 }}"
+																	data-id="{{ childlink.object.id }}"
+																	data-title="{{ childlink.object.title }}"
+																{% endif %}
 															>
 																{{ childlink.title | escape }}
 															</a>
@@ -94,8 +101,20 @@
 														{%- if childlink.links != blank -%}
 															<ul class="list-none" role="list">
 																{%- for grandchildlink in childlink.links -%}
-																	<li class="{% if grandchildlink.title contains '[all]' %} font-semibold mt-6 {% endif %}">
-																		<a href="{{ grandchildlink.url }}" class="py-1 inline-block align-middle hover:underline is-active:underline {% if grandchildlink.title contains '[all]' %} underline {% endif %} {% if grandchildlink.current %} is-active {% endif %}"{% if grandchildlink.current %} aria-current="page"{% endif %}>
+																	<li
+																		class="{% if grandchildlink.title contains '[all]' %} font-semibold mt-6 {% endif %}"
+																	>
+																		<a
+																			href="{{ grandchildlink.url }}"
+																			class="py-1 inline-block align-middle hover:underline is-active:underline {% if grandchildlink.title contains '[all]' %} underline {% endif %} {% if grandchildlink.current %} is-active {% endif %}"
+																			{% if grandchildlink.current %} aria-current="page" {% endif %}
+																			{% if 'collection_link' == grandchildlink.type and grandchildlink.object.image %}
+																				data-type="{{ grandchildlink.type }}"
+																				data-image="{{ grandchildlink.object.image | image_url: width: 334 }}"
+																				data-id="{{ grandchildlink.object.id }}"
+																				data-title="{{ grandchildlink.object.title }}"
+																			{% endif %}
+																		>
 																			{{ grandchildlink.title | replace: ' [all]', '' | replace: ' [new]', '' | strip | escape }}
 																		</a>
 																		{% if grandchildlink.title contains '[new]' %}
@@ -108,9 +127,30 @@
 
 														<span class="absolute block left-[100%] inset-y-0 bg-orange-grayish w-[0.0625rem] h-full"></span>
 
-														{% if '#' == childlink.url and '#' == childlink.title and forloop.first %}
-															<img class="mt-8 w-full h-auto block" alt="" src="{{ 'menu.png' | asset_img_url: '178x267', crop: 'center' }}" width="178" height="267" loading="lazy" />
+														{% if forloop.first %}
+															{%- for link in section.settings.menu.links -%}
+																{% if 'collection_link' == link.type and link.object.image %}
+																	<img class="js-header-menu-image mt-8 w-full h-auto block" alt="{{ link.title }}" src="{{ link.object.image | image_url: width: 334 }}" width="178" height="267" loading="lazy" />
+																	{% break %}
+																{% endif %}
+
+																{%- for childlink in link.links -%}
+																	{% if 'collection_link' == childlink.type and childlink.object.image %}
+																		<img class="js-header-menu-image mt-8 w-full h-auto block" alt="{{ childlink.title }}" src="{{ childlink.object.image | image_url: width: 334 }}" width="178" height="267" loading="lazy" />
+																		{% break %}
+																	{% endif %}
+
+																	{%- for grandchildlink in childlink.links -%}
+																		{% if 'collection_link' == grandchildlink.type and grandchildlink.object.image %}
+																			<img class="js-header-menu-image mt-8 w-full h-auto block" alt="{{ grandchildlink.title }}" src="{{ grandchildlink.object.image | image_url: width: 334 }}" width="178" height="267" loading="lazy" />
+																			{% break %}
+																		{% endif %}
+																	{%- endfor -%}
+																{%- endfor -%}
+
+															{%- endfor -%}
 														{% endif %}
+
 													</li>
 												{%- endfor -%}
 											</ul>
@@ -121,7 +161,7 @@
 								<a
 									class="group relative px-8 py-[1.6875rem] block text-sm uppercase font-medium leading-4 hover:after:scale-y-100 after:absolute after:top-0 after:h-[0.1875rem] after:bg-current after:w-full after:inset-x-0 after:transition-transform after:duration-1000 after:ease-in-out after:origin-top {% if link.current %} after:scale-y-100 {% else %} after:scale-y-0 {% endif %}"
 									href="{{ link.url }}"
-									{% if link.current %} aria-current="page"{% endif %}
+									{% if link.current %} aria-current="page" {% endif %}
 								>
 									<span class="group-hover:opacity-100 group-focus:opacity-100 duration-1000 ease-in-out transition-opacity {% if link.current %} opacity-100 {% else %} opacity-0 {% endif %} h-full w-[0.0625rem] bg-orange-grayish {% if request.page_type == 'index' %} is-ontop:bg-white {% endif %} header-is-open:!bg-orange-grayish block absolute right-[calc(100%_-_0.03125rem)] inset-y-0"></span>
 
