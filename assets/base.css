@@ -848,8 +848,7 @@ deferred-media {
 
 /* component-form */
 .field__input,
-.select__select,
-.customer select {
+.select__select {
 	appearance: none;
 	width: 100%;
 	transition: box-shadow var(--duration-short) ease;

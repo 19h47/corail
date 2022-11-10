@@ -1950,16 +1950,16 @@ html,
 	margin-top: 0.625rem;
 }
 
-.mb-2\.5{
-	margin-bottom: 0.625rem;
-}
-
 .mb-2{
 	margin-bottom: 0.5rem;
 }
 
 .mr-4{
 	margin-right: 1rem;
+}
+
+.mb-2\.5{
+	margin-bottom: 0.625rem;
 }
 
 .mb-1\.5{
@@ -4263,6 +4263,10 @@ html,
 		margin-left: 16.666666666666668%;
 	}
 
+	.lg\:ml-4\/12{
+		margin-left: 33.333333333333336%;
+	}
+
 	.lg\:-mr-2\.5{
 		margin-right: -0.625rem;
 	}
@@ -4281,10 +4285,6 @@ html,
 
 	.lg\:ml-8\/12{
 		margin-left: 66.66666666666667%;
-	}
-
-	.lg\:ml-4\/12{
-		margin-left: 33.333333333333336%;
 	}
 
 	.lg\:mb-4{
