@@ -83,16 +83,18 @@
 
 										<td class="cart-item__media lg:border-b-[0.0625rem] lg:border-orange-grayish lg:py-2">
 											{% if item.image %}
-
-											<a href="{{ item.url }}" class="block w-24 h-24 lg:w-32 lg:h-32">
-												<img src="{{ item.image | image_url: width: 300 }}"
-													class="block object-center object-contain w-full h-full"
-													alt="{{ item.image.alt | escape }}"
-													loading="lazy"
-													width="150"
-													height="{{ 150 | divided_by: item.image.aspect_ratio | ceil }}"
-												>
-											</a>
+												<a href="{{ item.url }}" class="block w-24 h-24 lg:w-32 lg:h-32">
+													{{- item.image
+														| image_url: width: 256
+														| image_tag:
+															loading: 'lazy',
+															widths: '192, 256',
+															class: 'block object-center object-contain w-full h-full',
+															width: item.image.width,
+															height: item.image.height,
+															alt: item.image.alt | escape,
+													-}}
+												</a>
 											{% endif %}
 										</td>
 
