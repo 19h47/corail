@@ -72,6 +72,7 @@
 											name="address[country]"
 											data-default="{{ form.country }}"
 											autocomplete="country"
+											class="p-2"
 										>
 											{{ all_country_option_tags }}
 										</select>
@@ -182,32 +183,28 @@
 											<label class="block mb-2.5" for="AddressCountry_{{ form.id }}">
 												{{ 'customer.addresses.country' | t }}
 											</label>
-											<div class="select">
-												<select
-													id="AddressCountry_{{ form.id }}"
-													name="address[country]"
-													data-address-country-select
-													data-default="{{ form.country }}"
-													data-form-id="{{ form.id }}"
-													autocomplete="country"
-												>{{- all_country_option_tags -}}</select>
-												{% render 'svg', icon: 'chevron-down', classes: 'fill-current w-4 h-4 absolute inset-y-0 right-0 mr-4' %}
-											</div>
+											<select
+												id="AddressCountry_{{ form.id }}"
+												name="address[country]"
+												data-address-country-select
+												data-default="{{ form.country }}"
+												data-form-id="{{ form.id }}"
+												autocomplete="country"
+												class="p-2"
+											>{{- all_country_option_tags -}}</select>
 										</div>
 
 										<div class="w-full" id="AddressProvinceContainer_{{ form.id }}" style="display:none;">
 											<label class="block mb-2.5" for="AddressProvince_{{ form.id }}">
 												{{ 'customer.addresses.province' | t }}
 											</label>
-											<div class="select">
-												<select
-													id="AddressProvince_{{ form.id }}"
-													name="address[province]"
-													data-default="{{ form.province }}"
-													autocomplete="address-level1"
-												></select>
-												{% render 'svg', icon: 'chevron-down', classes: 'fill-current w-4 h-4 absolute inset-y-0 right-0 mr-4' %}
-											</div>
+											<select
+												id="AddressProvince_{{ form.id }}"
+												name="address[province]"
+												data-default="{{ form.province }}"
+												autocomplete="address-level1"
+												class="p-2"
+											></select>
 										</div>
 										<div class="field">
 											<label class="block mb-2 text-sm" for="AddressZip_{{ form.id }}">{{ 'customer.addresses.zip' | t }}</label>
