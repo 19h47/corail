@@ -966,28 +966,23 @@ deferred-media {
 
 .field__input:focus ~ .field__label,
 .field__input:not(:placeholder-shown) ~ .field__label,
-.field__input:-webkit-autofill ~ .field__label,
-.customer .field input:focus ~ label,
-.customer .field input:-webkit-autofill ~ label {
+.field__input:-webkit-autofill ~ .field__label {
 	top: calc(var(--inputs-border-width) + 0.5rem);
 	left: calc(var(--inputs-border-width) + 1rem);
 }
 
 .field__input:focus,
 .field__input:not(:placeholder-shown),
-.field__input:-webkit-autofill,
-.customer .field input:-webkit-autofill {
+.field__input:-webkit-autofill {
 	padding: 2.2rem 1rem 0.8rem 1rem;
 	margin: var(--inputs-border-width);
 }
 
-.field__input::-webkit-search-cancel-button,
-.customer .field input::-webkit-search-cancel-button {
+.field__input::-webkit-search-cancel-button {
 	display: none;
 }
 
-.field__input::placeholder,
-.customer .field input::placeholder {
+.field__input::placeholder {
 	opacity: 0;
 }
 
@@ -1014,8 +1009,7 @@ deferred-media {
 }
 
 .field__input:-webkit-autofill ~ .field__button,
-.field__input:-webkit-autofill ~ .field__label,
-.customer .field input:-webkit-autofill ~ label {
+.field__input:-webkit-autofill ~ .field__label {
 	color: rgb(0, 0, 0);
 }
 
