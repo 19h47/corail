@@ -139,7 +139,7 @@
 														{%- for childlink in link.links -%}
 															{% if childlink.title == '#' and childlink.url == '#' and childlink.links != 'blank' %}
 																{% for grandchildlink in childlink.links %}
-																	<li>
+																	<li class="hidden lg:list-item">
 																		<a class="font-display leading-8" href="{{ grandchildlink.url }}">
 																			{{ grandchildlink.title }}
 																		</a>
@@ -229,6 +229,16 @@
 																		</details>
 																	{%- endif -%}
 																</li>
+															{% endif %}
+
+															{% if childlink.title == '#' and childlink.url == '#' and childlink.links != 'blank' %}
+																{% for grandchildlink in childlink.links %}
+																	<li class="lg:hidden">
+																		<a class="font-display leading-8" href="{{ grandchildlink.url }}">
+																			{{ grandchildlink.title }}
+																		</a>
+																	</li>
+																{% endfor %}
 															{% endif %}
 														{%- endfor -%}
 													</ul>

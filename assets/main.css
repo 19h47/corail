@@ -4451,6 +4451,10 @@ html,
 		display: table-row;
 	}
 
+	.lg\:list-item{
+		display: list-item;
+	}
+
 	.lg\:hidden{
 		display: none;
 	}
