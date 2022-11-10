@@ -5,7 +5,7 @@
 	{% comment %} RECOVER {% endcomment %}
 	<div class="container my-12 lg:my-16">
 		<div class="row">
-			<div class="lg:col-6/12 lg:ml-3/12">
+			<div class="lg:col-4/12 lg:ml-4/12">
 				<h1 class="text-center font-medium font-display text-6xl" id="recover" tabindex="-1">
 					{{ 'customer.recover_password.title' | t }}
 				</h1>
@@ -17,6 +17,9 @@
 					{%- form 'recover_customer_password' -%}
 						{% assign recover_success = form.posted_successfully? %}
 						<div class="field">
+							<label class="block mb-2 text-sm" for="RecoverEmail">
+								{{ 'customer.login_page.email' | t }}
+							</label>
 							<input type="email"
 								value=""
 								name="email"
@@ -30,11 +33,10 @@
 									autofocus
 								{% endif %}
 								placeholder="{{ 'customer.login_page.email' | t }}"
+								class="border-[0.0625rem] border-orange-grayish block w-full p-2"
 							>
-							<label for="RecoverEmail">
-								{{ 'customer.login_page.email' | t }}
-							</label>
 						</div>
+
 						{%- if form.errors -%}
 							<small id="RecoverEmail-email-error" class="form__message">
 								<svg aria-hidden="true" focusable="false" role="presentation" viewBox="0 0 13 13">
@@ -90,6 +92,9 @@
 						{%- endif -%}
 
 						<div class="field">
+							<label class="block mb-2 text-sm" for="CustomerEmail">
+								{{ 'customer.login_page.email' | t }}
+							</label>
 							<input
 								type="email"
 								name="customer[email]"
@@ -101,14 +106,16 @@
 									aria-invalid="true"
 								{% endif %}
 								placeholder="{{ 'customer.login_page.email' | t }}"
+								class="border-[0.0625rem] border-orange-grayish block w-full p-2"
 							>
-							<label for="CustomerEmail">
-								{{ 'customer.login_page.email' | t }}
-							</label>
+
 						</div>
 
 						{%- if form.password_needed -%}
 							<div class="field">
+								<label class="block mb-2 text-sm" for="CustomerPassword">
+									{{ 'customer.login_page.password' | t }}
+								</label>
 								<input
 									type="password"
 									value=""
@@ -119,10 +126,8 @@
 									aria-invalid="true"
 									{% endif %}
 									placeholder="{{ 'customer.login_page.password' | t }}"
+									class="border-[0.0625rem] border-orange-grayish block w-full p-2"
 								>
-								<label for="CustomerPassword">
-									{{ 'customer.login_page.password' | t }}
-								</label>
 							</div>
 
 							<div class="text-center mt-5">
@@ -135,7 +140,6 @@
 						<button class="button button-gray mt-5 block w-full">
 							{{ 'customer.login_page.sign_in' | t }}
 						</button>
-
 
 						<a class="button button-red block mt-2.5" href="{{ routes.account_register_url }}">
 							{{ 'customer.login_page.create_account' | t }}

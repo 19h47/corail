@@ -2868,6 +2868,10 @@ html,
 	padding: 1.25rem;
 }
 
+.p-2{
+	padding: 0.5rem;
+}
+
 .p-\[1\.625rem\]{
 	padding: 1.625rem;
 }
@@ -4279,6 +4283,10 @@ html,
 		margin-left: 66.66666666666667%;
 	}
 
+	.lg\:ml-4\/12{
+		margin-left: 33.333333333333336%;
+	}
+
 	.lg\:mb-4{
 		margin-bottom: 1rem;
 	}
@@ -4513,6 +4521,10 @@ html,
 
 	.lg\:max-h-screen{
 		max-height: 100vh;
+	}
+
+	.lg\:max-h-\[calc\(100vh_-_4\.375rem\)\]{
+		max-height: calc(100vh - 4.375rem);
 	}
 
 	.lg\:max-h-\[calc\(100vh_-_10\.5rem\)\]{

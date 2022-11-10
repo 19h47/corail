@@ -849,19 +849,14 @@ deferred-media {
 /* component-form */
 .field__input,
 .select__select,
-.customer .field input,
 .customer select {
 	appearance: none;
 	width: 100%;
 	transition: box-shadow var(--duration-short) ease;
-	border-radius: var(--inputs-radius);
 	position: relative;
-	border: 0;
 }
 
-.field:before,
 .select:before,
-.customer .field:before,
 .customer select:before,
 .localization-form__select:before {
 	pointer-events: none;
@@ -877,9 +872,7 @@ deferred-media {
 	z-index: -1;
 }
 
-.field:after,
 .select:after,
-.customer .field:after,
 .customer select:after,
 .localization-form__select:after {
 	pointer-events: none;
@@ -950,23 +943,11 @@ deferred-media {
 
 /* Field */
 
-.field {
-	position: relative;
-	width: 100%;
-	display: flex;
-	transition: box-shadow var(--duration-short) ease;
-}
-
-.customer .field {
-	display: flex;
-}
-
 .field--with-error {
 	flex-wrap: wrap;
 }
 
-.field__input,
-.customer .field input {
+.field__input {
 	flex-grow: 1;
 	text-align: left;
 	padding: 1rem;
@@ -974,8 +955,7 @@ deferred-media {
 	transition: box-shadow 1s ease-in-out;
 }
 
-.field__label,
-.customer .field label {
+.field__label {
 	left: calc(var(--inputs-border-width) + 1rem);
 	top: calc(1rem + var(--inputs-border-width));
 	margin-bottom: 0;

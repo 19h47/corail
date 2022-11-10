@@ -29,6 +29,7 @@
 <script src="{{ 'details-disclosure.js' | asset_url }}" defer="defer"></script>
 <script src="{{ 'details-modal.js' | asset_url }}" defer="defer"></script>
 <script src="{{ 'cart-notification.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'localization-form.js' | asset_url }}" defer="defer"></script>
 
 {%- if settings.cart_type == "drawer" -%}
   <script src="{{ 'cart-drawer.js' | asset_url }}" defer="defer"></script>
@@ -71,7 +72,7 @@
 
 										<div
 											id="MegaMenu-Content-{{ forloop.index }}"
-											class="mega-menu__content bg-white text-gray-very-dark overflow-auto border-b-[0.0625rem] border-orange-grayish {% if request.page_type == 'product' %} lg:max-h-[calc(100vh_-_10.5rem)] {% endif %}"
+											class="mega-menu__content bg-white text-gray-very-dark overflow-auto border-b-[0.0625rem] border-orange-grayish {% if request.page_type == 'product' %} lg:max-h-[calc(100vh_-_4.375rem)] {% else %} lg:max-h-[calc(100vh_-_10.5rem)] {% endif %}"
 											tabindex="-1"
 										>
 											<ul class="mega-menu__list grid text-sm font-medium list-none {% if link.levels == 1 %} mega-menu__list--condensed {% endif %}" role="list">
@@ -195,7 +196,7 @@
 											</span>
 										</summary>
 
-										<div id="MegaMenu-Secondary-{{ forloop.index }}" class="py-8 px-16 absolute top-[100%] border-x border-b border-x-orange-grayish border-b-orange-grayish right-0 overflow-y-auto -z-1 bg-white text-gray-very-dark {% if request.page_type == 'product' %} lg:max-h-[calc(100vh_-_10.5rem)] {% endif %}" tabindex="-1">
+										<div id="MegaMenu-Secondary-{{ forloop.index }}" class="py-8 px-16 absolute top-[100%] border-x border-b border-x-orange-grayish border-b-orange-grayish right-0 overflow-y-auto -z-1 bg-white text-gray-very-dark {% if request.page_type == 'product' %} lg:max-h-[calc(100vh_-_4.375rem)] {% else %} lg:max-h-[calc(100vh_-_10.5rem)] {% endif %}" tabindex="-1">
 
 											<ul class="text-sm font-medium list-none space-y-3 " role="list">
 												{%- for childlink in link.links -%}
@@ -449,23 +450,6 @@
     }
   </script>
 {%- endif -%}
-
-{% javascript %}
-	class LocalizationForm extends HTMLElement {
-		constructor() {
-			super();
-
-			this.$form = this.querySelector('form');
-			this.$select = this.$form.querySelector('select');
-
-			console.log(this.$select);
-
-			this.$select.addEventListener('change', () => this.$form.submit())
-		}
-	}
-
-	customElements.define('localization-form', LocalizationForm);
-{% endjavascript %}
 
 {% schema %}
 {
