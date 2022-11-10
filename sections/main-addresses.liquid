@@ -72,7 +72,7 @@
 											name="address[country]"
 											data-default="{{ form.country }}"
 											autocomplete="country"
-											class="p-2"
+											class="border-[0.0625rem] border-orange-grayish block w-full p-2"
 										>
 											{{ all_country_option_tags }}
 										</select>
@@ -88,6 +88,7 @@
 											name="address[province]"
 											data-default="{{ form.province }}"
 											autocomplete="address-level1"
+											class="border-[0.0625rem] border-orange-grayish block w-full p-2"
 										>
 										</select>
 										{% render 'svg', icon: 'chevron-down', classes: 'fill-current w-4 h-4 absolute inset-y-0 right-0 mr-4' %}
@@ -190,7 +191,7 @@
 												data-default="{{ form.country }}"
 												data-form-id="{{ form.id }}"
 												autocomplete="country"
-												class="p-2"
+												class="border-[0.0625rem] border-orange-grayish block w-full p-2"
 											>{{- all_country_option_tags -}}</select>
 										</div>
 
@@ -203,7 +204,7 @@
 												name="address[province]"
 												data-default="{{ form.province }}"
 												autocomplete="address-level1"
-												class="p-2"
+												class="border-[0.0625rem] border-orange-grayish block w-full p-2"
 											></select>
 										</div>
 										<div class="field">
