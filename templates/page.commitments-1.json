@@ -1,8 +1,8 @@
 {
-  "layout": "commintments",
+  "layout": "commitments",
   "sections": {
     "main": {
-      "type": "main-commintments",
+      "type": "main-commitments",
       "settings": {
       }
     },

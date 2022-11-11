@@ -3769,6 +3769,12 @@ html,
 	background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.after\:bg-orange-light::after{
+	content: var(--tw-content);
+	--tw-bg-opacity: 1;
+	background-color: rgb(255 127 80 / var(--tw-bg-opacity));
+}
+
 .after\:bg-orange-grayish::after{
 	content: var(--tw-content);
 	--tw-bg-opacity: 1;

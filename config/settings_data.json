@@ -179,8 +179,8 @@
           "color_scheme": "background-1"
         }
       },
-      "drawercommintments": {
-        "type": "drawercommintments",
+      "drawercommitments": {
+        "type": "drawercommitments",
         "blocks": {
           "a1a4cd35-639b-4a22-88d3-4f8b3a12667b": {
             "type": "page",
