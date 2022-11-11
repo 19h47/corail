@@ -1,12 +1,143 @@
 {
+  "layout": "commitments",
   "sections": {
     "main": {
-      "type": "main-page",
+      "type": "main-commitments",
+      "settings": {
+      }
+    },
+    "393a6aca-4427-4144-9b8a-3138582cc7dd": {
+      "type": "twoimage",
+      "settings": {
+      }
+    },
+    "26e58ee6-4b94-4271-8e35-b382b3602b57": {
+      "type": "slider",
+      "blocks": {
+        "5b407deb-f006-41c7-9aa9-575dcafa4130": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/PORTRAIT_4.jpg",
+            "title": "Tony",
+            "content": "pêcheur CORAIL°"
+          }
+        },
+        "ef0078bf-0628-4ced-ad87-90f3aeb63bcc": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/PORTRAIT_3.jpg",
+            "title": "Alexis",
+            "content": "pêcheur corail°"
+          }
+        },
+        "ee65d6c0-d0b9-4325-b35d-713367f155b3": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/PORTRAIT_2.jpg",
+            "title": "ANGELO",
+            "content": "pêcheur CORAIL°"
+          }
+        },
+        "1c6e5533-6d4e-427b-926e-e22a7b12b8c1": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/PORTRAIT_1.jpg",
+            "title": "C﻿laude",
+            "content": "pêcheur CORAIL°"
+          }
+        }
+      },
+      "block_order": [
+        "5b407deb-f006-41c7-9aa9-575dcafa4130",
+        "ef0078bf-0628-4ced-ad87-90f3aeb63bcc",
+        "ee65d6c0-d0b9-4325-b35d-713367f155b3",
+        "1c6e5533-6d4e-427b-926e-e22a7b12b8c1"
+      ],
+      "settings": {
+        "title": "L’ÉQUIPE"
+      }
+    },
+    "092917c6-4968-410c-bdff-e90015882067": {
+      "type": "testimonials",
+      "blocks": {
+        "d5e622a1-ad28-41ec-b616-afd4a26085b6": {
+          "type": "slide",
+          "settings": {
+            "title": "TONY",
+            "content": "Certains jours, nous pêchions plus de plastique que de poissons."
+          }
+        },
+        "52f70789-205c-40db-a56f-dd9605ad3767": {
+          "type": "slide",
+          "settings": {
+            "title": "EDDY",
+            "content": "De nombreux pêcheurs brûlent leurs filets de pêche parce qu’il existe zéro solution de recyclage."
+          }
+        },
+        "b95f9264-5712-4344-92e6-b500eaaf7eb8": {
+          "type": "slide",
+          "settings": {
+            "title": "ALEX",
+            "content": "Nous avons pêché des jouets, des vêtements, des scooters et même une vieille bombe de la Première Guerre Mondiale."
+          }
+        },
+        "c5af06e0-3566-47a2-9d19-954af2ba56cd": {
+          "type": "slide",
+          "settings": {
+            "title": "DOUMÉ",
+            "content": "Ici, vous avez un pêcheur qui nettoie la mer."
+          }
+        }
+      },
+      "block_order": [
+        "d5e622a1-ad28-41ec-b616-afd4a26085b6",
+        "52f70789-205c-40db-a56f-dd9605ad3767",
+        "b95f9264-5712-4344-92e6-b500eaaf7eb8",
+        "c5af06e0-3566-47a2-9d19-954af2ba56cd"
+      ],
+      "settings": {
+        "title": "TÉMOIGNAGES"
+      }
+    },
+    "9b18aba4-b044-42b7-b38e-d48b9bbc39c0": {
+      "type": "timeline",
+      "blocks": {
+        "6d0faf3d-4570-4b4a-8780-1acac0494f64": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/MG_3502.jpg",
+            "title": "UN PARTENARIAT\nDE LONGUE DATE",
+            "content": "La collaboration avec notre équipe de pêcheurs repose sur un véritable partenariat : nous les payons tous les mois, quelle que soit la quantité de déchets marins qu’ils récoltent, pour leur assurer un revenu supplémentaire durable et des partenaires précieux pour nous, qui connaissent la mer et ses caractéristiques mieux que quiconque."
+          }
+        },
+        "f02826ed-762f-449a-befe-f5d2383e8aeb": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/MG_3556-2.jpg",
+            "title": "UNE ALTERNATIVE\nÀ LA PÊCHE",
+            "content": "Nous avons rencontré les pêcheurs avec qui nous avons travaillé pendant un été particulièrement chaud (2018) ce qui les empêchait de pêcher. Le but de notre partenariat est d’apporter à notre équipe de pêcheurs une activité supplémentaire quand le réchauffement et changement climatiques rendent la pêche de plus en plus difficile."
+          }
+        }
+      },
+      "block_order": [
+        "6d0faf3d-4570-4b4a-8780-1acac0494f64",
+        "f02826ed-762f-449a-befe-f5d2383e8aeb"
+      ],
+      "settings": {
+      }
+    },
+    "21348535-fa1c-4b95-9255-eee59005213f": {
+      "type": "logo",
       "settings": {
       }
     }
   },
   "order": [
-    "main"
+    "main",
+    "393a6aca-4427-4144-9b8a-3138582cc7dd",
+    "26e58ee6-4b94-4271-8e35-b382b3602b57",
+    "092917c6-4968-410c-bdff-e90015882067",
+    "9b18aba4-b044-42b7-b38e-d48b9bbc39c0",
+    "21348535-fa1c-4b95-9255-eee59005213f"
   ]
 }
