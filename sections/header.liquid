@@ -269,7 +269,7 @@
 			<div class="flex text-sm h-full items-center mx-4 lg:mx-0 {% if section.settings.secondary-menu != blank %} lg:ml-8 {% endif %}">
 				<localization-form class="block">
 					{%- form 'localization', id: 'HeaderLanguageForm', class: '' -%}
-						<select class="bg-transparent appearance-none" name="locale_code">
+						<select class="bg-transparent appearance-none cursor-pointer" name="locale_code">
 							{%- for language in localization.available_languages -%}
 								<option value="{{ language.iso_code }}" lang="{{ language.iso_code }}" {%- if language.iso_code == localization.language.iso_code %} selected {% endif %}>
 									{{- language.iso_code | upcase -}}
@@ -281,7 +281,7 @@
 				&nbsp;/&nbsp;
 				<localization-form class="block">
 					{% form 'currency' %}
-						<select name="currency" class="bg-transparent appearance-none">
+						<select name="currency" class="bg-transparent appearance-none cursor-pointer">
 							{% for currency in shop.enabled_currencies %}
 								<option {% if currency == cart.currency %} selected="true" {% endif %}>{{- currency.iso_code -}}</option>
 							{% endfor %}
