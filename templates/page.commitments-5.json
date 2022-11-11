@@ -1,73 +1,12 @@
 {
-  "layout": "commitments",
   "sections": {
     "main": {
-      "type": "main-commitments",
-      "settings": {
-      }
-    },
-    "56c9abd1-8026-4102-ab34-34b86411ac23": {
-      "type": "twoimage",
-      "settings": {
-        "left_image": "shopify:\/\/shop_images\/0S1A4671.jpg",
-        "right_image": "shopify:\/\/shop_images\/0S1A4765-2.jpg"
-      }
-    },
-    "53085385-79b7-48e4-9966-e7e2a2da5341": {
-      "type": "timeline",
-      "blocks": {
-        "615aa38b-93ba-41d1-92c9-ddac6aac4a40": {
-          "type": "item",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/0S1A4669.jpg",
-            "title": "FABRIQUÉS À LA MAIN\nAU PORTUGAL",
-            "content": "Nos baskets sont assemblées dans un atelier spécialisé, prêt de Porto, avec des décennies d’expérience dans la fabrications de baskets techniques. Leur excellence repose dans la parfaite balance entre la résistance du travail à la main et la précision de la technologie. L’atelier garantie également les meilleures conditions de travail pour les artisans."
-          }
-        },
-        "38555656-3cab-40b7-9027-a72d41d12add": {
-          "type": "item",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/0S1A4897_2.jpg",
-            "title": "FABRIQUÉS À LA MAIN\nPOUR DURER",
-            "content": "Lors de la fabrication de nos baskets, la résistance est le premier souci de notre atelier: chaque couture est doublée à la main pour assurer sa pérennité, la semelle extérieure est à la fois cousue et collée à la partie supérieure et chaque geste est fait par des artisans avec des années d’expérience dans l’industrie et une solide connaissance à la fois de l’artisanat et du maniement des machines."
-          }
-        },
-        "4e90f6f3-a681-454b-aa6a-e74f6a41ad36": {
-          "type": "item",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/0S1A4761.jpg",
-            "title": "TESTÉES EN CONDITIONS\nEXTRÊMES",
-            "content": "Chaque matériaux que nous fabriquons est testé pour s’assurer qu’il répond à nos normes de résistance et de qualité. Ainsi, notre matériau est résistant et hydrofuge, notre semelle extérieure offre un amorti testé en laboratoire et l’ensemble de la paire est conçu pour offrir un soutien de la voûte plantaire et une respirabilité. Recyclé peut être de haute qualité."
-          }
-        },
-        "4558932d-2c9a-444f-9e06-7252ceebcef1": {
-          "type": "item",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/0S1A4790_2.jpg",
-            "title": "RECYCLER LE RECYCLÉ",
-            "content": "Quand votre paire de CORAIL° est usée, vous pouvez l’envoyer à notre partenaire Gebetex, une usine de tri française qui lui donnera une nouvelle vie comme matériau de construction. Nous travaillons aussi en ce moment même sur un nouveau projet qui nous permettra d’utiliser nos anciennes chaussures pour en fabriquer de nouvelles. Fermer la boucle."
-          }
-        }
-      },
-      "block_order": [
-        "615aa38b-93ba-41d1-92c9-ddac6aac4a40",
-        "38555656-3cab-40b7-9027-a72d41d12add",
-        "4e90f6f3-a681-454b-aa6a-e74f6a41ad36",
-        "4558932d-2c9a-444f-9e06-7252ceebcef1"
-      ],
-      "settings": {
-      }
-    },
-    "d3fec925-5fe1-433d-a840-f94da2b324f7": {
-      "type": "logo",
+      "type": "main-page",
       "settings": {
       }
     }
   },
   "order": [
-    "main",
-    "56c9abd1-8026-4102-ab34-34b86411ac23",
-    "53085385-79b7-48e4-9966-e7e2a2da5341",
-    "d3fec925-5fe1-433d-a840-f94da2b324f7"
+    "main"
   ]
 }
