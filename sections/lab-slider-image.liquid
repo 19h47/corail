@@ -30,7 +30,7 @@
 							{% if block.settings.image != nil or block.settings.title != blank or block.settings.content != blank %}
 								<li class="swiper-slide">
 									{% if block.settings.image != nil %}
-										<div class="rounded-[1.25rem] h-[24.625rem] overflow-hidden">
+										<div class="rounded-[1.25rem] lg:h-[24.625rem] overflow-hidden">
 											{{ block.settings.image | image_url: width: 354 | image_tag:
 												loading: 'lazy',
 												sizes: sizes,

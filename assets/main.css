@@ -2194,18 +2194,6 @@ html,
 	height: 14rem;
 }
 
-.h-\[22\.25rem\]{
-	height: 22.25rem;
-}
-
-.h-\[12rem\]{
-	height: 12rem;
-}
-
-.h-\[24\.625rem\]{
-	height: 24.625rem;
-}
-
 .h-\[15\.75rem\]{
 	height: 15.75rem;
 }
@@ -2224,10 +2212,6 @@ html,
 
 .h-\[20\.1875rem\]{
 	height: 20.1875rem;
-}
-
-.h-\[14\.75rem\]{
-	height: 14.75rem;
 }
 
 .h-\[calc\(100vh_-_4\.375rem\)\]{
@@ -4506,6 +4490,10 @@ html,
 
 	.lg\:h-\[13\.875rem\]{
 		height: 13.875rem;
+	}
+
+	.lg\:h-\[24\.625rem\]{
+		height: 24.625rem;
 	}
 
 	.lg\:h-\[50\.875rem\]{
