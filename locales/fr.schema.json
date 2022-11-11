@@ -1148,6 +1148,9 @@
         "show_description": {
           "label": "Afficher la description de la collection à partir de l'interface administrateur"
         },
+        "show_header_mobile": {
+          "label": "Afficher l'entête sur mobile"
+        },
         "description_style": {
           "label": "Style de la description",
           "options__1": {

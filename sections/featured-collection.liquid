@@ -39,26 +39,29 @@
 				<div class="mx-5 lg:mx-0 lg:flex lg:flex-col lg:justify-between lg:pb-11 lg:h-full">
 
 					{%- if section.settings.title != blank -%}
-						<h2 class="font-display font-semibold text-3xl uppercase">
+						<h2 class="font-display font-semibold text-3xl uppercase {% if section.settings.show_header_mobile %} {% else %} hidden lg:block {% endif %}">
 							{{- section.settings.title | newline_to_br -}}
 						</h2>
 					{%- endif -%}
 
-					<footer class="mt-2 lg:mt-14">
-						<ul class="flex gap-2">
+					<footer class="lg:mt-14 {% if section.settings.show_header_mobile %} mt-2 {% else %}">
+						<ul class="gap-2 {% if section.settings.show_header_mobile %} flex {% else %} hidden lg:flex {% endif %}">
 							<li>{% render 'svg', icon: 'shoe', classes: 'h-7 w-7 fill-current', description: shop.name %}</li>
-							{% comment %} <li>{% render 'svg', icon: 'shirt', classes: 'h-7 w-7 fill-current', description: shop.name %}</li> {% endcomment %}
 							<li>{% render 'svg', icon: 'sea', classes: 'h-7 w-7 fill-current', description: shop.name %}</li>
 							<li>{% render 'svg', icon: 'bottle', classes: 'h-7 w-7 fill-current', description: shop.name %}</li>
 						</ul>
 
 						{%- if section.settings.description != blank -%}
-							<div class="text-xl leading-6 font-display font-semibold mt-4 uppercase">{{- section.settings.description -}}</div>
+							<div
+								class="text-xl leading-6 font-display font-semibold mt-4 uppercase {% if section.settings.show_header_mobile %} {% else %} hidden lg:block {% endif %}"
+							>
+								{{- section.settings.description -}}
+							</div>
 						{%- endif -%}
 
 						<a
 							href="{{ section.settings.collection.url }}"
-							class="button mt-2 lg:mt-14 button-red lg:hidden inline-block align-middle w-full"
+							class="button lg:mt-14 button-red lg:hidden inline-block align-middle w-full {% if section.settings.show_header_mobile %} mt-2 {% endif %}"
 							aria-label="{{ 'sections.featured_collection.view_all_label' | t: collection_name: section.settings.collection.title }}"
 						>
 							&rightarrow;&nbsp;{{- 'sections.featured_collection.view_all' | t -}}
@@ -120,6 +123,12 @@
       "id": "show_description",
       "label": "t:sections.featured-collection.settings.show_description.label",
       "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "show_header_mobile",
+      "label": "t:sections.featured-collection.settings.show_header_mobile.label",
+      "default": true
     },
     {
       "type": "collection",
