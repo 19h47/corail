@@ -32,6 +32,7 @@
         "title": "Featured collection",
         "description": "",
         "show_description": false,
+        "show_header_mobile": false,
         "collection": "all",
         "products_to_show": 4,
         "show_secondary_image": false,
