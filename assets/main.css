@@ -1952,6 +1952,10 @@ html,
 	margin-bottom: 3.5rem;
 }
 
+.mb-10{
+	margin-bottom: 2.5rem;
+}
+
 .mb-20{
 	margin-bottom: 5rem;
 }
@@ -4274,6 +4278,10 @@ html,
 
 	.lg\:ml-1\/6{
 		margin-left: 16.666666666666668%;
+	}
+
+	.lg\:mb-20{
+		margin-bottom: 5rem;
 	}
 
 	.lg\:ml-3\/12{
