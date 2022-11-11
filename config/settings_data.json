@@ -390,8 +390,7 @@
           ],
           "settings": {
             "newsletter_enable": true,
-            "enable_country_selector": false,
-            "enable_language_selector": false
+            "enable_country_selector": false
           }
         },
         "main-password-header": {
