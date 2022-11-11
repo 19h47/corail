@@ -1,12 +1,74 @@
 {
+  "layout": "commitments",
   "sections": {
     "main": {
-      "type": "main-page",
+      "type": "main-commitments",
+      "settings": {
+      }
+    },
+    "a47143b9-abcb-4717-b2c0-728c5deddb31": {
+      "type": "image",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Boutton_Grosse_Machine_Commintment__3.jpg",
+        "title": "",
+        "radius": false
+      }
+    },
+    "b314cfce-96c6-4ff6-ac91-48361e279069": {
+      "type": "timeline",
+      "blocks": {
+        "ce0214bc-a408-4ee5-8b7e-fdfcb52e381f": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/P1125546_2b89ba89-ba86-4b94-b2f6-a07f0bb9c8e5.jpg",
+            "title": "LA SALLE DES MACHINES",
+            "content": "Le CORAIL° Lab est là où les déchets marins récoltés sont triés, stockés et broyés pour être ensuite utilisés dans la fabrication de nos produits. Nous avons investi dans des machines et des broyeuses d’occasion avec de hauts standards de qualité pour assurer le comfort des travailleurs : systèmes insonorisants, silos anti-poussière et moteurs anti-chaleur."
+          }
+        },
+        "51d76eaf-2bfb-4e30-81b1-86fa503e20b5": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/P1125546.jpg",
+            "title": "STARTED FROM\nTHE BOTTLE",
+            "content": "Les premiers types de déchets que nous avons transformés dans le CORAIL° Lab étianet les bouteilles plastique en PET. Ce sont des matériaux polyvalents que nous broyons à deux fins : les bouteilles transparentes sont transformés en tissus en France, et les bouteilles colorées avec les bouchons et étiquettes sont injectées dans nos semelles extérieures, au Portugal."
+          }
+        },
+        "869058f9-f469-4dfb-9e32-6ea3507a12b9": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/P1125328.jpg",
+            "title": "UNE NOUVELLE VIE POUR\nLES FILETS FANTÔMES",
+            "content": "Après des mois de tests, nous sommes désormais capables de broyer l’un des plus importants déchets présents dans les océans : les filets de pêche abandonnés trouvés au fond de l’océan. Mixés avec les bouteilles en PET broyés, ils composent notre SEADUST."
+          }
+        },
+        "b519a0fe-a0cb-4b22-a6ce-21fb925d9b2d": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/P1114641_2.jpg",
+            "title": "ET APRÈS ?",
+            "content": "Après les bouteilles PET en 2019 et les filets de pêche en 2022, nous travaillons sur nos prochains déchets marins que nous serons capables de transformer et d’injecter dans nos produits. Nous réalisons des tests tous les jours sur différentes pollutions marines collectées par notre équipe. Tant qu’il y aura des déchets marins, nous essaierons de les transformer dans notre CORAIL° Lab."
+          }
+        }
+      },
+      "block_order": [
+        "ce0214bc-a408-4ee5-8b7e-fdfcb52e381f",
+        "51d76eaf-2bfb-4e30-81b1-86fa503e20b5",
+        "869058f9-f469-4dfb-9e32-6ea3507a12b9",
+        "b519a0fe-a0cb-4b22-a6ce-21fb925d9b2d"
+      ],
+      "settings": {
+      }
+    },
+    "f26a43b5-6ff3-45bf-a839-d8f3236ce24e": {
+      "type": "logo",
       "settings": {
       }
     }
   },
   "order": [
-    "main"
+    "main",
+    "a47143b9-abcb-4717-b2c0-728c5deddb31",
+    "b314cfce-96c6-4ff6-ac91-48361e279069",
+    "f26a43b5-6ff3-45bf-a839-d8f3236ce24e"
   ]
 }
