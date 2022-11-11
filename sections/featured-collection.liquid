@@ -44,7 +44,7 @@
 						</h2>
 					{%- endif -%}
 
-					<footer class="lg:mt-14 {% if section.settings.show_header_mobile %} mt-2 {% else %}">
+					<footer class="lg:mt-14 {% if section.settings.show_header_mobile %} mt-2 {% endif %}">
 						<ul class="gap-2 {% if section.settings.show_header_mobile %} flex {% else %} hidden lg:flex {% endif %}">
 							<li>{% render 'svg', icon: 'shoe', classes: 'h-7 w-7 fill-current', description: shop.name %}</li>
 							<li>{% render 'svg', icon: 'sea', classes: 'h-7 w-7 fill-current', description: shop.name %}</li>
