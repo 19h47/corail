@@ -1,12 +1,64 @@
 {
+  "layout": "commitments",
   "sections": {
     "main": {
-      "type": "main-page",
+      "type": "main-commitments",
+      "settings": {
+      }
+    },
+    "c3990efb-0191-449c-8e29-7bf79ac24085": {
+      "type": "twoimage",
+      "settings": {
+        "left_image": "shopify:\/\/shop_images\/Sea_Part.1.jpg",
+        "right_image": "shopify:\/\/shop_images\/Sea_Part.2.jpg"
+      }
+    },
+    "f4b7179e-b899-4a13-94cb-cf90156c0788": {
+      "type": "timeline",
+      "blocks": {
+        "b2ad8133-3164-45fc-8971-a172500ba236": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Stock_Platic_Threat_Commintment_1_7463cc75-39c7-4d63-bef2-1019932ca95b.jpg",
+            "title": "LA MENACE DU PLASTIQUE",
+            "content": "Notre mission est la même depuis le début: transformer une menace en une opportunité et penser au-delà du nettoyage. Retirer le plastique de la mer est la première étape, le transformer en une matière première performante est la solution. Nous pensons que le nettoyage et l’éducation sont les clés pour assurer un changement de mentalité durable."
+          }
+        },
+        "7b6aac9e-1641-45ff-b126-98a0fc7583d8": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/SEA_R_D_Commintment_1.jpg",
+            "title": "LA MER EST NOTRE R&D",
+            "content": "La mer est la source de tout, la source de la vie elle-même. Quand nous créons nos produits ou pensons notre processus, notre inspiration vient toujours de ce que nous trouvons dans la mer: merveilles des systèmes respiratoires, organismes ultra-adatables, formes de vie génératrices de lumière. Nos recherches se basent sur l’observation et la duplication de ce que la mer a déjà créé et perfectionné."
+          }
+        },
+        "a7f65b92-acce-4664-b631-fa62402a689a": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/REBUILDING_Commintment_1_751b61f3-bdf1-45c8-9f78-bc79c845e1bf.jpg",
+            "title": "RECONSTRUIRE",
+            "content": "Notre plus grand projet pour enfin boucler la boucle. Nettoyer, trouver l’inspiration, reconstruire. Nous travaillons actuellement sur des projets pour revitaliser la vie marine dans les endroits endommagés, pour rallumer la lumière dans des endroits où elle a été trop longtemps éteinte. Nettoyer est un début, reconstruire est l’objectif principal."
+          }
+        }
+      },
+      "block_order": [
+        "b2ad8133-3164-45fc-8971-a172500ba236",
+        "7b6aac9e-1641-45ff-b126-98a0fc7583d8",
+        "a7f65b92-acce-4664-b631-fa62402a689a"
+      ],
+      "settings": {
+      }
+    },
+    "7260c216-9e57-46f7-a358-6d7e30cdf3d1": {
+      "type": "logo",
       "settings": {
       }
     }
   },
   "order": [
-    "main"
+    "main",
+    "c3990efb-0191-449c-8e29-7bf79ac24085",
+    "f4b7179e-b899-4a13-94cb-cf90156c0788",
+    "7260c216-9e57-46f7-a358-6d7e30cdf3d1"
   ]
 }
