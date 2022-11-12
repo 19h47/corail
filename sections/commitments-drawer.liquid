@@ -16,7 +16,7 @@
 	%}
 
 	<details-disclosure>
-		<div class="drawercommitments z-10 fixed lg:absolute lg:h-full lg:left-0 lg:top-0 bottom-0 inset-x-0 lg:inset-x-auto lg:flex border-t-[0.0625rem] border-orange-grayish lg:border-t-0">
+		<div class="commitments-drawer z-10 fixed lg:absolute lg:h-full lg:left-0 lg:top-0 bottom-0 inset-x-0 lg:inset-x-auto lg:flex border-t-[0.0625rem] border-orange-grayish lg:border-t-0">
 			<details class="group lg:sticky lg:top-[4.375rem] lg:h-[calc(100vh_+_4.375rem)]">
 				{%- for block in section.blocks -%}
 					{% case block.type %}
@@ -75,27 +75,27 @@
 
 {% schema %}
 {
-  "name": "t:sections.drawercommintments.name",
-  "class": "section-drawercommintments",
+  "name": "t:sections.commintments-drawer.name",
+  "class": "section-commintments-drawer",
   "settings": [
 
   ],
   "blocks": [
     {
       "type": "page",
-      "name": "t:sections.drawercommintments.blocks.pages.name",
+      "name": "t:sections.commintments-drawer.blocks.pages.name",
       "settings": [
         {
           "type": "page",
           "id": "page",
-          "label": "t:sections.drawercommintments.blocks.pages.settings.page.label"
+          "label": "t:sections.commintments-drawer.blocks.pages.settings.page.label"
         }
       ]
     }
   ],
   "presets": [
     {
-      "name": "t:sections.drawercommintments.presets.name"
+      "name": "t:sections.commintments-drawer.presets.name"
     }
   ]
 }

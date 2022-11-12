@@ -194,6 +194,14 @@
 															</div>
 														</details>
 													{% when 'price_range' %}
+														{% liquid
+															assign currencies_using_comma_decimals = 'ANG,ARS,BRL,BYN,BYR,CLF,CLP,COP,CRC,CZK,DKK,EUR,HRK,HUF,IDR,ISK,MZN,NOK,PLN,RON,RUB,SEK,TRY,UYU,VES,VND' | split: ','
+															assign uses_comma_decimals = false
+
+															if currencies_using_comma_decimals contains cart.currency.iso_code
+															  assign uses_comma_decimals = true
+															endif
+														%}
 														<details
 															id="Details-Mobile-{{ forloop.index }}-{{ section.id }}"
 															class="mobile-facets__details js-filter"
@@ -214,48 +222,49 @@
 
 																<p class="px-5 my-5 font-display font-medium">{{ "products.facets.max_price" | t: price: max_price_amount }}</p>
 
-																<price-range class="facets__price px-5 flex">
-																	<span class="field-currency">{{ cart.currency.symbol }}</span>
-																	<div class="field">
-																		<input class="field__input"
-																		name="{{ filter.min_value.param_name }}"
-																		id="Mobile-Filter-{{ filter.label | escape }}-GTE"
-																		{%- if filter.min_value.value -%}
-																			{%- if uses_comma_decimals -%}value="{{ filter.min_value.value | money_without_currency | replace: '.', '' | replace: ',', '.' }}"{%- else -%}value="{{ filter.min_value.value | money_without_currency | replace: ',', '' }}"{% endif %}
-																		{%- endif %}
-																		type="number"
-																		placeholder="0"
-																		min="0"
-																		inputmode="decimal"
-																		{% if uses_comma_decimals %}
-																			max="{{ filter.range_max | money_without_currency | replace: '.', '' | replace: ',', '.' }}"
-																		{% else %}
-																			max="{{ filter.range_max | money_without_currency | replace: ',', '' }}"
-																		{% endif %}
+																<price-range class="facets__price px-5 flex gap-x-2.5 items-end">
+																	<span class="my-2">{{- cart.currency.symbol -}}</span>
+																	<div class="field flex-grow">
+																		<label class="block mb-2 text-sm" for="Mobile-Filter-{{ filter.label | escape }}-GTE">{{ 'products.facets.from' | t }}</label>
+																		<input
+																			class="border-[0.0625rem] border-orange-grayish block w-full p-2"
+																			name="{{ filter.min_value.param_name }}"
+																			id="Mobile-Filter-{{ filter.label | escape }}-GTE"
+																			{%- if filter.min_value.value -%}
+																				{%- if uses_comma_decimals -%}value="{{ filter.min_value.value | money_without_currency | replace: '.', '' | replace: ',', '.' }}"{%- else -%}value="{{ filter.min_value.value | money_without_currency | replace: ',', '' }}"{% endif %}
+																			{%- endif %}
+																			type="number"
+																			placeholder="0"
+																			min="0"
+																			inputmode="decimal"
+																			{% if uses_comma_decimals %}
+																				max="{{ filter.range_max | money_without_currency | replace: '.', '' | replace: ',', '.' }}"
+																			{% else %}
+																				max="{{ filter.range_max | money_without_currency | replace: ',', '' }}"
+																			{% endif %}
 																		>
-																		<label class="field__label" for="Mobile-Filter-{{ filter.label | escape }}-GTE">{{ 'products.facets.from' | t }}</label>
 																	</div>
-
-																	<span class="field-currency">{{ cart.currency.symbol }}</span>
-																	<div class="field">
-																		<input class="field__input"
-																		name="{{ filter.max_value.param_name }}"
-																		id="Mobile-Filter-{{ filter.label | escape }}-LTE"
-																		{%- if filter.max_value.value -%}
-																			{%- if uses_comma_decimals -%}value="{{ filter.max_value.value | money_without_currency | replace: '.', '' | replace: ',', '.' }}"{%- else -%}value="{{ filter.max_value.value | money_without_currency | replace: ',', '' }}"{% endif %}
-																		{%- endif %}
-																		type="number"
-																		min="0"
-																		inputmode="decimal"
-																		{% if uses_comma_decimals %}
-																			placeholder="{{ filter.range_max | money_without_currency | replace: '.', '' | replace: ',', '.' }}"
-																			max="{{ filter.range_max | money_without_currency | replace: '.', '' | replace: ',', '.' }}"
-																		{% else %}
-																			placeholder="{{ filter.range_max | money_without_currency | replace: ',', '' }}"
-																			max="{{ filter.range_max | money_without_currency | replace: ',', '' }}"
-																		{% endif %}
+																	<span class="my-2">{{- cart.currency.symbol -}}</span>
+																	<div class="field flex-grow">
+																		<label class="block mb-2 text-sm" for="Mobile-Filter-{{ filter.label | escape }}-LTE">{{ 'products.facets.to' | t }}</label>
+																		<input
+																			class="border-[0.0625rem] border-orange-grayish block w-full p-2"
+																			name="{{ filter.max_value.param_name }}"
+																			id="Mobile-Filter-{{ filter.label | escape }}-LTE"
+																			{%- if filter.max_value.value -%}
+																				{%- if uses_comma_decimals -%}value="{{ filter.max_value.value | money_without_currency | replace: '.', '' | replace: ',', '.' }}"{%- else -%}value="{{ filter.max_value.value | money_without_currency | replace: ',', '' }}"{% endif %}
+																			{%- endif %}
+																			type="number"
+																			min="0"
+																			inputmode="decimal"
+																			{% if uses_comma_decimals %}
+																				placeholder="{{ filter.range_max | money_without_currency | replace: '.', '' | replace: ',', '.' }}"
+																				max="{{ filter.range_max | money_without_currency | replace: '.', '' | replace: ',', '.' }}"
+																			{% else %}
+																				placeholder="{{ filter.range_max | money_without_currency | replace: ',', '' }}"
+																				max="{{ filter.range_max | money_without_currency | replace: ',', '' }}"
+																			{% endif %}
 																		>
-																		<label class="field__label" for="Mobile-Filter-{{ filter.label | escape }}-LTE">{{ 'products.facets.to' | t }}</label>
 																	</div>
 																</price-range>
 															</div>
@@ -270,22 +279,19 @@
 										<div class="mobile-facets__details js-filter p-5" data-index="mobile-{{ forloop.index }}">
 											<div class="mobile-facets__summary">
 												<div class="mobile-facets__sort">
-													<label for="SortBy-mobile" class="uppercase font-bold font-display leading-7">
+													<label for="SortBy-mobile" class="mb-2 block uppercase font-bold font-display leading-7">
 														{{ 'products.facets.sort_by_label' | t }}
 													</label>
-													<div class="select">
-														<select name="sort_by" class="select__select" id="SortBy-mobile" aria-describedby="a11y-refresh-page-message">
-															{%- for option in results.sort_options -%}
-																<option
-																	value="{{ option.value | escape }}"
-																	{% if option.value == sort_by %} selected="selected" {% endif %}
-																>
-																	{{- option.name | escape -}}
-																</option>
-															{%- endfor -%}
-														</select>
-														{% render 'icon-caret' %}
-													</div>
+													<select name="sort_by" class="border-[0.0625rem] border-orange-grayish block w-full p-2" id="SortBy-mobile" aria-describedby="a11y-refresh-page-message">
+														{%- for option in results.sort_options -%}
+															<option
+																value="{{ option.value | escape }}"
+																{% if option.value == sort_by %} selected="selected" {% endif %}
+															>
+																{{- option.name | escape -}}
+															</option>
+														{%- endfor -%}
+													</select>
 												</div>
 											</div>
 										</div>

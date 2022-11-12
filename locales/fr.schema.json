@@ -627,7 +627,7 @@
         "name": "Image"
       }
     },
-    "drawercommitments": {
+    "commitments-drawer": {
       "name": "Tiroir",
       "presets": {
         "name": "Tiroir"

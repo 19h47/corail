@@ -354,10 +354,6 @@ table:not([class]) th {
 	text-align: left;
 }
 
-.center {
-	text-align: center;
-}
-
 .right {
 	text-align: right;
 }
@@ -895,22 +891,6 @@ deferred-media {
 	transition: box-shadow 1s ease-in-out;
 }
 
-.field__label {
-	left: calc(var(--inputs-border-width) + 1rem);
-	top: calc(1rem + var(--inputs-border-width));
-	margin-bottom: 0;
-	pointer-events: none;
-	position: absolute;
-	transition: top 1s ease-in-out, font-size 1s ease-in-out;
-}
-
-.field__input:focus ~ .field__label,
-.field__input:not(:placeholder-shown) ~ .field__label,
-.field__input:-webkit-autofill ~ .field__label {
-	top: calc(var(--inputs-border-width) + 0.5rem);
-	left: calc(var(--inputs-border-width) + 1rem);
-}
-
 .field__input:focus,
 .field__input:not(:placeholder-shown),
 .field__input:-webkit-autofill {
@@ -948,8 +928,7 @@ deferred-media {
 	width: 2.5rem;
 }
 
-.field__input:-webkit-autofill ~ .field__button,
-.field__input:-webkit-autofill ~ .field__label {
+.field__input:-webkit-autofill ~ .field__button {
 	color: rgb(0, 0, 0);
 }
 
