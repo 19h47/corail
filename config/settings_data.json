@@ -180,6 +180,50 @@
         "settings": {
           "color_scheme": "background-1"
         }
+      },
+      "commitments-drawer": {
+        "type": "commitments-drawer",
+        "blocks": {
+          "808366b0-b665-48f1-8e8c-0033e7e1ed4c": {
+            "type": "page",
+            "settings": {
+              "page": "from-the-sea"
+            }
+          },
+          "ee216ce6-5f1e-4fb7-b75f-93cce22db6f7": {
+            "type": "page",
+            "settings": {
+              "page": "cleaning-up-the-sea"
+            }
+          },
+          "6ee5469d-3210-4434-95b8-862afb9492d3": {
+            "type": "page",
+            "settings": {
+              "page": "transforming-marine-waste"
+            }
+          },
+          "105ff0a8-a7be-4fcc-a952-a08f72bce9b8": {
+            "type": "page",
+            "settings": {
+              "page": "our-social-impact"
+            }
+          },
+          "6f4117bc-7cdd-4d05-be16-4fe23f16c895": {
+            "type": "page",
+            "settings": {
+              "page": "handmade-to-last-long"
+            }
+          }
+        },
+        "block_order": [
+          "808366b0-b665-48f1-8e8c-0033e7e1ed4c",
+          "ee216ce6-5f1e-4fb7-b75f-93cce22db6f7",
+          "6ee5469d-3210-4434-95b8-862afb9492d3",
+          "105ff0a8-a7be-4fcc-a952-a08f72bce9b8",
+          "6f4117bc-7cdd-4d05-be16-4fe23f16c895"
+        ],
+        "settings": {
+        }
       }
     },
     "content_for_index": [

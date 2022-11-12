@@ -1312,9 +1312,9 @@
             "label": "Centré au milieu"
           }
         },
-		"header_menu": {
-			"content": "Menu principal"
-		},
+        "header_menu": {
+          "content": "Menu principal"
+        },
         "menu": {
           "label": "Menu desktop"
         },
