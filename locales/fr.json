@@ -1,5 +1,12 @@
 {
   "general": {
+	"lab": {
+		"corail-lab": "Corail Lab",
+		"from-pollution-to-solution": "From pollution to solution",
+		"lab-materials": "Lab materials",
+		"lab-house": "Lab house",
+		"relatives-articles": "Relatives articles"
+	},
     "password_page": {
       "login_form_heading": "Accéder à la boutique à l'aide d'un mot de passe :",
       "login_password_button": "Saisir avec un mot de passe",
