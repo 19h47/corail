@@ -1313,7 +1313,7 @@
           }
         },
 		"header_menu": {
-			"content": "Menu"
+			"content": "Menu principal"
 		},
         "menu": {
           "label": "Menu desktop"
