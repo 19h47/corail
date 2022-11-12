@@ -11,15 +11,15 @@
 			<div class="menu-drawer__inner-container">
 				<div class="h-full flex flex-col justify-between overflow-y-auto">
 					<nav class="menu-drawer__navigation p-5 h-full">
-						<ul class="menu-drawer__menu has-submenu list-none space-y-4 flex flex-col h-full" role="list">
-							{% render 'item-menu', links: section.settings.menu_mobile.links %}
-							{% render 'item-menu', links: section.settings.secondary_menu_mobile.links %}
+						<ul class="has-submenu list-none space-y-4 flex flex-col h-full" role="list">
+							{% render 'item-menu', links: section.settings.menu-mobile.links %}
+							{% render 'item-menu', links: section.settings.secondary-menu-mobile.links, first_item_classes: '!mt-auto' %}
 						</ul>
 					</nav>
 
-					<div class="p-5 py-[1.4375rem] relative">
-						<hr class="w-full h-[0.0625rem] absolute top-0 inset-x-0 block bg-orange-grayish"/>
-						{%- if shop.customer_accounts_enabled -%}
+					{%- if shop.customer_accounts_enabled -%}
+						<div class="p-5 py-[1.4375rem] relative">
+							<hr class="w-full h-[0.0625rem] absolute top-0 inset-x-0 block bg-orange-grayish"/>
 							<a
 								href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}"
 								class="flex font-display"
@@ -33,8 +33,8 @@
 									endif
 								-%}
 							</a>
-						{%- endif -%}
-					</div>
+						</div>
+					{%- endif -%}
 				</div>
 			</div>
 		</div>

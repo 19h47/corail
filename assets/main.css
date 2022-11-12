@@ -2324,8 +2324,8 @@ html,
 	width: 0.5rem;
 }
 
-.w-7{
-	width: 1.75rem;
+.w-auto{
+	width: auto;
 }
 
 .w-\[22\.75rem\]{
@@ -2386,6 +2386,10 @@ html,
 
 .w-\[4\.25rem\]{
 	width: 4.25rem;
+}
+
+.w-7{
+	width: 1.75rem;
 }
 
 .w-\[0\.875rem\]{
@@ -4460,10 +4464,6 @@ html,
 		display: table-row;
 	}
 
-	.lg\:list-item{
-		display: list-item;
-	}
-
 	.lg\:hidden{
 		display: none;
 	}
@@ -4684,6 +4684,10 @@ html,
 
 	.lg\:justify-between{
 		justify-content: space-between;
+	}
+
+	.lg\:gap-3{
+		gap: 0.75rem;
 	}
 
 	.lg\:gap-y-0{

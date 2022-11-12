@@ -45,10 +45,10 @@
 					{%- endif -%}
 
 					<footer class="lg:mt-14 {% if section.settings.show_header_mobile %} mt-2 {% endif %}">
-						<ul class="gap-2 {% if section.settings.show_header_mobile %} flex {% else %} hidden lg:flex {% endif %}">
-							<li>{% render 'svg', icon: 'shoe', classes: 'h-7 w-7 fill-current', description: shop.name %}</li>
-							<li>{% render 'svg', icon: 'sea', classes: 'h-7 w-7 fill-current', description: shop.name %}</li>
-							<li>{% render 'svg', icon: 'bottle', classes: 'h-7 w-7 fill-current', description: shop.name %}</li>
+						<ul class="gap-2 lg:gap-3 {% if section.settings.show_header_mobile %} flex {% else %} hidden lg:flex {% endif %}">
+							<li>{% render 'svg', icon: 'shoe', classes: 'h-7 w-auto fill-current', description: shop.name, view-box: '0 0 26 18' %}</li>
+							<li>{% render 'svg', icon: 'sea', classes: 'h-7 w-auto fill-current', description: shop.name, view-box: '0 0 24 20' %}</li>
+							<li>{% render 'svg', icon: 'bottle', classes: 'h-7 w-auto fill-current', description: shop.name, view-box: '0 0 14 24' %}</li>
 						</ul>
 
 						{%- if section.settings.description != blank -%}

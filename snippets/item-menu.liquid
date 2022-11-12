@@ -1,11 +1,13 @@
+{% assign first_item_classes = first_item_classes | default: '' %}
+
 {%- for link in links -%}
-	<li>
+	<li{% if first_item_classes != blank and forloop.first %} class="{{ first_item_classes }}" {% endif %}>
 
 		{%- if link.links != blank and link.title != '#' -%}
 			<details id="Details-menu-drawer-menu-item-{{ forloop.index }}">
 
 				<summary class="uppercase font-bold font-display leading-7 flex items-center {% if link.child_active %} is-active {% endif %}">
-					{{ link.title }}
+					{{- link.title -}}
 					{% render 'svg', icon: 'chevron-right', classes: 'ml-2.5 w-2.5 h-2.5' %}
 				</summary>
 
@@ -31,9 +33,40 @@
 									<li>
 
 										{%- if childlink.links == blank -%}
-											<a href="{{ childlink.url }}" class="menu-drawer__menu-item {% if childlink.current %} menu-drawer__menu-item--active{% endif %}"{% if childlink.current %} aria-current="page"{% endif %}>
-												{{ childlink.title | escape }}
-											</a>
+
+											{% if childlink.title contains '[icon-mail] ' %}
+												<a
+													href="{{ childlink.url }}"
+													class="py-1 flex items-center hover:underline is-active:underline {% if childlink.current %} is-active {% endif %}"
+												>
+													{% render 'svg', icon: 'mail', classes: 'w-5 h-5 mr-2' %}
+													{{ childlink.title | replace: '[icon-mail] ', '' | escape }}
+												</a>
+											{% elsif childlink.title contains '[icon-at] ' %}
+												<a
+													href="{{ childlink.url }}"
+													class="py-1 flex items-center hover:underline"
+												>
+													{% render 'svg', icon: 'at', classes: 'w-5 h-5 mr-2' %}
+													{{ childlink.title | replace: '[icon-at] ', '' | escape }}
+												</a>
+											{% elsif childlink.title contains '[icon-account] ' %}
+												<a
+													href="{{ childlink.url }}"
+													class="py-1 flex items-center hover:underline is-active:underline {% if childlink.current %} is-active {% endif %}"
+												>
+													{% render 'svg', icon: 'account', classes: 'w-5 h-5 mr-2' %}
+													{{ childlink.title | replace: '[icon-account] ', '' | escape }}
+												</a>
+											{% else %}
+												<a
+													href="{{ childlink.url }}"
+													class="is-active:underline hover:underline {% if childlink.current %} is-active {% endif %}"
+													{% if childlink.current %} aria-current="page" {% endif %}
+												>
+													{{- childlink.title | escape -}}
+												</a>
+											{% endif %}
 										{%- else -%}
 											<details id="Details-menu-drawer-submenu-{{ forloop.index }}" class="my-4">
 
@@ -69,7 +102,7 @@
 																	<a
 																		href="{{ grandchildlink.url }}"
 																		class="is-active:underline hover:underline font-display leading-8 {% if grandchildlink.current %} is-active {% endif %}"
-																		{% if grandchildlink.current %} aria-current="page"{% endif %}
+																		{% if grandchildlink.current %} aria-current="page" {% endif %}
 																	>
 																		{{ grandchildlink.title | replace: ' [new]', '' | strip | escape }}
 																	</a>
@@ -94,7 +127,7 @@
 		{%- else -%}
 			<a
 				href="{{ link.url }}"
-				class="uppercase font-bold font-display leading-7 {% if link.current %} is-active {% endif %}"
+				class="uppercase font-bold font-display leading-7 is-active:underline {% if link.current %} is-active {% endif %}"
 				{% if link.current %} aria-current="page" {% endif %}
 			>
 				{{ link.title | escape }}
