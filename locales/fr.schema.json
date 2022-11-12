@@ -1312,18 +1312,18 @@
             "label": "Centré au milieu"
           }
         },
-		"header_menu": {
-			"content": "Menu"
-		},
+        "header_menu": {
+          "content": "Menu"
+        },
         "menu": {
           "label": "Menu desktop"
         },
         "menu_mobile": {
           "label": "Menu mobile"
         },
-		"header_secondary_menu": {
-			"content": "Menu secondaire"
-		},
+        "header_secondary_menu": {
+          "content": "Menu secondaire"
+        },
         "secondary_menu": {
           "label": "Menu secondaire desktop"
         },
