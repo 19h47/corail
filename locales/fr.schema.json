@@ -1312,11 +1312,23 @@
             "label": "Centré au milieu"
           }
         },
+		"header_menu": {
+			"content": "Menu"
+		},
         "menu": {
-          "label": "Menu"
+          "label": "Menu desktop"
         },
+        "menu_mobile": {
+          "label": "Menu mobile"
+        },
+		"header_secondary_menu": {
+			"content": "Menu secondaire"
+		},
         "secondary_menu": {
-          "label": "Menu secondaire"
+          "label": "Menu secondaire desktop"
+        },
+        "secondary_menu_mobile": {
+          "label": "Menu secondaire mobile"
         },
         "show_line_separator": {
           "label": "Afficher la ligne de séparation"
