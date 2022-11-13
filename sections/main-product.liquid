@@ -458,8 +458,12 @@
 												<legend class="border-b border-orange-grayish mb-3 w-full text-sm pb-2 flex">
 													{{ option.name }}&nbsp;<span class="js-legend">{% if option.selected_value %}({{ option.selected_value }}){% endif %}</span>
 
-													{% if 'Taille' == option.name or 'pointure' == option.name or 'Pointures' == option.name %}
+													{% if section.settings.size_chart_url and 'Taille' == option.name or 'pointure' == option.name or 'Pointures' == option.name %}
 														<div class="ml-auto flex items-center">
+															{% comment %} <a class="text-xs text-gray-dark underline" target="_blank" href="{{ sections.settings.size_chart_url }}">
+																{{- 'sections.main-product.size_chart' | t -}}
+															</a>&nbsp;&UpperRightArrow; {% endcomment %}
+
 															<div id="KiwiSizingChart"
 																data-collections="{{ product.collections | map: 'id' | join: ',' }}"
 																data-tags="{{ product.tags | join: ',' | escape }}"
@@ -1371,7 +1375,12 @@
       "id": "enable_video_looping",
       "default": false,
       "label": "t:sections.main-product.settings.enable_video_looping.label"
-    }
+    },
+	{
+		"type": "url",
+		"id": "size_chart_url",
+		"label": "t:sections.main-product.settings.size_chart_url.label"
+	}
   ]
 }
 {% endschema %}
