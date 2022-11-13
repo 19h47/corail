@@ -1075,6 +1075,9 @@
         "video_cover_image": {
           "label": "Image de couverture"
         },
+        "video_mobile": {
+          "label": "Vidéo mobile"
+        },
         "video": {
           "label": "Vidéo"
         },

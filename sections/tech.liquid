@@ -7,7 +7,31 @@
 		<div class="row lg:-mt-10 relative z-1 lg:order-2">
 			<div class="lg:col-8/12 lg:ml-2/12 lg:order-2">
 				{%- if section.settings.video -%}
-					<div class="relative lg:-mt-[2.625rem]" style="padding-bottom: {{ 100 | divided_by: section.settings.video.preview_image.aspect_ratio }}%">
+
+					{%- if section.settings.video_mobile -%}
+						<div
+							class="relative lg:-mt-[2.625rem] lg:hidden"
+							style="padding-bottom: {{ 100 | divided_by: section.settings.video_mobile.preview_image.aspect_ratio }}%"
+						>
+							<video
+								class="absolute inset-0 w-full h-full object-cover object-center"
+								autoplay
+								loop
+								playsinline
+								muted
+								poster="{{ section.settings.video_mobile.preview_image | image_url }}"
+							>
+								{% for source in section.settings.video_mobile.sources %}
+									<source src="{{ source.url }}" type="{{ source.mime_type }}">
+								{% endfor %}
+							</video>
+						</div>
+					{%- endif -%}
+
+					<div
+						class="relative lg:-mt-[2.625rem] {%- if section.settings.video_mobile -%} hidden lg:block {%- endif -%}"
+						style="padding-bottom: {{ 100 | divided_by: section.settings.video.preview_image.aspect_ratio }}%"
+					>
 						<video class="absolute inset-0 w-full h-full object-cover object-center" autoplay loop playsinline muted poster="{{ section.settings.video.preview_image | image_url }}">
 							{% for source in section.settings.video.sources %}
 								<source src="{{ source.url }}" type="{{ source.mime_type }}">
@@ -158,6 +182,11 @@
       "type": "video",
       "id": "video",
       "label": "t:sections.tech.settings.video.label"
+    },
+    {
+      "type": "video",
+      "id": "video_mobile",
+      "label": "t:sections.tech.settings.video_mobile.label"
     },
     {
       "type": "video_url",
