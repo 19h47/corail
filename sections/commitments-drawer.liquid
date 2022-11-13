@@ -43,29 +43,31 @@
 					{%- endcase -%}
 				{%- endfor -%}
 
-				<ul class="lg:group-hover:translate-x-full bg-white lg:order-1 lg:flex lg:flex-row-reverse bottom-0 inset-x-0 lg:left-auto absolute lg:inset-y-0 lg:right-[100%] lg:translate-x-0 lg:group-open:translate-x-full">
-					{%- for block in section.blocks -%}
-						{% case block.type %}
-							{%- when 'page' -%}
-								<li>
-									<a
-										class="py-3 lg:pl-7 lg:h-full text-left lg:flex-col items-center lg:items-start text-sm uppercase leading-none font-medium border-t-[0.0625rem] lg:border-t-0 lg:border-r-[0.0625rem] border-orange-grayish flex"
-										href="{{ block.settings.page.url }}"
-									>
-										{%- render 'svg', icon: 'bars-small', classes: 'w-2 h-4 mr-5 fill-current lg:hidden' -%}
-										<span class="text-3xl inline-block mr-1.5 lg:mr-0">
-											{{- forloop.index | prepend: '00' | slice: -2, 2 | append: '.' -}}
-										</span>
-										<div class="lg:[writing-mode:tb-rl] lg:-rotate-180 lg:mt-1.5">
-											<span class="hidden lg:inline">{{- forloop.index | prepend: '00' | slice: -2, 2 -}}</span>
-											{{- '&lowbar;' -}}
-											{{- block.settings.page.title | escape -}}
-										</div>
-									</a>
-								</li>
-						{%- endcase -%}
-					{%- endfor -%}
-				</ul>
+				<div>
+					<ul class="lg:group-hover:translate-x-full bg-white lg:order-1 lg:flex lg:flex-row-reverse bottom-0 inset-x-0 lg:left-auto absolute lg:inset-y-0 lg:right-[100%] lg:translate-x-0 lg:group-open:translate-x-full">
+						{%- for block in section.blocks -%}
+							{% case block.type %}
+								{%- when 'page' -%}
+									<li>
+										<a
+											class="py-3 lg:pl-7 lg:h-full text-left lg:flex-col items-center lg:items-start text-sm uppercase leading-none font-medium border-t-[0.0625rem] lg:border-t-0 lg:border-r-[0.0625rem] border-orange-grayish flex"
+											href="{{ block.settings.page.url }}"
+										>
+											{%- render 'svg', icon: 'bars-small', classes: 'w-2 h-4 mr-5 fill-current lg:hidden' -%}
+											<span class="text-3xl inline-block mr-1.5 lg:mr-0">
+												{{- forloop.index | prepend: '00' | slice: -2, 2 | append: '.' -}}
+											</span>
+											<div class="lg:[writing-mode:tb-rl] lg:-rotate-180 lg:mt-1.5">
+												<span class="hidden lg:inline">{{- forloop.index | prepend: '00' | slice: -2, 2 -}}</span>
+												{{- '&lowbar;' -}}
+												{{- block.settings.page.title | escape -}}
+											</div>
+										</a>
+									</li>
+							{%- endcase -%}
+						{%- endfor -%}
+					</ul>
+				</div>
 			</details>
 		</div>
 	</details-disclosure>

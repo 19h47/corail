@@ -18,7 +18,7 @@
 					<deferred-media
 						class="video-section__media lg:-mt-[2.625rem] deferred-media no-js-hidden global-media-settings"
 						data-media-id="{{ section.settings.video_url.id }}"
-						{% if section.settings.video_cover_image != blank %} style="padding-bottom: {{ 1 | divided_by: section.settings.video_cover_image.aspect_ratio | times: 100 }}%;"{% endif %}
+						{% if section.settings.video_cover_image != blank %} style="padding-bottom: {{ 1 | divided_by: section.settings.video_cover_image.aspect_ratio | times: 100 }}%;" {% endif %}
 					>
 						<button
 							id="Deferred-Poster-Modal-{{ section.settings.video_url.id }}"

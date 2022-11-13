@@ -11,6 +11,8 @@ if (!customElements.get('details-disclosure')) {
 		}
 
 		onFocusOut() {
+			// console.log('DetailsDisclosure.onFocusOut');
+
 			setTimeout(() => {
 				if (!this.contains(document.activeElement)) this.close();
 			});
@@ -30,9 +32,10 @@ if (!customElements.get('details-disclosure')) {
 
 		close() {
 			// console.log('DetailsDisclosure.close');
-
-			this.mainDetailsToggle.removeAttribute("open");
-			this.mainDetailsToggle.querySelector("summary").setAttribute("aria-expanded", false);
+			setTimeout(() => {
+				this.mainDetailsToggle.removeAttribute("open");
+				this.mainDetailsToggle.querySelector("summary").setAttribute("aria-expanded", false);
+			},100)
 		}
 	}
 
