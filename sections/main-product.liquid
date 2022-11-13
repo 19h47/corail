@@ -9,7 +9,7 @@
 	{{ 'section-main-product.css' | asset_url | stylesheet_tag }}
 	{{ 'component-accordion.css' | asset_url | stylesheet_tag }}
 	{{ 'component-slider.css' | asset_url | stylesheet_tag }}
-	{{ 'component-rating.css' | asset_url | stylesheet_tag }}
+	{% comment %} {{ 'component-rating.css' | asset_url | stylesheet_tag }} {% endcomment %}
 	{{ 'component-loading-overlay.css' | asset_url | stylesheet_tag }}
 	{{ 'component-deferred-media.css' | asset_url | stylesheet_tag }}
 
@@ -258,6 +258,7 @@
 				</media-gallery>
 			</div>
 			<div class="lg:w-5/12 mt-6 lg:my-10 px-5 lg:px-14">
+
 				<style>
 					#ProductInfo-{{ section.id }} > *:first-child {
 						margin-top: 0;
@@ -459,9 +460,19 @@
 
 													{% if section.settings.size_chart_url and 'Taille' == option.name or 'pointure' == option.name or 'Pointures' == option.name %}
 														<div class="ml-auto flex items-center">
-															<a class="text-xs text-gray-dark underline" target="_blank" href="{{ sections.settings.size_chart_url }}">
+															{% comment %} <a class="text-xs text-gray-dark underline" target="_blank" href="{{ sections.settings.size_chart_url }}">
 																{{- 'sections.main-product.size_chart' | t -}}
-															</a>&nbsp;&UpperRightArrow;
+															</a>&nbsp;&UpperRightArrow; {% endcomment %}
+
+															<div id="KiwiSizingChart"
+																data-collections="{{ product.collections | map: 'id' | join: ',' }}"
+																data-tags="{{ product.tags | join: ',' | escape }}"
+																data-product="{{ product.id }}"
+																data-vendor="{{ product.vendor | escape }}"
+																data-product-name="{{ product.title }}"
+																data-product-images="{{ product.images | json | escape }}"
+																data-type="{{ product.type | escape }}"
+															></div>
 														</div>
 													{% endif %}
 												</legend>

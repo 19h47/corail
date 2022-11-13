@@ -1306,6 +1306,28 @@ html,
 		height: 100vh;
 	}
 
+/*! purgecss start ignore */
+
+button.btn.ks-chart-modal-button {
+		margin: 0 !important;
+		padding: 0 !important;
+		border: none !important;
+	}
+
+button.btn.ks-chart-modal-button > span{
+	font-size: 0.75rem !important;
+	line-height: 1rem !important;
+	font-weight: 400 !important;
+	--tw-text-opacity: 1 !important;
+	color: rgb(118 118 118 / var(--tw-text-opacity)) !important;
+	text-decoration-line: underline !important;
+}
+
+button.btn.ks-chart-modal-button:after {
+		content: ' ↗';
+		display: inline;
+	}
+
 *, ::before, ::after{
 	--tw-border-spacing-x: 0;
 	--tw-border-spacing-y: 0;

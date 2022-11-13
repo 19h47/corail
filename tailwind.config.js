@@ -59,6 +59,7 @@ module.exports = {
 		"./snippets/*.liquid",
 		"./src/**/*.{html,js}",
 	],
+	safelist: ['btn'],
 	corePlugins: {
 		container: false,
 	},

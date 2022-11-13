@@ -19,7 +19,7 @@
   {% render 'card-product', show_vendor: section.settings.show_vendor %}
 {% endcomment %}
 
-{{ 'component-rating.css' | asset_url | stylesheet_tag }}
+{% comment %} {{ 'component-rating.css' | asset_url | stylesheet_tag }} {% endcomment %}
 
 {% liquid
 	assign card_product = card_product | default: null
