@@ -285,12 +285,8 @@ h2,
 }
 
 .form__message {
-	align-items: center;
 	display: flex;
-	font-size: 1.2rem;
-	line-height: 1;
-	margin-top: 1rem;
-	justify-content: center;
+	margin-top: 0.5rem;
 }
 
 .form__message .icon {

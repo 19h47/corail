@@ -956,20 +956,12 @@ input[type="checkbox"] {
 }
 
 .form__message {
-	align-items: center;
 	display: flex;
-	font-size: 1.4rem;
-	line-height: 1;
-	margin-top: 1rem;
+	margin-top: 0.5rem;
 }
 
 .form__message--large {
 	font-size: 1.6rem;
-}
-
-.customer .field .form__message {
-	font-size: 1.4rem;
-	text-align: left;
 }
 
 .form__message .icon,
