@@ -21,7 +21,11 @@ if (!customElements.get("product-modal")) {
 			const activeMediaContent = activeMediaTemplate ? activeMediaTemplate.content : null;
 
 			activeMedia.classList.add("active");
-			activeMedia.scrollIntoView();
+			activeMedia.scrollIntoView({
+				behavior: 'auto',
+				block: 'center',
+				inline: 'center'
+			});
 
 			const container = this.querySelector('[role="document"]');
 
