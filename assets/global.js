@@ -146,6 +146,16 @@ document.querySelectorAll('[id^="Details-"]').forEach($details => {
 
 const trapFocusHandlers = {};
 
+function removeTrapFocus(elementToFocus = null) {
+	document.removeEventListener("focusin", trapFocusHandlers.focusin);
+	document.removeEventListener("focusout", trapFocusHandlers.focusout);
+	document.removeEventListener("keydown", trapFocusHandlers.keydown);
+
+	if (elementToFocus) {
+		elementToFocus.focus();
+	}
+}
+
 function trapFocus(container, elementToFocus = container) {
 	const elements = getFocusableElements(container);
 	const first = elements[0];
@@ -159,13 +169,12 @@ function trapFocus(container, elementToFocus = container) {
 		document.addEventListener("keydown", trapFocusHandlers.keydown);
 	};
 
-	trapFocusHandlers.focusout = function () {
-		document.removeEventListener("keydown", trapFocusHandlers.keydown);
-	};
+	trapFocusHandlers.focusout = () => document.removeEventListener("keydown", trapFocusHandlers.keydown);
 
-	trapFocusHandlers.keydown = function (event) {
+	trapFocusHandlers.keydown =  event => {
 		if ("TAB" !== event.code.toUpperCase()) return; // If not TAB key
 		// On the last focusable element and tab forward, focus the first element.
+
 		if (event.target === last && !event.shiftKey) {
 			event.preventDefault();
 			first.focus();
@@ -182,13 +191,6 @@ function trapFocus(container, elementToFocus = container) {
 	document.addEventListener("focusin", trapFocusHandlers.focusin);
 
 	elementToFocus.focus();
-}
-
-// Here run the querySelector to figure out if the browser supports :focus-visible or not and run code based on it.
-try {
-	document.querySelector(":focus-visible");
-} catch (e) {
-	focusVisiblePolyfill();
 }
 
 function focusVisiblePolyfill() {
@@ -234,6 +236,13 @@ function focusVisiblePolyfill() {
 	);
 }
 
+// Here run the querySelector to figure out if the browser supports :focus-visible or not and run code based on it.
+try {
+	document.querySelector(":focus-visible");
+} catch (e) {
+	focusVisiblePolyfill();
+}
+
 // eslint-disable-next-line no-unused-vars
 function pauseAllMedia() {
 	document.querySelectorAll(".js-youtube").forEach(video => {
@@ -249,14 +258,6 @@ function pauseAllMedia() {
 	document.querySelectorAll("product-model").forEach(model => {
 		if (model.modelViewerUI) model.modelViewerUI.pause();
 	});
-}
-
-function removeTrapFocus(elementToFocus = null) {
-	document.removeEventListener("focusin", trapFocusHandlers.focusin);
-	document.removeEventListener("focusout", trapFocusHandlers.focusout);
-	document.removeEventListener("keydown", trapFocusHandlers.keydown);
-
-	if (elementToFocus) elementToFocus.focus();
 }
 
 // eslint-disable-next-line no-unused-vars
@@ -585,9 +586,11 @@ class ModalDialog extends HTMLElement {
 			"click",
 			this.hide.bind(this, false)
 		);
+
 		this.addEventListener("keyup", event => {
 			if ("ESCAPE" === event.code.toUpperCase()) this.hide();
 		});
+
 		if (this.classList.contains("media-modal")) {
 			this.addEventListener("pointerup", event => {
 				if ("mouse" === event.pointerType && !event.target.closest("deferred-media, product-model"))
@@ -611,8 +614,13 @@ class ModalDialog extends HTMLElement {
 		const popup = this.querySelector(".template-popup");
 		document.body.classList.add("overflow-hidden");
 		this.setAttribute("open", "");
-		if (popup) popup.loadContent();
+
+		if (popup) {
+			popup.loadContent();
+		}
+
 		trapFocus(this, this.querySelector('[role="dialog"]'));
+
 		window.pauseAllMedia();
 	}
 
@@ -620,7 +628,9 @@ class ModalDialog extends HTMLElement {
 		document.body.classList.remove("overflow-hidden");
 		document.body.dispatchEvent(new CustomEvent("modalClosed"));
 		this.removeAttribute("open");
-		removeTrapFocus(this.openedBy);
+
+		// removeTrapFocus(this.openedBy);
+
 		window.pauseAllMedia();
 	}
 }
@@ -636,15 +646,14 @@ class ModalOpener extends HTMLElement {
 			return;
 		}
 
-		button.addEventListener("click", () => {
-			const modal = document.querySelector(this.getAttribute("data-modal"));
+		const modal = document.querySelector(this.getAttribute("data-modal"));
 
-			if (modal) {
-				modal.show(button);
-			}
-		});
+		if (modal) {
+			button.addEventListener("click", () => modal.show(button));
+		}
 	}
 }
+
 customElements.define("modal-opener", ModalOpener);
 
 class DeferredMedia extends HTMLElement {

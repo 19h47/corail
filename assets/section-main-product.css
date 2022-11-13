@@ -639,11 +639,6 @@ a.product__text {
 	}
 }
 
-.product__media-item > * {
-	display: block;
-	position: relative;
-}
-
 .product__media-toggle {
 	display: flex;
 	border: none;
@@ -1044,11 +1039,6 @@ a.product__text {
 }
 
 @media screen and (max-width: 749px) {
-	.product__media-item {
-		display: flex;
-		align-items: center;
-	}
-
 	.product__modal-opener {
 		width: 100%;
 	}
