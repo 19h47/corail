@@ -128,28 +128,41 @@
 
 														<span class="absolute block left-[100%] inset-y-0 bg-orange-grayish w-[0.0625rem] h-full"></span>
 
+														{% liquid
+
+															if forloop.first
+																assign alt = ''
+																assign src = ''
+
+																for link in section.settings.menu.links
+																	if 'collection_link' == link.type and link.object.image
+																		assign alt = link.title
+																		assign srcalt = link.object.image | image_url: width: 334
+																		break
+																	endif
+
+																	for childlink in link.links
+																		if 'collection_link' == childlink.type and childlink.object.image
+																			assign alt = childlink.title
+																			assign src = childlink.object.image | image_url: width: 334
+																			break
+																		endif
+
+																		for grandchildlink in childlink.links
+																			if 'collection_link' == grandchildlink.type and grandchildlink.object.image
+																				assign alt = grandchildlink.title
+																				assign src = grandchildlink.object.image | image_url: width: 334
+																				break
+																			endif
+																		endfor
+																	endfor
+
+																endfor
+															endif
+														%}
+
 														{% if forloop.first %}
-															{%- for link in section.settings.menu.links -%}
-																{% if 'collection_link' == link.type and link.object.image %}
-																	<img class="js-header-menu-image mt-8 w-full h-auto block" alt="{{ link.title }}" src="{{ link.object.image | image_url: width: 334 }}" width="178" height="267" loading="lazy" />
-																	{% break %}
-																{% endif %}
-
-																{%- for childlink in link.links -%}
-																	{% if 'collection_link' == childlink.type and childlink.object.image %}
-																		<img class="js-header-menu-image mt-8 w-full h-auto block" alt="{{ childlink.title }}" src="{{ childlink.object.image | image_url: width: 334 }}" width="178" height="267" loading="lazy" />
-																		{% break %}
-																	{% endif %}
-
-																	{%- for grandchildlink in childlink.links -%}
-																		{% if 'collection_link' == grandchildlink.type and grandchildlink.object.image %}
-																			<img class="js-header-menu-image mt-8 w-full h-auto block" alt="{{ grandchildlink.title }}" src="{{ grandchildlink.object.image | image_url: width: 334 }}" width="178" height="267" loading="lazy" />
-																			{% break %}
-																		{% endif %}
-																	{%- endfor -%}
-																{%- endfor -%}
-
-															{%- endfor -%}
+															<img class="js-header-menu-image mt-8 w-full h-auto block" alt="{{ alt }}" src="{{ src }}" width="178" height="267" loading="lazy" />
 														{% endif %}
 
 													</li>
