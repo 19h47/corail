@@ -96,20 +96,20 @@
 
 			<div class="absolute top-0 right-0 m-5 z-1">
 				{% unless card_product.available %}
-					<div class="py-2 px-5 rounded-full text-sm uppercase text-white bg-red-very-light">
+					<div class="py-2 px-5 rounded-full uppercase text-white bg-red-very-light text-xs">
 						{{ 'products.product.sold_out' | t }}
 					</div>
 				{% else %}
 					{% if card_product.compare_at_price > card_product.price %}
-						<div class="py-2 px-5 rounded-full text-sm uppercase text-white bg-red-very-light">
+						<div class="py-2 px-5 rounded-full uppercase text-white bg-red-very-light text-xs">
 							{{ 'products.product.on_sale' | t }}
 						</div>
 					{% elsif card_product.tags contains 'preorder' %}
-						<div class="py-2 px-5 rounded-full text-sm uppercase text-white bg-red-very-light">
+						<div class="py-2 px-5 rounded-full uppercase text-white bg-red-very-light text-xs">
 							{{ 'products.product.preorder' | t }}
 						</div>
 					{% elsif card_product.tags contains 'new' %}
-						<div class="py-2 px-5 rounded-full text-sm uppercase text-white bg-red-very-light">
+						<div class="py-2 px-5 rounded-full uppercase text-white bg-red-very-light text-xs">
 							{{ 'products.product.new' | t }}
 						</div>
 					{% endif %}
