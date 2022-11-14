@@ -22,7 +22,7 @@
         "77e1adaf-ffa1-4d4c-a3af-c222a74cbaa2"
       ],
       "settings": {
-        "video": "shopify:\/\/files\/videos\/CORAIL_MASTERSOCIALS_V4_H264_25MBPS_1080 (1).mov"
+        "video": "shopify:\/\/files\/videos\/BAnnière desktop courte.mp4"
       }
     },
     "featured_collection": {
@@ -31,6 +31,7 @@
         "title": "NOUS FABRIQUONS DES BASKETS AVEC DES DÉCHETS MARINS QUE NOUS RÉCOLTONS À MARSEILLE.",
         "description": "<p>FROM THE SEA <\/p>",
         "show_description": false,
+        "show_header_mobile": true,
         "collection": "all",
         "products_to_show": 12,
         "show_secondary_image": true,
