@@ -1295,6 +1295,10 @@ html,
 		overflow-x: scroll;
 	}
 
+.has-scroll-smooth [data-scroll-container] {
+		min-height: 100vh;
+	}
+
 [data-scroll-direction="horizontal"] [data-scroll-container] {
 		height: 100%;
 		display: inline-flex;
@@ -1443,8 +1447,35 @@ button.btn.ks-chart-modal-button:after {
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.\!button, 
+	.shopify-payment-button button[type="button"], 
+	.shopify-challenge__button{
+	border-radius: 9999px;
+	--tw-bg-opacity: 1;
+	background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+	padding-left: 2rem;
+	padding-right: 2rem;
+	text-align: center;
+	font-size: 0.75rem;
+	line-height: 1rem;
+	text-transform: uppercase;
+	--tw-text-opacity: 1;
+	color: rgb(51 51 51 / var(--tw-text-opacity));
+	transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+	transition-duration: 1000ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .button[disabled], 
 	.button[aria-disabled="true"]{
+	cursor: not-allowed;
+	opacity: 0.5;
+}
+
+.\!button[disabled], 
+	.\!button[aria-disabled="true"]{
 	cursor: not-allowed;
 	opacity: 0.5;
 }
@@ -1457,7 +1488,23 @@ button.btn.ks-chart-modal-button:after {
 	color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.\!button.button-red, 
+	.shopify-payment-button button[type="button"]{
+	--tw-bg-opacity: 1;
+	background-color: rgb(255 125 108 / var(--tw-bg-opacity));
+	--tw-text-opacity: 1;
+	color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
 .button.button-gray, 
+	.shopify-challenge__button{
+	--tw-bg-opacity: 1;
+	background-color: rgb(51 51 51 / var(--tw-bg-opacity));
+	--tw-text-opacity: 1;
+	color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.\!button.button-gray, 
 	.shopify-challenge__button{
 	--tw-bg-opacity: 1;
 	background-color: rgb(51 51 51 / var(--tw-bg-opacity));
@@ -1474,7 +1521,19 @@ button.btn.ks-chart-modal-button:after {
 	color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.\!button:hover:not([disabled]), 
+	.\!button.button-red:hover:not([disabled]), 
+	.shopify-payment-button button[type="button"]:hover:not([disabled]){
+	--tw-bg-opacity: 1;
+	background-color: rgb(51 51 51 / var(--tw-bg-opacity));
+	--tw-text-opacity: 1;
+	color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
 .button[aria-disabled="true"] {
+	}
+
+.\!button[aria-disabled="true"] {
 	}
 
 .button-secondary{
@@ -1605,6 +1664,10 @@ button.btn.ks-chart-modal-button:after {
 
 .pointer-events-auto{
 	pointer-events: auto;
+}
+
+.visible{
+	visibility: visible;
 }
 
 .invisible{
@@ -2142,6 +2205,10 @@ button.btn.ks-chart-modal-button:after {
 	display: inline-block;
 }
 
+.inline{
+	display: inline;
+}
+
 .flex{
 	display: flex;
 }
@@ -2474,6 +2541,14 @@ button.btn.ks-chart-modal-button:after {
 	transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.cursor-zoom-in{
+	cursor: zoom-in;
+}
+
+.cursor-zoom-out{
+	cursor: zoom-out;
+}
+
 .cursor-wait{
 	cursor: wait;
 }
@@ -2482,8 +2557,8 @@ button.btn.ks-chart-modal-button:after {
 	cursor: pointer;
 }
 
-.cursor-zoom-out{
-	cursor: zoom-out;
+.resize{
+	resize: both;
 }
 
 .list-none{
@@ -2743,12 +2818,12 @@ button.btn.ks-chart-modal-button:after {
 	border-bottom-left-radius: 9999px;
 }
 
-.border-\[0\.0625rem\]{
-	border-width: 0.0625rem;
-}
-
 .border{
 	border-width: 1px;
+}
+
+.border-\[0\.0625rem\]{
+	border-width: 0.0625rem;
 }
 
 .border-\[0\.125rem\]{
@@ -3335,8 +3410,32 @@ button.btn.ks-chart-modal-button:after {
 	opacity: 0.5;
 }
 
+.shadow{
+	--tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+	--tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
+	box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.blur{
+	--tw-blur: blur(8px);
+	filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.invert{
+	--tw-invert: invert(100%);
+	filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
 .filter{
 	filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.transition{
+	transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+	transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+	transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	transition-duration: 150ms;
 }
 
 .transition-opacity{

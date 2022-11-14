@@ -732,9 +732,9 @@ a.product__text {
 		padding-bottom: 2rem;
 	} */
 
-	.product-media-modal__content > *:not(.active) {
+	/* .product-media-modal__content > *:not(.active) {
 		display: block;
-	}
+	} */
 
 	.product__modal-opener:not(.product__modal-opener--image) {
 		display: none;

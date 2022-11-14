@@ -18,31 +18,21 @@
 
 {%- if media.media_type == 'image' -%}
 	<img
-		class="global-media-settings global-media-settings--no-shadow max-w-none {% if variant_image %} product__media-item--variant {% endif %}"
-		srcset="{%- if media.preview_image.width >= 550 -%}{{ media.preview_image | image_url: width: 550 }} 550w,{%- endif -%}
-				{%- if media.preview_image.width >= 1100 -%}{{ media.preview_image | image_url: width: 1100 }} 1100w,{%- endif -%}
-				{%- if media.preview_image.width >= 1445 -%}{{ media.preview_image | image_url: width: 1445 }} 1445w,{%- endif -%}
-				{%- if media.preview_image.width >= 1680 -%}{{ media.preview_image | image_url: width: 1680 }} 1680w,{%- endif -%}
-				{%- if media.preview_image.width >= 2048 -%}{{ media.preview_image | image_url: width: 2048 }} 2048w,{%- endif -%}
-				{%- if media.preview_image.width >= 2200 -%}{{ media.preview_image | image_url: width: 2200 }} 2200w,{%- endif -%}
-				{%- if media.preview_image.width >= 2890 -%}{{ media.preview_image | image_url: width: 2890 }} 2890w,{%- endif -%}
-				{%- if media.preview_image.width >= 4096 -%}{{ media.preview_image | image_url: width: 4096 }} 4096w,{%- endif -%}
-				{{ media.preview_image | image_url }} {{ media.preview_image.width }}w"
-		sizes="(min-width: 750px) calc(100vw - 22rem), 1100px"
-		src="{{ media.preview_image | image_url: width: 1445 }}"
+		class="max-w-none js-product-modal-image w-full {% if variant_image %} product__media-item--variant {% endif %}"
+		src="{{ media.preview_image | image_url }}"
 		alt="{{ media.alt | escape }}"
 		loading="lazy"
-		width="1100"
-		height="{{ 1100 | divided_by: media.preview_image.aspect_ratio | ceil }}"
+		width="{{ media.preview_image.width }}"
+		height="{{ media.preview_image.height }}"
 		data-media-id="{{ media.id }}"
 	>
 {%- else -%}
-  {%- if media.media_type == 'model' -%}
-    <div class="product-media-modal__model" data-media-id="{{ media.id }}">
-      <product-model class="deferred-media media media--transparent global-media-settings global-media-settings--no-shadow" style="padding-top: min(calc(100vh - 12rem), 100%)">
-  {%- else -%}
-    <deferred-media class="deferred-media media global-media-settings global-media-settings--no-shadow" style="padding-top: min(calc(100vh - 12rem), {{ 1 | divided_by: media.aspect_ratio | times: 100 }}%)" data-media-id="{{ media.id }}">
-  {%- endif -%}
+	{%- if media.media_type == 'model' -%}
+		<div class="product-media-modal__model" data-media-id="{{ media.id }}">
+			<product-model class="deferred-media media media--transparent global-media-settings" style="padding-top: min(calc(100vh - 12rem), 100%)">
+	{%- else -%}
+		<deferred-media class="deferred-media media global-media-settings" style="padding-top: min(calc(100vh - 12rem), {{ 1 | divided_by: media.aspect_ratio | times: 100 }}%)" data-media-id="{{ media.id }}">
+	{%- endif -%}
 
     <button id="Deferred-Poster-Modal-{{ media.id }}" class="deferred-media__poster absolute inset-0 w-full h-full" type="button">
 	  	<span class="absolute text-white z-1 inset-0 lg:w-[3.625rem] lg:h-[4.75rem] m-auto w-8 h-9">
@@ -87,21 +77,21 @@
     </template>
 
   	{%- if media.media_type == 'model' -%}
-      	</product-model>
-		<button
-			class="button button--full-width product__xr-button"
-			type="button"
-			aria-label="{{ 'products.product.xr_button_label' | t }}"
-			data-shopify-xr
-			data-shopify-model3d-id="{{ media.id }}"
-			data-shopify-title="title"
-			data-shopify-xr-hidden
-			>
-			{% render 'icon-3d-model' %}
-			{{ 'products.product.xr_button' | t }}
-		</button>
-    </div>
-  {%- else -%}
-    </deferred-media>
-  {%- endif -%}
+			</product-model>
+			<button
+				class="button button--full-width product__xr-button"
+				type="button"
+				aria-label="{{ 'products.product.xr_button_label' | t }}"
+				data-shopify-xr
+				data-shopify-model3d-id="{{ media.id }}"
+				data-shopify-title="title"
+				data-shopify-xr-hidden
+				>
+				{% render 'icon-3d-model' %}
+				{{ 'products.product.xr_button' | t }}
+			</button>
+		</div>
+  	{%- else -%}
+    	</deferred-media>
+  	{%- endif -%}
 {%- endif -%}
