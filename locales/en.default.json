@@ -156,7 +156,7 @@
       "include_taxes": "Tax included.",
       "shipping_policy_html": "<a href=\"{{ link }}\">Shipping<\/a> calculated at checkout.",
       "value_unavailable": "NEW",
-      "new": "TODO"
+      "new": "NEW"
     },
     "modal": {
       "label": "Media gallery"
