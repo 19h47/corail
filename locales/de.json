@@ -53,6 +53,10 @@
       "next_slide": "Nach rechts schieben",
       "previous_slide": "Nach links schieben",
       "name": "Slider"
+    },
+    "newsletter": {
+      "label": "Newsletter?",
+      "title": "Registrieren"
     }
   },
   "newsletter": {
@@ -150,7 +154,9 @@
       "include_taxes": "inkl. MwSt.",
       "shipping_policy_html": "<a href=\"{{ link }}\">Versand<\/a> wird beim Checkout berechnet",
       "choose_options": "Optionen auswählen",
-      "choose_product_options": "Optionen für {{ product_name }} auswählen"
+      "choose_product_options": "Optionen für {{ product_name }} auswählen",
+      "value_unavailable": "{{ option_value }} – nicht verfügbar",
+      "new": "Neu"
     },
     "modal": {
       "label": "Medien-Galerie"
@@ -423,6 +429,160 @@
       "expired": "Abgelaufen",
       "copy_code_success": "Code erfolgreich kopiert",
       "print_gift_card": "Drucken"
+    }
+  },
+  "shopify": {
+    "checkout": {
+      "shipping": {
+        "estimated_delivery_date": {
+          "many": "%{count} Arbeitstage"
+        },
+        "other_method": {
+          "many": "%{count} andere Methoden verfügbar von"
+        },
+        "subscription_delivery_description": {
+          "prepaid_delivery_frequency": {
+            "many": "für %{count} Lieferungen"
+          },
+          "subscription_delivery_frequency": {
+            "day": {
+              "many": "alle %{count} Tage"
+            },
+            "week": {
+              "many": "alle %{count} Wochen"
+            },
+            "month": {
+              "many": "jeden %{count} Monat"
+            },
+            "year": {
+              "many": "alle %{count} Jahre"
+            }
+          },
+          "first_n_order_free": {
+            "many": "%{count} Erstbestellungen kostenlos"
+          },
+          "free_for_first_n_order": {
+            "many": "Für die ersten %{count} Bestellungen"
+          }
+        }
+      },
+      "payment": {
+        "order_covered_by_gift_cards_notice": {
+          "many": "Ihre Bestellungen sind durch Ihre Geschenkkarten abgedeckt."
+        },
+        "card_fields_unavailable_html": {
+          "many": "Kredit- und Debitkartenzahlungen sind derzeit nicht verfügbar.<br> <a href=\"%%7Bcurrent_url%7D\">Aktualisieren Sie diese Seite<\/a> oder versuchen Sie es mit einer anderen Zahlungsmethode."
+        }
+      },
+      "shipping_errors": {
+        "shipping_method_not_available_generic": {
+          "many": "Einige Artikel in Ihrem Einkaufswagen können nicht an die von Ihnen eingegebene Adresse versendet werden. Überprüfen Sie, ob alle Felder Ihrer Adresse korrekt ausgefüllt sind, und versuchen Sie es erneut."
+        },
+        "shipping_method_not_available_updated": {
+          "many": "Es ist nicht möglich, mindestens einen der von Ihnen hinzugefügten Artikel an Ihren Standort zu versenden. Bitte entfernen Sie sie, um bezahlen zu können, oder wenden Sie sich an den Shop."
+        }
+      },
+      "processing": {
+        "wait": {
+          "medium": {
+            "many": "Ihre Bestellung wird bearbeitet. Die Wartezeit wird auf %{count} Minuten geschätzt."
+          }
+        }
+      },
+      "thank_you": {
+        "login_reorder_link_text": {
+          "many": "kaufen Sie diese Produkte auch"
+        }
+      },
+      "order_payment_collection": {
+        "changes_summary": {
+          "added": {
+            "many": "%{count} hinzugefügt"
+          }
+        }
+      },
+      "open_graph_meta_tag": {
+        "title_with_products": {
+          "many": "Kaufen Sie %{product_name} und %{count} andere Artikel"
+        }
+      },
+      "subscriptions": {
+        "recurring_totals_with_policies": {
+          "first_cycles": {
+            "many": "Beginnen Sie mit %{count} Zahlungen von jeweils %{total_price}"
+          }
+        },
+        "recurring_total_intervals": {
+          "day": {
+            "many": "%{count} Tage"
+          },
+          "week": {
+            "many": "%{count} Wochen"
+          },
+          "month": {
+            "many": "%{count} Monat"
+          },
+          "year": {
+            "many": "%{count} Jahre"
+          }
+        },
+        "recurring_totals_with_initial_order_shipping_discount_with_policies": {
+          "first_cycles": {
+            "many": ", dann %{count} Zahlungen von jeweils %{total_price}"
+          }
+        }
+      },
+      "contextual_availability": {
+        "title": {
+          "many": "Nicht verfügbare Produkte"
+        },
+        "products_not_available": {
+          "many": "Diese Produkte werden aus Ihrem Warenkorb entfernt, da sie in Ihrem Land\/Ihrer Region nicht verfügbar sind."
+        },
+        "all_products_in_cart_unavailable": {
+          "many": "Diese Produkte sind in Ihrem Land\/Ihrer Region nicht verfügbar."
+        }
+      }
+    },
+    "notices": {
+      "order": {
+        "cancel_reason": {
+          "many": "Sonstiges"
+        }
+      }
+    },
+    "page_titles": {
+      "search_results": {
+        "many": "Suche: %{count} Ergebnisse gefunden für \"%{terms}\""
+      }
+    }
+  },
+  "customer_accounts": {
+    "orders": {
+      "order_list": {
+        "items": {
+          "many": "{{count}} Artikel"
+        }
+      }
+    },
+    "B2B": {
+      "draft_order_details": {
+        "payment_status": {
+          "pending": {
+            "banner_overdue": {
+              "many": "Sie sind {{count}} Tage überfällig"
+            },
+            "banner_due": {
+              "many": "Ihre Zahlung ist in {{count}} Tagen fällig"
+            }
+          }
+        }
+      }
+    },
+    "errors": {
+      "banner_title": {
+        "many": "Es gibt {{count}} Fehler"
+      }
     }
   }
 }
