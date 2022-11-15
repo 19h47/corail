@@ -122,7 +122,7 @@
 											{%- case block.type -%}
 												{%- when 'slider_image' -%}
 													<li class="swiper-slide">
-														{{ block.settings.image | image_url: width: 810, height: 552 | image_tag:
+														{{ block.settings.image | image_url: width: 810 | image_tag:
 															loading: 'lazy',
 															widths: '255, 550, 710, 1420',
 															class: 'w-full h-[10.875rem] lg:h-[34.5rem] object-cover object-center block'
