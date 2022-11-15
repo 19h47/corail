@@ -164,7 +164,7 @@
 		</div>
 
 		{%- unless card_product.has_only_default_variant -%}
-			<div class="space-y-2 lg:hidden my-2">
+			<div class="space-y-2 lg:hidden mb-2">
 				{%- for option in card_product.options_with_values -%}
 					{%- if option.name == 'Taille' or 'pointure' == option.name -%}
 
