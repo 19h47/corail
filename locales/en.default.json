@@ -155,7 +155,7 @@
       "xr_button_label": "View in your space, loads item in augmented reality window",
       "include_taxes": "Tax included.",
       "shipping_policy_html": "<a href=\"{{ link }}\">Shipping<\/a> calculated at checkout.",
-      "value_unavailable": "TODO",
+      "value_unavailable": "NEW",
       "new": "TODO"
     },
     "modal": {
