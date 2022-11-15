@@ -1847,6 +1847,14 @@ button.btn.ks-chart-modal-button:after {
 	margin: 1.25rem;
 }
 
+.m-2\.5{
+	margin: 0.625rem;
+}
+
+.m-2{
+	margin: 0.5rem;
+}
+
 .m-\[1\.625rem\]{
 	margin: 1.625rem;
 }
@@ -4297,6 +4305,10 @@ button.btn.ks-chart-modal-button:after {
 		order: 3;
 	}
 
+	.lg\:m-5{
+		margin: 1.25rem;
+	}
+
 	.lg\:my-16{
 		margin-top: 4rem;
 		margin-bottom: 4rem;
@@ -4983,10 +4995,6 @@ button.btn.ks-chart-modal-button:after {
 
 	.lg\:pt-3{
 		padding-top: 0.75rem;
-	}
-
-	.lg\:text-left{
-		text-align: left;
 	}
 
 	.lg\:text-right{
