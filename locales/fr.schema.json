@@ -2060,7 +2060,9 @@
     "main-product": {
       "size_chart": "Guide des tailles",
       "blocks": {
-		  "inventory": {"name": "Inventaire"},
+        "inventory": {
+          "name": "Inventaire"
+        },
         "announcement": {
           "name": "Texte défilant",
           "settings": {
