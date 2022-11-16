@@ -273,6 +273,20 @@
 							{%- when '@app' -%}
 								{% render block %}
 
+							{%- when 'inventory' -%}
+
+								{% assign current_variant = product.selected_or_first_available_variant %}
+
+								{% if current_variant.available %}
+									<div class="inventoryNote form__label">
+										{% if current_variant.inventory_quantity > 0 and current_variant.inventory_quantity <= 10 %}
+											We have {{ current_variant.inventory_quantity }} in stock
+										{% elsif current_variant.inventory_quantity > 10 %}
+											We have more than 10 in stock
+										{% endif %}
+									</div>
+								{% endif %}
+
 							{%- when 'text' -%}
 								{% if  block.settings.text != blank %}
 									<p {{ block.shopify_attributes }}>{{- block.settings.text -}}</p>
@@ -891,6 +905,10 @@
       ]
     },
     {
+      "type": "inventory",
+      "name": "t:sections.main-product.blocks.inventory.name"
+    },
+    {
       "type": "announcement",
       "name": "t:sections.main-product.blocks.announcement.name",
       "settings": [
@@ -1376,11 +1394,11 @@
       "default": false,
       "label": "t:sections.main-product.settings.enable_video_looping.label"
     },
-	{
-		"type": "url",
-		"id": "size_chart_url",
-		"label": "t:sections.main-product.settings.size_chart_url.label"
-	}
+    {
+      "type": "url",
+      "id": "size_chart_url",
+      "label": "t:sections.main-product.settings.size_chart_url.label"
+    }
   ]
 }
 {% endschema %}
