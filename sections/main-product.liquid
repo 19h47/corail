@@ -274,19 +274,18 @@
 								{% render block %}
 
 							{%- when 'inventory' -%}
-
-								{% assign current_variant = product.selected_or_first_available_variant %}
-
-								{% if current_variant.available %}
-									<div class="my-2">
-										{% if current_variant.inventory_quantity == 0 %}
-											{{ 'sections.main-product.blocks.inventory.quantity.none' }}
-										{% elsif current_variant.inventory_quantity == 1 %}
-											{{ 'sections.main-product.blocks.inventory.quantity.one' | t: count: current_variant.inventory_quantity }}
-										{% else %}
-											{{ 'sections.main-product.blocks.inventory.quantity.other' | t: count: current_variant.inventory_quantity }}
-										{% endif %}
-									</div>
+								{%- if product.metafields.corail.show_inventory.value == true -%}
+									<p role="status" id="Inventory-{{ section.id }}" {{ block.shopify_attributes }}>
+										{%- if product.selected_or_first_available_variant.inventory_quantity > 0 -%}
+											{{- 'products.product.inventory_in_stock_show_count' | t: quantity: product.selected_or_first_available_variant.inventory_quantity -}}
+										{%- else -%}
+											{%- if product.selected_or_first_available_variant.inventory_policy == 'continue' -%}
+												{{- 'products.product.inventory_out_of_stock_continue_selling' | t -}}
+											{%- else -%}
+												{{- 'products.product.inventory_out_of_stock' | t -}}
+											{%- endif -%}
+										{%- endif -%}
+									</p>
 								{% endif %}
 
 							{%- when 'text' -%}

@@ -100,8 +100,13 @@ class VariantSelects extends HTMLElement {
 			variant => this.querySelector(":checked").value === variant.option1
 		);
 		const inputWrappers = [...this.querySelectorAll(".product-form__input")];
+
 		inputWrappers.forEach((option, index) => {
-			if (0 === index) return;
+
+			if (0 === index) {
+				return;
+			}
+
 			const optionInputs = [...option.querySelectorAll('input[type="radio"], option')];
 			const previousOptionSelected = inputWrappers[index - 1].querySelector(":checked").value;
 			const availableOptionInputsValue = selectedOptionOneVariants

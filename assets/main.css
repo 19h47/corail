@@ -2912,6 +2912,10 @@ button.btn.ks-chart-modal-button:after {
 	background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.bg-orange-grayish\/30{
+	background-color: rgb(207 205 201 / 0.3);
+}
+
 .bg-orange-grayish{
 	--tw-bg-opacity: 1;
 	background-color: rgb(207 205 201 / var(--tw-bg-opacity));
@@ -3977,6 +3981,11 @@ button.btn.ks-chart-modal-button:after {
 	transition-duration: 1000ms;
 }
 
+.after\:duration-500::after{
+	content: var(--tw-content);
+	transition-duration: 500ms;
+}
+
 .after\:ease-in-out::after{
 	content: var(--tw-content);
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -3985,6 +3994,10 @@ button.btn.ks-chart-modal-button:after {
 .hover\:border-red-very-light:hover{
 	--tw-border-opacity: 1;
 	border-color: rgb(255 125 108 / var(--tw-border-opacity));
+}
+
+.hover\:bg-orange-grayish\/20:hover{
+	background-color: rgb(207 205 201 / 0.2);
 }
 
 .hover\:bg-red-very-light:hover{
@@ -4114,6 +4127,12 @@ button.btn.ks-chart-modal-button:after {
 .header-is-open .header-is-open\:\!text-gray-very-dark{
 	--tw-text-opacity: 1 !important;
 	color: rgb(51 51 51 / var(--tw-text-opacity)) !important;
+}
+
+.is-inview.is-inview\:after\:scale-x-100::after{
+	content: var(--tw-content);
+	--tw-scale-x: 1;
+	transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .is-active.is-active\:underline{

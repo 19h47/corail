@@ -1,5 +1,5 @@
 /* eslint-disable max-classes-per-file */
-if (!customElements.get('details-disclosure')) {
+if (!customElements.get("details-disclosure")) {
 	class DetailsDisclosure extends HTMLElement {
 		constructor() {
 			super();
@@ -8,6 +8,14 @@ if (!customElements.get('details-disclosure')) {
 
 			this.mainDetailsToggle.addEventListener("focusout", this.onFocusOut.bind(this));
 			this.mainDetailsToggle.addEventListener("toggle", this.onToggle.bind(this));
+
+			this.mainDetailsToggle.addEventListener('mouseenter', () => {
+				this.mainDetailsToggle.setAttribute('open', true);
+			})
+
+			this.mainDetailsToggle.addEventListener('mouseleave', () => {
+				this.mainDetailsToggle.removeAttribute('open');
+			})
 		}
 
 		onFocusOut() {
@@ -35,41 +43,76 @@ if (!customElements.get('details-disclosure')) {
 			setTimeout(() => {
 				this.mainDetailsToggle.removeAttribute("open");
 				this.mainDetailsToggle.querySelector("summary").setAttribute("aria-expanded", false);
-			},100)
+			});
 		}
 	}
 
 	customElements.define("details-disclosure", DetailsDisclosure);
+
+	class CommitmentsDrawer extends DetailsDisclosure {
+		constructor() {
+			super();
+
+			this.mainDetailsToggle.addEventListener('mouseenter', () => {
+				this.mainDetailsToggle.setAttribute('open', true);
+			})
+
+			this.mainDetailsToggle.addEventListener('mouseleave', () => {
+				this.mainDetailsToggle.removeAttribute('open');
+			})
+		}
+
+		close() {
+			// console.log('DetailsDisclosure.close');
+			setTimeout(() => {
+				this.mainDetailsToggle.removeAttribute("open");
+				this.mainDetailsToggle.querySelector("summary").setAttribute("aria-expanded", false);
+			},100);
+		}
+	}
+
+	customElements.define("commitments-drawer", CommitmentsDrawer);
 
 	class HeaderMenu extends DetailsDisclosure {
 		constructor() {
 			super();
 			this.header = document.querySelector(".header-wrapper");
 
-			const links = [...this.querySelectorAll('a[data-image]')];
-			const $image = this.querySelector('.js-header-menu-image');
+			const $details = this.querySelector("details");
+
+			$details.addEventListener("mouseenter", () => {
+				$details.setAttribute("open", true);
+			});
+
+			$details.addEventListener("mouseleave", () => {
+				$details.removeAttribute("open");
+			});
+
+			const links = [...this.querySelectorAll("a[data-image]")];
+			const $image = this.querySelector(".js-header-menu-image");
 
 			links.forEach($link => {
 				const { image, title } = $link.dataset;
 
-				$link.addEventListener('mouseover', () => {
+				$link.addEventListener("mouseover", () => {
 					$image.src = image;
 					$image.alt = title;
-				})
-			})
+				});
+			});
 		}
 
 		onToggle() {
-
 			if (!this.header) {
 				return;
 			}
 
-			document.documentElement.classList.toggle('header-is-open');
+			document.documentElement.classList.toggle("header-is-open");
 
 			this.header.preventHide = this.mainDetailsToggle.open;
 
-			if ("" !== document.documentElement.style.getPropertyValue("--header-bottom-position-desktop")) {
+			if (
+				"" !== document.documentElement.style.getPropertyValue("--header-bottom-position-desktop")
+			) {
 				// eslint-disable-next-line no-useless-return
 				return;
 			}
@@ -83,4 +126,3 @@ if (!customElements.get('details-disclosure')) {
 
 	customElements.define("header-menu", HeaderMenu);
 }
-
