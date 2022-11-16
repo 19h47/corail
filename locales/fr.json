@@ -259,8 +259,9 @@
 		"inventory": {
 			"name": "Inventaire",
 			"quantity": {
-				"one": "We have {{ count }} item",
-				"other": "We have {{ count }} items"
+				"none": "Rupture de stock",
+				"one": "Nous avons {{ count }} produit en stock",
+				"other": "Nous avons {{ count }} produits en stock"
 			}
 		}
 	  }

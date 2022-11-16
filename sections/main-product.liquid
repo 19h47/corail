@@ -278,15 +278,15 @@
 								{% assign current_variant = product.selected_or_first_available_variant %}
 
 								{% if current_variant.available %}
-									{% if current_variant.inventory_quantity > 0 %}
-										<div class="my-2">
-											{% if current_variant.inventory_quantity == 1 %}
-												{{ 'sections.main-product.blocks.inventory.quantity.one' | t: count: current_variant.inventory_quantity }}
-											{% else %}
-												{{ 'sections.main-product.blocks.inventory.quantity.other' | t: count: current_variant.inventory_quantity }}
-											{% endif %}
-										</div>
-									{% endif %}
+									<div class="my-2">
+										{% if current_variant.inventory_quantity == 0 %}
+											{{ 'sections.main-product.blocks.inventory.quantity.none' }}
+										{% elsif current_variant.inventory_quantity == 1 %}
+											{{ 'sections.main-product.blocks.inventory.quantity.one' | t: count: current_variant.inventory_quantity }}
+										{% else %}
+											{{ 'sections.main-product.blocks.inventory.quantity.other' | t: count: current_variant.inventory_quantity }}
+										{% endif %}
+									</div>
 								{% endif %}
 
 							{%- when 'text' -%}
