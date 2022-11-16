@@ -255,16 +255,16 @@
   "sections": {
     "main-product": {
       "size_chart": "Guide des tailles",
-	  "blocks": {
-		"inventory": {
-			"name": "Inventaire",
-			"quantity": {
-				"none": "Rupture de stock",
-				"one": "Nous avons {{ count }} produit en stock",
-				"other": "Nous avons {{ count }} produits en stock"
-			}
-		}
-	  }
+      "blocks": {
+        "inventory": {
+          "name": "Inventaire",
+          "quantity": {
+            "none": "Rupture de stock",
+            "one": "Nous avons {{ count }} produit en stock",
+            "other": "Nous avons {{ count }} produits en stock"
+          }
+        }
+      }
     },
     "filters-articles": {
       "name": "Filtres des articles",

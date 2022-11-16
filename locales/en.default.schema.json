@@ -1611,14 +1611,14 @@
     "main-product": {
       "name": "Product information",
       "blocks": {
-		"inventory": {
-			"name": "Inventaire",
-			"quantity": {
-				"none": "Sold out",
-				"one": "We have {{ count }} item in stock",
-				"other": "We have {{ count }} items in stock"
-			}
-		},
+        "inventory": {
+          "name": "Inventaire",
+          "quantity": {
+            "none": "Sold out",
+            "one": "We have {{ count }} item in stock",
+            "other": "We have {{ count }} items in stock"
+          }
+        },
         "text": {
           "name": "Text",
           "settings": {
