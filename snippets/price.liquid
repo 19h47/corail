@@ -20,6 +20,7 @@
 
   	assign compare_at_price = target.compare_at_price
   	assign price = target.price | default: 1999
+	assign price_class = price_class | default: ''
   	assign available = target.available | default: false
   	assign money_price = price | money
 
@@ -34,7 +35,7 @@
 
 <div
 	class="price
-  		{%- if price_class %} {{ price_class }}{% endif -%}
+  		{%- if price_class %} {{ price_class }} {% endif -%}
   		{%- if available == false %} price--sold-out {% endif -%}
   		{%- if compare_at_price > price %} price--on-sale {% endif -%}
   		{%- if product.price_varies == false and product.compare_at_price_varies %} price--no-compare {% endif -%}
@@ -48,7 +49,7 @@
 		<span class="price-item price-item--regular">{{ money_price }}</span>
 	</div>
 
-	<div class="{% if compare_at_price > price %} flex flex-col text-right {% else %} hidden {% endif %}">
+	<div class="{% if compare_at_price > price %} flex flex-col {% else %} hidden {% endif %}">
 
 		{%- unless product.price_varies == false and product.compare_at_price_varies %}
 			<span class="sr-only">{{ 'products.product.price.regular_price' | t }}</span>

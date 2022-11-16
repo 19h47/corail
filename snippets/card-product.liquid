@@ -214,7 +214,7 @@
 				<h3 {% if card_product.featured_media == nil and settings.card_style == 'standard' %} id="title-{{ section_id }}-{{ card_product.id }}" {% endif %} class="flex-shrink-0">
 					{{- card_product.title -}}
 				</h3>
-				{%- render 'price', product: card_product, price_class: '' -%}
+				{%- render 'price', product: card_product, price_class: 'text-right' -%}
 			</div>
 		</footer>
 
