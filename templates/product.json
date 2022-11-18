@@ -220,6 +220,7 @@
       "type": "twocolumn",
       "settings": {
         "title": "Started from the bottle",
+        "column_left_image": "shopify:\/\/shop_images\/LAB_3D.jpg",
         "column_left_title_research": "Research",
         "column_left_icon_research": true,
         "column_left_title_technical": "Semelle technique",
@@ -236,6 +237,7 @@
       "type": "twocolumn",
       "settings": {
         "title": "HANDMADE TO LAST",
+        "column_left_image": "shopify:\/\/shop_images\/0S1A4669-2.jpg",
         "column_left_title_research": "RESISTANCE TESTED INEXTREME CONDITIONS",
         "column_left_icon_research": false,
         "column_left_title_technical": "",
@@ -245,7 +247,8 @@
         "column_right_title": "RESISTANCE TESTED IN EXTREME CONDITIONS",
         "column_right_content": "Our products are handmade in our workshop in Portugal and submitted to extreme durability tests to insure their quality and long-lastingness. The real sustainable product is the one you keep.",
         "column_right_button_label": "OUR WORKSHOP",
-        "column_right_button_link": "shopify:\/\/pages\/handmade-to-last-long"
+        "column_right_button_link": "shopify:\/\/pages\/handmade-to-last-long",
+        "column_right_image": "shopify:\/\/shop_images\/0S1A4761-2.jpg"
       }
     },
     "634fcd5e-4684-44fe-b78a-33275a9b184c": {
