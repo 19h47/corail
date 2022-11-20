@@ -242,15 +242,15 @@
       "settings": {
         "title": "FAIT POUR DURER",
         "column_left_image": "shopify:\/\/shop_images\/0S1A4669-2.jpg",
-        "column_left_title_research": "UNE RESISTANCE à TOUTE éPREUVE",
+        "column_left_title_research": "",
         "column_left_icon_research": false,
         "column_left_title_technical": "",
         "column_left_icon_technical": false,
         "column_left_title_recycled": "",
         "column_left_icon_recycled": false,
-        "column_right_title": "RESISTANCE TESTED IN EXTREME CONDITIONS",
-        "column_right_content": "Our products are handmade in our workshop in Portugal and submitted to extreme durability tests to insure their quality and long-lastingness. The real sustainable product is the one you keep.",
-        "column_right_button_label": "OUR WORKSHOP",
+        "column_right_title": "UNE RESISTANCE à TOUTE éPREUVE",
+        "column_right_content": "Nos produits sont confectionnés main dans notre atelier familial au Portugal, et soumis à une batterie de tests qui permettent de s'assurer de la qualité et de la résistance de nos baskets. Le produit le plus éco-responsable qui soit est celui qui dure.",
+        "column_right_button_label": "NOTRE ATELIER",
         "column_right_button_link": "shopify:\/\/pages\/handmade-to-last-long",
         "column_right_image": "shopify:\/\/shop_images\/0S1A4761-2.jpg"
       }
