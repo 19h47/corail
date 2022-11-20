@@ -232,8 +232,8 @@
         "column_left_icon_recycled": true,
         "column_right_title": "matériaux transformés dans le corail° lab",
         "column_right_content": "CORAIL°Lab est un espace permettant de réfléchir à des solutions innovantes pour retirer puis transformer les déchets marins en matière première.",
-        "column_right_button_label": "",
-        "column_right_button_link": "",
+        "column_right_button_label": "EN SAVOIR PLUS",
+        "column_right_button_link": "shopify:\/\/pages\/corail-lab",
         "column_right_image": "shopify:\/\/shop_images\/Items_6Columns.png"
       }
     },
