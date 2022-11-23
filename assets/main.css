@@ -2569,6 +2569,10 @@ button.btn.ks-chart-modal-button:after {
 	cursor: pointer;
 }
 
+.cursor-grabbing{
+	cursor: grabbing;
+}
+
 .resize{
 	resize: both;
 }
