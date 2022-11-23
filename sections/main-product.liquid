@@ -323,7 +323,7 @@
 										</a>
 									</h1>
 
-									{% if product.tags %}
+									{% comment %} {% if product.tags %}
 										<div class="hidden lg:flex flex-wrap ml-4 gap-0.5">
 											{% for tag in product.tags %}
 												<div class="text-sm font-display border text-center border-gray-very-dark px-3 py-[0.0625rem] font-medium rounded-full">
@@ -331,7 +331,14 @@
 												</div>
 											{% endfor %}
 										</div>
-									{% endif %}
+									{% endif %} {% endcomment %}
+
+									<div class="hidden lg:flex flex-wrap ml-4 gap-0.5">
+										<div class="text-sm font-display border text-center border-gray-very-dark px-3 py-[0.0625rem] font-medium rounded-full">
+											Grinded in the CORAIL° Lab
+										</div>
+									</div>
+
 								</div>
 
 							{%- when 'price' -%}
