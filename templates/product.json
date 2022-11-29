@@ -142,6 +142,13 @@
     "5352a5eb-3296-4b9c-9021-e759c6c0ea6b": {
       "type": "images-with-collapsible-tab",
       "blocks": {
+        "d3208a30-af06-4846-ae94-1386bbf7cb79": {
+          "type": "collapsible_tab",
+          "settings": {
+            "title": "QUELLE TAILLE CHOISIR ?",
+            "content": "<p>- LINE90 : elles taillent un peu grand, si vous hésitez entre deux tailles choisissez la plus petite. <em>Exemple, vous hésitez entre un 38 et un 39 &gt; prenez un 38.<\/em><br\/>- ORIGINS : elles taillent normalement, mais si vous êtes entre deux tailles, choisissez la plus petite.<br\/>- MARSEILLE 21\/20 : elles taillent normalement, mais si vous êtes entre deux tailles, choisissez la plus petite.<\/p>"
+          }
+        },
         "template--15990350479528__5352a5eb-3296-4b9c-9021-e759c6c0ea6b-166669405224db7574-0": {
           "type": "collapsible_tab",
           "settings": {
@@ -188,6 +195,7 @@
         }
       },
       "block_order": [
+        "d3208a30-af06-4846-ae94-1386bbf7cb79",
         "template--15990350479528__5352a5eb-3296-4b9c-9021-e759c6c0ea6b-166669405224db7574-0",
         "a3d26fe5-8b20-421d-a36d-7371219c9f0d",
         "ef963a79-a748-461c-85e0-0b3b2b4a321c",
