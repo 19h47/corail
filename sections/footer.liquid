@@ -165,7 +165,7 @@
 	{% endif %}
 
 	{% if section.settings.newsletter_enable %}
-		<button type="button" class="flex gap-x-8 lg:gap-x-2 items-center group text-white bg-red-very-light px-4 py-1.5 lg:py-3 {% if page.template_suffix contains 'commitments' %} hidden {% endif %} absolute bottom-0 right-0 z-50">
+		<button type="button" onclick="klaviyo.openForm()" class="flex gap-x-8 lg:gap-x-2 items-center group text-white bg-red-very-light px-4 py-1.5 lg:py-3 {% if page.template_suffix contains 'commitments' %} hidden {% endif %} absolute bottom-0 right-0 z-50">
 			<div class="uppercase font-semibold font-display lg:text-xl leading-none lg:leading-6">{{ 'general.newsletter.label' | t }}</div>
 			<div class="button-secondary inline-block align-middle group-hover:text-red-very-light group-hover:bg-white group-hover:border-red-very-light">
 				<span class="hidden lg:inline">{{ 'general.newsletter.title' | t }}</span>

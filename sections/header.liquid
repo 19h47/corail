@@ -60,7 +60,7 @@
 						<li>
 							{%- if link.links != blank -%}
 
-								<header-menu>
+								<header-menu data-open-onmouseenter="true" data-close-onmouseleave="true">
 									<details id="Details-HeaderMenu-{{ forloop.index }}" class="mega-menu group">
 										<summary>
 											<span class="group relative px-8 py-[1.6875rem] block text-sm uppercase font-medium leading-4 hover:after:scale-y-100 parent-expanded:after:scale-y-100 group-hover:after:scale-y-100 after:absolute after:top-0 after:h-[0.1875rem] after:bg-current after:w-full after:inset-x-0 after:transition-transform after:duration-1000 after:ease-in-out after:origin-top {% if link.current %} after:scale-y-100 {% else %} after:scale-y-0 {% endif %}">
@@ -284,7 +284,7 @@
 					{%- form 'localization', id: 'HeaderLanguageForm', class: '' -%}
 						<select class="bg-transparent appearance-none cursor-pointer" name="locale_code">
 							{%- for language in localization.available_languages -%}
-								<option value="{{ language.iso_code }}" lang="{{ language.iso_code }}" {%- if language.iso_code == localization.language.iso_code %} selected {% endif %}>
+								<option class="text-black" value="{{ language.iso_code }}" lang="{{ language.iso_code }}" {%- if language.iso_code == localization.language.iso_code %} selected {% endif %}>
 									{{- language.iso_code | upcase -}}
 								</option>
 							{%- endfor -%}
@@ -296,7 +296,7 @@
 					{% form 'currency' %}
 						<select name="currency" class="bg-transparent appearance-none cursor-pointer">
 							{% for currency in shop.enabled_currencies %}
-								<option {% if currency == cart.currency %} selected="true" {% endif %}>{{- currency.iso_code -}}</option>
+								<option class="text-black" {% if currency == cart.currency %} selected="true" {% endif %}>{{- currency.iso_code -}}</option>
 							{% endfor %}
 						</select>
 					  {% endform %}

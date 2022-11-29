@@ -9,13 +9,13 @@ if (!customElements.get("details-disclosure")) {
 			this.mainDetailsToggle.addEventListener("focusout", this.onFocusOut.bind(this));
 			this.mainDetailsToggle.addEventListener("toggle", this.onToggle.bind(this));
 
-			this.mainDetailsToggle.addEventListener('mouseenter', () => {
-				this.mainDetailsToggle.setAttribute('open', true);
-			})
+			// this.mainDetailsToggle.addEventListener('mouseenter', () => {
+			// 	this.mainDetailsToggle.setAttribute('open', true);
+			// })
 
-			this.mainDetailsToggle.addEventListener('mouseleave', () => {
-				this.mainDetailsToggle.removeAttribute('open');
-			})
+			// this.mainDetailsToggle.addEventListener('mouseleave', () => {
+			// 	this.mainDetailsToggle.removeAttribute('open');
+			// })
 		}
 
 		onFocusOut() {
@@ -67,7 +67,7 @@ if (!customElements.get("details-disclosure")) {
 			setTimeout(() => {
 				this.mainDetailsToggle.removeAttribute("open");
 				this.mainDetailsToggle.querySelector("summary").setAttribute("aria-expanded", false);
-			},100);
+			}, 100);
 		}
 	}
 
@@ -80,13 +80,17 @@ if (!customElements.get("details-disclosure")) {
 
 			const $details = this.querySelector("details");
 
-			$details.addEventListener("mouseenter", () => {
-				$details.setAttribute("open", true);
-			});
-
-			$details.addEventListener("mouseleave", () => {
-				$details.removeAttribute("open");
-			});
+			if (JSON.parse(this.getAttribute('data-open-onmouseenter'))) {
+				console.log(JSON.parse(this.getAttribute('data-open-onmouseenter')));
+				$details.addEventListener("mouseenter", () => {
+					$details.setAttribute("open", true);
+				});
+			}
+			if (JSON.parse(this.getAttribute('data-close-onmouseleave'))) {
+				$details.addEventListener("mouseleave", () => {
+					$details.removeAttribute("open");
+				});
+			}
 
 			const links = [...this.querySelectorAll("a[data-image]")];
 			const $image = this.querySelector(".js-header-menu-image");

@@ -275,16 +275,17 @@
 
 							{%- when 'inventory' -%}
 								{%- if product.metafields.corail.show_inventory.value == true -%}
-									<p role="status" id="Inventory-{{ section.id }}" {{ block.shopify_attributes }}>
-										{%- if product.selected_or_first_available_variant.inventory_quantity > 0 -%}
+									<p role="status" class="text-sm font-bold leading-6 text-orange-light" id="Inventory-{{ section.id }}" {{ block.shopify_attributes }}>
+										{%- if product.selected_or_first_available_variant.inventory_quantity < 4 -%}
 											{{- 'products.product.inventory_in_stock_show_count' | t: quantity: product.selected_or_first_available_variant.inventory_quantity -}}
-										{%- else -%}
+										{% endif %}
+										{% comment %} {%- else -%}
 											{%- if product.selected_or_first_available_variant.inventory_policy == 'continue' -%}
 												{{- 'products.product.inventory_out_of_stock_continue_selling' | t -}}
 											{%- else -%}
 												{{- 'products.product.inventory_out_of_stock' | t -}}
 											{%- endif -%}
-										{%- endif -%}
+										{%- endif -%} {% endcomment %}
 									</p>
 								{% endif %}
 

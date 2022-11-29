@@ -3,7 +3,7 @@
   z-index: 1000;
   left: 0;
   top: 0;
-  width: 100vw;
+  /* width: 100vw; */
   height: 100%;
   display: flex;
   justify-content: flex-end;
@@ -119,7 +119,7 @@ cart-drawer {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
+  /* width: 100vw; */
   height: 100%;
 }
 

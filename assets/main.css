@@ -1290,7 +1290,7 @@ html,
 	}
 
 [data-scroll-direction="horizontal"] [data-scroll-wrapper] {
-		width: 100vw;
+		/* width: 100vw; */
 		height: 100vh;
 		overflow-x: scroll;
 	}
@@ -2569,10 +2569,6 @@ button.btn.ks-chart-modal-button:after {
 	cursor: pointer;
 }
 
-.cursor-grabbing{
-	cursor: grabbing;
-}
-
 .resize{
 	resize: both;
 }
@@ -3402,6 +3398,11 @@ button.btn.ks-chart-modal-button:after {
 .text-red-very-light{
 	--tw-text-opacity: 1;
 	color: rgb(255 125 108 / var(--tw-text-opacity));
+}
+
+.text-black{
+	--tw-text-opacity: 1;
+	color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
 .text-orange-light{
