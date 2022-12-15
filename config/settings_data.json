@@ -123,7 +123,7 @@
           "announcement-bar-0": {
             "type": "announcement",
             "settings": {
-              "text": "Livraison offerte - Retours offerts - Paiement en 3x sans frais",
+              "text": "- Livraison offerte - Retours offerts - Paiement 3x sans frais",
               "link": "#"
             }
           }
