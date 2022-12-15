@@ -38,8 +38,15 @@
         },
         "ecddec68-4937-46a0-ad05-4a502005e951": {
           "type": "announcement",
+          "disabled": true,
           "settings": {
             "text": "LIVRAISON GRATUITE EN 3 A 6 JOURS - RETOURS ET ECHANGES GRATUITS - PAIEMENT EN 3X SANS FRAIS"
+          }
+        },
+        "e11028c1-7942-483d-84ed-81e41ede69c2": {
+          "type": "text",
+          "settings": {
+            "text": "<b>Pour être livré avant Noël :<\/b><br> - Mondial Relay, commandez avant le 17\/12<br>- Livraison à domicile :  commandez avant le 20\/12<br>- Livraison J+1, commandez avant le 22\/12<br><b>Paiement en 3x sans frais<\/b><br><b>Retours & Echanges offerts jusqu'au 31 janvier<\/b>"
           }
         },
         "caption": {
@@ -113,6 +120,7 @@
         "3881603f-1c4f-469c-a6c4-c79d1ba8d940",
         "a13c66e5-b37d-433e-80c5-d3dc4ce746b8",
         "ecddec68-4937-46a0-ad05-4a502005e951",
+        "e11028c1-7942-483d-84ed-81e41ede69c2",
         "caption",
         "variant_picker",
         "quantity_selector",
