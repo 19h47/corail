@@ -2009,6 +2009,10 @@ button.btn.ks-chart-modal-button:after {
 	margin-left: auto;
 }
 
+.mt-11{
+	margin-top: 2.75rem;
+}
+
 .mb-11{
 	margin-bottom: 2.75rem;
 }
@@ -2994,8 +2998,8 @@ button.btn.ks-chart-modal-button:after {
 	padding: 0.5rem;
 }
 
-.p-\[0\.975rem\]{
-	padding: 0.975rem;
+.p-\[1\.365rem\]{
+	padding: 1.365rem;
 }
 
 .py-4{
@@ -4935,8 +4939,8 @@ button.btn.ks-chart-modal-button:after {
 		border-color: rgb(207 205 201 / var(--tw-border-opacity));
 	}
 
-	.lg\:p-6{
-		padding: 1.5rem;
+	.lg\:p-4{
+		padding: 1rem;
 	}
 
 	.lg\:p-8{
