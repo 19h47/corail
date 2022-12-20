@@ -159,7 +159,7 @@
 							<div
 								id="GalleryThumbs-{{ section.id }}"
 								class="js-thumbs hidden overflow-hidden absolute inset-y-0 left-0 py-5 mx-5 lg:block z-2"
-								data-parameters='{"direction":"vertical","spaceBetween":20,"watchSlidesProgress":true}'
+								data-parameters='{"grabCursor":true,"direction":"vertical","spaceBetween":20,"watchSlidesProgress":true}'
 							>
 								<div class="swiper h-full !overflow-visible">
 									<ul class="swiper-wrapper h-full ">
@@ -300,7 +300,7 @@
 							{%- when 'notice' -%}
 
 								{% if block.settings.title != blank or block.settings.content != blank %}
-									<div class="bg-red-light text-white rounded-lg font-display p-[1.625rem] lg:p-6 mt-6 lg:mt-4 mb-[1.625rem] lg:mb-6">
+									<div class="bg-red-light text-white rounded-lg font-display p-[0.975rem] lg:p-6 mt-6 lg:mt-4 mb-[1.625rem] lg:mb-6">
 										{% if block.settings.title != blank %}
 											<div class="font-bold text-xl uppercase flex">
 												{{- block.settings.title -}}
@@ -311,7 +311,9 @@
 											</div>
 										{% endif %}
 										{% if block.settings.content != blank %}
-											<div class="font-medium {% if block.settings.title != blank %} mt-2.5 lg:mt-0 {% endif %}">{{- block.settings.content -}}</div>
+											<div class="font-medium {% if block.settings.title != blank %} mt-2.5 lg:mt-0 {% endif %}">
+												{{- block.settings.content -}}
+											</div>
 										{% endif %}
 									</div>
 								{% endif %}
@@ -335,7 +337,7 @@
 									{% endif %} {% endcomment %}
 
 									<div class="hidden lg:flex flex-wrap ml-4 gap-0.5">
-										<div class="text-sm font-display border text-center border-gray-very-dark px-3 py-[0.0625rem] font-medium rounded-full">
+										<div class="whitespace-nowrap text-sm font-display border text-center border-gray-very-dark px-3 py-[0.0625rem] font-medium rounded-full">
 											Grinded in the CORAIL° Lab
 										</div>
 									</div>

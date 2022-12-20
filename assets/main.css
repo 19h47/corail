@@ -2005,6 +2005,10 @@ button.btn.ks-chart-modal-button:after {
 	margin-left: 0.25rem;
 }
 
+.ml-auto{
+	margin-left: auto;
+}
+
 .mb-11{
 	margin-bottom: 2.75rem;
 }
@@ -2019,10 +2023,6 @@ button.btn.ks-chart-modal-button:after {
 
 .mt-8{
 	margin-top: 2rem;
-}
-
-.ml-auto{
-	margin-left: auto;
 }
 
 .mt-9{
@@ -2994,8 +2994,8 @@ button.btn.ks-chart-modal-button:after {
 	padding: 0.5rem;
 }
 
-.p-\[1\.625rem\]{
-	padding: 1.625rem;
+.p-\[0\.975rem\]{
+	padding: 0.975rem;
 }
 
 .py-4{

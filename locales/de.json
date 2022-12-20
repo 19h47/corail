@@ -113,6 +113,13 @@
 		"product": {
 			"add_to_cart": "In den Warenkorb legen",
 			"description": "Beschreibung",
+			"inventory_in_stock": "In stock",
+			"inventory_in_stock_show_count": "{{ quantity }} in stock",
+			"inventory_low_stock": "Low stock",
+			"inventory_low_stock_show_count": "Low stock: {{ quantity }} left",
+			"inventory_out_of_stock": "Out of stock",
+			"inventory_out_of_stock_continue_selling": "In stock",
+			"sku": "SKU",
 			"on_sale": "OUTLET",
 			"product_variants": "Produktvarianten",
 			"quantity": {
