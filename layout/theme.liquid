@@ -174,44 +174,46 @@
         <!-- TrustBox script -->
         <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
         <!-- End TrustBox script -->
+
+		<!-- Klaviyo -->
+		<script src="https://a.klaviyo.com/media/js/onsite/onsite.js"></script>
+		<script>
+			var klaviyo = klaviyo || [];
+			klaviyo.init({
+			  account: "TAGzLb",
+			  platform: "shopify",
+			  ecclude_on_tags: 'marseille 20, marseille 21'
+			});
+			klaviyo.enable("backinstock",{
+			trigger: {
+			  product_page_text: "Me prévenir quand ce produit sera de retour en stock",
+			  product_page_class: "btn",
+			  product_page_text_align: "center",
+			  product_page_margin: "2px",
+			  replace_anchor: false
+			},
+			modal: {
+			 headline: "{product_name}",
+			 body_content: "Register to receive a notification when this item comes back in stock.",
+			 email_field_label: "Email",
+			 button_label: "Notify me when available",
+			 subscription_success_label: "You're in! We'll let you know when it's back.",
+			 footer_content: '',
+			 additional_styles: "@import url('https://fonts.googleapis.com/css?family=Helvetica+Neue');",
+			 drop_background_color: "#000",
+			 background_color: "#fff",
+			 text_color: "#222",
+			 button_text_color: "#fff",
+			 button_background_color: "#FF7F63",
+			 close_button_color: "#ccc",
+			 error_background_color: "#fcd6d7",
+			 error_text_color: "#C72E2F",
+			 success_background_color: "#d3efcd",
+			 success_text_color: "#1B9500"
+			}
+		  });
+		</script>
   	</head>
-<script src="https://a.klaviyo.com/media/js/onsite/onsite.js"></script>
-<script>
-    var klaviyo = klaviyo || [];
-    klaviyo.init({
-      account: "TAGzLb",
-      platform: "shopify",
-      ecclude_on_tags: 'marseille 20, marseille 21'
-    });
-    klaviyo.enable("backinstock",{ 
-    trigger: {
-      product_page_text: "Me prévenir quand ce produit sera de retour en stock",
-      product_page_class: "btn",
-      product_page_text_align: "center",
-      product_page_margin: "2px",
-      replace_anchor: false
-    },
-    modal: {
-     headline: "{product_name}",
-     body_content: "Register to receive a notification when this item comes back in stock.",
-     email_field_label: "Email",
-     button_label: "Notify me when available",
-     subscription_success_label: "You're in! We'll let you know when it's back.",
-     footer_content: '',
-     additional_styles: "@import url('https://fonts.googleapis.com/css?family=Helvetica+Neue');",
-     drop_background_color: "#000",
-     background_color: "#fff",
-     text_color: "#222",
-     button_text_color: "#fff",
-     button_background_color: "#FF7F63",
-     close_button_color: "#ccc",
-     error_background_color: "#fcd6d7",
-     error_text_color: "#C72E2F",
-     success_background_color: "#d3efcd",
-     success_text_color: "#1B9500"
-    }
-  });
-</script>
   	<body class="cursor-wait has-scroll-init:cursor-auto" data-page-type="{{ request.page_type }}" data-page-template-suffix="{{ page.template_suffix }}">
 		<a class="skip-to-content-link button sr-only" href="#MainContent">
 			{{ "accessibility.skip_to_text" | t }}
