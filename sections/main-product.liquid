@@ -41,11 +41,7 @@
 	{%- endif -%}
 
 	{%- assign product_form_id = 'product-form-' | append: section.id -%}
- <!-- TrustBox widget - Product Mini MultiSource -->
-<div class="trustpilot-widget" data-locale="fr-FR" data-template-id="577258fb31f02306e4e3aaf9" data-businessunit-id="5fccf9cee8d2840001a6558e" data-style-height="24px" data-style-width="100%" data-theme="light" data-sku="TRUSTPILOT_SKU_VALUE_43143916617955" data-no-reviews="hide" data-scroll-to-list="true" data-style-alignment="right">
-  <a href="https://fr.trustpilot.com/review/corail.co" target="_blank" rel="noopener">Trustpilot</a>
-</div>
-<!-- End TrustBox widget -->
+ 
 
 	<div class="fixed bottom-0 inset-x z-[100] py-2 bg-white w-full hidden lg:block is-scrolled-screen:opacity-100 is-scrolled-screen:visible opacity-0 invisible is-onbottom:opacity-0 is-onbottom:invisible transition-all duration-1000 ease-in-out">
 		<hr class="absolute bottom-full bg-orange-grayish w-full h-[0.0625rem]">
@@ -56,7 +52,11 @@
 						<p class="text-4xl font-semibold font-display uppercase">
 							{{- product.title | escape -}}
 						</p>
-
+<!-- TrustBox widget - Product Mini MultiSource -->
+<div class="trustpilot-widget" data-locale="fr-FR" data-template-id="577258fb31f02306e4e3aaf9" data-businessunit-id="5fccf9cee8d2840001a6558e" data-style-height="24px" data-style-width="100%" data-theme="light" data-sku="TRUSTPILOT_SKU_VALUE_43143916617955" data-no-reviews="hide" data-scroll-to-list="true" data-style-alignment="right">
+  <a href="https://fr.trustpilot.com/review/corail.co" target="_blank" rel="noopener">Trustpilot</a>
+</div>
+<!-- End TrustBox widget -->
 						<div class="text-2xl font-medium font-display js-main-product" id="price-fixed-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
 							{%- render 'price', product: product, use_variant: true, show_badges: false, price_class: '' -%}
 						</div>
