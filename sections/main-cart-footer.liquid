@@ -66,7 +66,29 @@
 											{{ 'sections.cart.checkout' | t }}
 										</button>
 									</div>
-
+<!-- Just Button  -->
+            <just-pay-button 
+             theme="default"
+             className="just-btn just-btn-product"
+             app_id="ad5b234f-2ba1-4871-af8b-8dfb81d28843" 
+             domain="Corail"
+             source="cart">
+            </just-pay-button>
+    	    <style>
+	        .cart__footer just-pay-button::part(just-button) {
+    	        border-radius: 9999px;
+    	        margin-top:10px;
+                font-size: .75rem;
+                font-family: inherit;
+                height:50px;
+              }
+            @media (max-width: 1023px) {
+	        .cart__footer just-pay-button::part(just-button) {
+	            height:50px;
+	          }
+	        }                                          
+    	    </style>
+<!-- End Of Just Button  -->
 									{%- if additional_checkout_buttons -%}
 										<div class="cart__dynamic-checkout-buttons mt-2.5 additional-checkout-buttons">
 											{{ content_for_additional_checkout_buttons }}
