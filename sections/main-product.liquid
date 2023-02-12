@@ -567,6 +567,34 @@
 													</div>
 												</button>
 
+                                          <!-- Just Button  -->
+                                                      <just-pay-button 
+                                                       theme="default"
+                                                       default_variant="{{product.selected_or_first_available_variant.id}}"
+                                                       default_available="{{product.selected_or_first_available_variant.available}}"
+                                                       product_id="{{ product.id }}" 
+                                                       product_handle="{{ product.handle }}"                        
+                                                       className="just-btn just-btn-product"
+                                                       app_id="ad5b234f-2ba1-4871-af8b-8dfb81d28843" 
+                                                       domain="Corail"
+                                                       source="product-form">
+                                                      </just-pay-button>
+                                              	    <style>
+                                          	        .product-form__buttons just-pay-button::part(just-button) {
+                                              	        border-radius: 9999px;
+                                              	        margin-top:-5px;
+                                                          font-size: .75rem;
+                                                          font-family: inherit;
+                                                          height:50px;
+                                                        }
+                                                      @media (max-width: 1023px) {
+                                          	        .product-form__buttons just-pay-button::part(just-button) {
+                                          	            height:50px;
+                                          	          }
+                                          	        }                                          
+                                              	    </style>
+                                          <!-- End Of Just Button  -->
+                                          
 												{%- if block.settings.show_dynamic_checkout -%}
 													{{ form | payment_button }}
 												{%- endif -%}
