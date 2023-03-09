@@ -117,20 +117,11 @@
             "title": "UNE ALTERNATIVE\nÀ LA PÊCHE",
             "content": "Nous avons rencontré les pêcheurs avec qui nous avons travaillé pendant un été particulièrement chaud (2018) ce qui les empêchait de pêcher. Le but de notre partenariat est d’apporter à notre équipe de pêcheurs une activité supplémentaire quand le réchauffement et changement climatiques rendent la pêche de plus en plus difficile."
           }
-        },
-        "2148fa15-a551-46eb-9e43-a25634c02eb9": {
-          "type": "item",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/BA25DBFB-B252-44FB-8CE0-3CAD887541E2.jpg",
-            "title": "",
-            "content": ""
-          }
         }
       },
       "block_order": [
         "6d0faf3d-4570-4b4a-8780-1acac0494f64",
-        "f02826ed-762f-449a-befe-f5d2383e8aeb",
-        "2148fa15-a551-46eb-9e43-a25634c02eb9"
+        "f02826ed-762f-449a-befe-f5d2383e8aeb"
       ],
       "settings": {
       }
