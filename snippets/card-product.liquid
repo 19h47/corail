@@ -119,7 +119,7 @@
 			{%- unless card_product.has_only_default_variant -%}
 				<div class="space-y-2 absolute bottom-0 inset-x-0 m-5 z-1 hidden lg:block">
 					{%- for option in card_product.options_with_values -%}
-						{% if option.name == 'Taille' or 'pointure' == option.name or 'Pointures' == option.name %}
+						{%- if option.name == 'Taille' or 'pointure' == option.name or 'Pointures' == option.name or 'Size' == option.name or 'Schneiden' == option.name -%}
 
 							{%- liquid
 								assign variants_available_arr = card_product.variants | map: 'available'
@@ -166,7 +166,7 @@
 		{%- unless card_product.has_only_default_variant -%}
 			<div class="space-y-2 lg:hidden mb-2.5">
 				{%- for option in card_product.options_with_values -%}
-					{%- if option.name == 'Taille' or 'pointure' == option.name -%}
+					{%- if option.name == 'Taille' or 'pointure' == option.name or 'Pointures' == option.name or 'Size' == option.name or 'Schneiden' == option.name -%}
 
 						{%- liquid
 							assign variants_available_arr = card_product.variants | map: 'available'
