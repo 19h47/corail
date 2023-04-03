@@ -1,6 +1,3 @@
-/*!********************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[8].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[8].use[2]!./src/stylesheets/styles.css ***!
-  \********************************************************************************************************************************************************************************/
 /**
  * Base
  *
@@ -813,7 +810,7 @@ button.swiper-pagination-bullet {
  * @author Jérémy Levron <jeremylevron@19h47.fr> (https://19h47.fr)
  */
 
-/*! tailwindcss v3.1.8 | MIT License | https://tailwindcss.com
+/*! tailwindcss v3.3.1 | MIT License | https://tailwindcss.com
  */
 
 /*
@@ -840,6 +837,8 @@ button.swiper-pagination-bullet {
 2. Prevent adjustments of font size after orientation changes in iOS.
 3. Use a more readable tab size.
 4. Use the user's configured `sans` font-family by default.
+5. Use the user's configured `sans` font-feature-settings by default.
+6. Use the user's configured `sans` font-variation-settings by default.
 */
 
 html {
@@ -849,6 +848,8 @@ html {
   -o-tab-size: 4;
      tab-size: 4; /* 3 */
   font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; /* 4 */
+  font-feature-settings: normal; /* 5 */
+  font-variation-settings: normal; /* 6 */
 }
 
 /*
@@ -1185,6 +1186,12 @@ video {
   height: auto;
 }
 
+/* Make elements with the HTML hidden attribute stay hidden by default */
+
+[hidden] {
+  display: none;
+}
+
 *,
 	::after,
 	::before {
@@ -1296,10 +1303,6 @@ html,
 		/* width: 100vw; */
 		height: 100vh;
 		overflow-x: scroll;
-	}
-
-.has-scroll-smooth [data-scroll-container] {
-		min-height: 100vh;
 	}
 
 [data-scroll-direction="horizontal"] [data-scroll-container] {
@@ -1429,8 +1432,8 @@ button.btn.ks-chart-modal-button:after {
 	--tw-backdrop-sepia:  ;
 }
 
-.button, 
-	.shopify-payment-button button[type="button"], 
+.button,
+	.shopify-payment-button button[type="button"],
 	.shopify-challenge__button{
 	border-radius: 9999px;
 	--tw-bg-opacity: 1;
@@ -1450,40 +1453,13 @@ button.btn.ks-chart-modal-button:after {
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.\!button, 
-	.shopify-payment-button button[type="button"], 
-	.shopify-challenge__button{
-	border-radius: 9999px;
-	--tw-bg-opacity: 1;
-	background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-	padding-top: 1rem;
-	padding-bottom: 1rem;
-	padding-left: 2rem;
-	padding-right: 2rem;
-	text-align: center;
-	font-size: 0.75rem;
-	line-height: 1rem;
-	text-transform: uppercase;
-	--tw-text-opacity: 1;
-	color: rgb(51 51 51 / var(--tw-text-opacity));
-	transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
-	transition-duration: 1000ms;
-	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.button[disabled], 
+.button[disabled],
 	.button[aria-disabled="true"]{
 	cursor: not-allowed;
 	opacity: 0.5;
 }
 
-.\!button[disabled], 
-	.\!button[aria-disabled="true"]{
-	cursor: not-allowed;
-	opacity: 0.5;
-}
-
-.button.button-red, 
+.button.button-red,
 	.shopify-payment-button button[type="button"]{
 	--tw-bg-opacity: 1;
 	background-color: rgb(255 125 108 / var(--tw-bg-opacity));
@@ -1491,15 +1467,7 @@ button.btn.ks-chart-modal-button:after {
 	color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.\!button.button-red, 
-	.shopify-payment-button button[type="button"]{
-	--tw-bg-opacity: 1;
-	background-color: rgb(255 125 108 / var(--tw-bg-opacity));
-	--tw-text-opacity: 1;
-	color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.button.button-gray, 
+.button.button-gray,
 	.shopify-challenge__button{
 	--tw-bg-opacity: 1;
 	background-color: rgb(51 51 51 / var(--tw-bg-opacity));
@@ -1507,25 +1475,8 @@ button.btn.ks-chart-modal-button:after {
 	color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.\!button.button-gray, 
-	.shopify-challenge__button{
-	--tw-bg-opacity: 1;
-	background-color: rgb(51 51 51 / var(--tw-bg-opacity));
-	--tw-text-opacity: 1;
-	color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.button:hover:not([disabled]), 
-	.button.button-red:hover:not([disabled]), 
-	.shopify-payment-button button[type="button"]:hover:not([disabled]){
-	--tw-bg-opacity: 1;
-	background-color: rgb(51 51 51 / var(--tw-bg-opacity));
-	--tw-text-opacity: 1;
-	color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.\!button:hover:not([disabled]), 
-	.\!button.button-red:hover:not([disabled]), 
+.button:hover:not([disabled]),
+	.button.button-red:hover:not([disabled]),
 	.shopify-payment-button button[type="button"]:hover:not([disabled]){
 	--tw-bg-opacity: 1;
 	background-color: rgb(51 51 51 / var(--tw-bg-opacity));
@@ -1534,9 +1485,6 @@ button.btn.ks-chart-modal-button:after {
 }
 
 .button[aria-disabled="true"] {
-	}
-
-.\!button[aria-disabled="true"] {
 	}
 
 .button-secondary{
@@ -1669,10 +1617,6 @@ button.btn.ks-chart-modal-button:after {
 	pointer-events: auto;
 }
 
-.visible{
-	visibility: visible;
-}
-
 .invisible{
 	visibility: hidden;
 }
@@ -1698,10 +1642,7 @@ button.btn.ks-chart-modal-button:after {
 }
 
 .inset-0{
-	top: 0px;
-	right: 0px;
-	bottom: 0px;
-	left: 0px;
+	inset: 0px;
 }
 
 .inset-x-0{
@@ -1714,132 +1655,132 @@ button.btn.ks-chart-modal-button:after {
 	bottom: 0px;
 }
 
-.top-0{
-	top: 0px;
-}
-
-.left-0{
-	left: 0px;
-}
-
-.top-\[5\.625rem\]{
-	top: 5.625rem;
-}
-
-.bottom-5{
-	bottom: 1.25rem;
-}
-
-.bottom-0{
-	bottom: 0px;
-}
-
-.right-0{
-	right: 0px;
-}
-
-.bottom-\[100\%\]{
-	bottom: 100%;
+.\!bottom-0{
+	bottom: 0px !important;
 }
 
 .-right-\[0\.03125rem\]{
 	right: -0.03125rem;
 }
 
-.right-\[calc\(100\%_-_0\.03125rem\)\]{
-	right: calc(100% - 0.03125rem);
-}
-
-.left-\[calc\(100\%_-_0\.03125rem\)\]{
-	left: calc(100% - 0.03125rem);
-}
-
-.left-\[100\%\]{
-	left: 100%;
-}
-
-.top-\[100\%\]{
-	top: 100%;
-}
-
-.right-\[100\%\]{
-	right: 100%;
-}
-
-.left-9{
-	left: 2.25rem;
-}
-
-.top-\[4\.375rem\]{
-	top: 4.375rem;
-}
-
-.bottom-full{
-	bottom: 100%;
-}
-
-.\!bottom-0{
-	bottom: 0px !important;
+.bottom-0{
+	bottom: 0px;
 }
 
 .bottom-4{
 	bottom: 1rem;
 }
 
+.bottom-5{
+	bottom: 1.25rem;
+}
+
+.bottom-\[100\%\]{
+	bottom: 100%;
+}
+
+.bottom-full{
+	bottom: 100%;
+}
+
+.left-0{
+	left: 0px;
+}
+
+.left-9{
+	left: 2.25rem;
+}
+
+.left-\[100\%\]{
+	left: 100%;
+}
+
+.left-\[calc\(100\%_-_0\.03125rem\)\]{
+	left: calc(100% - 0.03125rem);
+}
+
+.right-0{
+	right: 0px;
+}
+
+.right-\[100\%\]{
+	right: 100%;
+}
+
+.right-\[calc\(100\%_-_0\.03125rem\)\]{
+	right: calc(100% - 0.03125rem);
+}
+
+.top-0{
+	top: 0px;
+}
+
+.top-\[100\%\]{
+	top: 100%;
+}
+
 .top-\[11\.75rem\]{
 	top: 11.75rem;
+}
+
+.top-\[4\.375rem\]{
+	top: 4.375rem;
+}
+
+.top-\[5\.625rem\]{
+	top: 5.625rem;
 }
 
 .isolate{
 	isolation: isolate;
 }
 
-.z-10{
-	z-index: 10;
-}
-
-.z-50{
-	z-index: 50;
-}
-
-.z-1{
-	z-index: 1;
-}
-
-.z-20{
-	z-index: 20;
-}
-
 .-z-1{
 	z-index: -1;
-}
-
-.z-4{
-	z-index: 4;
-}
-
-.z-2{
-	z-index: 2;
-}
-
-.z-3{
-	z-index: 3;
-}
-
-.z-\[100\]{
-	z-index: 100;
 }
 
 .z-0{
 	z-index: 0;
 }
 
-.m-auto{
-	margin: auto;
+.z-1{
+	z-index: 1;
 }
 
-.m-8{
-	margin: 2rem;
+.z-10{
+	z-index: 10;
+}
+
+.z-2{
+	z-index: 2;
+}
+
+.z-20{
+	z-index: 20;
+}
+
+.z-3{
+	z-index: 3;
+}
+
+.z-4{
+	z-index: 4;
+}
+
+.z-50{
+	z-index: 50;
+}
+
+.z-\[100\]{
+	z-index: 100;
+}
+
+.m-2{
+	margin: 0.5rem;
+}
+
+.m-2\.5{
+	margin: 0.625rem;
 }
 
 .m-4{
@@ -1850,76 +1791,16 @@ button.btn.ks-chart-modal-button:after {
 	margin: 1.25rem;
 }
 
-.m-2\.5{
-	margin: 0.625rem;
-}
-
-.m-2{
-	margin: 0.5rem;
+.m-8{
+	margin: 2rem;
 }
 
 .m-\[1\.625rem\]{
 	margin: 1.625rem;
 }
 
-.mx-5{
-	margin-left: 1.25rem;
-	margin-right: 1.25rem;
-}
-
-.my-16{
-	margin-top: 4rem;
-	margin-bottom: 4rem;
-}
-
-.my-12{
-	margin-top: 3rem;
-	margin-bottom: 3rem;
-}
-
-.mx-2\.5{
-	margin-left: 0.625rem;
-	margin-right: 0.625rem;
-}
-
-.mx-2{
-	margin-left: 0.5rem;
-	margin-right: 0.5rem;
-}
-
-.my-14{
-	margin-top: 3.5rem;
-	margin-bottom: 3.5rem;
-}
-
-.mx-4{
-	margin-left: 1rem;
-	margin-right: 1rem;
-}
-
-.my-auto{
-	margin-top: auto;
-	margin-bottom: auto;
-}
-
-.my-\[4\.375rem\]{
-	margin-top: 4.375rem;
-	margin-bottom: 4.375rem;
-}
-
-.my-6{
-	margin-top: 1.5rem;
-	margin-bottom: 1.5rem;
-}
-
-.mx-auto{
-	margin-left: auto;
-	margin-right: auto;
-}
-
-.my-5{
-	margin-top: 1.25rem;
-	margin-bottom: 1.25rem;
+.m-auto{
+	margin: auto;
 }
 
 .-mx-5{
@@ -1927,19 +1808,49 @@ button.btn.ks-chart-modal-button:after {
 	margin-right: -1.25rem;
 }
 
+.mx-2{
+	margin-left: 0.5rem;
+	margin-right: 0.5rem;
+}
+
+.mx-2\.5{
+	margin-left: 0.625rem;
+	margin-right: 0.625rem;
+}
+
+.mx-4{
+	margin-left: 1rem;
+	margin-right: 1rem;
+}
+
+.mx-5{
+	margin-left: 1.25rem;
+	margin-right: 1.25rem;
+}
+
+.mx-auto{
+	margin-left: auto;
+	margin-right: auto;
+}
+
 .my-10{
 	margin-top: 2.5rem;
 	margin-bottom: 2.5rem;
 }
 
-.my-\[3\.75rem\]{
-	margin-top: 3.75rem;
-	margin-bottom: 3.75rem;
+.my-12{
+	margin-top: 3rem;
+	margin-bottom: 3rem;
 }
 
-.my-28{
-	margin-top: 7rem;
-	margin-bottom: 7rem;
+.my-14{
+	margin-top: 3.5rem;
+	margin-bottom: 3.5rem;
+}
+
+.my-16{
+	margin-top: 4rem;
+	margin-bottom: 4rem;
 }
 
 .my-2{
@@ -1947,49 +1858,235 @@ button.btn.ks-chart-modal-button:after {
 	margin-bottom: 0.5rem;
 }
 
+.my-28{
+	margin-top: 7rem;
+	margin-bottom: 7rem;
+}
+
 .my-4{
 	margin-top: 1rem;
 	margin-bottom: 1rem;
 }
 
-.mb-\[3\.75rem\]{
+.my-5{
+	margin-top: 1.25rem;
+	margin-bottom: 1.25rem;
+}
+
+.my-6{
+	margin-top: 1.5rem;
+	margin-bottom: 1.5rem;
+}
+
+.my-\[3\.75rem\]{
+	margin-top: 3.75rem;
 	margin-bottom: 3.75rem;
+}
+
+.my-\[4\.375rem\]{
+	margin-top: 4.375rem;
+	margin-bottom: 4.375rem;
+}
+
+.my-auto{
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+.\!mt-auto{
+	margin-top: auto !important;
+}
+
+.-ml-\[0\.5625rem\]{
+	margin-left: -0.5625rem;
+}
+
+.-ml-\[0\.6875rem\]{
+	margin-left: -0.6875rem;
+}
+
+.-mr-0{
+	margin-right: -0px;
+}
+
+.-mr-0\.5{
+	margin-right: -0.125rem;
+}
+
+.-mt-1{
+	margin-top: -0.25rem;
+}
+
+.-mt-16{
+	margin-top: -4rem;
+}
+
+.-mt-7{
+	margin-top: -1.75rem;
+}
+
+.-mt-9{
+	margin-top: -2.25rem;
+}
+
+.-mt-\[0\.5625rem\]{
+	margin-top: -0.5625rem;
+}
+
+.-mt-\[0\.6875rem\]{
+	margin-top: -0.6875rem;
 }
 
 .-mt-\[4rem\]{
 	margin-top: -4rem;
 }
 
-.mr-2{
-	margin-right: 0.5rem;
+.mb-1{
+	margin-bottom: 0.25rem;
 }
 
-.mb-4{
-	margin-bottom: 1rem;
+.mb-1\.5{
+	margin-bottom: 0.375rem;
 }
 
-.mr-5{
-	margin-right: 1.25rem;
+.mb-10{
+	margin-bottom: 2.5rem;
 }
 
-.mr-1\.5{
-	margin-right: 0.375rem;
-}
-
-.mr-1{
-	margin-right: 0.25rem;
+.mb-11{
+	margin-bottom: 2.75rem;
 }
 
 .mb-12{
 	margin-bottom: 3rem;
 }
 
-.mt-2{
-	margin-top: 0.5rem;
+.mb-14{
+	margin-bottom: 3.5rem;
 }
 
-.mt-4{
-	margin-top: 1rem;
+.mb-2{
+	margin-bottom: 0.5rem;
+}
+
+.mb-2\.5{
+	margin-bottom: 0.625rem;
+}
+
+.mb-20{
+	margin-bottom: 5rem;
+}
+
+.mb-3{
+	margin-bottom: 0.75rem;
+}
+
+.mb-4{
+	margin-bottom: 1rem;
+}
+
+.mb-5{
+	margin-bottom: 1.25rem;
+}
+
+.mb-6{
+	margin-bottom: 1.5rem;
+}
+
+.mb-\[1\.625rem\]{
+	margin-bottom: 1.625rem;
+}
+
+.mb-\[3\.75rem\]{
+	margin-bottom: 3.75rem;
+}
+
+.ml-1{
+	margin-left: 0.25rem;
+}
+
+.ml-1\.5{
+	margin-left: 0.375rem;
+}
+
+.ml-1\/12{
+	margin-left: 8.333333333333334%;
+}
+
+.ml-2{
+	margin-left: 0.5rem;
+}
+
+.ml-2\.5{
+	margin-left: 0.625rem;
+}
+
+.ml-4{
+	margin-left: 1rem;
+}
+
+.ml-8{
+	margin-left: 2rem;
+}
+
+.ml-auto{
+	margin-left: auto;
+}
+
+.mr-1{
+	margin-right: 0.25rem;
+}
+
+.mr-1\.5{
+	margin-right: 0.375rem;
+}
+
+.mr-16{
+	margin-right: 4rem;
+}
+
+.mr-2{
+	margin-right: 0.5rem;
+}
+
+.mr-2\.5{
+	margin-right: 0.625rem;
+}
+
+.mr-3{
+	margin-right: 0.75rem;
+}
+
+.mr-4{
+	margin-right: 1rem;
+}
+
+.mr-5{
+	margin-right: 1.25rem;
+}
+
+.mr-6{
+	margin-right: 1.5rem;
+}
+
+.mr-7{
+	margin-right: 1.75rem;
+}
+
+.mt-1{
+	margin-top: 0.25rem;
+}
+
+.mt-1\.5{
+	margin-top: 0.375rem;
+}
+
+.mt-10{
+	margin-top: 2.5rem;
+}
+
+.mt-11{
+	margin-top: 2.75rem;
 }
 
 .mt-12{
@@ -2000,32 +2097,40 @@ button.btn.ks-chart-modal-button:after {
 	margin-top: 3.5rem;
 }
 
-.ml-1\.5{
-	margin-left: 0.375rem;
+.mt-16{
+	margin-top: 4rem;
 }
 
-.ml-1{
-	margin-left: 0.25rem;
+.mt-2{
+	margin-top: 0.5rem;
 }
 
-.ml-auto{
-	margin-left: auto;
+.mt-2\.5{
+	margin-top: 0.625rem;
 }
 
-.mt-11{
-	margin-top: 2.75rem;
+.mt-24{
+	margin-top: 6rem;
 }
 
-.mb-11{
-	margin-bottom: 2.75rem;
+.mt-3{
+	margin-top: 0.75rem;
 }
 
-.mb-3{
-	margin-bottom: 0.75rem;
+.mt-4{
+	margin-top: 1rem;
+}
+
+.mt-5{
+	margin-top: 1.25rem;
 }
 
 .mt-6{
 	margin-top: 1.5rem;
+}
+
+.mt-7{
+	margin-top: 1.75rem;
 }
 
 .mt-8{
@@ -2036,184 +2141,20 @@ button.btn.ks-chart-modal-button:after {
 	margin-top: 2.25rem;
 }
 
-.mt-5{
-	margin-top: 1.25rem;
-}
-
-.mt-16{
-	margin-top: 4rem;
-}
-
-.mt-\[4\.75rem\]{
-	margin-top: 4.75rem;
-}
-
-.mb-5{
-	margin-bottom: 1.25rem;
-}
-
-.mb-14{
-	margin-bottom: 3.5rem;
-}
-
-.mb-10{
-	margin-bottom: 2.5rem;
-}
-
-.mb-20{
-	margin-bottom: 5rem;
-}
-
-.mt-2\.5{
-	margin-top: 0.625rem;
-}
-
-.mb-2{
-	margin-bottom: 0.5rem;
-}
-
-.mb-1\.5{
-	margin-bottom: 0.375rem;
-}
-
-.mb-1{
-	margin-bottom: 0.25rem;
-}
-
-.mb-6{
-	margin-bottom: 1.5rem;
-}
-
-.mr-2\.5{
-	margin-right: 0.625rem;
-}
-
-.-mt-\[0\.5625rem\]{
-	margin-top: -0.5625rem;
-}
-
-.-ml-\[0\.5625rem\]{
-	margin-left: -0.5625rem;
-}
-
-.-mt-\[0\.6875rem\]{
-	margin-top: -0.6875rem;
-}
-
-.-ml-\[0\.6875rem\]{
-	margin-left: -0.6875rem;
-}
-
-.mt-1\.5{
-	margin-top: 0.375rem;
-}
-
-.mt-1{
-	margin-top: 0.25rem;
-}
-
-.mt-10{
-	margin-top: 2.5rem;
-}
-
-.ml-2{
-	margin-left: 0.5rem;
-}
-
-.mb-\[1\.625rem\]{
-	margin-bottom: 1.625rem;
-}
-
-.ml-4{
-	margin-left: 1rem;
-}
-
-.mr-6{
-	margin-right: 1.5rem;
-}
-
 .mt-\[1\.125rem\]{
 	margin-top: 1.125rem;
-}
-
-.mr-4{
-	margin-right: 1rem;
-}
-
-.-mt-7{
-	margin-top: -1.75rem;
-}
-
-.ml-8{
-	margin-left: 2rem;
-}
-
-.-mt-9{
-	margin-top: -2.25rem;
-}
-
-.-mt-16{
-	margin-top: -4rem;
-}
-
-.mr-7{
-	margin-right: 1.75rem;
-}
-
-.mt-auto{
-	margin-top: auto;
-}
-
-.mt-3{
-	margin-top: 0.75rem;
-}
-
-.mt-24{
-	margin-top: 6rem;
-}
-
-.mt-7{
-	margin-top: 1.75rem;
-}
-
-.ml-1\/12{
-	margin-left: 8.333333333333334%;
 }
 
 .mt-\[10\.5rem\]{
 	margin-top: 10.5rem;
 }
 
-.-mr-0\.5{
-	margin-right: -0.125rem;
+.mt-\[4\.75rem\]{
+	margin-top: 4.75rem;
 }
 
-.-mr-0{
-	margin-right: -0px;
-}
-
-.-mt-1{
-	margin-top: -0.25rem;
-}
-
-.mr-16{
-	margin-right: 4rem;
-}
-
-.mb-2\.5{
-	margin-bottom: 0.625rem;
-}
-
-.ml-2\.5{
-	margin-left: 0.625rem;
-}
-
-.mr-3{
-	margin-right: 0.75rem;
-}
-
-.\!mt-auto{
-	margin-top: auto !important;
+.mt-auto{
+	margin-top: auto;
 }
 
 .block{
@@ -2222,10 +2163,6 @@ button.btn.ks-chart-modal-button:after {
 
 .inline-block{
 	display: inline-block;
-}
-
-.inline{
-	display: inline;
 }
 
 .flex{
@@ -2248,168 +2185,168 @@ button.btn.ks-chart-modal-button:after {
 	display: none;
 }
 
-.h-full{
-	height: 100%;
-}
-
-.h-\[1\.125rem\]{
-	height: 1.125rem;
-}
-
-.h-9{
-	height: 2.25rem;
-}
-
-.h-4{
-	height: 1rem;
-}
-
-.h-7{
-	height: 1.75rem;
-}
-
 .\!h-auto{
 	height: auto !important;
-}
-
-.h-\[26\.25rem\]{
-	height: 26.25rem;
-}
-
-.h-10{
-	height: 2.5rem;
-}
-
-.h-\[0\.0625rem\]{
-	height: 0.0625rem;
-}
-
-.h-1\.5{
-	height: 0.375rem;
 }
 
 .h-1{
 	height: 0.25rem;
 }
 
-.h-16{
-	height: 4rem;
+.h-1\.5{
+	height: 0.375rem;
 }
 
-.h-5{
-	height: 1.25rem;
-}
-
-.h-auto{
-	height: auto;
-}
-
-.h-\[4\.375rem\]{
-	height: 4.375rem;
-}
-
-.h-44{
-	height: 11rem;
-}
-
-.h-\[36\.625rem\]{
-	height: 36.625rem;
-}
-
-.h-\[14rem\]{
-	height: 14rem;
-}
-
-.h-\[17\.625rem\]{
-	height: 17.625rem;
-}
-
-.h-\[15\.75rem\]{
-	height: 15.75rem;
-}
-
-.h-\[10\.875rem\]{
-	height: 10.875rem;
-}
-
-.h-24{
-	height: 6rem;
-}
-
-.h-6{
-	height: 1.5rem;
-}
-
-.h-\[20\.1875rem\]{
-	height: 20.1875rem;
-}
-
-.h-\[calc\(100vh_-_4\.375rem\)\]{
-	height: calc(100vh - 4.375rem);
-}
-
-.h-\[6\.375rem\]{
-	height: 6.375rem;
-}
-
-.h-\[27\.5rem\]{
-	height: 27.5rem;
-}
-
-.h-\[25\.5rem\]{
-	height: 25.5rem;
-}
-
-.h-\[4\.25rem\]{
-	height: 4.25rem;
-}
-
-.h-\[24\.5rem\]{
-	height: 24.5rem;
-}
-
-.h-28{
-	height: 7rem;
-}
-
-.h-\[15\.25rem\]{
-	height: 15.25rem;
-}
-
-.h-\[0\.3125rem\]{
-	height: 0.3125rem;
-}
-
-.h-\[1\.375rem\]{
-	height: 1.375rem;
-}
-
-.h-14{
-	height: 3.5rem;
-}
-
-.h-8{
-	height: 2rem;
+.h-10{
+	height: 2.5rem;
 }
 
 .h-12{
 	height: 3rem;
 }
 
-.h-\[16\.875rem\]{
-	height: 16.875rem;
+.h-14{
+	height: 3.5rem;
+}
+
+.h-16{
+	height: 4rem;
 }
 
 .h-2{
 	height: 0.5rem;
 }
 
+.h-2\.5{
+	height: 0.625rem;
+}
+
+.h-24{
+	height: 6rem;
+}
+
+.h-28{
+	height: 7rem;
+}
+
 .h-3{
 	height: 0.75rem;
 }
 
-.h-2\.5{
-	height: 0.625rem;
+.h-4{
+	height: 1rem;
+}
+
+.h-44{
+	height: 11rem;
+}
+
+.h-5{
+	height: 1.25rem;
+}
+
+.h-6{
+	height: 1.5rem;
+}
+
+.h-7{
+	height: 1.75rem;
+}
+
+.h-8{
+	height: 2rem;
+}
+
+.h-9{
+	height: 2.25rem;
+}
+
+.h-\[0\.0625rem\]{
+	height: 0.0625rem;
+}
+
+.h-\[0\.3125rem\]{
+	height: 0.3125rem;
+}
+
+.h-\[1\.125rem\]{
+	height: 1.125rem;
+}
+
+.h-\[1\.375rem\]{
+	height: 1.375rem;
+}
+
+.h-\[10\.875rem\]{
+	height: 10.875rem;
+}
+
+.h-\[14rem\]{
+	height: 14rem;
+}
+
+.h-\[15\.25rem\]{
+	height: 15.25rem;
+}
+
+.h-\[15\.75rem\]{
+	height: 15.75rem;
+}
+
+.h-\[16\.875rem\]{
+	height: 16.875rem;
+}
+
+.h-\[17\.625rem\]{
+	height: 17.625rem;
+}
+
+.h-\[20\.1875rem\]{
+	height: 20.1875rem;
+}
+
+.h-\[24\.5rem\]{
+	height: 24.5rem;
+}
+
+.h-\[25\.5rem\]{
+	height: 25.5rem;
+}
+
+.h-\[26\.25rem\]{
+	height: 26.25rem;
+}
+
+.h-\[27\.5rem\]{
+	height: 27.5rem;
+}
+
+.h-\[36\.625rem\]{
+	height: 36.625rem;
+}
+
+.h-\[4\.25rem\]{
+	height: 4.25rem;
+}
+
+.h-\[4\.375rem\]{
+	height: 4.375rem;
+}
+
+.h-\[6\.375rem\]{
+	height: 6.375rem;
+}
+
+.h-\[calc\(100vh_-_4\.375rem\)\]{
+	height: calc(100vh - 4.375rem);
+}
+
+.h-auto{
+	height: auto;
+}
+
+.h-full{
+	height: 100%;
 }
 
 .max-h-screen{
@@ -2420,120 +2357,120 @@ button.btn.ks-chart-modal-button:after {
 	min-height: 4.375rem;
 }
 
-.w-\[1\.125rem\]{
-	width: 1.125rem;
-}
-
-.w-8{
-	width: 2rem;
-}
-
-.w-full{
-	width: 100%;
-}
-
-.w-2{
-	width: 0.5rem;
-}
-
-.w-auto{
-	width: auto;
-}
-
-.w-\[22\.75rem\]{
-	width: 22.75rem;
-}
-
-.w-10{
-	width: 2.5rem;
-}
-
-.w-4{
-	width: 1rem;
+.w-1{
+	width: 0.25rem;
 }
 
 .w-1\.5{
 	width: 0.375rem;
 }
 
-.w-1{
-	width: 0.25rem;
-}
-
-.w-\[0\.0625rem\]{
-	width: 0.0625rem;
-}
-
-.w-28{
-	width: 7rem;
-}
-
-.w-5{
-	width: 1.25rem;
-}
-
-.w-\[4\.375rem\]{
-	width: 4.375rem;
-}
-
-.w-\[calc\(50vw_\+_0\.625rem\)\]{
-	width: calc(50vw + 0.625rem);
-}
-
-.w-\[calc\(100\%_\+_2\.5rem\)\]{
-	width: calc(100% + 2.5rem);
-}
-
-.w-24{
-	width: 6rem;
-}
-
-.w-6{
-	width: 1.5rem;
-}
-
-.w-\[6\.375rem\]{
-	width: 6.375rem;
-}
-
-.w-\[4\.25rem\]{
-	width: 4.25rem;
-}
-
-.w-7{
-	width: 1.75rem;
-}
-
-.w-\[0\.875rem\]{
-	width: 0.875rem;
-}
-
-.w-\[0\.1875rem\]{
-	width: 0.1875rem;
-}
-
-.w-14{
-	width: 3.5rem;
+.w-10{
+	width: 2.5rem;
 }
 
 .w-12{
 	width: 3rem;
 }
 
-.w-3{
-	width: 0.75rem;
+.w-14{
+	width: 3.5rem;
+}
+
+.w-2{
+	width: 0.5rem;
 }
 
 .w-2\.5{
 	width: 0.625rem;
 }
 
-.max-w-full{
-	max-width: 100%;
+.w-24{
+	width: 6rem;
+}
+
+.w-28{
+	width: 7rem;
+}
+
+.w-3{
+	width: 0.75rem;
+}
+
+.w-4{
+	width: 1rem;
+}
+
+.w-5{
+	width: 1.25rem;
+}
+
+.w-6{
+	width: 1.5rem;
+}
+
+.w-7{
+	width: 1.75rem;
+}
+
+.w-8{
+	width: 2rem;
+}
+
+.w-\[0\.0625rem\]{
+	width: 0.0625rem;
+}
+
+.w-\[0\.1875rem\]{
+	width: 0.1875rem;
+}
+
+.w-\[0\.875rem\]{
+	width: 0.875rem;
+}
+
+.w-\[1\.125rem\]{
+	width: 1.125rem;
+}
+
+.w-\[22\.75rem\]{
+	width: 22.75rem;
+}
+
+.w-\[4\.25rem\]{
+	width: 4.25rem;
+}
+
+.w-\[4\.375rem\]{
+	width: 4.375rem;
+}
+
+.w-\[6\.375rem\]{
+	width: 6.375rem;
+}
+
+.w-\[calc\(100\%_\+_2\.5rem\)\]{
+	width: calc(100% + 2.5rem);
+}
+
+.w-\[calc\(50vw_\+_0\.625rem\)\]{
+	width: calc(50vw + 0.625rem);
+}
+
+.w-auto{
+	width: auto;
+}
+
+.w-full{
+	width: 100%;
 }
 
 .max-w-\[16\.375rem\]{
 	max-width: 16.375rem;
+}
+
+.max-w-full{
+	max-width: 100%;
 }
 
 .max-w-none{
@@ -2560,24 +2497,12 @@ button.btn.ks-chart-modal-button:after {
 	transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.cursor-zoom-in{
-	cursor: zoom-in;
-}
-
-.cursor-zoom-out{
-	cursor: zoom-out;
-}
-
-.cursor-wait{
-	cursor: wait;
-}
-
 .cursor-pointer{
 	cursor: pointer;
 }
 
-.resize{
-	resize: both;
+.cursor-wait{
+	cursor: wait;
 }
 
 .list-none{
@@ -2626,16 +2551,24 @@ button.btn.ks-chart-modal-button:after {
 	justify-content: space-around;
 }
 
-.gap-2{
-	gap: 0.5rem;
+.gap-0{
+	gap: 0px;
+}
+
+.gap-0\.5{
+	gap: 0.125rem;
+}
+
+.gap-1{
+	gap: 0.25rem;
 }
 
 .gap-12{
 	gap: 3rem;
 }
 
-.gap-8{
-	gap: 2rem;
+.gap-2{
+	gap: 0.5rem;
 }
 
 .gap-2\.5{
@@ -2646,52 +2579,18 @@ button.btn.ks-chart-modal-button:after {
 	gap: 1rem;
 }
 
-.gap-0\.5{
-	gap: 0.125rem;
+.gap-8{
+	gap: 2rem;
 }
 
-.gap-0{
-	gap: 0px;
+.gap-x-1{
+	-moz-column-gap: 0.25rem;
+	     column-gap: 0.25rem;
 }
 
-.gap-x-5{
-	-moz-column-gap: 1.25rem;
-	     column-gap: 1.25rem;
-}
-
-.gap-y-4{
-	row-gap: 1rem;
-}
-
-.gap-x-8{
-	-moz-column-gap: 2rem;
-	     column-gap: 2rem;
-}
-
-.gap-y-28{
-	row-gap: 7rem;
-}
-
-.gap-x-4{
-	-moz-column-gap: 1rem;
-	     column-gap: 1rem;
-}
-
-.gap-y-11{
-	row-gap: 2.75rem;
-}
-
-.gap-y-\[6\.75rem\]{
-	row-gap: 6.75rem;
-}
-
-.gap-x-7{
-	-moz-column-gap: 1.75rem;
-	     column-gap: 1.75rem;
-}
-
-.gap-y-12{
-	row-gap: 3rem;
+.gap-x-1\.5{
+	-moz-column-gap: 0.375rem;
+	     column-gap: 0.375rem;
 }
 
 .gap-x-2{
@@ -2704,44 +2603,44 @@ button.btn.ks-chart-modal-button:after {
 	     column-gap: 0.625rem;
 }
 
-.gap-x-1\.5{
-	-moz-column-gap: 0.375rem;
-	     column-gap: 0.375rem;
+.gap-x-4{
+	-moz-column-gap: 1rem;
+	     column-gap: 1rem;
 }
 
-.gap-x-1{
-	-moz-column-gap: 0.25rem;
-	     column-gap: 0.25rem;
+.gap-x-5{
+	-moz-column-gap: 1.25rem;
+	     column-gap: 1.25rem;
 }
 
-.space-y-4 > :not([hidden]) ~ :not([hidden]){
-	--tw-space-y-reverse: 0;
-	margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
-	margin-bottom: calc(1rem * var(--tw-space-y-reverse));
+.gap-x-7{
+	-moz-column-gap: 1.75rem;
+	     column-gap: 1.75rem;
 }
 
-.space-y-11 > :not([hidden]) ~ :not([hidden]){
-	--tw-space-y-reverse: 0;
-	margin-top: calc(2.75rem * calc(1 - var(--tw-space-y-reverse)));
-	margin-bottom: calc(2.75rem * var(--tw-space-y-reverse));
+.gap-x-8{
+	-moz-column-gap: 2rem;
+	     column-gap: 2rem;
 }
 
-.space-y-3 > :not([hidden]) ~ :not([hidden]){
-	--tw-space-y-reverse: 0;
-	margin-top: calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));
-	margin-bottom: calc(0.75rem * var(--tw-space-y-reverse));
+.gap-y-11{
+	row-gap: 2.75rem;
 }
 
-.space-y-12 > :not([hidden]) ~ :not([hidden]){
-	--tw-space-y-reverse: 0;
-	margin-top: calc(3rem * calc(1 - var(--tw-space-y-reverse)));
-	margin-bottom: calc(3rem * var(--tw-space-y-reverse));
+.gap-y-12{
+	row-gap: 3rem;
 }
 
-.space-y-8 > :not([hidden]) ~ :not([hidden]){
-	--tw-space-y-reverse: 0;
-	margin-top: calc(2rem * calc(1 - var(--tw-space-y-reverse)));
-	margin-bottom: calc(2rem * var(--tw-space-y-reverse));
+.gap-y-28{
+	row-gap: 7rem;
+}
+
+.gap-y-4{
+	row-gap: 1rem;
+}
+
+.gap-y-\[6\.75rem\]{
+	row-gap: 6.75rem;
 }
 
 .space-y-1 > :not([hidden]) ~ :not([hidden]){
@@ -2756,10 +2655,28 @@ button.btn.ks-chart-modal-button:after {
 	margin-bottom: calc(2.5rem * var(--tw-space-y-reverse));
 }
 
+.space-y-11 > :not([hidden]) ~ :not([hidden]){
+	--tw-space-y-reverse: 0;
+	margin-top: calc(2.75rem * calc(1 - var(--tw-space-y-reverse)));
+	margin-bottom: calc(2.75rem * var(--tw-space-y-reverse));
+}
+
+.space-y-12 > :not([hidden]) ~ :not([hidden]){
+	--tw-space-y-reverse: 0;
+	margin-top: calc(3rem * calc(1 - var(--tw-space-y-reverse)));
+	margin-bottom: calc(3rem * var(--tw-space-y-reverse));
+}
+
 .space-y-2 > :not([hidden]) ~ :not([hidden]){
 	--tw-space-y-reverse: 0;
 	margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
 	margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
+}
+
+.space-y-3 > :not([hidden]) ~ :not([hidden]){
+	--tw-space-y-reverse: 0;
+	margin-top: calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));
+	margin-bottom: calc(0.75rem * var(--tw-space-y-reverse));
 }
 
 .space-y-3\.5 > :not([hidden]) ~ :not([hidden]){
@@ -2768,10 +2685,22 @@ button.btn.ks-chart-modal-button:after {
 	margin-bottom: calc(0.875rem * var(--tw-space-y-reverse));
 }
 
+.space-y-4 > :not([hidden]) ~ :not([hidden]){
+	--tw-space-y-reverse: 0;
+	margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
+	margin-bottom: calc(1rem * var(--tw-space-y-reverse));
+}
+
 .space-y-5 > :not([hidden]) ~ :not([hidden]){
 	--tw-space-y-reverse: 0;
 	margin-top: calc(1.25rem * calc(1 - var(--tw-space-y-reverse)));
 	margin-bottom: calc(1.25rem * var(--tw-space-y-reverse));
+}
+
+.space-y-8 > :not([hidden]) ~ :not([hidden]){
+	--tw-space-y-reverse: 0;
+	margin-top: calc(2rem * calc(1 - var(--tw-space-y-reverse)));
+	margin-bottom: calc(2rem * var(--tw-space-y-reverse));
 }
 
 .divide-y-\[0\.0625rem\] > :not([hidden]) ~ :not([hidden]){
@@ -2793,12 +2722,12 @@ button.btn.ks-chart-modal-button:after {
 	overflow: hidden;
 }
 
-.overflow-visible{
-	overflow: visible;
-}
-
 .\!overflow-visible{
 	overflow: visible !important;
+}
+
+.overflow-visible{
+	overflow: visible;
 }
 
 .overflow-y-auto{
@@ -2829,12 +2758,12 @@ button.btn.ks-chart-modal-button:after {
 	border-radius: 0.5rem;
 }
 
-.rounded-br-full{
-	border-bottom-right-radius: 9999px;
-}
-
 .rounded-bl-full{
 	border-bottom-left-radius: 9999px;
+}
+
+.rounded-br-full{
+	border-bottom-right-radius: 9999px;
 }
 
 .border{
@@ -2859,24 +2788,38 @@ button.btn.ks-chart-modal-button:after {
 	border-right-width: 0.0625rem;
 }
 
-.border-t-\[0\.0625rem\]{
-	border-top-width: 0.0625rem;
+.border-b{
+	border-bottom-width: 1px;
 }
 
 .border-b-\[0\.0625rem\]{
 	border-bottom-width: 0.0625rem;
 }
 
-.border-b{
-	border-bottom-width: 1px;
+.border-l-\[0\.0625rem\]{
+	border-left-width: 0.0625rem;
 }
 
 .border-t{
 	border-top-width: 1px;
 }
 
-.border-l-\[0\.0625rem\]{
-	border-left-width: 0.0625rem;
+.border-t-\[0\.0625rem\]{
+	border-top-width: 0.0625rem;
+}
+
+.border-current{
+	border-color: currentColor;
+}
+
+.border-gray-very-dark{
+	--tw-border-opacity: 1;
+	border-color: rgb(51 51 51 / var(--tw-border-opacity));
+}
+
+.border-gray-very-light{
+	--tw-border-opacity: 1;
+	border-color: rgb(243 243 243 / var(--tw-border-opacity));
 }
 
 .border-orange-grayish{
@@ -2887,20 +2830,6 @@ button.btn.ks-chart-modal-button:after {
 .border-red-light{
 	--tw-border-opacity: 1;
 	border-color: rgb(255 127 99 / var(--tw-border-opacity));
-}
-
-.border-gray-very-dark{
-	--tw-border-opacity: 1;
-	border-color: rgb(51 51 51 / var(--tw-border-opacity));
-}
-
-.border-current{
-	border-color: currentColor;
-}
-
-.border-gray-very-light{
-	--tw-border-opacity: 1;
-	border-color: rgb(243 243 243 / var(--tw-border-opacity));
 }
 
 .border-x-orange-grayish{
@@ -2914,18 +2843,42 @@ button.btn.ks-chart-modal-button:after {
 	border-bottom-color: rgb(207 205 201 / var(--tw-border-opacity));
 }
 
-.bg-white{
+.bg-cyan-very-dark-grayish{
 	--tw-bg-opacity: 1;
-	background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+	background-color: rgb(55 64 58 / var(--tw-bg-opacity));
+}
+
+.bg-gray-very-dark{
+	--tw-bg-opacity: 1;
+	background-color: rgb(51 51 51 / var(--tw-bg-opacity));
+}
+
+.bg-gray-very-dark\/50{
+	background-color: rgb(51 51 51 / 0.5);
+}
+
+.bg-gray-very-light{
+	--tw-bg-opacity: 1;
+	background-color: rgb(243 243 243 / var(--tw-bg-opacity));
+}
+
+.bg-orange-grayish{
+	--tw-bg-opacity: 1;
+	background-color: rgb(207 205 201 / var(--tw-bg-opacity));
 }
 
 .bg-orange-grayish\/30{
 	background-color: rgb(207 205 201 / 0.3);
 }
 
-.bg-orange-grayish{
+.bg-orange-light{
 	--tw-bg-opacity: 1;
-	background-color: rgb(207 205 201 / var(--tw-bg-opacity));
+	background-color: rgb(255 127 80 / var(--tw-bg-opacity));
+}
+
+.bg-red-light{
+	--tw-bg-opacity: 1;
+	background-color: rgb(255 127 99 / var(--tw-bg-opacity));
 }
 
 .bg-red-very-light{
@@ -2937,33 +2890,9 @@ button.btn.ks-chart-modal-button:after {
 	background-color: transparent;
 }
 
-.bg-gray-very-dark{
+.bg-white{
 	--tw-bg-opacity: 1;
-	background-color: rgb(51 51 51 / var(--tw-bg-opacity));
-}
-
-.bg-red-light{
-	--tw-bg-opacity: 1;
-	background-color: rgb(255 127 99 / var(--tw-bg-opacity));
-}
-
-.bg-cyan-very-dark-grayish{
-	--tw-bg-opacity: 1;
-	background-color: rgb(55 64 58 / var(--tw-bg-opacity));
-}
-
-.bg-orange-light{
-	--tw-bg-opacity: 1;
-	background-color: rgb(255 127 80 / var(--tw-bg-opacity));
-}
-
-.bg-gray-very-light{
-	--tw-bg-opacity: 1;
-	background-color: rgb(243 243 243 / var(--tw-bg-opacity));
-}
-
-.bg-gray-very-dark\/50{
-	background-color: rgb(51 51 51 / 0.5);
+	background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
 .fill-current{
@@ -2993,51 +2922,16 @@ button.btn.ks-chart-modal-button:after {
 	   object-position: center;
 }
 
-.p-5{
-	padding: 1.25rem;
-}
-
 .p-2{
 	padding: 0.5rem;
 }
 
+.p-5{
+	padding: 1.25rem;
+}
+
 .p-\[1\.365rem\]{
 	padding: 1.365rem;
-}
-
-.py-4{
-	padding-top: 1rem;
-	padding-bottom: 1rem;
-}
-
-.px-8{
-	padding-left: 2rem;
-	padding-right: 2rem;
-}
-
-.py-3{
-	padding-top: 0.75rem;
-	padding-bottom: 0.75rem;
-}
-
-.px-2\.5{
-	padding-left: 0.625rem;
-	padding-right: 0.625rem;
-}
-
-.px-2{
-	padding-left: 0.5rem;
-	padding-right: 0.5rem;
-}
-
-.px-0\.5{
-	padding-left: 0.125rem;
-	padding-right: 0.125rem;
-}
-
-.py-1\.5{
-	padding-top: 0.375rem;
-	padding-bottom: 0.375rem;
 }
 
 .px-0{
@@ -3045,89 +2939,9 @@ button.btn.ks-chart-modal-button:after {
 	padding-right: 0px;
 }
 
-.py-1{
-	padding-top: 0.25rem;
-	padding-bottom: 0.25rem;
-}
-
-.py-24{
-	padding-top: 6rem;
-	padding-bottom: 6rem;
-}
-
-.py-8{
-	padding-top: 2rem;
-	padding-bottom: 2rem;
-}
-
-.py-11{
-	padding-top: 2.75rem;
-	padding-bottom: 2.75rem;
-}
-
-.px-4{
-	padding-left: 1rem;
-	padding-right: 1rem;
-}
-
-.py-\[1\.6875rem\]{
-	padding-top: 1.6875rem;
-	padding-bottom: 1.6875rem;
-}
-
-.px-16{
-	padding-left: 4rem;
-	padding-right: 4rem;
-}
-
-.py-\[1\.4375rem\]{
-	padding-top: 1.4375rem;
-	padding-bottom: 1.4375rem;
-}
-
-.px-5{
-	padding-left: 1.25rem;
-	padding-right: 1.25rem;
-}
-
-.py-5{
-	padding-top: 1.25rem;
-	padding-bottom: 1.25rem;
-}
-
-.py-2{
-	padding-top: 0.5rem;
-	padding-bottom: 0.5rem;
-}
-
-.px-3{
-	padding-left: 0.75rem;
-	padding-right: 0.75rem;
-}
-
-.py-\[0\.0625rem\]{
-	padding-top: 0.0625rem;
-	padding-bottom: 0.0625rem;
-}
-
-.py-12{
-	padding-top: 3rem;
-	padding-bottom: 3rem;
-}
-
-.px-10{
-	padding-left: 2.5rem;
-	padding-right: 2.5rem;
-}
-
-.py-\[0\.3125rem\]{
-	padding-top: 0.3125rem;
-	padding-bottom: 0.3125rem;
-}
-
-.px-1\.5{
-	padding-left: 0.375rem;
-	padding-right: 0.375rem;
+.px-0\.5{
+	padding-left: 0.125rem;
+	padding-right: 0.125rem;
 }
 
 .px-1{
@@ -3135,19 +2949,44 @@ button.btn.ks-chart-modal-button:after {
 	padding-right: 0.25rem;
 }
 
-.py-\[1\.1875rem\]{
-	padding-top: 1.1875rem;
-	padding-bottom: 1.1875rem;
+.px-1\.5{
+	padding-left: 0.375rem;
+	padding-right: 0.375rem;
 }
 
-.py-\[0\.6875rem\]{
-	padding-top: 0.6875rem;
-	padding-bottom: 0.6875rem;
+.px-10{
+	padding-left: 2.5rem;
+	padding-right: 2.5rem;
 }
 
-.py-\[1\.375rem\]{
-	padding-top: 1.375rem;
-	padding-bottom: 1.375rem;
+.px-16{
+	padding-left: 4rem;
+	padding-right: 4rem;
+}
+
+.px-2{
+	padding-left: 0.5rem;
+	padding-right: 0.5rem;
+}
+
+.px-2\.5{
+	padding-left: 0.625rem;
+	padding-right: 0.625rem;
+}
+
+.px-3{
+	padding-left: 0.75rem;
+	padding-right: 0.75rem;
+}
+
+.px-4{
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+
+.px-5{
+	padding-left: 1.25rem;
+	padding-right: 1.25rem;
 }
 
 .px-6{
@@ -3155,41 +2994,139 @@ button.btn.ks-chart-modal-button:after {
 	padding-right: 1.5rem;
 }
 
+.px-8{
+	padding-left: 2rem;
+	padding-right: 2rem;
+}
+
+.py-1{
+	padding-top: 0.25rem;
+	padding-bottom: 0.25rem;
+}
+
+.py-1\.5{
+	padding-top: 0.375rem;
+	padding-bottom: 0.375rem;
+}
+
+.py-11{
+	padding-top: 2.75rem;
+	padding-bottom: 2.75rem;
+}
+
+.py-12{
+	padding-top: 3rem;
+	padding-bottom: 3rem;
+}
+
+.py-2{
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+}
+
 .py-2\.5{
 	padding-top: 0.625rem;
 	padding-bottom: 0.625rem;
 }
 
-.pb-5{
+.py-24{
+	padding-top: 6rem;
+	padding-bottom: 6rem;
+}
+
+.py-3{
+	padding-top: 0.75rem;
+	padding-bottom: 0.75rem;
+}
+
+.py-4{
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+}
+
+.py-5{
+	padding-top: 1.25rem;
 	padding-bottom: 1.25rem;
+}
+
+.py-8{
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+}
+
+.py-\[0\.0625rem\]{
+	padding-top: 0.0625rem;
+	padding-bottom: 0.0625rem;
+}
+
+.py-\[0\.3125rem\]{
+	padding-top: 0.3125rem;
+	padding-bottom: 0.3125rem;
+}
+
+.py-\[0\.6875rem\]{
+	padding-top: 0.6875rem;
+	padding-bottom: 0.6875rem;
+}
+
+.py-\[1\.1875rem\]{
+	padding-top: 1.1875rem;
+	padding-bottom: 1.1875rem;
+}
+
+.py-\[1\.375rem\]{
+	padding-top: 1.375rem;
+	padding-bottom: 1.375rem;
+}
+
+.py-\[1\.4375rem\]{
+	padding-top: 1.4375rem;
+	padding-bottom: 1.4375rem;
+}
+
+.py-\[1\.6875rem\]{
+	padding-top: 1.6875rem;
+	padding-bottom: 1.6875rem;
 }
 
 .pb-11{
 	padding-bottom: 2.75rem;
 }
 
-.pr-\[4\.375rem\]{
-	padding-right: 4.375rem;
-}
-
-.pl-2\.5{
-	padding-left: 0.625rem;
-}
-
-.pl-2{
-	padding-left: 0.5rem;
-}
-
-.pt-10{
-	padding-top: 2.5rem;
+.pb-2{
+	padding-bottom: 0.5rem;
 }
 
 .pb-4{
 	padding-bottom: 1rem;
 }
 
-.pb-2{
-	padding-bottom: 0.5rem;
+.pb-5{
+	padding-bottom: 1.25rem;
+}
+
+.pl-2{
+	padding-left: 0.5rem;
+}
+
+.pl-2\.5{
+	padding-left: 0.625rem;
+}
+
+.pr-\[4\.375rem\]{
+	padding-right: 4.375rem;
+}
+
+.pt-1{
+	padding-top: 0.25rem;
+}
+
+.pt-1\.5{
+	padding-top: 0.375rem;
+}
+
+.pt-10{
+	padding-top: 2.5rem;
 }
 
 .pt-12{
@@ -3198,14 +3135,6 @@ button.btn.ks-chart-modal-button:after {
 
 .pt-3{
 	padding-top: 0.75rem;
-}
-
-.pt-1\.5{
-	padding-top: 0.375rem;
-}
-
-.pt-1{
-	padding-top: 0.25rem;
 }
 
 .text-left{
@@ -3228,50 +3157,14 @@ button.btn.ks-chart-modal-button:after {
 	font-family: "Roobert", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
 }
 
-.text-sm{
-	font-size: 0.875rem;
-	line-height: 1.25rem;
-}
-
-.text-3xl{
-	font-size: 1.875rem;
-	line-height: 2.25rem;
-}
-
-.text-xl{
-	font-size: 1.25rem;
-	line-height: 1.75rem;
-}
-
-.text-6xl{
-	font-size: 3.75rem;
-	line-height: 1;
-}
-
-.text-xs{
-	font-size: 0.75rem;
-	line-height: 1rem;
-}
-
 .text-2xl{
 	font-size: 1.5rem;
 	line-height: 2rem;
 }
 
-.text-\[3\.125rem\]{
-	font-size: 3.125rem;
-}
-
-.text-\[4\.6875rem\]{
-	font-size: 4.6875rem;
-}
-
-.text-\[2\.5rem\]{
-	font-size: 2.5rem;
-}
-
-.text-\[2\.8125rem\]{
-	font-size: 2.8125rem;
+.text-3xl{
+	font-size: 1.875rem;
+	line-height: 2.25rem;
 }
 
 .text-3xs{
@@ -3284,12 +3177,33 @@ button.btn.ks-chart-modal-button:after {
 	line-height: 2.5rem;
 }
 
-.text-\[9\.375rem\]{
-	font-size: 9.375rem;
+.text-6xl{
+	font-size: 3.75rem;
+	line-height: 1;
 }
 
 .text-\[0\.5rem\]{
 	font-size: 0.5rem;
+}
+
+.text-\[2\.5rem\]{
+	font-size: 2.5rem;
+}
+
+.text-\[2\.8125rem\]{
+	font-size: 2.8125rem;
+}
+
+.text-\[3\.125rem\]{
+	font-size: 3.125rem;
+}
+
+.text-\[4\.6875rem\]{
+	font-size: 4.6875rem;
+}
+
+.text-\[9\.375rem\]{
+	font-size: 9.375rem;
 }
 
 .text-lg{
@@ -3297,16 +3211,31 @@ button.btn.ks-chart-modal-button:after {
 	line-height: 1.75rem;
 }
 
-.font-semibold{
-	font-weight: 600;
+.text-sm{
+	font-size: 0.875rem;
+	line-height: 1.25rem;
+}
+
+.text-xl{
+	font-size: 1.25rem;
+	line-height: 1.75rem;
+}
+
+.text-xs{
+	font-size: 0.75rem;
+	line-height: 1rem;
+}
+
+.font-bold{
+	font-weight: 700;
 }
 
 .font-medium{
 	font-weight: 500;
 }
 
-.font-bold{
-	font-weight: 700;
+.font-semibold{
+	font-weight: 600;
 }
 
 .uppercase{
@@ -3317,94 +3246,64 @@ button.btn.ks-chart-modal-button:after {
 	text-transform: capitalize;
 }
 
-.leading-8{
-	line-height: 2rem;
-}
-
-.leading-none{
-	line-height: 1;
-}
-
-.leading-6{
-	line-height: 1.5rem;
-}
-
-.leading-5{
-	line-height: 1.25rem;
+.\!leading-\[6\.25rem\]{
+	line-height: 6.25rem !important;
 }
 
 .leading-4{
 	line-height: 1rem;
 }
 
+.leading-5{
+	line-height: 1.25rem;
+}
+
+.leading-6{
+	line-height: 1.5rem;
+}
+
 .leading-7{
 	line-height: 1.75rem;
 }
 
-.leading-\[1\.125rem\]{
-	line-height: 1.125rem;
-}
-
-.leading-\[5\.5rem\]{
-	line-height: 5.5rem;
-}
-
-.leading-\[1\.375rem\]{
-	line-height: 1.375rem;
+.leading-8{
+	line-height: 2rem;
 }
 
 .leading-9{
 	line-height: 2.25rem;
 }
 
-.\!leading-\[6\.25rem\]{
-	line-height: 6.25rem !important;
+.leading-\[1\.125rem\]{
+	line-height: 1.125rem;
 }
 
-.leading-\[2\.75rem\]{
-	line-height: 2.75rem;
+.leading-\[1\.375rem\]{
+	line-height: 1.375rem;
 }
 
 .leading-\[10\.3125rem\]{
 	line-height: 10.3125rem;
 }
 
-.leading-\[3\.125rem\]{
-	line-height: 3.125rem;
+.leading-\[2\.75rem\]{
+	line-height: 2.75rem;
 }
 
 .leading-\[2\.8125rem\]{
 	line-height: 2.8125rem;
 }
 
-.text-gray-very-dark{
-	--tw-text-opacity: 1;
-	color: rgb(51 51 51 / var(--tw-text-opacity));
+.leading-\[3\.125rem\]{
+	line-height: 3.125rem;
 }
 
-.text-white{
-	--tw-text-opacity: 1;
-	color: rgb(255 255 255 / var(--tw-text-opacity));
+.leading-\[5\.5rem\]{
+	line-height: 5.5rem;
 }
 
-.text-red-light{
-	--tw-text-opacity: 1;
-	color: rgb(255 127 99 / var(--tw-text-opacity));
-}
-
-.text-orange-grayish{
-	--tw-text-opacity: 1;
-	color: rgb(207 205 201 / var(--tw-text-opacity));
-}
-
-.text-orange-dark-grayish{
-	--tw-text-opacity: 1;
-	color: rgb(151 147 143 / var(--tw-text-opacity));
-}
-
-.text-red-very-light{
-	--tw-text-opacity: 1;
-	color: rgb(255 125 108 / var(--tw-text-opacity));
+.leading-none{
+	line-height: 1;
 }
 
 .text-black{
@@ -3412,62 +3311,68 @@ button.btn.ks-chart-modal-button:after {
 	color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
+.text-gray-dark{
+	--tw-text-opacity: 1;
+	color: rgb(118 118 118 / var(--tw-text-opacity));
+}
+
+.text-gray-very-dark{
+	--tw-text-opacity: 1;
+	color: rgb(51 51 51 / var(--tw-text-opacity));
+}
+
+.text-orange-dark-grayish{
+	--tw-text-opacity: 1;
+	color: rgb(151 147 143 / var(--tw-text-opacity));
+}
+
+.text-orange-grayish{
+	--tw-text-opacity: 1;
+	color: rgb(207 205 201 / var(--tw-text-opacity));
+}
+
 .text-orange-light{
 	--tw-text-opacity: 1;
 	color: rgb(255 127 80 / var(--tw-text-opacity));
 }
 
-.text-gray-dark{
+.text-red-light{
 	--tw-text-opacity: 1;
-	color: rgb(118 118 118 / var(--tw-text-opacity));
+	color: rgb(255 127 99 / var(--tw-text-opacity));
+}
+
+.text-red-very-light{
+	--tw-text-opacity: 1;
+	color: rgb(255 125 108 / var(--tw-text-opacity));
+}
+
+.text-white{
+	--tw-text-opacity: 1;
+	color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .underline{
 	text-decoration-line: underline;
 }
 
-.opacity-100{
-	opacity: 1;
-}
-
 .opacity-0{
 	opacity: 0;
+}
+
+.opacity-100{
+	opacity: 1;
 }
 
 .opacity-50{
 	opacity: 0.5;
 }
 
-.shadow{
-	--tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
-	--tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
-	box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
-.blur{
-	--tw-blur: blur(8px);
-	filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
-}
-
-.invert{
-	--tw-invert: invert(100%);
-	filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
-}
-
 .filter{
 	filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
-.transition{
-	transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
-	transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
-	transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
-	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-	transition-duration: 150ms;
-}
-
-.transition-opacity{
-	transition-property: opacity;
+.transition-all{
+	transition-property: all;
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 	transition-duration: 150ms;
 }
@@ -3478,8 +3383,8 @@ button.btn.ks-chart-modal-button:after {
 	transition-duration: 150ms;
 }
 
-.transition-all{
-	transition-property: all;
+.transition-opacity{
+	transition-property: opacity;
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 	transition-duration: 150ms;
 }
@@ -3663,7 +3568,7 @@ button.btn.ks-chart-modal-button:after {
 	}
 }
 
-.wysiwyg blockquote::before, 
+.wysiwyg blockquote::before,
 	.wysiwyg blockquote::after{
 	display: block;
 	font-family: "Roobert", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
@@ -3673,7 +3578,7 @@ button.btn.ks-chart-modal-button:after {
 
 @media (min-width: 1024px){
 
-	.wysiwyg blockquote::before, 
+	.wysiwyg blockquote::before,
 	.wysiwyg blockquote::after{
 		font-size: 5.625rem;
 	}
@@ -3723,7 +3628,7 @@ button.btn.ks-chart-modal-button:after {
 	margin-bottom: 0px;
 }
 
-.wysiwyg strong, 
+.wysiwyg strong,
 	.wysiwyg b{
 	font-weight: 700;
 }
@@ -3748,14 +3653,14 @@ button.btn.ks-chart-modal-button:after {
 	margin-left: -0.0625rem;
 }
 
-.before\:h-\[0\.3125rem\]::before{
-	content: var(--tw-content);
-	height: 0.3125rem;
-}
-
 .before\:\!h-screen::before{
 	content: var(--tw-content);
 	height: 100vh !important;
+}
+
+.before\:h-\[0\.3125rem\]::before{
+	content: var(--tw-content);
+	height: 0.3125rem;
 }
 
 .before\:w-\[0\.3125rem\]::before{
@@ -3781,10 +3686,7 @@ button.btn.ks-chart-modal-button:after {
 
 .after\:inset-0::after{
 	content: var(--tw-content);
-	top: 0px;
-	right: 0px;
-	bottom: 0px;
-	left: 0px;
+	inset: 0px;
 }
 
 .after\:inset-x-0::after{
@@ -3793,9 +3695,9 @@ button.btn.ks-chart-modal-button:after {
 	right: 0px;
 }
 
-.after\:top-\[100\%\]::after{
+.after\:bottom-0::after{
 	content: var(--tw-content);
-	top: 100%;
+	bottom: 0px;
 }
 
 .after\:top-0::after{
@@ -3803,9 +3705,9 @@ button.btn.ks-chart-modal-button:after {
 	top: 0px;
 }
 
-.after\:bottom-0::after{
+.after\:top-\[100\%\]::after{
 	content: var(--tw-content);
-	bottom: 0px;
+	top: 100%;
 }
 
 .after\:z-10::after{
@@ -3818,16 +3720,10 @@ button.btn.ks-chart-modal-button:after {
 	margin: -0.25rem;
 }
 
-.after\:my-auto::after{
+.after\:-mx-8::after{
 	content: var(--tw-content);
-	margin-top: auto;
-	margin-bottom: auto;
-}
-
-.after\:mx-0\.5::after{
-	content: var(--tw-content);
-	margin-left: 0.125rem;
-	margin-right: 0.125rem;
+	margin-left: -2rem;
+	margin-right: -2rem;
 }
 
 .after\:mx-0::after{
@@ -3836,15 +3732,16 @@ button.btn.ks-chart-modal-button:after {
 	margin-right: 0px;
 }
 
-.after\:-mx-8::after{
+.after\:mx-0\.5::after{
 	content: var(--tw-content);
-	margin-left: -2rem;
-	margin-right: -2rem;
+	margin-left: 0.125rem;
+	margin-right: 0.125rem;
 }
 
-.after\:mb-\[0\.1875rem\]::after{
+.after\:my-auto::after{
 	content: var(--tw-content);
-	margin-bottom: 0.1875rem;
+	margin-top: auto;
+	margin-bottom: auto;
 }
 
 .after\:-ml-\[0\.0625rem\]::after{
@@ -3852,9 +3749,9 @@ button.btn.ks-chart-modal-button:after {
 	margin-left: -0.0625rem;
 }
 
-.after\:h-\[0\.1875rem\]::after{
+.after\:mb-\[0\.1875rem\]::after{
 	content: var(--tw-content);
-	height: 0.1875rem;
+	margin-bottom: 0.1875rem;
 }
 
 .after\:h-1::after{
@@ -3862,14 +3759,19 @@ button.btn.ks-chart-modal-button:after {
 	height: 0.25rem;
 }
 
+.after\:h-2::after{
+	content: var(--tw-content);
+	height: 0.5rem;
+}
+
 .after\:h-2\.5::after{
 	content: var(--tw-content);
 	height: 0.625rem;
 }
 
-.after\:h-2::after{
+.after\:h-\[0\.1875rem\]::after{
 	content: var(--tw-content);
-	height: 0.5rem;
+	height: 0.1875rem;
 }
 
 .after\:h-\[0\.3125rem\]::after{
@@ -3882,11 +3784,6 @@ button.btn.ks-chart-modal-button:after {
 	height: 10.625rem;
 }
 
-.after\:w-full::after{
-	content: var(--tw-content);
-	width: 100%;
-}
-
 .after\:w-1::after{
 	content: var(--tw-content);
 	width: 0.25rem;
@@ -3895,6 +3792,11 @@ button.btn.ks-chart-modal-button:after {
 .after\:w-\[0\.3125rem\]::after{
 	content: var(--tw-content);
 	width: 0.3125rem;
+}
+
+.after\:w-full::after{
+	content: var(--tw-content);
+	width: 100%;
 }
 
 .after\:origin-left::after{
@@ -3913,15 +3815,15 @@ button.btn.ks-chart-modal-button:after {
 	transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.after\:scale-y-100::after{
-	content: var(--tw-content);
-	--tw-scale-y: 1;
-	transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
 .after\:scale-y-0::after{
 	content: var(--tw-content);
 	--tw-scale-y: 0;
+	transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.after\:scale-y-100::after{
+	content: var(--tw-content);
+	--tw-scale-y: 1;
 	transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -3930,21 +3832,15 @@ button.btn.ks-chart-modal-button:after {
 	border-radius: 9999px;
 }
 
-.after\:bg-red-light::after{
-	content: var(--tw-content);
-	--tw-bg-opacity: 1;
-	background-color: rgb(255 127 99 / var(--tw-bg-opacity));
-}
-
 .after\:bg-current::after{
 	content: var(--tw-content);
 	background-color: currentColor;
 }
 
-.after\:bg-white::after{
+.after\:bg-orange-grayish::after{
 	content: var(--tw-content);
 	--tw-bg-opacity: 1;
-	background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+	background-color: rgb(207 205 201 / var(--tw-bg-opacity));
 }
 
 .after\:bg-orange-light::after{
@@ -3953,10 +3849,16 @@ button.btn.ks-chart-modal-button:after {
 	background-color: rgb(255 127 80 / var(--tw-bg-opacity));
 }
 
-.after\:bg-orange-grayish::after{
+.after\:bg-red-light::after{
 	content: var(--tw-content);
 	--tw-bg-opacity: 1;
-	background-color: rgb(207 205 201 / var(--tw-bg-opacity));
+	background-color: rgb(255 127 99 / var(--tw-bg-opacity));
+}
+
+.after\:bg-white::after{
+	content: var(--tw-content);
+	--tw-bg-opacity: 1;
+	background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
 .after\:bg-gradient-to-t::after{
@@ -3966,8 +3868,10 @@ button.btn.ks-chart-modal-button:after {
 
 .after\:from-black::after{
 	content: var(--tw-content);
-	--tw-gradient-from: #000;
-	--tw-gradient-to: rgb(0 0 0 / 0);
+	--tw-gradient-from: #000 var(--tw-gradient-from-position);
+	--tw-gradient-from-position:  ;
+	--tw-gradient-to: rgb(0 0 0 / 0)  var(--tw-gradient-from-position);
+	--tw-gradient-to-position:  ;
 	--tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
@@ -4064,22 +3968,22 @@ button.btn.ks-chart-modal-button:after {
 	background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.group:hover .group-hover\:text-white{
-	--tw-text-opacity: 1;
-	color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
 .group:hover .group-hover\:text-red-very-light{
 	--tw-text-opacity: 1;
 	color: rgb(255 125 108 / var(--tw-text-opacity));
 }
 
-.group:hover .group-hover\:opacity-100{
-	opacity: 1;
+.group:hover .group-hover\:text-white{
+	--tw-text-opacity: 1;
+	color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .group:hover .group-hover\:opacity-0{
 	opacity: 0;
+}
+
+.group:hover .group-hover\:opacity-100{
+	opacity: 1;
 }
 
 .group:hover .group-hover\:after\:scale-y-100::after{
@@ -4102,14 +4006,14 @@ button.btn.ks-chart-modal-button:after {
 	opacity: 1;
 }
 
-.peer:checked ~ .peer-checked\:bg-gray-very-light{
-	--tw-bg-opacity: 1;
-	background-color: rgb(243 243 243 / var(--tw-bg-opacity));
-}
-
 .peer:checked ~ .peer-checked\:bg-gray-very-dark{
 	--tw-bg-opacity: 1;
 	background-color: rgb(51 51 51 / var(--tw-bg-opacity));
+}
+
+.peer:checked ~ .peer-checked\:bg-gray-very-light{
+	--tw-bg-opacity: 1;
+	background-color: rgb(243 243 243 / var(--tw-bg-opacity));
 }
 
 .peer:checked ~ .peer-checked\:text-gray-very-light{
@@ -4132,14 +4036,14 @@ button.btn.ks-chart-modal-button:after {
 	border-color: rgb(207 205 201 / var(--tw-border-opacity));
 }
 
-.header-is-open .header-is-open\:\!bg-white{
-	--tw-bg-opacity: 1 !important;
-	background-color: rgb(255 255 255 / var(--tw-bg-opacity)) !important;
-}
-
 .header-is-open .header-is-open\:\!bg-orange-grayish{
 	--tw-bg-opacity: 1 !important;
 	background-color: rgb(207 205 201 / var(--tw-bg-opacity)) !important;
+}
+
+.header-is-open .header-is-open\:\!bg-white{
+	--tw-bg-opacity: 1 !important;
+	background-color: rgb(255 255 255 / var(--tw-bg-opacity)) !important;
 }
 
 .header-is-open .header-is-open\:\!text-gray-very-dark{
@@ -4203,8 +4107,9 @@ button.btn.ks-chart-modal-button:after {
 	opacity: 0.5;
 }
 
-.is-ontop .is-ontop\:bg-white\/0{
-	background-color: rgb(255 255 255 / 0);
+.is-ontop .is-ontop\:\!bg-white{
+	--tw-bg-opacity: 1 !important;
+	background-color: rgb(255 255 255 / var(--tw-bg-opacity)) !important;
 }
 
 .is-ontop .is-ontop\:bg-white{
@@ -4212,9 +4117,8 @@ button.btn.ks-chart-modal-button:after {
 	background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.is-ontop .is-ontop\:\!bg-white{
-	--tw-bg-opacity: 1 !important;
-	background-color: rgb(255 255 255 / var(--tw-bg-opacity)) !important;
+.is-ontop .is-ontop\:bg-white\/0{
+	background-color: rgb(255 255 255 / 0);
 }
 
 .is-ontop .is-ontop\:fill-white{
@@ -4306,8 +4210,24 @@ button.btn.ks-chart-modal-button:after {
 		bottom: 0px;
 	}
 
+	.lg\:bottom-0{
+		bottom: 0px;
+	}
+
 	.lg\:left-0{
 		left: 0px;
+	}
+
+	.lg\:left-auto{
+		left: auto;
+	}
+
+	.lg\:right-0{
+		right: 0px;
+	}
+
+	.lg\:right-\[100\%\]{
+		right: 100%;
 	}
 
 	.lg\:top-0{
@@ -4318,28 +4238,12 @@ button.btn.ks-chart-modal-button:after {
 		top: 4.375rem;
 	}
 
-	.lg\:left-auto{
-		left: auto;
-	}
-
-	.lg\:right-\[100\%\]{
-		right: 100%;
-	}
-
-	.lg\:bottom-0{
-		bottom: 0px;
-	}
-
-	.lg\:right-0{
-		right: 0px;
+	.lg\:order-1{
+		order: 1;
 	}
 
 	.lg\:order-2{
 		order: 2;
-	}
-
-	.lg\:order-1{
-		order: 1;
 	}
 
 	.lg\:order-3{
@@ -4350,34 +4254,9 @@ button.btn.ks-chart-modal-button:after {
 		margin: 1.25rem;
 	}
 
-	.lg\:my-16{
-		margin-top: 4rem;
-		margin-bottom: 4rem;
-	}
-
 	.lg\:mx-0{
 		margin-left: 0px;
 		margin-right: 0px;
-	}
-
-	.lg\:my-5{
-		margin-top: 1.25rem;
-		margin-bottom: 1.25rem;
-	}
-
-	.lg\:my-36{
-		margin-top: 9rem;
-		margin-bottom: 9rem;
-	}
-
-	.lg\:my-20{
-		margin-top: 5rem;
-		margin-bottom: 5rem;
-	}
-
-	.lg\:my-32{
-		margin-top: 8rem;
-		margin-bottom: 8rem;
 	}
 
 	.lg\:mx-14{
@@ -4385,14 +4264,24 @@ button.btn.ks-chart-modal-button:after {
 		margin-right: 3.5rem;
 	}
 
-	.lg\:my-24{
-		margin-top: 6rem;
-		margin-bottom: 6rem;
-	}
-
 	.lg\:my-10{
 		margin-top: 2.5rem;
 		margin-bottom: 2.5rem;
+	}
+
+	.lg\:my-16{
+		margin-top: 4rem;
+		margin-bottom: 4rem;
+	}
+
+	.lg\:my-20{
+		margin-top: 5rem;
+		margin-bottom: 5rem;
+	}
+
+	.lg\:my-24{
+		margin-top: 6rem;
+		margin-bottom: 6rem;
 	}
 
 	.lg\:my-28{
@@ -4400,165 +4289,44 @@ button.btn.ks-chart-modal-button:after {
 		margin-bottom: 7rem;
 	}
 
+	.lg\:my-32{
+		margin-top: 8rem;
+		margin-bottom: 8rem;
+	}
+
+	.lg\:my-36{
+		margin-top: 9rem;
+		margin-bottom: 9rem;
+	}
+
+	.lg\:my-5{
+		margin-top: 1.25rem;
+		margin-bottom: 1.25rem;
+	}
+
 	.lg\:my-\[16rem\]{
 		margin-top: 16rem;
 		margin-bottom: 16rem;
-	}
-
-	.lg\:mb-0{
-		margin-bottom: 0px;
-	}
-
-	.lg\:-mt-\[4\.375rem\]{
-		margin-top: -4.375rem;
-	}
-
-	.lg\:mr-0{
-		margin-right: 0px;
-	}
-
-	.lg\:mt-1\.5{
-		margin-top: 0.375rem;
-	}
-
-	.lg\:mt-1{
-		margin-top: 0.25rem;
-	}
-
-	.lg\:mt-14{
-		margin-top: 3.5rem;
-	}
-
-	.lg\:mt-0{
-		margin-top: 0px;
-	}
-
-	.lg\:mt-auto{
-		margin-top: auto;
-	}
-
-	.lg\:ml-8{
-		margin-left: 2rem;
-	}
-
-	.lg\:ml-1\/12{
-		margin-left: 8.333333333333334%;
-	}
-
-	.lg\:ml-1\.5\/10{
-		margin-left: 15%;
-	}
-
-	.lg\:ml-1{
-		margin-left: 0.25rem;
-	}
-
-	.lg\:mt-9{
-		margin-top: 2.25rem;
-	}
-
-	.lg\:mt-\[4\.375rem\]{
-		margin-top: 4.375rem;
-	}
-
-	.lg\:mb-11{
-		margin-bottom: 2.75rem;
-	}
-
-	.lg\:ml-1\/6{
-		margin-left: 16.666666666666668%;
-	}
-
-	.lg\:mb-20{
-		margin-bottom: 5rem;
-	}
-
-	.lg\:ml-3\/12{
-		margin-left: 25%;
-	}
-
-	.lg\:mt-16{
-		margin-top: 4rem;
-	}
-
-	.lg\:mb-16{
-		margin-bottom: 4rem;
-	}
-
-	.lg\:mb-9{
-		margin-bottom: 2.25rem;
-	}
-
-	.lg\:ml-2\/12{
-		margin-left: 16.666666666666668%;
-	}
-
-	.lg\:ml-4\/12{
-		margin-left: 33.333333333333336%;
-	}
-
-	.lg\:-mr-2\.5{
-		margin-right: -0.625rem;
-	}
-
-	.lg\:-mr-2{
-		margin-right: -0.5rem;
-	}
-
-	.lg\:ml-1\/10{
-		margin-left: 10%;
 	}
 
 	.lg\:\!mt-32{
 		margin-top: 8rem !important;
 	}
 
-	.lg\:ml-8\/12{
-		margin-left: 66.66666666666667%;
+	.lg\:-mb-14{
+		margin-bottom: -3.5rem;
 	}
 
-	.lg\:mb-4{
-		margin-bottom: 1rem;
+	.lg\:-ml-16{
+		margin-left: -4rem;
 	}
 
-	.lg\:mt-8{
-		margin-top: 2rem;
+	.lg\:-mr-2{
+		margin-right: -0.5rem;
 	}
 
-	.lg\:mb-2\.5{
-		margin-bottom: 0.625rem;
-	}
-
-	.lg\:mb-2{
-		margin-bottom: 0.5rem;
-	}
-
-	.lg\:mt-2\.5{
-		margin-top: 0.625rem;
-	}
-
-	.lg\:mt-2{
-		margin-top: 0.5rem;
-	}
-
-	.lg\:mt-4{
-		margin-top: 1rem;
-	}
-
-	.lg\:mb-6{
-		margin-bottom: 1.5rem;
-	}
-
-	.lg\:mr-28{
-		margin-right: 7rem;
-	}
-
-	.lg\:mt-7{
-		margin-top: 1.75rem;
-	}
-
-	.lg\:mr-6{
-		margin-right: 1.5rem;
+	.lg\:-mr-2\.5{
+		margin-right: -0.625rem;
 	}
 
 	.lg\:-mt-10{
@@ -4573,44 +4341,180 @@ button.btn.ks-chart-modal-button:after {
 		margin-top: -20.125rem;
 	}
 
-	.lg\:ml-0{
-		margin-left: 0px;
+	.lg\:-mt-\[4\.375rem\]{
+		margin-top: -4.375rem;
 	}
 
-	.lg\:mr-3{
-		margin-right: 0.75rem;
+	.lg\:mb-0{
+		margin-bottom: 0px;
 	}
 
-	.lg\:-mb-14{
-		margin-bottom: -3.5rem;
+	.lg\:mb-11{
+		margin-bottom: 2.75rem;
 	}
 
-	.lg\:-ml-16{
-		margin-left: -4rem;
+	.lg\:mb-16{
+		margin-bottom: 4rem;
 	}
 
-	.lg\:ml-5\/12{
-		margin-left: 41.666666666666664%;
+	.lg\:mb-2{
+		margin-bottom: 0.5rem;
 	}
 
-	.lg\:mt-64{
-		margin-top: 16rem;
+	.lg\:mb-2\.5{
+		margin-bottom: 0.625rem;
 	}
 
-	.lg\:mt-5{
-		margin-top: 1.25rem;
+	.lg\:mb-20{
+		margin-bottom: 5rem;
 	}
 
 	.lg\:mb-24{
 		margin-bottom: 6rem;
 	}
 
-	.lg\:mt-10{
-		margin-top: 2.5rem;
+	.lg\:mb-4{
+		margin-bottom: 1rem;
+	}
+
+	.lg\:mb-6{
+		margin-bottom: 1.5rem;
+	}
+
+	.lg\:mb-9{
+		margin-bottom: 2.25rem;
+	}
+
+	.lg\:ml-0{
+		margin-left: 0px;
+	}
+
+	.lg\:ml-1{
+		margin-left: 0.25rem;
+	}
+
+	.lg\:ml-1\.5\/10{
+		margin-left: 15%;
+	}
+
+	.lg\:ml-1\/10{
+		margin-left: 10%;
+	}
+
+	.lg\:ml-1\/12{
+		margin-left: 8.333333333333334%;
+	}
+
+	.lg\:ml-1\/6{
+		margin-left: 16.666666666666668%;
+	}
+
+	.lg\:ml-2\/12{
+		margin-left: 16.666666666666668%;
+	}
+
+	.lg\:ml-3\/12{
+		margin-left: 25%;
+	}
+
+	.lg\:ml-4\/12{
+		margin-left: 33.333333333333336%;
+	}
+
+	.lg\:ml-5\/12{
+		margin-left: 41.666666666666664%;
+	}
+
+	.lg\:ml-8{
+		margin-left: 2rem;
+	}
+
+	.lg\:ml-8\/12{
+		margin-left: 66.66666666666667%;
+	}
+
+	.lg\:mr-0{
+		margin-right: 0px;
 	}
 
 	.lg\:mr-1{
 		margin-right: 0.25rem;
+	}
+
+	.lg\:mr-28{
+		margin-right: 7rem;
+	}
+
+	.lg\:mr-3{
+		margin-right: 0.75rem;
+	}
+
+	.lg\:mr-6{
+		margin-right: 1.5rem;
+	}
+
+	.lg\:mt-0{
+		margin-top: 0px;
+	}
+
+	.lg\:mt-1{
+		margin-top: 0.25rem;
+	}
+
+	.lg\:mt-1\.5{
+		margin-top: 0.375rem;
+	}
+
+	.lg\:mt-10{
+		margin-top: 2.5rem;
+	}
+
+	.lg\:mt-14{
+		margin-top: 3.5rem;
+	}
+
+	.lg\:mt-16{
+		margin-top: 4rem;
+	}
+
+	.lg\:mt-2{
+		margin-top: 0.5rem;
+	}
+
+	.lg\:mt-2\.5{
+		margin-top: 0.625rem;
+	}
+
+	.lg\:mt-4{
+		margin-top: 1rem;
+	}
+
+	.lg\:mt-5{
+		margin-top: 1.25rem;
+	}
+
+	.lg\:mt-64{
+		margin-top: 16rem;
+	}
+
+	.lg\:mt-7{
+		margin-top: 1.75rem;
+	}
+
+	.lg\:mt-8{
+		margin-top: 2rem;
+	}
+
+	.lg\:mt-9{
+		margin-top: 2.25rem;
+	}
+
+	.lg\:mt-\[4\.375rem\]{
+		margin-top: 4.375rem;
+	}
+
+	.lg\:mt-auto{
+		margin-top: auto;
 	}
 
 	.lg\:block{
@@ -4649,116 +4553,108 @@ button.btn.ks-chart-modal-button:after {
 		display: none;
 	}
 
-	.lg\:h-\[4\.75rem\]{
-		height: 4.75rem;
-	}
-
-	.lg\:h-full{
-		height: 100%;
-	}
-
-	.lg\:h-\[calc\(100vh_\+_4\.375rem\)\]{
-		height: calc(100vh + 4.375rem);
-	}
-
-	.lg\:h-auto{
-		height: auto;
-	}
-
-	.lg\:h-\[54rem\]{
-		height: 54rem;
-	}
-
-	.lg\:h-\[22rem\]{
-		height: 22rem;
-	}
-
-	.lg\:h-\[4\.375rem\]{
-		height: 4.375rem;
-	}
-
-	.lg\:h-\[34\.5rem\]{
-		height: 34.5rem;
-	}
-
-	.lg\:h-\[52\.625rem\]{
-		height: 52.625rem;
-	}
-
-	.lg\:h-\[33\.375rem\]{
-		height: 33.375rem;
-	}
-
-	.lg\:h-\[28rem\]{
-		height: 28rem;
-	}
-
-	.lg\:h-\[20\.125rem\]{
-		height: 20.125rem;
+	.lg\:h-32{
+		height: 8rem;
 	}
 
 	.lg\:h-\[13\.875rem\]{
 		height: 13.875rem;
 	}
 
-	.lg\:h-\[24\.625rem\]{
-		height: 24.625rem;
+	.lg\:h-\[2\.9375rem\]{
+		height: 2.9375rem;
 	}
 
-	.lg\:h-\[50\.875rem\]{
-		height: 50.875rem;
+	.lg\:h-\[20\.125rem\]{
+		height: 20.125rem;
 	}
 
 	.lg\:h-\[22\.75rem\]{
 		height: 22.75rem;
 	}
 
-	.lg\:h-32{
-		height: 8rem;
+	.lg\:h-\[22rem\]{
+		height: 22rem;
 	}
 
-	.lg\:h-\[44\.625rem\]{
-		height: 44.625rem;
+	.lg\:h-\[24\.625rem\]{
+		height: 24.625rem;
 	}
 
-	.lg\:h-\[33\.875rem\]{
-		height: 33.875rem;
-	}
-
-	.lg\:h-\[calc\(100vh_-_4\.375rem\)\]{
-		height: calc(100vh - 4.375rem);
-	}
-
-	.lg\:h-\[30\.5rem\]{
-		height: 30.5rem;
-	}
-
-	.lg\:h-\[6\.875rem\]{
-		height: 6.875rem;
-	}
-
-	.lg\:h-\[2\.9375rem\]{
-		height: 2.9375rem;
+	.lg\:h-\[28rem\]{
+		height: 28rem;
 	}
 
 	.lg\:h-\[29\.75rem\]{
 		height: 29.75rem;
 	}
 
+	.lg\:h-\[30\.5rem\]{
+		height: 30.5rem;
+	}
+
 	.lg\:h-\[31\.375rem\]{
 		height: 31.375rem;
+	}
+
+	.lg\:h-\[33\.375rem\]{
+		height: 33.375rem;
+	}
+
+	.lg\:h-\[33\.875rem\]{
+		height: 33.875rem;
+	}
+
+	.lg\:h-\[34\.5rem\]{
+		height: 34.5rem;
 	}
 
 	.lg\:h-\[38rem\]{
 		height: 38rem;
 	}
 
-	.lg\:max-h-screen{
-		max-height: 100vh;
+	.lg\:h-\[4\.375rem\]{
+		height: 4.375rem;
 	}
 
-	.lg\:max-h-\[calc\(100vh_-_4\.375rem\)\]{
-		max-height: calc(100vh - 4.375rem);
+	.lg\:h-\[4\.75rem\]{
+		height: 4.75rem;
+	}
+
+	.lg\:h-\[44\.625rem\]{
+		height: 44.625rem;
+	}
+
+	.lg\:h-\[50\.875rem\]{
+		height: 50.875rem;
+	}
+
+	.lg\:h-\[52\.625rem\]{
+		height: 52.625rem;
+	}
+
+	.lg\:h-\[54rem\]{
+		height: 54rem;
+	}
+
+	.lg\:h-\[6\.875rem\]{
+		height: 6.875rem;
+	}
+
+	.lg\:h-\[calc\(100vh_\+_4\.375rem\)\]{
+		height: calc(100vh + 4.375rem);
+	}
+
+	.lg\:h-\[calc\(100vh_-_4\.375rem\)\]{
+		height: calc(100vh - 4.375rem);
+	}
+
+	.lg\:h-auto{
+		height: auto;
+	}
+
+	.lg\:h-full{
+		height: 100%;
 	}
 
 	.lg\:max-h-\[calc\(100vh_-_10\.5rem\)\]{
@@ -4769,52 +4665,60 @@ button.btn.ks-chart-modal-button:after {
 		max-height: calc(100vh - 2.5rem);
 	}
 
-	.lg\:w-\[3\.625rem\]{
-		width: 3.625rem;
+	.lg\:max-h-\[calc\(100vh_-_4\.375rem\)\]{
+		max-height: calc(100vh - 4.375rem);
 	}
 
-	.lg\:w-3\/12{
-		width: 25%;
-	}
-
-	.lg\:w-\[0\.0625rem\]{
-		width: 0.0625rem;
-	}
-
-	.lg\:w-auto{
-		width: auto;
+	.lg\:max-h-screen{
+		max-height: 100vh;
 	}
 
 	.lg\:w-1\/3{
 		width: 33.333333%;
 	}
 
+	.lg\:w-3\/10{
+		width: 30%;
+	}
+
+	.lg\:w-3\/12{
+		width: 25%;
+	}
+
 	.lg\:w-32{
 		width: 8rem;
-	}
-
-	.lg\:w-7\/12{
-		width: 58.333333%;
-	}
-
-	.lg\:w-5\/12{
-		width: 41.666667%;
-	}
-
-	.lg\:w-\[6\.875rem\]{
-		width: 6.875rem;
-	}
-
-	.lg\:w-\[3\.125rem\]{
-		width: 3.125rem;
 	}
 
 	.lg\:w-4\/10{
 		width: 40%;
 	}
 
-	.lg\:w-3\/10{
-		width: 30%;
+	.lg\:w-5\/12{
+		width: 41.666667%;
+	}
+
+	.lg\:w-7\/12{
+		width: 58.333333%;
+	}
+
+	.lg\:w-\[0\.0625rem\]{
+		width: 0.0625rem;
+	}
+
+	.lg\:w-\[3\.125rem\]{
+		width: 3.125rem;
+	}
+
+	.lg\:w-\[3\.625rem\]{
+		width: 3.625rem;
+	}
+
+	.lg\:w-\[6\.875rem\]{
+		width: 6.875rem;
+	}
+
+	.lg\:w-auto{
+		width: auto;
 	}
 
 	.lg\:min-w-\[15\.5rem\]{
@@ -4871,8 +4775,9 @@ button.btn.ks-chart-modal-button:after {
 		gap: 0.75rem;
 	}
 
-	.lg\:gap-y-0{
-		row-gap: 0px;
+	.lg\:gap-x-2{
+		-moz-column-gap: 0.5rem;
+		     column-gap: 0.5rem;
 	}
 
 	.lg\:gap-x-8{
@@ -4880,19 +4785,12 @@ button.btn.ks-chart-modal-button:after {
 		     column-gap: 2rem;
 	}
 
-	.lg\:gap-x-2{
-		-moz-column-gap: 0.5rem;
-		     column-gap: 0.5rem;
+	.lg\:gap-y-0{
+		row-gap: 0px;
 	}
 
 	.lg\:gap-y-\[6\.75rem\]{
 		row-gap: 6.75rem;
-	}
-
-	.lg\:space-y-8 > :not([hidden]) ~ :not([hidden]){
-		--tw-space-y-reverse: 0;
-		margin-top: calc(2rem * calc(1 - var(--tw-space-y-reverse)));
-		margin-bottom: calc(2rem * var(--tw-space-y-reverse));
 	}
 
 	.lg\:space-y-16 > :not([hidden]) ~ :not([hidden]){
@@ -4905,6 +4803,12 @@ button.btn.ks-chart-modal-button:after {
 		--tw-space-y-reverse: 0;
 		margin-top: calc(6rem * calc(1 - var(--tw-space-y-reverse)));
 		margin-bottom: calc(6rem * var(--tw-space-y-reverse));
+	}
+
+	.lg\:space-y-8 > :not([hidden]) ~ :not([hidden]){
+		--tw-space-y-reverse: 0;
+		margin-top: calc(2rem * calc(1 - var(--tw-space-y-reverse)));
+		margin-bottom: calc(2rem * var(--tw-space-y-reverse));
 	}
 
 	.lg\:space-y-\[4\.625rem\] > :not([hidden]) ~ :not([hidden]){
@@ -4921,20 +4825,20 @@ button.btn.ks-chart-modal-button:after {
 		border-radius: 1.25rem;
 	}
 
-	.lg\:border-t-0{
-		border-top-width: 0px;
-	}
-
-	.lg\:border-r-\[0\.0625rem\]{
-		border-right-width: 0.0625rem;
+	.lg\:border-b-0{
+		border-bottom-width: 0px;
 	}
 
 	.lg\:border-b-\[0\.0625rem\]{
 		border-bottom-width: 0.0625rem;
 	}
 
-	.lg\:border-b-0{
-		border-bottom-width: 0px;
+	.lg\:border-r-\[0\.0625rem\]{
+		border-right-width: 0.0625rem;
+	}
+
+	.lg\:border-t-0{
+		border-top-width: 0px;
 	}
 
 	.lg\:border-orange-grayish{
@@ -4950,14 +4854,9 @@ button.btn.ks-chart-modal-button:after {
 		padding: 2rem;
 	}
 
-	.lg\:px-5{
-		padding-left: 1.25rem;
-		padding-right: 1.25rem;
-	}
-
-	.lg\:py-0{
-		padding-top: 0px;
-		padding-bottom: 0px;
+	.lg\:px-10{
+		padding-left: 2.5rem;
+		padding-right: 2.5rem;
 	}
 
 	.lg\:px-14{
@@ -4965,24 +4864,9 @@ button.btn.ks-chart-modal-button:after {
 		padding-right: 3.5rem;
 	}
 
-	.lg\:py-\[1\.4375rem\]{
-		padding-top: 1.4375rem;
-		padding-bottom: 1.4375rem;
-	}
-
-	.lg\:py-3{
-		padding-top: 0.75rem;
-		padding-bottom: 0.75rem;
-	}
-
-	.lg\:px-10{
-		padding-left: 2.5rem;
-		padding-right: 2.5rem;
-	}
-
-	.lg\:px-\[1\.6875rem\]{
-		padding-left: 1.6875rem;
-		padding-right: 1.6875rem;
+	.lg\:px-2{
+		padding-left: 0.5rem;
+		padding-right: 0.5rem;
 	}
 
 	.lg\:px-2\.5{
@@ -4990,19 +4874,24 @@ button.btn.ks-chart-modal-button:after {
 		padding-right: 0.625rem;
 	}
 
-	.lg\:px-2{
-		padding-left: 0.5rem;
-		padding-right: 0.5rem;
-	}
-
 	.lg\:px-32{
 		padding-left: 8rem;
 		padding-right: 8rem;
 	}
 
-	.lg\:py-2{
-		padding-top: 0.5rem;
-		padding-bottom: 0.5rem;
+	.lg\:px-5{
+		padding-left: 1.25rem;
+		padding-right: 1.25rem;
+	}
+
+	.lg\:px-\[1\.6875rem\]{
+		padding-left: 1.6875rem;
+		padding-right: 1.6875rem;
+	}
+
+	.lg\:py-0{
+		padding-top: 0px;
+		padding-bottom: 0px;
 	}
 
 	.lg\:py-14{
@@ -5010,12 +4899,23 @@ button.btn.ks-chart-modal-button:after {
 		padding-bottom: 3.5rem;
 	}
 
-	.lg\:pb-0{
-		padding-bottom: 0px;
+	.lg\:py-2{
+		padding-top: 0.5rem;
+		padding-bottom: 0.5rem;
 	}
 
-	.lg\:pl-7{
-		padding-left: 1.75rem;
+	.lg\:py-3{
+		padding-top: 0.75rem;
+		padding-bottom: 0.75rem;
+	}
+
+	.lg\:py-\[1\.4375rem\]{
+		padding-top: 1.4375rem;
+		padding-bottom: 1.4375rem;
+	}
+
+	.lg\:pb-0{
+		padding-bottom: 0px;
 	}
 
 	.lg\:pb-11{
@@ -5026,8 +4926,8 @@ button.btn.ks-chart-modal-button:after {
 		padding-left: 1.25rem;
 	}
 
-	.lg\:pt-5{
-		padding-top: 1.25rem;
+	.lg\:pl-7{
+		padding-left: 1.75rem;
 	}
 
 	.lg\:pr-7{
@@ -5038,35 +4938,12 @@ button.btn.ks-chart-modal-button:after {
 		padding-top: 0.75rem;
 	}
 
+	.lg\:pt-5{
+		padding-top: 1.25rem;
+	}
+
 	.lg\:text-right{
 		text-align: right;
-	}
-
-	.lg\:text-5xl{
-		font-size: 3rem;
-		line-height: 1;
-	}
-
-	.lg\:text-xl{
-		font-size: 1.25rem;
-		line-height: 1.75rem;
-	}
-
-	.lg\:text-6xl{
-		font-size: 3.75rem;
-		line-height: 1;
-	}
-
-	.lg\:text-\[5\.625rem\]{
-		font-size: 5.625rem;
-	}
-
-	.lg\:text-\[9\.375rem\]{
-		font-size: 9.375rem;
-	}
-
-	.lg\:text-\[7\.5rem\]{
-		font-size: 7.5rem;
 	}
 
 	.lg\:text-3xl{
@@ -5074,12 +4951,44 @@ button.btn.ks-chart-modal-button:after {
 		line-height: 2.25rem;
 	}
 
+	.lg\:text-5xl{
+		font-size: 3rem;
+		line-height: 1;
+	}
+
+	.lg\:text-6xl{
+		font-size: 3.75rem;
+		line-height: 1;
+	}
+
 	.lg\:text-\[18\.75rem\]{
 		font-size: 18.75rem;
 	}
 
+	.lg\:text-\[5\.625rem\]{
+		font-size: 5.625rem;
+	}
+
+	.lg\:text-\[7\.5rem\]{
+		font-size: 7.5rem;
+	}
+
+	.lg\:text-\[9\.375rem\]{
+		font-size: 9.375rem;
+	}
+
 	.lg\:text-lg{
 		font-size: 1.125rem;
+		line-height: 1.75rem;
+	}
+
+	.lg\:text-sm{
+		font-size: 0.875rem;
+		line-height: 1.25rem;
+	}
+
+	.lg\:text-xl{
+		font-size: 1.25rem;
 		line-height: 1.75rem;
 	}
 
@@ -5088,44 +4997,11 @@ button.btn.ks-chart-modal-button:after {
 		line-height: 1rem;
 	}
 
-	.lg\:text-sm{
-		font-size: 0.875rem;
-		line-height: 1.25rem;
+	.lg\:leading-4{
+		line-height: 1rem;
 	}
 
 	.lg\:leading-6{
-		line-height: 1.5rem;
-	}
-
-	.lg\:leading-\[5\.5rem\]{
-		line-height: 5.5rem;
-	}
-
-	.lg\:leading-\[5\.125rem\]{
-		line-height: 5.125rem;
-	}
-
-	.lg\:leading-\[6\.5615rem\]{
-		line-height: 6.5615rem;
-	}
-
-	.lg\:leading-\[20\.625rem\]{
-		line-height: 20.625rem;
-	}
-
-	.lg\:leading-\[8rem\]{
-		line-height: 8rem;
-	}
-
-	.lg\:leading-\[6\.5625rem\]{
-		line-height: 6.5625rem;
-	}
-
-	.lg\:leading-\[2\.75rem\]{
-		line-height: 2.75rem;
-	}
-
-	.lg\:leading-\[1\.5rem\]{
 		line-height: 1.5rem;
 	}
 
@@ -5133,8 +5009,36 @@ button.btn.ks-chart-modal-button:after {
 		line-height: 2rem;
 	}
 
-	.lg\:leading-4{
-		line-height: 1rem;
+	.lg\:leading-\[1\.5rem\]{
+		line-height: 1.5rem;
+	}
+
+	.lg\:leading-\[2\.75rem\]{
+		line-height: 2.75rem;
+	}
+
+	.lg\:leading-\[20\.625rem\]{
+		line-height: 20.625rem;
+	}
+
+	.lg\:leading-\[5\.125rem\]{
+		line-height: 5.125rem;
+	}
+
+	.lg\:leading-\[5\.5rem\]{
+		line-height: 5.5rem;
+	}
+
+	.lg\:leading-\[6\.5615rem\]{
+		line-height: 6.5615rem;
+	}
+
+	.lg\:leading-\[6\.5625rem\]{
+		line-height: 6.5625rem;
+	}
+
+	.lg\:leading-\[8rem\]{
+		line-height: 8rem;
 	}
 
 	.lg\:transition-colors{
@@ -5450,5 +5354,3 @@ button.btn.ks-chart-modal-button:after {
 	}
 }
 
-
-/*# sourceMappingURL=main.css.map*/

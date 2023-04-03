@@ -54,7 +54,7 @@ const zIndex = {
 
 module.exports = {
 	content: [
-		"./assets/*.js",
+		// "./assets/*.js",
 		"./layout/*.liquid",
 		"./sections/*.liquid",
 		"./snippets/*.liquid",
