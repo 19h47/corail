@@ -94,34 +94,36 @@
 
 			{%- endif -%}
 
-			<div class="absolute top-0 inset-x-0 m-2.5 lg:m-5 z-1 flex gap-1 justify-end">
-				{% unless card_product.available %}
-					<div class="py-2 px-5 rounded-full uppercase text-white bg-red-very-light text-xs">
-						{{ 'products.product.sold_out' | t }}
-					</div>
-				{% else %}
-					{% comment %} {% if card_product.compare_at_price > card_product.price %}
+			{%- if card_product.metafields.corail.tags.value -%}
+				<div class="absolute top-0 inset-x-0 m-2.5 lg:m-5 z-1 flex gap-1 justify-end">
+					{% comment %} {% unless card_product.available %}
 						<div class="py-2 px-5 rounded-full uppercase text-white bg-red-very-light text-xs">
-							{{ 'products.product.on_sale' | t }}
+							{{ 'products.product.sold_out' | t }}
 						</div>
-					{% elsif card_product.tags contains 'preorder' %}
-						<div class="py-2 px-5 rounded-full uppercase text-white bg-red-very-light text-xs">
-							{{ 'products.product.preorder' | t }}
-						</div>
-					{% elsif card_product.tags contains 'new' %}
-						<div class="py-2 px-5 rounded-full uppercase text-white bg-red-very-light text-xs">
-							{{ 'products.product.new' | t }}
-						</div>
-					{% endif %} {% endcomment %}
+					{% else %}
+						{% if card_product.compare_at_price > card_product.price %}
+							<div class="py-2 px-5 rounded-full uppercase text-white bg-red-very-light text-xs">
+								{{ 'products.product.on_sale' | t }}
+							</div>
+						{% elsif card_product.tags contains 'preorder' %}
+							<div class="py-2 px-5 rounded-full uppercase text-white bg-red-very-light text-xs">
+								{{ 'products.product.preorder' | t }}
+							</div>
+						{% elsif card_product.tags contains 'new' %}
+							<div class="py-2 px-5 rounded-full uppercase text-white bg-red-very-light text-xs">
+								{{ 'products.product.new' | t }}
+							</div>
+						{% endif %}
 
-				{% endunless %}
+					{% endunless %} {% endcomment %}
 
-				{% for tag in card_product.metafields.corail.tags.value %}
-					<div class="py-2 px-5 rounded-full uppercase text-white bg-red-very-light text-xs">
-						{{ tag }}
-					</div>
-				{% endfor %}
-			</div>
+					{% for tag in card_product.metafields.corail.tags.value %}
+						<div class="py-2 px-5 rounded-full uppercase text-white bg-red-very-light text-xs">
+							{{ tag }}
+						</div>
+					{% endfor %}
+				</div>
+			{%- endif -%}
 
 			{%- unless card_product.has_only_default_variant -%}
 				<div class="space-y-2 absolute bottom-0 inset-x-0 m-5 z-1 hidden lg:block">
